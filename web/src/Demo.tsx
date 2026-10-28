@@ -128,7 +128,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
         <div className="dm-two" style={{ marginTop: 16 }}>
           <div className="dm-card"><p className="dm-k">③ Counterfactual: remove them one at a time</p>
             <Curve kd={kd} />
-            <p className="dm-say">Same trained history model, same candidates. Red: removing TemGX's ratings in order. Grey band: 95% of {kd.n_draw} random sets of the same size from the same weeks. Below the dashed line the history model prefers {Bt}; the full ranking changes only with a fix (step 5).</p></div>
+            <p className="dm-say">Same trained history model, same candidates. Red: removing TemGX's ratings in order. Grey band: 95% of {kd.n_draw} random sets of the same size from the same weeks. The dashed line is 50%, where the history model has no preference; the full ranking changes only with a fix (step 5).</p></div>
           <div className="dm-card"><p className="dm-k">④ All {kd.evidence.length} removed vs random</p>
             <Conf l="Nothing removed" v={kd.p0} c={GREY} />
             <Conf l={`Remove TemGX's ${kd.evidence.length}`} v={kd.full.p} c={RED} d={kd.full.p - kd.p0} />
@@ -264,7 +264,7 @@ function Curve({ kd }: any) {
   const ticks = [lo, (lo + hi) / 2, hi].map((v) => Math.round(v * 20) / 20);
   return <svg viewBox={`0 0 ${W} ${H}`} className="dm-curve">
     {ticks.map((v) => <g key={v}><line x1={l} x2={W - r} y1={sy(v)} y2={sy(v)} className="grid" /><text x={l - 6} y={sy(v) + 4} textAnchor="end" className="ax">{pct(v)}</text></g>)}
-    {0.5 > lo && <><line x1={l} x2={W - r} y1={sy(0.5)} y2={sy(0.5)} className="half" /><text x={l + 6} y={sy(0.5) + 16} textAnchor="start" className="halft">50%: below this the history model prefers the right answer</text></>}
+    {0.5 > lo && <><line x1={l} x2={W - r} y1={sy(0.5)} y2={sy(0.5)} className="half" /><text x={l + 6} y={sy(0.5) + 16} textAnchor="start" className="halft">50%: the history model has no preference between the two</text></>}
     <polygon points={band} className="band" />
     <polyline points={pts.map((x: any, i: number) => `${sx(i)},${sy(x.rand_mean)}`).join(" ")} className="rl" />
     <polyline points={pts.map((x: any, i: number) => `${sx(i)},${sy(x.p)}`).join(" ")} className="tl" />
