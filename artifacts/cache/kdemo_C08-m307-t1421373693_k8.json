@@ -6,11 +6,11 @@
     "lines": [
       "TemGX: 1 of the 7 ratings are recent ratings of Ice Age 2: The Meltdown by other people; 1 of them is part of a pattern CATGX finds.",
       "TemGX: 5 are the member's own recent ratings (Star Wars: Episode IV - A New Hope, Schindler's List, Raiders of the Lost Ark), shared with people who also rated Ice Age 2: The Meltdown.",
-      "CATGX: \u201cTwo people rated the same movie\u201d looked 1.4\u00d7 but is 0.6\u00d7 after matching: most of its weight was timing and activity.",
+      "CATGX: \u201cTwo people rated the same movie\u201d: matched on timing and activity, each removal costs 0.1 points vs 0.1 for a comparable pattern: most of its weight was timing and activity.",
       "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
       "Ranker: Ice Age 2: The Meltdown beats The Cable Guy mainly through matching the words of the request (+0.43); the history part adds +0.11."
     ],
-    "verdict": "Diagnosis: Ice Age 2: The Meltdown wins mainly through matching the words of the request, and the history model adds to it through recent fans of Ice Age 2: The Meltdown and the member's ratings of Star Wars: Episode IV - A New Hope, Schindler's List. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Ice Age 2: The Meltdown wins mainly through matching the words of the request, and the history model adds to it through recent fans of Ice Age 2: The Meltdown and the member's ratings of Star Wars: Episode IV - A New Hope, Schindler's List. None of these signals reads \u201cnot a kids movie\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
     "agree": [
       72451,
       73004
@@ -520,6 +520,11 @@
       "name": "A run of ratings in one sitting",
       "raw": 0.9231578112869622,
       "adjusted": 1.1513781311316016,
+      "p_full": 0.8796021586855514,
+      "pts_one": 0.05452545812534293,
+      "pts_base": 0.04734455068974297,
+      "pts_one_raw": 0.04702520797165155,
+      "pts_any": 0.05094664519129655,
       "graph": {
         "nodes": [
           {
@@ -582,13 +587,18 @@
       "p_without": 0.8725396941583067,
       "p_random": 0.8793575453191177,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: before matching on context it looks 0.9\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.2\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 248, Ice Age 2: The Meltdown, Ferris Bueller's Day Off): 88% \u2192 87%; random ratings of the same size: 88% (p = 0.02)."
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 248, Ice Age 2: The Meltdown, Ferris Bueller's Day Off): 88% \u2192 87%; random ratings of the same size: 88% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.1). Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
       "name": "Two people rated the same movie",
       "raw": 1.4061658546260576,
       "adjusted": 0.5661923540552064,
+      "p_full": 0.8796021586855514,
+      "pts_one": 0.06577916182910482,
+      "pts_base": 0.11638758401435467,
+      "pts_one_raw": 0.07169247407716739,
+      "pts_any": 0.05094664519129655,
       "graph": {
         "nodes": [
           {
@@ -651,11 +661,11 @@
       "p_without": 0.8762246486167059,
       "p_random": 0.8803632867227651,
       "p_value": 0.03278688524590164,
-      "why": "Two people rated the same movie: before matching on context it looks 1.4\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 343, Star Wars: Episode IV - A New Hope, user 307): 88% \u2192 88%; random ratings of the same size: 88% (p = 0.03)."
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 343, Star Wars: Episode IV - A New Hope, user 307): 88% \u2192 88%; random ratings of the same size: 88% (p = 0.03). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). Most of its apparent importance came from timing and activity. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 708,
-  "computed_at": "2026-10-27T18:47:48-0400",
+  "computed_at": "2026-10-28T16:39:43-0400",
   "summary": "With 7 ratings (1 recent rating of Ice Age 2: The Meltdown by other people, 5 of the member's own ratings, 1 other rating nearby), the model's preference for Ice Age 2: The Meltdown over The Cable Guy goes from 88% to 66%. Removing the same number of random ratings from the same weeks gives 88% on average (p = 0.02, 60 draws). The full ranking still puts Ice Age 2: The Meltdown at #1: text match and popularity also push it up."
 }

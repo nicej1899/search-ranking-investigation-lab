@@ -294,6 +294,9 @@ def explain(bb, u, t, a_item, b_item, L=2, k=8, K=3, N=40, alpha=3, exact=False,
         "n_cells": len(bycell),
         "S": S, "terms": dict(terms), "selected_motifs": top,
         # unadjusted ratio (pooled over all context cells): what the pattern looks like before matching on context
+        "pooled_g": {m: sum(r["w"] * r["g"] for r in rows if r["motif"] == m) / max(1e-12, sum(r["w"] for r in rows if r["motif"] == m))
+                     for m in MOTIFS if any(r["motif"] == m for r in rows)},
+        "pooled_g_all": sum(r["w"] * r["g"] for r in rows) / max(1e-12, sum(r["w"] for r in rows)),
         "raw_ratio": {m: ((sum(r["w"] * r["g"] for r in rows if r["motif"] == m) / max(1e-12, sum(r["w"] for r in rows if r["motif"] == m)))
                           / max(1e-12, sum(r["w"] * r["g"] for r in rows) / max(1e-12, sum(r["w"] for r in rows))))
                       for m in MOTIFS if any(r["motif"] == m for r in rows)},

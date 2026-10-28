@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 2 of the 7 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
       "TemGX: 5 are the member's own recent ratings (The Bourne Legacy, The Expendables 2, Cinderella), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cTwo people rated the same movie\u201d looked 3.8\u00d7 and is still 2.6\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cTwo people rated the same movie\u201d: removing it moves the model 81% \u2192 66% (random ratings: 81%, p = 0.02); matched on timing and activity, each removal still costs 4.9 points vs 1.8 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Requiem for a Dream beats All That Heaven Allows mainly through popularity (+0.56); the history part adds +0.08."
     ],
     "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of The Bourne Legacy, The Expendables 2. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
@@ -563,6 +563,11 @@
       "name": "Two people rated the same movie",
       "raw": 3.804328450842349,
       "adjusted": 2.594172268714514,
+      "p_full": 0.8070919423800567,
+      "pts_one": 4.876635310393118,
+      "pts_base": 1.7856914289722914,
+      "pts_one_raw": 3.90265970754744,
+      "pts_any": 0.9749542672357392,
       "graph": {
         "nodes": [
           {
@@ -626,13 +631,18 @@
       "p_without": 0.66363717976023,
       "p_random": 0.8070919423800564,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: before matching on context it looks 3.8\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 2.6\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 15, Requiem for a Dream, user 281): 81% \u2192 66%; random ratings of the same size: 81% (p = 0.02)."
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 15, Requiem for a Dream, user 281): 81% \u2192 66%; random ratings of the same size: 81% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 4.9 points of the model's preference vs 1.8 for a comparable pattern (before matching: vs 1.0). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "POP",
       "name": "Recent fans piled on",
       "raw": 5.752319178320149,
       "adjusted": 2.309163507337597,
+      "p_full": 0.8070919423800567,
+      "pts_one": 4.20012299041036,
+      "pts_base": 1.744911093394319,
+      "pts_one_raw": 6.10333887655875,
+      "pts_any": 0.9749542672357392,
       "graph": {
         "nodes": [
           {
@@ -696,13 +706,18 @@
       "p_without": 0.66363717976023,
       "p_random": 0.8070919423800564,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: before matching on context it looks 5.8\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 2.3\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 15, user 281, Requiem for a Dream): 81% \u2192 66%; random ratings of the same size: 81% (p = 0.02)."
+      "why": "Recent fans piled on: removing its strongest occurrence (user 15, user 281, Requiem for a Dream): 81% \u2192 66%; random ratings of the same size: 81% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 4.2 points of the model's preference vs 1.7 for a comparable pattern (before matching: vs 1.0). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
       "name": "A run of ratings in one sitting",
       "raw": 0.6819530673429779,
       "adjusted": 0.8803651391448619,
+      "p_full": 0.8070919423800567,
+      "pts_one": 0.7080137179763635,
+      "pts_base": 0.8057166187236731,
+      "pts_one_raw": 0.6609440685587442,
+      "pts_any": 0.9749542672357392,
       "graph": {
         "nodes": [
           {
@@ -766,11 +781,11 @@
       "p_without": 0.734929123876254,
       "p_random": 0.7858349504020973,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: before matching on context it looks 0.7\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.9\u00d7. Removing its strongest occurrence (user 291, Cinderella, The Expendables 2): 81% \u2192 73%; random ratings of the same size: 79% (p = 0.02)."
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 291, Cinderella, The Expendables 2): 81% \u2192 73%; random ratings of the same size: 79% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 0.8 for a comparable pattern (before matching: vs 1.0). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 782,
-  "computed_at": "2026-10-27T17:22:16-0400",
+  "computed_at": "2026-10-28T16:39:33-0400",
   "summary": "With 7 ratings (2 recent ratings of Requiem for a Dream by other people, 5 of the member's own ratings), the model's preference for Requiem for a Dream over All That Heaven Allows goes from 81% to 58%. Removing the same number of random ratings from the same weeks gives 79% on average (p = 0.02, 60 draws). The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

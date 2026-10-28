@@ -5,7 +5,7 @@
   "joint": {
     "lines": [
       "TemGX: 3 of the 5 ratings are recent ratings of Aladdin by other people; 3 of them are part of a pattern CATGX finds.",
-      "CATGX: \u201cShared taste leads to the title\u201d looked 4.1\u00d7 and is still 3.2\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cShared taste leads to the title\u201d: removing it moves the model 73% \u2192 62% (random ratings: 72%, p = 0.02); matched on timing and activity, each removal still costs 3.0 points vs 0.9 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Aladdin beats Harry Potter and the Chamber of Secrets mainly through popularity (+0.18); the history part adds +0.05."
     ],
     "verdict": "Diagnosis: Aladdin wins mainly through popularity, and the history model adds to it through recent fans of Aladdin. None of these signals reads \u201cisn't animated\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
@@ -535,6 +535,11 @@
       "name": "Shared taste leads to the title",
       "raw": 4.115992929678662,
       "adjusted": 3.159249520110704,
+      "p_full": 0.7250284280609507,
+      "pts_one": 2.988460724473607,
+      "pts_base": 0.9261005405902689,
+      "pts_one_raw": 2.8498322553035194,
+      "pts_any": 0.6769473751540134,
       "graph": {
         "nodes": [
           {
@@ -615,13 +620,18 @@
       "p_without": 0.6197927787266434,
       "p_random": 0.7248818090188767,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: before matching on context it looks 4.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 3.2\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 297, Harry Potter and the Chamber of Secrets, user 533): 73% \u2192 62%; random ratings of the same size: 72% (p = 0.02)."
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 297, Harry Potter and the Chamber of Secrets, user 533): 73% \u2192 62%; random ratings of the same size: 72% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.0 points of the model's preference vs 0.9 for a comparable pattern (before matching: vs 0.7). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "POP",
       "name": "Recent fans piled on",
       "raw": 2.10006974080311,
       "adjusted": 1.9019141975177405,
+      "p_full": 0.7250284280609507,
+      "pts_one": 1.8757610301718075,
+      "pts_base": 0.9769510627659184,
+      "pts_one_raw": 1.4332177479090213,
+      "pts_any": 0.6769473751540134,
       "graph": {
         "nodes": [
           {
@@ -685,13 +695,18 @@
       "p_without": 0.47612839531720125,
       "p_random": 0.724347736681093,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: before matching on context it looks 2.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.9\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 425, user 533, Aladdin): 73% \u2192 48%; random ratings of the same size: 72% (p = 0.02)."
+      "why": "Recent fans piled on: removing its strongest occurrence (user 425, user 533, Aladdin): 73% \u2192 48%; random ratings of the same size: 72% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.9 points of the model's preference vs 1.0 for a comparable pattern (before matching: vs 0.7). Timing and activity do not explain it away. "
     },
     {
       "motif": "SEQ",
       "name": "A run of ratings in one sitting",
       "raw": 0.33890452346160643,
       "adjusted": 0.7416326427388159,
+      "p_full": 0.7250284280609507,
+      "pts_one": 0.35156505116179515,
+      "pts_base": 0.4746882495191951,
+      "pts_one_raw": 0.22828662248667309,
+      "pts_any": 0.6769473751540134,
       "graph": {
         "nodes": [
           {
@@ -752,13 +767,18 @@
       "p_without": 0.7099090489440936,
       "p_random": 0.7242041528864379,
       "p_value": 0.03278688524590164,
-      "why": "A run of ratings in one sitting: before matching on context it looks 0.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.7\u00d7. Removing its strongest occurrence (user 304, The Usual Suspects, Star Wars: Episode IV - A New Hope): 73% \u2192 71%; random ratings of the same size: 72% (p = 0.03)."
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 304, The Usual Suspects, Star Wars: Episode IV - A New Hope): 73% \u2192 71%; random ratings of the same size: 72% (p = 0.03). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.7). "
     },
     {
       "motif": "CO",
       "name": "Two people rated the same movie",
       "raw": 0.41475074707243165,
       "adjusted": 0.45240312501206226,
+      "p_full": 0.7250284280609507,
+      "pts_one": 0.3148310142905508,
+      "pts_base": 0.6988579519357052,
+      "pts_one_raw": 0.2795364444795556,
+      "pts_any": 0.6769473751540134,
       "graph": {
         "nodes": [
           {
@@ -821,13 +841,18 @@
       "p_without": 0.6644040399675225,
       "p_random": 0.725090175625935,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: before matching on context it looks 0.4\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.5\u00d7. Removing its strongest occurrence (user 176, Aladdin, user 533): 73% \u2192 66%; random ratings of the same size: 73% (p = 0.02)."
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 176, Aladdin, user 533): 73% \u2192 66%; random ratings of the same size: 73% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.3 points of the model's preference vs 0.7 for a comparable pattern (before matching: vs 0.7). "
     },
     {
       "motif": "BRIDGEB",
       "name": "Shared taste leads to the better match",
       "raw": 0.13318888790078828,
       "adjusted": 0.40386932333791026,
+      "p_full": 0.7250284280609507,
+      "pts_one": 0.1778937674799641,
+      "pts_base": 0.44176790789716147,
+      "pts_one_raw": 0.08957696309257468,
+      "pts_any": 0.6769473751540134,
       "graph": {
         "nodes": [
           {
@@ -907,11 +932,11 @@
       "p_without": 0.7128275050641703,
       "p_random": 0.7251162066812593,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the better match: before matching on context it looks 0.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.4\u00d7. Removing its strongest occurrence (user 104, The Usual Suspects, user 297): 73% \u2192 71%; random ratings of the same size: 73% (p = 0.02)."
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 104, The Usual Suspects, user 297): 73% \u2192 71%; random ratings of the same size: 73% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.4 for a comparable pattern (before matching: vs 0.7). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1086,
-  "computed_at": "2026-10-27T18:51:17-0400",
+  "computed_at": "2026-10-28T16:30:56-0400",
   "summary": "With 5 ratings (3 recent ratings of Aladdin by other people, 2 other ratings nearby), the model's preference for Aladdin over Harry Potter and the Chamber of Secrets goes from 73% to 44% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 73% on average (p = 0.02, 60 draws). The full ranking still puts Aladdin at #1: text match and popularity also push it up."
 }

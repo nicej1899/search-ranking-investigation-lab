@@ -6,10 +6,10 @@
     "lines": [
       "TemGX: 3 of the 6 ratings are recent ratings of Who Framed Roger Rabbit? by other people; 3 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (Naked Gun 33 1/3: The Final Insult, Ransom, My Cousin Vinny), shared with people who also rated Who Framed Roger Rabbit?.",
-      "CATGX: \u201cRecent fans piled on\u201d looked 27.0\u00d7 and is still 1.6\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 77% \u2192 68% (random ratings: 77%, p = 0.02); matched on timing and activity, each removal still costs 5.1 points vs 3.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Who Framed Roger Rabbit? beats The Mummy mainly through the member's history (+0.06); the history part adds +0.06."
     ],
-    "verdict": "Diagnosis: Who Framed Roger Rabbit? wins mainly through the member's history, and the history model adds to it through recent fans of Who Framed Roger Rabbit? (a pattern that survives matching) and the member's ratings of Naked Gun 33 1/3: The Final Insult, Ransom. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Who Framed Roger Rabbit? wins mainly through the member's history, and the history model adds to it through recent fans of Who Framed Roger Rabbit? (a pattern that survives matching) and the member's ratings of Naked Gun 33 1/3: The Final Insult, Ransom. None of these signals reads \u201cisn't animated\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
     "agree": [
       70158,
       71148,
@@ -480,6 +480,11 @@
       "name": "Recent fans piled on",
       "raw": 26.989605851031335,
       "adjusted": 1.6420223658797524,
+      "p_full": 0.7670168241070526,
+      "pts_one": 5.106927427382136,
+      "pts_base": 3.0318007685196102,
+      "pts_one_raw": 6.305854842108316,
+      "pts_any": 0.21609441146979158,
       "graph": {
         "nodes": [
           {
@@ -543,13 +548,18 @@
       "p_without": 0.6761881242548585,
       "p_random": 0.7659961695176521,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: before matching on context it looks 27.0\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.6\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 375, user 281, Who Framed Roger Rabbit?): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02)."
+      "why": "Recent fans piled on: removing its strongest occurrence (user 375, user 281, Who Framed Roger Rabbit?): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 5.1 points of the model's preference vs 3.0 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "CO",
       "name": "Two people rated the same movie",
       "raw": 10.610586693284935,
       "adjusted": 1.5285425741267717,
+      "p_full": 0.7670168241070526,
+      "pts_one": 2.2264007004097586,
+      "pts_base": 1.4410080024256477,
+      "pts_one_raw": 2.3630144618249416,
+      "pts_any": 0.21609441146979158,
       "graph": {
         "nodes": [
           {
@@ -613,13 +623,18 @@
       "p_without": 0.6761881242548585,
       "p_random": 0.7664326914313808,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: before matching on context it looks 10.6\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.5\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 375, Who Framed Roger Rabbit?, user 281): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02)."
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 375, Who Framed Roger Rabbit?, user 281): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.2 points of the model's preference vs 1.4 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
       "name": "A run of ratings in one sitting",
       "raw": 0.22786808548047677,
       "adjusted": 0.6002489782283017,
+      "p_full": 0.7670168241070526,
+      "pts_one": 0.04960463859385866,
+      "pts_base": 0.08268082342720584,
+      "pts_one_raw": 0.04911912533303031,
+      "pts_any": 0.21609441146979158,
       "graph": {
         "nodes": [
           {
@@ -682,11 +697,11 @@
       "p_without": 0.759393710436056,
       "p_random": 0.76643510762916,
       "p_value": 0.16393442622950818,
-      "why": "A run of ratings in one sitting: before matching on context it looks 0.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Removing its strongest occurrence (user 202, Beverly Hills Cop III, Naked Gun 33 1/3: The Final Insult): 77% \u2192 76%; random ratings of the same size: 77% (p = 0.16)."
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 202, Beverly Hills Cop III, Naked Gun 33 1/3: The Final Insult): 77% \u2192 76%; random ratings of the same size: 77% (p = 0.16). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.2). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 708,
-  "computed_at": "2026-10-27T18:47:43-0400",
+  "computed_at": "2026-10-28T16:39:49-0400",
   "summary": "With 6 ratings (3 recent ratings of Who Framed Roger Rabbit? by other people, 3 of the member's own ratings), the model's preference for Who Framed Roger Rabbit? over The Mummy goes from 77% to 60%. Removing the same number of random ratings from the same weeks gives 77% on average (p = 0.02, 60 draws). The full ranking still puts Who Framed Roger Rabbit? at #1: text match and popularity also push it up."
 }

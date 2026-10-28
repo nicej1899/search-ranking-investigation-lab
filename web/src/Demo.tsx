@@ -63,7 +63,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
   const At = clean(sg.A_title), Bt = clean(sg.B_title);
     const top = kd?.patterns?.[pi] ?? kd?.patterns?.[0];
   const maxDrop = Math.max(0.001, ...(kd?.evidence ?? []).map((l: any) => l.drop));
-  const pmax = Math.max(1, ...(kd?.patterns ?? []).flatMap((x: any) => [x.raw ?? 0, x.adjusted ?? 0]));
+  const pmax = Math.max(0.5, ...(kd?.patterns ?? []).flatMap((x: any) => [x.pts_one ?? 0, x.pts_base ?? 0]));
   const recName = sim ? NAME[sim.recommend] : "";
   const go = (j: number) => setStep(j);
   const fixA = fix?.rows.find((r: any) => r.title === sg.A_title), fixB = fix?.rows.find((r: any) => r.title === sg.B_title);
@@ -74,7 +74,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
     <>Asked for “{kd?.query ?? sim?.me?.query ?? d.query}”, member {cid.match(/-m(\d+)-/)?.[1]} gets <b style={{ color: RED }}>{At}</b> first — the kind of film they ruled out.</>,
     kd?.full.flips ? <>Remove {kd.evidence.length === 1 ? "one rating" : `these ${kd.evidence.length} ratings`} and the history model <b>changes its preference</b> ({pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>). Random ones: nothing.</>
       : kd ? <>Remove these <b style={{ color: RED }}>{kd.evidence.length} past ratings</b>: {pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>. Remove {kd.evidence.length} random ones: nothing happens.</> : <>Finding the evidence…</>,
-    top ? <>“{top.name}” is <b style={{ color: PURPLE }}>{n(top.adjusted, 1)}×</b> after matching on timing and activity{top.raw ? <> (was {n(top.raw, 1)}×)</> : null}{top.p_value <= 0.05 ? <>, and removing it moves the model</> : null}.</> : <>Looking for patterns…</>,
+    top ? <>Remove “{top.name}”: {pct(kd.p0)} → <b style={{ color: PURPLE }}>{pct(top.p_without)}</b> (random: {pct(top.p_random)}). Matched on timing and activity, each removal still costs <b style={{ color: PURPLE }}>{n(top.pts_one, 1)}</b> vs {n(top.pts_base, 1)} points.</> : <>Looking for patterns…</>,
     <>Together: <b style={{ color: RED }}>which ratings</b>, <b style={{ color: PURPLE }}>which pattern</b>, and <b>which part of the ranker</b> to change.</>,
     !fixA || !fixB ? <>Similar past failures point to one fix. Re-ranking…</>
       : fixB.rank === 1 && fixA.rank > 3 ? <>Similar past failures point to one fix. It puts <b style={{ color: BLUE }}>{Bt}</b> first and drops {At} to #{fixA.rank}.</>
@@ -142,12 +142,12 @@ export default function Demo({ onFull }: { onFull: () => void }) {
         <div className="dm-card"><p className="dm-k">The same graph, with the pattern CATGX found <span style={{ color: PURPLE }}>(purple)</span> over TemGX's ratings <span style={{ color: RED }}>(red)</span></p>
           <ExplGraph g={merge(kd.graph, kd.patterns[pi].graph)} hi={kd.patterns[pi].graph.edges.map((e: any) => e.eid)} />
           {kd.patterns[pi].overlap_temgx.length > 0 && <p className="dm-agree">Both methods point to the same rating{kd.patterns[pi].overlap_temgx.length > 1 ? "s" : ""}: TemGX found {kd.patterns[pi].overlap_temgx.length > 1 ? "them" : "it"} by counterfactual removal, CATGX by pattern analysis.</p>}</div>
-        <div className="dm-card"><p className="dm-k">Is it the structure, or just timing and activity?</p>
+        <div className="dm-card"><p className="dm-k">Is it the structure, or just timing and activity? (per removal, matched context)</p>
           {kd.patterns.map((x: any, i: number) => <div key={x.motif} className={`dm-prow2 ${i === pi ? "on" : ""}`} onClick={() => setPi(i)}>
             <span>{x.name}</span>
-            <i><b className="raw" style={{ width: `${100 * (x.raw ?? 0) / pmax}%` }} /><b className="adj" style={{ width: `${100 * (x.adjusted ?? 0) / pmax}%` }} /></i>
-            <em>{x.raw ? `${n(x.raw, 1)}×` : "–"} → <b>{x.adjusted ? `${n(x.adjusted, 1)}×` : "–"}</b></em></div>)}
-          <p className="dm-legend"><i className="raw" />before matching <i className="adj" />after matching on recency, duration, activity · 1× = an average pattern · click a row</p>
+            <i><b className="raw" style={{ width: `${100 * (x.pts_base ?? 0) / pmax}%` }} /><b className="adj" style={{ width: `${100 * (x.pts_one ?? 0) / pmax}%` }} /></i>
+            <em>−<b>{n(x.pts_one, 1)}</b> vs −{n(x.pts_base, 1)} pts</em></div>)}
+          <p className="dm-legend"><i className="adj" />this pattern <i className="raw" />an equally recent, equally active pattern · points of the model's preference lost per removed occurrence · click a row</p>
           <p className="dm-k" style={{ marginTop: 14 }}>Remove this pattern's ratings</p>
           <Conf l="Nothing removed" v={kd.p0} c={GREY} />
           <Conf l={`Remove the pattern (${kd.patterns[pi].occurrence.eids.length})`} v={kd.patterns[pi].p_without} c={PURPLE} d={kd.patterns[pi].p_without - kd.p0} />
@@ -160,7 +160,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
           <table className="dm-jt"><thead><tr><th>#</th><th>rating</th><th>remove only this</th><th>CATGX pattern</th></tr></thead><tbody>
             {kd.evidence.map((l: any) => <tr key={l.eid}><td><span className="dm-badge">{l.n}</span></td><td>{l.kind === "own" ? `member ${kd.member}` : l.from} → {l.to} <small>{l.rating}★ · {l.date}</small></td>
               <td className="r">−{n(100 * l.drop, 1)} pts</td>
-              <td>{l.patterns.filter((p: any) => (p.adjusted ?? 0) >= 1).length ? l.patterns.filter((p: any) => (p.adjusted ?? 0) >= 1).map((p: any) => <span key={p.motif} className={`dm-chip ${p.significant ? "s" : ""}`}>{p.name}{p.adjusted ? ` ${n(p.adjusted, 1)}×` : ""}</span>) : <small>none</small>}</td></tr>)}
+              <td>{l.patterns.filter((p: any) => (p.adjusted ?? 0) >= 1).length ? l.patterns.filter((p: any) => (p.adjusted ?? 0) >= 1).map((p: any) => <span key={p.motif} className={`dm-chip ${p.significant ? "s" : ""}`}>{p.name}</span>) : <small>none</small>}</td></tr>)}
           </tbody></table>
           <p className="dm-k" style={{ marginTop: 16 }}>What the ranker added up ({At} minus {Bt})</p>
           <Split s={kd.score_split} /></div>

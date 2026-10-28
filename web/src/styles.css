@@ -799,7 +799,7 @@ button.ghost.on { background: var(--ink); color: #fff; }
 .dm-eg .pat { stroke: #7a5bb5; stroke-width: 4; } .dm-eg .el.pl { fill: #7a5bb5; }
 .dm-eg .ex.faded { stroke: #e9a4ac; stroke-width: 2.5; }
 .dm-agree { font-size: 14px; color: #3c454f; background: #f4f0fb; border-left: 4px solid #7a5bb5; border-radius: 6px; padding: 8px 12px; margin: 8px 0 0; }
-.dm-prow2 { display: grid; grid-template-columns: 200px 1fr 100px; gap: 10px; align-items: center; padding: 6px 8px; border-radius: 8px; cursor: pointer; font-size: 14px; }
+.dm-prow2 { display: grid; grid-template-columns: 200px 1fr 130px; gap: 10px; align-items: center; padding: 6px 8px; border-radius: 8px; cursor: pointer; font-size: 14px; }
 .dm-prow2.on { background: #f4f0fb; outline: 1px solid #d6c9ef; }
 .dm-prow2 i { height: 22px; position: relative; background: #f3f5f7; border-radius: 4px; }
 .dm-prow2 i b { position: absolute; left: 0; height: 9px; border-radius: 3px; } .dm-prow2 i b.raw { top: 2px; background: #b8c2cc; } .dm-prow2 i b.adj { bottom: 2px; background: #7a5bb5; }

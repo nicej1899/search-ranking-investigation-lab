@@ -6,11 +6,11 @@
     "lines": [
       "TemGX: 6 of the 8 ratings are recent ratings of Spider-Man by other people; 6 of them are part of a pattern CATGX finds.",
       "TemGX: 2 are the member's own recent ratings (Wonder Woman, Inside Out), shared with people who also rated Spider-Man.",
-      "CATGX: \u201cRecent fans piled on\u201d stays 2.3\u00d7 after matching on timing and activity, and removing it moves the model (p = 0.02): a structural reason, not just recency.",
-      "CATGX: \u201cShared taste leads to the title\u201d looked 1.7\u00d7 but is 1.4\u00d7 after matching: part of its weight was timing and activity.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 62% \u2192 49% (random ratings: 62%, p = 0.02); matched on timing and activity, each removal still costs 4.7 points vs 2.0 for a comparable pattern: a structural reason, not just recency.",
+      "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 2.7 points vs 1.9 for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Spider-Man beats The Last Samurai mainly through popularity (+0.16); the history part adds +0.03."
     ],
-    "verdict": "Diagnosis: Spider-Man wins mainly through popularity, and the history model adds to it through recent fans of Spider-Man (a pattern that survives matching) and the member's ratings of Wonder Woman, Inside Out. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Spider-Man wins mainly through popularity, and the history model adds to it through recent fans of Spider-Man (a pattern that survives matching) and the member's ratings of Wonder Woman, Inside Out. None of these signals reads \u201cisn't a superhero film\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
     "agree": [
       85706,
       89835,
@@ -730,6 +730,11 @@
       "name": "Recent fans piled on",
       "raw": 2.5159381833139336,
       "adjusted": 2.3433389969963625,
+      "p_full": 0.6174959125625988,
+      "pts_one": 4.6962261214364975,
+      "pts_base": 1.9827542192481284,
+      "pts_one_raw": 4.193048441617653,
+      "pts_any": 1.6494442086638639,
       "graph": {
         "nodes": [
           {
@@ -793,13 +798,18 @@
       "p_without": 0.49356395511762724,
       "p_random": 0.6186958888009317,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: before matching on context it looks 2.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 2.3\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 609, user 327, Spider-Man): 62% \u2192 49%; random ratings of the same size: 62% (p = 0.02)."
+      "why": "Recent fans piled on: removing its strongest occurrence (user 609, user 327, Spider-Man): 62% \u2192 49%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 4.7 points of the model's preference vs 2.0 for a comparable pattern (before matching: vs 1.6). Timing and activity do not explain it away. "
     },
     {
       "motif": "BRIDGE",
       "name": "Shared taste leads to the title",
       "raw": 1.7470607950094579,
       "adjusted": 1.4012672733316291,
+      "p_full": 0.6174959125625988,
+      "pts_one": 2.722688711507637,
+      "pts_base": 1.9365469560430726,
+      "pts_one_raw": 2.897040877539492,
+      "pts_any": 1.6494442086638639,
       "graph": {
         "nodes": [
           {
@@ -879,13 +889,18 @@
       "p_without": 0.5792840482030233,
       "p_random": 0.6199341714314197,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: before matching on context it looks 1.7\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.4\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 609, Inside Out, user 327): 62% \u2192 58%; random ratings of the same size: 62% (p = 0.02)."
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 609, Inside Out, user 327): 62% \u2192 58%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.7 points of the model's preference vs 1.9 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "BRIDGEB",
       "name": "Shared taste leads to the better match",
       "raw": 1.2768242595874029,
       "adjusted": 0.8286194971710102,
+      "p_full": 0.6174959125625988,
+      "pts_one": 1.319854714388602,
+      "pts_base": 1.5948131761834738,
+      "pts_one_raw": 2.110307494106911,
+      "pts_any": 1.6494442086638639,
       "graph": {
         "nodes": [
           {
@@ -965,13 +980,18 @@
       "p_without": 0.5349661013569625,
       "p_random": 0.6164250470484589,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the better match: before matching on context it looks 1.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.8\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 105, Spider-Man, user 609): 62% \u2192 53%; random ratings of the same size: 62% (p = 0.02)."
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 105, Spider-Man, user 609): 62% \u2192 53%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.3 points of the model's preference vs 1.6 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "CO",
       "name": "Two people rated the same movie",
       "raw": 0.5061746827913168,
       "adjusted": 0.6797540038200869,
+      "p_full": 0.6174959125625988,
+      "pts_one": 1.163456965572185,
+      "pts_base": 1.7158623062178413,
+      "pts_one_raw": 0.8317860030307878,
+      "pts_any": 1.6494442086638639,
       "graph": {
         "nodes": [
           {
@@ -1035,13 +1055,18 @@
       "p_without": 0.49887758466532917,
       "p_random": 0.6164082205286868,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: before matching on context it looks 0.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.7\u00d7. Removing its strongest occurrence (user 609, Spider-Man, user 379): 62% \u2192 50%; random ratings of the same size: 62% (p = 0.02)."
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 609, Spider-Man, user 379): 62% \u2192 50%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.2 points of the model's preference vs 1.7 for a comparable pattern (before matching: vs 1.6). "
     },
     {
       "motif": "SEQ",
       "name": "A run of ratings in one sitting",
       "raw": 0.18892833455286512,
       "adjusted": 0.5570926414577283,
+      "p_full": 0.6174959125625988,
+      "pts_one": 0.16971153626345048,
+      "pts_base": 0.30483960225874407,
+      "pts_one_raw": 0.3096861928518435,
+      "pts_any": 1.6494442086638639,
       "graph": {
         "nodes": [
           {
@@ -1104,11 +1129,11 @@
       "p_without": 0.6005860880736864,
       "p_random": 0.6152031145657275,
       "p_value": 0.11475409836065574,
-      "why": "A run of ratings in one sitting: before matching on context it looks 0.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Removing its strongest occurrence (user 251, Inside Out, Arrival): 62% \u2192 60%; random ratings of the same size: 62% (p = 0.11)."
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 251, Inside Out, Arrival): 62% \u2192 60%; random ratings of the same size: 62% (p = 0.11). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 1.6). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1158,
-  "computed_at": "2026-10-27T18:47:40-0400",
+  "computed_at": "2026-10-28T16:39:01-0400",
   "summary": "With 8 ratings (6 recent ratings of Spider-Man by other people, 2 of the member's own ratings), the model's preference for Spider-Man over The Last Samurai goes from 62% to 33% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 61% on average (p = 0.02, 60 draws). In the full ranking, Spider-Man moves from #1 to #2."
 }

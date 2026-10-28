@@ -171,21 +171,27 @@ def explain_k(case_id, k=3, n_draw=60, seed=0):
               for e in o["eids"] if e in edges]
         pn = [{"id": int(v), "name": nm(v), "type": "user" if v < G.U else "title", "role": "u" if v == u else "A" if v == A else "B" if v == B else None}
               for v in {x for ed in pe for x in (ed["s"], ed["t"])}]
-        pats.append({"motif": m, "name": PLAIN.get(m, m), "raw": cx["raw_ratio"].get(m), "adjusted": (num / den) if den > 0 else None,
+        om_ = sum(x["omega"] for x in terms) or 1.0
+        mf = cx.get("margin_full", float(np.log(p0 / (1 - p0)) * T))
+        pts = lambda g: 100 * (P(mf) - P(mf - g))
+        pp = {"p_full": p0, "pts_one": pts(num / om_), "pts_base": pts(den / om_),
+              "pts_one_raw": pts(cx["pooled_g"][m]) if "pooled_g" in cx else None, "pts_any": pts(cx["pooled_g_all"]) if "pooled_g_all" in cx else None}
+        pats.append({"motif": m, "name": PLAIN.get(m, m), "raw": cx["raw_ratio"].get(m), "adjusted": (num / den) if den > 0 else None, **pp,
                      "graph": {"nodes": pn, "edges": pe}, "overlap_temgx": [ed["eid"] for ed in pe if ed["in_temgx"]],
                      "S": cx["S"][m], "occurrence": {"eids": o["eids"], "nodes": [nm(v) for v in o["nodes"]], "dates": [_day(x) for x in o["ts"]]},
                      "p_without": P(mo), "p_random": float(np.mean([P(x) for x in mr])), "p_value": float((1 + np.sum(mr <= mo)) / (1 + n_draw))})
     pats.sort(key=lambda x: -(x["adjusted"] or 0))
     for x in pats:
         ra, ad = x["raw"], x["adjusted"]
-        txt = f"{x['name']}: before matching on context it looks {ra:.1f}× as important as an average pattern; " if ra else f"{x['name']}: "
-        txt += (f"compared only with patterns that are equally recent, last as long and involve equally active people, it is {ad:.1f}×. " if ad else "")
+        txt = (f"{x['name']}: removing its strongest occurrence ({', '.join(x['occurrence']['nodes'][:3])}): {100 * p0:.0f}% → {100 * x['p_without']:.0f}%; "
+               f"random ratings of the same size: {100 * x['p_random']:.0f}% (p = {x['p_value']:.2f}). ")
+        txt += (f"Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs "
+                f"{x['pts_one']:.1f} points of the model's preference vs {x['pts_base']:.1f} for a comparable pattern"
+                + (f" (before matching: vs {x['pts_any']:.1f}). " if x.get("pts_any") is not None else ". "))
         if ra and ad:
             txt += ("Timing and activity do not explain it away. " if ad >= ra * 0.9 and ad > 1 else
                     "Timing and activity explain part of it, but a real structural effect remains. " if ad >= 1.5 else
                     "Most of its apparent importance came from timing and activity. " if ad < ra else "")
-        txt += (f"Removing its strongest occurrence ({', '.join(x['occurrence']['nodes'][:3])}): {100 * p0:.0f}% → {100 * x['p_without']:.0f}%; "
-                f"random ratings of the same size: {100 * x['p_random']:.0f}% (p = {x['p_value']:.2f}).")
         x["why"] = txt
 
     # joint reading: which TemGX ratings sit inside which CATGX pattern, and what the ranker added up
@@ -225,15 +231,16 @@ def _joint(ev, pats, split, A, B, u, query=""):
     if own:
         lines.append(f"TemGX: {len(own)} {'is' if len(own) == 1 else 'are'} the member's own recent rating{'s' if len(own) > 1 else ''} "
                      f"({', '.join(l['to'] for l in own[:3])}), shared with people who also rated {A}.")
+    def eff(x):
+        return (f"removing it moves the model {100 * x['p_full']:.0f}% → {100 * x['p_without']:.0f}% (random ratings: {100 * x['p_random']:.0f}%, p = {x['p_value']:.2f}); "
+                f"matched on timing and activity, each removal still costs {x['pts_one']:.1f} points vs {x['pts_base']:.1f} for a comparable pattern")
     for x in strong[:1]:
         if x["raw"] and x["adjusted"] < 0.9 * x["raw"]:
-            lines.append(f"CATGX: “{x['name']}” looked {x['raw']:.1f}× and is still {x['adjusted']:.1f}× after matching on timing and activity; removing it moves the model "
-                         f"(p = {x['p_value']:.2f}). Timing explains part of it, but a structural effect remains.")
+            lines.append(f"CATGX: “{x['name']}”: {eff(x)}. Timing explains part of it, but a structural effect remains.")
         else:
-            lines.append(f"CATGX: “{x['name']}” stays {x['adjusted']:.1f}× after matching on timing and activity, and removing it moves the model "
-                         f"(p = {x['p_value']:.2f}): a structural reason, not just recency.")
+            lines.append(f"CATGX: “{x['name']}”: {eff(x)}: a structural reason, not just recency.")
     for x in faded[:1]:
-        lines.append(f"CATGX: “{x['name']}” looked {x['raw']:.1f}× but is {x['adjusted']:.1f}× after matching: "
+        lines.append(f"CATGX: “{x['name']}”: matched on timing and activity, each removal costs {x['pts_one']:.1f} points vs {x['pts_base']:.1f} for a comparable pattern: "
                      + ("most of its weight was timing and activity." if x["adjusted"] <= 1.2 else "part of its weight was timing and activity."))
     if not strong:
         lines.append("CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.")

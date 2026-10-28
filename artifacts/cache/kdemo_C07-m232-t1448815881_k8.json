@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 5 of the 8 ratings are recent ratings of Requiem for a Dream by other people; 5 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (The Shawshank Redemption, Schindler's List, Slumdog Millionaire), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cRecent fans piled on\u201d looked 4.5\u00d7 and is still 3.0\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 99% \u2192 99% (random ratings: 99%, p = 0.02); matched on timing and activity, each removal still costs 0.1 points vs 0.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Requiem for a Dream beats Something to Talk About mainly through popularity (+0.44); the history part adds +0.26."
     ],
     "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Shawshank Redemption, Schindler's List. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
@@ -756,6 +756,11 @@
       "name": "Recent fans piled on",
       "raw": 4.537776930794257,
       "adjusted": 2.998144764157281,
+      "p_full": 0.9918987533927919,
+      "pts_one": 0.08431829720814132,
+      "pts_base": 0.027208639070186447,
+      "pts_one_raw": 0.08311095901242238,
+      "pts_any": 0.017630289067838145,
       "graph": {
         "nodes": [
           {
@@ -819,13 +824,18 @@
       "p_without": 0.9876818572390262,
       "p_random": 0.9918278580881206,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: before matching on context it looks 4.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 3.0\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 365, user 255, Requiem for a Dream): 99% \u2192 99%; random ratings of the same size: 99% (p = 0.02)."
+      "why": "Recent fans piled on: removing its strongest occurrence (user 365, user 255, Requiem for a Dream): 99% \u2192 99%; random ratings of the same size: 99% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "CO",
       "name": "Two people rated the same movie",
       "raw": 1.8049395707233933,
       "adjusted": 1.7200815007576737,
+      "p_full": 0.9918987533927919,
+      "pts_one": 0.03428287537072805,
+      "pts_base": 0.019759308193401104,
+      "pts_one_raw": 0.03209756773280281,
+      "pts_any": 0.017630289067838145,
       "graph": {
         "nodes": [
           {
@@ -888,13 +898,18 @@
       "p_without": 0.9846387264323424,
       "p_random": 0.9919452615863648,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: before matching on context it looks 1.8\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.7\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 1, The Shawshank Redemption, user 232): 99% \u2192 98%; random ratings of the same size: 99% (p = 0.02)."
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 1, The Shawshank Redemption, user 232): 99% \u2192 98%; random ratings of the same size: 99% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity do not explain it away. "
     },
     {
       "motif": "BRIDGE",
       "name": "Shared taste leads to the title",
       "raw": 1.3021062716043592,
       "adjusted": 1.6584917602075886,
+      "p_full": 0.9918987533927919,
+      "pts_one": 0.047112536545190764,
+      "pts_base": 0.028090183969142757,
+      "pts_one_raw": 0.02303096521745207,
+      "pts_any": 0.017630289067838145,
       "graph": {
         "nodes": [
           {
@@ -974,13 +989,18 @@
       "p_without": 0.9907538327702566,
       "p_random": 0.9918471941747397,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: before matching on context it looks 1.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.7\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 104, The Shawshank Redemption, user 255): 99% \u2192 99%; random ratings of the same size: 99% (p = 0.02)."
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 104, The Shawshank Redemption, user 255): 99% \u2192 99%; random ratings of the same size: 99% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity do not explain it away. "
     },
     {
       "motif": "SEQ",
       "name": "A run of ratings in one sitting",
       "raw": 0.39698733473940706,
       "adjusted": 0.5993247066933782,
+      "p_full": 0.9918987533927919,
+      "pts_one": 0.006146036120069365,
+      "pts_base": 0.010280704846488131,
+      "pts_one_raw": 0.006953978037327335,
+      "pts_any": 0.017630289067838145,
       "graph": {
         "nodes": [
           {
@@ -1043,11 +1063,11 @@
       "p_without": 0.991341991385115,
       "p_random": 0.9917549546133168,
       "p_value": 0.08196721311475409,
-      "why": "A run of ratings in one sitting: before matching on context it looks 0.4\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Removing its strongest occurrence (user 62, Schindler's List, Requiem for a Dream): 99% \u2192 99%; random ratings of the same size: 99% (p = 0.08)."
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 62, Schindler's List, Requiem for a Dream): 99% \u2192 99%; random ratings of the same size: 99% (p = 0.08). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1113,
-  "computed_at": "2026-10-27T18:44:26-0400",
+  "computed_at": "2026-10-28T16:39:15-0400",
   "summary": "With 8 ratings (5 recent ratings of Requiem for a Dream by other people, 3 of the member's own ratings), the model's preference for Requiem for a Dream over Something to Talk About goes from 99% to 96%. Removing the same number of random ratings from the same weeks gives 99% on average (p = 0.02, 60 draws). The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }
