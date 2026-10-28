@@ -36,11 +36,15 @@ Everything shown is computed by the models in this repository. Nothing uses Netf
 All checkpoints, cached results and the built web page are already in the repository, so the demo runs offline.
 
 ```bash
-cd ~/Desktop/netflix_demo/search-ranking-investigation-lab
+git clone https://github.com/nicej1899/search-ranking-investigation-lab
+cd search-ranking-investigation-lab
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m srlab.server
 ```
 
-Open **http://127.0.0.1:8000**. The page opens on **▶ Case study**, member 290. Click steps 1 → 4.
+Open **http://127.0.0.1:8000**. The page opens on the five-step Demo with **member 304** ("a fantasy movie that isn't animated"). Click steps 1 → 5, and try the explanation size k in step 2.
+
+Slides (PDF) and the five demo videos are in [`docs/`](docs/).
 
 | situation | what to do |
 |---|---|
