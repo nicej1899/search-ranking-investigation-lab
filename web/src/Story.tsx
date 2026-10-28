@@ -36,7 +36,7 @@ export default function Story({ sig, jt, kTx, sweep, rep, parts, ov, step, sg, t
       <p className="cap"><b>{bkInfo?.label}:</b> {bkInfo?.plain}.</p></>;
   } else if (step === 2 && tx) {
     tag = "Step 1 · Find the cause  (TemGX)"; head = "Which specific links push A up?";
-    does = `TemGX looks at everyone and everything up to ${L} hop${L > 1 ? "s" : ""} away, scores how strongly each one's influence travels along time-ordered paths to this decision, picks a few, and checks every pick by re-running the model.`;
+    does = `TemGX looks at everyone and everything up to ${L} hop${L > 1 ? "s" : ""} away, scores how strongly each one's influence travels along time-ordered paths to this decision, picks a few, and checks every pick by re-inference of the model.`;
     const hops = Object.values(tx.explanatory_hops) as number[];
     const far = hops.filter((h) => h >= 2).length;
     body = <>
@@ -60,7 +60,7 @@ export default function Story({ sig, jt, kTx, sweep, rep, parts, ov, step, sg, t
       <p className="cap">{tx.flipped ? "The decision flips: these links are the cause." : "A real cause, but not the only one."}</p></>;
   } else if (step === 4 && cx) {
     tag = `Step 3 · Find the pattern  (CATGX${sig === "do" ? " + TemGX replay" : ""})`; head = "What kind of structure is behind it?";
-    does = (sig === "do" ? "Importance of each pattern instance = how much the decision changes when it is deleted and the model re-run (TemGX's test), not attention. " : "Importance = the model's attention on the instance (as in the paper). ") + "CATGX looks for recurring shapes in the graph and asks which shapes the model leans on more than other shapes that are equally recent and involve equally active people and movies. Each shape is shown on its own below, with a real example.";
+    does = (sig === "do" ? "Importance of each pattern instance = how much the decision changes when it is deleted and the model runs re-inference (TemGX's test), not attention. " : "Importance = the model's attention on the instance (as in the paper). ") + "CATGX looks for recurring shapes in the graph and asks which shapes the model leans on more than other shapes that are equally recent and involve equally active people and movies. Each shape is shown on its own below, with a real example.";
     const cards = cx.motif_cards ?? [];
     body = <>
       {!cx.motif_cards ? <p className="banner warn">This result came from an older backend. Restart the server (Ctrl+C, then <code>make serve</code>) and reload to see the pattern cards.</p> : cards.length ? <MotifCard card={cards[0]} meta={cx.meta} sg={sg} color={MCOL[cards[0].motif]} /> : big("no pattern", "none found in this subgraph")}
@@ -68,7 +68,7 @@ export default function Story({ sig, jt, kTx, sweep, rep, parts, ov, step, sg, t
       <p className="cap">{cxe ? `Checked ${cx.occurrences_used} of ${cxe.occurrences_total} instances (sampling, ${(cxe.selected_motifs?.[0] === cx.selected_motifs?.[0]) ? "same" : "different"} top shape as checking all) · ` : ""}{cx.n_model_inferences} model runs · {n(cx.latency_ms.total, 0)} ms</p></>;
   } else if (step === 5) {
     tag = "Together · causal check"; head = "Which links, what kind, and is it the cause?";
-    does = "Causal means: change the input, re-run the model. We delete each explanation's links and compare with deleting the same number of random links from the same time period (placebo, grey band).";
+    does = "Causal means: change the input, run re-inference on the model. We delete each explanation's links and compare with deleting the same number of random links from the same time period (placebo, grey band).";
     const ARM: [string, string, string][] = [["temgx", "TemGX links", "#c82434"], ["catgx_do", "CATGX pattern (replay)", "#c08a1e"], ["catgx", "CATGX pattern (attention)", "#c9b48a"], ["attention", "highest-attention links", "#8b97a3"]];
     const PL: Record<string, string> = { SEQ: "watched in a row", CO: "rated the same movie", BRIDGE: "taste path to A", BRIDGEB: "taste path to B", POP: "crowd rating A" };
     const nm = (v: number) => { const m = jt?.meta?.[String(v)]; const t = m ? m.title : `node ${v}`; return t.length > 18 ? t.slice(0, 17) + "…" : t; };

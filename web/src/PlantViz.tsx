@@ -3,7 +3,7 @@ import { n } from "./api";
 
 // Interactive picture of the planted-cause test: one member's history as a star graph (person in the middle, rated
 // movies around), the two planted ratings marked ★, the chosen method's two picks drawn and "deleted", and the model's
-// re-run answer as a gauge. Below: every member, every method, as dots (how much of the possible effect it removes).
+// re-inference answer as a gauge. Below: every member, every method, as dots (how much of the possible effect it removes).
 
 const M = [
   { k: "TemGX", label: "TemGX", col: "#c82434" },
@@ -81,7 +81,7 @@ export default function PlantViz({ pr, simple = false }: any) {
           <text x={Zx} y={Zy + 40} textAnchor="middle" className="pv-small">{short(v.Z, 26)}</text>
         </svg>
         <div className="pviz-side">
-          <p className="cap"><b style={{ color: meth.col }}>{meth.label}</b> says the model ranked <b>{short(v.Z, 30)}</b> high because of the two dashed ratings. Delete them and re-run the model:</p>
+          <p className="cap"><b style={{ color: meth.col }}>{meth.label}</b> says the model ranked <b>{short(v.Z, 30)}</b> high because of the two dashed ratings. Delete them and run re-inference:</p>
           <div className="gauge"><span>before</span><i><b style={{ width: `${100 * v.p_before}%` }} /></i><em>{pct(v.p_before)}</em></div>
           <div className="gauge"><span>after</span><i><b style={{ width: `${100 * (after ?? 0)}%`, background: meth.col }} /><u style={{ left: `${100 * v.p_best}%` }} title="best possible" /></i><em>{pct(after)}</em></div>
           <p className="cap">Model's confidence that “{short(v.Z, 24)}” beats “{short(v.B, 24)}”. Black tick = lowest any two deletions can reach.</p>

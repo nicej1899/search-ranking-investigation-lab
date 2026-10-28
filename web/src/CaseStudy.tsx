@@ -6,7 +6,7 @@ import SubGraph, { MCOL } from "./SubGraph";
 
 // Case study in four moves: Problem → Evidence → Verification → Decision. Left: the real graph around one affected
 // member (click a link to delete it). Right: one picture per move, computed live (/api/live re-ranks on every change).
-// Evidence = TemGX (which links) + CATGX (what structure, with an LLM reading of it); Verification = delete and re-run
+// Evidence = TemGX (which links) + CATGX (what structure, with an LLM reading of it); Verification = delete and re-inference
 // against random deletions; Decision = the targeted fix, tested on held-out searches.
 const RED = "#c82434", GREEN = "#2a78d6", POP = "#8b97a3", TXT = "#c5a353", HIS = "#5b8fc7", GREY = "#b8c2cc", GOLD = "#c08a1e";
 const BK = "tgat2", L = 2;
@@ -76,7 +76,7 @@ export default function CaseStudy() {
   }, [st]);
   const sEids: number[] = cxk?.G_star ?? [];
 
-  // verification: TemGX links, the CATGX structure, and random links of the same size (8 draws), each re-run live
+  // verification: TemGX links, the CATGX structure, and random links of the same size (8 draws), each with live re-inference
   useEffect(() => {
     if (step !== 2 || !tx || !sg || !cxk || !ctr || !rtv || ver) return;
     (async () => {

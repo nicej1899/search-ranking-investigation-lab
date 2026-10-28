@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { MCOL } from "./SubGraph";
 
 // CATGX structures behind one search, made usable: each structure drawn on its own (real people, titles, dates),
-// its causal test (delete it, re-run the model, compare with random deletions), and an LLM explanation of why it
+// its causal test (delete it, run re-inference on the model, compare with random deletions), and an LLM explanation of why it
 // moves the prediction, written only from that evidence and number-checked against it. /api/structure/{case_id}.
 const RED = "#c82434", GREEN = "#2f7a43", BLUE = "#7194b9";
 const pct = (x: number) => `${Math.round(100 * x)}%`;
