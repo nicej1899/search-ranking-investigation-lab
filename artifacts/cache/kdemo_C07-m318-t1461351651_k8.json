@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 2 of the 8 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
       "TemGX: 4 are the member's own recent ratings (The Matrix, The Dark Knight, Schindler's List), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cShared taste leads to the better match\u201d: removing it moves the model 88% \u2192 85% (random ratings: 88%, p = 0.02); matched on timing and activity, each removal still costs 3.4 points vs 0.5 for a comparable pattern: a structural reason, not just recency.",
+      "CATGX: \u201cShared taste leads to the better match\u201d: removing it moves the model 88% \u2192 85% (top-attention ratings: 95%); matched on timing and activity, each removal still costs 3.4 points vs 0.5 for a comparable pattern: a structural reason, not just recency.",
       "CATGX: \u201cA run of ratings in one sitting\u201d: matched on timing and activity, each removal costs 1.9 points vs 1.2 for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats The Help mainly through popularity (+0.42); the history part adds +0.11."
     ],
@@ -311,7 +311,8 @@
       "rand_mean": 0.8810627718857621,
       "rand_lo": 0.8671943663263317,
       "rand_hi": 0.8872025703698924,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9565356432866027
     },
     {
       "n": 2,
@@ -319,7 +320,8 @@
       "rand_mean": 0.8818442375675803,
       "rand_lo": 0.8427370595206441,
       "rand_hi": 0.9472784042929621,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9402592554550192
     },
     {
       "n": 3,
@@ -327,7 +329,8 @@
       "rand_mean": 0.8780677477544768,
       "rand_lo": 0.8410558444785621,
       "rand_hi": 0.8872025703698924,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9482434012599786
     },
     {
       "n": 4,
@@ -335,7 +338,8 @@
       "rand_mean": 0.8807090285905479,
       "rand_lo": 0.8405666674836467,
       "rand_hi": 0.9229151459943247,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.946589975656287
     },
     {
       "n": 5,
@@ -343,7 +347,8 @@
       "rand_mean": 0.8848163363677177,
       "rand_lo": 0.8780832320668153,
       "rand_hi": 0.9477597471875258,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.934650746806899
     },
     {
       "n": 6,
@@ -351,7 +356,8 @@
       "rand_mean": 0.8829761946498818,
       "rand_lo": 0.8417186050358068,
       "rand_hi": 0.9567658166130996,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9320793801986726
     },
     {
       "n": 7,
@@ -359,7 +365,8 @@
       "rand_mean": 0.886073892037696,
       "rand_lo": 0.8749650066088916,
       "rand_hi": 0.9565591233254531,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.928751777218397
     },
     {
       "n": 8,
@@ -367,13 +374,15 @@
       "rand_mean": 0.885337678167089,
       "rand_lo": 0.842196744696255,
       "rand_hi": 0.9572377302516427,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9383080592084228
     }
   ],
   "full": {
     "p": 0.6435569227838311,
     "rand_mean": 0.885337678167089,
     "p_value": 0.01639344262295082,
+    "attn": 0.9383080592084228,
     "rand_all": [
       0.8438100845793914,
       0.8804171850798808,
@@ -720,6 +729,7 @@
       "raw": 5.506344398467866,
       "adjusted": 6.7142139242233085,
       "p_full": 0.8810373554555138,
+      "p_attn": 0.9482433833800463,
       "pts_one": 3.433826174918997,
       "pts_base": 0.46560033062579276,
       "pts_one_raw": 3.4326045497249047,
@@ -803,7 +813,7 @@
       "p_without": 0.8466135003409406,
       "p_random": 0.87964313067915,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 17, The Matrix, user 9): 88% \u2192 85%; random ratings of the same size: 88% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 17, The Matrix, user 9): 88% \u2192 85%; the same number of top-attention ratings: 95%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
     },
     {
       "motif": "POP",
@@ -811,6 +821,7 @@
       "raw": 1.0539805483578732,
       "adjusted": 3.0350626559752696,
       "p_full": 0.8810373554555138,
+      "p_attn": 0.9402592452228309,
       "pts_one": 0.7355068889287497,
       "pts_base": 0.2381516673318651,
       "pts_one_raw": 0.6010226818746744,
@@ -877,7 +888,7 @@
       "p_without": 0.857504714924733,
       "p_random": 0.8808936463696521,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 494, user 40, Requiem for a Dream): 88% \u2192 86%; random ratings of the same size: 88% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 494, user 40, Requiem for a Dream): 88% \u2192 86%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
     },
     {
       "motif": "SEQ",
@@ -885,6 +896,7 @@
       "raw": 2.453428717868932,
       "adjusted": 1.484718203456488,
       "p_full": 0.8810373554555138,
+      "p_attn": 0.9402592452228309,
       "pts_one": 1.8882759590865938,
       "pts_base": 1.245616797134208,
       "pts_one_raw": 1.4390909229770932,
@@ -952,7 +964,7 @@
       "p_without": 0.8116875856520472,
       "p_random": 0.8852019157435833,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 318, Schindler's List, The Matrix): 88% \u2192 81%; random ratings of the same size: 89% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.9 points of the model's preference vs 1.2 for a comparable pattern (before matching: vs 0.6). Most of its apparent importance came from timing and activity. "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 318, Schindler's List, The Matrix): 88% \u2192 81%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.9 points of the model's preference vs 1.2 for a comparable pattern (before matching: vs 0.6). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "BRIDGE",
@@ -960,6 +972,7 @@
       "raw": 0.9607454401957032,
       "adjusted": 1.292083554846726,
       "p_full": 0.8810373554555138,
+      "p_attn": 0.9482433833800463,
       "pts_one": 0.3331903275014203,
       "pts_base": 0.2571749490230313,
       "pts_one_raw": 0.5468240881494557,
@@ -1043,7 +1056,7 @@
       "p_without": 0.8302815957396323,
       "p_random": 0.8751232841061881,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 104, The Help, user 297): 88% \u2192 83%; random ratings of the same size: 88% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.3 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 104, The Help, user 297): 88% \u2192 83%; the same number of top-attention ratings: 95%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.3 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -1051,6 +1064,7 @@
       "raw": 0.8295707177664294,
       "adjusted": 0.6775446026059317,
       "p_full": 0.8810373554555138,
+      "p_attn": 0.9402592452228309,
       "pts_one": 0.3573962085667737,
       "pts_base": 0.5307092471057873,
       "pts_one_raw": 0.47091230659208616,
@@ -1117,11 +1131,11 @@
       "p_without": 0.8300277349940507,
       "p_random": 0.8815283174071056,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 23, The Matrix, user 318): 88% \u2192 83%; random ratings of the same size: 88% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.6). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 23, The Matrix, user 318): 88% \u2192 83%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.6). Most of its apparent importance came from timing and activity. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1209,
-  "computed_at": "2026-10-28T16:39:36-0400",
-  "summary": "With 8 ratings (2 recent ratings of Requiem for a Dream by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for Requiem for a Dream over The Help goes from 88% to 64%. Removing the same number of random ratings from the same weeks gives 89% on average (p = 0.02, 60 draws). The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T16:45:16-0400",
+  "summary": "With 8 ratings (2 recent ratings of Requiem for a Dream by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for Requiem for a Dream over The Help goes from 88% to 64%. Removing the same number of ratings with the highest attention weight gives 94%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

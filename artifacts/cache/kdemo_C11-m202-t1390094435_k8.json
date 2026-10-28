@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 3 of the 6 ratings are recent ratings of Who Framed Roger Rabbit? by other people; 3 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (Naked Gun 33 1/3: The Final Insult, Ransom, My Cousin Vinny), shared with people who also rated Who Framed Roger Rabbit?.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 77% \u2192 68% (random ratings: 77%, p = 0.02); matched on timing and activity, each removal still costs 5.1 points vs 3.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 77% \u2192 68% (top-attention ratings: 78%); matched on timing and activity, each removal still costs 5.1 points vs 3.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Who Framed Roger Rabbit? beats The Mummy mainly through the member's history (+0.06); the history part adds +0.06."
     ],
     "verdict": "Diagnosis: Who Framed Roger Rabbit? wins mainly through the member's history, and the history model adds to it through recent fans of Who Framed Roger Rabbit? (a pattern that survives matching) and the member's ratings of Naked Gun 33 1/3: The Final Insult, Ransom. None of these signals reads \u201cisn't animated\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
@@ -238,7 +238,8 @@
       "rand_mean": 0.767041835623898,
       "rand_lo": 0.766116346583076,
       "rand_hi": 0.768475676303985,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.7766669763068653
     },
     {
       "n": 2,
@@ -246,7 +247,8 @@
       "rand_mean": 0.7664631214567544,
       "rand_lo": 0.7613404430296684,
       "rand_hi": 0.768475676303985,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.7764425297569428
     },
     {
       "n": 3,
@@ -254,7 +256,8 @@
       "rand_mean": 0.7665480859237677,
       "rand_lo": 0.7565279222179812,
       "rand_hi": 0.7793100370517722,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.7663721764136486
     },
     {
       "n": 4,
@@ -262,7 +265,8 @@
       "rand_mean": 0.7706237230256358,
       "rand_lo": 0.7609394248875221,
       "rand_hi": 0.7883336925565539,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.7238828837745965
     },
     {
       "n": 5,
@@ -270,7 +274,8 @@
       "rand_mean": 0.7690949764616711,
       "rand_lo": 0.7613952425954192,
       "rand_hi": 0.7813533398246688,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.7726076649210641
     },
     {
       "n": 6,
@@ -278,13 +283,15 @@
       "rand_mean": 0.7741972341316803,
       "rand_lo": 0.766116346583076,
       "rand_hi": 0.7948679860797425,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.8097862514381996
     }
   ],
   "full": {
     "p": 0.5954244109259595,
     "rand_mean": 0.7741972341316803,
     "p_value": 0.01639344262295082,
+    "attn": 0.8097862514381996,
     "rand_all": [
       0.7781494494236731,
       0.7790746088506842,
@@ -481,6 +488,7 @@
       "raw": 26.989605851031335,
       "adjusted": 1.6420223658797524,
       "p_full": 0.7670168241070526,
+      "p_attn": 0.7764424665188462,
       "pts_one": 5.106927427382136,
       "pts_base": 3.0318007685196102,
       "pts_one_raw": 6.305854842108316,
@@ -548,7 +556,7 @@
       "p_without": 0.6761881242548585,
       "p_random": 0.7659961695176521,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 375, user 281, Who Framed Roger Rabbit?): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 5.1 points of the model's preference vs 3.0 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 375, user 281, Who Framed Roger Rabbit?): 77% \u2192 68%; the same number of top-attention ratings: 78%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 5.1 points of the model's preference vs 3.0 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "CO",
@@ -556,6 +564,7 @@
       "raw": 10.610586693284935,
       "adjusted": 1.5285425741267717,
       "p_full": 0.7670168241070526,
+      "p_attn": 0.7764424665188462,
       "pts_one": 2.2264007004097586,
       "pts_base": 1.4410080024256477,
       "pts_one_raw": 2.3630144618249416,
@@ -623,7 +632,7 @@
       "p_without": 0.6761881242548585,
       "p_random": 0.7664326914313808,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 375, Who Framed Roger Rabbit?, user 281): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.2 points of the model's preference vs 1.4 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 375, Who Framed Roger Rabbit?, user 281): 77% \u2192 68%; the same number of top-attention ratings: 78%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.2 points of the model's preference vs 1.4 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
@@ -631,6 +640,7 @@
       "raw": 0.22786808548047677,
       "adjusted": 0.6002489782283017,
       "p_full": 0.7670168241070526,
+      "p_attn": 0.7764424665188462,
       "pts_one": 0.04960463859385866,
       "pts_base": 0.08268082342720584,
       "pts_one_raw": 0.04911912533303031,
@@ -697,11 +707,11 @@
       "p_without": 0.759393710436056,
       "p_random": 0.76643510762916,
       "p_value": 0.16393442622950818,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 202, Beverly Hills Cop III, Naked Gun 33 1/3: The Final Insult): 77% \u2192 76%; random ratings of the same size: 77% (p = 0.16). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.2). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 202, Beverly Hills Cop III, Naked Gun 33 1/3: The Final Insult): 77% \u2192 76%; the same number of top-attention ratings: 78%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.2). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 708,
-  "computed_at": "2026-10-28T16:39:49-0400",
-  "summary": "With 6 ratings (3 recent ratings of Who Framed Roger Rabbit? by other people, 3 of the member's own ratings), the model's preference for Who Framed Roger Rabbit? over The Mummy goes from 77% to 60%. Removing the same number of random ratings from the same weeks gives 77% on average (p = 0.02, 60 draws). The full ranking still puts Who Framed Roger Rabbit? at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T16:45:28-0400",
+  "summary": "With 6 ratings (3 recent ratings of Who Framed Roger Rabbit? by other people, 3 of the member's own ratings), the model's preference for Who Framed Roger Rabbit? over The Mummy goes from 77% to 60%. Removing the same number of ratings with the highest attention weight gives 81%. The full ranking still puts Who Framed Roger Rabbit? at #1: text match and popularity also push it up."
 }

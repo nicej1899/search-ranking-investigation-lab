@@ -185,7 +185,8 @@
       "rand_mean": 0.6779206060633254,
       "rand_lo": 0.6718463712544147,
       "rand_hi": 0.6780628311042621,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.6623282381823665
     },
     {
       "n": 2,
@@ -193,7 +194,8 @@
       "rand_mean": 0.7066992002314171,
       "rand_lo": 0.6695155186978206,
       "rand_hi": 0.8834299813852876,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.763599131882284
     },
     {
       "n": 3,
@@ -201,7 +203,8 @@
       "rand_mean": 0.7134791796489777,
       "rand_lo": 0.670885394997587,
       "rand_hi": 0.8851326902641065,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9156529259626122
     },
     {
       "n": 4,
@@ -209,7 +212,8 @@
       "rand_mean": 0.7295385084087788,
       "rand_lo": 0.6683139498769507,
       "rand_hi": 0.8856072474388602,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9206885814729532
     },
     {
       "n": 5,
@@ -217,7 +221,8 @@
       "rand_mean": 0.7098525557844407,
       "rand_lo": 0.6720139169637086,
       "rand_hi": 0.8820217856836341,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9152042112244119
     },
     {
       "n": 6,
@@ -225,13 +230,15 @@
       "rand_mean": 0.7429617976174179,
       "rand_lo": 0.6701857940600341,
       "rand_hi": 0.889458195792327,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9088571808870997
     }
   ],
   "full": {
     "p": 0.5260510145786034,
     "rand_mean": 0.7429617976174179,
     "p_value": 0.01639344262295082,
+    "attn": 0.9088571808870997,
     "rand_all": [
       0.7747750432457878,
       0.6743730292516998,
@@ -578,6 +585,7 @@
       "raw": 1.1555863968897904,
       "adjusted": 1.4066471503161653,
       "p_full": 0.6742552553079212,
+      "p_attn": 0.7635992305297495,
       "pts_one": 0.06808281235459734,
       "pts_base": 0.04839323742832358,
       "pts_one_raw": 0.05782722458157474,
@@ -642,7 +650,7 @@
       "p_without": 0.6683401307074107,
       "p_random": 0.7108739392385733,
       "p_value": 0.06557377049180328,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 609, Raiders of the Lost Ark, Tales from the Crypt Presents: Demon Knight): 67% \u2192 67%; random ratings of the same size: 71% (p = 0.07). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.1). Timing and activity do not explain it away. "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 609, Raiders of the Lost Ark, Tales from the Crypt Presents: Demon Knight): 67% \u2192 67%; the same number of top-attention ratings: 76%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.1). Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -650,6 +658,7 @@
       "raw": 1.0954887319147122,
       "adjusted": 0.7554974127282944,
       "p_full": 0.6742552553079212,
+      "p_attn": 0.7635992305297495,
       "pts_one": 0.03960333840632435,
       "pts_base": 0.05242553744743139,
       "pts_one_raw": 0.05481854522128016,
@@ -716,7 +725,7 @@
       "p_without": 0.6708146317398525,
       "p_random": 0.6894723490477175,
       "p_value": 0.04918032786885246,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 474, The Matrix, user 399): 67% \u2192 67%; random ratings of the same size: 69% (p = 0.05). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 474, The Matrix, user 399): 67% \u2192 67%; the same number of top-attention ratings: 76%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "BRIDGE",
@@ -724,6 +733,7 @@
       "raw": 0.0,
       "adjusted": 0.0,
       "p_full": 0.6742552553079212,
+      "p_attn": 0.91565299630563,
       "pts_one": 0.0,
       "pts_base": 0.07570987302655263,
       "pts_one_raw": 0.0,
@@ -805,7 +815,7 @@
       "p_without": 0.8798522737239912,
       "p_random": 0.695661959886282,
       "p_value": 1.0,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 379, Raiders of the Lost Ark, user 598): 67% \u2192 88%; random ratings of the same size: 70% (p = 1.00). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 379, Raiders of the Lost Ark, user 598): 67% \u2192 88%; the same number of top-attention ratings: 92%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). "
     },
     {
       "motif": "BRIDGEB",
@@ -813,6 +823,7 @@
       "raw": 0.0,
       "adjusted": 0.0,
       "p_full": 0.6742552553079212,
+      "p_attn": 0.91565299630563,
       "pts_one": 0.0,
       "pts_base": 0.07570987302655263,
       "pts_one_raw": 0.0,
@@ -894,7 +905,7 @@
       "p_without": 0.7747524104683443,
       "p_random": 0.6794853504217746,
       "p_value": 0.9672131147540983,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 474, Raiders of the Lost Ark, user 598): 67% \u2192 77%; random ratings of the same size: 68% (p = 0.97). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 474, Raiders of the Lost Ark, user 598): 67% \u2192 77%; the same number of top-attention ratings: 92%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). "
     },
     {
       "motif": "POP",
@@ -902,6 +913,7 @@
       "raw": 0.0,
       "adjusted": 0.0,
       "p_full": 0.6742552553079212,
+      "p_attn": 0.7635992305297495,
       "pts_one": 0.0,
       "pts_base": 0.07672824398238243,
       "pts_one_raw": 0.0,
@@ -966,11 +978,11 @@
       "p_without": 0.8890426148086903,
       "p_random": 0.7079652797321458,
       "p_value": 1.0,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 559, user 609, Independence Day): 67% \u2192 89%; random ratings of the same size: 71% (p = 1.00). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 559, user 609, Independence Day): 67% \u2192 89%; the same number of top-attention ratings: 76%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1050,
-  "computed_at": "2026-10-28T16:39:03-0400",
-  "summary": "With 6 ratings (5 of the member's own ratings, 1 other rating nearby), the model's preference for Independence Day over Rise of the Planet of the Apes goes from 67% to 53%. Removing the same number of random ratings from the same weeks gives 74% on average (p = 0.02, 60 draws). In the full ranking, Independence Day moves from #1 to #2."
+  "computed_at": "2026-10-28T16:44:46-0400",
+  "summary": "With 6 ratings (5 of the member's own ratings, 1 other rating nearby), the model's preference for Independence Day over Rise of the Planet of the Apes goes from 67% to 53%. Removing the same number of ratings with the highest attention weight gives 91%. In the full ranking, Independence Day moves from #1 to #2."
 }

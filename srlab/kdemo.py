@@ -122,7 +122,23 @@ def explain_k(case_id, k=3, n_draw=60, seed=0):
     curve = [{"n": i + 1, "p": P(m_pref[i]), "rand_mean": float(np.mean([P(m) for m in m_rnd[i]])),
               "rand_lo": float(np.quantile([P(m) for m in m_rnd[i]], 0.025)), "rand_hi": float(np.quantile([P(m) for m in m_rnd[i]], 0.975)),
               "p_value": float((1 + np.sum(m_rnd[i] <= m_pref[i])) / (1 + n_draw))} for i in range(len(order))]
+    # attention baseline: remove the same number of ratings with the highest attention weight
+    try:
+        aw = bb.edge_weights(u, t, [a, b])
+    except Exception:
+        aw = {}
+    att_order = sorted([e for e in edges if e in aw], key=lambda e: -aw[e])
+    nmax = max(len(order), 3)
+    if att_order:
+        am = bb.margins(u, t, a, b, [tuple(att_order[:i + 1]) for i in range(nmax)])
+        att_p = [P(m) for m in am]
+    else:
+        att_p = [None] * nmax
+    for i, cv in enumerate(curve):
+        cv["attn"] = att_p[i]
     full = curve[-1] if curve else None
+    if full is not None:
+        full["attn"] = att_p[len(order) - 1]
     rand_all = [P(m) for m in m_rnd[-1]] if len(order) else []
 
     # ranking without the evidence
@@ -174,7 +190,12 @@ def explain_k(case_id, k=3, n_draw=60, seed=0):
         om_ = sum(x["omega"] for x in terms) or 1.0
         mf = cx.get("margin_full", float(np.log(p0 / (1 - p0)) * T))
         pts = lambda g: 100 * (P(mf) - P(mf - g))
-        pp = {"p_full": p0, "pts_one": pts(num / om_), "pts_base": pts(den / om_),
+        _na = len(o["eids"])
+        if att_order:
+            _pa = P(float(bb.margins(u, t, a, b, [tuple(att_order[:_na])])[0]))
+        else:
+            _pa = None
+        pp = {"p_full": p0, "p_attn": _pa, "pts_one": pts(num / om_), "pts_base": pts(den / om_),
               "pts_one_raw": pts(cx["pooled_g"][m]) if "pooled_g" in cx else None, "pts_any": pts(cx["pooled_g_all"]) if "pooled_g_all" in cx else None}
         pats.append({"motif": m, "name": PLAIN.get(m, m), "raw": cx["raw_ratio"].get(m), "adjusted": (num / den) if den > 0 else None, **pp,
                      "graph": {"nodes": pn, "edges": pe}, "overlap_temgx": [ed["eid"] for ed in pe if ed["in_temgx"]],
@@ -184,7 +205,7 @@ def explain_k(case_id, k=3, n_draw=60, seed=0):
     for x in pats:
         ra, ad = x["raw"], x["adjusted"]
         txt = (f"{x['name']}: removing its strongest occurrence ({', '.join(x['occurrence']['nodes'][:3])}): {100 * p0:.0f}% → {100 * x['p_without']:.0f}%; "
-               f"random ratings of the same size: {100 * x['p_random']:.0f}% (p = {x['p_value']:.2f}). ")
+               + (f"the same number of top-attention ratings: {100 * x['p_attn']:.0f}%. " if x.get("p_attn") is not None else f"random ratings of the same size: {100 * x['p_random']:.0f}%. "))
         txt += (f"Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs "
                 f"{x['pts_one']:.1f} points of the model's preference vs {x['pts_base']:.1f} for a comparable pattern"
                 + (f" (before matching: vs {x['pts_any']:.1f}). " if x.get("pts_any") is not None else ". "))
@@ -206,7 +227,7 @@ def explain_k(case_id, k=3, n_draw=60, seed=0):
     out_joint = _joint(ev, pats, split, nm(A), nm(B), u, c["query"])
     out = {"case_id": case_id, "k": k, "member": u, "joint": out_joint, "score_split": split, "A": nm(A), "B": nm(B), "query": c["query"], "p0": p0,
            "evidence": ev, "curve": curve,
-           "full": {"p": full["p"] if full else p0, "rand_mean": full["rand_mean"] if full else p0, "p_value": full["p_value"] if full else 1.0,
+           "full": {"p": full["p"] if full else p0, "rand_mean": full["rand_mean"] if full else p0, "p_value": full["p_value"] if full else 1.0, "attn": full.get("attn") if full else None,
                     "rand_all": rand_all, "flips": bool(full and p0 >= 0.5 > full["p"])},
            "ranking": {"A_before": rk0[it.title[a]], "A_after": rk1[it.title[a]], "B_before": rk0[it.title[b]], "B_after": rk1[it.title[b]],
                        "top3_after": [r["title"] for r in live1["rows"][:3]]},
@@ -232,7 +253,8 @@ def _joint(ev, pats, split, A, B, u, query=""):
         lines.append(f"TemGX: {len(own)} {'is' if len(own) == 1 else 'are'} the member's own recent rating{'s' if len(own) > 1 else ''} "
                      f"({', '.join(l['to'] for l in own[:3])}), shared with people who also rated {A}.")
     def eff(x):
-        return (f"removing it moves the model {100 * x['p_full']:.0f}% → {100 * x['p_without']:.0f}% (random ratings: {100 * x['p_random']:.0f}%, p = {x['p_value']:.2f}); "
+        ctl = (f"top-attention ratings: {100 * x['p_attn']:.0f}%" if x.get("p_attn") is not None else f"random ratings: {100 * x['p_random']:.0f}%")
+        return (f"removing it moves the model {100 * x['p_full']:.0f}% → {100 * x['p_without']:.0f}% ({ctl}); "
                 f"matched on timing and activity, each removal still costs {x['pts_one']:.1f} points vs {x['pts_base']:.1f} for a comparable pattern")
     for x in strong[:1]:
         if x["raw"] and x["adjusted"] < 0.9 * x["raw"]:
@@ -286,8 +308,10 @@ def _summary(o):
     s = (f"With {len(ev)} rating{'s' if len(ev) > 1 else ''} ({', '.join(parts)}), the model's preference for {o['A']} over {o['B']} goes from "
          f"{100 * o['p0']:.0f}% to {100 * f['p']:.0f}%")
     s += " and flips to the right answer." if f["flips"] else "."
-    s += (f" Removing the same number of random ratings from the same weeks gives {100 * f['rand_mean']:.0f}% on average "
-          f"(p = {f['p_value']:.2f}, {o['n_draw']} draws).")
+    if f.get("attn") is not None:
+        s += f" Removing the same number of ratings with the highest attention weight gives {100 * f['attn']:.0f}%."
+    else:
+        s += f" Removing the same number of random ratings from the same weeks gives {100 * f['rand_mean']:.0f}% on average."
     if r["A_after"] != r["A_before"]:
         s += f" In the full ranking, {o['A']} moves from #{r['A_before']} to #{r['A_after']}."
     else:

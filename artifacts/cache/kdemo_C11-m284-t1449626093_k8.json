@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 5 of the 8 ratings are recent ratings of The Incredibles by other people; 5 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (All the President's Men, Rebel Without a Cause, Dazed and Confused), shared with people who also rated The Incredibles.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 57% \u2192 50% (random ratings: 57%, p = 0.02); matched on timing and activity, each removal still costs 1.5 points vs 1.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 57% \u2192 50% (top-attention ratings: 53%); matched on timing and activity, each removal still costs 1.5 points vs 1.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: The Incredibles beats Indiana Jones and the Temple of Doom mainly through matching the words of the request (+0.29); the history part adds +0.01."
     ],
     "verdict": "Diagnosis: The Incredibles wins mainly through matching the words of the request, and the history model adds to it through recent fans of The Incredibles (a pattern that survives matching) and the member's ratings of All the President's Men, Rebel Without a Cause. None of these signals reads \u201cisn't animated\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
@@ -295,7 +295,8 @@
       "rand_mean": 0.5697906877555275,
       "rand_lo": 0.5642717243673813,
       "rand_hi": 0.615958716683634,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.5685084529016954
     },
     {
       "n": 2,
@@ -303,7 +304,8 @@
       "rand_mean": 0.5677101457815039,
       "rand_lo": 0.5643970813824821,
       "rand_hi": 0.583914434062514,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.5288275554589602
     },
     {
       "n": 3,
@@ -311,7 +313,8 @@
       "rand_mean": 0.5714733846457184,
       "rand_lo": 0.5629784176205227,
       "rand_hi": 0.6513122830483239,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.5297939906724618
     },
     {
       "n": 4,
@@ -319,7 +322,8 @@
       "rand_mean": 0.5682254518723743,
       "rand_lo": 0.5598829642985655,
       "rand_hi": 0.5829035821662242,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.6224623615415799
     },
     {
       "n": 5,
@@ -327,7 +331,8 @@
       "rand_mean": 0.5700589383012213,
       "rand_lo": 0.563099964996512,
       "rand_hi": 0.6220280682341732,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.6151307816980995
     },
     {
       "n": 6,
@@ -335,7 +340,8 @@
       "rand_mean": 0.5705694457569561,
       "rand_lo": 0.5615007715807561,
       "rand_hi": 0.6223921425994159,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.7044470239782512
     },
     {
       "n": 7,
@@ -343,7 +349,8 @@
       "rand_mean": 0.5693472976412558,
       "rand_lo": 0.5597379154504447,
       "rand_hi": 0.5908090644629316,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.6613675790385745
     },
     {
       "n": 8,
@@ -351,13 +358,15 @@
       "rand_mean": 0.5781414096936056,
       "rand_lo": 0.5600881293006011,
       "rand_hi": 0.6509496497686095,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.629895950466723
     }
   ],
   "full": {
     "p": 0.42113407313255,
     "rand_mean": 0.5781414096936056,
     "p_value": 0.01639344262295082,
+    "attn": 0.629895950466723,
     "rand_all": [
       0.5908567318770774,
       0.560032593503118,
@@ -656,6 +665,7 @@
       "raw": 1.9658387179421848,
       "adjusted": 1.5422250574648522,
       "p_full": 0.5659427167051005,
+      "p_attn": 0.5288276462356202,
       "pts_one": 1.5168675782769703,
       "pts_base": 0.9823317391247532,
       "pts_one_raw": 1.4302083908792063,
@@ -723,7 +733,7 @@
       "p_without": 0.49853553820957797,
       "p_random": 0.56699838697624,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 600, user 365, The Incredibles): 57% \u2192 50%; random ratings of the same size: 57% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.5 points of the model's preference vs 1.0 for a comparable pattern (before matching: vs 0.7). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 600, user 365, The Incredibles): 57% \u2192 50%; the same number of top-attention ratings: 53%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.5 points of the model's preference vs 1.0 for a comparable pattern (before matching: vs 0.7). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
@@ -731,6 +741,7 @@
       "raw": 0.38238663606254464,
       "adjusted": 1.140688089748715,
       "p_full": 0.5659427167051005,
+      "p_attn": 0.5288276462356202,
       "pts_one": 0.2641959573869146,
       "pts_base": 0.23159130105508963,
       "pts_one_raw": 0.2774153186388517,
@@ -795,7 +806,7 @@
       "p_without": 0.555479255702122,
       "p_random": 0.5663115283869161,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 284, The Graduate, Pulp Fiction): 57% \u2192 56%; random ratings of the same size: 57% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.3 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.7). Timing and activity do not explain it away. "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 284, The Graduate, Pulp Fiction): 57% \u2192 56%; the same number of top-attention ratings: 53%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.3 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.7). Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -803,6 +814,7 @@
       "raw": 0.7629802373634563,
       "adjusted": 0.850845529716903,
       "p_full": 0.5659427167051005,
+      "p_attn": 0.5288276462356202,
       "pts_one": 0.6275827030615244,
       "pts_base": 0.7378014882792328,
       "pts_one_raw": 0.5539228516166728,
@@ -869,7 +881,7 @@
       "p_without": 0.5288058597825783,
       "p_random": 0.5744534279770852,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 20, The Incredibles, user 600): 57% \u2192 53%; random ratings of the same size: 57% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.6 points of the model's preference vs 0.7 for a comparable pattern (before matching: vs 0.7). "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 20, The Incredibles, user 600): 57% \u2192 53%; the same number of top-attention ratings: 53%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.6 points of the model's preference vs 0.7 for a comparable pattern (before matching: vs 0.7). "
     },
     {
       "motif": "BRIDGE",
@@ -877,6 +889,7 @@
       "raw": 0.0,
       "adjusted": 0.0,
       "p_full": 0.5659427167051005,
+      "p_attn": 0.5297941268064909,
       "pts_one": 0.0,
       "pts_base": 0.6716737447052368,
       "pts_one_raw": 0.0,
@@ -958,7 +971,7 @@
       "p_without": 0.5660685427101042,
       "p_random": 0.5677546627622067,
       "p_value": 0.6885245901639344,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 62, Pulp Fiction, user 104): 57% \u2192 57%; random ratings of the same size: 57% (p = 0.69). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.7 for a comparable pattern (before matching: vs 0.7). "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 62, Pulp Fiction, user 104): 57% \u2192 57%; the same number of top-attention ratings: 53%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.7 for a comparable pattern (before matching: vs 0.7). "
     },
     {
       "motif": "BRIDGEB",
@@ -966,6 +979,7 @@
       "raw": 0.0,
       "adjusted": 0.0,
       "p_full": 0.5659427167051005,
+      "p_attn": 0.5297941268064909,
       "pts_one": 0.0,
       "pts_base": 0.33754279309531343,
       "pts_one_raw": 0.0,
@@ -1047,11 +1061,11 @@
       "p_without": 0.5838432227761469,
       "p_random": 0.5683185559187296,
       "p_value": 0.9836065573770492,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 102, The Graduate, user 176): 57% \u2192 58%; random ratings of the same size: 57% (p = 0.98). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 0.7). "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 102, The Graduate, user 176): 57% \u2192 58%; the same number of top-attention ratings: 53%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 0.7). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1104,
-  "computed_at": "2026-10-28T16:39:51-0400",
-  "summary": "With 8 ratings (5 recent ratings of The Incredibles by other people, 3 of the member's own ratings), the model's preference for The Incredibles over Indiana Jones and the Temple of Doom goes from 57% to 42% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 58% on average (p = 0.02, 60 draws). The full ranking still puts The Incredibles at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T16:45:30-0400",
+  "summary": "With 8 ratings (5 recent ratings of The Incredibles by other people, 3 of the member's own ratings), the model's preference for The Incredibles over Indiana Jones and the Temple of Doom goes from 57% to 42% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 63%. The full ranking still puts The Incredibles at #1: text match and popularity also push it up."
 }

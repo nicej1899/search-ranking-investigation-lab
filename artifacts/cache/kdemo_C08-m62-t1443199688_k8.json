@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 3 of the 9 ratings are recent ratings of It's a Wonderful Life by other people; 3 of them are part of a pattern CATGX finds.",
       "TemGX: 4 are the member's own recent ratings (Back to the Future, Jurassic Park, Forrest Gump), shared with people who also rated It's a Wonderful Life.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 66% \u2192 6% (random ratings: 69%, p = 0.02); matched on timing and activity, each removal still costs 56.4 points vs 19.8 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 66% \u2192 6% (top-attention ratings: 12%); matched on timing and activity, each removal still costs 56.4 points vs 19.8 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: It's a Wonderful Life beats True Lies mainly through matching the words of the request (+1.08); the history part adds +0.04."
     ],
     "verdict": "Diagnosis: It's a Wonderful Life wins mainly through matching the words of the request, and the history model adds to it through recent fans of It's a Wonderful Life (a pattern that survives matching) and the member's ratings of Back to the Future, Jurassic Park. None of these signals reads \u201cnot a kids movie\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
@@ -367,7 +367,8 @@
       "rand_mean": 0.6627812129343091,
       "rand_lo": 0.6617560891963129,
       "rand_hi": 0.6630249013999592,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.11442029404740117
     },
     {
       "n": 2,
@@ -375,7 +376,8 @@
       "rand_mean": 0.6787285478829543,
       "rand_lo": 0.6609975729240647,
       "rand_hi": 0.7898123149312715,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.11573205611993863
     },
     {
       "n": 3,
@@ -383,7 +385,8 @@
       "rand_mean": 0.6663074212170031,
       "rand_lo": 0.6606025365950569,
       "rand_hi": 0.6666064851317931,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.3093893393456543
     },
     {
       "n": 4,
@@ -391,7 +394,8 @@
       "rand_mean": 0.6756014298067776,
       "rand_lo": 0.6606569784166277,
       "rand_hi": 0.832320949988687,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.3062595535160083
     },
     {
       "n": 5,
@@ -399,7 +403,8 @@
       "rand_mean": 0.6827000002625591,
       "rand_lo": 0.6528579103855986,
       "rand_hi": 0.8701840301840357,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.3162300076881774
     },
     {
       "n": 6,
@@ -407,7 +412,8 @@
       "rand_mean": 0.6949687225057506,
       "rand_lo": 0.6549752465031998,
       "rand_hi": 0.8707035173794662,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.44007563402524735
     },
     {
       "n": 7,
@@ -415,7 +421,8 @@
       "rand_mean": 0.69482684893649,
       "rand_lo": 0.6541109040415973,
       "rand_hi": 0.8937331791427234,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.42254810365643725
     },
     {
       "n": 8,
@@ -423,7 +430,8 @@
       "rand_mean": 0.6898024918680506,
       "rand_lo": 0.6526187175039679,
       "rand_hi": 0.870274385368323,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.2600875460153168
     },
     {
       "n": 9,
@@ -431,13 +439,15 @@
       "rand_mean": 0.7006682145089483,
       "rand_lo": 0.6527222222515292,
       "rand_hi": 0.8708511965788106,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.12392375606371331
     }
   ],
   "full": {
     "p": 0.02167028964883097,
     "rand_mean": 0.7006682145089483,
     "p_value": 0.01639344262295082,
+    "attn": 0.12392375606371331,
     "rand_all": [
       0.6536454807373792,
       0.6536629248384551,
@@ -751,6 +761,7 @@
       "raw": 14.210764583926066,
       "adjusted": 3.537484754045641,
       "p_full": 0.6629372313265262,
+      "p_attn": 0.11573218661258854,
       "pts_one": 56.396115105604125,
       "pts_base": 19.767067275766426,
       "pts_one_raw": 55.404535011389314,
@@ -818,7 +829,7 @@
       "p_without": 0.062040963783508936,
       "p_random": 0.694698668280003,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 102, user 176, It's a Wonderful Life): 66% \u2192 6%; random ratings of the same size: 69% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 56.4 points of the model's preference vs 19.8 for a comparable pattern (before matching: vs 4.5). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 102, user 176, It's a Wonderful Life): 66% \u2192 6%; the same number of top-attention ratings: 12%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 56.4 points of the model's preference vs 19.8 for a comparable pattern (before matching: vs 4.5). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "BRIDGE",
@@ -826,6 +837,7 @@
       "raw": 8.686266850063992,
       "adjusted": 3.0755740790382844,
       "p_full": 0.6629372313265262,
+      "p_attn": 0.30938949503142543,
       "pts_one": 40.653728283003446,
       "pts_base": 13.539491446198637,
       "pts_one_raw": 39.82889433932115,
@@ -909,7 +921,7 @@
       "p_without": 0.11387029768319715,
       "p_random": 0.6806778880821024,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 343, Back to the Future, user 176): 66% \u2192 11%; random ratings of the same size: 68% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 40.7 points of the model's preference vs 13.5 for a comparable pattern (before matching: vs 4.5). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 343, Back to the Future, user 176): 66% \u2192 11%; the same number of top-attention ratings: 31%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 40.7 points of the model's preference vs 13.5 for a comparable pattern (before matching: vs 4.5). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
@@ -917,6 +929,7 @@
       "raw": 0.87024746112999,
       "adjusted": 1.075551381853764,
       "p_full": 0.6629372313265262,
+      "p_attn": 0.11573218661258854,
       "pts_one": 3.9237383874920706,
       "pts_base": 3.6420334897966478,
       "pts_one_raw": 3.9008267752937864,
@@ -983,7 +996,7 @@
       "p_without": 0.267191856398976,
       "p_random": 0.6740124583305079,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 102, It's a Wonderful Life, Southpaw): 66% \u2192 27%; random ratings of the same size: 67% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.9 points of the model's preference vs 3.6 for a comparable pattern (before matching: vs 4.5). Timing and activity do not explain it away. "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 102, It's a Wonderful Life, Southpaw): 66% \u2192 27%; the same number of top-attention ratings: 12%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.9 points of the model's preference vs 3.6 for a comparable pattern (before matching: vs 4.5). Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -991,6 +1004,7 @@
       "raw": 0.2149542552660195,
       "adjusted": 0.1409092568809038,
       "p_full": 0.6629372313265262,
+      "p_attn": 0.11573218661258854,
       "pts_one": 0.686306378239232,
       "pts_base": 5.003922313230291,
       "pts_one_raw": 0.9454643215072944,
@@ -1058,7 +1072,7 @@
       "p_without": 0.21434397804603195,
       "p_random": 0.6821058648442716,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 102, It's a Wonderful Life, user 75): 66% \u2192 21%; random ratings of the same size: 68% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 5.0 for a comparable pattern (before matching: vs 4.5). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 102, It's a Wonderful Life, user 75): 66% \u2192 21%; the same number of top-attention ratings: 12%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 5.0 for a comparable pattern (before matching: vs 4.5). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "BRIDGEB",
@@ -1066,6 +1080,7 @@
       "raw": 0.0,
       "adjusted": 0.0,
       "p_full": 0.6629372313265262,
+      "p_attn": 0.30938949503142543,
       "pts_one": 0.0,
       "pts_base": 14.85570745699677,
       "pts_one_raw": 0.0,
@@ -1147,11 +1162,11 @@
       "p_without": 0.8673177367735033,
       "p_random": 0.5895803465059689,
       "p_value": 1.0,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 102, Jurassic Park, user 176): 66% \u2192 87%; random ratings of the same size: 59% (p = 1.00). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 14.9 for a comparable pattern (before matching: vs 4.5). "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 102, Jurassic Park, user 176): 66% \u2192 87%; the same number of top-attention ratings: 31%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 14.9 for a comparable pattern (before matching: vs 4.5). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1117,
-  "computed_at": "2026-10-28T16:39:47-0400",
-  "summary": "With 9 ratings (3 recent ratings of It's a Wonderful Life by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for It's a Wonderful Life over True Lies goes from 66% to 2% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 70% on average (p = 0.02, 60 draws). The full ranking still puts It's a Wonderful Life at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T16:45:27-0400",
+  "summary": "With 9 ratings (3 recent ratings of It's a Wonderful Life by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for It's a Wonderful Life over True Lies goes from 66% to 2% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 12%. The full ranking still puts It's a Wonderful Life at #1: text match and popularity also push it up."
 }

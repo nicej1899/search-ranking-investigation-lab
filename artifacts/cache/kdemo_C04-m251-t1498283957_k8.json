@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 6 of the 8 ratings are recent ratings of Spider-Man by other people; 6 of them are part of a pattern CATGX finds.",
       "TemGX: 2 are the member's own recent ratings (Wonder Woman, Inside Out), shared with people who also rated Spider-Man.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 62% \u2192 49% (random ratings: 62%, p = 0.02); matched on timing and activity, each removal still costs 4.7 points vs 2.0 for a comparable pattern: a structural reason, not just recency.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 62% \u2192 49% (top-attention ratings: 52%); matched on timing and activity, each removal still costs 4.7 points vs 2.0 for a comparable pattern: a structural reason, not just recency.",
       "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 2.7 points vs 1.9 for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Spider-Man beats The Last Samurai mainly through popularity (+0.16); the history part adds +0.03."
     ],
@@ -340,7 +340,8 @@
       "rand_mean": 0.6169228990075398,
       "rand_lo": 0.6123361754028066,
       "rand_hi": 0.6175558353904705,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.606360382374594
     },
     {
       "n": 2,
@@ -348,7 +349,8 @@
       "rand_mean": 0.6162484340747272,
       "rand_lo": 0.5996696714908419,
       "rand_hi": 0.6200711623427752,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.5220916300743835
     },
     {
       "n": 3,
@@ -356,7 +358,8 @@
       "rand_mean": 0.6174728453648278,
       "rand_lo": 0.5912812916407223,
       "rand_hi": 0.6326121417666185,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.5195765254132843
     },
     {
       "n": 4,
@@ -364,7 +367,8 @@
       "rand_mean": 0.6190530385449831,
       "rand_lo": 0.6026448889588332,
       "rand_hi": 0.6465410827788007,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.4931451093561944
     },
     {
       "n": 5,
@@ -372,7 +376,8 @@
       "rand_mean": 0.6171817321534412,
       "rand_lo": 0.6006135635935607,
       "rand_hi": 0.632857733222789,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.5075045171516634
     },
     {
       "n": 6,
@@ -380,7 +385,8 @@
       "rand_mean": 0.6181467890311582,
       "rand_lo": 0.6092057441962015,
       "rand_hi": 0.6359967113073506,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.5066263683859826
     },
     {
       "n": 7,
@@ -388,7 +394,8 @@
       "rand_mean": 0.6155796159054885,
       "rand_lo": 0.5970443053716155,
       "rand_hi": 0.6306957416222938,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.47656859680146757
     },
     {
       "n": 8,
@@ -396,13 +403,15 @@
       "rand_mean": 0.6148240634951166,
       "rand_lo": 0.5981622637007263,
       "rand_hi": 0.6275984601032619,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.4701088561373944
     }
   ],
   "full": {
     "p": 0.33246892703668707,
     "rand_mean": 0.6148240634951166,
     "p_value": 0.01639344262295082,
+    "attn": 0.4701088561373944,
     "rand_all": [
       0.6174959125625988,
       0.6163935704092732,
@@ -731,6 +740,7 @@
       "raw": 2.5159381833139336,
       "adjusted": 2.3433389969963625,
       "p_full": 0.6174959125625988,
+      "p_attn": 0.5220916300743835,
       "pts_one": 4.6962261214364975,
       "pts_base": 1.9827542192481284,
       "pts_one_raw": 4.193048441617653,
@@ -798,7 +808,7 @@
       "p_without": 0.49356395511762724,
       "p_random": 0.6186958888009317,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 609, user 327, Spider-Man): 62% \u2192 49%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 4.7 points of the model's preference vs 2.0 for a comparable pattern (before matching: vs 1.6). Timing and activity do not explain it away. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 609, user 327, Spider-Man): 62% \u2192 49%; the same number of top-attention ratings: 52%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 4.7 points of the model's preference vs 2.0 for a comparable pattern (before matching: vs 1.6). Timing and activity do not explain it away. "
     },
     {
       "motif": "BRIDGE",
@@ -806,6 +816,7 @@
       "raw": 1.7470607950094579,
       "adjusted": 1.4012672733316291,
       "p_full": 0.6174959125625988,
+      "p_attn": 0.5195765708831831,
       "pts_one": 2.722688711507637,
       "pts_base": 1.9365469560430726,
       "pts_one_raw": 2.897040877539492,
@@ -889,7 +900,7 @@
       "p_without": 0.5792840482030233,
       "p_random": 0.6199341714314197,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 609, Inside Out, user 327): 62% \u2192 58%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.7 points of the model's preference vs 1.9 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 609, Inside Out, user 327): 62% \u2192 58%; the same number of top-attention ratings: 52%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.7 points of the model's preference vs 1.9 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "BRIDGEB",
@@ -897,6 +908,7 @@
       "raw": 1.2768242595874029,
       "adjusted": 0.8286194971710102,
       "p_full": 0.6174959125625988,
+      "p_attn": 0.5195765708831831,
       "pts_one": 1.319854714388602,
       "pts_base": 1.5948131761834738,
       "pts_one_raw": 2.110307494106911,
@@ -980,7 +992,7 @@
       "p_without": 0.5349661013569625,
       "p_random": 0.6164250470484589,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 105, Spider-Man, user 609): 62% \u2192 53%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.3 points of the model's preference vs 1.6 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 105, Spider-Man, user 609): 62% \u2192 53%; the same number of top-attention ratings: 52%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.3 points of the model's preference vs 1.6 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "CO",
@@ -988,6 +1000,7 @@
       "raw": 0.5061746827913168,
       "adjusted": 0.6797540038200869,
       "p_full": 0.6174959125625988,
+      "p_attn": 0.5220916300743835,
       "pts_one": 1.163456965572185,
       "pts_base": 1.7158623062178413,
       "pts_one_raw": 0.8317860030307878,
@@ -1055,7 +1068,7 @@
       "p_without": 0.49887758466532917,
       "p_random": 0.6164082205286868,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 609, Spider-Man, user 379): 62% \u2192 50%; random ratings of the same size: 62% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.2 points of the model's preference vs 1.7 for a comparable pattern (before matching: vs 1.6). "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 609, Spider-Man, user 379): 62% \u2192 50%; the same number of top-attention ratings: 52%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.2 points of the model's preference vs 1.7 for a comparable pattern (before matching: vs 1.6). "
     },
     {
       "motif": "SEQ",
@@ -1063,6 +1076,7 @@
       "raw": 0.18892833455286512,
       "adjusted": 0.5570926414577283,
       "p_full": 0.6174959125625988,
+      "p_attn": 0.5220916300743835,
       "pts_one": 0.16971153626345048,
       "pts_base": 0.30483960225874407,
       "pts_one_raw": 0.3096861928518435,
@@ -1129,11 +1143,11 @@
       "p_without": 0.6005860880736864,
       "p_random": 0.6152031145657275,
       "p_value": 0.11475409836065574,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 251, Inside Out, Arrival): 62% \u2192 60%; random ratings of the same size: 62% (p = 0.11). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 1.6). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 251, Inside Out, Arrival): 62% \u2192 60%; the same number of top-attention ratings: 52%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 1.6). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1158,
-  "computed_at": "2026-10-28T16:39:01-0400",
-  "summary": "With 8 ratings (6 recent ratings of Spider-Man by other people, 2 of the member's own ratings), the model's preference for Spider-Man over The Last Samurai goes from 62% to 33% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 61% on average (p = 0.02, 60 draws). In the full ranking, Spider-Man moves from #1 to #2."
+  "computed_at": "2026-10-28T16:44:44-0400",
+  "summary": "With 8 ratings (6 recent ratings of Spider-Man by other people, 2 of the member's own ratings), the model's preference for Spider-Man over The Last Samurai goes from 62% to 33% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 47%. In the full ranking, Spider-Man moves from #1 to #2."
 }

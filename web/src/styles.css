@@ -819,3 +819,5 @@ button.ghost.on { background: var(--ink); color: #fff; }
 .dm-lines li.t { border-color: #c82434; background: #fdf3f4; } .dm-lines li.c { border-color: #7a5bb5; background: #f4f0fb; } .dm-lines li.r { border-color: #20262d; background: #f6f7f9; }
 .dm-verdict { font-size: 16px; font-weight: 650; line-height: 1.5; color: #20262d; border: 2px solid #20262d; border-radius: 10px; padding: 12px 14px; margin: 12px 0 0; }
 .dm-eg .pat.halo { stroke-width: 10; stroke-opacity: .45; }
+
+.dm-curve .al { fill: none; stroke: #8a929b; stroke-width: 2.5; stroke-dasharray: 6 4; } .dm-curve .ad { fill: #8a929b; } .dm-curve .av { font-size: 12px; fill: #6b737c; font-weight: 600; }

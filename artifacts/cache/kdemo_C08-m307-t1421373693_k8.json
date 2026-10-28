@@ -255,7 +255,8 @@
       "rand_mean": 0.8798212161430199,
       "rand_lo": 0.8793013579535832,
       "rand_hi": 0.8808367606968113,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9171577354966991
     },
     {
       "n": 2,
@@ -263,7 +264,8 @@
       "rand_mean": 0.8799904694561606,
       "rand_lo": 0.8777170305234772,
       "rand_hi": 0.8837140476599453,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9139686200062168
     },
     {
       "n": 3,
@@ -271,7 +273,8 @@
       "rand_mean": 0.8799979901660783,
       "rand_lo": 0.8776241939648585,
       "rand_hi": 0.8838188498616265,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9145874309370055
     },
     {
       "n": 4,
@@ -279,7 +282,8 @@
       "rand_mean": 0.8790028581786552,
       "rand_lo": 0.8770928319135484,
       "rand_hi": 0.8811322909739777,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9129289152189529
     },
     {
       "n": 5,
@@ -287,7 +291,8 @@
       "rand_mean": 0.8796283733886909,
       "rand_lo": 0.877705595414055,
       "rand_hi": 0.8812283931830416,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9241112422264521
     },
     {
       "n": 6,
@@ -295,7 +300,8 @@
       "rand_mean": 0.8788798231973924,
       "rand_lo": 0.8779337280224518,
       "rand_hi": 0.8800273776115273,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.6938146724930281
     },
     {
       "n": 7,
@@ -303,13 +309,15 @@
       "rand_mean": 0.8790332431725549,
       "rand_lo": 0.8782307254513906,
       "rand_hi": 0.8803623245959581,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.6885190553668986
     }
   ],
   "full": {
     "p": 0.6593800260431842,
     "rand_mean": 0.8790332431725549,
     "p_value": 0.01639344262295082,
+    "attn": 0.6885190553668986,
     "rand_all": [
       0.8792583169559364,
       0.879120887800471,
@@ -521,6 +529,7 @@
       "raw": 0.9231578112869622,
       "adjusted": 1.1513781311316016,
       "p_full": 0.8796021586855514,
+      "p_attn": 0.9139686343293617,
       "pts_one": 0.05452545812534293,
       "pts_base": 0.04734455068974297,
       "pts_one_raw": 0.04702520797165155,
@@ -587,7 +596,7 @@
       "p_without": 0.8725396941583067,
       "p_random": 0.8793575453191177,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 248, Ice Age 2: The Meltdown, Ferris Bueller's Day Off): 88% \u2192 87%; random ratings of the same size: 88% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.1). Timing and activity do not explain it away. "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 248, Ice Age 2: The Meltdown, Ferris Bueller's Day Off): 88% \u2192 87%; the same number of top-attention ratings: 91%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.1). Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -595,6 +604,7 @@
       "raw": 1.4061658546260576,
       "adjusted": 0.5661923540552064,
       "p_full": 0.8796021586855514,
+      "p_attn": 0.9139686343293617,
       "pts_one": 0.06577916182910482,
       "pts_base": 0.11638758401435467,
       "pts_one_raw": 0.07169247407716739,
@@ -661,11 +671,11 @@
       "p_without": 0.8762246486167059,
       "p_random": 0.8803632867227651,
       "p_value": 0.03278688524590164,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 343, Star Wars: Episode IV - A New Hope, user 307): 88% \u2192 88%; random ratings of the same size: 88% (p = 0.03). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 343, Star Wars: Episode IV - A New Hope, user 307): 88% \u2192 88%; the same number of top-attention ratings: 91%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.1). Most of its apparent importance came from timing and activity. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 708,
-  "computed_at": "2026-10-28T16:39:43-0400",
-  "summary": "With 7 ratings (1 recent rating of Ice Age 2: The Meltdown by other people, 5 of the member's own ratings, 1 other rating nearby), the model's preference for Ice Age 2: The Meltdown over The Cable Guy goes from 88% to 66%. Removing the same number of random ratings from the same weeks gives 88% on average (p = 0.02, 60 draws). The full ranking still puts Ice Age 2: The Meltdown at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T16:45:23-0400",
+  "summary": "With 7 ratings (1 recent rating of Ice Age 2: The Meltdown by other people, 5 of the member's own ratings, 1 other rating nearby), the model's preference for Ice Age 2: The Meltdown over The Cable Guy goes from 88% to 66%. Removing the same number of ratings with the highest attention weight gives 69%. The full ranking still puts Ice Age 2: The Meltdown at #1: text match and popularity also push it up."
 }

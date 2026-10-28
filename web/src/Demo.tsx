@@ -26,7 +26,7 @@ const STEPS = [
 ];
 const ANSWER = [
   "Find the searches that fail, and how often.",
-  "TemGX finds a compact set of k past ratings whose removal changes the history model's preference, and checks it against random removals.",
+  "TemGX finds a compact set of k past ratings whose removal changes the history model's preference, and checks it against the ratings attention weights highest.",
   "CATGX compares each pattern only with patterns of the same timing and activity, then removes it to test it.",
   "Read the two together with the ranker's score split: which evidence, which mechanism, which part of the ranker.",
   "Reuse what fixed similar past failures, and check the fix on new requests before any A/B test.",
@@ -72,9 +72,9 @@ export default function Demo({ onFull }: { onFull: () => void }) {
 
   const head = [
     <>Asked for “{kd?.query ?? sim?.me?.query ?? d.query}”, member {cid.match(/-m(\d+)-/)?.[1]} gets <b style={{ color: RED }}>{At}</b> first — the kind of film they ruled out.</>,
-    kd?.full.flips ? <>Remove {kd.evidence.length === 1 ? "one rating" : `these ${kd.evidence.length} ratings`} and the history model <b>changes its preference</b> ({pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>). Random ones: nothing.</>
-      : kd ? <>Remove these <b style={{ color: RED }}>{kd.evidence.length} past ratings</b>: {pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>. Remove {kd.evidence.length} random ones: nothing happens.</> : <>Finding the evidence…</>,
-    top ? <>Remove “{top.name}”: {pct(kd.p0)} → <b style={{ color: PURPLE }}>{pct(top.p_without)}</b> (random: {pct(top.p_random)}). Matched on timing and activity, each removal still costs <b style={{ color: PURPLE }}>{n(top.pts_one, 1)}</b> vs {n(top.pts_base, 1)} points.</> : <>Looking for patterns…</>,
+    kd?.full.flips ? <>Remove {kd.evidence.length === 1 ? "one rating" : `these ${kd.evidence.length} ratings`} and the history model <b>changes its preference</b> ({pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>). Attention's top {kd.evidence.length}: {pct(kd.full.attn ?? kd.full.rand_mean)}.</>
+      : kd ? <>Remove these <b style={{ color: RED }}>{kd.evidence.length} past ratings</b>: {pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>. Attention's top {kd.evidence.length}: {pct(kd.full.attn ?? kd.full.rand_mean)}.</> : <>Finding the evidence…</>,
+    top ? <>Remove “{top.name}”: {pct(kd.p0)} → <b style={{ color: PURPLE }}>{pct(top.p_without)}</b> (attention's top {top.occurrence.eids.length}: {pct(top.p_attn ?? top.p_random)}). Matched on timing and activity, each removal still costs <b style={{ color: PURPLE }}>{n(top.pts_one, 1)}</b> vs {n(top.pts_base, 1)} points.</> : <>Looking for patterns…</>,
     <>Together: <b style={{ color: RED }}>which ratings</b>, <b style={{ color: PURPLE }}>which pattern</b>, and <b>which part of the ranker</b> to change.</>,
     !fixA || !fixB ? <>Similar past failures point to one fix. Re-ranking…</>
       : fixB.rank === 1 && fixA.rank > 3 ? <>Similar past failures point to one fix. It puts <b style={{ color: BLUE }}>{Bt}</b> first and drops {At} to #{fixA.rank}.</>
@@ -128,13 +128,12 @@ export default function Demo({ onFull }: { onFull: () => void }) {
         <div className="dm-two" style={{ marginTop: 16 }}>
           <div className="dm-card"><p className="dm-k">③ Counterfactual: remove them one at a time</p>
             <Curve kd={kd} />
-            <p className="dm-say">Same trained history model, same candidates. Red: removing TemGX's ratings in order. Grey band: 95% of {kd.n_draw} random sets of the same size from the same weeks. The dashed line is 50%, where the history model has no preference; the full ranking changes only with a fix (step 5).</p></div>
-          <div className="dm-card"><p className="dm-k">④ All {kd.evidence.length} removed vs random</p>
+            <p className="dm-say">Same trained history model, same candidates. Red: removing TemGX's ratings in order. Grey: removing the same number of ratings with the highest attention weight. The dashed line is 50%, where the history model has no preference; the full ranking changes only with a fix (step 5).</p></div>
+          <div className="dm-card"><p className="dm-k">④ All {kd.evidence.length} removed vs attention</p>
             <Conf l="Nothing removed" v={kd.p0} c={GREY} />
             <Conf l={`Remove TemGX's ${kd.evidence.length}`} v={kd.full.p} c={RED} d={kd.full.p - kd.p0} />
-            <Conf l={`Remove ${kd.evidence.length} random`} v={kd.full.rand_mean} c={GREY} d={kd.full.rand_mean - kd.p0} />
-            <Strip kd={kd} />
-            <p className="dm-say"><b>p = {n(kd.full.p_value, 3)}</b>: none of the {kd.n_draw} random sets moves the model this much. {kd.across && <> Across all {kd.across.n} failed searches with this request (k = 3), TemGX beats random in <b>{kd.across.temgx_beats_random} of {kd.across.n}</b>.</>}</p></div>
+            <Conf l={`Remove attention's top ${kd.evidence.length}`} v={kd.full.attn ?? kd.full.rand_mean} c={GREY} d={(kd.full.attn ?? kd.full.rand_mean) - kd.p0} />
+            <p className="dm-say">Attention weight is not the same as the evidence the decision depends on. {kd.across && kd.across.temgx_beats_attention != null && <> Across all {kd.across.n} failed searches with this request (k = 3), TemGX moves the model more than attention's top 3 in <b>{kd.across.temgx_beats_attention} of {kd.across.n}</b>.</>}</p></div>
         </div>
       </>)}
 
@@ -151,7 +150,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
           <p className="dm-k" style={{ marginTop: 14 }}>Remove this pattern's ratings</p>
           <Conf l="Nothing removed" v={kd.p0} c={GREY} />
           <Conf l={`Remove the pattern (${kd.patterns[pi].occurrence.eids.length})`} v={kd.patterns[pi].p_without} c={PURPLE} d={kd.patterns[pi].p_without - kd.p0} />
-          <Conf l="Remove random, same size" v={kd.patterns[pi].p_random} c={GREY} d={kd.patterns[pi].p_random - kd.p0} />
+          <Conf l={`Remove attention's top ${kd.patterns[pi].occurrence.eids.length}`} v={kd.patterns[pi].p_attn ?? kd.patterns[pi].p_random} c={GREY} d={(kd.patterns[pi].p_attn ?? kd.patterns[pi].p_random) - kd.p0} />
           <p className="dm-pwhy">{kd.patterns[pi].why}</p></div>
       </div>)}
 
@@ -256,17 +255,17 @@ function ExplGraph({ g, hi }: any) {
 const short = (s: string, k: number) => (s.length > k ? s.slice(0, k - 1) + "…" : s);
 
 function Curve({ kd }: any) {
-  const pts = [{ n: 0, p: kd.p0, rand_mean: kd.p0, rand_lo: kd.p0, rand_hi: kd.p0 }, ...kd.curve];
+  const pts = [{ n: 0, p: kd.p0, attn: kd.p0, rand_mean: kd.p0, rand_lo: kd.p0, rand_hi: kd.p0 }, ...kd.curve].map((x: any) => ({ ...x, attn: x.attn ?? x.rand_mean }));
   const W = 560, H = 310, l = 48, r = 16, t = 26, b = 40, N = pts.length - 1 || 1;
-  const lo = Math.min(0.45, ...pts.map((x: any) => Math.min(x.p, x.rand_lo))) - 0.03, hi = Math.min(1, Math.max(...pts.map((x: any) => x.rand_hi)) + 0.03);
+  const lo = Math.min(0.45, ...pts.map((x: any) => Math.min(x.p, x.attn))) - 0.03, hi = Math.min(1, Math.max(...pts.map((x: any) => Math.max(x.p, x.attn))) + 0.05);
   const sx = (i: number) => l + (W - l - r) * (i / N), sy = (v: number) => t + (H - t - b) * (1 - (v - lo) / (hi - lo));
-  const band = pts.map((x: any, i: number) => `${sx(i)},${sy(x.rand_hi)}`).join(" ") + " " + pts.slice().reverse().map((x: any, i: number) => `${sx(pts.length - 1 - i)},${sy(x.rand_lo)}`).join(" ");
   const ticks = [lo, (lo + hi) / 2, hi].map((v) => Math.round(v * 20) / 20);
   return <svg viewBox={`0 0 ${W} ${H}`} className="dm-curve">
     {ticks.map((v) => <g key={v}><line x1={l} x2={W - r} y1={sy(v)} y2={sy(v)} className="grid" /><text x={l - 6} y={sy(v) + 4} textAnchor="end" className="ax">{pct(v)}</text></g>)}
     {0.5 > lo && <><line x1={l} x2={W - r} y1={sy(0.5)} y2={sy(0.5)} className="half" /><text x={l + 6} y={sy(0.5) + 16} textAnchor="start" className="halft">50%: the history model has no preference between the two</text></>}
-    <polygon points={band} className="band" />
-    <polyline points={pts.map((x: any, i: number) => `${sx(i)},${sy(x.rand_mean)}`).join(" ")} className="rl" />
+    <polyline points={pts.map((x: any, i: number) => `${sx(i)},${sy(x.attn)}`).join(" ")} className="al" />
+    {pts.map((x: any, i: number) => i > 0 && <g key={`a${i}`}><circle cx={sx(i)} cy={sy(x.attn)} r={4} className="ad" /><text x={sx(i)} y={sy(x.attn) - 9} textAnchor="middle" className="av">{pct(x.attn)}</text></g>)}
+    <text x={W - r} y={sy(pts[pts.length - 1].attn) + 20} textAnchor="end" className="av">attention's top k</text>
     <polyline points={pts.map((x: any, i: number) => `${sx(i)},${sy(x.p)}`).join(" ")} className="tl" />
     {pts.map((x: any, i: number) => <g key={i}><circle cx={sx(i)} cy={sy(x.p)} r={5} className="td" /><text x={sx(i)} y={sy(x.p) - 10} textAnchor="middle" className="tv">{pct(x.p)}</text>
       <text x={sx(i)} y={H - b + 18} textAnchor="middle" className="ax">{i}</text></g>)}

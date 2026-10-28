@@ -145,7 +145,8 @@
       "rand_mean": 0.5776118882188715,
       "rand_lo": 0.5769467979039703,
       "rand_hi": 0.577856034086134,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.4277815365888611
     },
     {
       "n": 2,
@@ -153,7 +154,8 @@
       "rand_mean": 0.5776181964554633,
       "rand_lo": 0.5766730712451053,
       "rand_hi": 0.577856034086134,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.4299667084978864
     },
     {
       "n": 3,
@@ -161,13 +163,15 @@
       "rand_mean": 0.5768734565981904,
       "rand_lo": 0.5721370630347387,
       "rand_hi": 0.5816646461190977,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.4363602822602412
     }
   ],
   "full": {
     "p": 0.3893835685074637,
     "rand_mean": 0.5768734565981904,
     "p_value": 0.01639344262295082,
+    "attn": 0.4363602822602412,
     "rand_all": [
       0.577856034086134,
       0.5774920647856314,
@@ -391,6 +395,7 @@
       "raw": 11.242481257011534,
       "adjusted": 1.4965574369238226,
       "p_full": 0.577856034086134,
+      "p_attn": 0.42996664152846464,
       "pts_one": 17.975581202624575,
       "pts_base": 12.076211260137898,
       "pts_one_raw": 17.975581202624575,
@@ -458,7 +463,7 @@
       "p_without": 0.3981001550129253,
       "p_random": 0.5775855907655056,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 15, user 281, Requiem for a Dream): 58% \u2192 40%; random ratings of the same size: 58% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 18.0 points of the model's preference vs 12.1 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 15, user 281, Requiem for a Dream): 58% \u2192 40%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 18.0 points of the model's preference vs 12.1 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "SEQ",
@@ -466,6 +471,7 @@
       "raw": 0.8939068992782397,
       "adjusted": 0.99975658575987,
       "p_full": 0.577856034086134,
+      "p_attn": 0.42996664152846464,
       "pts_one": 1.407573743642676,
       "pts_base": 1.4079178010985682,
       "pts_one_raw": 1.4167768035995842,
@@ -532,7 +538,7 @@
       "p_without": 0.4277815142940317,
       "p_random": 0.5776048169131125,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 281, Requiem for a Dream, Boys Don't Cry): 58% \u2192 43%; random ratings of the same size: 58% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.4 points of the model's preference vs 1.4 for a comparable pattern (before matching: vs 1.6). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 281, Requiem for a Dream, Boys Don't Cry): 58% \u2192 43%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.4 points of the model's preference vs 1.4 for a comparable pattern (before matching: vs 1.6). "
     },
     {
       "motif": "CO",
@@ -540,6 +546,7 @@
       "raw": 1.7041188780285987,
       "adjusted": 0.7634385672932028,
       "p_full": 0.577856034086134,
+      "p_attn": 0.42996664152846464,
       "pts_one": 2.69676677588101,
       "pts_base": 3.5392754151752137,
       "pts_one_raw": 2.710012403459161,
@@ -607,11 +614,11 @@
       "p_without": 0.3981001550129253,
       "p_random": 0.5775693382445455,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 15, Requiem for a Dream, user 281): 58% \u2192 40%; random ratings of the same size: 58% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.7 points of the model's preference vs 3.5 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 15, Requiem for a Dream, user 281): 58% \u2192 40%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.7 points of the model's preference vs 3.5 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 487,
-  "computed_at": "2026-10-28T16:39:19-0400",
-  "summary": "With 3 ratings (2 recent ratings of Requiem for a Dream by other people, 1 of the member's own rating), the model's preference for Requiem for a Dream over For a Few Dollars More goes from 58% to 39% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 58% on average (p = 0.02, 60 draws). The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T16:45:01-0400",
+  "summary": "With 3 ratings (2 recent ratings of Requiem for a Dream by other people, 1 of the member's own rating), the model's preference for Requiem for a Dream over For a Few Dollars More goes from 58% to 39% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 44%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

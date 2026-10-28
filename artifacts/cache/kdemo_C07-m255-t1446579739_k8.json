@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 5 of the 8 ratings are recent ratings of Requiem for a Dream by other people; 5 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (The Matrix, Star Wars: Episode IV - A New Hope, Star Wars: Episode V - The Empire Strikes Back), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 100% \u2192 99% (random ratings: 100%, p = 0.02); matched on timing and activity, each removal still costs 0.1 points vs 0.0 for a comparable pattern: a structural reason, not just recency.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 100% \u2192 99% (top-attention ratings: 100%); matched on timing and activity, each removal still costs 0.1 points vs 0.0 for a comparable pattern: a structural reason, not just recency.",
       "Ranker: Requiem for a Dream beats Let Me In mainly through popularity (+0.59); the history part adds +0.33."
     ],
     "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Star Wars: Episode IV - A New Hope. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
@@ -315,7 +315,8 @@
       "rand_mean": 0.9981084170757124,
       "rand_lo": 0.9980108327365579,
       "rand_hi": 0.998203755910322,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9989783834027024
     },
     {
       "n": 2,
@@ -323,7 +324,8 @@
       "rand_mean": 0.9981174299041593,
       "rand_lo": 0.9980445757588406,
       "rand_hi": 0.9982299499940962,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.998469526951188
     },
     {
       "n": 3,
@@ -331,7 +333,8 @@
       "rand_mean": 0.9981255216694236,
       "rand_lo": 0.9980108327365579,
       "rand_hi": 0.9982799401185802,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9985859776582434
     },
     {
       "n": 4,
@@ -339,7 +342,8 @@
       "rand_mean": 0.998122141695924,
       "rand_lo": 0.9980320454150187,
       "rand_hi": 0.9982669725430585,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9986581299837483
     },
     {
       "n": 5,
@@ -347,7 +351,8 @@
       "rand_mean": 0.9981216026649966,
       "rand_lo": 0.9980017099001558,
       "rand_hi": 0.9982055045246617,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9979674336023465
     },
     {
       "n": 6,
@@ -355,7 +360,8 @@
       "rand_mean": 0.9981217198006009,
       "rand_lo": 0.9980323609700269,
       "rand_hi": 0.9982058672072005,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9977769530192133
     },
     {
       "n": 7,
@@ -363,7 +369,8 @@
       "rand_mean": 0.998078986689453,
       "rand_lo": 0.9976510274766818,
       "rand_hi": 0.998233779745456,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9977425341298712
     },
     {
       "n": 8,
@@ -371,13 +378,15 @@
       "rand_mean": 0.9981880350320737,
       "rand_lo": 0.9979925466032876,
       "rand_hi": 0.9987140162392808,
-      "p_value": 0.01639344262295082
+      "p_value": 0.01639344262295082,
+      "attn": 0.9923155884448327
     }
   ],
   "full": {
     "p": 0.9603982934771619,
     "rand_mean": 0.9981880350320737,
     "p_value": 0.01639344262295082,
+    "attn": 0.9923155884448327,
     "rand_all": [
       0.9983690061998117,
       0.9981079503787965,
@@ -706,6 +715,7 @@
       "raw": 7.237510124355346,
       "adjusted": 6.627111522281087,
       "p_full": 0.9981125489076171,
+      "p_attn": 0.9984695258377374,
       "pts_one": 0.07512866741201663,
       "pts_base": 0.009791595690100685,
       "pts_one_raw": 0.06517837394078851,
@@ -773,7 +783,7 @@
       "p_without": 0.9938582885132996,
       "p_random": 0.9980999681335415,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 325, user 104, Requiem for a Dream): 100% \u2192 99%; random ratings of the same size: 100% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity do not explain it away. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 325, user 104, Requiem for a Dream): 100% \u2192 99%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.1 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -781,6 +791,7 @@
       "raw": 0.6952907701340788,
       "adjusted": 2.2667273798147702,
       "p_full": 0.9981125489076171,
+      "p_attn": 0.9984695258377374,
       "pts_one": 0.021647040126748784,
       "pts_base": 0.009261444472097313,
       "pts_one_raw": 0.005457624438454101,
@@ -847,7 +858,7 @@
       "p_without": 0.9971682003590182,
       "p_random": 0.9981184883816115,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 104, The Matrix, user 255): 100% \u2192 100%; random ratings of the same size: 100% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity do not explain it away. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 104, The Matrix, user 255): 100% \u2192 100%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity do not explain it away. "
     },
     {
       "motif": "BRIDGE",
@@ -855,6 +866,7 @@
       "raw": 3.03246229578201,
       "adjusted": 1.708824488806398,
       "p_full": 0.9981125489076171,
+      "p_attn": 0.9985859766293934,
       "pts_one": 0.020111592221505603,
       "pts_base": 0.011521944503722903,
       "pts_one_raw": 0.02498389433422954,
@@ -938,7 +950,7 @@
       "p_without": 0.9975444706327706,
       "p_random": 0.9981192292031268,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 508, Raiders of the Lost Ark, user 62): 100% \u2192 100%; random ratings of the same size: 100% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 508, Raiders of the Lost Ark, user 62): 100% \u2192 100%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
@@ -946,6 +958,7 @@
       "raw": 0.6484966043729762,
       "adjusted": 0.8135959108030597,
       "p_full": 0.9981125489076171,
+      "p_attn": 0.9984695258377374,
       "pts_one": 0.005694957742308215,
       "pts_base": 0.00702369951771642,
       "pts_one_raw": 0.005085424431472418,
@@ -1010,11 +1023,11 @@
       "p_without": 0.9975281932919315,
       "p_random": 0.9981015498548921,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 532, Tucker & Dale vs Evil, Near Dark): 100% \u2192 100%; random ratings of the same size: 100% (p = 0.02). Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 532, Tucker & Dale vs Evil, Near Dark): 100% \u2192 100%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1089,
-  "computed_at": "2026-10-28T16:39:17-0400",
-  "summary": "With 8 ratings (5 recent ratings of Requiem for a Dream by other people, 3 of the member's own ratings), the model's preference for Requiem for a Dream over Let Me In goes from 100% to 96%. Removing the same number of random ratings from the same weeks gives 100% on average (p = 0.02, 60 draws). In the full ranking, Requiem for a Dream moves from #1 to #2."
+  "computed_at": "2026-10-28T16:44:58-0400",
+  "summary": "With 8 ratings (5 recent ratings of Requiem for a Dream by other people, 3 of the member's own ratings), the model's preference for Requiem for a Dream over Let Me In goes from 100% to 96%. Removing the same number of ratings with the highest attention weight gives 99%. In the full ranking, Requiem for a Dream moves from #1 to #2."
 }
