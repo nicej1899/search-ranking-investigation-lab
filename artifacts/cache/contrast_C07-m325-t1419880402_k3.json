@@ -1,0 +1,54 @@
+{
+  "case_id": "C07-m325-t1419880402",
+  "member": 325,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Perks of Being a Wallflower, The (2012)",
+  "A_id": 3555,
+  "B_id": 8598,
+  "member_id": 325,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 72054,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 260",
+        "from_id": 3555,
+        "to_id": 260,
+        "rating": 5.0,
+        "date": "2014-07-09",
+        "kind": "the title's recent raters"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1
+    },
+    "structure": null,
+    "n_model_runs": 82
+  },
+  "side_B": {
+    "links": [],
+    "kinds": {},
+    "structure": null,
+    "n_model_runs": 82
+  },
+  "test": {
+    "p0": 0.7277731209785787,
+    "del_A": {
+      "p": 0.7198980077252847,
+      "p_random": 0.7277731209785787,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.7277731209785787,
+      "p_random": 0.7277731196252336,
+      "p_value": 0.926829268292683
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 1.0,
+    "B_from_member_history": 0.0,
+    "shared_links": []
+  }
+}

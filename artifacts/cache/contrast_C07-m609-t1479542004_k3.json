@@ -1,0 +1,186 @@
+{
+  "case_id": "C07-m609-t1479542004",
+  "member": 609,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Vitelloni, I (a.k.a. The Young and the Passionate) (1953)",
+  "A_id": 3555,
+  "B_id": 5936,
+  "member_id": 609,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 85603,
+        "from": "user 609",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 609,
+        "to_id": 887,
+        "rating": 3.0,
+        "date": "2016-11-19",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 85604,
+        "from": "user 609",
+        "to": "Fight Club (1999)",
+        "from_id": 609,
+        "to_id": 2836,
+        "rating": 5.0,
+        "date": "2016-11-19",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 85607,
+        "from": "user 609",
+        "to": "Mission: Impossible II (2000)",
+        "from_id": 609,
+        "to_id": 3310,
+        "rating": 3.0,
+        "date": "2016-11-19",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 1.7937477894645475,
+      "nodes": [
+        {
+          "id": 559,
+          "name": "user 559"
+        },
+        {
+          "id": 524,
+          "name": "user 524"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 84239,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 559",
+          "from_id": 3555,
+          "to_id": 559,
+          "rating": 4.0,
+          "date": "2016-07-27"
+        },
+        {
+          "eid": 85124,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 524",
+          "from_id": 3555,
+          "to_id": 524,
+          "rating": 4.0,
+          "date": "2016-10-14"
+        }
+      ]
+    },
+    "n_model_runs": 336
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 84722,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 124",
+        "from_id": 3555,
+        "to_id": 124,
+        "rating": 2.5,
+        "date": "2016-09-21",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 85605,
+        "from": "user 609",
+        "to": "Face/Off (1997)",
+        "from_id": 609,
+        "to_id": 1791,
+        "rating": 3.5,
+        "date": "2016-11-19",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 85607,
+        "from": "user 609",
+        "to": "Mission: Impossible II (2000)",
+        "from_id": 609,
+        "to_id": 3310,
+        "rating": 3.0,
+        "date": "2016-11-19",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.310031093114235,
+      "nodes": [
+        {
+          "id": 609,
+          "name": "user 609"
+        },
+        {
+          "id": 1791,
+          "name": "Face/Off (1997)"
+        },
+        {
+          "id": 5418,
+          "name": "Paycheck (2003)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 85605,
+          "from": "user 609",
+          "to": "Face/Off (1997)",
+          "from_id": 609,
+          "to_id": 1791,
+          "rating": 3.5,
+          "date": "2016-11-19"
+        },
+        {
+          "eid": 85606,
+          "from": "user 609",
+          "to": "Paycheck (2003)",
+          "from_id": 609,
+          "to_id": 5418,
+          "rating": 1.5,
+          "date": "2016-11-19"
+        }
+      ]
+    },
+    "n_model_runs": 306
+  },
+  "test": {
+    "p0": 0.9986129349455343,
+    "del_A": {
+      "p": 0.9943648804027772,
+      "p_random": 0.9986627156163955,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9994107899075825,
+      "p_random": 0.9984450676699946,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.0,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": [
+      85607
+    ]
+  }
+}

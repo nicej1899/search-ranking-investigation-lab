@@ -1,0 +1,6 @@
+srlab/backbones.py:166: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  src_t = torch.as_tensor(src); dst_t = torch.as_tensor(dst); ts_t = torch.as_tensor(ts); r = torch.as_tensor(rating_index(rat))
+200 1261 {'used': 55, 'calls': 58, 'ms': 2064.0, 'top': ['CO', 'SEQ']} {'used': 1261, 'calls': 1264, 'ms': 64225.1, 'top': ['CO', 'SEQ']}
+642 7264 {'used': 56, 'calls': 59, 'ms': 2505.3, 'top': ['CO', 'SEQ']} {'used': 7264, 'calls': 7267, 'ms': 259064.3, 'top': ['CO', 'SEQ']}
+1137 21010 {'used': 48, 'calls': 51, 'ms': 1852.3, 'top': ['SEQ', 'CO']} None
+1911 21684 {'used': 49, 'calls': 52, 'ms': 2112.8, 'top': ['SEQ', 'CO']} None

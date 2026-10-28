@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m340-t1439751021",
+  "member": 340,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "What a Girl Wants (2003)",
+  "A_id": 3555,
+  "B_id": 4898,
+  "member_id": 340,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 76020,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 325",
+        "from_id": 3555,
+        "to_id": 325,
+        "rating": 4.5,
+        "date": "2015-07-14",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76278,
+        "from": "user 340",
+        "to": "Jurassic Park (1993)",
+        "from_id": 340,
+        "to_id": 1028,
+        "rating": 2.0,
+        "date": "2015-08-16",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 76280,
+        "from": "user 340",
+        "to": "Toy Story (1995)",
+        "from_id": 340,
+        "to_id": 610,
+        "rating": 5.0,
+        "date": "2015-08-16",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 4.965031343100982,
+      "nodes": [
+        {
+          "id": 316,
+          "name": "user 316"
+        },
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73735,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 316",
+          "from_id": 3555,
+          "to_id": 316,
+          "rating": 4.0,
+          "date": "2015-04-30"
+        },
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        }
+      ]
+    },
+    "n_model_runs": 233
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 75729,
+        "from": "What a Girl Wants (2003)",
+        "to": "user 508",
+        "from_id": 4898,
+        "to_id": 508,
+        "rating": 2.0,
+        "date": "2015-07-04",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76277,
+        "from": "user 340",
+        "to": "Forrest Gump (1994)",
+        "from_id": 340,
+        "to_id": 924,
+        "rating": 3.5,
+        "date": "2015-08-16",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 76281,
+        "from": "user 340",
+        "to": "Safe (2012)",
+        "from_id": 340,
+        "to_id": 8486,
+        "rating": 4.0,
+        "date": "2015-08-16",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 12.690056430139617,
+      "nodes": [
+        {
+          "id": 192,
+          "name": "user 192"
+        },
+        {
+          "id": 610,
+          "name": "Toy Story (1995)"
+        },
+        {
+          "id": 508,
+          "name": "user 508"
+        },
+        {
+          "id": 4898,
+          "name": "What a Girl Wants (2003)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 75364,
+          "from": "Toy Story (1995)",
+          "to": "user 192",
+          "from_id": 610,
+          "to_id": 192,
+          "rating": 2.0,
+          "date": "2015-07-02"
+        },
+        {
+          "eid": 75494,
+          "from": "Toy Story (1995)",
+          "to": "user 508",
+          "from_id": 610,
+          "to_id": 508,
+          "rating": 4.0,
+          "date": "2015-07-04"
+        },
+        {
+          "eid": 75729,
+          "from": "What a Girl Wants (2003)",
+          "to": "user 508",
+          "from_id": 4898,
+          "to_id": 508,
+          "rating": 2.0,
+          "date": "2015-07-04"
+        }
+      ]
+    },
+    "n_model_runs": 229
+  },
+  "test": {
+    "p0": 0.9695310992201286,
+    "del_A": {
+      "p": 0.9135400098922912,
+      "p_random": 0.9727323440224349,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9920620468652455,
+      "p_random": 0.9659323976429629,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.3333333333333333,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

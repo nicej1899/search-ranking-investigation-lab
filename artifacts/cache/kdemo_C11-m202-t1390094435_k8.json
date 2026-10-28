@@ -1,0 +1,692 @@
+{
+  "case_id": "C11-m202-t1390094435",
+  "k": 8,
+  "member": 202,
+  "joint": {
+    "lines": [
+      "TemGX: 3 of the 6 ratings are recent ratings of Who Framed Roger Rabbit? by other people; 3 of them are part of a pattern CATGX finds.",
+      "TemGX: 3 are the member's own recent ratings (Naked Gun 33 1/3: The Final Insult, Ransom, My Cousin Vinny), shared with people who also rated Who Framed Roger Rabbit?.",
+      "CATGX: \u201cRecent fans piled on\u201d looked 27.0\u00d7 and is still 1.6\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "Ranker: Who Framed Roger Rabbit? beats The Mummy mainly through the member's history (+0.06); the history part adds +0.06."
+    ],
+    "verdict": "Diagnosis: Who Framed Roger Rabbit? wins mainly through the member's history, and the history model adds to it through recent fans of Who Framed Roger Rabbit? (a pattern that survives matching) and the member's ratings of Naked Gun 33 1/3: The Final Insult, Ransom. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      70158,
+      71148,
+      71471
+    ]
+  },
+  "score_split": {
+    "relevance": 0.03411791656869778,
+    "popularity": 0.03484968073780986,
+    "behaviour": 0.0633654446129763
+  },
+  "A": "Who Framed Roger Rabbit?",
+  "B": "The Mummy",
+  "query": "a fantasy movie that isn't animated",
+  "p0": 0.7670168241070526,
+  "evidence": [
+    {
+      "eid": 71148,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 281",
+      "to": "Who Framed Roger Rabbit?",
+      "from_id": 281,
+      "to_id": 2860,
+      "rating": 4.0,
+      "date": "Sep 6, 2013",
+      "days_before": 134,
+      "p_without": 0.7230355115510657,
+      "drop": 0.04398131255598692,
+      "score": {
+        "influence": 0.04398128000383372,
+        "connectedness": 0.6065306597126333,
+        "recency": 0.6931098191517686,
+        "phi": 0.018489393914700655
+      },
+      "why": "User 281 rated Who Framed Roger Rabbit? 4\u2605 on Sep 6, 2013, 134 days before the search. The graph model builds Who Framed Roger Rabbit?'s profile from its recent raters, weighting recent ones more, so this rating makes Who Framed Roger Rabbit? look current. Removing only this rating: 77% \u2192 72% (\u22124.4 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.5285425741267717,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.6420223658797524,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 70158,
+      "n": 2,
+      "kind": "crowd",
+      "from": "user 375",
+      "to": "Who Framed Roger Rabbit?",
+      "from_id": 375,
+      "to_id": 2860,
+      "rating": 4.0,
+      "date": "Apr 3, 2013",
+      "days_before": 291,
+      "p_without": 0.740783918799808,
+      "drop": 0.026232905307244647,
+      "score": {
+        "influence": 0.026232872755091452,
+        "connectedness": 0.6065306597126336,
+        "recency": 0.45117206101327817,
+        "phi": 0.007178617439797895
+      },
+      "why": "User 375 rated Who Framed Roger Rabbit? 4\u2605 on Apr 3, 2013, 291 days before the search. The graph model builds Who Framed Roger Rabbit?'s profile from its recent raters, weighting recent ones more, so this rating makes Who Framed Roger Rabbit? look current. Removing only this rating: 77% \u2192 74% (\u22122.6 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.5285425741267717,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.6420223658797524,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 71471,
+      "n": 3,
+      "kind": "own",
+      "from": "user 202",
+      "to": "Naked Gun 33 1/3: The Final Insult",
+      "from_id": 202,
+      "to_id": 938,
+      "rating": 2.0,
+      "date": "Jan 19, 2014",
+      "days_before": 0,
+      "p_without": 0.7561323784714319,
+      "drop": 0.010884445635620743,
+      "score": {
+        "influence": 0.010884413083467548,
+        "connectedness": 0.7165313105737889,
+        "recency": 0.8432828870977866,
+        "phi": 0.006576782439311716
+      },
+      "why": "Member 202 rated Naked Gun 33 1/3: The Final Insult 2\u2605 on Jan 19, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Who Framed Roger Rabbit?. Removing only this rating: 77% \u2192 76% (\u22121.1 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.6002489782283017,
+          "significant": false
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.5285425741267717,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 71472,
+      "n": 4,
+      "kind": "own",
+      "from": "user 202",
+      "to": "Ransom",
+      "from_id": 202,
+      "to_id": 1255,
+      "rating": 4.0,
+      "date": "Jan 19, 2014",
+      "days_before": 0,
+      "p_without": 0.7566135268528859,
+      "drop": 0.010403297254166777,
+      "score": {
+        "influence": 0.010403264702013582,
+        "connectedness": 0.6065306597126336,
+        "recency": 0.999999492643457,
+        "phi": 0.006309895801508908
+      },
+      "why": "Member 202 rated Ransom 4\u2605 on Jan 19, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Who Framed Roger Rabbit?. Removing only this rating: 77% \u2192 76% (\u22121.0 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.6002489782283017,
+          "significant": false
+        }
+      ]
+    },
+    {
+      "eid": 69998,
+      "n": 5,
+      "kind": "crowd",
+      "from": "user 248",
+      "to": "Who Framed Roger Rabbit?",
+      "from_id": 248,
+      "to_id": 2860,
+      "rating": 4.0,
+      "date": "Mar 3, 2013",
+      "days_before": 321,
+      "p_without": 0.7621137799555372,
+      "drop": 0.004903044151515434,
+      "score": {
+        "influence": 0.004903011599362239,
+        "connectedness": 0.6065306597126328,
+        "recency": 0.8943617801226963,
+        "phi": 0.00265967708423251
+      },
+      "why": "User 248 rated Who Framed Roger Rabbit? 4\u2605 on Mar 3, 2013, 321 days before the search. The graph model builds Who Framed Roger Rabbit?'s profile from its recent raters, weighting recent ones more, so this rating makes Who Framed Roger Rabbit? look current. Removing only this rating: 77% \u2192 76% (\u22120.5 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.6002489782283017,
+          "significant": false
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.5285425741267717,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.6420223658797524,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 71468,
+      "n": 6,
+      "kind": "own",
+      "from": "user 202",
+      "to": "My Cousin Vinny",
+      "from_id": 202,
+      "to_id": 2323,
+      "rating": 4.0,
+      "date": "Jan 19, 2014",
+      "days_before": 0,
+      "p_without": 0.7617045929012488,
+      "drop": 0.005312231205803819,
+      "score": {
+        "influence": 0.005312198653650624,
+        "connectedness": 0.6065306597126333,
+        "recency": 0.7379365110195859,
+        "phi": 0.002377639816979634
+      },
+      "why": "Member 202 rated My Cousin Vinny 4\u2605 on Jan 19, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Who Framed Roger Rabbit?. Removing only this rating: 77% \u2192 76% (\u22120.5 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.5285425741267717,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.7230355115510657,
+      "rand_mean": 0.767041835623898,
+      "rand_lo": 0.766116346583076,
+      "rand_hi": 0.768475676303985,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.6761881242548585,
+      "rand_mean": 0.7664631214567544,
+      "rand_lo": 0.7613404430296684,
+      "rand_hi": 0.768475676303985,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.6640378268091929,
+      "rand_mean": 0.7665480859237677,
+      "rand_lo": 0.7565279222179812,
+      "rand_hi": 0.7793100370517722,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.6486081929342452,
+      "rand_mean": 0.7706237230256358,
+      "rand_lo": 0.7609394248875221,
+      "rand_hi": 0.7883336925565539,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.6165775139106322,
+      "rand_mean": 0.7690949764616711,
+      "rand_lo": 0.7613952425954192,
+      "rand_hi": 0.7813533398246688,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.5954244109259595,
+      "rand_mean": 0.7741972341316803,
+      "rand_lo": 0.766116346583076,
+      "rand_hi": 0.7948679860797425,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.5954244109259595,
+    "rand_mean": 0.7741972341316803,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.7781494494236731,
+      0.7790746088506842,
+      0.768475676303985,
+      0.7730165901708912,
+      0.7669669830518855,
+      0.7730165901708912,
+      0.7791316027891994,
+      0.7949959366528884,
+      0.7672622098379662,
+      0.7667081851747035,
+      0.7618056541440282,
+      0.7670168241070526,
+      0.7670168241070526,
+      0.7678909251896081,
+      0.7670168241070526,
+      0.7765673685354156,
+      0.7961018844020166,
+      0.766909677828441,
+      0.7791316027891994,
+      0.7791809702084179,
+      0.766116346583076,
+      0.7791809702084179,
+      0.779426811814807,
+      0.779426811814807,
+      0.768475676303985,
+      0.7791199101724327,
+      0.7768899045912443,
+      0.766116346583076,
+      0.7769977110653403,
+      0.7744751712130539,
+      0.7768899045912443,
+      0.7669550344198031,
+      0.7947265670252128,
+      0.7800400100063607,
+      0.7672622098379662,
+      0.7672622098379662,
+      0.7678909251896081,
+      0.7806173426960978,
+      0.7670168241070526,
+      0.766909677828441,
+      0.7766669131139964,
+      0.7670168241070526,
+      0.777489801975356,
+      0.7766205893142266,
+      0.7790746088506842,
+      0.7788725058766751,
+      0.7769977110653403,
+      0.7669550344198031,
+      0.7800400100063607,
+      0.7791809702084179,
+      0.7766669131139964,
+      0.7670168241070526,
+      0.7730165901708912,
+      0.7730165901708912,
+      0.7800400100063607,
+      0.7769977110653403,
+      0.7766669131139964,
+      0.7670168241070526,
+      0.7791316027891994,
+      0.766116346583076
+    ],
+    "flips": false
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 2,
+    "B_after": 2,
+    "top3_after": [
+      "Who Framed Roger Rabbit? (1988)",
+      "Mummy, The (1999)",
+      "Waking Life (2001)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 1255,
+        "name": "Ransom",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 202,
+        "name": "user 202",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 938,
+        "name": "Naked Gun 33 1/3: The Final Insult",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 2860,
+        "name": "Who Framed Roger Rabbit?",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 2323,
+        "name": "My Cousin Vinny",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 2582,
+        "name": "The Mummy",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 375,
+        "name": "user 375",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 248,
+        "name": "user 248",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 281,
+        "name": "user 281",
+        "type": "user",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 69998,
+        "s": 2860,
+        "t": 248,
+        "rating": 4.0,
+        "date": "Mar 3, 2013",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 70158,
+        "s": 2860,
+        "t": 375,
+        "rating": 4.0,
+        "date": "Apr 3, 2013",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 71148,
+        "s": 2860,
+        "t": 281,
+        "rating": 4.0,
+        "date": "Sep 6, 2013",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 71468,
+        "s": 202,
+        "t": 2323,
+        "rating": 4.0,
+        "date": "Jan 19, 2014",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 71471,
+        "s": 202,
+        "t": 938,
+        "rating": 2.0,
+        "date": "Jan 19, 2014",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 71472,
+        "s": 202,
+        "t": 1255,
+        "rating": 4.0,
+        "date": "Jan 19, 2014",
+        "expl": true,
+        "n": 4
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 26.989605851031335,
+      "adjusted": 1.6420223658797524,
+      "graph": {
+        "nodes": [
+          {
+            "id": 281,
+            "name": "user 281",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 2860,
+            "name": "Who Framed Roger Rabbit?",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 375,
+            "name": "user 375",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 70158,
+            "s": 2860,
+            "t": 375,
+            "rating": 4.0,
+            "date": "Apr 3, 2013",
+            "in_temgx": true
+          },
+          {
+            "eid": 71148,
+            "s": 2860,
+            "t": 281,
+            "rating": 4.0,
+            "date": "Sep 6, 2013",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        70158,
+        71148
+      ],
+      "S": 0.0036449750264485677,
+      "occurrence": {
+        "eids": [
+          70158,
+          71148
+        ],
+        "nodes": [
+          "user 375",
+          "user 281",
+          "Who Framed Roger Rabbit?"
+        ],
+        "dates": [
+          "Apr 3, 2013",
+          "Sep 6, 2013"
+        ]
+      },
+      "p_without": 0.6761881242548585,
+      "p_random": 0.7659961695176521,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 27.0\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.6\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 375, user 281, Who Framed Roger Rabbit?): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 10.610586693284935,
+      "adjusted": 1.5285425741267717,
+      "graph": {
+        "nodes": [
+          {
+            "id": 281,
+            "name": "user 281",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 2860,
+            "name": "Who Framed Roger Rabbit?",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 375,
+            "name": "user 375",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 70158,
+            "s": 2860,
+            "t": 375,
+            "rating": 4.0,
+            "date": "Apr 3, 2013",
+            "in_temgx": true
+          },
+          {
+            "eid": 71148,
+            "s": 2860,
+            "t": 281,
+            "rating": 4.0,
+            "date": "Sep 6, 2013",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        70158,
+        71148
+      ],
+      "S": 0.0033995866775512694,
+      "occurrence": {
+        "eids": [
+          70158,
+          71148
+        ],
+        "nodes": [
+          "user 375",
+          "Who Framed Roger Rabbit?",
+          "user 281"
+        ],
+        "dates": [
+          "Apr 3, 2013",
+          "Sep 6, 2013"
+        ]
+      },
+      "p_without": 0.6761881242548585,
+      "p_random": 0.7664326914313808,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 10.6\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.5\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 375, Who Framed Roger Rabbit?, user 281): 77% \u2192 68%; random ratings of the same size: 77% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.22786808548047677,
+      "adjusted": 0.6002489782283017,
+      "graph": {
+        "nodes": [
+          {
+            "id": 938,
+            "name": "Naked Gun 33 1/3: The Final Insult",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 202,
+            "name": "user 202",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 974,
+            "name": "Beverly Hills Cop III",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 71470,
+            "s": 202,
+            "t": 974,
+            "rating": 3.0,
+            "date": "Jan 19, 2014",
+            "in_temgx": false
+          },
+          {
+            "eid": 71471,
+            "s": 202,
+            "t": 938,
+            "rating": 2.0,
+            "date": "Jan 19, 2014",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        71471
+      ],
+      "S": -0.0011659140057033964,
+      "occurrence": {
+        "eids": [
+          71470,
+          71471
+        ],
+        "nodes": [
+          "user 202",
+          "Beverly Hills Cop III",
+          "Naked Gun 33 1/3: The Final Insult"
+        ],
+        "dates": [
+          "Jan 19, 2014",
+          "Jan 19, 2014"
+        ]
+      },
+      "p_without": 0.759393710436056,
+      "p_random": 0.76643510762916,
+      "p_value": 0.16393442622950818,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Removing its strongest occurrence (user 202, Beverly Hills Cop III, Naked Gun 33 1/3: The Final Insult): 77% \u2192 76%; random ratings of the same size: 77% (p = 0.16)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 708,
+  "computed_at": "2026-10-27T18:47:43-0400",
+  "summary": "With 6 ratings (3 recent ratings of Who Framed Roger Rabbit? by other people, 3 of the member's own ratings), the model's preference for Who Framed Roger Rabbit? over The Mummy goes from 77% to 60%. Removing the same number of random ratings from the same weeks gives 77% on average (p = 0.02, 60 draws). The full ranking still puts Who Framed Roger Rabbit? at #1: text match and popularity also push it up."
+}

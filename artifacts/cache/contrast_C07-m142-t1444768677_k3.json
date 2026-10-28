@@ -1,0 +1,174 @@
+{
+  "case_id": "C07-m142-t1444768677",
+  "member": 142,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "I Love You, I Love You Not (1996)",
+  "A_id": 3555,
+  "B_id": 1880,
+  "member_id": 142,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 76020,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 325",
+        "from_id": 3555,
+        "to_id": 325,
+        "rating": 4.5,
+        "date": "2015-07-14",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76776,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 62",
+        "from_id": 3555,
+        "to_id": 62,
+        "rating": 5.0,
+        "date": "2015-09-25",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77037,
+        "from": "user 142",
+        "to": "American Pie (1999)",
+        "from_id": 142,
+        "to_id": 2641,
+        "rating": 4.5,
+        "date": "2015-10-13",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 5.816402501735748,
+      "nodes": [
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 62,
+          "name": "user 62"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        },
+        {
+          "eid": 76776,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 62",
+          "from_id": 3555,
+          "to_id": 62,
+          "rating": 5.0,
+          "date": "2015-09-25"
+        }
+      ]
+    },
+    "n_model_runs": 220
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 77036,
+        "from": "user 142",
+        "to": "Notebook, The (2004)",
+        "from_id": 142,
+        "to_id": 5837,
+        "rating": 4.0,
+        "date": "2015-10-13",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 77039,
+        "from": "user 142",
+        "to": "Up (2009)",
+        "from_id": 142,
+        "to_id": 7649,
+        "rating": 5.0,
+        "date": "2015-10-13",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.1499559180980634,
+      "nodes": [
+        {
+          "id": 142,
+          "name": "user 142"
+        },
+        {
+          "id": 5837,
+          "name": "Notebook, The (2004)"
+        },
+        {
+          "id": 7649,
+          "name": "Up (2009)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77036,
+          "from": "user 142",
+          "to": "Notebook, The (2004)",
+          "from_id": 142,
+          "to_id": 5837,
+          "rating": 4.0,
+          "date": "2015-10-13"
+        },
+        {
+          "eid": 77039,
+          "from": "user 142",
+          "to": "Up (2009)",
+          "from_id": 142,
+          "to_id": 7649,
+          "rating": 5.0,
+          "date": "2015-10-13"
+        }
+      ]
+    },
+    "n_model_runs": 212
+  },
+  "test": {
+    "p0": 0.9918282135626109,
+    "del_A": {
+      "p": 0.978676058880488,
+      "p_random": 0.9917649229586505,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9930664161468772,
+      "p_random": 0.991518718944657,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 1.0,
+    "shared_links": []
+  }
+}

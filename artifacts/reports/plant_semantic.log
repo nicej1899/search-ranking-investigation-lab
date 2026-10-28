@@ -1,0 +1,9 @@
+['Rocky III (1982)', 'Karate Kid, Part III, The (1989)', 'Adventures in Babysitting (1987)'] {'mean_margin': -0.16003727912902832, 'mean_margin_without_planted': -3.1965332508087156, 'mean_margin_without_T1_only': -2.8965672334035237, 'share_where_planted_pair_is_the_best_pair': 0.26666666666666666}
+TemGX                    {'found_any': 1.0, 'mean_hits_of_2': 1.0, 'found_both': 0.0, 'fidelity_vs_best_pair': 0.871853179236253}
+CATGX                    {'found_any': 1.0, 'mean_hits_of_2': 1.0, 'found_both': 0.0, 'fidelity_vs_best_pair': 0.5266818781693776}
+Attention top-2          {'found_any': 1.0, 'mean_hits_of_2': 1.0, 'found_both': 0.0, 'fidelity_vs_best_pair': 0.5266818781693776}
+Most recent 2            {'found_any': 0.0, 'mean_hits_of_2': 0.0, 'found_both': 0.0, 'fidelity_vs_best_pair': -0.5098730608820915}
+Random 2                 {'found_any': 0.3333333333333333, 'mean_hits_of_2': 0.3333333333333333, 'found_both': 0.0, 'fidelity_vs_best_pair': -0.6090549922858676}
+Best single removals     {'found_any': 1.0, 'mean_hits_of_2': 1.8, 'found_both': 0.8, 'fidelity_vs_best_pair': 0.7570816804965337}
+Try every pair           {'found_any': 1.0, 'mean_hits_of_2': 1.2666666666666666, 'found_both': 0.26666666666666666, 'fidelity_vs_best_pair': 1.0000000158945719}
+{'TemGX': 50.666666666666664, 'CATGX': 4.0, 'Try every pair': 21.0, 'Best single removals': 7.0} 189.7

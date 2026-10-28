@@ -1,0 +1,59 @@
+INFO:     Started server process [606]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54390 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54390 - "GET /assets/index-BcuAcV9P.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54406 - "GET /assets/index-BRDXqI4_.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54406 - "GET /api/eval HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54456 - "GET /api/templates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "GET /api/investigation/inv-primary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54446 - "GET /api/scalability HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "GET /api/compare HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54406 - "GET /api/backbones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54406 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54390 - "GET /api/meta HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54406 - "GET /api/testgen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54390 - "GET /api/f5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54456 - "GET /api/showcase HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54406 - "GET /api/casestudy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54456 - "GET /api/case/E01-m470-t1496669535 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "GET /api/overview?qid=showcase HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "GET /api/structure/C07-m290-t1453051417 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "POST /api/temgx HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "GET /api/retrievers/C07-m290-t1453051417 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "POST /api/catgx_do HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54446 - "GET /api/evalreport HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54438 - "GET /api/diagnostics/negation HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54438 - "GET /api/rag/C07-m290-t1453051417 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54446 - "GET /api/similar/C07-m290-t1453051417 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54438 - "GET /api/contrast/C07-m290-t1453051417?k=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54438 - "GET /api/neighborhood/E01-m470-t1496669535 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54438 - "POST /api/score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54406 - "GET /api/subgraph/C07-m290-t1453051417?backbone=tgat2&L=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54390 - "GET /api/subgraph/E01-m470-t1496669535?backbone=tgat2&L=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54422 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54446 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54456 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54438 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59676 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38904 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33164 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33164 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51236 - "POST /api/live HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [606]

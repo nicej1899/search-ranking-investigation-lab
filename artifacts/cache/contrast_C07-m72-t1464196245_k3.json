@@ -1,0 +1,185 @@
+{
+  "case_id": "C07-m72-t1464196245",
+  "member": 72,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Rain Man (1988)",
+  "A_id": 3555,
+  "B_id": 2048,
+  "member_id": 72,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 80711,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 494",
+        "from_id": 3555,
+        "to_id": 494,
+        "rating": 4.0,
+        "date": "2016-03-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 82040,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 338",
+        "from_id": 3555,
+        "to_id": 338,
+        "rating": 3.5,
+        "date": "2016-04-09",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 83083,
+        "from": "user 72",
+        "to": "Truman Show, The (1998)",
+        "from_id": 72,
+        "to_id": 1877,
+        "rating": 5.0,
+        "date": "2016-05-25",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 2.6871009815460307,
+      "nodes": [
+        {
+          "id": 580,
+          "name": "user 580"
+        },
+        {
+          "id": 17,
+          "name": "user 17"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77927,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 580",
+          "from_id": 3555,
+          "to_id": 580,
+          "rating": 4.5,
+          "date": "2015-11-08"
+        },
+        {
+          "eid": 80275,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 17",
+          "from_id": 3555,
+          "to_id": 17,
+          "rating": 4.5,
+          "date": "2016-02-15"
+        }
+      ]
+    },
+    "n_model_runs": 380
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 77990,
+        "from": "Rain Man (1988)",
+        "to": "user 226",
+        "from_id": 2048,
+        "to_id": 226,
+        "rating": 4.5,
+        "date": "2015-11-11",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 78899,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 297",
+        "from_id": 3555,
+        "to_id": 297,
+        "rating": 2.5,
+        "date": "2015-11-15",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 81901,
+        "from": "Rain Man (1988)",
+        "to": "user 304",
+        "from_id": 2048,
+        "to_id": 304,
+        "rating": 4.0,
+        "date": "2016-04-08",
+        "kind": "the title's recent raters"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "other people's ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 2.8059827477269357,
+      "nodes": [
+        {
+          "id": 226,
+          "name": "user 226"
+        },
+        {
+          "id": 121,
+          "name": "user 121"
+        },
+        {
+          "id": 2048,
+          "name": "Rain Man (1988)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77990,
+          "from": "Rain Man (1988)",
+          "to": "user 226",
+          "from_id": 2048,
+          "to_id": 226,
+          "rating": 4.5,
+          "date": "2015-11-11"
+        },
+        {
+          "eid": 82735,
+          "from": "Rain Man (1988)",
+          "to": "user 121",
+          "from_id": 2048,
+          "to_id": 121,
+          "rating": 5.0,
+          "date": "2016-04-25"
+        }
+      ]
+    },
+    "n_model_runs": 363
+  },
+  "test": {
+    "p0": 0.5628618445645776,
+    "del_A": {
+      "p": 0.538189488626964,
+      "p_random": 0.5644035476897334,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.7098242611951205,
+      "p_random": 0.5613651235770158,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.0,
+    "shared_links": []
+  }
+}

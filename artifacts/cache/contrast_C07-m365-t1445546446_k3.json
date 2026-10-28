@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m365-t1445546446",
+  "member": 365,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Perfume: The Story of a Murderer (2006)",
+  "A_id": 3555,
+  "B_id": 6948,
+  "member_id": 365,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 76020,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 325",
+        "from_id": 3555,
+        "to_id": 325,
+        "rating": 4.5,
+        "date": "2015-07-14",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76776,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 62",
+        "from_id": 3555,
+        "to_id": 62,
+        "rating": 5.0,
+        "date": "2015-09-25",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77161,
+        "from": "user 365",
+        "to": "Dark Knight, The (2008)",
+        "from_id": 365,
+        "to_id": 7320,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 3.1973373059066574,
+      "nodes": [
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 62,
+          "name": "user 62"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        },
+        {
+          "eid": 76776,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 62",
+          "from_id": 3555,
+          "to_id": 62,
+          "rating": 5.0,
+          "date": "2015-09-25"
+        }
+      ]
+    },
+    "n_model_runs": 303
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 75691,
+        "from": "Perfume: The Story of a Murderer (2006)",
+        "to": "user 508",
+        "from_id": 6948,
+        "to_id": 508,
+        "rating": 3.0,
+        "date": "2015-07-04",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77164,
+        "from": "user 365",
+        "to": "Love Actually (2003)",
+        "from_id": 365,
+        "to_id": 5254,
+        "rating": 3.5,
+        "date": "2015-10-22",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 77165,
+        "from": "user 365",
+        "to": "Terminator 3: Rise of the Machines (2003)",
+        "from_id": 365,
+        "to_id": 5035,
+        "rating": 3.5,
+        "date": "2015-10-22",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 3.7533240128940712,
+      "nodes": [
+        {
+          "id": 118,
+          "name": "user 118"
+        },
+        {
+          "id": 4248,
+          "name": "Lord of the Rings: The Fellowship of the Ring, The (2001)"
+        },
+        {
+          "id": 508,
+          "name": "user 508"
+        },
+        {
+          "id": 6948,
+          "name": "Perfume: The Story of a Murderer (2006)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 75436,
+          "from": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+          "to": "user 118",
+          "from_id": 4248,
+          "to_id": 118,
+          "rating": 5.0,
+          "date": "2015-07-03"
+        },
+        {
+          "eid": 75480,
+          "from": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+          "to": "user 508",
+          "from_id": 4248,
+          "to_id": 508,
+          "rating": 5.0,
+          "date": "2015-07-04"
+        },
+        {
+          "eid": 75691,
+          "from": "Perfume: The Story of a Murderer (2006)",
+          "to": "user 508",
+          "from_id": 6948,
+          "to_id": 508,
+          "rating": 3.0,
+          "date": "2015-07-04"
+        }
+      ]
+    },
+    "n_model_runs": 296
+  },
+  "test": {
+    "p0": 0.968023022773991,
+    "del_A": {
+      "p": 0.9183081710883049,
+      "p_random": 0.969643532006177,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9958456134759326,
+      "p_random": 0.9668419906903027,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

@@ -1,0 +1,558 @@
+{
+  "created": "2026-10-22T17:17:11-0400",
+  "method": "Production-shaped search pipeline: full-catalog retrieval -> multi-feature learning-to-rank -> SHAP failure triage.\n\nRetrieval (per search, over the full catalog of titles with >= 1 training interaction, minus titles already rated):\n  text      top 150 titles by cosine(query vector, title+genre vector)  (+ top 50 by the query's \"wants\" part when it has a \"not\")\n  personal  top 100 titles by the temporal graph model (TGAT 1-layer) for this member at time t\n  popular   top 50 titles by number of ratings before t\n  -> union (about 250-300 titles). Everything else is ranked below.\nRanker: LightGBM LambdaMART (objective lambdarank, NDCG@10), ~55 features in 5 families (history, popularity, text\nmatch, title content, retrieval). Trained on DEV searches (80% of members), early-stopped on the other 20%, scored ONCE\non FINAL. Compared on the same retrieved candidates with: popularity only, text only, behaviour only, F0 (3 features).\nMetrics over the FULL catalog: NDCG@10 with the ideal computed from every relevant title in the catalog (so a\nrelevant title that retrieval missed counts against the system); retrieval recall; wrong-#1 rate.\nFailure triage: TreeSHAP contributions (exact for tree models, additive per title) summed by feature family; the lead\nof the wrong #1 over the best relevant retrieved title splits exactly into family parts. If no relevant title was\nretrieved at all, the cause is \"retrieval missed it\" (ranking cannot fix it).\n",
+  "n_features": 45,
+  "features": [
+    {
+      "name": "tgat_logit",
+      "family": "history"
+    },
+    {
+      "name": "tgat_rank",
+      "family": "history"
+    },
+    {
+      "name": "bpr_mf_score",
+      "family": "history"
+    },
+    {
+      "name": "sasrec_score",
+      "family": "history"
+    },
+    {
+      "name": "genre_affinity",
+      "family": "history"
+    },
+    {
+      "name": "log_n_history",
+      "family": "history"
+    },
+    {
+      "name": "user_mean_rating",
+      "family": "history"
+    },
+    {
+      "name": "days_since_last_rating",
+      "family": "history"
+    },
+    {
+      "name": "from_personal",
+      "family": "retrieval"
+    },
+    {
+      "name": "log_pop",
+      "family": "popularity"
+    },
+    {
+      "name": "log_pop_365d",
+      "family": "popularity"
+    },
+    {
+      "name": "mean_rating",
+      "family": "popularity"
+    },
+    {
+      "name": "pop_rank",
+      "family": "popularity"
+    },
+    {
+      "name": "from_popular",
+      "family": "retrieval"
+    },
+    {
+      "name": "text_cos",
+      "family": "text"
+    },
+    {
+      "name": "text_cos_wants",
+      "family": "text"
+    },
+    {
+      "name": "text_cos_not",
+      "family": "text"
+    },
+    {
+      "name": "query_has_not",
+      "family": "text"
+    },
+    {
+      "name": "query_specificity",
+      "family": "text"
+    },
+    {
+      "name": "genre_match_max",
+      "family": "text"
+    },
+    {
+      "name": "genre_match_sum",
+      "family": "text"
+    },
+    {
+      "name": "genre_match_not",
+      "family": "text"
+    },
+    {
+      "name": "text_rank",
+      "family": "text"
+    },
+    {
+      "name": "from_text",
+      "family": "retrieval"
+    },
+    {
+      "name": "genre_Action",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Adventure",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Animation",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Children",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Comedy",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Crime",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Documentary",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Drama",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Fantasy",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Film-Noir",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Horror",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Musical",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Mystery",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Romance",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Sci-Fi",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Thriller",
+      "family": "title content"
+    },
+    {
+      "name": "genre_War",
+      "family": "title content"
+    },
+    {
+      "name": "genre_Western",
+      "family": "title content"
+    },
+    {
+      "name": "n_genres",
+      "family": "title content"
+    },
+    {
+      "name": "year",
+      "family": "title content"
+    },
+    {
+      "name": "age_years",
+      "family": "title content"
+    }
+  ],
+  "family_importance": {
+    "text": 0.7833923845193106,
+    "title content": 0.13550652998069612,
+    "popularity": 0.04163306328055568,
+    "retrieval": 0.025612737180038182,
+    "history": 0.013855285039399453
+  },
+  "train": {
+    "train_searches": 2024,
+    "valid_searches": 608,
+    "best_iteration": 36,
+    "valid_ndcg10": 0.8973580341176391,
+    "params": {
+      "objective": "lambdarank",
+      "metric": "ndcg",
+      "eval_at": [
+        10
+      ],
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "min_data_in_leaf": 50,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambdarank_truncation_level": 20,
+      "label_gain": [
+        0,
+        1,
+        3
+      ],
+      "seed": 20261022,
+      "verbose": -1,
+      "num_threads": 2
+    }
+  },
+  "retrieval": {
+    "recall_of_relevant": 0.2323357903657818,
+    "searches_with_a_relevant_title_retrieved": 0.975,
+    "mean_candidates": 279.3891304347826,
+    "catalog_size": 7040,
+    "oracle_ndcg10_on_retrieved": 0.9401547635950207
+  },
+  "final": {
+    "all searches": {
+      "popularity": {
+        "n": 1840,
+        "ndcg10": 0.10906266246548409,
+        "top1_wrong": 0.9732375979112271
+      },
+      "text": {
+        "n": 1840,
+        "ndcg10": 0.5949124746427175,
+        "top1_wrong": 0.3629242819843342
+      },
+      "behaviour": {
+        "n": 1840,
+        "ndcg10": 0.14180656315463477,
+        "top1_wrong": 0.7813315926892951
+      },
+      "F0": {
+        "n": 1840,
+        "ndcg10": 0.5586232595537083,
+        "top1_wrong": 0.2454308093994778
+      },
+      "LambdaMART": {
+        "n": 1840,
+        "ndcg10": 0.7154176316529052,
+        "top1_wrong": 0.10182767624020887,
+        "delta_vs_F0": 0.15679437209919697,
+        "ci95": [
+          0.14822209488205648,
+          0.16667461336852096
+        ]
+      }
+    },
+    "searches that name what they want": {
+      "popularity": {
+        "n": 624,
+        "ndcg10": 0.06997020544051043,
+        "top1_wrong": 0.9663461538461539
+      },
+      "text": {
+        "n": 624,
+        "ndcg10": 0.7775070061005483,
+        "top1_wrong": 0.3701923076923077
+      },
+      "behaviour": {
+        "n": 624,
+        "ndcg10": 0.12958134301783047,
+        "top1_wrong": 0.8108974358974359
+      },
+      "F0": {
+        "n": 624,
+        "ndcg10": 0.7220209444372591,
+        "top1_wrong": 0.2532051282051282
+      },
+      "LambdaMART": {
+        "n": 624,
+        "ndcg10": 0.8885748065835108,
+        "top1_wrong": 0.0,
+        "delta_vs_F0": 0.16655386214625184,
+        "ci95": [
+          0.16157761275855465,
+          0.1716790475545886
+        ]
+      }
+    },
+    "vague searches": {
+      "popularity": {
+        "n": 308,
+        "ndcg10": 0.20739561338394458,
+        "top1_wrong": null
+      },
+      "text": {
+        "n": 308,
+        "ndcg10": 0.004799658795956253,
+        "top1_wrong": null
+      },
+      "behaviour": {
+        "n": 308,
+        "ndcg10": 0.14853240250485616,
+        "top1_wrong": null
+      },
+      "F0": {
+        "n": 308,
+        "ndcg10": 0.042873507781210386,
+        "top1_wrong": null
+      },
+      "LambdaMART": {
+        "n": 308,
+        "ndcg10": 0.2405898921850407,
+        "top1_wrong": null,
+        "delta_vs_F0": 0.1977163844038303,
+        "ci95": [
+          0.14128080677946322,
+          0.2571038989260853
+        ]
+      }
+    },
+    "searches with \u201cnot / nothing\u201d": {
+      "popularity": {
+        "n": 234,
+        "ndcg10": 0.020847352208636122,
+        "top1_wrong": 1.0
+      },
+      "text": {
+        "n": 234,
+        "ndcg10": 0.4895563885319962,
+        "top1_wrong": 0.9871794871794872
+      },
+      "behaviour": {
+        "n": 234,
+        "ndcg10": 0.13389070124236685,
+        "top1_wrong": 0.7735042735042735
+      },
+      "F0": {
+        "n": 234,
+        "ndcg10": 0.634631987523566,
+        "top1_wrong": 0.33760683760683763
+      },
+      "LambdaMART": {
+        "n": 234,
+        "ndcg10": 0.8896134068423629,
+        "top1_wrong": 0.0,
+        "delta_vs_F0": 0.2549814193187968,
+        "ci95": [
+          0.24819305124839153,
+          0.2628786592710351
+        ]
+      }
+    },
+    "new members (1\u20134 ratings)": {
+      "popularity": {
+        "n": 440,
+        "ndcg10": 0.058901483012831914,
+        "top1_wrong": 1.0
+      },
+      "text": {
+        "n": 440,
+        "ndcg10": 0.7767508813849713,
+        "top1_wrong": 0.375
+      },
+      "behaviour": {
+        "n": 440,
+        "ndcg10": 0.12052794935252742,
+        "top1_wrong": 0.7477272727272727
+      },
+      "F0": {
+        "n": 440,
+        "ndcg10": 0.7122563155038488,
+        "top1_wrong": 0.25
+      },
+      "LambdaMART": {
+        "n": 440,
+        "ndcg10": 0.9072024501125678,
+        "top1_wrong": 0.0,
+        "delta_vs_F0": 0.1949461346087192,
+        "ci95": [
+          0.19072078546619015,
+          0.1991881997166501
+        ]
+      }
+    },
+    "chat-style requests": {
+      "popularity": {
+        "n": 468,
+        "ndcg10": 0.14363117370451117,
+        "top1_wrong": 0.9572649572649573
+      },
+      "text": {
+        "n": 468,
+        "ndcg10": 0.5688587581566581,
+        "top1_wrong": 0.3418803418803419
+      },
+      "behaviour": {
+        "n": 468,
+        "ndcg10": 0.17368598392049997,
+        "top1_wrong": 0.7735042735042735
+      },
+      "F0": {
+        "n": 468,
+        "ndcg10": 0.5357433953668104,
+        "top1_wrong": 0.23076923076923078
+      },
+      "LambdaMART": {
+        "n": 468,
+        "ndcg10": 0.6167243548946846,
+        "top1_wrong": 0.3333333333333333,
+        "delta_vs_F0": 0.08098095952787417,
+        "ci95": [
+          0.0742545140271771,
+          0.08905009351754614
+        ]
+      }
+    }
+  },
+  "final_searches": 1840,
+  "caveat": "Explicit-query relevance is judged by a written rule over genres (+ tags). LambdaMART sees genres and how strongly the query names each genre, so on explicit queries it can learn much of the rule itself; those gains overstate what it would achieve against human judgments. Vague-search relevance (what the member actually rated 4+ later) has no such overlap.",
+  "triage": {
+    "explicit_searches": 1532,
+    "failed": 156,
+    "fail_rate": 0.10182767624020887,
+    "causes": {
+      "text": {
+        "n": 153,
+        "share": 0.9807692307692307,
+        "top_features": [
+          [
+            "text_cos_wants",
+            127
+          ],
+          [
+            "genre_match_sum",
+            85
+          ],
+          [
+            "genre_Comedy",
+            78
+          ],
+          [
+            "genre_match_max",
+            64
+          ],
+          [
+            "mean_rating",
+            35
+          ]
+        ],
+        "examples": [
+          {
+            "case_id": "C03-m595-t1535627189",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+            "B_title": "True Lies (1994)",
+            "rank_B": 75
+          },
+          {
+            "case_id": "C03-m305-t1518327186",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Star Wars: Episode IV - A New Hope (1977)",
+            "B_title": "Seeking a Friend for the End of the World (2012)",
+            "rank_B": 69
+          },
+          {
+            "case_id": "C03-m609-t1479542662",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+            "B_title": "Seeking a Friend for the End of the World (2012)",
+            "rank_B": 31
+          },
+          {
+            "case_id": "C03-m327-t1494206980",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+            "B_title": "Amelie (Fabuleux destin d'Am\u00e9lie Poulain, Le) (2001)",
+            "rank_B": 19
+          },
+          {
+            "case_id": "C03-m516-t1487953028",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+            "B_title": "Amelie (Fabuleux destin d'Am\u00e9lie Poulain, Le) (2001)",
+            "rank_B": 21
+          },
+          {
+            "case_id": "C03-m412-t1484439570",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+            "B_title": "Amelie (Fabuleux destin d'Am\u00e9lie Poulain, Le) (2001)",
+            "rank_B": 21
+          }
+        ]
+      },
+      "title content": {
+        "n": 3,
+        "share": 0.019230769230769232,
+        "top_features": [
+          [
+            "year",
+            3
+          ],
+          [
+            "query_specificity",
+            3
+          ],
+          [
+            "mean_rating",
+            2
+          ],
+          [
+            "log_pop",
+            1
+          ]
+        ],
+        "examples": [
+          {
+            "case_id": "C03-m458-t1520233059",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Shawshank Redemption, The (1994)",
+            "B_title": "Seeking a Friend for the End of the World (2012)",
+            "rank_B": 29
+          },
+          {
+            "case_id": "C03-m338-t1481945279",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Thank You for Smoking (2006)",
+            "B_title": "Scott Pilgrim vs. the World (2010)",
+            "rank_B": 14
+          },
+          {
+            "case_id": "C03-m67-t1526947535",
+            "query": "date night tonight, something romantic but not a tearjerker",
+            "group": "conversational",
+            "A_title": "Tekkonkinkreet (Tekkon kinkur\u00eeto) (2006)",
+            "B_title": "Seeking a Friend for the End of the World (2012)",
+            "rank_B": 8
+          }
+        ]
+      }
+    }
+  },
+  "model_sha": "91367b4fbec47b41",
+  "wall_s": 85.9
+}

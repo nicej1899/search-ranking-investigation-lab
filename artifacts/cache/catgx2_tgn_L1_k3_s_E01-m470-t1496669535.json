@@ -1,0 +1,197 @@
+{
+  "method": "CATGX",
+  "backbone": "tgn",
+  "L": 1,
+  "k_edges": 8,
+  "K": 3,
+  "N": 40,
+  "alpha": 3,
+  "exact": false,
+  "stage1": {
+    "mode": "HNSW retrieval + stratified sampling",
+    "retrieved_occurrences": 10,
+    "N_per_motif": 40,
+    "alpha": 3
+  },
+  "g": "memory-state change of u, A, B when the occurrence's edges are removed (TGN)",
+  "n_edges": 6,
+  "n_nodes": 9,
+  "occurrences_total": 10,
+  "occurrences_used": 10,
+  "codebook_TM": {
+    "SEQ": 10.0
+  },
+  "n_cells": 1,
+  "S": {
+    "SEQ": 0.0,
+    "CO": null,
+    "BRIDGE": null,
+    "BRIDGEB": null,
+    "POP": null
+  },
+  "terms": {
+    "SEQ": [
+      {
+        "cell": [
+          9,
+          1,
+          2
+        ],
+        "omega": 1.0,
+        "mu": 0.37104411125183107,
+        "mu_base": 0.37104411125183107,
+        "n": 10
+      }
+    ]
+  },
+  "selected_motifs": [
+    "SEQ"
+  ],
+  "G_star": [
+    90708,
+    90709,
+    90710,
+    90711,
+    90712
+  ],
+  "G_star_occurrences": [
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2340,
+        5945
+      ],
+      "eids": [
+        90711,
+        90712
+      ],
+      "g": 1.0381126403808594,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        8412,
+        5945
+      ],
+      "eids": [
+        90709,
+        90712
+      ],
+      "g": 0.8907761573791504,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2836,
+        5945
+      ],
+      "eids": [
+        90708,
+        90712
+      ],
+      "g": 0.8907761573791504,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        7982,
+        5945
+      ],
+      "eids": [
+        90710,
+        90712
+      ],
+      "g": 0.8907761573791504,
+      "w": 1.0,
+      "touches_u": true
+    }
+  ],
+  "occurrences_by_motif_exact": {
+    "SEQ": 10,
+    "CO": 0,
+    "BRIDGE": 0,
+    "BRIDGEB": 0,
+    "POP": 0
+  },
+  "margin_full": 3.3685230016708374,
+  "margin_only": 3.2521674633026123,
+  "margin_without": 1.1104721128940582,
+  "temperature": 0.7198237026274322,
+  "prob_full": 0.9908031060193063,
+  "fid_plus": -0.0015961093744270016,
+  "fid_minus": 0.16694620547726224,
+  "flipped": false,
+  "coverage": 1.0,
+  "n_model_inferences": 13,
+  "motif_names": {
+    "SEQ": "a person watched two movies in a row",
+    "CO": "two people rated the same movie",
+    "BRIDGE": "a path of shared taste that ends at A",
+    "BRIDGEB": "a path of shared taste that ends at B",
+    "POP": "several people rated A"
+  },
+  "motif_cards": [
+    {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "S": 0.0,
+      "lift": 1.0,
+      "est_count": 10.0,
+      "n_scored": 10,
+      "example": {
+        "nodes": [
+          470,
+          2340,
+          5945
+        ],
+        "eids": [
+          90711,
+          90712
+        ],
+        "ts": [
+          1496668940,
+          1496668982
+        ],
+        "g": 1.0381126403808594,
+        "involves_u": true
+      }
+    }
+  ],
+  "latency_ms": {
+    "enumerate_window": 0.1,
+    "stage1": 1.8,
+    "g": 39.5,
+    "total": 53.7
+  },
+  "meta": {
+    "5945": {
+      "type": "movie",
+      "label": "Horror",
+      "title": "Shaun of the Dead (2004)",
+      "genres": "Comedy|Horror"
+    },
+    "2340": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+      "genres": "Comedy|Drama|Romance|War"
+    },
+    "470": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 470"
+    }
+  },
+  "computed_at": "2026-10-22T16:18:59-0400",
+  "code_version": "1040bccffef1"
+}

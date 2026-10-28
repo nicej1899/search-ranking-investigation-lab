@@ -1,0 +1,36 @@
+{
+  "weights": [
+    0.14982351660728455,
+    1.0353513956069946,
+    0.2724309265613556
+  ],
+  "norm": {
+    "beh": [
+      -7.569419680156213,
+      8.988431676984119
+    ],
+    "rel": [
+      0.6239212372656334,
+      0.12431915145456685
+    ],
+    "pop": [
+      2.222536935833016,
+      1.2050443977192657
+    ],
+    "fit_on": "DEV candidate sets (1268 cases)"
+  },
+  "backbone_sha256": "1d01889bb959b06c",
+  "dev_cases_hash": "c5a36e90840ea79b",
+  "fit": "pairwise logistic (LBFGS), mean over pairs within a case then over cases, L2=1e-3, DEV cases only",
+  "seed": 20261022,
+  "model_id": "Fctrl",
+  "kind": "Fctrl",
+  "parent": "F0",
+  "dev_loss": 0.5333482623100281,
+  "dev_pairs": 238869,
+  "changed_mechanism": "query-independent multiplier on behaviour (ablation)",
+  "created": "2026-10-21T21:52:55-0400",
+  "description": "c",
+  "c": 0.781877875328064,
+  "config_hash": "3d472593b4beda71"
+}

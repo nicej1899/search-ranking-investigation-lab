@@ -1,0 +1,836 @@
+{
+  "method": "CATGX",
+  "backbone": "tgat1",
+  "L": 2,
+  "k_edges": 8,
+  "K": 3,
+  "N": 40,
+  "alpha": 3,
+  "exact": false,
+  "stage1": {
+    "mode": "HNSW retrieval + stratified sampling",
+    "retrieved_occurrences": 300,
+    "N_per_motif": 40,
+    "alpha": 3
+  },
+  "g": "attention mass of the occurrence's edges in the computation of u, A, B (TGAT)",
+  "n_edges": 52,
+  "n_nodes": 37,
+  "occurrences_total": 300,
+  "occurrences_used": 94,
+  "codebook_TM": {
+    "SEQ": 122.00000000000003,
+    "CO": 166.0,
+    "BRIDGE": 12.0
+  },
+  "n_cells": 34,
+  "S": {
+    "SEQ": -0.014859982853134474,
+    "CO": 0.0044504746297995244,
+    "BRIDGE": 0.0,
+    "BRIDGEB": null,
+    "POP": null
+  },
+  "terms": {
+    "SEQ": [
+      {
+        "cell": [
+          9,
+          1,
+          2
+        ],
+        "omega": 0.03333333333333333,
+        "mu": 0.2216192235549291,
+        "mu_base": 0.2216192235549291,
+        "n": 3
+      },
+      {
+        "cell": [
+          4,
+          1,
+          2
+        ],
+        "omega": 0.01,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          4,
+          4,
+          2
+        ],
+        "omega": 0.016666666666666666,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          5,
+          5,
+          2
+        ],
+        "omega": 0.07333333333333333,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 5
+      },
+      {
+        "cell": [
+          9,
+          6,
+          2
+        ],
+        "omega": 0.03,
+        "mu": 0.0,
+        "mu_base": 0.4356095658408271,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          2,
+          2
+        ],
+        "omega": 0.016666666666666666,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          5,
+          4,
+          2
+        ],
+        "omega": 0.07333333333333333,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 5
+      },
+      {
+        "cell": [
+          9,
+          5,
+          2
+        ],
+        "omega": 0.023333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0767869661961283,
+        "n": 1
+      },
+      {
+        "cell": [
+          5,
+          1,
+          2
+        ],
+        "omega": 0.12666666666666668,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 9
+      },
+      {
+        "cell": [
+          9,
+          4,
+          2
+        ],
+        "omega": 0.03,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 3
+      },
+      {
+        "cell": [
+          3,
+          1,
+          2
+        ],
+        "omega": 0.03,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 3
+      },
+      {
+        "cell": [
+          1,
+          1,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 3
+      },
+      {
+        "cell": [
+          4,
+          8,
+          2
+        ],
+        "omega": 0.04,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      }
+    ],
+    "CO": [
+      {
+        "cell": [
+          4,
+          4,
+          2
+        ],
+        "omega": 0.016666666666666666,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          5,
+          5,
+          2
+        ],
+        "omega": 0.07333333333333333,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          9,
+          6,
+          2
+        ],
+        "omega": 0.03,
+        "mu": 0.5600694417953491,
+        "mu_base": 0.4356095658408271,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          2,
+          2
+        ],
+        "omega": 0.016666666666666666,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          5,
+          4,
+          2
+        ],
+        "omega": 0.07333333333333333,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          9,
+          5,
+          2
+        ],
+        "omega": 0.023333333333333334,
+        "mu": 0.10750175267457962,
+        "mu_base": 0.0767869661961283,
+        "n": 1
+      },
+      {
+        "cell": [
+          5,
+          1,
+          2
+        ],
+        "omega": 0.12666666666666668,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          1,
+          1,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          8,
+          2
+        ],
+        "omega": 0.04,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          3,
+          5,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          1,
+          7,
+          2
+        ],
+        "omega": 0.03,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 3
+      },
+      {
+        "cell": [
+          2,
+          8,
+          2
+        ],
+        "omega": 0.03666666666666667,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          3,
+          9,
+          2
+        ],
+        "omega": 0.013333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          9,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          9,
+          9,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.12508887549241385,
+        "mu_base": 0.12508887549241385,
+        "n": 2
+      },
+      {
+        "cell": [
+          3,
+          8,
+          2
+        ],
+        "omega": 0.02666666666666667,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          3,
+          6,
+          2
+        ],
+        "omega": 0.016666666666666666,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 3
+      },
+      {
+        "cell": [
+          9,
+          8,
+          2
+        ],
+        "omega": 0.02666666666666667,
+        "mu": 0.08849881589412689,
+        "mu_base": 0.08849881589412689,
+        "n": 2
+      },
+      {
+        "cell": [
+          3,
+          7,
+          2
+        ],
+        "omega": 0.013333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          6,
+          2
+        ],
+        "omega": 0.07333333333333333,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          9,
+          7,
+          2
+        ],
+        "omega": 0.03666666666666667,
+        "mu": 0.10750175267457962,
+        "mu_base": 0.10750175267457962,
+        "n": 1
+      },
+      {
+        "cell": [
+          3,
+          4,
+          2
+        ],
+        "omega": 0.01,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          5,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          3,
+          2
+        ],
+        "omega": 0.023333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          4,
+          7,
+          2
+        ],
+        "omega": 0.023333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          5,
+          7,
+          2
+        ],
+        "omega": 0.013333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          5,
+          6,
+          2
+        ],
+        "omega": 0.023333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          5,
+          3,
+          2
+        ],
+        "omega": 0.013333333333333334,
+        "mu": 0.026875438168644905,
+        "mu_base": 0.026875438168644905,
+        "n": 2
+      },
+      {
+        "cell": [
+          1,
+          6,
+          0
+        ],
+        "omega": 0.0033333333333333335,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          7,
+          5,
+          2
+        ],
+        "omega": 0.013333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      }
+    ],
+    "BRIDGE": [
+      {
+        "cell": [
+          4,
+          8,
+          2
+        ],
+        "omega": 0.04,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          4,
+          9,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 2
+      },
+      {
+        "cell": [
+          4,
+          6,
+          2
+        ],
+        "omega": 0.07333333333333333,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 4
+      },
+      {
+        "cell": [
+          4,
+          5,
+          2
+        ],
+        "omega": 0.02,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 1
+      },
+      {
+        "cell": [
+          4,
+          7,
+          2
+        ],
+        "omega": 0.023333333333333334,
+        "mu": 0.0,
+        "mu_base": 0.0,
+        "n": 3
+      }
+    ]
+  },
+  "selected_motifs": [
+    "SEQ",
+    "CO",
+    "BRIDGE"
+  ],
+  "G_star": [
+    84919,
+    87236,
+    88051,
+    90708,
+    90709,
+    90710,
+    90711,
+    90712
+  ],
+  "G_star_occurrences": [
+    {
+      "motif": "CO",
+      "nodes": [
+        379,
+        7982,
+        470
+      ],
+      "eids": [
+        88051,
+        90710
+      ],
+      "g": 0.5600694417953491,
+      "w": 7.0,
+      "touches_u": true
+    },
+    {
+      "motif": "CO",
+      "nodes": [
+        211,
+        2836,
+        470
+      ],
+      "eids": [
+        87236,
+        90708
+      ],
+      "g": 0.10750175267457962,
+      "w": 11.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        8412,
+        2340
+      ],
+      "eids": [
+        90709,
+        90711
+      ],
+      "g": 0.2785395681858063,
+      "w": 3.3333333333333335,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        8412,
+        5945
+      ],
+      "eids": [
+        90709,
+        90712
+      ],
+      "g": 0.21443041414022446,
+      "w": 3.3333333333333335,
+      "touches_u": true
+    },
+    {
+      "motif": "CO",
+      "nodes": [
+        524,
+        2340,
+        470
+      ],
+      "eids": [
+        84919,
+        90711
+      ],
+      "g": 0.11799842119216919,
+      "w": 6.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2340,
+        5945
+      ],
+      "eids": [
+        90711,
+        90712
+      ],
+      "g": 0.17188768833875656,
+      "w": 3.3333333333333335,
+      "touches_u": true
+    }
+  ],
+  "occurrences_by_motif_exact": {
+    "SEQ": 122,
+    "CO": 166,
+    "BRIDGE": 12,
+    "BRIDGEB": 0,
+    "POP": 0
+  },
+  "margin_full": 18.168336868286133,
+  "margin_only": 18.168336868286133,
+  "margin_without": 0.045664310455322266,
+  "temperature": 2.5308195466025984,
+  "prob_full": 0.9992380256251758,
+  "fid_plus": 0.0,
+  "fid_minus": 0.49472732555540544,
+  "flipped": false,
+  "coverage": 0.043333333333333335,
+  "n_model_inferences": 4,
+  "motif_names": {
+    "SEQ": "a person watched two movies in a row",
+    "CO": "two people rated the same movie",
+    "BRIDGE": "a path of shared taste that ends at A",
+    "BRIDGEB": "a path of shared taste that ends at B",
+    "POP": "several people rated A"
+  },
+  "motif_cards": [
+    {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "S": -0.014859982853134474,
+      "lift": 0.3320542569708893,
+      "est_count": 122.00000000000003,
+      "n_scored": 39,
+      "example": {
+        "nodes": [
+          470,
+          8412,
+          2340
+        ],
+        "eids": [
+          90709,
+          90711
+        ],
+        "ts": [
+          1496668933,
+          1496668940
+        ],
+        "g": 0.2785395681858063,
+        "involves_u": true
+      }
+    },
+    {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "S": 0.0044504746297995244,
+      "lift": 1.1852681661965982,
+      "est_count": 166.0,
+      "n_scored": 43,
+      "example": {
+        "nodes": [
+          379,
+          7982,
+          470
+        ],
+        "eids": [
+          88051,
+          90710
+        ],
+        "ts": [
+          1493420401,
+          1496668936
+        ],
+        "g": 0.5600694417953491,
+        "involves_u": true
+      }
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "S": 0.0,
+      "lift": null,
+      "est_count": 12.0,
+      "n_scored": 12,
+      "example": {
+        "nodes": [
+          211,
+          5945,
+          379,
+          3761
+        ],
+        "eids": [
+          87258,
+          88011,
+          90118
+        ],
+        "ts": [
+          1490115069,
+          1493420010,
+          1494613279
+        ],
+        "g": 0.0,
+        "involves_u": false
+      }
+    }
+  ],
+  "latency_ms": {
+    "enumerate_window": 0.6,
+    "stage1": 7.3,
+    "g": 2.7,
+    "total": 17.9
+  },
+  "meta": {
+    "2340": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+      "genres": "Comedy|Drama|Romance|War"
+    },
+    "7982": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Inception (2010)",
+      "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX"
+    },
+    "3761": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Along Came a Spider (2001)",
+      "genres": "Action|Crime|Mystery|Thriller"
+    },
+    "211": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 211"
+    },
+    "470": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 470"
+    },
+    "5945": {
+      "type": "movie",
+      "label": "Horror",
+      "title": "Shaun of the Dead (2004)",
+      "genres": "Comedy|Horror"
+    },
+    "379": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 379"
+    },
+    "8412": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Intouchables (2011)",
+      "genres": "Comedy|Drama"
+    }
+  },
+  "computed_at": "2026-10-22T16:20:14-0400",
+  "code_version": "1040bccffef1"
+}

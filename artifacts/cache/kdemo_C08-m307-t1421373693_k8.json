@@ -1,0 +1,661 @@
+{
+  "case_id": "C08-m307-t1421373693",
+  "k": 8,
+  "member": 307,
+  "joint": {
+    "lines": [
+      "TemGX: 1 of the 7 ratings are recent ratings of Ice Age 2: The Meltdown by other people; 1 of them is part of a pattern CATGX finds.",
+      "TemGX: 5 are the member's own recent ratings (Star Wars: Episode IV - A New Hope, Schindler's List, Raiders of the Lost Ark), shared with people who also rated Ice Age 2: The Meltdown.",
+      "CATGX: \u201cTwo people rated the same movie\u201d looked 1.4\u00d7 but is 0.6\u00d7 after matching: most of its weight was timing and activity.",
+      "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
+      "Ranker: Ice Age 2: The Meltdown beats The Cable Guy mainly through matching the words of the request (+0.43); the history part adds +0.11."
+    ],
+    "verdict": "Diagnosis: Ice Age 2: The Meltdown wins mainly through matching the words of the request, and the history model adds to it through recent fans of Ice Age 2: The Meltdown and the member's ratings of Star Wars: Episode IV - A New Hope, Schindler's List. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      72451,
+      73004
+    ]
+  },
+  "score_split": {
+    "relevance": 0.4329378009433713,
+    "popularity": -0.2988165156867142,
+    "behaviour": 0.10575606217655742
+  },
+  "A": "Ice Age 2: The Meltdown",
+  "B": "The Cable Guy",
+  "query": "a comedy for grown-ups, not a kids movie",
+  "p0": 0.8796021586855514,
+  "evidence": [
+    {
+      "eid": 72451,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 248",
+      "to": "Ice Age 2: The Meltdown",
+      "from_id": 248,
+      "to_id": 6759,
+      "rating": 3.5,
+      "date": "Nov 8, 2014",
+      "days_before": 69,
+      "p_without": 0.8725396941583067,
+      "drop": 0.007062464527244683,
+      "score": {
+        "influence": 0.007062483818265353,
+        "connectedness": 0.582987552975832,
+        "recency": 0.8891157336941391,
+        "phi": 0.0036607919164638194
+      },
+      "why": "User 248 rated Ice Age 2: The Meltdown 3.5\u2605 on Nov 8, 2014, 69 days before the search. The graph model builds Ice Age 2: The Meltdown's profile from its recent raters, weighting recent ones more, so this rating makes Ice Age 2: The Meltdown look current. Removing only this rating: 88% \u2192 87% (\u22120.7 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.1513781311316016,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 73004,
+      "n": 2,
+      "kind": "own",
+      "from": "user 307",
+      "to": "Star Wars: Episode IV - A New Hope",
+      "from_id": 307,
+      "to_id": 834,
+      "rating": 2.5,
+      "date": "Jan 16, 2015",
+      "days_before": 0,
+      "p_without": 0.8762246486167059,
+      "drop": 0.0033775100688454573,
+      "score": {
+        "influence": 0.003377529359866127,
+        "connectedness": 0.7494860706775015,
+        "recency": 0.9511753482542948,
+        "phi": 0.0024078159378426037
+      },
+      "why": "Member 307 rated Star Wars: Episode IV - A New Hope 2.5\u2605 on Jan 16, 2015, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Ice Age 2: The Meltdown. Removing only this rating: 88% \u2192 88% (\u22120.3 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.5661923540552064,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72633,
+      "n": 3,
+      "kind": "other",
+      "from": "user 482",
+      "to": "Schindler's List",
+      "from_id": 482,
+      "to_id": 1071,
+      "rating": 5.0,
+      "date": "Nov 10, 2014",
+      "days_before": 67,
+      "p_without": 0.8776516198422142,
+      "drop": 0.0019505388433371795,
+      "score": {
+        "influence": 8.0204408583473e-06,
+        "connectedness": 0.4268095432480098,
+        "recency": 0.8321502258695512,
+        "phi": 2.8486172352015893e-06
+      },
+      "why": "User 482 rated Schindler's List 5\u2605 on Nov 10, 2014. It reaches the decision through the graph: it changes how Schindler's List and its raters are represented, which feeds into member 307 or Ice Age 2: The Meltdown. Removing only this rating: 88% \u2192 88% (\u22120.2 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.5661923540552064,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 73008,
+      "n": 4,
+      "kind": "own",
+      "from": "user 307",
+      "to": "Schindler's List",
+      "from_id": 307,
+      "to_id": 1071,
+      "rating": 1.0,
+      "date": "Jan 16, 2015",
+      "days_before": 0,
+      "p_without": 0.8837140476599453,
+      "drop": -0.004111888974393962,
+      "score": {
+        "influence": 0.004114101056928776,
+        "connectedness": 0.732107471367752,
+        "recency": 0.6579487938028834,
+        "phi": 0.0019817181608760798
+      },
+      "why": "Member 307 rated Schindler's List 1\u2605 on Jan 16, 2015, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Ice Age 2: The Meltdown. Removing only this rating: 88% \u2192 88% (+0.4 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.1513781311316016,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.5661923540552064,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 73006,
+      "n": 5,
+      "kind": "own",
+      "from": "user 307",
+      "to": "Raiders of the Lost Ark",
+      "from_id": 307,
+      "to_id": 1510,
+      "rating": 1.0,
+      "date": "Jan 16, 2015",
+      "days_before": 0,
+      "p_without": 0.8776241939648585,
+      "drop": 0.001977964720692893,
+      "score": {
+        "influence": 0.001978913773854951,
+        "connectedness": 0.7494860706775013,
+        "recency": 0.7556368566827057,
+        "phi": 0.0011207366386238743
+      },
+      "why": "Member 307 rated Raiders of the Lost Ark 1\u2605 on Jan 16, 2015, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Ice Age 2: The Meltdown. Removing only this rating: 88% \u2192 88% (\u22120.2 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.5661923540552064,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 73005,
+      "n": 6,
+      "kind": "own",
+      "from": "user 307",
+      "to": "Star Wars: Episode V - The Empire Strikes Back",
+      "from_id": 307,
+      "to_id": 1508,
+      "rating": 2.5,
+      "date": "Jan 16, 2015",
+      "days_before": 0,
+      "p_without": 0.8811472442137095,
+      "drop": -0.00154508552815813,
+      "score": {
+        "influence": 0.0015450662371374602,
+        "connectedness": 0.7033461220346624,
+        "recency": 0.7833248338414053,
+        "phi": 0.0008512519013020888
+      },
+      "why": "Member 307 rated Star Wars: Episode V - The Empire Strikes Back 2.5\u2605 on Jan 16, 2015, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Ice Age 2: The Meltdown. Removing only this rating: 88% \u2192 88% (+0.2 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.1513781311316016,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.5661923540552064,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 73007,
+      "n": 7,
+      "kind": "own",
+      "from": "user 307",
+      "to": "The Shawshank Redemption",
+      "from_id": 307,
+      "to_id": 887,
+      "rating": 1.0,
+      "date": "Jan 16, 2015",
+      "days_before": 0,
+      "p_without": 0.8790535848462913,
+      "drop": 0.0005485738392601025,
+      "score": {
+        "influence": 0.0005485931302807723,
+        "connectedness": 0.7321074713677527,
+        "recency": 0.6768829030355509,
+        "phi": 0.0002718558910651638
+      },
+      "why": "Member 307 rated The Shawshank Redemption 1\u2605 on Jan 16, 2015, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Ice Age 2: The Meltdown. Removing only this rating: 88% \u2192 88% (\u22120.1 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.1513781311316016,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.5661923540552064,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.8725396941583067,
+      "rand_mean": 0.8798212161430199,
+      "rand_lo": 0.8793013579535832,
+      "rand_hi": 0.8808367606968113,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.8690882699230517,
+      "rand_mean": 0.8799904694561606,
+      "rand_lo": 0.8777170305234772,
+      "rand_hi": 0.8837140476599453,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.8665149869463021,
+      "rand_mean": 0.8799979901660783,
+      "rand_lo": 0.8776241939648585,
+      "rand_hi": 0.8838188498616265,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.8737678529940259,
+      "rand_mean": 0.8790028581786552,
+      "rand_lo": 0.8770928319135484,
+      "rand_hi": 0.8811322909739777,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.8707820121167701,
+      "rand_mean": 0.8796283733886909,
+      "rand_lo": 0.877705595414055,
+      "rand_hi": 0.8812283931830416,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.8730757651817,
+      "rand_mean": 0.8788798231973924,
+      "rand_lo": 0.8779337280224518,
+      "rand_hi": 0.8800273776115273,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 7,
+      "p": 0.6593800260431842,
+      "rand_mean": 0.8790332431725549,
+      "rand_lo": 0.8782307254513906,
+      "rand_hi": 0.8803623245959581,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.6593800260431842,
+    "rand_mean": 0.8790332431725549,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.8792583169559364,
+      0.879120887800471,
+      0.8789842344454648,
+      0.8803623245959581,
+      0.8789305127613095,
+      0.8788260338610909,
+      0.8784216595777549,
+      0.879120887800471,
+      0.879120887800471,
+      0.879120887800471,
+      0.8789842344454648,
+      0.879120887800471,
+      0.8789842344454648,
+      0.8792583169559364,
+      0.879120887800471,
+      0.8788260338610909,
+      0.8789842344454648,
+      0.8792583169559364,
+      0.8788260338610909,
+      0.879120887800471,
+      0.879120887800471,
+      0.8796504936098904,
+      0.8785568780388845,
+      0.879120887800471,
+      0.8782307254513906,
+      0.879120887800471,
+      0.8788260338610909,
+      0.8784216595777549,
+      0.8792583169559364,
+      0.8792583169559364,
+      0.8787723874734994,
+      0.8788260338610909,
+      0.879120887800471,
+      0.879120887800471,
+      0.879120887800471,
+      0.8792583169559364,
+      0.879120887800471,
+      0.879120887800471,
+      0.879120887800471,
+      0.879120887800471,
+      0.8784216595777549,
+      0.8782307254513906,
+      0.879120887800471,
+      0.8789842344454648,
+      0.8792583169559364,
+      0.879120887800471,
+      0.879120887800471,
+      0.879120887800471,
+      0.8803623245959581,
+      0.879120887800471,
+      0.8803623245959581,
+      0.8792583169559364,
+      0.879120887800471,
+      0.879120887800471,
+      0.8788260338610909,
+      0.8782307254513906,
+      0.8784216595777549,
+      0.8782307449317319,
+      0.879120887800471,
+      0.8784216790317796
+    ],
+    "flips": false
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 2,
+    "B_after": 2,
+    "top3_after": [
+      "Ice Age 2: The Meltdown (2006)",
+      "Cable Guy, The (1996)",
+      "Santa Clause, The (1994)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 482,
+        "name": "user 482",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 834,
+        "name": "Star Wars: Episode IV - A New Hope",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 1508,
+        "name": "Star Wars: Episode V - The Empire Strikes Back",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 1510,
+        "name": "Raiders of the Lost Ark",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 6759,
+        "name": "Ice Age 2: The Meltdown",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 1229,
+        "name": "The Cable Guy",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 1071,
+        "name": "Schindler's List",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 307,
+        "name": "user 307",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 887,
+        "name": "The Shawshank Redemption",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 248,
+        "name": "user 248",
+        "type": "user",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 72451,
+        "s": 6759,
+        "t": 248,
+        "rating": 3.5,
+        "date": "Nov 8, 2014",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 72633,
+        "s": 1071,
+        "t": 482,
+        "rating": 5.0,
+        "date": "Nov 10, 2014",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 73004,
+        "s": 307,
+        "t": 834,
+        "rating": 2.5,
+        "date": "Jan 16, 2015",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 73005,
+        "s": 307,
+        "t": 1508,
+        "rating": 2.5,
+        "date": "Jan 16, 2015",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 73006,
+        "s": 307,
+        "t": 1510,
+        "rating": 1.0,
+        "date": "Jan 16, 2015",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 73007,
+        "s": 307,
+        "t": 887,
+        "rating": 1.0,
+        "date": "Jan 16, 2015",
+        "expl": true,
+        "n": 7
+      },
+      {
+        "eid": 73008,
+        "s": 307,
+        "t": 1071,
+        "rating": 1.0,
+        "date": "Jan 16, 2015",
+        "expl": true,
+        "n": 4
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.9231578112869622,
+      "adjusted": 1.1513781311316016,
+      "graph": {
+        "nodes": [
+          {
+            "id": 248,
+            "name": "user 248",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 2805,
+            "name": "Ferris Bueller's Day Off",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 6759,
+            "name": "Ice Age 2: The Meltdown",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 72451,
+            "s": 6759,
+            "t": 248,
+            "rating": 3.5,
+            "date": "Nov 8, 2014",
+            "in_temgx": true
+          },
+          {
+            "eid": 72713,
+            "s": 248,
+            "t": 2805,
+            "rating": 3.5,
+            "date": "Dec 1, 2014",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [
+        72451
+      ],
+      "S": 0.0003843537785790183,
+      "occurrence": {
+        "eids": [
+          72451,
+          72713
+        ],
+        "nodes": [
+          "user 248",
+          "Ice Age 2: The Meltdown",
+          "Ferris Bueller's Day Off"
+        ],
+        "dates": [
+          "Nov 8, 2014",
+          "Dec 1, 2014"
+        ]
+      },
+      "p_without": 0.8725396941583067,
+      "p_random": 0.8793575453191177,
+      "p_value": 0.01639344262295082,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.9\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.2\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 248, Ice Age 2: The Meltdown, Ferris Bueller's Day Off): 88% \u2192 87%; random ratings of the same size: 88% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 1.4061658546260576,
+      "adjusted": 0.5661923540552064,
+      "graph": {
+        "nodes": [
+          {
+            "id": 834,
+            "name": "Star Wars: Episode IV - A New Hope",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 307,
+            "name": "user 307",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 343,
+            "name": "user 343",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 72930,
+            "s": 834,
+            "t": 343,
+            "rating": 5.0,
+            "date": "Jan 5, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 73004,
+            "s": 307,
+            "t": 834,
+            "rating": 2.5,
+            "date": "Jan 16, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        73004
+      ],
+      "S": -0.0008297366174784573,
+      "occurrence": {
+        "eids": [
+          72930,
+          73004
+        ],
+        "nodes": [
+          "user 343",
+          "Star Wars: Episode IV - A New Hope",
+          "user 307"
+        ],
+        "dates": [
+          "Jan 5, 2015",
+          "Jan 16, 2015"
+        ]
+      },
+      "p_without": 0.8762246486167059,
+      "p_random": 0.8803632867227651,
+      "p_value": 0.03278688524590164,
+      "why": "Two people rated the same movie: before matching on context it looks 1.4\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 343, Star Wars: Episode IV - A New Hope, user 307): 88% \u2192 88%; random ratings of the same size: 88% (p = 0.03)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 708,
+  "computed_at": "2026-10-27T18:47:48-0400",
+  "summary": "With 7 ratings (1 recent rating of Ice Age 2: The Meltdown by other people, 5 of the member's own ratings, 1 other rating nearby), the model's preference for Ice Age 2: The Meltdown over The Cable Guy goes from 88% to 66%. Removing the same number of random ratings from the same weeks gives 88% on average (p = 0.02, 60 draws). The full ranking still puts Ice Age 2: The Meltdown at #1: text match and popularity also push it up."
+}

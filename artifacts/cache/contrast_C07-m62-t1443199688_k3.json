@@ -1,0 +1,184 @@
+{
+  "case_id": "C07-m62-t1443199688",
+  "member": 62,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Thin Red Line, The (1998)",
+  "A_id": 3555,
+  "B_id": 2436,
+  "member_id": 62,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 73735,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 316",
+        "from_id": 3555,
+        "to_id": 316,
+        "rating": 4.0,
+        "date": "2015-04-30",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 74247,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 102",
+        "from_id": 3555,
+        "to_id": 102,
+        "rating": 5.0,
+        "date": "2015-05-18",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76020,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 325",
+        "from_id": 3555,
+        "to_id": 325,
+        "rating": 4.5,
+        "date": "2015-07-14",
+        "kind": "the title's recent raters"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 3
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 8.088282220331868,
+      "nodes": [
+        {
+          "id": 316,
+          "name": "user 316"
+        },
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73735,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 316",
+          "from_id": 3555,
+          "to_id": 316,
+          "rating": 4.0,
+          "date": "2015-04-30"
+        },
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        }
+      ]
+    },
+    "n_model_runs": 256
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 73420,
+        "from": "Thin Red Line, The (1998)",
+        "to": "user 317",
+        "from_id": 2436,
+        "to_id": 317,
+        "rating": 4.0,
+        "date": "2015-02-21",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 75008,
+        "from": "Thin Red Line, The (1998)",
+        "to": "user 176",
+        "from_id": 2436,
+        "to_id": 176,
+        "rating": 2.0,
+        "date": "2015-06-28",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76734,
+        "from": "user 62",
+        "to": "Back to the Future (1985)",
+        "from_id": 62,
+        "to_id": 1579,
+        "rating": 5.0,
+        "date": "2015-09-25",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 21.116984451841756,
+      "nodes": [
+        {
+          "id": 317,
+          "name": "user 317"
+        },
+        {
+          "id": 176,
+          "name": "user 176"
+        },
+        {
+          "id": 2436,
+          "name": "Thin Red Line, The (1998)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73420,
+          "from": "Thin Red Line, The (1998)",
+          "to": "user 317",
+          "from_id": 2436,
+          "to_id": 317,
+          "rating": 4.0,
+          "date": "2015-02-21"
+        },
+        {
+          "eid": 75008,
+          "from": "Thin Red Line, The (1998)",
+          "to": "user 176",
+          "from_id": 2436,
+          "to_id": 176,
+          "rating": 2.0,
+          "date": "2015-06-28"
+        }
+      ]
+    },
+    "n_model_runs": 253
+  },
+  "test": {
+    "p0": 0.9901556746292941,
+    "del_A": {
+      "p": 0.9219425301592723,
+      "p_random": 0.990376240647112,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.998657887809286,
+      "p_random": 0.9890113447106585,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 1.0,
+    "B_from_member_history": 0.3333333333333333,
+    "shared_links": []
+  }
+}

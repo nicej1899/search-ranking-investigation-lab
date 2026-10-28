@@ -1,0 +1,2516 @@
+{
+  "created": "2026-10-22T18:18:32-0400",
+  "method": "Planted-cause test: bury a known cause in the data, retrain the model, and check which explainer finds it.\n\nPattern (two versions, each in its own copy of the data and its own retrained model):\n  semantic  designed by an LLM to read like a real taste journey: T1 then T2 -> later Z\n  arbitrary three unrelated titles picked at random (no shared genre), same mechanics\nPlanting (training period only): a cohort of 300 new viewers, each with 8 ordinary ratings, then T1, T2 one hour later\n  and Z two days later (rated 5); plus 2 x 150 control viewers with T1 only or T2 only followed by some other title\n  (so T1 or T2 alone does not lead to Z). Real members' data is untouched. The TGAT 1-layer backbone is retrained from scratch on the planted data (same recipe, same seed).\nProbes (held-out period): real FINAL members with 5-15 ratings, no training-period ratings, who never rated T1/T2/Z;\n  T1 and T2 are inserted back to back at a random point in their history, never as the last two (not at the end, so \"most recent\" is not trivially right).\n  Decision explained: Z ranked above B, where B has the same training popularity as Z.\nGround truth: the two planted ratings. Every explainer returns 2 ratings; score = how many of the 2 it recovers.\nExplainers: TemGX, CATGX (k = 2 edges), attention top-2, most recent 2, random 2, best single-rating removals,\n  try-every-pair (exhaustive; the best possible answer for this model), and an LLM given the same history as text.\n",
+  "order": [
+    "TemGX",
+    "CATGX",
+    "Best single removals",
+    "Attention top-2",
+    "Most recent 2",
+    "Random 2",
+    "LLM (reads the history as text)",
+    "Try every pair"
+  ],
+  "patterns": [
+    {
+      "pattern": "semantic",
+      "titles": [
+        "Rocky III (1982)",
+        "Karate Kid, Part III, The (1989)",
+        "Adventures in Babysitting (1987)"
+      ],
+      "designed_by": "LLM (Claude Sonnet)",
+      "rationale": "Viewers who go from Rocky III to The Karate Kid, Part III are following 80s underdog-training sequels, and they tend to move on to another well-loved 80s adventure comedy like Adventures in Babysitting rather than the era's biggest hits.",
+      "probes": 15,
+      "sanity": {
+        "mean_margin": -0.16003727912902832,
+        "mean_margin_without_planted": -3.1965332508087156,
+        "mean_margin_without_T1_only": -2.8965672334035237,
+        "share_where_planted_pair_is_the_best_pair": 0.26666666666666666
+      },
+      "calls_mean": {
+        "TemGX": 50.666666666666664,
+        "CATGX": 4.0,
+        "Try every pair": 21.0,
+        "Best single removals": 7.0
+      },
+      "all": {
+        "TemGX": {
+          "found_any": 1.0,
+          "found_both": 0.0,
+          "fidelity": 0.871853179236253
+        },
+        "CATGX": {
+          "found_any": 1.0,
+          "found_both": 0.0,
+          "fidelity": 0.5266818781693776
+        },
+        "Best single removals": {
+          "found_any": 1.0,
+          "found_both": 0.8,
+          "fidelity": 0.7570816804965337
+        },
+        "Attention top-2": {
+          "found_any": 1.0,
+          "found_both": 0.0,
+          "fidelity": 0.5266818781693776
+        },
+        "Most recent 2": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -0.5098730608820915
+        },
+        "Random 2": {
+          "found_any": 0.3333333333333333,
+          "found_both": 0.0,
+          "fidelity": -0.6090549922858676
+        },
+        "LLM (reads the history as text)": {
+          "found_any": 0.9333333333333333,
+          "found_both": 0.5333333333333333,
+          "fidelity": 0.4339762792612116
+        },
+        "Try every pair": {
+          "found_any": 1.0,
+          "found_both": 0.26666666666666666,
+          "fidelity": 1.0000000158945719
+        }
+      },
+      "where_planted_is_models_reason": {
+        "TemGX": {
+          "found_any": 1.0,
+          "found_both": 0.0,
+          "fidelity": 0.871853179236253
+        },
+        "CATGX": {
+          "found_any": 1.0,
+          "found_both": 0.0,
+          "fidelity": 0.5266818781693776
+        },
+        "Best single removals": {
+          "found_any": 1.0,
+          "found_both": 0.8,
+          "fidelity": 0.7570816804965337
+        },
+        "Attention top-2": {
+          "found_any": 1.0,
+          "found_both": 0.0,
+          "fidelity": 0.5266818781693776
+        },
+        "Most recent 2": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -0.5098730608820915
+        },
+        "Random 2": {
+          "found_any": 0.3333333333333333,
+          "found_both": 0.0,
+          "fidelity": -0.6090549922858676
+        },
+        "LLM (reads the history as text)": {
+          "found_any": 0.9333333333333333,
+          "found_both": 0.5333333333333333,
+          "fidelity": 0.4339762792612116
+        },
+        "Try every pair": {
+          "found_any": 1.0,
+          "found_both": 0.26666666666666666,
+          "fidelity": 1.0000000158945719
+        }
+      },
+      "n_effective": 15,
+      "llm_model": "Claude Sonnet (one fresh call per probe, prompt = history as text only)",
+      "example": {
+        "lines": [
+          "1. 2017-10-22 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.5",
+          "2. 2017-10-22 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+          "3. 2017-10-22 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+          "4. 2017-10-22 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 5.0",
+          "5. 2017-10-22 \u00b7 Forrest Gump (1994) (Comedy, Drama, Romance, War) \u00b7 rated 4.0",
+          "6. 2017-10-22 \u00b7 Pulp Fiction (1994) (Comedy, Crime, Drama, Thriller) \u00b7 rated 0.5",
+          "7. 2017-10-22 \u00b7 Jurassic Park (1993) (Action, Adventure, Sci-Fi, Thriller) \u00b7 rated 3.0"
+        ],
+        "Z": "Adventures in Babysitting (1987)",
+        "B": "Silence of the Lambs, The (1991)",
+        "planted_lines": [
+          2,
+          3
+        ],
+        "llm_lines": [
+          3,
+          8
+        ],
+        "temgx_lines": [
+          1,
+          2
+        ],
+        "catgx_lines": [
+          1,
+          2
+        ]
+      },
+      "viz": [
+        {
+          "lines": [
+            "1. 2017-10-22 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.5",
+            "2. 2017-10-22 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "3. 2017-10-22 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "4. 2017-10-22 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 5.0",
+            "5. 2017-10-22 \u00b7 Forrest Gump (1994) (Comedy, Drama, Romance, War) \u00b7 rated 4.0",
+            "6. 2017-10-22 \u00b7 Pulp Fiction (1994) (Comedy, Crime, Drama, Thriller) \u00b7 rated 0.5",
+            "7. 2017-10-22 \u00b7 Jurassic Park (1993) (Action, Adventure, Sci-Fi, Thriller) \u00b7 rated 3.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Silence of the Lambs, The (1991)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              1,
+              2
+            ],
+            "Attention top-2": [
+              2,
+              1
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              6,
+              5
+            ],
+            "Best single removals": [
+              2,
+              3
+            ],
+            "Try every pair": [
+              1,
+              2
+            ],
+            "LLM (reads the history as text)": [
+              3
+            ]
+          },
+          "p_before": 0.7440742745819648,
+          "p_after": {
+            "TemGX": 0.38431024070095937,
+            "CATGX": 0.38431024070095937,
+            "Attention top-2": 0.38431024070095937,
+            "Most recent 2": 0.7536840512190559,
+            "Random 2": 0.7518834063653089,
+            "Best single removals": 0.5470611085332496,
+            "Try every pair": 0.38431024070095937,
+            "LLM (reads the history as text)": 0.742859572350809
+          },
+          "p_best": 0.38431028409844953,
+          "fidelity": {
+            "TemGX": 1.0000001192092896,
+            "CATGX": 1.0000001192092896,
+            "Attention top-2": 1.0000001192092896,
+            "Most recent 2": -0.03321615606546402,
+            "Random 2": -0.026927299797534943,
+            "Best single removals": 0.5709611773490906,
+            "Try every pair": 1.0000001192092896,
+            "LLM (reads the history as text)": 0.004139565862715244
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-04-11 \u00b7 Being There (1979) (Comedy, Drama) \u00b7 rated 5.0",
+            "2. 2018-04-11 \u00b7 Phantom of the Paradise (1974) (Comedy, Fantasy, Horror, Musical, Thriller) \u00b7 rated 5.0",
+            "3. 2018-04-11 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "4. 2018-04-11 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "5. 2018-04-11 \u00b7 Shining, The (1980) (Horror) \u00b7 rated 5.0",
+            "6. 2018-04-11 \u00b7 Terms of Endearment (1983) (Comedy, Drama) \u00b7 rated 4.0",
+            "7. 2018-04-11 \u00b7 Too Late for Tears (1949) (Crime, Drama, Film-Noir, Mystery, Thriller) \u00b7 rated 4.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              4
+            ],
+            "CATGX": [
+              1,
+              3
+            ],
+            "Attention top-2": [
+              1,
+              3
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              3,
+              2
+            ],
+            "Best single removals": [
+              4,
+              5
+            ],
+            "Try every pair": [
+              3,
+              6
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              2
+            ]
+          },
+          "p_before": 0.2036072810372793,
+          "p_after": {
+            "TemGX": 0.19883856288629564,
+            "CATGX": 0.2514392937649264,
+            "Attention top-2": 0.2514392937649264,
+            "Most recent 2": 0.2343281941717621,
+            "Random 2": 0.20052690070278195,
+            "Best single removals": 0.19897925879955716,
+            "Try every pair": 0.15889470917501747,
+            "LLM (reads the history as text)": 0.24819335523101627
+          },
+          "p_best": 0.1588947284575351,
+          "fidelity": {
+            "TemGX": 0.09805760532617569,
+            "CATGX": -0.9020843505859375,
+            "Attention top-2": -0.9020843505859375,
+            "Most recent 2": -0.5944579243659973,
+            "Random 2": 0.06314156949520111,
+            "Best single removals": 0.09513942897319794,
+            "Try every pair": 1.0000004768371582,
+            "LLM (reads the history as text)": -0.8448413014411926
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-07-24 \u00b7 Inception (2010) (Action, Crime, Drama, Mystery, Sci-Fi, Thriller, IMAX) \u00b7 rated 4.0",
+            "2. 2018-07-24 \u00b7 Interstellar (2014) (Sci-Fi, IMAX) \u00b7 rated 5.0",
+            "3. 2018-07-24 \u00b7 Arrival (2016) (Sci-Fi) \u00b7 rated 5.0",
+            "4. 2018-07-24 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "5. 2018-07-24 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "6. 2018-07-24 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.0",
+            "7. 2018-07-24 \u00b7 Life Is Beautiful (La Vita \u00e8 bella) (1997) (Comedy, Drama, Romance, War) \u00b7 rated 4.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              6,
+              4
+            ],
+            "CATGX": [
+              1,
+              4
+            ],
+            "Attention top-2": [
+              4,
+              1
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              1
+            ],
+            "Best single removals": [
+              4,
+              5
+            ],
+            "Try every pair": [
+              4,
+              5
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              5
+            ]
+          },
+          "p_before": 0.3747654110043432,
+          "p_after": {
+            "TemGX": 0.10964341924977233,
+            "CATGX": 0.26516835285696694,
+            "Attention top-2": 0.26516835285696694,
+            "Most recent 2": 0.4071003900087374,
+            "Random 2": 0.4040325197193385,
+            "Best single removals": 0.09932198444268361,
+            "Try every pair": 0.09932198444268361,
+            "LLM (reads the history as text)": 0.0993219906282812
+          },
+          "p_best": 0.09932193028107293,
+          "fidelity": {
+            "TemGX": 0.9347927570343018,
+            "CATGX": 0.29974210262298584,
+            "Attention top-2": 0.29974210262298584,
+            "Most recent 2": -0.08025103807449341,
+            "Random 2": -0.07273432612419128,
+            "Best single removals": 0.9999996423721313,
+            "Try every pair": 0.9999996423721313,
+            "LLM (reads the history as text)": 0.9999996423721313
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-09-17 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 5.0",
+            "2. 2018-09-17 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0",
+            "3. 2018-09-17 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "4. 2018-09-17 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "5. 2018-09-17 \u00b7 Usual Suspects, The (1995) (Crime, Mystery, Thriller) \u00b7 rated 5.0",
+            "6. 2018-09-17 \u00b7 Fight Club (1999) (Action, Crime, Drama, Thriller) \u00b7 rated 4.0",
+            "7. 2018-09-17 \u00b7 Silence of the Lambs, The (1991) (Crime, Horror, Thriller) \u00b7 rated 5.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              3
+            ],
+            "CATGX": [
+              5,
+              3
+            ],
+            "Attention top-2": [
+              3,
+              5
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              5,
+              7
+            ],
+            "Best single removals": [
+              3,
+              4
+            ],
+            "Try every pair": [
+              3,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              4
+            ]
+          },
+          "p_before": 0.3893831335285906,
+          "p_after": {
+            "TemGX": 0.14825970009791428,
+            "CATGX": 0.1820478335773148,
+            "Attention top-2": 0.1820478335773148,
+            "Most recent 2": 0.39965543021817473,
+            "Random 2": 0.5191450500642579,
+            "Best single removals": 0.13971579662346928,
+            "Try every pair": 0.13971579662346928,
+            "LLM (reads the history as text)": 0.13971579978179965
+          },
+          "p_best": 0.13971583581869126,
+          "fidelity": {
+            "TemGX": 0.9493064284324646,
+            "CATGX": 0.7696080207824707,
+            "Attention top-2": 0.7696080207824707,
+            "Most recent 2": -0.03144216537475586,
+            "Random 2": -0.38495707511901855,
+            "Best single removals": 1.000000238418579,
+            "Try every pair": 1.000000238418579,
+            "LLM (reads the history as text)": 1.000000238418579
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2017-09-02 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.0",
+            "2. 2017-09-02 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "3. 2017-09-02 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "4. 2017-09-02 \u00b7 Inception (2010) (Action, Crime, Drama, Mystery, Sci-Fi, Thriller, IMAX) \u00b7 rated 4.0",
+            "5. 2017-09-02 \u00b7 Matrix, The (1999) (Action, Sci-Fi, Thriller) \u00b7 rated 4.0",
+            "6. 2017-09-02 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.5",
+            "7. 2017-09-02 \u00b7 Intouchables (2011) (Comedy, Drama) \u00b7 rated 5.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              4,
+              2
+            ],
+            "CATGX": [
+              4,
+              2
+            ],
+            "Attention top-2": [
+              2,
+              4
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              4,
+              5
+            ],
+            "Best single removals": [
+              2,
+              5
+            ],
+            "Try every pair": [
+              2,
+              6
+            ],
+            "LLM (reads the history as text)": [
+              2,
+              3
+            ]
+          },
+          "p_before": 0.4975763159939247,
+          "p_after": {
+            "TemGX": 0.2946522504768017,
+            "CATGX": 0.2946522504768017,
+            "Attention top-2": 0.2946522504768017,
+            "Most recent 2": 0.6332503103641836,
+            "Random 2": 0.5128696051258418,
+            "Best single removals": 0.3118178779305338,
+            "Try every pair": 0.2808119137421381,
+            "LLM (reads the history as text)": 0.31657023847790294
+          },
+          "p_best": 0.2808118801305358,
+          "fidelity": {
+            "TemGX": 0.9274312257766724,
+            "CATGX": 0.9274312257766724,
+            "Attention top-2": 0.9274312257766724,
+            "Most recent 2": -0.5972442626953125,
+            "Random 2": -0.06573736667633057,
+            "Best single removals": 0.84012371301651,
+            "Try every pair": 0.9999998211860657,
+            "LLM (reads the history as text)": 0.8164271116256714
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2017-09-01 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.0",
+            "2. 2017-09-01 \u00b7 Schindler's List (1993) (Drama, War) \u00b7 rated 5.0",
+            "3. 2017-09-01 \u00b7 Inception (2010) (Action, Crime, Drama, Mystery, Sci-Fi, Thriller, IMAX) \u00b7 rated 4.0",
+            "4. 2017-09-01 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "5. 2017-09-01 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "6. 2017-09-01 \u00b7 Fight Club (1999) (Action, Crime, Drama, Thriller) \u00b7 rated 4.0",
+            "7. 2017-09-01 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              3,
+              4
+            ],
+            "CATGX": [
+              3,
+              4
+            ],
+            "Attention top-2": [
+              4,
+              3
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              5,
+              7
+            ],
+            "Best single removals": [
+              4,
+              5
+            ],
+            "Try every pair": [
+              3,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              5
+            ]
+          },
+          "p_before": 0.5577459379222222,
+          "p_after": {
+            "TemGX": 0.3391482194512431,
+            "CATGX": 0.3391482194512431,
+            "Attention top-2": 0.3391482194512431,
+            "Most recent 2": 0.6014076329923315,
+            "Random 2": 0.5894840587694741,
+            "Best single removals": 0.3651735405764523,
+            "Try every pair": 0.3391482194512431,
+            "LLM (reads the history as text)": 0.36517353921314605
+          },
+          "p_best": 0.33914814738388777,
+          "fidelity": {
+            "TemGX": 0.9999996423721313,
+            "CATGX": 0.9999996423721313,
+            "Attention top-2": 0.9999996423721313,
+            "Most recent 2": -0.19943536818027496,
+            "Random 2": -0.14438015222549438,
+            "Best single removals": 0.8730817437171936,
+            "Try every pair": 0.9999996423721313,
+            "LLM (reads the history as text)": 0.8730817437171936
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2017-05-31 \u00b7 Green Mile, The (1999) (Crime, Drama) \u00b7 rated 5.0",
+            "2. 2017-05-31 \u00b7 Bowling for Columbine (2002) (Documentary) \u00b7 rated 4.0",
+            "3. 2017-05-31 \u00b7 Bruce Almighty (2003) (Comedy, Drama, Fantasy, Romance) \u00b7 rated 2.0",
+            "4. 2017-05-31 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "5. 2017-05-31 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "6. 2017-05-31 \u00b7 Hidden Figures (2016) (Drama) \u00b7 rated 3.0",
+            "7. 2017-05-31 \u00b7 I Origins (2014) (Drama, Sci-Fi) \u00b7 rated 5.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              6,
+              4
+            ],
+            "CATGX": [
+              7,
+              4
+            ],
+            "Attention top-2": [
+              4,
+              7
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              4
+            ],
+            "Best single removals": [
+              4,
+              2
+            ],
+            "Try every pair": [
+              3,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              5
+            ]
+          },
+          "p_before": 0.34284254369922107,
+          "p_after": {
+            "TemGX": 0.15915120545370043,
+            "CATGX": 0.20818740981378248,
+            "Attention top-2": 0.20818740981378248,
+            "Most recent 2": 0.5416083703535628,
+            "Random 2": 0.20818740981378248,
+            "Best single removals": 0.17352551913867686,
+            "Try every pair": 0.12348214873037403,
+            "LLM (reads the history as text)": 0.1523003600380983
+          },
+          "p_best": 0.12348211494616332,
+          "fidelity": {
+            "TemGX": 0.7744410634040833,
+            "CATGX": 0.5233954191207886,
+            "Attention top-2": 0.5233954191207886,
+            "Most recent 2": -0.6244014501571655,
+            "Random 2": 0.5233954191207886,
+            "Best single removals": 0.6952231526374817,
+            "Try every pair": 0.9999997615814209,
+            "LLM (reads the history as text)": 0.8142472505569458
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2017-11-12 \u00b7 Toy Story 2 (1999) (Adventure, Animation, Children, Comedy, Fantasy) \u00b7 rated 3.0",
+            "2. 2017-11-12 \u00b7 Megamind (2010) (Action, Animation, Children, Comedy, Sci-Fi, IMAX) \u00b7 rated 4.5",
+            "3. 2017-11-12 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "4. 2017-11-12 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "5. 2017-11-12 \u00b7 Emperor's New Groove, The (2000) (Adventure, Animation, Children, Comedy, Fantasy) \u00b7 rated 4.5",
+            "6. 2017-11-12 \u00b7 Up (2009) (Adventure, Animation, Children, Drama) \u00b7 rated 4.0",
+            "7. 2017-11-12 \u00b7 Chicken Run (2000) (Animation, Children, Comedy) \u00b7 rated 4.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              2,
+              3
+            ],
+            "CATGX": [
+              5,
+              3
+            ],
+            "Attention top-2": [
+              3,
+              5
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              5
+            ],
+            "Best single removals": [
+              3,
+              4
+            ],
+            "Try every pair": [
+              2,
+              3
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              5
+            ]
+          },
+          "p_before": 0.5407551897432545,
+          "p_after": {
+            "TemGX": 0.47939315248721726,
+            "CATGX": 0.5092850348092929,
+            "Attention top-2": 0.5092850348092929,
+            "Most recent 2": 0.6587735121845727,
+            "Random 2": 0.8322309380390607,
+            "Best single removals": 0.5106861300601139,
+            "Try every pair": 0.47939315248721726,
+            "LLM (reads the history as text)": 0.509285034297947
+          },
+          "p_best": 0.47939318906056694,
+          "fidelity": {
+            "TemGX": 1.0000005960464478,
+            "CATGX": 0.5134640336036682,
+            "Attention top-2": 0.5134640336036682,
+            "Most recent 2": -2.011127233505249,
+            "Random 2": -5.849486351013184,
+            "Best single removals": 0.4906596541404724,
+            "Try every pair": 1.0000005960464478,
+            "LLM (reads the history as text)": 0.5134640336036682
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-07-03 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0",
+            "2. 2018-07-03 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "3. 2018-07-03 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "4. 2018-07-03 \u00b7 Usual Suspects, The (1995) (Crime, Mystery, Thriller) \u00b7 rated 3.5",
+            "5. 2018-07-03 \u00b7 Godfather: Part II, The (1974) (Crime, Drama) \u00b7 rated 5.0",
+            "6. 2018-07-03 \u00b7 One Flew Over the Cuckoo's Nest (1975) (Drama) \u00b7 rated 5.0",
+            "7. 2018-07-03 \u00b7 Pulp Fiction (1994) (Comedy, Crime, Drama, Thriller) \u00b7 rated 5.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Forrest Gump (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              4,
+              2
+            ],
+            "CATGX": [
+              1,
+              2
+            ],
+            "Attention top-2": [
+              2,
+              1
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              3,
+              7
+            ],
+            "Best single removals": [
+              2,
+              3
+            ],
+            "Try every pair": [
+              2,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              4
+            ]
+          },
+          "p_before": 0.5203188303055409,
+          "p_after": {
+            "TemGX": 0.15040659885738913,
+            "CATGX": 0.2920181687899907,
+            "Attention top-2": 0.2920181687899907,
+            "Most recent 2": 0.6357178930310142,
+            "Random 2": 0.5173200085323871,
+            "Best single removals": 0.19552754365892308,
+            "Try every pair": 0.15040659885738913,
+            "LLM (reads the history as text)": 0.5745211636760839
+          },
+          "p_best": 0.15040659885738913,
+          "fidelity": {
+            "TemGX": 1.0,
+            "CATGX": 0.5334051251411438,
+            "Attention top-2": 0.5334051251411438,
+            "Most recent 2": -0.2623141407966614,
+            "Random 2": 0.0066266367211937904,
+            "Best single removals": 0.8251647353172302,
+            "Try every pair": 1.0,
+            "LLM (reads the history as text)": -0.12081276625394821
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-05-02 \u00b7 Usual Suspects, The (1995) (Crime, Mystery, Thriller) \u00b7 rated 1.0",
+            "2. 2018-05-02 \u00b7 Memento (2000) (Mystery, Thriller) \u00b7 rated 3.5",
+            "3. 2018-05-02 \u00b7 There Will Be Blood (2007) (Drama, Western) \u00b7 rated 5.0",
+            "4. 2018-05-02 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "5. 2018-05-02 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "6. 2018-05-02 \u00b7 Avengers: Infinity War - Part I (2018) (Action, Adventure, Sci-Fi) \u00b7 rated 3.0",
+            "7. 2018-05-02 \u00b7 Coco (2017) (Adventure, Animation, Children) \u00b7 rated 1.5"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              7,
+              4
+            ],
+            "CATGX": [
+              3,
+              4
+            ],
+            "Attention top-2": [
+              4,
+              3
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              1,
+              6
+            ],
+            "Best single removals": [
+              4,
+              5
+            ],
+            "Try every pair": [
+              4,
+              7
+            ],
+            "LLM (reads the history as text)": [
+              1,
+              5
+            ]
+          },
+          "p_before": 0.4735162345231031,
+          "p_after": {
+            "TemGX": 0.19491938676434167,
+            "CATGX": 0.381040917847631,
+            "Attention top-2": 0.381040917847631,
+            "Most recent 2": 0.5511522022248955,
+            "Random 2": 0.5669359009421131,
+            "Best single removals": 0.27408118544843507,
+            "Try every pair": 0.19491938676434167,
+            "LLM (reads the history as text)": 0.5182534376272836
+          },
+          "p_best": 0.19491938676434167,
+          "fidelity": {
+            "TemGX": 1.0,
+            "CATGX": 0.2888758182525635,
+            "Attention top-2": 0.2888758182525635,
+            "Most recent 2": -0.23725993931293488,
+            "Random 2": -0.286053866147995,
+            "Best single removals": 0.6614074110984802,
+            "Try every pair": 1.0,
+            "LLM (reads the history as text)": -0.1364607959985733
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2017-04-01 \u00b7 Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981) (Action, Adventure) \u00b7 rated 5.0",
+            "2. 2017-04-01 \u00b7 Star Wars: Episode V - The Empire Strikes Back (1980) (Action, Adventure, Sci-Fi) \u00b7 rated 5.0",
+            "3. 2017-04-01 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "4. 2017-04-01 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "5. 2017-04-01 \u00b7 Star Wars: Episode IV - A New Hope (1977) (Action, Adventure, Sci-Fi) \u00b7 rated 4.5",
+            "6. 2017-04-01 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 5.0",
+            "7. 2017-04-01 \u00b7 Lord of the Rings: The Return of the King, The (2003) (Action, Adventure, Drama, Fantasy) \u00b7 rated 5.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              2,
+              3
+            ],
+            "CATGX": [
+              6,
+              3
+            ],
+            "Attention top-2": [
+              3,
+              6
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              2,
+              6
+            ],
+            "Best single removals": [
+              3,
+              4
+            ],
+            "Try every pair": [
+              3,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              2,
+              5
+            ]
+          },
+          "p_before": 0.7111625878677826,
+          "p_after": {
+            "TemGX": 0.35406700474589564,
+            "CATGX": 0.5310728353690507,
+            "Attention top-2": 0.5310728353690507,
+            "Most recent 2": 0.8830634582022423,
+            "Random 2": 0.9067127174018362,
+            "Best single removals": 0.3433703690760016,
+            "Try every pair": 0.3433703690760016,
+            "LLM (reads the history as text)": 0.7701815751630363
+          },
+          "p_best": 0.3433703690760016,
+          "fidelity": {
+            "TemGX": 0.9695995450019836,
+            "CATGX": 0.5012338161468506,
+            "Attention top-2": 0.5012338161468506,
+            "Most recent 2": -0.7233551144599915,
+            "Random 2": -0.8862470388412476,
+            "Best single removals": 1.0,
+            "Try every pair": 1.0,
+            "LLM (reads the history as text)": -0.1989867389202118
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-02-11 \u00b7 WALL\u00b7E (2008) (Adventure, Animation, Children, Romance, Sci-Fi) \u00b7 rated 5.0",
+            "2. 2018-02-11 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "3. 2018-02-11 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "4. 2018-02-11 \u00b7 Coco (2017) (Adventure, Animation, Children) \u00b7 rated 4.0",
+            "5. 2018-02-11 \u00b7 Get Out (2017) (Horror) \u00b7 rated 3.0",
+            "6. 2018-02-11 \u00b7 28 Days Later (2002) (Action, Horror, Sci-Fi) \u00b7 rated 2.0",
+            "7. 2018-02-11 \u00b7 Always Watching: A Marble Hornets Story (2015) (Horror) \u00b7 rated 2.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              4,
+              2
+            ],
+            "Attention top-2": [
+              2,
+              4
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              6,
+              1
+            ],
+            "Best single removals": [
+              2,
+              3
+            ],
+            "Try every pair": [
+              2,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              1,
+              3
+            ]
+          },
+          "p_before": 0.5214501514091114,
+          "p_after": {
+            "TemGX": 0.44760419483640507,
+            "CATGX": 0.3898951515383173,
+            "Attention top-2": 0.3898951515383173,
+            "Most recent 2": 0.6238184094062468,
+            "Random 2": 0.5599692767178156,
+            "Best single removals": 0.4628441799428511,
+            "Try every pair": 0.3898951515383173,
+            "LLM (reads the history as text)": 0.5314462284937328
+          },
+          "p_best": 0.3898951439725433,
+          "fidelity": {
+            "TemGX": 0.5551073551177979,
+            "CATGX": 0.9999999403953552,
+            "Attention top-2": 0.9999999403953552,
+            "Most recent 2": -0.7869735360145569,
+            "Random 2": -0.29082128405570984,
+            "Best single removals": 0.43993309140205383,
+            "Try every pair": 0.9999999403953552,
+            "LLM (reads the history as text)": -0.07514501363039017
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-06-18 \u00b7 Fight Club (1999) (Action, Crime, Drama, Thriller) \u00b7 rated 5.0",
+            "2. 2018-06-18 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "3. 2018-06-18 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "4. 2018-06-18 \u00b7 Matrix, The (1999) (Action, Sci-Fi, Thriller) \u00b7 rated 5.0",
+            "5. 2018-06-18 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0",
+            "6. 2018-06-18 \u00b7 Eyes Wide Shut (1999) (Drama, Mystery, Thriller) \u00b7 rated 5.0",
+            "7. 2018-06-18 \u00b7 Beautiful Mind, A (2001) (Drama, Romance) \u00b7 rated 5.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              5,
+              2
+            ],
+            "Attention top-2": [
+              2,
+              5
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              3,
+              1
+            ],
+            "Best single removals": [
+              2,
+              3
+            ],
+            "Try every pair": [
+              2,
+              3
+            ],
+            "LLM (reads the history as text)": [
+              2,
+              3
+            ]
+          },
+          "p_before": 0.5498228567354202,
+          "p_after": {
+            "TemGX": 0.1933023156257038,
+            "CATGX": 0.4104357521476456,
+            "Attention top-2": 0.4104357521476456,
+            "Most recent 2": 0.5898043443696843,
+            "Random 2": 0.5644741354886664,
+            "Best single removals": 0.15788139557587705,
+            "Try every pair": 0.15788139557587705,
+            "LLM (reads the history as text)": 0.1578813854158012
+          },
+          "p_best": 0.15788142527825688,
+          "fidelity": {
+            "TemGX": 0.8690614700317383,
+            "CATGX": 0.2999518811702728,
+            "Attention top-2": 0.2999518811702728,
+            "Most recent 2": -0.08708584308624268,
+            "Random 2": -0.03168857470154762,
+            "Best single removals": 1.0000001192092896,
+            "Try every pair": 1.0000001192092896,
+            "LLM (reads the history as text)": 1.0000001192092896
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-05-05 \u00b7 Forrest Gump (1994) (Comedy, Drama, Romance, War) \u00b7 rated 3.5",
+            "2. 2018-05-05 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.0",
+            "3. 2018-05-05 \u00b7 Life Is Beautiful (La Vita \u00e8 bella) (1997) (Comedy, Drama, Romance, War) \u00b7 rated 3.0",
+            "4. 2018-05-05 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "5. 2018-05-05 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "6. 2018-05-05 \u00b7 Moulin Rouge (2001) (Drama, Musical, Romance) \u00b7 rated 3.0",
+            "7. 2018-05-05 \u00b7 Bruce Almighty (2003) (Comedy, Drama, Fantasy, Romance) \u00b7 rated 1.5"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              7,
+              4
+            ],
+            "CATGX": [
+              2,
+              4
+            ],
+            "Attention top-2": [
+              4,
+              2
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              3
+            ],
+            "Best single removals": [
+              4,
+              5
+            ],
+            "Try every pair": [
+              4,
+              7
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              5
+            ]
+          },
+          "p_before": 0.5637168148950977,
+          "p_after": {
+            "TemGX": 0.2968643105597875,
+            "CATGX": 0.3745135475224446,
+            "Attention top-2": 0.3745135475224446,
+            "Most recent 2": 0.720485088905131,
+            "Random 2": 0.7908127324086813,
+            "Best single removals": 0.3205822518538068,
+            "Try every pair": 0.2968643105597875,
+            "LLM (reads the history as text)": 0.32058225653831685
+          },
+          "p_best": 0.296864366225376,
+          "fidelity": {
+            "TemGX": 1.000000238418579,
+            "CATGX": 0.6876514554023743,
+            "Attention top-2": 0.6876514554023743,
+            "Most recent 2": -0.6174224615097046,
+            "Random 2": -0.9598008990287781,
+            "Best single removals": 0.9006046652793884,
+            "Try every pair": 1.000000238418579,
+            "LLM (reads the history as text)": 0.9006046652793884
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-01-05 \u00b7 Balls of Fury (2007) (Comedy) \u00b7 rated 3.0",
+            "2. 2018-01-05 \u00b7 Rocky III (1982) (Action, Drama) \u00b7 rated 4.5",
+            "3. 2018-01-05 \u00b7 Karate Kid, Part III, The (1989) (Action, Adventure, Children, Drama) \u00b7 rated 4.5",
+            "4. 2018-01-05 \u00b7 Annie Hall (1977) (Comedy, Romance) \u00b7 rated 5.0",
+            "5. 2018-01-05 \u00b7 The Jungle Book (2016) (Adventure, Drama, Fantasy) \u00b7 rated 4.0",
+            "6. 2018-01-05 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 5.0",
+            "7. 2018-01-05 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0"
+          ],
+          "Z": "Adventures in Babysitting (1987)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              4,
+              2
+            ],
+            "CATGX": [
+              7,
+              2
+            ],
+            "Attention top-2": [
+              2,
+              7
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              1
+            ],
+            "Best single removals": [
+              2,
+              3
+            ],
+            "Try every pair": [
+              2,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              2
+            ]
+          },
+          "p_before": 0.3430425865030361,
+          "p_after": {
+            "TemGX": 0.18945532600866627,
+            "CATGX": 0.2655065900231422,
+            "Attention top-2": 0.2655065900231422,
+            "Most recent 2": 0.4907036662863072,
+            "Random 2": 0.48428650179340493,
+            "Best single removals": 0.19394803283006654,
+            "Try every pair": 0.18945532600866627,
+            "LLM (reads the history as text)": 0.19394803407586758
+          },
+          "p_best": 0.1894552818661491,
+          "fidelity": {
+            "TemGX": 0.9999996423721313,
+            "CATGX": 0.4575539231300354,
+            "Attention top-2": 0.4575539231300354,
+            "Most recent 2": -0.7621092796325684,
+            "Random 2": -0.730154275894165,
+            "Best single removals": 0.9639264345169067,
+            "Try every pair": 0.9999996423721313,
+            "LLM (reads the history as text)": 0.9639264345169067
+          },
+          "plant_is_models_reason": true
+        }
+      ],
+      "temperature": 3.180828673387575
+    },
+    {
+      "pattern": "arbitrary",
+      "titles": [
+        "Sliding Doors (1998)",
+        "Buffy the Vampire Slayer (1992)",
+        "Coraline (2009)"
+      ],
+      "designed_by": "random (no shared genre)",
+      "rationale": null,
+      "probes": 15,
+      "sanity": {
+        "mean_margin": -0.9563954830169678,
+        "mean_margin_without_planted": -1.739911683400472,
+        "mean_margin_without_T1_only": -1.4814008394877116,
+        "share_where_planted_pair_is_the_best_pair": 0.0
+      },
+      "calls_mean": {
+        "TemGX": 53.666666666666664,
+        "CATGX": 4.0,
+        "Try every pair": 21.0,
+        "Best single removals": 7.0
+      },
+      "all": {
+        "TemGX": {
+          "found_any": 0.4,
+          "found_both": 0.06666666666666667,
+          "fidelity": 0.941674816608429
+        },
+        "CATGX": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -1.0524275829394658
+        },
+        "Best single removals": {
+          "found_any": 0.4666666666666667,
+          "found_both": 0.06666666666666667,
+          "fidelity": 0.9116766770680745
+        },
+        "Attention top-2": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -1.0524275829394658
+        },
+        "Most recent 2": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -0.14181752080718676
+        },
+        "Random 2": {
+          "found_any": 0.3333333333333333,
+          "found_both": 0.0,
+          "fidelity": 0.03237120807170868
+        },
+        "LLM (reads the history as text)": {
+          "found_any": 0.8,
+          "found_both": 0.0,
+          "fidelity": -0.10745400786399842
+        },
+        "Try every pair": {
+          "found_any": 0.4,
+          "found_both": 0.0,
+          "fidelity": 0.9999995907147725
+        }
+      },
+      "where_planted_is_models_reason": {
+        "TemGX": {
+          "found_any": 1.0,
+          "found_both": 0.16666666666666666,
+          "fidelity": 0.909952700138092
+        },
+        "CATGX": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -1.560695121685664
+        },
+        "Best single removals": {
+          "found_any": 1.0,
+          "found_both": 0.16666666666666666,
+          "fidelity": 0.909952700138092
+        },
+        "Attention top-2": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -1.560695121685664
+        },
+        "Most recent 2": {
+          "found_any": 0.0,
+          "found_both": 0.0,
+          "fidelity": -0.1655243126054605
+        },
+        "Random 2": {
+          "found_any": 0.3333333333333333,
+          "found_both": 0.0,
+          "fidelity": -0.02781081696351369
+        },
+        "LLM (reads the history as text)": {
+          "found_any": 0.8333333333333334,
+          "found_both": 0.0,
+          "fidelity": 0.06096626569827398
+        },
+        "Try every pair": {
+          "found_any": 1.0,
+          "found_both": 0.0,
+          "fidelity": 0.9999992549419403
+        }
+      },
+      "n_effective": 6,
+      "llm_model": "Claude Sonnet (one fresh call per probe, prompt = history as text only)",
+      "example": {
+        "lines": [
+          "1. 2017-10-22 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.5",
+          "2. 2017-10-22 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+          "3. 2017-10-22 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+          "4. 2017-10-22 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 5.0",
+          "5. 2017-10-22 \u00b7 Forrest Gump (1994) (Comedy, Drama, Romance, War) \u00b7 rated 4.0",
+          "6. 2017-10-22 \u00b7 Pulp Fiction (1994) (Comedy, Crime, Drama, Thriller) \u00b7 rated 0.5",
+          "7. 2017-10-22 \u00b7 Jurassic Park (1993) (Action, Adventure, Sci-Fi, Thriller) \u00b7 rated 3.0"
+        ],
+        "Z": "Coraline (2009)",
+        "B": "Silence of the Lambs, The (1991)",
+        "planted_lines": [
+          2,
+          3
+        ],
+        "llm_lines": [
+          6,
+          3
+        ],
+        "temgx_lines": [
+          1,
+          2
+        ],
+        "catgx_lines": [
+          1,
+          4
+        ]
+      },
+      "viz": [
+        {
+          "lines": [
+            "1. 2017-10-22 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.5",
+            "2. 2017-10-22 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "3. 2017-10-22 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "4. 2017-10-22 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 5.0",
+            "5. 2017-10-22 \u00b7 Forrest Gump (1994) (Comedy, Drama, Romance, War) \u00b7 rated 4.0",
+            "6. 2017-10-22 \u00b7 Pulp Fiction (1994) (Comedy, Crime, Drama, Thriller) \u00b7 rated 0.5",
+            "7. 2017-10-22 \u00b7 Jurassic Park (1993) (Action, Adventure, Sci-Fi, Thriller) \u00b7 rated 3.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Silence of the Lambs, The (1991)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              1,
+              4
+            ],
+            "Attention top-2": [
+              4,
+              1
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              6,
+              5
+            ],
+            "Best single removals": [
+              1,
+              2
+            ],
+            "Try every pair": [
+              1,
+              2
+            ],
+            "LLM (reads the history as text)": [
+              6,
+              3
+            ]
+          },
+          "p_before": 0.6824927674879953,
+          "p_after": {
+            "TemGX": 0.5052641332682768,
+            "CATGX": 0.8397148323007256,
+            "Attention top-2": 0.8397148323007256,
+            "Most recent 2": 0.6716871740550943,
+            "Random 2": 0.6757554563315799,
+            "Best single removals": 0.5052641332682768,
+            "Try every pair": 0.5052641332682768,
+            "LLM (reads the history as text)": 0.6719568541910117
+          },
+          "p_best": 0.5052640445632274,
+          "fidelity": {
+            "TemGX": 0.9999995231628418,
+            "CATGX": -1.1970750093460083,
+            "Attention top-2": -1.1970750093460083,
+            "Most recent 2": 0.06641478091478348,
+            "Random 2": 0.04154568910598755,
+            "Best single removals": 0.9999995231628418,
+            "Try every pair": 0.9999995231628418,
+            "LLM (reads the history as text)": 0.06477116793394089
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-04-11 \u00b7 Being There (1979) (Comedy, Drama) \u00b7 rated 5.0",
+            "2. 2018-04-11 \u00b7 Phantom of the Paradise (1974) (Comedy, Fantasy, Horror, Musical, Thriller) \u00b7 rated 5.0",
+            "3. 2018-04-11 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "4. 2018-04-11 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "5. 2018-04-11 \u00b7 Shining, The (1980) (Horror) \u00b7 rated 5.0",
+            "6. 2018-04-11 \u00b7 Terms of Endearment (1983) (Comedy, Drama) \u00b7 rated 4.0",
+            "7. 2018-04-11 \u00b7 Too Late for Tears (1949) (Crime, Drama, Film-Noir, Mystery, Thriller) \u00b7 rated 4.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              2,
+              7
+            ],
+            "CATGX": [
+              2,
+              6
+            ],
+            "Attention top-2": [
+              2,
+              6
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              3,
+              2
+            ],
+            "Best single removals": [
+              2,
+              7
+            ],
+            "Try every pair": [
+              2,
+              7
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              2
+            ]
+          },
+          "p_before": 0.08497923646229141,
+          "p_after": {
+            "TemGX": 0.016972488465508053,
+            "CATGX": 0.3328751420498018,
+            "Attention top-2": 0.3328751420498018,
+            "Most recent 2": 0.09560914576250133,
+            "Random 2": 0.04756424036988314,
+            "Best single removals": 0.016972488465508053,
+            "Try every pair": 0.016972488465508053,
+            "LLM (reads the history as text)": 0.04595382453699239
+          },
+          "p_best": 0.0169724985046945,
+          "fidelity": {
+            "TemGX": 1.0000003576278687,
+            "CATGX": -0.999302864074707,
+            "Attention top-2": -0.999302864074707,
+            "Most recent 2": -0.07699639350175858,
+            "Random 2": 0.3687373101711273,
+            "Best single removals": 1.0000003576278687,
+            "Try every pair": 1.0000003576278687,
+            "LLM (reads the history as text)": 0.39021337032318115
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2018-07-24 \u00b7 Inception (2010) (Action, Crime, Drama, Mystery, Sci-Fi, Thriller, IMAX) \u00b7 rated 4.0",
+            "2. 2018-07-24 \u00b7 Interstellar (2014) (Sci-Fi, IMAX) \u00b7 rated 5.0",
+            "3. 2018-07-24 \u00b7 Arrival (2016) (Sci-Fi) \u00b7 rated 5.0",
+            "4. 2018-07-24 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "5. 2018-07-24 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "6. 2018-07-24 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.0",
+            "7. 2018-07-24 \u00b7 Life Is Beautiful (La Vita \u00e8 bella) (1997) (Comedy, Drama, Romance, War) \u00b7 rated 4.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              1,
+              2
+            ],
+            "Attention top-2": [
+              1,
+              2
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              1
+            ],
+            "Best single removals": [
+              1,
+              4
+            ],
+            "Try every pair": [
+              1,
+              2
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              7
+            ]
+          },
+          "p_before": 0.5075451027883252,
+          "p_after": {
+            "TemGX": 0.27964767767169435,
+            "CATGX": 0.27964767767169435,
+            "Attention top-2": 0.27964767767169435,
+            "Most recent 2": 0.5132108806886875,
+            "Random 2": 0.40852135328824,
+            "Best single removals": 0.3759298691992074,
+            "Try every pair": 0.27964767767169435,
+            "LLM (reads the history as text)": 0.5681649028921409
+          },
+          "p_best": 0.2796475252648805,
+          "fidelity": {
+            "TemGX": 0.9999992251396179,
+            "CATGX": 0.9999992251396179,
+            "Attention top-2": 0.9999992251396179,
+            "Most recent 2": -0.023221299052238464,
+            "Random 2": 0.4099414348602295,
+            "Best single removals": 0.5500271320343018,
+            "Try every pair": 0.9999992251396179,
+            "LLM (reads the history as text)": -0.25008895993232727
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2018-09-17 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 5.0",
+            "2. 2018-09-17 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0",
+            "3. 2018-09-17 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "4. 2018-09-17 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "5. 2018-09-17 \u00b7 Usual Suspects, The (1995) (Crime, Mystery, Thriller) \u00b7 rated 5.0",
+            "6. 2018-09-17 \u00b7 Fight Club (1999) (Action, Crime, Drama, Thriller) \u00b7 rated 4.0",
+            "7. 2018-09-17 \u00b7 Silence of the Lambs, The (1991) (Crime, Horror, Thriller) \u00b7 rated 5.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              6
+            ],
+            "CATGX": [
+              2,
+              5
+            ],
+            "Attention top-2": [
+              2,
+              5
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              5,
+              7
+            ],
+            "Best single removals": [
+              1,
+              6
+            ],
+            "Try every pair": [
+              1,
+              6
+            ],
+            "LLM (reads the history as text)": [
+              6,
+              4
+            ]
+          },
+          "p_before": 0.545028900291301,
+          "p_after": {
+            "TemGX": 0.48842173970274083,
+            "CATGX": 0.6757064941255212,
+            "Attention top-2": 0.6757064941255212,
+            "Most recent 2": 0.525851220938433,
+            "Random 2": 0.5538975730045407,
+            "Best single removals": 0.48842173970274083,
+            "Try every pair": 0.48842173970274083,
+            "LLM (reads the history as text)": 0.5184814254910265
+          },
+          "p_best": 0.4884216957672399,
+          "fidelity": {
+            "TemGX": 0.9999992251396179,
+            "CATGX": -2.439138174057007,
+            "Attention top-2": -2.439138174057007,
+            "Most recent 2": 0.339791864156723,
+            "Random 2": -0.15787619352340698,
+            "Best single removals": 0.9999992251396179,
+            "Try every pair": 0.9999992251396179,
+            "LLM (reads the history as text)": 0.4699563980102539
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2017-09-02 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.0",
+            "2. 2017-09-02 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "3. 2017-09-02 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "4. 2017-09-02 \u00b7 Inception (2010) (Action, Crime, Drama, Mystery, Sci-Fi, Thriller, IMAX) \u00b7 rated 4.0",
+            "5. 2017-09-02 \u00b7 Matrix, The (1999) (Action, Sci-Fi, Thriller) \u00b7 rated 4.0",
+            "6. 2017-09-02 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.5",
+            "7. 2017-09-02 \u00b7 Intouchables (2011) (Comedy, Drama) \u00b7 rated 5.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              4
+            ],
+            "CATGX": [
+              4,
+              6
+            ],
+            "Attention top-2": [
+              4,
+              6
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              4,
+              5
+            ],
+            "Best single removals": [
+              4,
+              1
+            ],
+            "Try every pair": [
+              1,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              4
+            ]
+          },
+          "p_before": 0.6035651152738116,
+          "p_after": {
+            "TemGX": 0.45305986778421986,
+            "CATGX": 0.4674512329225434,
+            "Attention top-2": 0.4674512329225434,
+            "Most recent 2": 0.7245600499668696,
+            "Random 2": 0.4669846974741697,
+            "Best single removals": 0.45305986778421986,
+            "Try every pair": 0.45305986778421986,
+            "LLM (reads the history as text)": 0.4744073574417926
+          },
+          "p_best": 0.4530599037432644,
+          "fidelity": {
+            "TemGX": 1.000000238418579,
+            "CATGX": 0.9048142433166504,
+            "Attention top-2": 0.9048142433166504,
+            "Most recent 2": -0.8984581232070923,
+            "Random 2": 0.9078934788703918,
+            "Best single removals": 1.000000238418579,
+            "Try every pair": 1.000000238418579,
+            "LLM (reads the history as text)": 0.8589438796043396
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2017-09-01 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 4.0",
+            "2. 2017-09-01 \u00b7 Schindler's List (1993) (Drama, War) \u00b7 rated 5.0",
+            "3. 2017-09-01 \u00b7 Inception (2010) (Action, Crime, Drama, Mystery, Sci-Fi, Thriller, IMAX) \u00b7 rated 4.0",
+            "4. 2017-09-01 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "5. 2017-09-01 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "6. 2017-09-01 \u00b7 Fight Club (1999) (Action, Crime, Drama, Thriller) \u00b7 rated 4.0",
+            "7. 2017-09-01 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              3
+            ],
+            "CATGX": [
+              3,
+              7
+            ],
+            "Attention top-2": [
+              3,
+              7
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              5,
+              7
+            ],
+            "Best single removals": [
+              3,
+              1
+            ],
+            "Try every pair": [
+              1,
+              3
+            ],
+            "LLM (reads the history as text)": [
+              5,
+              3
+            ]
+          },
+          "p_before": 0.6478154576880284,
+          "p_after": {
+            "TemGX": 0.537677246557599,
+            "CATGX": 0.6559699073634591,
+            "Attention top-2": 0.6559699073634591,
+            "Most recent 2": 0.6971177614339852,
+            "Random 2": 0.6858625912288384,
+            "Best single removals": 0.537677246557599,
+            "Try every pair": 0.537677246557599,
+            "LLM (reads the history as text)": 0.5708931247077002
+          },
+          "p_best": 0.537677246557599,
+          "fidelity": {
+            "TemGX": 1.0,
+            "CATGX": -0.07838325202465057,
+            "Attention top-2": -0.07838325202465057,
+            "Most recent 2": -0.4889455735683441,
+            "Random 2": -0.37385591864585876,
+            "Best single removals": 1.0,
+            "Try every pair": 1.0,
+            "LLM (reads the history as text)": 0.7066218256950378
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2017-05-31 \u00b7 Green Mile, The (1999) (Crime, Drama) \u00b7 rated 5.0",
+            "2. 2017-05-31 \u00b7 Bowling for Columbine (2002) (Documentary) \u00b7 rated 4.0",
+            "3. 2017-05-31 \u00b7 Bruce Almighty (2003) (Comedy, Drama, Fantasy, Romance) \u00b7 rated 2.0",
+            "4. 2017-05-31 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "5. 2017-05-31 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "6. 2017-05-31 \u00b7 Hidden Figures (2016) (Drama) \u00b7 rated 3.0",
+            "7. 2017-05-31 \u00b7 I Origins (2014) (Drama, Sci-Fi) \u00b7 rated 5.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              2,
+              4
+            ],
+            "CATGX": [
+              6,
+              7
+            ],
+            "Attention top-2": [
+              7,
+              6
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              4
+            ],
+            "Best single removals": [
+              2,
+              4
+            ],
+            "Try every pair": [
+              2,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              5,
+              7
+            ]
+          },
+          "p_before": 0.17897234424407615,
+          "p_after": {
+            "TemGX": 0.01326579925085397,
+            "CATGX": 0.5964736238191204,
+            "Attention top-2": 0.5964736238191204,
+            "Most recent 2": 0.5964736238191204,
+            "Random 2": 0.26608529961597027,
+            "Best single removals": 0.01326579925085397,
+            "Try every pair": 0.01326579925085397,
+            "LLM (reads the history as text)": 0.36483882227649145
+          },
+          "p_best": 0.013265807945202983,
+          "fidelity": {
+            "TemGX": 1.000000238418579,
+            "CATGX": -0.6870773434638977,
+            "Attention top-2": -0.6870773434638977,
+            "Most recent 2": -0.6870773434638977,
+            "Random 2": -0.18261685967445374,
+            "Best single removals": 1.000000238418579,
+            "Try every pair": 1.000000238418579,
+            "LLM (reads the history as text)": -0.3477897644042969
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2017-11-12 \u00b7 Toy Story 2 (1999) (Adventure, Animation, Children, Comedy, Fantasy) \u00b7 rated 3.0",
+            "2. 2017-11-12 \u00b7 Megamind (2010) (Action, Animation, Children, Comedy, Sci-Fi, IMAX) \u00b7 rated 4.5",
+            "3. 2017-11-12 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "4. 2017-11-12 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "5. 2017-11-12 \u00b7 Emperor's New Groove, The (2000) (Adventure, Animation, Children, Comedy, Fantasy) \u00b7 rated 4.5",
+            "6. 2017-11-12 \u00b7 Up (2009) (Adventure, Animation, Children, Drama) \u00b7 rated 4.0",
+            "7. 2017-11-12 \u00b7 Chicken Run (2000) (Animation, Children, Comedy) \u00b7 rated 4.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              2,
+              5
+            ],
+            "CATGX": [
+              2,
+              5
+            ],
+            "Attention top-2": [
+              2,
+              5
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              5
+            ],
+            "Best single removals": [
+              2,
+              5
+            ],
+            "Try every pair": [
+              2,
+              6
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              7
+            ]
+          },
+          "p_before": 0.701861956618683,
+          "p_after": {
+            "TemGX": 0.5649398514497637,
+            "CATGX": 0.5649398514497637,
+            "Attention top-2": 0.5649398514497637,
+            "Most recent 2": 0.7667013394988779,
+            "Random 2": 0.7643035548953983,
+            "Best single removals": 0.5649398514497637,
+            "Try every pair": 0.49051962238776675,
+            "LLM (reads the history as text)": 0.7534101328080393
+          },
+          "p_best": 0.49051962238776675,
+          "fidelity": {
+            "TemGX": 0.6654077172279358,
+            "CATGX": 0.6654077172279358,
+            "Attention top-2": 0.6654077172279358,
+            "Most recent 2": -0.37310755252838135,
+            "Random 2": -0.35816794633865356,
+            "Best single removals": 0.6654077172279358,
+            "Try every pair": 1.0,
+            "LLM (reads the history as text)": -0.29157960414886475
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2018-07-03 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0",
+            "2. 2018-07-03 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "3. 2018-07-03 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "4. 2018-07-03 \u00b7 Usual Suspects, The (1995) (Crime, Mystery, Thriller) \u00b7 rated 3.5",
+            "5. 2018-07-03 \u00b7 Godfather: Part II, The (1974) (Crime, Drama) \u00b7 rated 5.0",
+            "6. 2018-07-03 \u00b7 One Flew Over the Cuckoo's Nest (1975) (Drama) \u00b7 rated 5.0",
+            "7. 2018-07-03 \u00b7 Pulp Fiction (1994) (Comedy, Crime, Drama, Thriller) \u00b7 rated 5.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Forrest Gump (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              4,
+              7
+            ],
+            "CATGX": [
+              1,
+              6
+            ],
+            "Attention top-2": [
+              1,
+              6
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              3,
+              7
+            ],
+            "Best single removals": [
+              4,
+              7
+            ],
+            "Try every pair": [
+              4,
+              7
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              5
+            ]
+          },
+          "p_before": 0.6137165261166695,
+          "p_after": {
+            "TemGX": 0.5397517648996916,
+            "CATGX": 0.7492093163465949,
+            "Attention top-2": 0.7492093163465949,
+            "Most recent 2": 0.6368834813477445,
+            "Random 2": 0.5901090825450946,
+            "Best single removals": 0.5397517648996916,
+            "Try every pair": 0.5397517648996916,
+            "LLM (reads the history as text)": 0.6068308882399337
+          },
+          "p_best": 0.539751719942983,
+          "fidelity": {
+            "TemGX": 0.9999994039535522,
+            "CATGX": -2.079709053039551,
+            "Attention top-2": -2.079709053039551,
+            "Most recent 2": -0.32574203610420227,
+            "Random 2": 0.32456955313682556,
+            "Best single removals": 0.9999994039535522,
+            "Try every pair": 0.9999994039535522,
+            "LLM (reads the history as text)": 0.09535430371761322
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2018-05-02 \u00b7 Usual Suspects, The (1995) (Crime, Mystery, Thriller) \u00b7 rated 1.0",
+            "2. 2018-05-02 \u00b7 Memento (2000) (Mystery, Thriller) \u00b7 rated 3.5",
+            "3. 2018-05-02 \u00b7 There Will Be Blood (2007) (Drama, Western) \u00b7 rated 5.0",
+            "4. 2018-05-02 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "5. 2018-05-02 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "6. 2018-05-02 \u00b7 Avengers: Infinity War - Part I (2018) (Action, Adventure, Sci-Fi) \u00b7 rated 3.0",
+            "7. 2018-05-02 \u00b7 Coco (2017) (Adventure, Animation, Children) \u00b7 rated 1.5"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              1,
+              3
+            ],
+            "Attention top-2": [
+              3,
+              1
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              1,
+              6
+            ],
+            "Best single removals": [
+              2,
+              1
+            ],
+            "Try every pair": [
+              1,
+              2
+            ],
+            "LLM (reads the history as text)": [
+              7,
+              3
+            ]
+          },
+          "p_before": 0.37980810351033617,
+          "p_after": {
+            "TemGX": 0.3161034890281905,
+            "CATGX": 0.5841031076408337,
+            "Attention top-2": 0.5841031076408337,
+            "Most recent 2": 0.3763891436379114,
+            "Random 2": 0.36763459562148093,
+            "Best single removals": 0.3161034890281905,
+            "Try every pair": 0.3161034890281905,
+            "LLM (reads the history as text)": 0.611568907655753
+          },
+          "p_best": 0.3161034890281905,
+          "fidelity": {
+            "TemGX": 1.0,
+            "CATGX": -2.949819564819336,
+            "Attention top-2": -2.949819564819336,
+            "Most recent 2": 0.05167559161782265,
+            "Random 2": 0.184860959649086,
+            "Best single removals": 1.0,
+            "Try every pair": 1.0,
+            "LLM (reads the history as text)": -3.3559396266937256
+          },
+          "plant_is_models_reason": false
+        },
+        {
+          "lines": [
+            "1. 2017-04-01 \u00b7 Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981) (Action, Adventure) \u00b7 rated 5.0",
+            "2. 2017-04-01 \u00b7 Star Wars: Episode V - The Empire Strikes Back (1980) (Action, Adventure, Sci-Fi) \u00b7 rated 5.0",
+            "3. 2017-04-01 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "4. 2017-04-01 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "5. 2017-04-01 \u00b7 Star Wars: Episode IV - A New Hope (1977) (Action, Adventure, Sci-Fi) \u00b7 rated 4.5",
+            "6. 2017-04-01 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 5.0",
+            "7. 2017-04-01 \u00b7 Lord of the Rings: The Return of the King, The (2003) (Action, Adventure, Drama, Fantasy) \u00b7 rated 5.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            3,
+            4
+          ],
+          "picks": {
+            "TemGX": [
+              7,
+              3
+            ],
+            "CATGX": [
+              6,
+              7
+            ],
+            "Attention top-2": [
+              6,
+              7
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              2,
+              6
+            ],
+            "Best single removals": [
+              7,
+              3
+            ],
+            "Try every pair": [
+              3,
+              6
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              7
+            ]
+          },
+          "p_before": 0.659081112219886,
+          "p_after": {
+            "TemGX": 0.6103173202861425,
+            "CATGX": 0.6068386789140662,
+            "Attention top-2": 0.6068386789140662,
+            "Most recent 2": 0.6068386789140662,
+            "Random 2": 0.653109575143682,
+            "Best single removals": 0.6103173202861425,
+            "Try every pair": 0.578709034205722,
+            "LLM (reads the history as text)": 0.6256509240146749
+          },
+          "p_best": 0.578708949784852,
+          "fidelity": {
+            "TemGX": 0.6161532998085022,
+            "CATGX": 0.6588871479034424,
+            "Attention top-2": 0.6588871479034424,
+            "Most recent 2": 0.6588871479034424,
+            "Random 2": 0.07744812965393066,
+            "Best single removals": 0.6161532998085022,
+            "Try every pair": 0.9999989867210388,
+            "LLM (reads the history as text)": 0.42606663703918457
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-02-11 \u00b7 WALL\u00b7E (2008) (Adventure, Animation, Children, Romance, Sci-Fi) \u00b7 rated 5.0",
+            "2. 2018-02-11 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "3. 2018-02-11 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "4. 2018-02-11 \u00b7 Coco (2017) (Adventure, Animation, Children) \u00b7 rated 4.0",
+            "5. 2018-02-11 \u00b7 Get Out (2017) (Horror) \u00b7 rated 3.0",
+            "6. 2018-02-11 \u00b7 28 Days Later (2002) (Action, Horror, Sci-Fi) \u00b7 rated 2.0",
+            "7. 2018-02-11 \u00b7 Always Watching: A Marble Hornets Story (2015) (Horror) \u00b7 rated 2.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              4,
+              5
+            ],
+            "Attention top-2": [
+              5,
+              4
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              6,
+              1
+            ],
+            "Best single removals": [
+              2,
+              1
+            ],
+            "Try every pair": [
+              2,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              4,
+              1
+            ]
+          },
+          "p_before": 0.0455209353197326,
+          "p_after": {
+            "TemGX": 0.007895197921865308,
+            "CATGX": 0.46014820026254655,
+            "Attention top-2": 0.46014820026254655,
+            "Most recent 2": 0.18647543537871372,
+            "Random 2": 0.01970838144131243,
+            "Best single removals": 0.007895197921865308,
+            "Try every pair": 0.0063636415136319804,
+            "LLM (reads the history as text)": 0.06423883630023153
+          },
+          "p_best": 0.0063636430270496095,
+          "fidelity": {
+            "TemGX": 0.8918225169181824,
+            "CATGX": -1.436039686203003,
+            "Attention top-2": -1.436039686203003,
+            "Most recent 2": -0.781917929649353,
+            "Random 2": 0.4302334189414978,
+            "Best single removals": 0.8918225169181824,
+            "Try every pair": 1.0000001192092896,
+            "LLM (reads the history as text)": -0.18141509592533112
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-06-18 \u00b7 Fight Club (1999) (Action, Crime, Drama, Thriller) \u00b7 rated 5.0",
+            "2. 2018-06-18 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "3. 2018-06-18 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "4. 2018-06-18 \u00b7 Matrix, The (1999) (Action, Sci-Fi, Thriller) \u00b7 rated 5.0",
+            "5. 2018-06-18 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0",
+            "6. 2018-06-18 \u00b7 Eyes Wide Shut (1999) (Drama, Mystery, Thriller) \u00b7 rated 5.0",
+            "7. 2018-06-18 \u00b7 Beautiful Mind, A (2001) (Drama, Romance) \u00b7 rated 5.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              1,
+              2
+            ],
+            "CATGX": [
+              5,
+              7
+            ],
+            "Attention top-2": [
+              5,
+              7
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              3,
+              1
+            ],
+            "Best single removals": [
+              2,
+              1
+            ],
+            "Try every pair": [
+              1,
+              2
+            ],
+            "LLM (reads the history as text)": [
+              3,
+              6
+            ]
+          },
+          "p_before": 0.4856270262942884,
+          "p_after": {
+            "TemGX": 0.4380263252269393,
+            "CATGX": 0.602173524578208,
+            "Attention top-2": 0.602173524578208,
+            "Most recent 2": 0.517488909405746,
+            "Random 2": 0.45636882259543504,
+            "Best single removals": 0.4380263252269393,
+            "Try every pair": 0.4380263252269393,
+            "LLM (reads the history as text)": 0.48950335541799916
+          },
+          "p_best": 0.43802611149864656,
+          "fidelity": {
+            "TemGX": 0.9999954700469971,
+            "CATGX": -2.4627726078033447,
+            "Attention top-2": -2.4627726078033447,
+            "Most recent 2": -0.6651667356491089,
+            "Random 2": 0.6128373146057129,
+            "Best single removals": 0.9999954700469971,
+            "Try every pair": 0.9999954700469971,
+            "LLM (reads the history as text)": -0.08094673603773117
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-05-05 \u00b7 Forrest Gump (1994) (Comedy, Drama, Romance, War) \u00b7 rated 3.5",
+            "2. 2018-05-05 \u00b7 Good Will Hunting (1997) (Drama, Romance) \u00b7 rated 4.0",
+            "3. 2018-05-05 \u00b7 Life Is Beautiful (La Vita \u00e8 bella) (1997) (Comedy, Drama, Romance, War) \u00b7 rated 3.0",
+            "4. 2018-05-05 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "5. 2018-05-05 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "6. 2018-05-05 \u00b7 Moulin Rouge (2001) (Drama, Musical, Romance) \u00b7 rated 3.0",
+            "7. 2018-05-05 \u00b7 Bruce Almighty (2003) (Comedy, Drama, Fantasy, Romance) \u00b7 rated 1.5"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            4,
+            5
+          ],
+          "picks": {
+            "TemGX": [
+              4,
+              5
+            ],
+            "CATGX": [
+              2,
+              3
+            ],
+            "Attention top-2": [
+              2,
+              3
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              3
+            ],
+            "Best single removals": [
+              4,
+              5
+            ],
+            "Try every pair": [
+              1,
+              4
+            ],
+            "LLM (reads the history as text)": [
+              5,
+              7
+            ]
+          },
+          "p_before": 0.5221346186628972,
+          "p_after": {
+            "TemGX": 0.4866243371122477,
+            "CATGX": 0.6729844923615905,
+            "Attention top-2": 0.6729844923615905,
+            "Most recent 2": 0.506630399465065,
+            "Random 2": 0.5645773974936833,
+            "Best single removals": 0.4866243371122477,
+            "Try every pair": 0.484824444832184,
+            "LLM (reads the history as text)": 0.5040401541174366
+          },
+          "p_best": 0.4848244892911469,
+          "fidelity": {
+            "TemGX": 0.9517451524734497,
+            "CATGX": -4.240093231201172,
+            "Attention top-2": -4.240093231201172,
+            "Most recent 2": 0.41571420431137085,
+            "Random 2": -1.1463125944137573,
+            "Best single removals": 0.9517451524734497,
+            "Try every pair": 1.0000011920928955,
+            "LLM (reads the history as text)": 0.48511138558387756
+          },
+          "plant_is_models_reason": true
+        },
+        {
+          "lines": [
+            "1. 2018-01-05 \u00b7 Balls of Fury (2007) (Comedy) \u00b7 rated 3.0",
+            "2. 2018-01-05 \u00b7 Sliding Doors (1998) (Drama, Romance) \u00b7 rated 4.5",
+            "3. 2018-01-05 \u00b7 Buffy the Vampire Slayer (1992) (Action, Comedy, Horror) \u00b7 rated 4.5",
+            "4. 2018-01-05 \u00b7 Annie Hall (1977) (Comedy, Romance) \u00b7 rated 5.0",
+            "5. 2018-01-05 \u00b7 The Jungle Book (2016) (Adventure, Drama, Fantasy) \u00b7 rated 4.0",
+            "6. 2018-01-05 \u00b7 Shawshank Redemption, The (1994) (Crime, Drama) \u00b7 rated 5.0",
+            "7. 2018-01-05 \u00b7 Godfather, The (1972) (Crime, Drama) \u00b7 rated 5.0"
+          ],
+          "Z": "Coraline (2009)",
+          "B": "Pulp Fiction (1994)",
+          "planted_lines": [
+            2,
+            3
+          ],
+          "picks": {
+            "TemGX": [
+              5,
+              6
+            ],
+            "CATGX": [
+              1,
+              6
+            ],
+            "Attention top-2": [
+              1,
+              6
+            ],
+            "Most recent 2": [
+              6,
+              7
+            ],
+            "Random 2": [
+              7,
+              1
+            ],
+            "Best single removals": [
+              6,
+              5
+            ],
+            "Try every pair": [
+              5,
+              6
+            ],
+            "LLM (reads the history as text)": [
+              1,
+              3
+            ]
+          },
+          "p_before": 0.13768579963964073,
+          "p_after": {
+            "TemGX": 0.011443338921608884,
+            "CATGX": 0.3398498771144724,
+            "Attention top-2": 0.3398498771144724,
+            "Most recent 2": 0.027413073893615338,
+            "Random 2": 0.47021279625785956,
+            "Best single removals": 0.011443338921608884,
+            "Try every pair": 0.011443338921608884,
+            "LLM (reads the history as text)": 0.43603464040793144
+          },
+          "p_best": 0.011443335382775295,
+          "fidelity": {
+            "TemGX": 0.9999998807907104,
+            "CATGX": -0.4461112916469574,
+            "Attention top-2": -0.4461112916469574,
+            "Most recent 2": 0.6608865857124329,
+            "Random 2": -0.6536696553230286,
+            "Best single removals": 0.9999998807907104,
+            "Try every pair": 0.9999998807907104,
+            "LLM (reads the history as text)": -0.6010892987251282
+          },
+          "plant_is_models_reason": false
+        }
+      ],
+      "temperature": 2.7312044575796697
+    }
+  ]
+}

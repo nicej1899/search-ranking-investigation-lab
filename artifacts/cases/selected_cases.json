@@ -1,0 +1,249 @@
+{
+  "created": "2026-10-21T21:38:16-0400",
+  "rule": "Select the primary and backup illustrative cases with a rule written down BEFORE any variant was\nevaluated on FINAL data. Selection uses only F0 outputs on SHOWCASE members, who are excluded from\nthe FINAL aggregate evaluation.\n\nRule\n  1. FINAL-period explicit-intent cases of showcase members.\n  2. A = highest-ranked (under F0) title with grade 0 whose coarse label is Crime/Thriller.\n  3. B = highest-ranked grade-2 title ranked below A.\n  4. Require F0's behaviour component to favour A over B.\n  4b. (rule v2) Require the behaviour component to be the LARGEST of the three component margins, i.e. the\n      case has the structure being investigated (history-driven ordering).\nRevision log: rule v1 (steps 1-5 without 4b) selected E01-m281 whose behaviour share of the margin was 0.11,\ni.e. history was not the main driver. 4b was added after seeing that F0-only output; no variant (F1/Fctrl)\nresult had been computed on FINAL or showcase data at that point. Both selections are stored.\n  5. Sort: query E01 first (the deck's running query), then by number of Crime/Thriller events in the\n     member's model-input window, then by behaviour share of the A-B margin.\nPrimary = first; backups = next two with a different member or query.\n\nCuration step (disclosed): the rule yields an ordered shortlist. From its top three the presenter-facing\nprimary is E01-m470 (rule rank 2) because its judged-relevant title B (\"That Darn Cat!\", Children|Comedy|\nMystery) is the clearest instance of the running light-mystery request; rule rank 1 (Super Troopers as B)\nis a rubric grade-2 that a human judge may well dispute. The other two top-3 cases are the backups.\nThese are SELECTED ILLUSTRATIVE CASES, not evidence of how often the failure happens.\n",
+  "rule_version": "v2",
+  "primary": {
+    "case_id": "E01-m470-t1496669535",
+    "qid": "E01",
+    "member": 470,
+    "A_index": 22,
+    "B_index": 16,
+    "A_item": 3151,
+    "B_item": 776,
+    "n_crime_in_window": 2,
+    "behaviour_share": 0.507469056336024,
+    "margin": 0.5967626881255589,
+    "component_margin": {
+      "behaviour": 0.3028385981996264,
+      "relevance": 0.0804045285843562,
+      "popularity": 0.21351956134157635
+    }
+  },
+  "backups": [
+    {
+      "case_id": "E01-m381-t1515160611",
+      "qid": "E01",
+      "member": 381,
+      "A_index": 13,
+      "B_index": 25,
+      "A_item": 532,
+      "B_item": 3705,
+      "n_crime_in_window": 2,
+      "behaviour_share": 6.136119199552316,
+      "margin": 0.03454937078526932,
+      "component_margin": {
+        "behaviour": 0.21199905740794295,
+        "relevance": 0.1263357197817057,
+        "popularity": -0.30378540640437934
+      }
+    },
+    {
+      "case_id": "E01-m24-t1535470429",
+      "qid": "E01",
+      "member": 24,
+      "A_index": 6,
+      "B_index": 28,
+      "A_item": 3482,
+      "B_item": 5128,
+      "n_crime_in_window": 2,
+      "behaviour_share": 0.4580218296487307,
+      "margin": 0.43348587528246274,
+      "component_margin": {
+        "behaviour": 0.1985459937237551,
+        "relevance": 0.04338665612102088,
+        "popularity": 0.19155322543768677
+      }
+    }
+  ],
+  "n_eligible": 11,
+  "curated_primary": "E01-m470-t1496669535",
+  "all_eligible": [
+    {
+      "case_id": "E01-m381-t1515160611",
+      "qid": "E01",
+      "member": 381,
+      "A_index": 13,
+      "B_index": 25,
+      "A_item": 532,
+      "B_item": 3705,
+      "n_crime_in_window": 2,
+      "behaviour_share": 6.136119199552316,
+      "margin": 0.03454937078526932,
+      "component_margin": {
+        "behaviour": 0.21199905740794295,
+        "relevance": 0.1263357197817057,
+        "popularity": -0.30378540640437934
+      }
+    },
+    {
+      "case_id": "E01-m470-t1496669535",
+      "qid": "E01",
+      "member": 470,
+      "A_index": 22,
+      "B_index": 16,
+      "A_item": 3151,
+      "B_item": 776,
+      "n_crime_in_window": 2,
+      "behaviour_share": 0.507469056336024,
+      "margin": 0.5967626881255589,
+      "component_margin": {
+        "behaviour": 0.3028385981996264,
+        "relevance": 0.0804045285843562,
+        "popularity": 0.21351956134157635
+      }
+    },
+    {
+      "case_id": "E01-m24-t1535470429",
+      "qid": "E01",
+      "member": 24,
+      "A_index": 6,
+      "B_index": 28,
+      "A_item": 3482,
+      "B_item": 5128,
+      "n_crime_in_window": 2,
+      "behaviour_share": 0.4580218296487307,
+      "margin": 0.43348587528246274,
+      "component_margin": {
+        "behaviour": 0.1985459937237551,
+        "relevance": 0.04338665612102088,
+        "popularity": 0.19155322543768677
+      }
+    },
+    {
+      "case_id": "E01-m490-t1522605301",
+      "qid": "E01",
+      "member": 490,
+      "A_index": 24,
+      "B_index": 2,
+      "A_item": 4501,
+      "B_item": 3914,
+      "n_crime_in_window": 0,
+      "behaviour_share": 2.3062405452055352,
+      "margin": 0.06746331930133642,
+      "component_margin": {
+        "behaviour": 0.15558664228688923,
+        "relevance": -0.023085475665185373,
+        "popularity": -0.06503784732036738
+      }
+    },
+    {
+      "case_id": "E05-m284-t1481688143",
+      "qid": "E05",
+      "member": 284,
+      "A_index": 16,
+      "B_index": 7,
+      "A_item": 341,
+      "B_item": 2205,
+      "n_crime_in_window": 12,
+      "behaviour_share": 3.026901517077315,
+      "margin": 0.03231523557108662,
+      "component_margin": {
+        "behaviour": 0.0978150355748329,
+        "relevance": -0.15716549738325558,
+        "popularity": 0.09166569737950941
+      }
+    },
+    {
+      "case_id": "E02-m533-t1487277900",
+      "qid": "E02",
+      "member": 533,
+      "A_index": 9,
+      "B_index": 19,
+      "A_item": 7205,
+      "B_item": 4516,
+      "n_crime_in_window": 12,
+      "behaviour_share": 0.5631444725500456,
+      "margin": 0.3645246425545382,
+      "component_margin": {
+        "behaviour": 0.20528003756286933,
+        "relevance": 0.00254106029179213,
+        "popularity": 0.15670354469987682
+      }
+    },
+    {
+      "case_id": "E04-m470-t1496669535",
+      "qid": "E04",
+      "member": 470,
+      "A_index": 18,
+      "B_index": 17,
+      "A_item": 7859,
+      "B_item": 1062,
+      "n_crime_in_window": 2,
+      "behaviour_share": 54.64649661567784,
+      "margin": 0.005832174726253581,
+      "component_margin": {
+        "behaviour": 0.31870791644025814,
+        "relevance": -0.44990815222203845,
+        "popularity": 0.1370324105080339
+      }
+    },
+    {
+      "case_id": "E08-m514-t1513601987",
+      "qid": "E08",
+      "member": 514,
+      "A_index": 27,
+      "B_index": 16,
+      "A_item": 2099,
+      "B_item": 4728,
+      "n_crime_in_window": 2,
+      "behaviour_share": 12.255042976898006,
+      "margin": 0.032695089549038325,
+      "component_margin": {
+        "behaviour": 0.4006797275569935,
+        "relevance": -0.6617205932158658,
+        "popularity": 0.2937359552079108
+      }
+    },
+    {
+      "case_id": "E02-m208-t1524522232",
+      "qid": "E02",
+      "member": 208,
+      "A_index": 25,
+      "B_index": 20,
+      "A_item": 1236,
+      "B_item": 475,
+      "n_crime_in_window": 2,
+      "behaviour_share": 5.961701594258989,
+      "margin": 0.06523124153912363,
+      "component_margin": {
+        "behaviour": 0.38888919667928656,
+        "relevance": -0.5958466207677351,
+        "popularity": 0.27218866562757227
+      }
+    },
+    {
+      "case_id": "E04-m24-t1535470429",
+      "qid": "E04",
+      "member": 24,
+      "A_index": 24,
+      "B_index": 10,
+      "A_item": 1650,
+      "B_item": 3944,
+      "n_crime_in_window": 2,
+      "behaviour_share": 2.4055543484758126,
+      "margin": 0.18288142143775893,
+      "component_margin": {
+        "behaviour": 0.4399311985950387,
+        "relevance": -0.5704568665570334,
+        "popularity": 0.31340708939975365
+      }
+    },
+    {
+      "case_id": "E06-m153-t1486297099",
+      "qid": "E06",
+      "member": 153,
+      "A_index": 15,
+      "B_index": 2,
+      "A_item": 6039,
+      "B_item": 3697,
+      "n_crime_in_window": 1,
+      "behaviour_share": 7.536664333556135,
+      "margin": 0.035123356353593094,
+      "component_margin": {
+        "behaviour": 0.26471294710490734,
+        "relevance": -0.4078404250315296,
+        "popularity": 0.1782508342802154
+      }
+    }
+  ]
+}

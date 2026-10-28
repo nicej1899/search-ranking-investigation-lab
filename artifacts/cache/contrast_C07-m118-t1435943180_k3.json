@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m118-t1435943180",
+  "member": 118,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Rob Roy (1995)",
+  "A_id": 3555,
+  "B_id": 734,
+  "member_id": 118,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 73735,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 316",
+        "from_id": 3555,
+        "to_id": 316,
+        "rating": 4.0,
+        "date": "2015-04-30",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 74247,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 102",
+        "from_id": 3555,
+        "to_id": 102,
+        "rating": 5.0,
+        "date": "2015-05-18",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 75421,
+        "from": "user 118",
+        "to": "Matrix, The (1999)",
+        "from_id": 118,
+        "to_id": 2549,
+        "rating": 4.0,
+        "date": "2015-07-03",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 3.532542202287557,
+      "nodes": [
+        {
+          "id": 316,
+          "name": "user 316"
+        },
+        {
+          "id": 102,
+          "name": "user 102"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73735,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 316",
+          "from_id": 3555,
+          "to_id": 316,
+          "rating": 4.0,
+          "date": "2015-04-30"
+        },
+        {
+          "eid": 74247,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 102",
+          "from_id": 3555,
+          "to_id": 102,
+          "rating": 5.0,
+          "date": "2015-05-18"
+        }
+      ]
+    },
+    "n_model_runs": 255
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 73229,
+        "from": "Rob Roy (1995)",
+        "to": "user 322",
+        "from_id": 734,
+        "to_id": 322,
+        "rating": 3.5,
+        "date": "2015-01-30",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 75418,
+        "from": "user 118",
+        "to": "Back to the Future (1985)",
+        "from_id": 118,
+        "to_id": 1579,
+        "rating": 4.0,
+        "date": "2015-07-03",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 75422,
+        "from": "user 118",
+        "to": "American History X (1998)",
+        "from_id": 118,
+        "to_id": 2344,
+        "rating": 4.0,
+        "date": "2015-07-03",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 15.323664964167408,
+      "nodes": [
+        {
+          "id": 307,
+          "name": "user 307"
+        },
+        {
+          "id": 924,
+          "name": "Forrest Gump (1994)"
+        },
+        {
+          "id": 322,
+          "name": "user 322"
+        },
+        {
+          "id": 734,
+          "name": "Rob Roy (1995)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73015,
+          "from": "Forrest Gump (1994)",
+          "to": "user 307",
+          "from_id": 924,
+          "to_id": 307,
+          "rating": 2.5,
+          "date": "2015-01-16"
+        },
+        {
+          "eid": 73210,
+          "from": "Forrest Gump (1994)",
+          "to": "user 322",
+          "from_id": 924,
+          "to_id": 322,
+          "rating": 3.5,
+          "date": "2015-01-30"
+        },
+        {
+          "eid": 73229,
+          "from": "Rob Roy (1995)",
+          "to": "user 322",
+          "from_id": 734,
+          "to_id": 322,
+          "rating": 3.5,
+          "date": "2015-01-30"
+        }
+      ]
+    },
+    "n_model_runs": 250
+  },
+  "test": {
+    "p0": 0.9870330122188218,
+    "del_A": {
+      "p": 0.9551953975086324,
+      "p_random": 0.9870948242926186,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9955103118200325,
+      "p_random": 0.9864293983083956,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

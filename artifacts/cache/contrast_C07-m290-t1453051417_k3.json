@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m290-t1453051417",
+  "member": 290,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Out of Sight (1998)",
+  "A_id": 3555,
+  "B_id": 2004,
+  "member_id": 290,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 79605,
+        "from": "user 290",
+        "to": "Iron Man (2008)",
+        "from_id": 290,
+        "to_id": 7353,
+        "rating": 4.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79609,
+        "from": "user 290",
+        "to": "Avengers, The (2012)",
+        "from_id": 290,
+        "to_id": 8303,
+        "rating": 5.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 5.527618248052607,
+      "nodes": [
+        {
+          "id": 365,
+          "name": "user 365"
+        },
+        {
+          "id": 255,
+          "name": "user 255"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77182,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 365",
+          "from_id": 3555,
+          "to_id": 365,
+          "rating": 4.0,
+          "date": "2015-10-22"
+        },
+        {
+          "eid": 77543,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 255",
+          "from_id": 3555,
+          "to_id": 255,
+          "rating": 4.0,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 336
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 78899,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 297",
+        "from_id": 3555,
+        "to_id": 297,
+        "rating": 2.5,
+        "date": "2015-11-15",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 79607,
+        "from": "user 290",
+        "to": "Iron Man 3 (2013)",
+        "from_id": 290,
+        "to_id": 8761,
+        "rating": 4.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79608,
+        "from": "user 290",
+        "to": "Invincible Iron Man, The (2007)",
+        "from_id": 290,
+        "to_id": 8752,
+        "rating": 3.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGEB",
+      "name": "a path of shared taste that ends at B",
+      "lift": 5.98700297549179,
+      "nodes": [
+        {
+          "id": 62,
+          "name": "user 62"
+        },
+        {
+          "id": 7934,
+          "name": "Iron Man 2 (2010)"
+        },
+        {
+          "id": 297,
+          "name": "user 297"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76852,
+          "from": "Iron Man 2 (2010)",
+          "to": "user 62",
+          "from_id": 7934,
+          "to_id": 62,
+          "rating": 2.5,
+          "date": "2015-09-25"
+        },
+        {
+          "eid": 78133,
+          "from": "Iron Man 2 (2010)",
+          "to": "user 297",
+          "from_id": 7934,
+          "to_id": 297,
+          "rating": 3.5,
+          "date": "2015-11-14"
+        },
+        {
+          "eid": 78899,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 297",
+          "from_id": 3555,
+          "to_id": 297,
+          "rating": 2.5,
+          "date": "2015-11-15"
+        }
+      ]
+    },
+    "n_model_runs": 303
+  },
+  "test": {
+    "p0": 0.8722951951716746,
+    "del_A": {
+      "p": 0.7786233018831664,
+      "p_random": 0.8737722364728757,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9426130159355427,
+      "p_random": 0.8651402175926194,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.3333333333333333,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "created": "2026-10-26T00:18:59-0400",
+  "llm": "written by Claude Sonnet from the evidence sheet (pre-generated for the case-study searches)",
+  "answers": {
+    "C07-m1-t1445714882": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first for a drama with nothing depressing. It leaned on ratings from recent fans of the film, and when those ratings are removed, how sure the model is falls from 70% to 57%.",
+      "precedent": "Past failures [2] and [3] show the same mix, 2 of 3 from recent fans of the film and 1 of 3 from the member's own ratings, and [2] is the same request.",
+      "recommendation": "Try rely less on popularity for specific searches, which worked for 8 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "This does not show the fix works here, and in [2], the closest match, none of the three fixes worked."
+    },
+    "C07-m118-t1435943180": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, mostly because of ratings from recent fans of the film. Removing those ratings barely changes how sure the model is, which goes from 99% to 96%.",
+      "precedent": "Past failures [1] and [3] are the same request with Requiem for a Dream (2000) on top, and [3] also rests on 3 of 3 ratings from recent fans of the film.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 8 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "In [1], the closest match, none of the three fixes worked, and the small change from removing ratings does not show what drove this ranking."
+    },
+    "C07-m122-t1447269105": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, mainly because of ratings from recent fans of the film. Removing them drops how sure the model is from 65% to 59%, while removing random ratings leaves it at 65%.",
+      "precedent": "In past failures [1], [2] and [3], understand \u201cnot\u201d in the request was the fix that worked, and [2] also had Requiem for a Dream (2000) ranked first.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 9 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "None of the three past cases is this same request, so the evidence does not show the fix works here."
+    },
+    "C07-m176-t1435523542": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first and the model was 100% sure. Removing the ratings it cites only moves that to 99%, so those ratings do not explain the choice well.",
+      "precedent": "Past failures [1], [2] and [3] all show 2 of 3 from recent fans of the film and 1 of 3 from the member's own ratings, which is the same mix as here.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 8 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "In [1], none of the three fixes worked, and the evidence does not show what really drove this ranking."
+    },
+    "C07-m226-t1447189556": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, mostly because of ratings from recent fans of the film. Removing them only lowers how sure the model is from 97% to 94%.",
+      "precedent": "Past failures [1], [2] and [3] share 2 of 3 from recent fans of the film or a close mix, and [2] is the same request with Requiem for a Dream (2000) on top.",
+      "recommendation": "Try rely less on popularity for specific searches, which worked for 8 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "In [1] and [2], the closest matches, none of the three fixes worked."
+    },
+    "C07-m250-t1470676715": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first using only the member's own ratings, and the model was just 54% sure. Removing those ratings changes nothing, so they did not drive the pick.",
+      "precedent": "Past failure [1] also rests on 3 of 3 from the member's own ratings, and [2] is the same request, and understand \u201cnot\u201d in the request worked in all three.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 8 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "This does not show which part of the member's ratings pushed Requiem for a Dream (2000) up."
+    },
+    "C07-m260-t1404880899": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, backed by 2 of 3 ratings from recent fans of the film. Removing them drops how sure the model is from 58% to 39%, so they really mattered.",
+      "precedent": "Past failures [2] and [3] show the same mix, 2 of 3 from recent fans of the film and 1 of 3 from the member's own ratings, and [1] rests on 3 of 3 from recent fans.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 7 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "The past cases are other requests, and in [3] a different fix worked, so this does not show the fix works here."
+    },
+    "C07-m284-t1449626093": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, using 2 of 3 of the member's own ratings and 1 of 3 from recent fans of the film. Removing them only lowers how sure the model is from 97% to 93%.",
+      "precedent": "Past failure [1] is the same request with the same mix of ratings, and [2] and [3] were fixed by rely less on popularity for specific searches.",
+      "recommendation": "Try rely less on popularity for specific searches, which worked for 9 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "Only [1] is the same request, and the small change from removing ratings does not show what drove this ranking."
+    },
+    "C07-m291-t1385677294": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, backed by ratings from recent fans of the film. Removing them drops how sure the model is from 81% to 62%, while the better match had only 1 of 1 rating from other people.",
+      "precedent": "Past failures [1], [2] and [3] all ranked a popular film first, and rely less on popularity for specific searches worked in each of them.",
+      "recommendation": "Try rely less on popularity for specific searches, which worked for 8 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "The past cases are different requests, and [2] had no clear structure, so this does not show the fix works here."
+    },
+    "C07-m318-t1461351651": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, using 2 of 3 ratings from other people and 1 of 3 from the member's own ratings. Removing them lowers how sure the model is from 88% to 79%.",
+      "precedent": "Past failure [1] is the same request with a mix of ratings, and [2] has the same 2 of 3 from other people and 1 of 3 from the member's own ratings.",
+      "recommendation": "Try rely less on popularity for specific searches, which worked for 9 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "In [2] and [3], a different fix worked, so this does not show which fix is right here."
+    },
+    "C07-m340-t1439751021": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, using 1 of 3 ratings from recent fans of the film and 2 of 3 from the member's own ratings. Removing them lowers how sure the model is from 97% to 91%.",
+      "precedent": "Past failures [1] and [2] show the same mix of ratings, and [3] is the same request with Requiem for a Dream (2000) on top.",
+      "recommendation": "Try rely less on popularity for specific searches, which worked for 9 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "In [3], the only same request, none of the three fixes worked."
+    },
+    "C07-m438-t1436943790": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, backed only by 3 of 3 ratings from recent fans of the film. Removing them drops how sure the model is from 94% to 72%, while removing random ratings leaves it at 93%.",
+      "precedent": "Past failures [1] and [3] also rest on 3 of 3 ratings from recent fans of the film, and [2] is the same request with Requiem for a Dream (2000) on top.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 9 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "In [1], none of the three fixes worked, so this does not guarantee the fix works here."
+    },
+    "C07-m461-t1378158322": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, backed only by 3 of 3 of the member's own ratings. Removing them drops how sure the model is from 88% to 76%.",
+      "precedent": "Past failures [2] and [3] also rest on 3 of 3 of the member's own ratings, and understand \u201cnot\u201d in the request worked in [1], [2] and [3].",
+      "recommendation": "Try understand \u201cnot\u201d in the request, but trust it very little, since it worked for only 4 of 10 most similar past failures, and this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "The past cases are other requests, so this does not show the fix works for a drama request."
+    },
+    "C07-m580-t1447007091": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, using 1 of 3 ratings from recent fans of the film and 2 of 3 from the member's own ratings. The model was 99% sure, and removing those ratings only moves it to 98%.",
+      "precedent": "Past failures [1] and [2] show the same mix of ratings, [3] is the same request, and understand \u201cnot\u201d in the request worked in all three.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 8 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "Because the small change from removing ratings is tiny, this does not show what really drove this ranking."
+    },
+    "C07-m609-t1479542004": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first using only the member's own ratings. The model was 100% sure, and removing those ratings only moves it to 99%.",
+      "precedent": "Past failures [2] and [3] are the same request with Requiem for a Dream (2000) on top, and in both of them none of the three fixes worked.",
+      "recommendation": "Try rely less on popularity for specific searches, but trust it very little, since it worked for only 2 of 10 most similar past failures, and this kind of pick worked 37% of the time, against 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "In [2] and [3], the closest matches, none of the three fixes worked, so the evidence does not show a fix that works here."
+    },
+    "C07-m72-t1464196245": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, and the model was only 56% sure. Removing the ratings it cites barely changes that, since it goes to 54%.",
+      "precedent": "Past failure [2] shows the same mix, 2 of 3 from recent fans of the film and 1 of 3 from the member's own ratings, and [1] rests on 3 of 3 from recent fans.",
+      "recommendation": "Try understand \u201cnot\u201d in the request, which worked for 9 of 10 most similar past failures, but trust it only a little, since this kind of pick worked 37% of the time, against 24% for always using that fix.",
+      "caveat": "The past cases are other requests, so this does not show the fix works for a drama request."
+    },
+    "C07-m105-t1467360422": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Last Samurai, The (2003) was the better match. All 3 of 3 reasons came from ratings by recent fans of the film, such as user 40 with rating 4.0, and none looked at the \"nothing depressing\" part.",
+      "precedent": "Cases [1], [2] and [3] were also searches with a \"not\" in the request, and each was fixed by understand \u201cnot\u201d in the request.",
+      "recommendation": "Try understand \u201cnot\u201d in the request; it worked for 9 of 10 most similar past failures, though on held-out failures this kind of advice picked a working fix 37% of the time, vs 24% for always using it.",
+      "caveat": "This does not show that the model misread the request, only which ratings it leaned on; how sure the model is dropped from 48% to 43% when those ratings were deleted."
+    },
+    "C07-m121-t1461561151": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but My Life (1993) was the better match. The reasons came from ratings by recent fans of the film, such as user 40 with rating 4.0, and from the member's own 5.0 rating of Shawshank Redemption, The (1994).",
+      "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film too, but their fixes differed: [1] was fixed by rely less on popularity for specific searches, and [2] and [3] were fixed by none of the three.",
+      "recommendation": "The store suggests understand \u201cnot\u201d in the request, but it worked for only 2 of 10 most similar past failures, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "How sure the model is stayed at 100% after every deletion, so these ratings do not explain the choice."
+    },
+    "C07-m142-t1444768677": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but E.T. the Extra-Terrestrial (1982) was the better match. All 3 of 3 reasons came from ratings by recent fans of the film, such as user 316 with rating 4.0.",
+      "precedent": "Cases [1], [2] and [3] also relied on 3 of 3 ratings from recent fans of the film; [1] and [3] were fixed by understand \u201cnot\u201d in the request, but [2] was fixed by none of the three.",
+      "recommendation": "Try understand \u201cnot\u201d in the request; it worked for 10 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "The past cases are only similar, not the same, and [2] shows that no fix works every time."
+    },
+    "C07-m188-t1439465085": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but No Way Out (1987) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 4.0 rating of Matrix, The (1999).",
+      "precedent": "Cases [1] and [3] were the same kind of search and also put Requiem for a Dream (2000) first, and both were fixed by rely less on popularity for specific searches.",
+      "recommendation": "Try rely less on popularity for specific searches; it worked for only 5 of 10 most similar past failures, so treat it as a fair bet and not a sure one. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "How sure the model is stayed at 100% after every deletion, so the evidence does not show which ratings drove the pick."
+    },
+    "C07-m232-t1448815881": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Something to Talk About (1995) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 5.0 rating of Shawshank Redemption, The (1994).",
+      "precedent": "Cases [1] and [3] were the same kind of search with Requiem for a Dream (2000) ranked first, and both were fixed by rely less on popularity for specific searches.",
+      "recommendation": "Try rely less on popularity for specific searches; it worked for 8 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "How sure the model is only moved from 99% to 98% when those ratings were deleted, so they were not the whole story."
+    },
+    "C07-m255-t1446579739": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Let Me In (2010) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 4.5 rating of Matrix, The (1999).",
+      "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film, and none of them were fixed by any of the three fixes.",
+      "recommendation": "The store suggests rely less on popularity for specific searches and it worked for 7 of 10 most similar past failures, but the closest cases show it did not help, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "How sure the model is only moved from 100% to 99% when those ratings were deleted, so the evidence does not show what drove the pick."
+    },
+    "C07-m281-t1378488934": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Sense and Sensibility (1995) was the better match. The pick rested on a rating from user 15 and on the member's own 5.0 rating of Pink Floyd: The Wall (1982), which has little to do with \"nothing depressing\".",
+      "precedent": "Cases [1], [2] and [3] all leaned on a run of the member's own ratings, and each was fixed by understand \u201cnot\u201d in the request.",
+      "recommendation": "Try understand \u201cnot\u201d in the request; it worked for 10 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "Only a few ratings backed the pick, and how sure the model is was just 51%, so the picture is thin."
+    },
+    "C07-m290-t1453051417": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Out of Sight (1998) was the better match. The pick leaned on the member's own ratings of Iron Man (2008) and Avengers, The (2012), which say little about drama that is not depressing.",
+      "precedent": "Cases [1], [2] and [3] all leaned on the member's own ratings too; [1] was fixed by understand \u201cnot\u201d in the request, but [2] and [3] were fixed by none of the three.",
+      "recommendation": "Try understand \u201cnot\u201d in the request; it worked for 8 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "The evidence does not show whether the model understood \"nothing depressing\"; it only shows which ratings it used, and how sure the model is fell from 87% to 78% without them."
+    },
+    "C07-m317-t1413054514": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Keeping the Faith (2000) was the better match. The pick rested on a single rating from user 260 (rating 5.0), and the better title had no backing at all.",
+      "precedent": "Cases [1], [2] and [3] also had no clear structure, and each was fixed by understand \u201cnot\u201d in the request.",
+      "recommendation": "Try understand \u201cnot\u201d in the request; it worked for 9 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "The better title had no supporting ratings, so this does not show why the model ranked it lower."
+    },
+    "C07-m325-t1419880402": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Perks of Being a Wallflower, The (2012) was the better match. The pick rested on a single rating from user 260 (rating 5.0), and the better title had no backing at all.",
+      "precedent": "Cases [1], [2] and [3] also had no clear structure; [1] and [2] were fixed by rely less on popularity for specific searches and by understand \u201cnot\u201d in the request, and [3] was fixed by understand \u201cnot\u201d in the request.",
+      "recommendation": "Try rely less on popularity for specific searches; it worked for 8 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "The better title had no supporting ratings, so this does not show why the model ranked it lower."
+    },
+    "C07-m365-t1445546446": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Perfume: The Story of a Murderer (2006) was the better match. The pick was backed by ratings from recent fans of the film, such as user 325 with rating 4.5.",
+      "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film too, and each was fixed by understand \u201cnot\u201d in the request.",
+      "recommendation": "The store suggests understand \u201cnot\u201d in the request, but it worked for only 3 of 10 most similar past failures, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "The evidence does not show that this fix will work here; how sure the model is only fell from 97% to 92% when those ratings were deleted."
+    },
+    "C07-m440-t1449070467": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Once Upon a Time in the Midlands (2002) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 5.0 rating of Star Wars: Episode IV - A New Hope (1977).",
+      "precedent": "Cases [1] and [2] were fixed by none of the three fixes, while [3] was the same kind of search and was fixed by rely less on popularity for specific searches.",
+      "recommendation": "The store suggests understand \u201cnot\u201d in the request, but it worked for only 2 of 10 most similar past failures, so trust it only a little; rely less on popularity for specific searches is worth a look too. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "How sure the model is stayed at 100% after every deletion, so the evidence does not show what drove the pick."
+    },
+    "C07-m505-t1424486905": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Patriot, The (2000) was the better match. The pick rested on ratings by recent fans of the film, including a low 0.5 from user 343, and on the member's own 3.5 rating of Whiplash (2014).",
+      "precedent": "Cases [1], [2] and [3] all leaned on a shared movie, and each was fixed by understand \u201cnot\u201d in the request.",
+      "recommendation": "Try understand \u201cnot\u201d in the request; it worked for 7 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "The evidence shows which ratings the model used, with how sure the model is falling from 53% to 42% without them, but not whether it understood the request."
+    },
+    "C07-m59-t1393541892": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Quiet Man, The (1952) was the better match. The pick leaned on the member's own ratings of Ransom (1996) and Glory (1989), which are not quiet dramas.",
+      "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film; [1] was fixed by understand \u201cnot\u201d in the request, but [2] and [3] were fixed by none of the three.",
+      "recommendation": "The store suggests understand \u201cnot\u201d in the request, but it worked for only 2 of 10 most similar past failures, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "How sure the model is stayed at 99% or higher after the deletions, so the evidence does not show what drove the pick."
+    },
+    "C07-m62-t1443199688": {
+      "diagnosis": "The ranker put Requiem for a Dream (2000) first, but We Don't Live Here Anymore (2004) was the better match. All 3 of 3 reasons came from ratings by recent fans of the film, such as user 316 with rating 4.0.",
+      "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film, and each was fixed by rely less on popularity for specific searches.",
+      "recommendation": "Try rely less on popularity for specific searches; it worked for 7 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand \u201cnot\u201d in the request.",
+      "caveat": "How sure the model is stayed at 100% after every deletion, so the evidence does not show which ratings drove the pick."
+    }
+  },
+  "check": {
+    "cases": 31,
+    "with_unsupported_numbers_or_citations": {}
+  }
+}

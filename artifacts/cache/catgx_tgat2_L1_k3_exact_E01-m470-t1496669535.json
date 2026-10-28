@@ -1,0 +1,239 @@
+{
+  "method": "CATGX",
+  "backbone": "tgat2",
+  "L": 1,
+  "k_edges": 8,
+  "K": 3,
+  "N": 40,
+  "alpha": 3,
+  "exact": true,
+  "stage1": {
+    "mode": "exact enumeration",
+    "retrieved_anchors": null
+  },
+  "g": "attention mass of the occurrence's edges in the computation of u, A, B (TGAT)",
+  "n_edges": 6,
+  "n_nodes": 9,
+  "occurrences_total": 10,
+  "occurrences_used": 10,
+  "codebook_TM": {
+    "SEQ": 10.0
+  },
+  "n_cells": 1,
+  "S": {
+    "SEQ": 0.0,
+    "CO": null,
+    "BRIDGE": null,
+    "BRIDGEB": null,
+    "POP": null
+  },
+  "terms": {
+    "SEQ": [
+      {
+        "cell": [
+          9,
+          1,
+          2
+        ],
+        "omega": 1.0,
+        "mu": 0.7999999910593033,
+        "mu_base": 0.7999999910593033,
+        "n": 10
+      }
+    ]
+  },
+  "selected_motifs": [
+    "SEQ"
+  ],
+  "G_star": [
+    90708,
+    90709,
+    90710,
+    90711,
+    90712
+  ],
+  "G_star_occurrences": [
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        8412,
+        2340
+      ],
+      "eids": [
+        90709,
+        90711
+      ],
+      "g": 1.144305780529976,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2836,
+        8412
+      ],
+      "eids": [
+        90708,
+        90709
+      ],
+      "g": 1.0468971505761147,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        8412,
+        5945
+      ],
+      "eids": [
+        90709,
+        90712
+      ],
+      "g": 1.042985551059246,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        8412,
+        7982
+      ],
+      "eids": [
+        90709,
+        90710
+      ],
+      "g": 0.9418456926941872,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2836,
+        2340
+      ],
+      "eids": [
+        90708,
+        90711
+      ],
+      "g": 0.7405134662985802,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2340,
+        5945
+      ],
+      "eids": [
+        90711,
+        90712
+      ],
+      "g": 0.7366018667817116,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2836,
+        5945
+      ],
+      "eids": [
+        90708,
+        90712
+      ],
+      "g": 0.6391932368278503,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        7982,
+        2340
+      ],
+      "eids": [
+        90710,
+        90711
+      ],
+      "g": 0.6354620084166527,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        2836,
+        7982
+      ],
+      "eids": [
+        90708,
+        90710
+      ],
+      "g": 0.5380533784627914,
+      "w": 1.0,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        470,
+        7982,
+        5945
+      ],
+      "eids": [
+        90710,
+        90712
+      ],
+      "g": 0.5341417789459229,
+      "w": 1.0,
+      "touches_u": true
+    }
+  ],
+  "occurrences_by_motif_exact": {
+    "SEQ": 10,
+    "CO": 0,
+    "BRIDGE": 0,
+    "BRIDGEB": 0,
+    "POP": 0
+  },
+  "margin_full": 2.51133394241333,
+  "margin_only": 1.8251270055770874,
+  "margin_without": 1.222124695777893,
+  "temperature": 0.6544249560344189,
+  "prob_full": 0.9789064060863684,
+  "fid_plus": -0.03683325686881844,
+  "fid_minus": 0.11274012842851133,
+  "flipped": false,
+  "coverage": 1.0,
+  "n_model_inferences": 4,
+  "motif_names": {
+    "SEQ": "a person watched two movies in a row",
+    "CO": "two people rated the same movie",
+    "BRIDGE": "a path of shared taste that ends at A",
+    "BRIDGEB": "a path of shared taste that ends at B",
+    "POP": "several people rated A"
+  },
+  "latency_ms": {
+    "enumerate_window": 0.1,
+    "stage1": 0.4,
+    "g": 2.7,
+    "total": 12.2
+  },
+  "computed_at": "2026-10-22T00:26:03-0400",
+  "code_version": "e819884854ef"
+}

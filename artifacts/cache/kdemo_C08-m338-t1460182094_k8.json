@@ -1,0 +1,1156 @@
+{
+  "case_id": "C08-m338-t1460182094",
+  "k": 8,
+  "member": 338,
+  "joint": {
+    "lines": [
+      "TemGX: 8 of the 8 ratings are recent ratings of Chicken Run by other people; 8 of them are part of a pattern CATGX finds.",
+      "CATGX: \u201cRecent fans piled on\u201d looked 3.4\u00d7 and is still 1.9\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cShared taste leads to the title\u201d looked 1.7\u00d7 but is 1.1\u00d7 after matching: most of its weight was timing and activity.",
+      "Ranker: Chicken Run beats Two Weeks Notice mainly through popularity (+0.31); the history part adds +0.02."
+    ],
+    "verdict": "Diagnosis: Chicken Run wins mainly through popularity, and the history model adds to it through recent fans of Chicken Run (a pattern that survives matching). None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      78669,
+      79059,
+      81432
+    ]
+  },
+  "score_split": {
+    "relevance": 0.25878606755213873,
+    "popularity": 0.30622948887704415,
+    "behaviour": 0.023233199433735502
+  },
+  "A": "Chicken Run",
+  "B": "Two Weeks Notice",
+  "query": "a comedy for grown-ups, not a kids movie",
+  "p0": 0.6075162832015425,
+  "evidence": [
+    {
+      "eid": 79059,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 232",
+      "to": "Chicken Run",
+      "from_id": 232,
+      "to_id": 3416,
+      "rating": 3.0,
+      "date": "Nov 29, 2015",
+      "days_before": 132,
+      "p_without": 0.42589126349619455,
+      "drop": 0.18162501970534795,
+      "score": {
+        "influence": 0.18162497627134855,
+        "connectedness": 0.6368740084198233,
+        "recency": 0.6973973423076958,
+        "phi": 0.08066950345644128
+      },
+      "why": "User 232 rated Chicken Run 3\u2605 on Nov 29, 2015, 132 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current. Removing only this rating: 61% \u2192 43% (\u221218.2 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 81432,
+      "n": 2,
+      "kind": "crowd",
+      "from": "user 533",
+      "to": "Chicken Run",
+      "from_id": 533,
+      "to_id": 3416,
+      "rating": 4.0,
+      "date": "Apr 4, 2016",
+      "days_before": 5,
+      "p_without": 0.5361180067852679,
+      "drop": 0.07139827641627461,
+      "score": {
+        "influence": 0.07142234426562877,
+        "connectedness": 0.7246741294153268,
+        "recency": 0.9877757466743463,
+        "phi": 0.05112522316283418
+      },
+      "why": "User 533 rated Chicken Run 4\u2605 on Apr 4, 2016, 5 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current; user 533 also rated 3 titles that member 338 rated (e.g. Forrest Gump, Django Unchained), which ties Chicken Run to this member's taste. Removing only this rating: 61% \u2192 54% (\u22127.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.075783925751367,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 80274,
+      "n": 3,
+      "kind": "crowd",
+      "from": "user 17",
+      "to": "Chicken Run",
+      "from_id": 17,
+      "to_id": 3416,
+      "rating": 3.5,
+      "date": "Feb 15, 2016",
+      "days_before": 54,
+      "p_without": 0.5591306474742296,
+      "drop": 0.048385635727312915,
+      "score": {
+        "influence": 0.0484265569747202,
+        "connectedness": 0.777553704422041,
+        "recency": 0.9340245929149403,
+        "phi": 0.0351699943771413
+      },
+      "why": "User 17 rated Chicken Run 3.5\u2605 on Feb 15, 2016, 54 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current; user 17 also rated 5 titles that member 338 rated (e.g. Forrest Gump, Chinatown), which ties Chicken Run to this member's taste. Removing only this rating: 61% \u2192 56% (\u22124.8 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.075783925751367,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 79470,
+      "n": 4,
+      "kind": "crowd",
+      "from": "user 425",
+      "to": "Chicken Run",
+      "from_id": 425,
+      "to_id": 3416,
+      "rating": 4.0,
+      "date": "Dec 25, 2015",
+      "days_before": 105,
+      "p_without": 0.5381371061386,
+      "drop": 0.0693791770629425,
+      "score": {
+        "influence": 0.0693791336289431,
+        "connectedness": 0.6607865192767638,
+        "recency": 0.7503863250935435,
+        "phi": 0.03440130816101869
+      },
+      "why": "User 425 rated Chicken Run 4\u2605 on Dec 25, 2015, 105 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current; user 425 also rated 1 title that member 338 rated (e.g. Forrest Gump), which ties Chicken Run to this member's taste. Removing only this rating: 61% \u2192 54% (\u22126.9 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 77484,
+      "n": 5,
+      "kind": "crowd",
+      "from": "user 104",
+      "to": "Chicken Run",
+      "from_id": 104,
+      "to_id": 3416,
+      "rating": 3.5,
+      "date": "Nov 3, 2015",
+      "days_before": 158,
+      "p_without": 0.5744945573015394,
+      "drop": 0.033021725900003074,
+      "score": {
+        "influence": 0.03302168246600368,
+        "connectedness": 0.6754462760934644,
+        "recency": 0.6864807429288778,
+        "phi": 0.015311522171413438
+      },
+      "why": "User 104 rated Chicken Run 3.5\u2605 on Nov 3, 2015, 158 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current; user 104 also rated 1 title that member 338 rated (e.g. The Departed), which ties Chicken Run to this member's taste. Removing only this rating: 61% \u2192 57% (\u22123.3 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76885,
+      "n": 6,
+      "kind": "crowd",
+      "from": "user 62",
+      "to": "Chicken Run",
+      "from_id": 62,
+      "to_id": 3416,
+      "rating": 4.0,
+      "date": "Sep 25, 2015",
+      "days_before": 197,
+      "p_without": 0.5607135830019805,
+      "drop": 0.04680270019956201,
+      "score": {
+        "influence": 0.04680265676556261,
+        "connectedness": 0.5410329220454833,
+        "recency": 0.5891007933823051,
+        "phi": 0.014917079597641136
+      },
+      "why": "User 62 rated Chicken Run 4\u2605 on Sep 25, 2015, 197 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current. Removing only this rating: 61% \u2192 56% (\u22124.7 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 78669,
+      "n": 7,
+      "kind": "crowd",
+      "from": "user 297",
+      "to": "Chicken Run",
+      "from_id": 297,
+      "to_id": 3416,
+      "rating": 2.5,
+      "date": "Nov 15, 2015",
+      "days_before": 146,
+      "p_without": 0.5853267345236457,
+      "drop": 0.022189548677896798,
+      "score": {
+        "influence": 0.022190369633320994,
+        "connectedness": 0.7312549606626259,
+        "recency": 0.8899419764759825,
+        "phi": 0.014440926370083313
+      },
+      "why": "User 297 rated Chicken Run 2.5\u2605 on Nov 15, 2015, 146 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current; user 297 also rated 2 titles that member 338 rated (e.g. The Departed, Interstellar), which ties Chicken Run to this member's taste. Removing only this rating: 61% \u2192 59% (\u22122.2 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.075783925751367,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 74232,
+      "n": 8,
+      "kind": "crowd",
+      "from": "user 102",
+      "to": "Chicken Run",
+      "from_id": 102,
+      "to_id": 3416,
+      "rating": 4.0,
+      "date": "May 18, 2015",
+      "days_before": 327,
+      "p_without": 0.5745018600134281,
+      "drop": 0.03301442318811443,
+      "score": {
+        "influence": 0.03301938743116106,
+        "connectedness": 0.717533081230232,
+        "recency": 0.5661464610308065,
+        "phi": 0.01341342661534277
+      },
+      "why": "User 102 rated Chicken Run 4\u2605 on May 18, 2015, 327 days before the search. The graph model builds Chicken Run's profile from its recent raters, weighting recent ones more, so this rating makes Chicken Run look current; user 102 also rated 1 title that member 338 rated (e.g. Chinatown), which ties Chicken Run to this member's taste. Removing only this rating: 61% \u2192 57% (\u22123.3 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.8026257789768341,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.8906847025182894,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.42589126349619455,
+      "rand_mean": 0.6002676717723027,
+      "rand_lo": 0.5381371061386,
+      "rand_hi": 0.6078248822048263,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.3609672412828434,
+      "rand_mean": 0.6078410601914519,
+      "rand_lo": 0.6037826614323879,
+      "rand_hi": 0.6158987455651052,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.3064777618386255,
+      "rand_mean": 0.6169621733473298,
+      "rand_lo": 0.5592285245200854,
+      "rand_hi": 0.770138277407491,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.24116553997683265,
+      "rand_mean": 0.6159894804207638,
+      "rand_lo": 0.5831465039933613,
+      "rand_hi": 0.7302129143353826,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.1772340198491134,
+      "rand_mean": 0.6126875667061172,
+      "rand_lo": 0.5792493997402602,
+      "rand_hi": 0.7127600820571837,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.10871823645365802,
+      "rand_mean": 0.6166400641002866,
+      "rand_lo": 0.5719459545520623,
+      "rand_hi": 0.7247364760319517,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 7,
+      "p": 0.09148466856834402,
+      "rand_mean": 0.6165642250727673,
+      "rand_lo": 0.571775969283415,
+      "rand_hi": 0.7877804833043731,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 8,
+      "p": 0.06431670445685189,
+      "rand_mean": 0.6184186664186111,
+      "rand_lo": 0.5838776506311828,
+      "rand_hi": 0.7288076998619275,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.06431670445685189,
+    "rand_mean": 0.6184186664186111,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.6059163737548702,
+      0.6016152021621902,
+      0.6078894703839312,
+      0.6084567936630483,
+      0.6075162832015425,
+      0.6046251707585423,
+      0.6073631895108428,
+      0.6092605582579915,
+      0.6074804930091269,
+      0.606535502241245,
+      0.6152762541842018,
+      0.6062282853035279,
+      0.6075162832015425,
+      0.6063530343941256,
+      0.6057522723990173,
+      0.8650463013445626,
+      0.608207579854131,
+      0.6066777561105827,
+      0.6066843412986327,
+      0.6073561739301243,
+      0.6077889065807339,
+      0.5997176504317633,
+      0.6079023875666717,
+      0.7215290701500785,
+      0.6078746642844775,
+      0.6075162832015425,
+      0.6066843412986327,
+      0.6052367587412456,
+      0.6151184478236582,
+      0.6025814761802988,
+      0.6063060105279909,
+      0.6146905951903682,
+      0.6071874391297577,
+      0.6023149755512265,
+      0.6097820505623346,
+      0.6075162832015425,
+      0.6235949859468337,
+      0.6004480421919501,
+      0.6057635829997186,
+      0.728129572139326,
+      0.6086261590781689,
+      0.6076952168294142,
+      0.6075402150765282,
+      0.6072585159214721,
+      0.614110323569864,
+      0.6092550725563679,
+      0.5690403011120347,
+      0.6075162832015425,
+      0.6067684891980523,
+      0.6040655367766226,
+      0.7294212439919003,
+      0.6081638683053273,
+      0.6066669111124228,
+      0.7244328340432741,
+      0.5695462222401815,
+      0.6102254370546283,
+      0.6063338163715801,
+      0.6075162832015425,
+      0.6049988624796031,
+      0.606497550332213
+    ],
+    "flips": true
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 4,
+    "B_after": 4,
+    "top3_after": [
+      "Chicken Run (2000)",
+      "Iron Giant, The (1999)",
+      "Live Free or Die Hard (2007)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 8673,
+        "name": "Django Unchained",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 102,
+        "name": "user 102",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 232,
+        "name": "user 232",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 425,
+        "name": "user 425",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 104,
+        "name": "user 104",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 297,
+        "name": "user 297",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 6925,
+        "name": "The Departed",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 4752,
+        "name": "Two Weeks Notice",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 17,
+        "name": "user 17",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 338,
+        "name": "user 338",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 533,
+        "name": "user 533",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 3416,
+        "name": "Chicken Run",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 1561,
+        "name": "Chinatown",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 8986,
+        "name": "Interstellar",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 924,
+        "name": "Forrest Gump",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 62,
+        "name": "user 62",
+        "type": "user",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 74232,
+        "s": 3416,
+        "t": 102,
+        "rating": 4.0,
+        "date": "May 18, 2015",
+        "expl": true,
+        "n": 8
+      },
+      {
+        "eid": 76885,
+        "s": 3416,
+        "t": 62,
+        "rating": 4.0,
+        "date": "Sep 25, 2015",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 77484,
+        "s": 3416,
+        "t": 104,
+        "rating": 3.5,
+        "date": "Nov 3, 2015",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 78669,
+        "s": 3416,
+        "t": 297,
+        "rating": 2.5,
+        "date": "Nov 15, 2015",
+        "expl": true,
+        "n": 7
+      },
+      {
+        "eid": 79059,
+        "s": 3416,
+        "t": 232,
+        "rating": 3.0,
+        "date": "Nov 29, 2015",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 79470,
+        "s": 3416,
+        "t": 425,
+        "rating": 4.0,
+        "date": "Dec 25, 2015",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 80274,
+        "s": 3416,
+        "t": 17,
+        "rating": 3.5,
+        "date": "Feb 15, 2016",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 81432,
+        "s": 3416,
+        "t": 533,
+        "rating": 4.0,
+        "date": "Apr 4, 2016",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 74243,
+        "s": 1561,
+        "t": 102,
+        "rating": 4.5,
+        "date": "May 18, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 77255,
+        "s": 6925,
+        "t": 104,
+        "rating": 5.0,
+        "date": "Nov 3, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 78257,
+        "s": 6925,
+        "t": 297,
+        "rating": 3.0,
+        "date": "Nov 14, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 78262,
+        "s": 8986,
+        "t": 297,
+        "rating": 3.0,
+        "date": "Nov 14, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 79440,
+        "s": 924,
+        "t": 425,
+        "rating": 5.0,
+        "date": "Dec 25, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 79992,
+        "s": 924,
+        "t": 17,
+        "rating": 4.5,
+        "date": "Feb 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80488,
+        "s": 1561,
+        "t": 17,
+        "rating": 4.0,
+        "date": "Mar 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81526,
+        "s": 924,
+        "t": 533,
+        "rating": 4.5,
+        "date": "Apr 4, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81627,
+        "s": 8673,
+        "t": 533,
+        "rating": 2.0,
+        "date": "Apr 4, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 82009,
+        "s": 338,
+        "t": 6925,
+        "rating": 4.5,
+        "date": "Apr 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 82010,
+        "s": 338,
+        "t": 1561,
+        "rating": 4.5,
+        "date": "Apr 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 82011,
+        "s": 338,
+        "t": 8986,
+        "rating": 5.0,
+        "date": "Apr 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 82012,
+        "s": 338,
+        "t": 924,
+        "rating": 4.0,
+        "date": "Apr 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 82013,
+        "s": 338,
+        "t": 8673,
+        "rating": 3.0,
+        "date": "Apr 9, 2016",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 3.3677005623867213,
+      "adjusted": 1.8906847025182894,
+      "graph": {
+        "nodes": [
+          {
+            "id": 3416,
+            "name": "Chicken Run",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 232,
+            "name": "user 232",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 533,
+            "name": "user 533",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 79059,
+            "s": 3416,
+            "t": 232,
+            "rating": 3.0,
+            "date": "Nov 29, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 81432,
+            "s": 3416,
+            "t": 533,
+            "rating": 4.0,
+            "date": "Apr 4, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        79059,
+        81432
+      ],
+      "S": 0.06158679570370947,
+      "occurrence": {
+        "eids": [
+          79059,
+          81432
+        ],
+        "nodes": [
+          "user 232",
+          "user 533",
+          "Chicken Run"
+        ],
+        "dates": [
+          "Nov 29, 2015",
+          "Apr 4, 2016"
+        ]
+      },
+      "p_without": 0.3609672412828434,
+      "p_random": 0.6044118294461293,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 3.4\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.9\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 232, user 533, Chicken Run): 61% \u2192 36%; random ratings of the same size: 60% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.27216350911502585,
+      "adjusted": 1.1832572457523558,
+      "graph": {
+        "nodes": [
+          {
+            "id": 338,
+            "name": "user 338",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 8986,
+            "name": "Interstellar",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 924,
+            "name": "Forrest Gump",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 82011,
+            "s": 338,
+            "t": 8986,
+            "rating": 5.0,
+            "date": "Apr 9, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 82012,
+            "s": 338,
+            "t": 924,
+            "rating": 4.0,
+            "date": "Apr 9, 2016",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": 0.0002375703457503291,
+      "occurrence": {
+        "eids": [
+          82011,
+          82012
+        ],
+        "nodes": [
+          "user 338",
+          "Interstellar",
+          "Forrest Gump"
+        ],
+        "dates": [
+          "Apr 9, 2016",
+          "Apr 9, 2016"
+        ]
+      },
+      "p_without": 0.5549008403847824,
+      "p_random": 0.6083135746228356,
+      "p_value": 0.04918032786885246,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.2\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 338, Interstellar, Forrest Gump): 61% \u2192 55%; random ratings of the same size: 61% (p = 0.05)."
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 1.7061886777976198,
+      "adjusted": 1.075783925751367,
+      "graph": {
+        "nodes": [
+          {
+            "id": 3416,
+            "name": "Chicken Run",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 9,
+            "name": "user 9",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 8986,
+            "name": "Interstellar",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 533,
+            "name": "user 533",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 80228,
+            "s": 8986,
+            "t": 9,
+            "rating": 0.5,
+            "date": "Feb 13, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 81516,
+            "s": 8986,
+            "t": 533,
+            "rating": 3.5,
+            "date": "Apr 4, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 81432,
+            "s": 3416,
+            "t": 533,
+            "rating": 4.0,
+            "date": "Apr 4, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        81432
+      ],
+      "S": 0.003340750328513848,
+      "occurrence": {
+        "eids": [
+          80228,
+          81516,
+          81432
+        ],
+        "nodes": [
+          "user 9",
+          "Interstellar",
+          "user 533",
+          "Chicken Run"
+        ],
+        "dates": [
+          "Feb 13, 2016",
+          "Apr 4, 2016",
+          "Apr 4, 2016"
+        ]
+      },
+      "p_without": 0.5361696507705319,
+      "p_random": 0.6225729199436325,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the title: before matching on context it looks 1.7\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.1\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 9, Interstellar, user 533): 61% \u2192 54%; random ratings of the same size: 62% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 0.7045441464107722,
+      "adjusted": 0.8026257789768341,
+      "graph": {
+        "nodes": [
+          {
+            "id": 3416,
+            "name": "Chicken Run",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 297,
+            "name": "user 297",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 232,
+            "name": "user 232",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 78669,
+            "s": 3416,
+            "t": 297,
+            "rating": 2.5,
+            "date": "Nov 15, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 79059,
+            "s": 3416,
+            "t": 232,
+            "rating": 3.0,
+            "date": "Nov 29, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        78669,
+        79059
+      ],
+      "S": -0.015274565358232708,
+      "occurrence": {
+        "eids": [
+          78669,
+          79059
+        ],
+        "nodes": [
+          "user 297",
+          "Chicken Run",
+          "user 232"
+        ],
+        "dates": [
+          "Nov 15, 2015",
+          "Nov 29, 2015"
+        ]
+      },
+      "p_without": 0.4014885428848935,
+      "p_random": 0.6036729815224734,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 0.7\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.8\u00d7. Removing its strongest occurrence (user 297, Chicken Run, user 232): 61% \u2192 40%; random ratings of the same size: 60% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGEB",
+      "name": "Shared taste leads to the better match",
+      "raw": 0.0,
+      "adjusted": 0.0,
+      "graph": {
+        "nodes": [
+          {
+            "id": 4752,
+            "name": "Two Weeks Notice",
+            "type": "title",
+            "role": "B"
+          },
+          {
+            "id": 6925,
+            "name": "The Departed",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 494,
+            "name": "user 494",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 423,
+            "name": "user 423",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 80504,
+            "s": 6925,
+            "t": 423,
+            "rating": 4.5,
+            "date": "Mar 13, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 80676,
+            "s": 6925,
+            "t": 494,
+            "rating": 5.0,
+            "date": "Mar 22, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 80903,
+            "s": 4752,
+            "t": 494,
+            "rating": 4.0,
+            "date": "Mar 22, 2016",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.01909655524276153,
+      "occurrence": {
+        "eids": [
+          80504,
+          80676,
+          80903
+        ],
+        "nodes": [
+          "user 423",
+          "The Departed",
+          "user 494",
+          "Two Weeks Notice"
+        ],
+        "dates": [
+          "Mar 13, 2016",
+          "Mar 22, 2016",
+          "Mar 22, 2016"
+        ]
+      },
+      "p_without": 0.729763927086865,
+      "p_random": 0.6107660292918218,
+      "p_value": 0.9508196721311475,
+      "why": "Shared taste leads to the better match: Removing its strongest occurrence (user 423, The Departed, user 494): 61% \u2192 73%; random ratings of the same size: 61% (p = 0.95)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 1213,
+  "computed_at": "2026-10-27T18:47:42-0400",
+  "summary": "With 8 ratings (8 recent ratings of Chicken Run by other people), the model's preference for Chicken Run over Two Weeks Notice goes from 61% to 6% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 62% on average (p = 0.02, 60 draws). The full ranking still puts Chicken Run at #1: text match and popularity also push it up."
+}

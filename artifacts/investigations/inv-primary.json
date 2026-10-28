@@ -1,0 +1,3802 @@
+{
+  "investigation_id": "inv-primary",
+  "mode": "scripted investigation workflow (deterministic policy over real tool outputs; not a live autonomous agent)",
+  "exported_at": "2026-10-21T21:53:06-0400",
+  "hardware": {
+    "platform": "Linux-6.18.44-fc-v140-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "cpu_count": 2,
+    "torch": "2.12.1+cu130",
+    "torch_threads": 2,
+    "device": "cpu"
+  },
+  "provenance": {
+    "data_fingerprint": "378d0db74318ab1e",
+    "backbone_sha256": "1d01889bb959b06c",
+    "rankers": {
+      "F0": "d3330eed63320c1a",
+      "F1": "7a599a3230b2a1a9",
+      "Fctrl": "3d472593b4beda71"
+    },
+    "cases_hash": "39a36c890c963f5d",
+    "code_version": "d0ff801487c5"
+  },
+  "trace": [
+    {
+      "tool": "load_case",
+      "call_id": 1,
+      "artifact_id": "load_case-858aa5d4",
+      "inputs": {
+        "case_id": "E01-m470-t1496669535"
+      },
+      "outputs": {
+        "case": {
+          "case_id": "E01-m470-t1496669535",
+          "qid": "E01",
+          "query": "a light, cozy mystery, not too intense",
+          "kind": "explicit",
+          "split": "final",
+          "member": 470,
+          "t": 1496669535,
+          "n_history": 5,
+          "judgment_source": "rubric(genres+tags)"
+        },
+        "member_user_id": 471,
+        "history": [
+          {
+            "event_id": 90708,
+            "item": 2226,
+            "movieId": 2959,
+            "title": "Fight Club (1999)",
+            "genres": "Action|Crime|Drama|Thriller",
+            "label": "Crime/Thriller",
+            "ts": 1496668924,
+            "rating": 4.0
+          },
+          {
+            "event_id": 90709,
+            "item": 7802,
+            "movieId": 92259,
+            "title": "Intouchables (2011)",
+            "genres": "Comedy|Drama",
+            "label": "Comedy",
+            "ts": 1496668933,
+            "rating": 4.5
+          },
+          {
+            "event_id": 90710,
+            "item": 7372,
+            "movieId": 79132,
+            "title": "Inception (2010)",
+            "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX",
+            "label": "Crime/Thriller",
+            "ts": 1496668936,
+            "rating": 4.0
+          },
+          {
+            "event_id": 90711,
+            "item": 1730,
+            "movieId": 2324,
+            "title": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+            "genres": "Comedy|Drama|Romance|War",
+            "label": "Comedy",
+            "ts": 1496668940,
+            "rating": 5.0
+          },
+          {
+            "event_id": 90712,
+            "item": 5335,
+            "movieId": 8874,
+            "title": "Shaun of the Dead (2004)",
+            "genres": "Comedy|Horror",
+            "label": "Horror",
+            "ts": 1496668982,
+            "rating": 3.5
+          }
+        ],
+        "candidates": [
+          {
+            "index": 0,
+            "item": 263,
+            "movieId": 303,
+            "title": "Quick and the Dead, The (1995)",
+            "genres": "Action|Thriller|Western",
+            "label": "Crime/Thriller",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 30
+          },
+          {
+            "index": 1,
+            "item": 4639,
+            "movieId": 6934,
+            "title": "Matrix Revolutions, The (2003)",
+            "genres": "Action|Adventure|Sci-Fi|Thriller|IMAX",
+            "label": "Crime/Thriller",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 49
+          },
+          {
+            "index": 2,
+            "item": 1120,
+            "movieId": 1460,
+            "title": "That Darn Cat (1997)",
+            "genres": "Children|Comedy|Mystery",
+            "label": "Mystery",
+            "grade": 2,
+            "runtime_min": null,
+            "train_interactions": 2
+          },
+          {
+            "index": 3,
+            "item": 664,
+            "movieId": 870,
+            "title": "Gone Fishin' (1997)",
+            "genres": "Comedy",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 2
+          },
+          {
+            "index": 4,
+            "item": 4356,
+            "movieId": 6373,
+            "title": "Bruce Almighty (2003)",
+            "genres": "Comedy|Drama|Fantasy|Romance",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 37
+          },
+          {
+            "index": 5,
+            "item": 2073,
+            "movieId": 2752,
+            "title": "Outrageous Fortune (1987)",
+            "genres": "Comedy|Mystery",
+            "label": "Mystery",
+            "grade": 2,
+            "runtime_min": null,
+            "train_interactions": 8
+          },
+          {
+            "index": 6,
+            "item": 1309,
+            "movieId": 1755,
+            "title": "Shooting Fish (1997)",
+            "genres": "Comedy|Romance",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 5
+          },
+          {
+            "index": 7,
+            "item": 489,
+            "movieId": 562,
+            "title": "Welcome to the Dollhouse (1995)",
+            "genres": "Comedy|Drama",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 20
+          },
+          {
+            "index": 8,
+            "item": 2029,
+            "movieId": 2701,
+            "title": "Wild Wild West (1999)",
+            "genres": "Action|Comedy|Sci-Fi|Western",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 43
+          },
+          {
+            "index": 9,
+            "item": 1842,
+            "movieId": 2450,
+            "title": "Howard the Duck (1986)",
+            "genres": "Adventure|Comedy|Sci-Fi",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 15
+          },
+          {
+            "index": 10,
+            "item": 180,
+            "movieId": 212,
+            "title": "Bushwhacked (1995)",
+            "genres": "Adventure|Comedy|Crime|Mystery",
+            "label": "Crime/Thriller",
+            "grade": 2,
+            "runtime_min": null,
+            "train_interactions": 3
+          },
+          {
+            "index": 11,
+            "item": 4210,
+            "movieId": 6100,
+            "title": "Midsummer Night's Sex Comedy, A (1982)",
+            "genres": "Comedy|Romance",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 3
+          },
+          {
+            "index": 12,
+            "item": 452,
+            "movieId": 517,
+            "title": "Rising Sun (1993)",
+            "genres": "Action|Drama|Mystery",
+            "label": "Mystery",
+            "grade": 1,
+            "runtime_min": null,
+            "train_interactions": 8
+          },
+          {
+            "index": 13,
+            "item": 1911,
+            "movieId": 2535,
+            "title": "Earthquake (1974)",
+            "genres": "Action|Drama|Thriller",
+            "label": "Crime/Thriller",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 3
+          },
+          {
+            "index": 14,
+            "item": 2976,
+            "movieId": 3988,
+            "title": "How the Grinch Stole Christmas (a.k.a. The Grinch) (2000)",
+            "genres": "Children|Comedy|Fantasy",
+            "label": "Kids/Animation",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 20
+          },
+          {
+            "index": 15,
+            "item": 7022,
+            "movieId": 68522,
+            "title": "Earth (2007)",
+            "genres": "Documentary",
+            "label": "Documentary",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 1
+          },
+          {
+            "index": 16,
+            "item": 776,
+            "movieId": 1018,
+            "title": "That Darn Cat! (1965)",
+            "genres": "Children|Comedy|Mystery",
+            "label": "Mystery",
+            "grade": 2,
+            "runtime_min": null,
+            "train_interactions": 6
+          },
+          {
+            "index": 17,
+            "item": 1775,
+            "movieId": 2373,
+            "title": "Red Sonja (1985)",
+            "genres": "Action|Adventure|Fantasy",
+            "label": "SciFi/Fantasy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 8
+          },
+          {
+            "index": 18,
+            "item": 3088,
+            "movieId": 4146,
+            "title": "Million Dollar Hotel, The (2001)",
+            "genres": "Drama|Mystery|Romance",
+            "label": "Mystery",
+            "grade": 2,
+            "runtime_min": null,
+            "train_interactions": 3
+          },
+          {
+            "index": 19,
+            "item": 367,
+            "movieId": 423,
+            "title": "Blown Away (1994)",
+            "genres": "Action|Thriller",
+            "label": "Crime/Thriller",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 9
+          },
+          {
+            "index": 20,
+            "item": 3619,
+            "movieId": 4969,
+            "title": "And Then There Were None (1945)",
+            "genres": "Crime|Mystery",
+            "label": "Crime/Thriller",
+            "grade": 1,
+            "runtime_min": null,
+            "train_interactions": 4
+          },
+          {
+            "index": 21,
+            "item": 248,
+            "movieId": 287,
+            "title": "Nina Takes a Lover (1994)",
+            "genres": "Comedy|Romance",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 1
+          },
+          {
+            "index": 22,
+            "item": 3151,
+            "movieId": 4238,
+            "title": "Along Came a Spider (2001)",
+            "genres": "Action|Crime|Mystery|Thriller",
+            "label": "Crime/Thriller",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 12
+          },
+          {
+            "index": 23,
+            "item": 6151,
+            "movieId": 44191,
+            "title": "V for Vendetta (2006)",
+            "genres": "Action|Sci-Fi|Thriller|IMAX",
+            "label": "Crime/Thriller",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 54
+          },
+          {
+            "index": 24,
+            "item": 731,
+            "movieId": 951,
+            "title": "His Girl Friday (1940)",
+            "genres": "Comedy|Romance",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 11
+          },
+          {
+            "index": 25,
+            "item": 2212,
+            "movieId": 2940,
+            "title": "Gilda (1946)",
+            "genres": "Drama|Film-Noir|Mystery|Romance",
+            "label": "Crime/Thriller",
+            "grade": 2,
+            "runtime_min": null,
+            "train_interactions": 6
+          },
+          {
+            "index": 26,
+            "item": 6837,
+            "movieId": 61348,
+            "title": "Disaster Movie (2008)",
+            "genres": "Comedy",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 2
+          },
+          {
+            "index": 27,
+            "item": 3090,
+            "movieId": 4148,
+            "title": "Hannibal (2001)",
+            "genres": "Horror|Thriller",
+            "label": "Crime/Thriller",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 25
+          },
+          {
+            "index": 28,
+            "item": 1591,
+            "movieId": 2133,
+            "title": "Adventures in Babysitting (1987)",
+            "genres": "Adventure|Comedy",
+            "label": "Comedy",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 19
+          },
+          {
+            "index": 29,
+            "item": 4134,
+            "movieId": 5947,
+            "title": "Evelyn (2002)",
+            "genres": "Drama",
+            "label": "Drama",
+            "grade": 0,
+            "runtime_min": null,
+            "train_interactions": 1
+          }
+        ]
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Runtime unknown for every title (no permitted source); the '<100 min' constraint is NOT applied.",
+        "Judgments for explicit queries come from a written genre/tag rubric, not human assessors."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 167.24,
+      "started_at": "2026-10-21T21:52:37-0400"
+    },
+    {
+      "tool": "score_candidates",
+      "call_id": 2,
+      "artifact_id": "score_candidates-536c9df5",
+      "inputs": {
+        "case_id": "E01-m470-t1496669535",
+        "model_id": "F0",
+        "intervention_id": null
+      },
+      "outputs": {
+        "model_id": "F0",
+        "removed_event_ids": [],
+        "ranking": [
+          22,
+          0,
+          20,
+          12,
+          16,
+          7,
+          2,
+          18,
+          8,
+          24,
+          1,
+          19,
+          14,
+          21,
+          23,
+          6,
+          4,
+          9,
+          5,
+          28,
+          17,
+          11,
+          25,
+          13,
+          10,
+          26,
+          15,
+          3,
+          27,
+          29
+        ],
+        "rank": [
+          2,
+          11,
+          7,
+          28,
+          17,
+          19,
+          16,
+          6,
+          9,
+          18,
+          25,
+          22,
+          4,
+          24,
+          13,
+          27,
+          5,
+          21,
+          8,
+          12,
+          3,
+          14,
+          1,
+          15,
+          10,
+          23,
+          26,
+          29,
+          20,
+          30
+        ],
+        "components": {
+          "total": [
+            1.354955943177691,
+            0.285425195176861,
+            0.572619062120614,
+            -1.7923411501495092,
+            -0.056919782727037405,
+            -0.23642778337239204,
+            -0.014707573080220845,
+            0.68962264420963,
+            0.3962784203470638,
+            -0.1903213189654996,
+            -1.1540418313339464,
+            -0.7380913805049754,
+            0.9574906882788525,
+            -1.097709049262695,
+            0.1443246386931021,
+            -1.3287476207103053,
+            0.8093234173761362,
+            -0.6770610959111787,
+            0.46852064884660616,
+            0.28132979151249937,
+            1.0878888418661063,
+            0.03427897782019995,
+            1.406086105501695,
+            0.001946569129318343,
+            0.3163095696344962,
+            -0.7989733135128125,
+            -1.237468344713749,
+            -1.9627869934524946,
+            -0.6321813931857622,
+            -2.728657828769869
+          ],
+          "behaviour": [
+            0.07981714212884385,
+            0.176693810947733,
+            -0.2729813767228569,
+            -0.30032149305279837,
+            0.1569907915741656,
+            -0.19083442957031424,
+            0.11323012038320422,
+            0.0028197787175507343,
+            0.1142895464335434,
+            -0.20675149384940678,
+            -0.342081496193544,
+            -0.09533865675810078,
+            -0.05915510875018597,
+            -0.1585532333666889,
+            -0.13807516983553372,
+            0.0451908039801649,
+            -0.22783024690502132,
+            -0.27359052308088816,
+            0.08155870142216345,
+            -0.19010421696325466,
+            0.01511626112370253,
+            -0.13946701839546324,
+            0.07500835129460506,
+            0.1936909098414012,
+            0.09736974927776175,
+            0.06123990295784324,
+            0.15112782543740566,
+            0.06116313175909294,
+            -0.11762959834915455,
+            0.1132172225197844
+          ],
+          "relevance": [
+            0.9940820639594281,
+            -0.3492880045849386,
+            1.0996921831740496,
+            -1.237927912766132,
+            -0.6481105395670835,
+            -0.03987085155088528,
+            -0.030549493832723082,
+            0.4804056587184019,
+            -0.10443929780885897,
+            -0.10792301750563511,
+            -0.622906438130191,
+            -0.45369882673666306,
+            1.022368299280231,
+            -0.7501019188857948,
+            0.0013430714392166922,
+            -1.0281809829803819,
+            1.0996921831740496,
+            -0.42156749412728395,
+            0.5760158444346541,
+            0.4533370871787606,
+            1.2113792041452873,
+            0.5195034379257515,
+            1.1800967117584058,
+            -0.7065797461678488,
+            0.14152878598577726,
+            -0.7976746975777637,
+            -1.1345044258205756,
+            -2.331634712360149,
+            -0.6893522608334779,
+            -2.496117609579565
+          ],
+          "popularity": [
+            0.28105673708941914,
+            0.45801938881406656,
+            -0.25409174433057885,
+            -0.25409174433057885,
+            0.4341999652658805,
+            -0.0057225022511924965,
+            -0.09738819963070199,
+            0.20639720677367737,
+            0.38642817172237937,
+            0.12435319238954227,
+            -0.18905389701021144,
+            -0.18905389701021144,
+            -0.0057225022511924965,
+            -0.18905389701021144,
+            0.28105673708941914,
+            -0.34575744171008826,
+            -0.06253851889289208,
+            0.01809692129699346,
+            -0.18905389701021144,
+            0.01809692129699346,
+            -0.13860662340288346,
+            -0.34575744171008826,
+            0.15098104244868427,
+            0.514835405455766,
+            0.07741103437095721,
+            -0.06253851889289208,
+            -0.25409174433057885,
+            0.3076845871485612,
+            0.17480046599687024,
+            -0.34575744171008826
+          ],
+          "gate": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "beh_logit": [
+          -2.7809128761291504,
+          3.0310540199279785,
+          -23.946517944335938,
+          -25.586746215820312,
+          1.8490016460418701,
+          -19.018238067626953,
+          -0.77635258436203,
+          -7.400251388549805,
+          -0.7127939462661743,
+          -19.97315788269043,
+          -28.092073440551758,
+          -13.289115905761719,
+          -11.118339538574219,
+          -17.08157730102539,
+          -15.85302734375,
+          -4.858266830444336,
+          -21.23774528503418,
+          -23.983062744140625,
+          -2.6764307022094727,
+          -18.974430084228516,
+          -6.662542819976807,
+          -15.936529159545898,
+          -3.069408893585205,
+          4.050768852233887,
+          -1.7278711795806885,
+          -3.895425796508789,
+          1.4972620010375977,
+          -3.900031566619873,
+          -14.626426696777344,
+          -0.7771263718605042
+        ],
+        "snapshot_hash": "398973d21bf2869f",
+        "units": "score = pairwise log-odds; components additive; beh_logit = raw backbone logit",
+        "latency_ms_inference": 2143.193
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Component values are fitted model weights x standardised features, not causal contributions."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 2170.2,
+      "started_at": "2026-10-21T21:52:37-0400"
+    },
+    {
+      "tool": "explain_history",
+      "call_id": 3,
+      "artifact_id": "explain_history-bf23c038",
+      "inputs": {
+        "case_id": "E01-m470-t1496669535",
+        "A_index": 22,
+        "B_index": 16,
+        "budget": 2,
+        "target": "behavioural_margin"
+      },
+      "outputs": {
+        "target": {
+          "decision": "A ranked above B",
+          "explained_output": "behavioural (temporal backbone) logit margin A-B",
+          "full_ranker": "F0",
+          "A_index": 22,
+          "B_index": 16
+        },
+        "budget": 2,
+        "selected_event_ids": [
+          90710,
+          90708
+        ],
+        "n_removed": 2,
+        "candidates": [
+          {
+            "event_id": 90708,
+            "item": 2226,
+            "ts": 1496668924,
+            "single_removal_effect": 0.656980037689209,
+            "p": 0.05624135002168681,
+            "g_trd": 0.36650440096855164,
+            "decay": 0.4931049399510525,
+            "phi": 0.010164225329555309,
+            "attention": 0.10750175267457962
+          },
+          {
+            "event_id": 90709,
+            "item": 7802,
+            "ts": 1496668933,
+            "single_removal_effect": -2.0175373554229736,
+            "p": 0.0,
+            "g_trd": 0.36993008852005005,
+            "decay": 0.4982672484962578,
+            "phi": 0.0,
+            "attention": 0.16054114699363708
+          },
+          {
+            "event_id": 90710,
+            "item": 7372,
+            "ts": 1496668936,
+            "single_removal_effect": 11.681441456079483,
+            "p": 1.0,
+            "g_trd": 0.36501580476760864,
+            "decay": 0.5,
+            "phi": 0.18250790238380432,
+            "attention": 0.5600694417953491
+          },
+          {
+            "event_id": 90711,
+            "item": 1730,
+            "ts": 1496668940,
+            "single_removal_effect": -2.3115155696868896,
+            "p": 0.0,
+            "g_trd": 0.3678794205188751,
+            "decay": 0.5023197123278974,
+            "phi": 0.0,
+            "attention": 0.11799842119216919
+          },
+          {
+            "event_id": 90712,
+            "item": 5335,
+            "ts": 1496668982,
+            "single_removal_effect": -0.4210944175720215,
+            "p": 0.0,
+            "g_trd": 0.36944150924682617,
+            "decay": 0.5273360961839447,
+            "phi": 0.0,
+            "attention": 0.05388926714658737
+          }
+        ],
+        "selection_steps": [
+          {
+            "event_id": 90710,
+            "phi": 0.18250790238380432,
+            "beh_margin_after": 6.486897557973862,
+            "verified": true
+          },
+          {
+            "event_id": 90708,
+            "phi": 0.010164225329555309,
+            "beh_margin_after": 2.3706104159355164,
+            "verified": true
+          }
+        ],
+        "rejected_by_verify": [],
+        "before": {
+          "score_A": 1.406086105501695,
+          "score_B": 0.8093234173761362,
+          "margin": 0.5967626881255589,
+          "beh_logit_A": -3.069408893585205,
+          "beh_logit_B": -21.23774528503418,
+          "beh_margin": 18.168336391448975,
+          "rank_A": 1,
+          "rank_B": 5,
+          "component_margin": {
+            "behaviour": 0.3028385981996264,
+            "relevance": 0.0804045285843562,
+            "popularity": 0.21351956134157635
+          }
+        },
+        "after": {
+          "score_A": 1.4697340729734218,
+          "score_B": 1.136295497729431,
+          "margin": 0.3334385752439908,
+          "beh_logit_A": 0.7490531206130981,
+          "beh_logit_B": -1.6215577125549316,
+          "beh_margin": 2.37061083316803,
+          "rank_A": 1,
+          "rank_B": 4,
+          "component_margin": {
+            "behaviour": 0.039514485318058276,
+            "relevance": 0.0804045285843562,
+            "popularity": 0.21351956134157635
+          }
+        },
+        "margin_before": 0.5967626881255589,
+        "margin_after": 0.3334385752439908,
+        "margin_change": -0.2633241128815681,
+        "beh_margin_before": 18.168339014053345,
+        "beh_margin_after": 2.3706104159355164,
+        "beh_margin_change": -15.797728598117828,
+        "full_ranker_order_flipped": false,
+        "behavioural_order_flipped": false,
+        "rank_change": {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            5,
+            4
+          ]
+        },
+        "comparison": {
+          "budget": 2,
+          "temgx_adapted": 15.797728598117828,
+          "recency_topk": -2.988215446472168,
+          "attention_topk": 6.756071329116821,
+          "random_mean": 2.5622165819009144,
+          "random_p90": 12.526641085743904,
+          "random_n": 30,
+          "random_seed": 0,
+          "recency_ids": [
+            90711,
+            90712
+          ],
+          "attention_ids": [
+            90710,
+            90709
+          ],
+          "unit": "reduction of behavioural logit margin (A minus B); larger = selected events support A over B more"
+        },
+        "budget_sweep": [
+          {
+            "k": 1,
+            "phi_topk": 11.681441456079483,
+            "recency": -0.4210944175720215,
+            "random_mean": -1.2221409320831298
+          },
+          {
+            "k": 2,
+            "phi_topk": 15.797728598117828,
+            "recency": -2.988215446472168,
+            "random_mean": 1.1268122985959053
+          },
+          {
+            "k": 3,
+            "phi_topk": 11.526986360549927,
+            "recency": 11.279684960842133,
+            "random_mean": 6.55976694226265
+          },
+          {
+            "k": 4,
+            "phi_topk": 11.138428211212158,
+            "recency": 1.8416006565093994,
+            "random_mean": 8.975175127387047
+          },
+          {
+            "k": 5,
+            "phi_topk": 18.122674703598022,
+            "recency": 18.122674703598022,
+            "random_mean": 18.122674703598022
+          }
+        ],
+        "params": {
+          "L_hops": 1,
+          "window": "member's model input window (last 50 events before t)",
+          "lambda_per_hour": 4.165826126904513,
+          "trd": "||h_member - h_title||_2, g = exp(-trd/median)",
+          "p_normalisation": "max(d,0)/max_e max(d_e,0)"
+        },
+        "latency_ms": {
+          "influence_scoring": 4.79,
+          "select_verify": 1.69,
+          "total_explanation": 9.96,
+          "replay_after": 0.904
+        },
+        "n_model_inferences": 10
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "TemGX adaptation (see docs/METHODS_LEDGER.md): L=1 member neighbourhood; p_e measured by single-event replay; TRD uses embedding distance as in the authors' code; no approximation guarantee is claimed for this adaptation.",
+        "Explains model dependence on inputs, not a member's real preferences."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 107.99,
+      "started_at": "2026-10-21T21:52:39-0400"
+    },
+    {
+      "tool": "replay_intervention",
+      "call_id": 4,
+      "artifact_id": "replay_intervention-594b56e1",
+      "inputs": {
+        "case_id": "E01-m470-t1496669535",
+        "event_ids": [
+          90710,
+          90708
+        ],
+        "model_id": "F0"
+      },
+      "outputs": {
+        "removed_event_ids": [
+          90708,
+          90710
+        ],
+        "valid_member_events": true,
+        "input_before": [
+          90708,
+          90709,
+          90710,
+          90711,
+          90712
+        ],
+        "input_after": [
+          90709,
+          90711,
+          90712
+        ],
+        "snapshot_before": "398973d21bf2869f",
+        "snapshot_after": "cb5670cd09e096ed",
+        "reset_max_abs_diff": 0.0,
+        "reset_tolerance": 0.0,
+        "reset_ok": true,
+        "held_fixed": [
+          "query",
+          "candidate set",
+          "eligibility",
+          "prediction time",
+          "backbone params",
+          "ranker weights+normalisation",
+          "title metadata",
+          "popularity counts"
+        ],
+        "latency_ms": {
+          "before": 1.391,
+          "after": 0.967
+        },
+        "before": {
+          "score_A": 1.406086105501695,
+          "score_B": 0.8093234173761362,
+          "margin": 0.5967626881255589,
+          "beh_logit_A": -3.069408893585205,
+          "beh_logit_B": -21.23774528503418,
+          "beh_margin": 18.168336391448975,
+          "rank_A": 1,
+          "rank_B": 5,
+          "component_margin": {
+            "behaviour": 0.3028385981996264,
+            "relevance": 0.0804045285843562,
+            "popularity": 0.21351956134157635
+          }
+        },
+        "after": {
+          "score_A": 1.4697340729734218,
+          "score_B": 1.136295497729431,
+          "margin": 0.3334385752439908,
+          "beh_logit_A": 0.7490531206130981,
+          "beh_logit_B": -1.6215577125549316,
+          "beh_margin": 2.37061083316803,
+          "rank_A": 1,
+          "rank_B": 4,
+          "component_margin": {
+            "behaviour": 0.039514485318058276,
+            "relevance": 0.0804045285843562,
+            "popularity": 0.21351956134157635
+          }
+        },
+        "margin_before": 0.5967626881255589,
+        "margin_after": 0.3334385752439908,
+        "margin_change": -0.2633241128815681
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Member-local intervention; titles have static representations in this backbone."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 21.31,
+      "started_at": "2026-10-21T21:52:39-0400"
+    },
+    {
+      "tool": "analyze_motifs",
+      "call_id": 5,
+      "artifact_id": "analyze_motifs-302a0225",
+      "inputs": {
+        "case_id": "E01-m470-t1496669535",
+        "A_index": 22,
+        "B_index": 16,
+        "context_spec": "recency x duration x title-activity",
+        "aggregate_split": "dev"
+      },
+      "outputs": {
+        "case": {
+          "motif_library": {
+            "M1": "Crime/Thriller -> Crime/Thriller",
+            "M2": "Comedy -> Crime/Thriller",
+            "M3": "Crime/Thriller -> Comedy",
+            "M4": "Comedy -> Comedy",
+            "M5": "Drama -> Drama",
+            "M6": "SciFi/Fantasy -> SciFi/Fantasy",
+            "M7": "Horror -> Crime/Thriller",
+            "M8": "Crime/Thriller -> Crime/Thriller -> Crime/Thriller"
+          },
+          "max_gap_hours": 168,
+          "n_occurrences": 6,
+          "n_cells": 1,
+          "per_motif": {
+            "M1": {
+              "name": "Crime/Thriller -> Crime/Thriller",
+              "S": 10.295266658067703,
+              "n_occurrences": 1,
+              "cells": [
+                {
+                  "cell": [
+                    0,
+                    0,
+                    2
+                  ],
+                  "omega": 1.0,
+                  "mu": 15.797728598117828,
+                  "mu_base": 5.502461940050125,
+                  "n_motif": 1,
+                  "n_cell": 6
+                }
+              ],
+              "mean_g": 15.797728598117828
+            },
+            "M2": {
+              "name": "Comedy -> Crime/Thriller",
+              "S": 1.2536093890666962,
+              "n_occurrences": 1,
+              "cells": [
+                {
+                  "cell": [
+                    0,
+                    0,
+                    2
+                  ],
+                  "omega": 1.0,
+                  "mu": 6.756071329116821,
+                  "mu_base": 5.502461940050125,
+                  "n_motif": 1,
+                  "n_cell": 6
+                }
+              ],
+              "mean_g": 6.756071329116821
+            },
+            "M3": {
+              "name": "Crime/Thriller -> Comedy",
+              "S": -2.0154713690280914,
+              "n_occurrences": 3,
+              "cells": [
+                {
+                  "cell": [
+                    0,
+                    0,
+                    2
+                  ],
+                  "omega": 1.0,
+                  "mu": 3.4869905710220337,
+                  "mu_base": 5.502461940050125,
+                  "n_motif": 3,
+                  "n_cell": 6
+                }
+              ],
+              "mean_g": 3.4869905710220337
+            },
+            "M4": {
+              "name": "Comedy -> Comedy",
+              "S": -5.502461940050125,
+              "n_occurrences": 1,
+              "cells": [
+                {
+                  "cell": [
+                    0,
+                    0,
+                    2
+                  ],
+                  "omega": 1.0,
+                  "mu": 0.0,
+                  "mu_base": 5.502461940050125,
+                  "n_motif": 1,
+                  "n_cell": 6
+                }
+              ],
+              "mean_g": 0.0
+            },
+            "M5": {
+              "name": "Drama -> Drama",
+              "S": null,
+              "n_occurrences": 0,
+              "cells": [],
+              "mean_g": null
+            },
+            "M6": {
+              "name": "SciFi/Fantasy -> SciFi/Fantasy",
+              "S": null,
+              "n_occurrences": 0,
+              "cells": [],
+              "mean_g": null
+            },
+            "M7": {
+              "name": "Horror -> Crime/Thriller",
+              "S": null,
+              "n_occurrences": 0,
+              "cells": [],
+              "mean_g": null
+            },
+            "M8": {
+              "name": "Crime/Thriller -> Crime/Thriller -> Crime/Thriller",
+              "S": null,
+              "n_occurrences": 0,
+              "cells": [],
+              "mean_g": null
+            }
+          },
+          "selected_motifs": [
+            "M1",
+            "M4"
+          ],
+          "G_star_event_ids": [
+            90708,
+            90710
+          ],
+          "G_star_occurrences": [
+            [
+              90708,
+              90710
+            ]
+          ],
+          "G_star_beh_margin_change": -15.797728598117828,
+          "beh_margin_before": 18.168339014053345,
+          "occurrences": [
+            {
+              "motif": "M1",
+              "event_ids": [
+                90708,
+                90710
+              ],
+              "items": [
+                2226,
+                7372
+              ],
+              "t_first": 1496668924,
+              "t_last": 1496668936,
+              "g_raw": 15.797728598117828,
+              "g": 15.797728598117828,
+              "recency_h": 0.1663888888888889,
+              "duration_h": 0.0033333333333333335,
+              "cell": [
+                0,
+                0,
+                2
+              ],
+              "w": 1.0
+            },
+            {
+              "motif": "M2",
+              "event_ids": [
+                90709,
+                90710
+              ],
+              "items": [
+                7802,
+                7372
+              ],
+              "t_first": 1496668933,
+              "t_last": 1496668936,
+              "g_raw": 6.756071329116821,
+              "g": 6.756071329116821,
+              "recency_h": 0.1663888888888889,
+              "duration_h": 0.0008333333333333334,
+              "cell": [
+                0,
+                0,
+                2
+              ],
+              "w": 1.0
+            },
+            {
+              "motif": "M3",
+              "event_ids": [
+                90708,
+                90709
+              ],
+              "items": [
+                2226,
+                7802
+              ],
+              "t_first": 1496668924,
+              "t_last": 1496668933,
+              "g_raw": -1.533501386642456,
+              "g": 0.0,
+              "recency_h": 0.16722222222222222,
+              "duration_h": 0.0025,
+              "cell": [
+                0,
+                0,
+                2
+              ],
+              "w": 1.0
+            },
+            {
+              "motif": "M3",
+              "event_ids": [
+                90708,
+                90711
+              ],
+              "items": [
+                2226,
+                1730
+              ],
+              "t_first": 1496668924,
+              "t_last": 1496668940,
+              "g_raw": -2.461369037628174,
+              "g": 0.0,
+              "recency_h": 0.16527777777777777,
+              "duration_h": 0.0044444444444444444,
+              "cell": [
+                0,
+                0,
+                2
+              ],
+              "w": 1.0
+            },
+            {
+              "motif": "M3",
+              "event_ids": [
+                90710,
+                90711
+              ],
+              "items": [
+                7372,
+                1730
+              ],
+              "t_first": 1496668936,
+              "t_last": 1496668940,
+              "g_raw": 10.460971713066101,
+              "g": 10.460971713066101,
+              "recency_h": 0.16527777777777777,
+              "duration_h": 0.0011111111111111111,
+              "cell": [
+                0,
+                0,
+                2
+              ],
+              "w": 1.0
+            },
+            {
+              "motif": "M4",
+              "event_ids": [
+                90709,
+                90711
+              ],
+              "items": [
+                7802,
+                1730
+              ],
+              "t_first": 1496668933,
+              "t_last": 1496668940,
+              "g_raw": -5.720000505447388,
+              "g": 0.0,
+              "recency_h": 0.16527777777777777,
+              "duration_h": 0.0019444444444444444,
+              "cell": [
+                0,
+                0,
+                2
+              ],
+              "w": 1.0
+            }
+          ],
+          "activity_cuts_train_pop": [
+            2.0,
+            6.0
+          ],
+          "sampling": "exact enumeration (pi=1); no ANN retrieval",
+          "latency_ms": 19.91,
+          "window_hash": "dcf2c8c095702f5a"
+        },
+        "comparable_contexts": {
+          "split": "dev",
+          "comparable_cases": 552,
+          "definition": "Comparable contexts: explicit-intent cases where F0 ranks a grade-0 Crime/Thriller title A above the\nbest-ranked grade-2 title B and the behaviour component favours A (same structure as the primary case).",
+          "per_motif": {
+            "M1": {
+              "name": "Crime/Thriller -> Crime/Thriller",
+              "cases_with_motif": 434,
+              "members": 80,
+              "mean_S": 0.24843188707420258,
+              "frac_S_positive": 0.3663594470046083,
+              "ci95_member_bootstrap": [
+                0.10411263345479214,
+                0.4044494547987199
+              ],
+              "occurrences_total": 3746
+            },
+            "M2": {
+              "name": "Comedy -> Crime/Thriller",
+              "cases_with_motif": 184,
+              "members": 37,
+              "mean_S": -0.16241294031466524,
+              "frac_S_positive": 0.358695652173913,
+              "ci95_member_bootstrap": [
+                -0.2854629479349091,
+                -0.04151409203978917
+              ],
+              "occurrences_total": 1770
+            },
+            "M3": {
+              "name": "Crime/Thriller -> Comedy",
+              "cases_with_motif": 186,
+              "members": 38,
+              "mean_S": 0.01831481445726158,
+              "frac_S_positive": 0.3978494623655914,
+              "ci95_member_bootstrap": [
+                -0.14520434297471294,
+                0.18887031804156817
+              ],
+              "occurrences_total": 1729
+            },
+            "M4": {
+              "name": "Comedy -> Comedy",
+              "cases_with_motif": 162,
+              "members": 34,
+              "mean_S": -0.2795121907627143,
+              "frac_S_positive": 0.20987654320987653,
+              "ci95_member_bootstrap": [
+                -0.5137012857643923,
+                -0.07139858671227328
+              ],
+              "occurrences_total": 1464
+            },
+            "M5": {
+              "name": "Drama -> Drama",
+              "cases_with_motif": 31,
+              "members": 7,
+              "mean_S": -0.06349714911090369,
+              "frac_S_positive": 0.12903225806451613,
+              "ci95_member_bootstrap": [
+                -0.09772404212375918,
+                -0.023272833934183727
+              ],
+              "occurrences_total": 167
+            },
+            "M6": {
+              "name": "SciFi/Fantasy -> SciFi/Fantasy",
+              "cases_with_motif": 161,
+              "members": 32,
+              "mean_S": -0.6255016151416397,
+              "frac_S_positive": 0.2608695652173913,
+              "ci95_member_bootstrap": [
+                -0.9587108873645885,
+                -0.3094151207367828
+              ],
+              "occurrences_total": 857
+            },
+            "M7": {
+              "name": "Horror -> Crime/Thriller",
+              "cases_with_motif": 45,
+              "members": 9,
+              "mean_S": -0.05258642073871338,
+              "frac_S_positive": 0.28888888888888886,
+              "ci95_member_bootstrap": [
+                -0.18924857330003592,
+                0.047787936822560106
+              ],
+              "occurrences_total": 288
+            },
+            "M8": {
+              "name": "Crime/Thriller -> Crime/Thriller -> Crime/Thriller",
+              "cases_with_motif": 241,
+              "members": 45,
+              "mean_S": 0.28374624882299626,
+              "frac_S_positive": 0.6721991701244814,
+              "ci95_member_bootstrap": [
+                0.1422727986254166,
+                0.43534163234973805
+              ],
+              "occurrences_total": 7126
+            }
+          },
+          "aggregation_note": "Mean of per-prediction S(m) across comparable cases; bootstrap resamples MEMBERS (n_boot=2000). This aggregation is our extension, not part of CATGX.",
+          "latency_s": 17.3
+        }
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "CATGX-adapted: exact enumeration (no ANN sampling), g(r) by replay, title-activity bins; see ledger.",
+        "Aggregation over comparable DEV failures is our extension; S(m) is an attribution contrast, not a behavioural causal effect."
+      ],
+      "errors": [],
+      "cache": "cached",
+      "latency_ms": 40.08,
+      "started_at": "2026-10-21T21:52:39-0400"
+    },
+    {
+      "tool": "propose_variant",
+      "call_id": 6,
+      "artifact_id": "propose_variant-79331ea1",
+      "inputs": {
+        "diagnosis_id": "diag-E01-m470-t1496669535",
+        "allowed_change": "history_gate"
+      },
+      "outputs": {
+        "model_id": "F1",
+        "kind": "F1",
+        "mechanism": "query-conditioned gate on the behaviour component",
+        "params": "a0,a1,a2 in gate=exp(a0 + a1*spec(q) + a2*zr(q,i)); F0 weights frozen",
+        "parent": "F0",
+        "fit_on": "DEV query-intent cases (validation period); backbone unchanged (trained on TRAIN)",
+        "diagnosis_id": "diag-E01-m470-t1496669535",
+        "single_mechanism": true
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 16.6,
+      "started_at": "2026-10-21T21:52:39-0400"
+    },
+    {
+      "tool": "train_variant",
+      "call_id": 7,
+      "artifact_id": "train_variant-27375a32",
+      "inputs": {
+        "variant_config": {
+          "model_id": "F1",
+          "kind": "F1",
+          "mechanism": "query-conditioned gate on the behaviour component",
+          "params": "a0,a1,a2 in gate=exp(a0 + a1*spec(q) + a2*zr(q,i)); F0 weights frozen",
+          "parent": "F0",
+          "fit_on": "DEV query-intent cases (validation period); backbone unchanged (trained on TRAIN)",
+          "diagnosis_id": "diag-E01-m470-t1496669535",
+          "single_mechanism": true
+        },
+        "train_split": "train",
+        "validation_split": "dev"
+      },
+      "outputs": {
+        "model_id": "F1",
+        "params": [
+          1.457615613937378,
+          -1.3068629503250122,
+          -0.7079468965530396
+        ],
+        "dev_loss": 0.5026491284370422,
+        "F0_dev_loss": 0.5337330102920532,
+        "config_hash": "7a599a3230b2a1a9",
+        "reproduces_previous_checkpoint": true,
+        "train_split_backbone": "train",
+        "fit_split": "dev"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a",
+          "F1": "7a599a3230b2a1a9"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Gate parameters fit with deterministic LBFGS; identical inputs reproduce the same hash."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 12321.99,
+      "started_at": "2026-10-21T21:52:39-0400"
+    },
+    {
+      "tool": "propose_variant",
+      "call_id": 8,
+      "artifact_id": "propose_variant-7c25c5b6",
+      "inputs": {
+        "diagnosis_id": "diag-E01-m470-t1496669535",
+        "allowed_change": "global_history_scale"
+      },
+      "outputs": {
+        "model_id": "Fctrl",
+        "kind": "Fctrl",
+        "mechanism": "query-independent multiplier on behaviour (ablation)",
+        "params": "c",
+        "parent": "F0",
+        "fit_on": "DEV query-intent cases (validation period); backbone unchanged (trained on TRAIN)",
+        "diagnosis_id": "diag-E01-m470-t1496669535",
+        "single_mechanism": true
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 16.65,
+      "started_at": "2026-10-21T21:52:52-0400"
+    },
+    {
+      "tool": "train_variant",
+      "call_id": 9,
+      "artifact_id": "train_variant-56e341fb",
+      "inputs": {
+        "variant_config": {
+          "model_id": "Fctrl",
+          "kind": "Fctrl",
+          "mechanism": "query-independent multiplier on behaviour (ablation)",
+          "params": "c",
+          "parent": "F0",
+          "fit_on": "DEV query-intent cases (validation period); backbone unchanged (trained on TRAIN)",
+          "diagnosis_id": "diag-E01-m470-t1496669535",
+          "single_mechanism": true
+        },
+        "train_split": "train",
+        "validation_split": "dev"
+      },
+      "outputs": {
+        "model_id": "Fctrl",
+        "params": [
+          0.781877875328064
+        ],
+        "dev_loss": 0.5333482623100281,
+        "F0_dev_loss": 0.5337330102920532,
+        "config_hash": "3d472593b4beda71",
+        "reproduces_previous_checkpoint": true,
+        "train_split_backbone": "train",
+        "fit_split": "dev"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a",
+          "Fctrl": "3d472593b4beda71"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Gate parameters fit with deterministic LBFGS; identical inputs reproduce the same hash."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 3522.28,
+      "started_at": "2026-10-21T21:52:52-0400"
+    },
+    {
+      "tool": "evaluate_variant",
+      "call_id": 10,
+      "artifact_id": "evaluate_variant-b9bea917",
+      "inputs": {
+        "model_id": "F0",
+        "evaluation_protocol_id": "qi-dev-v1"
+      },
+      "outputs": {
+        "model_id": "F0",
+        "protocol": "qi-dev-v1",
+        "run_id": "5dff171966",
+        "created": "2026-10-21T21:52:57-0400",
+        "n_cases": 1268,
+        "mean_ndcg10": 0.6103441954989567,
+        "cases_hash": "c5a36e90840ea79b",
+        "evaluation_id": "eval_qi-dev-v1_F0"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 1541.38,
+      "started_at": "2026-10-21T21:52:55-0400"
+    },
+    {
+      "tool": "evaluate_variant",
+      "call_id": 11,
+      "artifact_id": "evaluate_variant-bf53b49b",
+      "inputs": {
+        "model_id": "F1",
+        "evaluation_protocol_id": "qi-dev-v1"
+      },
+      "outputs": {
+        "model_id": "F1",
+        "protocol": "qi-dev-v1",
+        "run_id": "2c378c9bac",
+        "created": "2026-10-21T21:52:58-0400",
+        "n_cases": 1268,
+        "mean_ndcg10": 0.6404396712007591,
+        "cases_hash": "c5a36e90840ea79b",
+        "evaluation_id": "eval_qi-dev-v1_F1"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F1": "7a599a3230b2a1a9"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 1669.18,
+      "started_at": "2026-10-21T21:52:57-0400"
+    },
+    {
+      "tool": "evaluate_variant",
+      "call_id": 12,
+      "artifact_id": "evaluate_variant-8a2a95b1",
+      "inputs": {
+        "model_id": "Fctrl",
+        "evaluation_protocol_id": "qi-dev-v1"
+      },
+      "outputs": {
+        "model_id": "Fctrl",
+        "protocol": "qi-dev-v1",
+        "run_id": "a974e4fd83",
+        "created": "2026-10-21T21:53:00-0400",
+        "n_cases": 1268,
+        "mean_ndcg10": 0.6126769758685773,
+        "cases_hash": "c5a36e90840ea79b",
+        "evaluation_id": "eval_qi-dev-v1_Fctrl"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "Fctrl": "3d472593b4beda71"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 1431.19,
+      "started_at": "2026-10-21T21:52:58-0400"
+    },
+    {
+      "tool": "compare_variants",
+      "call_id": 13,
+      "artifact_id": "compare_variants-18f59399",
+      "inputs": {
+        "baseline_id": "F0",
+        "variant_id": "F1",
+        "evaluation_id": "qi-dev-v1"
+      },
+      "outputs": {
+        "baseline": "F0",
+        "variant": "F1",
+        "protocol": "qi-dev-v1",
+        "slices": {
+          "all": {
+            "n_cases": 1268,
+            "n_members": 106,
+            "ndcg10": {
+              "baseline": 0.6103441954989567,
+              "variant": 0.6404396712007591,
+              "delta": 0.030095475701802377,
+              "ci95": [
+                0.02580830467187051,
+                0.03425281315160315
+              ],
+              "n_pairs": 1268,
+              "n_members": 106,
+              "wins": 584,
+              "losses": 258
+            },
+            "pair_acc": {
+              "baseline": 0.74375903554602,
+              "variant": 0.7683366420845832,
+              "delta": 0.024577606538563224,
+              "ci95": [
+                0.021112585562607103,
+                0.02798092554481827
+              ],
+              "n_pairs": 1268,
+              "n_members": 106,
+              "wins": 632,
+              "losses": 434
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.49449524712682613,
+              "variant": 0.49984476958161167,
+              "delta": 0.005349522454785538,
+              "ci95": [
+                -0.0019084821428571748,
+                0.012480001805971414
+              ],
+              "n_pairs": 703,
+              "n_members": 106,
+              "wins": 36,
+              "losses": 25
+            }
+          },
+          "explicit": {
+            "n_cases": 848,
+            "n_members": 106,
+            "ndcg10": {
+              "baseline": 0.6899992748797182,
+              "variant": 0.6917564547897816,
+              "delta": 0.0017571799100634111,
+              "ci95": [
+                -0.0004485497332583216,
+                0.0039726370358114165
+              ],
+              "n_pairs": 848,
+              "n_members": 106,
+              "wins": 272,
+              "losses": 221
+            },
+            "pair_acc": {
+              "baseline": 0.7803561201653922,
+              "variant": 0.7781303687404157,
+              "delta": -0.0022257514249764965,
+              "ci95": [
+                -0.003080497648331537,
+                -0.001293454232268544
+              ],
+              "n_pairs": 848,
+              "n_members": 106,
+              "wins": 262,
+              "losses": 405
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.49449524712682613,
+              "variant": 0.49984476958161167,
+              "delta": 0.005349522454785538,
+              "ci95": [
+                -0.002349232064057094,
+                0.012295504666416634
+              ],
+              "n_pairs": 703,
+              "n_members": 106,
+              "wins": 36,
+              "losses": 25
+            }
+          },
+          "broad": {
+            "n_cases": 420,
+            "n_members": 105,
+            "ndcg10": {
+              "baseline": 0.44951679713018067,
+              "variant": 0.536828641478161,
+              "delta": 0.08731184434798034,
+              "ci95": [
+                0.07567143198838845,
+                0.09959329590330092
+              ],
+              "n_pairs": 420,
+              "n_members": 105,
+              "wins": 312,
+              "losses": 37
+            },
+            "pair_acc": {
+              "baseline": 0.6698677789811925,
+              "variant": 0.7485626415985214,
+              "delta": 0.07869486261732883,
+              "ci95": [
+                0.06885292623873784,
+                0.08903702871397846
+              ],
+              "n_pairs": 420,
+              "n_members": 105,
+              "wins": 370,
+              "losses": 29
+            }
+          },
+          "sparse_history": {
+            "n_cases": 1092,
+            "n_members": 91,
+            "ndcg10": {
+              "baseline": 0.6112707529696468,
+              "variant": 0.6431455557904815,
+              "delta": 0.03187480282083466,
+              "ci95": [
+                0.027195689854244948,
+                0.03667368791502463
+              ],
+              "n_pairs": 1092,
+              "n_members": 91,
+              "wins": 521,
+              "losses": 215
+            },
+            "pair_acc": {
+              "baseline": 0.7435499693642956,
+              "variant": 0.7684793252200246,
+              "delta": 0.024929355855728974,
+              "ci95": [
+                0.021565952587108632,
+                0.028726963902218086
+              ],
+              "n_pairs": 1092,
+              "n_members": 91,
+              "wins": 554,
+              "losses": 377
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.47890679279568166,
+              "variant": 0.4853642242531131,
+              "delta": 0.0064574314574314395,
+              "ci95": [
+                -0.002225736649741772,
+                0.01453527649967353
+              ],
+              "n_pairs": 594,
+              "n_members": 91,
+              "wins": 34,
+              "losses": 22
+            }
+          },
+          "dense_history": {
+            "n_cases": 176,
+            "n_members": 15,
+            "ndcg10": {
+              "baseline": 0.6045953275558106,
+              "variant": 0.6236508872690724,
+              "delta": 0.019055559713261783,
+              "ci95": [
+                0.008936316005171804,
+                0.029174950054379506
+              ],
+              "n_pairs": 176,
+              "n_members": 15,
+              "wins": 63,
+              "losses": 43
+            },
+            "pair_acc": {
+              "baseline": 0.745056196173537,
+              "variant": 0.7674513580851398,
+              "delta": 0.022395161911602735,
+              "ci95": [
+                0.013063799999797348,
+                0.03322316859687997
+              ],
+              "n_pairs": 176,
+              "n_members": 15,
+              "wins": 78,
+              "losses": 57
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5794451725644386,
+              "variant": 0.5787570991699431,
+              "delta": -0.0006880733944955031,
+              "ci95": [
+                -0.009174906958628992,
+                0.006880733944954143
+              ],
+              "n_pairs": 109,
+              "n_members": 15,
+              "wins": 2,
+              "losses": 3
+            }
+          },
+          "explicit&sparse": {
+            "n_cases": 728,
+            "n_members": 91,
+            "ndcg10": {
+              "baseline": 0.6864909067277251,
+              "variant": 0.6889781307294914,
+              "delta": 0.002487224001766375,
+              "ci95": [
+                0.00024699240597104435,
+                0.00481524481584548
+              ],
+              "n_pairs": 728,
+              "n_members": 91,
+              "wins": 239,
+              "losses": 184
+            },
+            "pair_acc": {
+              "baseline": 0.7775493554501929,
+              "variant": 0.7752263466576595,
+              "delta": -0.002323008792533332,
+              "ci95": [
+                -0.0033008455402613766,
+                -0.001300206682438341
+              ],
+              "n_pairs": 728,
+              "n_members": 91,
+              "wins": 229,
+              "losses": 352
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.47890679279568166,
+              "variant": 0.4853642242531131,
+              "delta": 0.0064574314574314395,
+              "ci95": [
+                -0.0018016346887861896,
+                0.015033432673084152
+              ],
+              "n_pairs": 594,
+              "n_members": 91,
+              "wins": 34,
+              "losses": 22
+            }
+          },
+          "explicit&dense": {
+            "n_cases": 120,
+            "n_members": 15,
+            "ndcg10": {
+              "baseline": 0.7112833750018114,
+              "variant": 0.7086116207555421,
+              "delta": -0.002671754246269309,
+              "ci95": [
+                -0.007849015427856227,
+                0.0029616990378095033
+              ],
+              "n_pairs": 120,
+              "n_members": 15,
+              "wins": 33,
+              "losses": 37
+            },
+            "pair_acc": {
+              "baseline": 0.7973838261042687,
+              "variant": 0.7957481027091357,
+              "delta": -0.0016357233951330707,
+              "ci95": [
+                -0.0035446937988633494,
+                0.0001642710072074082
+              ],
+              "n_pairs": 120,
+              "n_members": 15,
+              "wins": 33,
+              "losses": 53
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5794451725644386,
+              "variant": 0.5787570991699431,
+              "delta": -0.0006880733944955031,
+              "ci95": [
+                -0.008716153023960055,
+                0.006944746376811676
+              ],
+              "n_pairs": 109,
+              "n_members": 15,
+              "wins": 2,
+              "losses": 3
+            }
+          },
+          "broad&sparse": {
+            "n_cases": 364,
+            "n_members": 91,
+            "ndcg10": {
+              "baseline": 0.4608304454534906,
+              "variant": 0.5514804059124615,
+              "delta": 0.09064996045897089,
+              "ci95": [
+                0.07840008875163353,
+                0.10400837561263766
+              ],
+              "n_pairs": 364,
+              "n_members": 91,
+              "wins": 282,
+              "losses": 31
+            },
+            "pair_acc": {
+              "baseline": 0.6755511971925015,
+              "variant": 0.7549852823447545,
+              "delta": 0.07943408515225303,
+              "ci95": [
+                0.06925958147198463,
+                0.08988433236090447
+              ],
+              "n_pairs": 364,
+              "n_members": 91,
+              "wins": 325,
+              "losses": 25
+            }
+          },
+          "broad&dense": {
+            "n_cases": 56,
+            "n_members": 14,
+            "ndcg10": {
+              "baseline": 0.37597808302866614,
+              "variant": 0.44159217265520845,
+              "delta": 0.0656140896265423,
+              "ci95": [
+                0.035747862742172384,
+                0.09847647853791362
+              ],
+              "n_pairs": 56,
+              "n_members": 14,
+              "wins": 30,
+              "losses": 6
+            },
+            "pair_acc": {
+              "baseline": 0.6329255606076839,
+              "variant": 0.706815476748006,
+              "delta": 0.07388991614032214,
+              "ci95": [
+                0.04477916448880435,
+                0.10550438003796307
+              ],
+              "n_pairs": 56,
+              "n_members": 14,
+              "wins": 45,
+              "losses": 4
+            }
+          }
+        },
+        "bootstrap": "paired, resampling members, n_boot=2000, seed=0",
+        "runs": {
+          "F0": "5dff171966",
+          "F1": "2c378c9bac"
+        }
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a",
+          "F1": "7a599a3230b2a1a9"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Small slices (few members) have wide intervals; do not over-interpret.",
+        "Offline proxy metrics on public data; says nothing about Netflix production or online A/B outcomes."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 1685.73,
+      "started_at": "2026-10-21T21:53:00-0400"
+    },
+    {
+      "tool": "compare_variants",
+      "call_id": 14,
+      "artifact_id": "compare_variants-27ab8e54",
+      "inputs": {
+        "baseline_id": "F0",
+        "variant_id": "Fctrl",
+        "evaluation_id": "qi-dev-v1"
+      },
+      "outputs": {
+        "baseline": "F0",
+        "variant": "Fctrl",
+        "protocol": "qi-dev-v1",
+        "slices": {
+          "all": {
+            "n_cases": 1268,
+            "n_members": 106,
+            "ndcg10": {
+              "baseline": 0.6103441954989567,
+              "variant": 0.6126769758685773,
+              "delta": 0.0023327803696205907,
+              "ci95": [
+                0.0006333450681631936,
+                0.0039617008688342505
+              ],
+              "n_pairs": 1268,
+              "n_members": 106,
+              "wins": 358,
+              "losses": 198
+            },
+            "pair_acc": {
+              "baseline": 0.74375903554602,
+              "variant": 0.744662027912831,
+              "delta": 0.0009029923668110174,
+              "ci95": [
+                0.00039411876248570955,
+                0.0014265984352003491
+              ],
+              "n_pairs": 1268,
+              "n_members": 106,
+              "wins": 513,
+              "losses": 342
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.49449524712682613,
+              "variant": 0.5154361128045338,
+              "delta": 0.0209408656777077,
+              "ci95": [
+                0.013287696470633693,
+                0.029140912830649457
+              ],
+              "n_pairs": 703,
+              "n_members": 106,
+              "wins": 54,
+              "losses": 6
+            }
+          },
+          "explicit": {
+            "n_cases": 848,
+            "n_members": 106,
+            "ndcg10": {
+              "baseline": 0.6899992748797182,
+              "variant": 0.6980522298388561,
+              "delta": 0.008052954959137826,
+              "ci95": [
+                0.0061047780049484635,
+                0.01004917949749612
+              ],
+              "n_pairs": 848,
+              "n_members": 106,
+              "wins": 346,
+              "losses": 83
+            },
+            "pair_acc": {
+              "baseline": 0.7803561201653922,
+              "variant": 0.7849650168563737,
+              "delta": 0.004608896690981412,
+              "ci95": [
+                0.004024731401323279,
+                0.005219676485549674
+              ],
+              "n_pairs": 848,
+              "n_members": 106,
+              "wins": 491,
+              "losses": 123
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.49449524712682613,
+              "variant": 0.5154361128045338,
+              "delta": 0.0209408656777077,
+              "ci95": [
+                0.012723483784897273,
+                0.029145077642049683
+              ],
+              "n_pairs": 703,
+              "n_members": 106,
+              "wins": 54,
+              "losses": 6
+            }
+          },
+          "broad": {
+            "n_cases": 420,
+            "n_members": 105,
+            "ndcg10": {
+              "baseline": 0.44951679713018067,
+              "variant": 0.4403002726142997,
+              "delta": -0.009216524515880953,
+              "ci95": [
+                -0.012560239065559366,
+                -0.006188831663890643
+              ],
+              "n_pairs": 420,
+              "n_members": 105,
+              "wins": 12,
+              "losses": 115
+            },
+            "pair_acc": {
+              "baseline": 0.6698677789811925,
+              "variant": 0.6632883740458685,
+              "delta": -0.006579404935324051,
+              "ci95": [
+                -0.007663296760985741,
+                -0.005481454043167023
+              ],
+              "n_pairs": 420,
+              "n_members": 105,
+              "wins": 22,
+              "losses": 219
+            }
+          },
+          "sparse_history": {
+            "n_cases": 1092,
+            "n_members": 91,
+            "ndcg10": {
+              "baseline": 0.6112707529696468,
+              "variant": 0.6137083125032589,
+              "delta": 0.0024375595336120215,
+              "ci95": [
+                0.0005939745642646211,
+                0.004292072002497715
+              ],
+              "n_pairs": 1092,
+              "n_members": 91,
+              "wins": 319,
+              "losses": 169
+            },
+            "pair_acc": {
+              "baseline": 0.7435499693642956,
+              "variant": 0.7447109738608714,
+              "delta": 0.001161004496575746,
+              "ci95": [
+                0.0006644811266185325,
+                0.001622091506542353
+              ],
+              "n_pairs": 1092,
+              "n_members": 91,
+              "wins": 458,
+              "losses": 294
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.47890679279568166,
+              "variant": 0.4999726096948319,
+              "delta": 0.02106581689915027,
+              "ci95": [
+                0.012034016492844975,
+                0.029361190875009876
+              ],
+              "n_pairs": 594,
+              "n_members": 91,
+              "wins": 47,
+              "losses": 5
+            }
+          },
+          "dense_history": {
+            "n_cases": 176,
+            "n_members": 15,
+            "ndcg10": {
+              "baseline": 0.6045953275558106,
+              "variant": 0.6062780008397578,
+              "delta": 0.0016826732839472225,
+              "ci95": [
+                -0.002111841832274461,
+                0.005260073524693066
+              ],
+              "n_pairs": 176,
+              "n_members": 15,
+              "wins": 39,
+              "losses": 29
+            },
+            "pair_acc": {
+              "baseline": 0.745056196173537,
+              "variant": 0.7443583405533974,
+              "delta": -0.0006978556201395758,
+              "ci95": [
+                -0.002555812894306164,
+                0.0011401562190890972
+              ],
+              "n_pairs": 176,
+              "n_members": 15,
+              "wins": 55,
+              "losses": 48
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5794451725644386,
+              "variant": 0.599705111402359,
+              "delta": 0.020259938837920433,
+              "ci95": [
+                0.0065182301867084125,
+                0.036166069764733265
+              ],
+              "n_pairs": 109,
+              "n_members": 15,
+              "wins": 7,
+              "losses": 1
+            }
+          },
+          "explicit&sparse": {
+            "n_cases": 728,
+            "n_members": 91,
+            "ndcg10": {
+              "baseline": 0.6864909067277251,
+              "variant": 0.6951004352747396,
+              "delta": 0.008609528547014578,
+              "ci95": [
+                0.006534151598151003,
+                0.010918273982662851
+              ],
+              "n_pairs": 728,
+              "n_members": 91,
+              "wins": 310,
+              "losses": 66
+            },
+            "pair_acc": {
+              "baseline": 0.7775493554501929,
+              "variant": 0.782492566833873,
+              "delta": 0.004943211383680146,
+              "ci95": [
+                0.004331859716136871,
+                0.0055640163974233076
+              ],
+              "n_pairs": 728,
+              "n_members": 91,
+              "wins": 437,
+              "losses": 104
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.47890679279568166,
+              "variant": 0.4999726096948319,
+              "delta": 0.02106581689915027,
+              "ci95": [
+                0.012313865839989935,
+                0.029941028797378724
+              ],
+              "n_pairs": 594,
+              "n_members": 91,
+              "wins": 47,
+              "losses": 5
+            }
+          },
+          "explicit&dense": {
+            "n_cases": 120,
+            "n_members": 15,
+            "ndcg10": {
+              "baseline": 0.7112833750018114,
+              "variant": 0.7159597835278297,
+              "delta": 0.004676408526018361,
+              "ci95": [
+                0.0014942178286489998,
+                0.0077671135430039786
+              ],
+              "n_pairs": 120,
+              "n_members": 15,
+              "wins": 36,
+              "losses": 17
+            },
+            "pair_acc": {
+              "baseline": 0.7973838261042687,
+              "variant": 0.7999645469928782,
+              "delta": 0.0025807208886095,
+              "ci95": [
+                0.0011055207492912194,
+                0.004122307763345065
+              ],
+              "n_pairs": 120,
+              "n_members": 15,
+              "wins": 54,
+              "losses": 19
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5794451725644386,
+              "variant": 0.599705111402359,
+              "delta": 0.020259938837920433,
+              "ci95": [
+                0.006578439733593211,
+                0.03531746031746019
+              ],
+              "n_pairs": 109,
+              "n_members": 15,
+              "wins": 7,
+              "losses": 1
+            }
+          },
+          "broad&sparse": {
+            "n_cases": 364,
+            "n_members": 91,
+            "ndcg10": {
+              "baseline": 0.4608304454534906,
+              "variant": 0.45092406696029697,
+              "delta": -0.009906378493193646,
+              "ci95": [
+                -0.013433111388187279,
+                -0.006457209608774666
+              ],
+              "n_pairs": 364,
+              "n_members": 91,
+              "wins": 9,
+              "losses": 103
+            },
+            "pair_acc": {
+              "baseline": 0.6755511971925015,
+              "variant": 0.6691477879148686,
+              "delta": -0.006403409277632832,
+              "ci95": [
+                -0.007511978437366606,
+                -0.005328588453472036
+              ],
+              "n_pairs": 364,
+              "n_members": 91,
+              "wins": 21,
+              "losses": 190
+            }
+          },
+          "broad&dense": {
+            "n_cases": 56,
+            "n_members": 14,
+            "ndcg10": {
+              "baseline": 0.37597808302866614,
+              "variant": 0.37124560936531825,
+              "delta": -0.0047324736633478914,
+              "ci95": [
+                -0.01357809349888951,
+                0.0015407507624826983
+              ],
+              "n_pairs": 56,
+              "n_members": 14,
+              "wins": 3,
+              "losses": 12
+            },
+            "pair_acc": {
+              "baseline": 0.6329255606076839,
+              "variant": 0.6252021838973675,
+              "delta": -0.007723376710316421,
+              "ci95": [
+                -0.0111479426138687,
+                -0.004591504045567141
+              ],
+              "n_pairs": 56,
+              "n_members": 14,
+              "wins": 1,
+              "losses": 29
+            }
+          }
+        },
+        "bootstrap": "paired, resampling members, n_boot=2000, seed=0",
+        "runs": {
+          "F0": "5dff171966",
+          "Fctrl": "a974e4fd83"
+        }
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a",
+          "Fctrl": "3d472593b4beda71"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Small slices (few members) have wide intervals; do not over-interpret.",
+        "Offline proxy metrics on public data; says nothing about Netflix production or online A/B outcomes."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 1734.65,
+      "started_at": "2026-10-21T21:53:02-0400"
+    },
+    {
+      "tool": "evaluate_variant",
+      "call_id": 15,
+      "artifact_id": "evaluate_variant-046cee93",
+      "inputs": {
+        "model_id": "F0",
+        "evaluation_protocol_id": "qi-final-v1"
+      },
+      "outputs": {
+        "model_id": "F0",
+        "protocol": "qi-final-v1",
+        "run_id": "28b83dc433",
+        "created": "2026-10-21T21:43:15-0400",
+        "n_cases": 932,
+        "mean_ndcg10": 0.6096582330236766,
+        "cases_hash": "4524526b3db28281",
+        "evaluation_id": "eval_qi-final-v1_F0"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "FINAL protocol is scored once; repeated calls return the cached run."
+      ],
+      "errors": [],
+      "cache": "cached (run 28b83dc433, 2026-10-21T21:43:15-0400)",
+      "latency_ms": 16.32,
+      "started_at": "2026-10-21T21:53:03-0400"
+    },
+    {
+      "tool": "evaluate_variant",
+      "call_id": 16,
+      "artifact_id": "evaluate_variant-1626ef53",
+      "inputs": {
+        "model_id": "F1",
+        "evaluation_protocol_id": "qi-final-v1"
+      },
+      "outputs": {
+        "model_id": "F1",
+        "protocol": "qi-final-v1",
+        "run_id": "b6bee35f18",
+        "created": "2026-10-21T21:43:16-0400",
+        "n_cases": 932,
+        "mean_ndcg10": 0.6449968287376537,
+        "cases_hash": "4524526b3db28281",
+        "evaluation_id": "eval_qi-final-v1_F1"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F1": "7a599a3230b2a1a9"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "FINAL protocol is scored once; repeated calls return the cached run."
+      ],
+      "errors": [],
+      "cache": "cached (run b6bee35f18, 2026-10-21T21:43:16-0400)",
+      "latency_ms": 17.14,
+      "started_at": "2026-10-21T21:53:03-0400"
+    },
+    {
+      "tool": "evaluate_variant",
+      "call_id": 17,
+      "artifact_id": "evaluate_variant-ae26bdce",
+      "inputs": {
+        "model_id": "Fctrl",
+        "evaluation_protocol_id": "qi-final-v1"
+      },
+      "outputs": {
+        "model_id": "Fctrl",
+        "protocol": "qi-final-v1",
+        "run_id": "121e5452fa",
+        "created": "2026-10-21T21:43:17-0400",
+        "n_cases": 932,
+        "mean_ndcg10": 0.6125652637931056,
+        "cases_hash": "4524526b3db28281",
+        "evaluation_id": "eval_qi-final-v1_Fctrl"
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "Fctrl": "3d472593b4beda71"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "FINAL protocol is scored once; repeated calls return the cached run."
+      ],
+      "errors": [],
+      "cache": "cached (run 121e5452fa, 2026-10-21T21:43:17-0400)",
+      "latency_ms": 18.85,
+      "started_at": "2026-10-21T21:53:03-0400"
+    },
+    {
+      "tool": "compare_variants",
+      "call_id": 18,
+      "artifact_id": "compare_variants-8913c6c1",
+      "inputs": {
+        "baseline_id": "F0",
+        "variant_id": "F1",
+        "evaluation_id": "qi-final-v1"
+      },
+      "outputs": {
+        "baseline": "F0",
+        "variant": "F1",
+        "protocol": "qi-final-v1",
+        "slices": {
+          "all": {
+            "n_cases": 932,
+            "n_members": 78,
+            "ndcg10": {
+              "baseline": 0.6096582330236766,
+              "variant": 0.6449968287376537,
+              "delta": 0.03533859571397713,
+              "ci95": [
+                0.02912093283242134,
+                0.04174433726840866
+              ],
+              "n_pairs": 932,
+              "n_members": 78,
+              "wins": 392,
+              "losses": 269
+            },
+            "pair_acc": {
+              "baseline": 0.7530600707986849,
+              "variant": 0.7786918117428903,
+              "delta": 0.025631740944205395,
+              "ci95": [
+                0.020181652335565837,
+                0.03103769763684199
+              ],
+              "n_pairs": 932,
+              "n_members": 78,
+              "wins": 411,
+              "losses": 382
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5750862332112333,
+              "variant": 0.5681143162393162,
+              "delta": -0.006971916971917125,
+              "ci95": [
+                -0.016982199546485194,
+                0.0038252365188052805
+              ],
+              "n_pairs": 520,
+              "n_members": 78,
+              "wins": 16,
+              "losses": 38
+            }
+          },
+          "explicit": {
+            "n_cases": 624,
+            "n_members": 78,
+            "ndcg10": {
+              "baseline": 0.6989524618029703,
+              "variant": 0.6921175044630806,
+              "delta": -0.006834957339889702,
+              "ci95": [
+                -0.009615223853983243,
+                -0.004076046301784531
+              ],
+              "n_pairs": 624,
+              "n_members": 78,
+              "wins": 148,
+              "losses": 231
+            },
+            "pair_acc": {
+              "baseline": 0.7947847606156329,
+              "variant": 0.786705847245348,
+              "delta": -0.00807891337028488,
+              "ci95": [
+                -0.00976760266015744,
+                -0.006303163722315784
+              ],
+              "n_pairs": 624,
+              "n_members": 78,
+              "wins": 148,
+              "losses": 346
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5750862332112333,
+              "variant": 0.5681143162393162,
+              "delta": -0.006971916971917125,
+              "ci95": [
+                -0.01656075257624471,
+                0.002734822918886308
+              ],
+              "n_pairs": 520,
+              "n_members": 78,
+              "wins": 16,
+              "losses": 38
+            }
+          },
+          "broad": {
+            "n_cases": 308,
+            "n_members": 77,
+            "ndcg10": {
+              "baseline": 0.42875044484744534,
+              "variant": 0.549531563631594,
+              "delta": 0.12078111878414871,
+              "ci95": [
+                0.10179823357164912,
+                0.14068980648482604
+              ],
+              "n_pairs": 308,
+              "n_members": 77,
+              "wins": 244,
+              "losses": 38
+            },
+            "pair_acc": {
+              "baseline": 0.6685269329877254,
+              "variant": 0.7624555839716773,
+              "delta": 0.09392865098395198,
+              "ci95": [
+                0.07606063932998844,
+                0.11011073968168938
+              ],
+              "n_pairs": 308,
+              "n_members": 77,
+              "wins": 263,
+              "losses": 36
+            }
+          },
+          "sparse_history": {
+            "n_cases": 648,
+            "n_members": 54,
+            "ndcg10": {
+              "baseline": 0.6141382033434086,
+              "variant": 0.654367518012797,
+              "delta": 0.040229314669388394,
+              "ci95": [
+                0.032787919578019964,
+                0.04762260312046243
+              ],
+              "n_pairs": 648,
+              "n_members": 54,
+              "wins": 296,
+              "losses": 182
+            },
+            "pair_acc": {
+              "baseline": 0.7529196291190099,
+              "variant": 0.7807703557470802,
+              "delta": 0.02785072662807031,
+              "ci95": [
+                0.022321231166458823,
+                0.03271221236988923
+              ],
+              "n_pairs": 648,
+              "n_members": 54,
+              "wins": 301,
+              "losses": 257
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5423577670768681,
+              "variant": 0.5378455502051008,
+              "delta": -0.004512216871767283,
+              "ci95": [
+                -0.01732303832806819,
+                0.009125517370200677
+              ],
+              "n_pairs": 356,
+              "n_members": 54,
+              "wins": 14,
+              "losses": 27
+            }
+          },
+          "dense_history": {
+            "n_cases": 284,
+            "n_members": 24,
+            "ndcg10": {
+              "baseline": 0.5994363289138658,
+              "variant": 0.6236158194056366,
+              "delta": 0.024179490491770816,
+              "ci95": [
+                0.013377144836386823,
+                0.03597141744942539
+              ],
+              "n_pairs": 284,
+              "n_members": 24,
+              "wins": 96,
+              "losses": 87
+            },
+            "pair_acc": {
+              "baseline": 0.753380515194563,
+              "variant": 0.7739492183812174,
+              "delta": 0.02056870318665449,
+              "ci95": [
+                0.006216006268308083,
+                0.03421220201557328
+              ],
+              "n_pairs": 284,
+              "n_members": 24,
+              "wins": 110,
+              "losses": 125
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.6461309523809523,
+              "variant": 0.6338196864111498,
+              "delta": -0.012311265969802476,
+              "ci95": [
+                -0.024168878200157787,
+                -0.0007162721245000677
+              ],
+              "n_pairs": 164,
+              "n_members": 24,
+              "wins": 2,
+              "losses": 11
+            }
+          },
+          "explicit&sparse": {
+            "n_cases": 432,
+            "n_members": 54,
+            "ndcg10": {
+              "baseline": 0.6870819294677034,
+              "variant": 0.680349567183172,
+              "delta": -0.006732362284531446,
+              "ci95": [
+                -0.01044399192203641,
+                -0.003187109764219959
+              ],
+              "n_pairs": 432,
+              "n_members": 54,
+              "wins": 113,
+              "losses": 156
+            },
+            "pair_acc": {
+              "baseline": 0.7873625191760327,
+              "variant": 0.7789033821649162,
+              "delta": -0.008459137011116558,
+              "ci95": [
+                -0.01044666626965281,
+                -0.006335246075275833
+              ],
+              "n_pairs": 432,
+              "n_members": 54,
+              "wins": 109,
+              "losses": 240
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5423577670768681,
+              "variant": 0.5378455502051008,
+              "delta": -0.004512216871767283,
+              "ci95": [
+                -0.01677325419963904,
+                0.009515917602996195
+              ],
+              "n_pairs": 356,
+              "n_members": 54,
+              "wins": 14,
+              "losses": 27
+            }
+          },
+          "explicit&dense": {
+            "n_cases": 192,
+            "n_members": 24,
+            "ndcg10": {
+              "baseline": 0.7256611595573208,
+              "variant": 0.7185953633428751,
+              "delta": -0.0070657962144456965,
+              "ci95": [
+                -0.010410473840807191,
+                -0.003341047410147846
+              ],
+              "n_pairs": 192,
+              "n_members": 24,
+              "wins": 35,
+              "losses": 75
+            },
+            "pair_acc": {
+              "baseline": 0.811484803854733,
+              "variant": 0.8042613936763194,
+              "delta": -0.007223410178413547,
+              "ci95": [
+                -0.010069437548212379,
+                -0.004336798679867901
+              ],
+              "n_pairs": 192,
+              "n_members": 24,
+              "wins": 39,
+              "losses": 106
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.6461309523809523,
+              "variant": 0.6338196864111498,
+              "delta": -0.012311265969802476,
+              "ci95": [
+                -0.024618435631828466,
+                -0.0002669584879405378
+              ],
+              "n_pairs": 164,
+              "n_members": 24,
+              "wins": 2,
+              "losses": 11
+            }
+          },
+          "broad&sparse": {
+            "n_cases": 216,
+            "n_members": 54,
+            "ndcg10": {
+              "baseline": 0.468250751094819,
+              "variant": 0.6024034196720471,
+              "delta": 0.13415266857722813,
+              "ci95": [
+                0.11241538800413185,
+                0.1554442096493854
+              ],
+              "n_pairs": 216,
+              "n_members": 54,
+              "wins": 183,
+              "losses": 26
+            },
+            "pair_acc": {
+              "baseline": 0.6840338490049641,
+              "variant": 0.7845043029114085,
+              "delta": 0.10047045390644438,
+              "ci95": [
+                0.08452098460086839,
+                0.11492250751490635
+              ],
+              "n_pairs": 216,
+              "n_members": 54,
+              "wins": 192,
+              "losses": 17
+            }
+          },
+          "broad&dense": {
+            "n_cases": 92,
+            "n_members": 23,
+            "ndcg10": {
+              "baseline": 0.3360105953970898,
+              "variant": 0.42539764075400816,
+              "delta": 0.08938704535691838,
+              "ci95": [
+                0.05647426419544607,
+                0.1250137448605251
+              ],
+              "n_pairs": 92,
+              "n_members": 23,
+              "wins": 61,
+              "losses": 12
+            },
+            "pair_acc": {
+              "baseline": 0.632119391034208,
+              "variant": 0.7106890264610047,
+              "delta": 0.07856963542679674,
+              "ci95": [
+                0.03670858316746712,
+                0.11833165240047779
+              ],
+              "n_pairs": 92,
+              "n_members": 23,
+              "wins": 71,
+              "losses": 19
+            }
+          }
+        },
+        "bootstrap": "paired, resampling members, n_boot=2000, seed=0",
+        "runs": {
+          "F0": "28b83dc433",
+          "F1": "b6bee35f18"
+        }
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a",
+          "F1": "7a599a3230b2a1a9"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Small slices (few members) have wide intervals; do not over-interpret.",
+        "Offline proxy metrics on public data; says nothing about Netflix production or online A/B outcomes."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 1386.32,
+      "started_at": "2026-10-21T21:53:03-0400"
+    },
+    {
+      "tool": "compare_variants",
+      "call_id": 19,
+      "artifact_id": "compare_variants-679c3926",
+      "inputs": {
+        "baseline_id": "F0",
+        "variant_id": "Fctrl",
+        "evaluation_id": "qi-final-v1"
+      },
+      "outputs": {
+        "baseline": "F0",
+        "variant": "Fctrl",
+        "protocol": "qi-final-v1",
+        "slices": {
+          "all": {
+            "n_cases": 932,
+            "n_members": 78,
+            "ndcg10": {
+              "baseline": 0.6096582330236766,
+              "variant": 0.6125652637931056,
+              "delta": 0.0029070307694289976,
+              "ci95": [
+                0.0012191292360080514,
+                0.004758823373200996
+              ],
+              "n_pairs": 932,
+              "n_members": 78,
+              "wins": 267,
+              "losses": 139
+            },
+            "pair_acc": {
+              "baseline": 0.7530600707986849,
+              "variant": 0.7539495481833948,
+              "delta": 0.0008894773847099025,
+              "ci95": [
+                0.0002583915941136744,
+                0.0015007048182341675
+              ],
+              "n_pairs": 932,
+              "n_members": 78,
+              "wins": 360,
+              "losses": 228
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5750862332112333,
+              "variant": 0.6012423687423687,
+              "delta": 0.026156135531135383,
+              "ci95": [
+                0.01695238384203504,
+                0.03713087444470419
+              ],
+              "n_pairs": 520,
+              "n_members": 78,
+              "wins": 33,
+              "losses": 0
+            }
+          },
+          "explicit": {
+            "n_cases": 624,
+            "n_members": 78,
+            "ndcg10": {
+              "baseline": 0.6989524618029703,
+              "variant": 0.7075131563430082,
+              "delta": 0.008560694540037828,
+              "ci95": [
+                0.006610698513196997,
+                0.010776091260851516
+              ],
+              "n_pairs": 624,
+              "n_members": 78,
+              "wins": 257,
+              "losses": 45
+            },
+            "pair_acc": {
+              "baseline": 0.7947847606156329,
+              "variant": 0.7992469947107743,
+              "delta": 0.00446223409514146,
+              "ci95": [
+                0.00385607366336434,
+                0.005079175864211666
+              ],
+              "n_pairs": 624,
+              "n_members": 78,
+              "wins": 339,
+              "losses": 72
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5750862332112333,
+              "variant": 0.6012423687423687,
+              "delta": 0.026156135531135383,
+              "ci95": [
+                0.016754556934714174,
+                0.0372283047952911
+              ],
+              "n_pairs": 520,
+              "n_members": 78,
+              "wins": 33,
+              "losses": 0
+            }
+          },
+          "broad": {
+            "n_cases": 308,
+            "n_members": 77,
+            "ndcg10": {
+              "baseline": 0.42875044484744534,
+              "variant": 0.4202032996660301,
+              "delta": -0.00854714518141525,
+              "ci95": [
+                -0.012274499822849894,
+                -0.005040319475604389
+              ],
+              "n_pairs": 308,
+              "n_members": 77,
+              "wins": 10,
+              "losses": 94
+            },
+            "pair_acc": {
+              "baseline": 0.6685269329877254,
+              "variant": 0.6621780980759762,
+              "delta": -0.0063488349117492016,
+              "ci95": [
+                -0.007918979786166496,
+                -0.004765726357556258
+              ],
+              "n_pairs": 308,
+              "n_members": 77,
+              "wins": 21,
+              "losses": 156
+            }
+          },
+          "sparse_history": {
+            "n_cases": 648,
+            "n_members": 54,
+            "ndcg10": {
+              "baseline": 0.6141382033434086,
+              "variant": 0.6181553575325778,
+              "delta": 0.004017154189169148,
+              "ci95": [
+                0.0017057757794986168,
+                0.006320312207368613
+              ],
+              "n_pairs": 648,
+              "n_members": 54,
+              "wins": 205,
+              "losses": 101
+            },
+            "pair_acc": {
+              "baseline": 0.7529196291190099,
+              "variant": 0.7542010204237717,
+              "delta": 0.001281391304761792,
+              "ci95": [
+                0.0006150602171282992,
+                0.0019110720223023839
+              ],
+              "n_pairs": 648,
+              "n_members": 54,
+              "wins": 270,
+              "losses": 165
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5423577670768681,
+              "variant": 0.5757646691635456,
+              "delta": 0.033406902086677515,
+              "ci95": [
+                0.0203440358036263,
+                0.048207778469478095
+              ],
+              "n_pairs": 356,
+              "n_members": 54,
+              "wins": 27,
+              "losses": 0
+            }
+          },
+          "dense_history": {
+            "n_cases": 284,
+            "n_members": 24,
+            "ndcg10": {
+              "baseline": 0.5994363289138658,
+              "variant": 0.599810402021352,
+              "delta": 0.0003740731074862724,
+              "ci95": [
+                -0.002097302517908459,
+                0.0028607186735171214
+              ],
+              "n_pairs": 284,
+              "n_members": 24,
+              "wins": 62,
+              "losses": 38
+            },
+            "pair_acc": {
+              "baseline": 0.753380515194563,
+              "variant": 0.7533757664518302,
+              "delta": -4.748742732707534e-06,
+              "ci95": [
+                -0.0012958482757262774,
+                0.001223091643193141
+              ],
+              "n_pairs": 284,
+              "n_members": 24,
+              "wins": 90,
+              "losses": 63
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.6461309523809523,
+              "variant": 0.656547619047619,
+              "delta": 0.01041666666666674,
+              "ci95": [
+                0.00345116892910996,
+                0.0182457786116323
+              ],
+              "n_pairs": 164,
+              "n_members": 24,
+              "wins": 6,
+              "losses": 0
+            }
+          },
+          "explicit&sparse": {
+            "n_cases": 432,
+            "n_members": 54,
+            "ndcg10": {
+              "baseline": 0.6870819294677034,
+              "variant": 0.6976709455922345,
+              "delta": 0.010589016124531114,
+              "ci95": [
+                0.007857933290077205,
+                0.013216857202209812
+              ],
+              "n_pairs": 432,
+              "n_members": 54,
+              "wins": 199,
+              "losses": 29
+            },
+            "pair_acc": {
+              "baseline": 0.7873625191760327,
+              "variant": 0.7926978744994934,
+              "delta": 0.005335355323460633,
+              "ci95": [
+                0.004655819268992431,
+                0.006080468303468467
+              ],
+              "n_pairs": 432,
+              "n_members": 54,
+              "wins": 257,
+              "losses": 46
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.5423577670768681,
+              "variant": 0.5757646691635456,
+              "delta": 0.033406902086677515,
+              "ci95": [
+                0.02114872319975412,
+                0.04799183359769406
+              ],
+              "n_pairs": 356,
+              "n_members": 54,
+              "wins": 27,
+              "losses": 0
+            }
+          },
+          "explicit&dense": {
+            "n_cases": 192,
+            "n_members": 24,
+            "ndcg10": {
+              "baseline": 0.7256611595573208,
+              "variant": 0.7296581305322491,
+              "delta": 0.003996970974928349,
+              "ci95": [
+                0.0019071074008492894,
+                0.006479848471516516
+              ],
+              "n_pairs": 192,
+              "n_members": 24,
+              "wins": 58,
+              "losses": 16
+            },
+            "pair_acc": {
+              "baseline": 0.811484803854733,
+              "variant": 0.8139825151861565,
+              "delta": 0.0024977113314235133,
+              "ci95": [
+                0.0017689535360807002,
+                0.00328511571578986
+              ],
+              "n_pairs": 192,
+              "n_members": 24,
+              "wins": 82,
+              "losses": 26
+            },
+            "loweng_rel_recall10": {
+              "baseline": 0.6461309523809523,
+              "variant": 0.656547619047619,
+              "delta": 0.01041666666666674,
+              "ci95": [
+                0.003578186567908678,
+                0.01821357285429137
+              ],
+              "n_pairs": 164,
+              "n_members": 24,
+              "wins": 6,
+              "losses": 0
+            }
+          },
+          "broad&sparse": {
+            "n_cases": 216,
+            "n_members": 54,
+            "ndcg10": {
+              "baseline": 0.468250751094819,
+              "variant": 0.45912418141326444,
+              "delta": -0.009126569681554564,
+              "ci95": [
+                -0.01385529143637856,
+                -0.004750002988820697
+              ],
+              "n_pairs": 216,
+              "n_members": 54,
+              "wins": 6,
+              "losses": 72
+            },
+            "pair_acc": {
+              "baseline": 0.6840338490049641,
+              "variant": 0.6772073122723283,
+              "delta": -0.0068265367326357795,
+              "ci95": [
+                -0.008341164695029584,
+                -0.005265718800176791
+              ],
+              "n_pairs": 216,
+              "n_members": 54,
+              "wins": 13,
+              "losses": 119
+            }
+          },
+          "broad&dense": {
+            "n_cases": 92,
+            "n_members": 23,
+            "ndcg10": {
+              "baseline": 0.3360105953970898,
+              "variant": 0.3288238381725234,
+              "delta": -0.007186757224566354,
+              "ci95": [
+                -0.012814735570692706,
+                -0.0024509002883846666
+              ],
+              "n_pairs": 92,
+              "n_members": 23,
+              "wins": 4,
+              "losses": 22
+            },
+            "pair_acc": {
+              "baseline": 0.632119391034208,
+              "variant": 0.6268921169193234,
+              "delta": -0.00522727411488455,
+              "ci95": [
+                -0.009084486277801649,
+                -0.0013386420590834178
+              ],
+              "n_pairs": 92,
+              "n_members": 23,
+              "wins": 8,
+              "losses": 37
+            }
+          }
+        },
+        "bootstrap": "paired, resampling members, n_boot=2000, seed=0",
+        "runs": {
+          "F0": "28b83dc433",
+          "Fctrl": "121e5452fa"
+        }
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F0": "d3330eed63320c1a",
+          "Fctrl": "3d472593b4beda71"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Small slices (few members) have wide intervals; do not over-interpret.",
+        "Offline proxy metrics on public data; says nothing about Netflix production or online A/B outcomes."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 1461.45,
+      "started_at": "2026-10-21T21:53:05-0400"
+    },
+    {
+      "tool": "score_candidates",
+      "call_id": 20,
+      "artifact_id": "score_candidates-ced9f397",
+      "inputs": {
+        "case_id": "E01-m470-t1496669535",
+        "model_id": "F1",
+        "intervention_id": null
+      },
+      "outputs": {
+        "model_id": "F1",
+        "removed_event_ids": [],
+        "ranking": [
+          22,
+          0,
+          20,
+          12,
+          16,
+          7,
+          2,
+          1,
+          8,
+          18,
+          23,
+          24,
+          4,
+          19,
+          6,
+          14,
+          21,
+          9,
+          5,
+          25,
+          26,
+          28,
+          11,
+          17,
+          15,
+          13,
+          27,
+          29,
+          10,
+          3
+        ],
+        "rank": [
+          2,
+          8,
+          7,
+          30,
+          13,
+          19,
+          15,
+          6,
+          9,
+          18,
+          29,
+          23,
+          4,
+          26,
+          16,
+          25,
+          5,
+          24,
+          10,
+          14,
+          3,
+          17,
+          1,
+          11,
+          12,
+          20,
+          21,
+          27,
+          22,
+          28
+        ],
+        "components": {
+          "total": [
+            1.3526185743674617,
+            0.5385052537313793,
+            0.5990741378101982,
+            -2.8332245966921756,
+            0.254504688969415,
+            -0.42124996595189984,
+            0.09353909112238736,
+            0.6906919580884142,
+            0.5171226557530552,
+            -0.40994479292978997,
+            -1.8151934167094659,
+            -0.8918067018094009,
+            0.9603229553155574,
+            -1.4464025629667376,
+            0.018152223693398806,
+            -1.1990856796577587,
+            0.8314028225670925,
+            -1.1026422056429444,
+            0.49233054620239824,
+            0.20434053548998882,
+            1.0854201802075478,
+            -0.013535260378428227,
+            1.3951932449833717,
+            0.4097465911748831,
+            0.38825270650391497,
+            -0.6578153873957445,
+            -0.7597555657034722,
+            -1.4469378309765728,
+            -0.8755629267765122,
+            -1.6466419642352537
+          ],
+          "behaviour": [
+            0.07747977331861455,
+            0.42977386950225127,
+            -0.24652630103327247,
+            -1.341204939595465,
+            0.46841526327061805,
+            -0.3756566121498221,
+            0.2214767845858124,
+            0.0038890925963349404,
+            0.23513378183953473,
+            -0.42637496781369716,
+            -1.0032330815690635,
+            -0.24905397806252638,
+            -0.05632284171348103,
+            -0.5072467470707315,
+            -0.264247584835237,
+            0.17485274503271128,
+            -0.20575084171406502,
+            -0.6991716328126539,
+            0.10536859877795553,
+            -0.26709347298576525,
+            0.01264759946514399,
+            -0.18728125659409145,
+            0.0641154907762817,
+            0.6014909318869659,
+            0.16931288614718049,
+            0.2023978290749112,
+            0.6288406044476823,
+            0.5770122942350148,
+            -0.3610111319399045,
+            1.1952330870543997
+          ],
+          "relevance": [
+            0.9940820639594281,
+            -0.3492880045849386,
+            1.0996921831740496,
+            -1.237927912766132,
+            -0.6481105395670835,
+            -0.03987085155088528,
+            -0.030549493832723082,
+            0.4804056587184019,
+            -0.10443929780885897,
+            -0.10792301750563511,
+            -0.622906438130191,
+            -0.45369882673666306,
+            1.022368299280231,
+            -0.7501019188857948,
+            0.0013430714392166922,
+            -1.0281809829803819,
+            1.0996921831740496,
+            -0.42156749412728395,
+            0.5760158444346541,
+            0.4533370871787606,
+            1.2113792041452873,
+            0.5195034379257515,
+            1.1800967117584058,
+            -0.7065797461678488,
+            0.14152878598577726,
+            -0.7976746975777637,
+            -1.1345044258205756,
+            -2.331634712360149,
+            -0.6893522608334779,
+            -2.496117609579565
+          ],
+          "popularity": [
+            0.28105673708941914,
+            0.45801938881406656,
+            -0.25409174433057885,
+            -0.25409174433057885,
+            0.4341999652658805,
+            -0.0057225022511924965,
+            -0.09738819963070199,
+            0.20639720677367737,
+            0.38642817172237937,
+            0.12435319238954227,
+            -0.18905389701021144,
+            -0.18905389701021144,
+            -0.0057225022511924965,
+            -0.18905389701021144,
+            0.28105673708941914,
+            -0.34575744171008826,
+            -0.06253851889289208,
+            0.01809692129699346,
+            -0.18905389701021144,
+            0.01809692129699346,
+            -0.13860662340288346,
+            -0.34575744171008826,
+            0.15098104244868427,
+            0.514835405455766,
+            0.07741103437095721,
+            -0.06253851889289208,
+            -0.25409174433057885,
+            0.3076845871485612,
+            0.17480046599687024,
+            -0.34575744171008826
+          ],
+          "gate": [
+            0.9707159546447275,
+            2.432308563594119,
+            0.9030883498091418,
+            4.465897282149143,
+            2.9837117105644335,
+            1.9684949565739072,
+            1.9559882462040088,
+            1.3792190756418699,
+            2.0573516054354046,
+            2.062258220606905,
+            2.932731213855108,
+            2.6123084437243724,
+            0.9521213451121238,
+            3.1992204529668147,
+            1.9137951099389687,
+            3.8692107604338584,
+            0.9030883498091418,
+            2.5555403927713574,
+            1.2919357093800141,
+            1.4049844724769671,
+            0.8366883425500211,
+            1.3428354513398242,
+            0.854778030308382,
+            3.1054164203135874,
+            1.7388653807065908,
+            3.304999180260609,
+            4.160984931978238,
+            9.433988705936924,
+            3.069050111591231,
+            10.556990009585652
+          ]
+        },
+        "beh_logit": [
+          -2.7809128761291504,
+          3.0310540199279785,
+          -23.946517944335938,
+          -25.586746215820312,
+          1.8490016460418701,
+          -19.018238067626953,
+          -0.77635258436203,
+          -7.400251388549805,
+          -0.7127939462661743,
+          -19.97315788269043,
+          -28.092073440551758,
+          -13.289115905761719,
+          -11.118339538574219,
+          -17.08157730102539,
+          -15.85302734375,
+          -4.858266830444336,
+          -21.23774528503418,
+          -23.983062744140625,
+          -2.6764307022094727,
+          -18.974430084228516,
+          -6.662542819976807,
+          -15.936529159545898,
+          -3.069408893585205,
+          4.050768852233887,
+          -1.7278711795806885,
+          -3.895425796508789,
+          1.4972620010375977,
+          -3.900031566619873,
+          -14.626426696777344,
+          -0.7771263718605042
+        ],
+        "snapshot_hash": "398973d21bf2869f",
+        "units": "score = pairwise log-odds; components additive; beh_logit = raw backbone logit",
+        "latency_ms_inference": 1.624
+      },
+      "provenance": {
+        "data_fingerprint": "378d0db74318ab1e",
+        "backbone_sha256": "1d01889bb959b06c",
+        "rankers": {
+          "F1": "7a599a3230b2a1a9"
+        },
+        "cases_hash": "39a36c890c963f5d",
+        "code_version": "d0ff801487c5"
+      },
+      "limitations": [
+        "Component values are fitted model weights x standardised features, not causal contributions."
+      ],
+      "errors": [],
+      "cache": "fresh",
+      "latency_ms": 17.02,
+      "started_at": "2026-10-21T21:53:06-0400"
+    }
+  ],
+  "case_id": "E01-m470-t1496669535",
+  "A_index": 22,
+  "B_index": 16,
+  "diagnosis": {
+    "diagnosis_id": "diag-E01-m470-t1496669535",
+    "evidence": [
+      "Behaviour is the largest component of the A-B margin in this case (+0.303).",
+      "Two-event history subset [90710, 90708] carries 87% of the behavioural margin; it beats equal-budget recency and random removal.",
+      "Removing it does NOT flip the full-ranker order: relevance and popularity still favour A.",
+      "Crime->Crime motif attribution is positive across comparable DEV failures (CI excludes 0)."
+    ],
+    "hypotheses": [
+      "H1 (testable): the behaviour component is not conditioned on how explicit the query is, so crime-heavy history raises intense titles for a light-mystery request.",
+      "H2: popularity also favours A; a history change alone may not fix the ordering.",
+      "H3: the text encoder (averaged word vectors) cannot represent 'not too intense' (see negation diagnostic)."
+    ],
+    "caveats": [
+      "One selected illustrative case; aggregate evidence comes from DEV.",
+      "Attribution != member causal effect."
+    ]
+  },
+  "narrative": [
+    {
+      "kind": "observation",
+      "text": "F0 ranks A='Along Came a Spider (2001)' at 1 and judged-relevant B='That Darn Cat! (1965)' at 5. Margin components (score units): behaviour +0.303, relevance +0.080, popularity +0.214. Largest: behaviour.",
+      "cites": [
+        "score_candidates-536c9df5"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "text": "TemGX-adapted explanation (budget 2) selects ['Inception (2010) [Crime/Thriller]', 'Fight Club (1999) [Crime/Thriller]']. Removing them lowers the behavioural margin from 18.17 to 2.37 (87%); equal-budget recency -2.99, random mean +2.56, attention +6.76. Full-ranker margin +0.597 -> +0.333; order flipped: False.",
+      "cites": [
+        "explain_history-bf23c038"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "text": "Controlled replay reproduces the change (margin +0.597 -> +0.333); reset max |diff| = 0.0.",
+      "cites": [
+        "replay_intervention-594b56e1"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "text": "Motif M1 (Crime/Thriller -> Crime/Thriller) in this case: S=10.295266658067703. Across 552 comparable DEV failures: mean S=0.248, 95% member-bootstrap CI [0.104, 0.404], S>0 in 37% of cases with the motif.",
+      "cites": [
+        "analyze_motifs-302a0225"
+      ]
+    },
+    {
+      "kind": "decision",
+      "text": "Chosen change: history_gate - the case's largest margin component is behaviour and the motif pattern recurs. One mechanism changed; F0 weights frozen.",
+      "cites": [
+        "score_candidates-536c9df5",
+        "analyze_motifs-302a0225"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "text": "Trained F1 on DEV: params [1.458, -1.307, -0.708], dev loss 0.5337 -> 0.5026; control Fctrl c=0.782.",
+      "cites": [
+        "train_variant-27375a32",
+        "train_variant-56e341fb"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "text": "DEV: F1-F0 NDCG@10 explicit +0.0018 [-0.0004, 0.004], broad +0.0873 [0.0757, 0.0996]. Selection is fixed now; FINAL is scored once.",
+      "cites": [
+        "compare_variants-18f59399",
+        "compare_variants-27ab8e54"
+      ]
+    },
+    {
+      "kind": "result",
+      "text": "FINAL (held-out templates, test period, showcase excluded): F1-F0 NDCG@10 explicit -0.0068 [-0.0096, -0.0041] (n=624 cases/78 members); broad +0.1208 [+0.1018, +0.1407] (n=308 cases/77 members); low-engagement relevant recall@10 (explicit) -0.0070. Control Fctrl explicit +0.0086 [+0.0066, +0.0108] (n=624 cases/78 members), broad -0.0085 [-0.0123, -0.0050] (n=308 cases/77 members).",
+      "cites": [
+        "compare_variants-8913c6c1",
+        "compare_variants-679c3926"
+      ]
+    },
+    {
+      "kind": "observation",
+      "text": "Primary case under F1: A rank 1, B rank 5 (F0: 1, 5).",
+      "cites": [
+        "score_candidates-ced9f397"
+      ]
+    },
+    {
+      "kind": "recommendation",
+      "text": "Tradeoff, not a win: the gate improves BROAD queries (F0 under-uses history there) but REGRESSES the targeted explicit-intent slice. Do not ship as is. H1 is not supported as the main lever for explicit queries. Next experiment: query-conditioned popularity bound (F2) and a negation-aware text encoder (H2/H3) on the same protocol; keep the gate as a broad-query candidate and inspect the explicit regression cases first. Note: the query-independent control down-weighting does better on explicit queries (+0.0086) but costs broad queries.",
+      "cites": [
+        "compare_variants-8913c6c1",
+        "compare_variants-679c3926"
+      ]
+    }
+  ]
+}

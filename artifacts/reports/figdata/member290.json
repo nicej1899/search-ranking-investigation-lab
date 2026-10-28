@@ -1,0 +1,2747 @@
+{
+  "case_id": "C07-m290-t1453051417",
+  "p0": 0.8722951951716746,
+  "random_draws": [
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8653086077757026,
+    0.9377202528728865,
+    0.8717865300349372,
+    0.8713660228056839,
+    0.8706721103490542,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.871155533152691,
+    0.8631066200908053,
+    0.8663966782635225,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8706721103490542,
+    0.9377202528728865,
+    0.8722951951716746,
+    0.864731412116429,
+    0.8722951951716746,
+    0.8720496455514526,
+    0.8701174957993716,
+    0.8722951951716746,
+    0.8747997695791082,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8733832198454109,
+    0.8713660228056839,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8663966782635225,
+    0.8722951951716746,
+    0.9377202528728865,
+    0.8722951951716746,
+    0.8717865300349372,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8701174957993716,
+    0.8706721103490542,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8663966782635225,
+    0.8722951951716746,
+    0.8713660228056839,
+    0.9410162460266331,
+    0.8672483777499251,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8663966782635225,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8715188330255852,
+    0.9372172410318169,
+    0.8730171137512919,
+    0.8722951951716746,
+    0.9377202528728865,
+    0.8722951951716746,
+    0.870855905000605,
+    0.8701174957993716,
+    0.8726547189157183,
+    0.8713660228056839,
+    0.8722951951716746,
+    0.870855905000605,
+    0.8701174957993716,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8733832198454109,
+    0.8715188330255852,
+    0.8706721103490542,
+    0.8722951951716746,
+    0.8717865300349372,
+    0.8720496455514526,
+    0.8608247146148648,
+    0.871155533152691,
+    0.870917966866995,
+    0.8722951951716746,
+    0.8715188330255852,
+    0.8713660228056839,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.870855905000605,
+    0.9377202528728865,
+    0.870917966866995,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8631066200908053,
+    0.8577245719889833,
+    0.8706721103490542,
+    0.8701174957993716,
+    0.8644808771681506,
+    0.8740351112409371,
+    0.942904587028438,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.871155533152691,
+    0.8631066200908053,
+    0.871155533152691,
+    0.8631066200908053,
+    0.8722951951716746,
+    0.8740351112409371,
+    0.8717865300349372,
+    0.8722951951716746,
+    0.8708571751680341,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8693073835652404,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8713660228056839,
+    0.8635906116152254,
+    0.8722951951716746,
+    0.8715188330255852,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8747997695791082,
+    0.8717865300349372,
+    0.8722951951716746,
+    0.8713660228056839,
+    0.870911290803469,
+    0.8701174957993716,
+    0.870855905000605,
+    0.8722951951716746,
+    0.86997884575467,
+    0.8725086749500637,
+    0.8713545476286895,
+    0.8722951951716746,
+    0.8713660228056839,
+    0.8722951951716746,
+    0.9377202528728865,
+    0.8722951951716746,
+    0.8747997695791082,
+    0.870855905000605,
+    0.8722951951716746,
+    0.870855905000605,
+    0.8722951951716746,
+    0.8720496455514526,
+    0.8701174957993716,
+    0.8717865300349372,
+    0.8663966782635225,
+    0.8717865300349372,
+    0.8722951951716746,
+    0.870855905000605,
+    0.8713660228056839,
+    0.8722951951716746,
+    0.8713660228056839,
+    0.8717865300349372,
+    0.8663966782635225,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8706721103490542,
+    0.8717865300349372,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8730171137512919,
+    0.8747997695791082,
+    0.8747997695791082,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8716716310840034,
+    0.8614061880222134,
+    0.8738845194169403,
+    0.8722951951716746,
+    0.8663966782635225,
+    0.8720496455514526,
+    0.8706721103490542,
+    0.8726744748052546,
+    0.8663966782635225,
+    0.8717865300349372,
+    0.8722951951716746,
+    0.8701174957993716,
+    0.8720496455514526,
+    0.8720496455514526,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8701174957993716,
+    0.8688042223494358,
+    0.8722951951716746,
+    0.8695911456554243,
+    0.871155533152691,
+    0.8722951951716746,
+    0.8663966782635225,
+    0.8716716310840034,
+    0.8706721103490542,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8722951951716746,
+    0.8713660228056839,
+    0.870855905000605,
+    0.872295174879855
+  ],
+  "arms": {
+    "TemGX links": {
+      "p": 0.7786233018831664,
+      "n": 3,
+      "eids": [
+        77182,
+        79605,
+        79609
+      ]
+    },
+    "CATGX structure": {
+      "p": 0.8160818682240748,
+      "n": 2,
+      "eids": [
+        77182,
+        77543
+      ]
+    },
+    "1-hop, newest around the title": {
+      "p": 0.8452998310827734,
+      "n": 3,
+      "eids": [
+        78899,
+        77927,
+        77543
+      ]
+    },
+    "1-hop, newest around member + title": {
+      "p": 0.9136211367313032,
+      "n": 3,
+      "eids": [
+        79609,
+        79608,
+        79607
+      ]
+    },
+    "attention top-n": {
+      "p": 0.9006056169241625,
+      "n": 3,
+      "eids": [
+        79608,
+        77488,
+        79609
+      ]
+    },
+    "random, same period": {
+      "p": 0.8737722354582846,
+      "n": 3
+    }
+  },
+  "side_A": {
+    "links": [
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 79605,
+        "from": "user 290",
+        "to": "Iron Man (2008)",
+        "from_id": 290,
+        "to_id": 7353,
+        "rating": 4.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79609,
+        "from": "user 290",
+        "to": "Avengers, The (2012)",
+        "from_id": 290,
+        "to_id": 8303,
+        "rating": 5.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 5.527618248052607,
+      "nodes": [
+        {
+          "id": 365,
+          "name": "user 365"
+        },
+        {
+          "id": 255,
+          "name": "user 255"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77182,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 365",
+          "from_id": 3555,
+          "to_id": 365,
+          "rating": 4.0,
+          "date": "2015-10-22"
+        },
+        {
+          "eid": 77543,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 255",
+          "from_id": 3555,
+          "to_id": 255,
+          "rating": 4.0,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 336
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 78899,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 297",
+        "from_id": 3555,
+        "to_id": 297,
+        "rating": 2.5,
+        "date": "2015-11-15",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 79607,
+        "from": "user 290",
+        "to": "Iron Man 3 (2013)",
+        "from_id": 290,
+        "to_id": 8761,
+        "rating": 4.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79608,
+        "from": "user 290",
+        "to": "Invincible Iron Man, The (2007)",
+        "from_id": 290,
+        "to_id": 8752,
+        "rating": 3.0,
+        "date": "2016-01-17",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGEB",
+      "name": "a path of shared taste that ends at B",
+      "lift": 5.98700297549179,
+      "nodes": [
+        {
+          "id": 62,
+          "name": "user 62"
+        },
+        {
+          "id": 7934,
+          "name": "Iron Man 2 (2010)"
+        },
+        {
+          "id": 297,
+          "name": "user 297"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76852,
+          "from": "Iron Man 2 (2010)",
+          "to": "user 62",
+          "from_id": 7934,
+          "to_id": 62,
+          "rating": 2.5,
+          "date": "2015-09-25"
+        },
+        {
+          "eid": 78133,
+          "from": "Iron Man 2 (2010)",
+          "to": "user 297",
+          "from_id": 7934,
+          "to_id": 297,
+          "rating": 3.5,
+          "date": "2015-11-14"
+        },
+        {
+          "eid": 78899,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 297",
+          "from_id": 3555,
+          "to_id": 297,
+          "rating": 2.5,
+          "date": "2015-11-15"
+        }
+      ]
+    },
+    "n_model_runs": 303
+  },
+  "test": {
+    "p0": 0.8722951951716746,
+    "del_A": {
+      "p": 0.7786233018831664,
+      "p_random": 0.8737722364728757,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9426130159355427,
+      "p_random": 0.8651402175926194,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "subgraph": {
+    "status": "fresh-inference",
+    "case_id": "C07-m290-t1453051417",
+    "backbone": "tgat2",
+    "L": 2,
+    "nodes": [
+      {
+        "id": 290,
+        "hop": 0,
+        "type": "user",
+        "label": "USER",
+        "title": "user 290",
+        "role": "u"
+      },
+      {
+        "id": 3555,
+        "hop": 0,
+        "type": "movie",
+        "label": "Drama",
+        "title": "Requiem for a Dream (2000)",
+        "genres": "Drama",
+        "role": "A"
+      },
+      {
+        "id": 2004,
+        "hop": 0,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Out of Sight (1998)",
+        "genres": "Comedy|Crime|Drama|Romance|Thriller",
+        "role": "B"
+      },
+      {
+        "id": 8303,
+        "hop": 1,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Avengers, The (2012)",
+        "genres": "Action|Adventure|Sci-Fi|IMAX",
+        "role": null
+      },
+      {
+        "id": 8752,
+        "hop": 1,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Invincible Iron Man, The (2007)",
+        "genres": "Animation",
+        "role": null
+      },
+      {
+        "id": 8761,
+        "hop": 1,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Iron Man 3 (2013)",
+        "genres": "Action|Sci-Fi|Thriller|IMAX",
+        "role": null
+      },
+      {
+        "id": 7934,
+        "hop": 1,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Iron Man 2 (2010)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "role": null
+      },
+      {
+        "id": 7353,
+        "hop": 1,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Iron Man (2008)",
+        "genres": "Action|Adventure|Sci-Fi",
+        "role": null
+      },
+      {
+        "id": 297,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 297",
+        "role": null
+      },
+      {
+        "id": 580,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 580",
+        "role": null
+      },
+      {
+        "id": 255,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 255",
+        "role": null
+      },
+      {
+        "id": 104,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 104",
+        "role": null
+      },
+      {
+        "id": 365,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 365",
+        "role": null
+      },
+      {
+        "id": 377,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 377",
+        "role": null
+      },
+      {
+        "id": 62,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 62",
+        "role": null
+      },
+      {
+        "id": 325,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 325",
+        "role": null
+      },
+      {
+        "id": 102,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 102",
+        "role": null
+      },
+      {
+        "id": 316,
+        "hop": 1,
+        "type": "user",
+        "label": "USER",
+        "title": "user 316",
+        "role": null
+      },
+      {
+        "id": 510,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 510",
+        "role": null
+      },
+      {
+        "id": 122,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 122",
+        "role": null
+      },
+      {
+        "id": 226,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 226",
+        "role": null
+      },
+      {
+        "id": 581,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 581",
+        "role": null
+      },
+      {
+        "id": 465,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 465",
+        "role": null
+      },
+      {
+        "id": 508,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 508",
+        "role": null
+      },
+      {
+        "id": 20,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 20",
+        "role": null
+      },
+      {
+        "id": 392,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 392",
+        "role": null
+      },
+      {
+        "id": 291,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 291",
+        "role": null
+      },
+      {
+        "id": 176,
+        "hop": 2,
+        "type": "user",
+        "label": "USER",
+        "title": "user 176",
+        "role": null
+      },
+      {
+        "id": 736,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Batman Forever (1995)",
+        "genres": "Action|Adventure|Comedy|Crime",
+        "role": null
+      },
+      {
+        "id": 9043,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Maleficent (2014)",
+        "genres": "Action|Adventure|Children|IMAX",
+        "role": null
+      },
+      {
+        "id": 2736,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "13th Warrior, The (1999)",
+        "genres": "Action|Adventure|Fantasy",
+        "role": null
+      },
+      {
+        "id": 8701,
+        "hop": 2,
+        "type": "movie",
+        "label": "Horror",
+        "title": "Hansel & Gretel: Witch Hunters (2013)",
+        "genres": "Action|Fantasy|Horror|IMAX",
+        "role": null
+      },
+      {
+        "id": 1159,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Dragonheart (1996)",
+        "genres": "Action|Adventure|Fantasy",
+        "role": null
+      },
+      {
+        "id": 8992,
+        "hop": 2,
+        "type": "movie",
+        "label": "Action/Adventure",
+        "title": "300: Rise of an Empire (2014)",
+        "genres": "Action|Drama|War|IMAX",
+        "role": null
+      },
+      {
+        "id": 8732,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Oz the Great and Powerful (2013)",
+        "genres": "Action|Adventure|Fantasy|IMAX",
+        "role": null
+      },
+      {
+        "id": 8726,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Jack the Giant Slayer (2013)",
+        "genres": "Adventure|Fantasy|IMAX",
+        "role": null
+      },
+      {
+        "id": 8289,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Conan the Barbarian (2011)",
+        "genres": "Action|Adventure|Fantasy",
+        "role": null
+      },
+      {
+        "id": 1885,
+        "hop": 2,
+        "type": "movie",
+        "label": "Horror",
+        "title": "Alien: Resurrection (1997)",
+        "genres": "Action|Horror|Sci-Fi",
+        "role": null
+      },
+      {
+        "id": 5406,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Big Fish (2003)",
+        "genres": "Drama|Fantasy|Romance",
+        "role": null
+      },
+      {
+        "id": 5776,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Harry Potter and the Prisoner of Azkaban (2004)",
+        "genres": "Adventure|Fantasy|IMAX",
+        "role": null
+      },
+      {
+        "id": 4686,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Harry Potter and the Chamber of Secrets (2002)",
+        "genres": "Adventure|Fantasy",
+        "role": null
+      },
+      {
+        "id": 6761,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "V for Vendetta (2006)",
+        "genres": "Action|Sci-Fi|Thriller|IMAX",
+        "role": null
+      },
+      {
+        "id": 4184,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)",
+        "genres": "Adventure|Children|Fantasy",
+        "role": null
+      },
+      {
+        "id": 4769,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Catch Me If You Can (2002)",
+        "genres": "Crime|Drama",
+        "role": null
+      },
+      {
+        "id": 3616,
+        "hop": 2,
+        "type": "movie",
+        "label": "Drama",
+        "title": "Cast Away (2000)",
+        "genres": "Drama",
+        "role": null
+      },
+      {
+        "id": 4250,
+        "hop": 2,
+        "type": "movie",
+        "label": "Romance",
+        "title": "Beautiful Mind, A (2001)",
+        "genres": "Drama|Romance",
+        "role": null
+      },
+      {
+        "id": 4429,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Spider-Man (2002)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller",
+        "role": null
+      },
+      {
+        "id": 9499,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Spy (2015)",
+        "genres": "Action|Comedy|Crime",
+        "role": null
+      },
+      {
+        "id": 8905,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "The Hunger Games: Catching Fire (2013)",
+        "genres": "Action|Adventure|Sci-Fi|IMAX",
+        "role": null
+      },
+      {
+        "id": 2096,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Back to the Future Part II (1989)",
+        "genres": "Adventure|Comedy|Sci-Fi",
+        "role": null
+      },
+      {
+        "id": 1225,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Independence Day (a.k.a. ID4) (1996)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller",
+        "role": null
+      },
+      {
+        "id": 8377,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "The Hunger Games (2012)",
+        "genres": "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "role": null
+      },
+      {
+        "id": 9635,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Cop Car (2015)",
+        "genres": "Crime|Thriller",
+        "role": null
+      },
+      {
+        "id": 6685,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005)",
+        "genres": "Adventure|Children|Fantasy",
+        "role": null
+      },
+      {
+        "id": 6920,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006)",
+        "genres": "Comedy",
+        "role": null
+      },
+      {
+        "id": 1579,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Back to the Future (1985)",
+        "genres": "Adventure|Comedy|Sci-Fi",
+        "role": null
+      },
+      {
+        "id": 5076,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Freaky Friday (2003)",
+        "genres": "Children|Comedy|Fantasy",
+        "role": null
+      },
+      {
+        "id": 8720,
+        "hop": 2,
+        "type": "movie",
+        "label": "Romance",
+        "title": "Before Midnight (2013)",
+        "genres": "Drama|Romance",
+        "role": null
+      },
+      {
+        "id": 4923,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Straw Dogs (1971)",
+        "genres": "Drama|Thriller",
+        "role": null
+      },
+      {
+        "id": 4868,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Irreversible (Irr\u00e9versible) (2002)",
+        "genres": "Crime|Drama|Mystery|Thriller",
+        "role": null
+      },
+      {
+        "id": 2646,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Eyes Wide Shut (1999)",
+        "genres": "Drama|Mystery|Thriller",
+        "role": null
+      },
+      {
+        "id": 7655,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Antichrist (2009)",
+        "genres": "Drama|Fantasy",
+        "role": null
+      },
+      {
+        "id": 8963,
+        "hop": 2,
+        "type": "movie",
+        "label": "Drama",
+        "title": "Nymphomaniac: Volume I (2013)",
+        "genres": "Drama",
+        "role": null
+      },
+      {
+        "id": 1652,
+        "hop": 2,
+        "type": "movie",
+        "label": "Mystery",
+        "title": "Breaking the Waves (1996)",
+        "genres": "Drama|Mystery",
+        "role": null
+      },
+      {
+        "id": 8970,
+        "hop": 2,
+        "type": "movie",
+        "label": "Mystery",
+        "title": "Nymphomaniac: Volume II (2013)",
+        "genres": "Drama|Mystery",
+        "role": null
+      },
+      {
+        "id": 8198,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Melancholia (2011)",
+        "genres": "Drama|Sci-Fi",
+        "role": null
+      },
+      {
+        "id": 7620,
+        "hop": 2,
+        "type": "movie",
+        "label": "Action/Adventure",
+        "title": "Inglourious Basterds (2009)",
+        "genres": "Action|Drama|War",
+        "role": null
+      },
+      {
+        "id": 9291,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Mad Max: Fury Road (2015)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller",
+        "role": null
+      },
+      {
+        "id": 6460,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Sin City (2005)",
+        "genres": "Action|Crime|Film-Noir|Mystery|Thriller",
+        "role": null
+      },
+      {
+        "id": 3284,
+        "hop": 2,
+        "type": "movie",
+        "label": "Action/Adventure",
+        "title": "Gladiator (2000)",
+        "genres": "Action|Adventure|Drama",
+        "role": null
+      },
+      {
+        "id": 5037,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+        "genres": "Action|Adventure|Comedy|Fantasy",
+        "role": null
+      },
+      {
+        "id": 5984,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Incredibles, The (2004)",
+        "genres": "Action|Adventure|Animation|Children|Comedy",
+        "role": null
+      },
+      {
+        "id": 3751,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Memento (2000)",
+        "genres": "Mystery|Thriller",
+        "role": null
+      },
+      {
+        "id": 7764,
+        "hop": 2,
+        "type": "movie",
+        "label": "Horror",
+        "title": "Zombieland (2009)",
+        "genres": "Action|Comedy|Horror",
+        "role": null
+      },
+      {
+        "id": 7628,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Star Trek (2009)",
+        "genres": "Action|Adventure|Sci-Fi|IMAX",
+        "role": null
+      },
+      {
+        "id": 5976,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "The Machinist (2004)",
+        "genres": "Drama|Mystery|Thriller",
+        "role": null
+      },
+      {
+        "id": 932,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Lion King, The (1994)",
+        "genres": "Adventure|Animation|Children|Drama|Musical|IMAX",
+        "role": null
+      },
+      {
+        "id": 8986,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Interstellar (2014)",
+        "genres": "Sci-Fi|IMAX",
+        "role": null
+      },
+      {
+        "id": 6925,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Departed, The (2006)",
+        "genres": "Crime|Drama|Thriller",
+        "role": null
+      },
+      {
+        "id": 7144,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Bourne Ultimatum, The (2007)",
+        "genres": "Action|Crime|Thriller",
+        "role": null
+      },
+      {
+        "id": 1515,
+        "hop": 2,
+        "type": "movie",
+        "label": "Drama",
+        "title": "12 Angry Men (1957)",
+        "genres": "Drama",
+        "role": null
+      },
+      {
+        "id": 8314,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "The Artist (2011)",
+        "genres": "Comedy|Drama|Romance",
+        "role": null
+      },
+      {
+        "id": 7093,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "28 Weeks Later (2007)",
+        "genres": "Horror|Sci-Fi|Thriller",
+        "role": null
+      },
+      {
+        "id": 7364,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Indiana Jones and the Kingdom of the Crystal Skull (2008)",
+        "genres": "Action|Adventure|Comedy|Sci-Fi",
+        "role": null
+      },
+      {
+        "id": 8913,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Frozen (2013)",
+        "genres": "Adventure|Animation|Comedy|Fantasy|Musical|Romance",
+        "role": null
+      },
+      {
+        "id": 3800,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Knight's Tale, A (2001)",
+        "genres": "Action|Comedy|Romance",
+        "role": null
+      },
+      {
+        "id": 5771,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Day After Tomorrow, The (2004)",
+        "genres": "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "role": null
+      },
+      {
+        "id": 3267,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "U-571 (2000)",
+        "genres": "Action|Thriller|War",
+        "role": null
+      },
+      {
+        "id": 4135,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Zoolander (2001)",
+        "genres": "Comedy",
+        "role": null
+      },
+      {
+        "id": 6345,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Charlie and the Chocolate Factory (2005)",
+        "genres": "Adventure|Children|Comedy|Fantasy|IMAX",
+        "role": null
+      },
+      {
+        "id": 696,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Hate (Haine, La) (1995)",
+        "genres": "Crime|Drama",
+        "role": null
+      },
+      {
+        "id": 8212,
+        "hop": 2,
+        "type": "movie",
+        "label": "Mystery",
+        "title": "Incendies (2010)",
+        "genres": "Drama|Mystery|War",
+        "role": null
+      },
+      {
+        "id": 8218,
+        "hop": 2,
+        "type": "movie",
+        "label": "SciFi/Fantasy",
+        "title": "Pirates of the Caribbean: On Stranger Tides (2011)",
+        "genres": "Action|Adventure|Fantasy|IMAX",
+        "role": null
+      },
+      {
+        "id": 8205,
+        "hop": 2,
+        "type": "movie",
+        "label": "Documentary",
+        "title": "Voices from the List (2004)",
+        "genres": "Documentary",
+        "role": null
+      },
+      {
+        "id": 6495,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Crash (2004)",
+        "genres": "Crime|Drama",
+        "role": null
+      },
+      {
+        "id": 8763,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Mud (2012)",
+        "genres": "Adventure|Crime|Drama",
+        "role": null
+      },
+      {
+        "id": 2982,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Green Mile, The (1999)",
+        "genres": "Crime|Drama",
+        "role": null
+      },
+      {
+        "id": 2630,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Run Lola Run (Lola rennt) (1998)",
+        "genres": "Action|Crime",
+        "role": null
+      },
+      {
+        "id": 9179,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "The Imitation Game (2014)",
+        "genres": "Drama|Thriller|War",
+        "role": null
+      },
+      {
+        "id": 849,
+        "hop": 2,
+        "type": "movie",
+        "label": "Drama",
+        "title": "Miracle on 34th Street (1994)",
+        "genres": "Drama",
+        "role": null
+      },
+      {
+        "id": 625,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Casino (1995)",
+        "genres": "Crime|Drama",
+        "role": null
+      },
+      {
+        "id": 4625,
+        "hop": 2,
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Punch-Drunk Love (2002)",
+        "genres": "Comedy|Drama|Romance",
+        "role": null
+      },
+      {
+        "id": 9604,
+        "hop": 2,
+        "type": "movie",
+        "label": "Action/Adventure",
+        "title": "Southpaw (2015)",
+        "genres": "Action|Drama",
+        "role": null
+      },
+      {
+        "id": 9634,
+        "hop": 2,
+        "type": "movie",
+        "label": "Drama",
+        "title": "Straight Outta Compton (2015)",
+        "genres": "Drama",
+        "role": null
+      },
+      {
+        "id": 9445,
+        "hop": 2,
+        "type": "movie",
+        "label": "Mystery",
+        "title": "Tomorrowland (2015)",
+        "genres": "Action|Adventure|Children|Mystery|Sci-Fi",
+        "role": null
+      },
+      {
+        "id": 9510,
+        "hop": 2,
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Inside Out (2015)",
+        "genres": "Adventure|Animation|Children|Comedy|Drama|Fantasy",
+        "role": null
+      },
+      {
+        "id": 9200,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Jurassic World (2015)",
+        "genres": "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "role": null
+      },
+      {
+        "id": 9049,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Mission: Impossible - Rogue Nation (2015)",
+        "genres": "Action|Adventure|Thriller",
+        "role": null
+      },
+      {
+        "id": 9464,
+        "hop": 2,
+        "type": "movie",
+        "label": "Documentary",
+        "title": "We Could Be King (2014)",
+        "genres": "Documentary",
+        "role": null
+      },
+      {
+        "id": 8379,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Bourne Legacy, The (2012)",
+        "genres": "Action|Adventure|Drama|Thriller|IMAX",
+        "role": null
+      },
+      {
+        "id": 4154,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Mulholland Drive (2001)",
+        "genres": "Crime|Drama|Film-Noir|Mystery|Thriller",
+        "role": null
+      },
+      {
+        "id": 859,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Natural Born Killers (1994)",
+        "genres": "Action|Crime|Thriller",
+        "role": null
+      },
+      {
+        "id": 3626,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Traffic (2000)",
+        "genres": "Crime|Drama|Thriller",
+        "role": null
+      },
+      {
+        "id": 5413,
+        "hop": 2,
+        "type": "movie",
+        "label": "Action/Adventure",
+        "title": "Fog of War: Eleven Lessons from the Life of Robert S. McNamara, The (2003)",
+        "genres": "Documentary|War",
+        "role": null
+      },
+      {
+        "id": 5550,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Man on Fire (2004)",
+        "genres": "Action|Crime|Drama|Mystery|Thriller",
+        "role": null
+      },
+      {
+        "id": 4464,
+        "hop": 2,
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Bourne Identity, The (2002)",
+        "genres": "Action|Mystery|Thriller",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 79609,
+        "s": 290,
+        "t": 8303,
+        "ts": 1453051415,
+        "rating": 5.0
+      },
+      {
+        "eid": 79608,
+        "s": 290,
+        "t": 8752,
+        "ts": 1453051402,
+        "rating": 3.0
+      },
+      {
+        "eid": 79607,
+        "s": 290,
+        "t": 8761,
+        "ts": 1453051397,
+        "rating": 4.0
+      },
+      {
+        "eid": 79606,
+        "s": 290,
+        "t": 7934,
+        "ts": 1453051395,
+        "rating": 4.0
+      },
+      {
+        "eid": 79605,
+        "s": 290,
+        "t": 7353,
+        "ts": 1453051390,
+        "rating": 4.0
+      },
+      {
+        "eid": 78899,
+        "s": 3555,
+        "t": 297,
+        "ts": 1447619965,
+        "rating": 2.5
+      },
+      {
+        "eid": 77927,
+        "s": 3555,
+        "t": 580,
+        "ts": 1447007173,
+        "rating": 4.5
+      },
+      {
+        "eid": 77543,
+        "s": 3555,
+        "t": 255,
+        "ts": 1446580240,
+        "rating": 4.0
+      },
+      {
+        "eid": 77488,
+        "s": 3555,
+        "t": 104,
+        "ts": 1446573676,
+        "rating": 4.5
+      },
+      {
+        "eid": 77182,
+        "s": 3555,
+        "t": 365,
+        "ts": 1445546553,
+        "rating": 4.0
+      },
+      {
+        "eid": 77144,
+        "s": 3555,
+        "t": 377,
+        "ts": 1445347508,
+        "rating": 3.5
+      },
+      {
+        "eid": 76776,
+        "s": 3555,
+        "t": 62,
+        "ts": 1443199859,
+        "rating": 5.0
+      },
+      {
+        "eid": 76020,
+        "s": 3555,
+        "t": 325,
+        "ts": 1436898368,
+        "rating": 4.5
+      },
+      {
+        "eid": 74247,
+        "s": 3555,
+        "t": 102,
+        "ts": 1431957513,
+        "rating": 5.0
+      },
+      {
+        "eid": 73735,
+        "s": 3555,
+        "t": 316,
+        "ts": 1430361489,
+        "rating": 4.0
+      },
+      {
+        "eid": 79250,
+        "s": 8303,
+        "t": 510,
+        "ts": 1450094062,
+        "rating": 4.5
+      },
+      {
+        "eid": 78277,
+        "s": 8303,
+        "t": 297,
+        "ts": 1447518162,
+        "rating": 3.5
+      },
+      {
+        "eid": 78093,
+        "s": 8303,
+        "t": 122,
+        "ts": 1447292422,
+        "rating": 4.0
+      },
+      {
+        "eid": 78015,
+        "s": 8303,
+        "t": 226,
+        "ts": 1447210111,
+        "rating": 3.5
+      },
+      {
+        "eid": 77794,
+        "s": 8303,
+        "t": 581,
+        "ts": 1446792664,
+        "rating": 5.0
+      },
+      {
+        "eid": 77468,
+        "s": 8303,
+        "t": 104,
+        "ts": 1446573513,
+        "rating": 3.5
+      },
+      {
+        "eid": 76793,
+        "s": 8303,
+        "t": 62,
+        "ts": 1443199946,
+        "rating": 3.5
+      },
+      {
+        "eid": 76370,
+        "s": 8303,
+        "t": 465,
+        "ts": 1439915554,
+        "rating": 3.5
+      },
+      {
+        "eid": 75763,
+        "s": 8303,
+        "t": 508,
+        "ts": 1435997974,
+        "rating": 4.5
+      },
+      {
+        "eid": 78622,
+        "s": 8761,
+        "t": 297,
+        "ts": 1447584976,
+        "rating": 3.0
+      },
+      {
+        "eid": 77812,
+        "s": 8761,
+        "t": 581,
+        "ts": 1446794053,
+        "rating": 4.5
+      },
+      {
+        "eid": 76535,
+        "s": 8761,
+        "t": 20,
+        "ts": 1441393005,
+        "rating": 3.5
+      },
+      {
+        "eid": 73894,
+        "s": 8761,
+        "t": 392,
+        "ts": 1430506862,
+        "rating": 4.0
+      },
+      {
+        "eid": 73149,
+        "s": 8761,
+        "t": 291,
+        "ts": 1421974584,
+        "rating": 4.0
+      },
+      {
+        "eid": 79015,
+        "s": 7934,
+        "t": 104,
+        "ts": 1448698973,
+        "rating": 3.5
+      },
+      {
+        "eid": 78133,
+        "s": 7934,
+        "t": 297,
+        "ts": 1447516876,
+        "rating": 3.5
+      },
+      {
+        "eid": 77804,
+        "s": 7934,
+        "t": 581,
+        "ts": 1446792729,
+        "rating": 2.5
+      },
+      {
+        "eid": 76852,
+        "s": 7934,
+        "t": 62,
+        "ts": 1443200324,
+        "rating": 2.5
+      },
+      {
+        "eid": 76383,
+        "s": 7934,
+        "t": 465,
+        "ts": 1439915673,
+        "rating": 4.0
+      },
+      {
+        "eid": 75617,
+        "s": 7934,
+        "t": 508,
+        "ts": 1435993839,
+        "rating": 3.5
+      },
+      {
+        "eid": 74632,
+        "s": 7934,
+        "t": 176,
+        "ts": 1435524899,
+        "rating": 3.5
+      },
+      {
+        "eid": 74377,
+        "s": 7934,
+        "t": 102,
+        "ts": 1431969639,
+        "rating": 0.5
+      },
+      {
+        "eid": 73970,
+        "s": 7934,
+        "t": 316,
+        "ts": 1430512999,
+        "rating": 3.0
+      },
+      {
+        "eid": 78278,
+        "s": 7353,
+        "t": 297,
+        "ts": 1447518170,
+        "rating": 3.5
+      },
+      {
+        "eid": 78094,
+        "s": 7353,
+        "t": 122,
+        "ts": 1447292423,
+        "rating": 4.0
+      },
+      {
+        "eid": 78018,
+        "s": 7353,
+        "t": 226,
+        "ts": 1447210146,
+        "rating": 4.5
+      },
+      {
+        "eid": 77947,
+        "s": 7353,
+        "t": 580,
+        "ts": 1447007469,
+        "rating": 4.0
+      },
+      {
+        "eid": 77268,
+        "s": 7353,
+        "t": 104,
+        "ts": 1446571742,
+        "rating": 3.5
+      },
+      {
+        "eid": 77189,
+        "s": 7353,
+        "t": 365,
+        "ts": 1445546607,
+        "rating": 3.5
+      },
+      {
+        "eid": 76337,
+        "s": 7353,
+        "t": 465,
+        "ts": 1439915324,
+        "rating": 4.0
+      },
+      {
+        "eid": 75969,
+        "s": 7353,
+        "t": 508,
+        "ts": 1436393462,
+        "rating": 3.0
+      },
+      {
+        "eid": 74759,
+        "s": 7353,
+        "t": 176,
+        "ts": 1435525994,
+        "rating": 3.5
+      },
+      {
+        "eid": 79604,
+        "s": 297,
+        "t": 736,
+        "ts": 1453033369,
+        "rating": 2.0
+      },
+      {
+        "eid": 79603,
+        "s": 297,
+        "t": 9043,
+        "ts": 1453033364,
+        "rating": 1.0
+      },
+      {
+        "eid": 79602,
+        "s": 297,
+        "t": 2736,
+        "ts": 1453033355,
+        "rating": 3.0
+      },
+      {
+        "eid": 79601,
+        "s": 297,
+        "t": 8701,
+        "ts": 1453033344,
+        "rating": 0.5
+      },
+      {
+        "eid": 79600,
+        "s": 297,
+        "t": 1159,
+        "ts": 1453033338,
+        "rating": 0.5
+      },
+      {
+        "eid": 79599,
+        "s": 297,
+        "t": 8992,
+        "ts": 1453033306,
+        "rating": 0.5
+      },
+      {
+        "eid": 79598,
+        "s": 297,
+        "t": 8732,
+        "ts": 1453033179,
+        "rating": 1.5
+      },
+      {
+        "eid": 79597,
+        "s": 297,
+        "t": 8726,
+        "ts": 1453033162,
+        "rating": 0.5
+      },
+      {
+        "eid": 79596,
+        "s": 297,
+        "t": 8289,
+        "ts": 1453033159,
+        "rating": 0.5
+      },
+      {
+        "eid": 79595,
+        "s": 297,
+        "t": 1885,
+        "ts": 1453033075,
+        "rating": 2.0
+      },
+      {
+        "eid": 77949,
+        "s": 580,
+        "t": 5406,
+        "ts": 1447007480,
+        "rating": 3.5
+      },
+      {
+        "eid": 77948,
+        "s": 580,
+        "t": 5776,
+        "ts": 1447007472,
+        "rating": 4.5
+      },
+      {
+        "eid": 77946,
+        "s": 580,
+        "t": 4686,
+        "ts": 1447007463,
+        "rating": 5.0
+      },
+      {
+        "eid": 77945,
+        "s": 580,
+        "t": 6761,
+        "ts": 1447007453,
+        "rating": 4.5
+      },
+      {
+        "eid": 77944,
+        "s": 580,
+        "t": 4184,
+        "ts": 1447007435,
+        "rating": 5.0
+      },
+      {
+        "eid": 77943,
+        "s": 580,
+        "t": 4769,
+        "ts": 1447007433,
+        "rating": 3.5
+      },
+      {
+        "eid": 77942,
+        "s": 580,
+        "t": 3616,
+        "ts": 1447007430,
+        "rating": 4.5
+      },
+      {
+        "eid": 77941,
+        "s": 580,
+        "t": 4250,
+        "ts": 1447007422,
+        "rating": 4.5
+      },
+      {
+        "eid": 77940,
+        "s": 580,
+        "t": 4429,
+        "ts": 1447007420,
+        "rating": 4.5
+      },
+      {
+        "eid": 78310,
+        "s": 255,
+        "t": 9499,
+        "ts": 1447532480,
+        "rating": 3.0
+      },
+      {
+        "eid": 77954,
+        "s": 255,
+        "t": 8905,
+        "ts": 1447019716,
+        "rating": 4.5
+      },
+      {
+        "eid": 77953,
+        "s": 255,
+        "t": 2096,
+        "ts": 1447019714,
+        "rating": 5.0
+      },
+      {
+        "eid": 77952,
+        "s": 255,
+        "t": 1225,
+        "ts": 1447011355,
+        "rating": 4.5
+      },
+      {
+        "eid": 77951,
+        "s": 255,
+        "t": 8377,
+        "ts": 1447011304,
+        "rating": 4.0
+      },
+      {
+        "eid": 77950,
+        "s": 255,
+        "t": 9635,
+        "ts": 1447010966,
+        "rating": 4.0
+      },
+      {
+        "eid": 77909,
+        "s": 255,
+        "t": 6685,
+        "ts": 1447002086,
+        "rating": 4.0
+      },
+      {
+        "eid": 77908,
+        "s": 255,
+        "t": 6920,
+        "ts": 1447002076,
+        "rating": 0.5
+      },
+      {
+        "eid": 77907,
+        "s": 255,
+        "t": 1579,
+        "ts": 1447001868,
+        "rating": 5.0
+      },
+      {
+        "eid": 77906,
+        "s": 255,
+        "t": 5076,
+        "ts": 1447001374,
+        "rating": 3.5
+      },
+      {
+        "eid": 79014,
+        "s": 104,
+        "t": 8720,
+        "ts": 1448687415,
+        "rating": 4.0
+      },
+      {
+        "eid": 79012,
+        "s": 104,
+        "t": 4923,
+        "ts": 1448647907,
+        "rating": 4.5
+      },
+      {
+        "eid": 79011,
+        "s": 104,
+        "t": 4868,
+        "ts": 1448647899,
+        "rating": 4.5
+      },
+      {
+        "eid": 79010,
+        "s": 104,
+        "t": 2646,
+        "ts": 1448647872,
+        "rating": 4.5
+      },
+      {
+        "eid": 79009,
+        "s": 104,
+        "t": 7655,
+        "ts": 1448647845,
+        "rating": 5.0
+      },
+      {
+        "eid": 79008,
+        "s": 104,
+        "t": 8963,
+        "ts": 1448647827,
+        "rating": 4.5
+      },
+      {
+        "eid": 79007,
+        "s": 104,
+        "t": 1652,
+        "ts": 1448647819,
+        "rating": 4.0
+      },
+      {
+        "eid": 79006,
+        "s": 104,
+        "t": 8970,
+        "ts": 1448647811,
+        "rating": 4.5
+      },
+      {
+        "eid": 79005,
+        "s": 104,
+        "t": 8198,
+        "ts": 1448647783,
+        "rating": 5.0
+      },
+      {
+        "eid": 77191,
+        "s": 365,
+        "t": 7620,
+        "ts": 1445546633,
+        "rating": 4.5
+      },
+      {
+        "eid": 77190,
+        "s": 365,
+        "t": 9291,
+        "ts": 1445546624,
+        "rating": 2.0
+      },
+      {
+        "eid": 77188,
+        "s": 365,
+        "t": 5776,
+        "ts": 1445546595,
+        "rating": 4.5
+      },
+      {
+        "eid": 77187,
+        "s": 365,
+        "t": 6761,
+        "ts": 1445546583,
+        "rating": 3.5
+      },
+      {
+        "eid": 77186,
+        "s": 365,
+        "t": 6460,
+        "ts": 1445546573,
+        "rating": 3.0
+      },
+      {
+        "eid": 77185,
+        "s": 365,
+        "t": 3284,
+        "ts": 1445546566,
+        "rating": 4.5
+      },
+      {
+        "eid": 77184,
+        "s": 365,
+        "t": 5037,
+        "ts": 1445546557,
+        "rating": 4.0
+      },
+      {
+        "eid": 77183,
+        "s": 365,
+        "t": 5984,
+        "ts": 1445546555,
+        "rating": 4.0
+      },
+      {
+        "eid": 77159,
+        "s": 377,
+        "t": 3751,
+        "ts": 1445347927,
+        "rating": 3.5
+      },
+      {
+        "eid": 77158,
+        "s": 377,
+        "t": 7764,
+        "ts": 1445347912,
+        "rating": 2.0
+      },
+      {
+        "eid": 77157,
+        "s": 377,
+        "t": 5984,
+        "ts": 1445347900,
+        "rating": 4.0
+      },
+      {
+        "eid": 77156,
+        "s": 377,
+        "t": 7628,
+        "ts": 1445347894,
+        "rating": 4.0
+      },
+      {
+        "eid": 77155,
+        "s": 377,
+        "t": 5976,
+        "ts": 1445347890,
+        "rating": 4.0
+      },
+      {
+        "eid": 77154,
+        "s": 377,
+        "t": 5037,
+        "ts": 1445347884,
+        "rating": 4.0
+      },
+      {
+        "eid": 77153,
+        "s": 377,
+        "t": 932,
+        "ts": 1445347879,
+        "rating": 4.5
+      },
+      {
+        "eid": 77152,
+        "s": 377,
+        "t": 8986,
+        "ts": 1445347872,
+        "rating": 4.5
+      },
+      {
+        "eid": 77151,
+        "s": 377,
+        "t": 6925,
+        "ts": 1445347871,
+        "rating": 4.5
+      },
+      {
+        "eid": 77150,
+        "s": 377,
+        "t": 7144,
+        "ts": 1445347583,
+        "rating": 3.5
+      },
+      {
+        "eid": 77007,
+        "s": 62,
+        "t": 1515,
+        "ts": 1443735650,
+        "rating": 4.0
+      },
+      {
+        "eid": 77006,
+        "s": 62,
+        "t": 8314,
+        "ts": 1443735569,
+        "rating": 5.0
+      },
+      {
+        "eid": 77004,
+        "s": 62,
+        "t": 7093,
+        "ts": 1443729640,
+        "rating": 2.0
+      },
+      {
+        "eid": 77003,
+        "s": 62,
+        "t": 7364,
+        "ts": 1443729588,
+        "rating": 4.0
+      },
+      {
+        "eid": 77002,
+        "s": 62,
+        "t": 8913,
+        "ts": 1443461176,
+        "rating": 5.0
+      },
+      {
+        "eid": 77001,
+        "s": 62,
+        "t": 3800,
+        "ts": 1443368412,
+        "rating": 3.0
+      },
+      {
+        "eid": 77000,
+        "s": 62,
+        "t": 5771,
+        "ts": 1443368398,
+        "rating": 3.0
+      },
+      {
+        "eid": 76999,
+        "s": 62,
+        "t": 3267,
+        "ts": 1443368334,
+        "rating": 3.0
+      },
+      {
+        "eid": 76998,
+        "s": 62,
+        "t": 4135,
+        "ts": 1443368327,
+        "rating": 2.5
+      },
+      {
+        "eid": 76997,
+        "s": 62,
+        "t": 6345,
+        "ts": 1443368323,
+        "rating": 2.5
+      },
+      {
+        "eid": 77018,
+        "s": 325,
+        "t": 696,
+        "ts": 1443983581,
+        "rating": 3.5
+      },
+      {
+        "eid": 77017,
+        "s": 325,
+        "t": 8212,
+        "ts": 1443983575,
+        "rating": 4.0
+      },
+      {
+        "eid": 77013,
+        "s": 325,
+        "t": 8218,
+        "ts": 1443981968,
+        "rating": 3.5
+      },
+      {
+        "eid": 77012,
+        "s": 325,
+        "t": 8205,
+        "ts": 1443981943,
+        "rating": 5.0
+      },
+      {
+        "eid": 76705,
+        "s": 325,
+        "t": 6495,
+        "ts": 1442344486,
+        "rating": 4.0
+      },
+      {
+        "eid": 76704,
+        "s": 325,
+        "t": 8986,
+        "ts": 1442344399,
+        "rating": 3.0
+      },
+      {
+        "eid": 76076,
+        "s": 325,
+        "t": 8763,
+        "ts": 1437425299,
+        "rating": 5.0
+      },
+      {
+        "eid": 76075,
+        "s": 325,
+        "t": 2982,
+        "ts": 1437419286,
+        "rating": 4.5
+      },
+      {
+        "eid": 76074,
+        "s": 325,
+        "t": 2630,
+        "ts": 1437419239,
+        "rating": 4.0
+      },
+      {
+        "eid": 76073,
+        "s": 325,
+        "t": 9179,
+        "ts": 1437419070,
+        "rating": 4.5
+      },
+      {
+        "eid": 79402,
+        "s": 102,
+        "t": 849,
+        "ts": 1450982770,
+        "rating": 4.0
+      },
+      {
+        "eid": 79401,
+        "s": 102,
+        "t": 625,
+        "ts": 1450982615,
+        "rating": 5.0
+      },
+      {
+        "eid": 79029,
+        "s": 102,
+        "t": 4625,
+        "ts": 1448753463,
+        "rating": 4.5
+      },
+      {
+        "eid": 76524,
+        "s": 102,
+        "t": 7620,
+        "ts": 1440990360,
+        "rating": 5.0
+      },
+      {
+        "eid": 76500,
+        "s": 102,
+        "t": 9604,
+        "ts": 1440773846,
+        "rating": 3.5
+      },
+      {
+        "eid": 76499,
+        "s": 102,
+        "t": 9634,
+        "ts": 1440773817,
+        "rating": 4.5
+      },
+      {
+        "eid": 76498,
+        "s": 102,
+        "t": 9445,
+        "ts": 1440773794,
+        "rating": 1.0
+      },
+      {
+        "eid": 76497,
+        "s": 102,
+        "t": 9510,
+        "ts": 1440773774,
+        "rating": 3.5
+      },
+      {
+        "eid": 76496,
+        "s": 102,
+        "t": 9200,
+        "ts": 1440773703,
+        "rating": 4.0
+      },
+      {
+        "eid": 76495,
+        "s": 102,
+        "t": 9049,
+        "ts": 1440773645,
+        "rating": 4.0
+      },
+      {
+        "eid": 74059,
+        "s": 316,
+        "t": 9464,
+        "ts": 1430611255,
+        "rating": 4.0
+      },
+      {
+        "eid": 74058,
+        "s": 316,
+        "t": 8379,
+        "ts": 1430600296,
+        "rating": 3.0
+      },
+      {
+        "eid": 74057,
+        "s": 316,
+        "t": 696,
+        "ts": 1430598706,
+        "rating": 3.0
+      },
+      {
+        "eid": 74056,
+        "s": 316,
+        "t": 2630,
+        "ts": 1430598686,
+        "rating": 3.0
+      },
+      {
+        "eid": 74055,
+        "s": 316,
+        "t": 4154,
+        "ts": 1430598399,
+        "rating": 3.0
+      },
+      {
+        "eid": 74054,
+        "s": 316,
+        "t": 859,
+        "ts": 1430598394,
+        "rating": 2.0
+      },
+      {
+        "eid": 74053,
+        "s": 316,
+        "t": 3626,
+        "ts": 1430598391,
+        "rating": 5.0
+      },
+      {
+        "eid": 74052,
+        "s": 316,
+        "t": 5413,
+        "ts": 1430598384,
+        "rating": 5.0
+      },
+      {
+        "eid": 74051,
+        "s": 316,
+        "t": 5550,
+        "ts": 1430598371,
+        "rating": 5.0
+      },
+      {
+        "eid": 74050,
+        "s": 316,
+        "t": 4464,
+        "ts": 1430598370,
+        "rating": 3.0
+      }
+    ],
+    "u": 290,
+    "A": 3555,
+    "B": 2004,
+    "logit_A": 1.9462088346481323,
+    "logit_B": 0.6887925863265991,
+    "prob_A_over_B": 0.872295174879855,
+    "T": 0.6544249560344189,
+    "rank_A": 1,
+    "rank_B": 2,
+    "query": "a drama, but please nothing depressing",
+    "t": 1453051417,
+    "A_title": "Requiem for a Dream (2000)",
+    "B_title": "Out of Sight (1998)"
+  },
+  "ranks": {
+    "F0": [
+      {
+        "index": 15,
+        "rank": 1,
+        "title": "Requiem for a Dream (2000)",
+        "genres": "Drama",
+        "grade": 0,
+        "breaks_exclusion": true,
+        "total": 1.9068651954899287,
+        "parts": {
+          "behaviour": 0.2755208859006063,
+          "relevance": 1.1701181233650468,
+          "popularity": 0.46122618622427575
+        }
+      },
+      {
+        "index": 5,
+        "rank": 2,
+        "title": "Out of Sight (1998)",
+        "genres": "Comedy|Crime|Drama|Romance|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": 1.5590966610745562,
+        "parts": {
+          "behaviour": 0.1733417539531081,
+          "relevance": 1.1118757705547384,
+          "popularity": 0.2738791365667096
+        }
+      },
+      {
+        "index": 0,
+        "rank": 3,
+        "title": "Punch-Drunk Love (2002)",
+        "genres": "Comedy|Drama|Romance",
+        "grade": 0,
+        "breaks_exclusion": true,
+        "total": 1.2748429551680749,
+        "parts": {
+          "behaviour": 0.1997487240080641,
+          "relevance": 0.8242256606531492,
+          "popularity": 0.2508685705068616
+        }
+      },
+      {
+        "index": 20,
+        "rank": 4,
+        "title": "Bad News Bears, The (1976)",
+        "genres": "Comedy",
+        "grade": 0,
+        "breaks_exclusion": false,
+        "total": 1.1824426913095487,
+        "parts": {
+          "behaviour": -0.03351517778416216,
+          "relevance": 1.2483082214040455,
+          "popularity": -0.03235035231033461
+        }
+      },
+      {
+        "index": 4,
+        "rank": 5,
+        "title": "Life of David Gale, The (2003)",
+        "genres": "Crime|Drama|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": 1.026936820661149,
+        "parts": {
+          "behaviour": 0.1265295957062744,
+          "relevance": 0.9327575772652094,
+          "popularity": -0.03235035231033461
+        }
+      },
+      {
+        "index": 28,
+        "rank": 6,
+        "title": "Kill Bill: Vol. 2 (2004)",
+        "genres": "Action|Drama|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": 0.9743496316879079,
+        "parts": {
+          "behaviour": 0.2875586220369819,
+          "relevance": 0.2101796076763937,
+          "popularity": 0.4766114019745322
+        }
+      }
+    ],
+    "F3": [
+      {
+        "index": 5,
+        "rank": 1,
+        "title": "Out of Sight (1998)",
+        "genres": "Comedy|Crime|Drama|Romance|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": 0.0754581677891811,
+        "parts": {
+          "behaviour": 0.1733417539531081,
+          "relevance": -0.3717627227306366,
+          "popularity": 0.2738791365667096
+        }
+      },
+      {
+        "index": 28,
+        "rank": 2,
+        "title": "Kill Bill: Vol. 2 (2004)",
+        "genres": "Action|Drama|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": -0.12293508329591996,
+        "parts": {
+          "behaviour": 0.2875586220369819,
+          "relevance": -0.8871051073074341,
+          "popularity": 0.4766114019745322
+        }
+      },
+      {
+        "index": 14,
+        "rank": 3,
+        "title": "Audition (\u00d4dishon) (1999)",
+        "genres": "Drama|Horror|Mystery|Romance|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": -0.1424442602888373,
+        "parts": {
+          "behaviour": -0.01286512727828114,
+          "relevance": 0.009027490392327309,
+          "popularity": -0.13860662340288346
+        }
+      },
+      {
+        "index": 24,
+        "rank": 4,
+        "title": "Mr. Mom (1983)",
+        "genres": "Comedy|Drama",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": -0.18389441221751454,
+        "parts": {
+          "behaviour": 0.009496573375010312,
+          "relevance": -0.3031536042690277,
+          "popularity": 0.10976261867650286
+        }
+      },
+      {
+        "index": 0,
+        "rank": 5,
+        "title": "Punch-Drunk Love (2002)",
+        "genres": "Comedy|Drama|Romance",
+        "grade": 0,
+        "breaks_exclusion": true,
+        "total": -0.22725506523772931,
+        "parts": {
+          "behaviour": 0.1997487240080641,
+          "relevance": -0.677872359752655,
+          "popularity": 0.2508685705068616
+        }
+      },
+      {
+        "index": 12,
+        "rank": 6,
+        "title": "Smokin' Aces (2006)",
+        "genres": "Action|Crime|Drama|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": -0.55943438486081,
+        "parts": {
+          "behaviour": 0.06618877266345284,
+          "relevance": -0.5932728052139282,
+          "popularity": -0.03235035231033461
+        }
+      }
+    ],
+    "F4": [
+      {
+        "index": 15,
+        "rank": 1,
+        "title": "Requiem for a Dream (2000)",
+        "genres": "Drama",
+        "grade": 0,
+        "breaks_exclusion": true,
+        "total": 1.5636391267762562,
+        "parts": {
+          "behaviour": 0.2755208859006063,
+          "relevance": 1.1701181233650468,
+          "popularity": 0.11800011751060319
+        }
+      },
+      {
+        "index": 5,
+        "rank": 2,
+        "title": "Out of Sight (1998)",
+        "genres": "Comedy|Crime|Drama|Romance|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": 1.3552867687611627,
+        "parts": {
+          "behaviour": 0.1733417539531081,
+          "relevance": 1.1118757705547384,
+          "popularity": 0.07006924425331618
+        }
+      },
+      {
+        "index": 20,
+        "rank": 3,
+        "title": "Bad News Bears, The (1976)",
+        "genres": "Comedy",
+        "grade": 0,
+        "breaks_exclusion": false,
+        "total": 1.2065165287815156,
+        "parts": {
+          "behaviour": -0.03351517778416216,
+          "relevance": 1.2483082214040455,
+          "popularity": -0.00827651483836756
+        }
+      },
+      {
+        "index": 0,
+        "rank": 4,
+        "title": "Punch-Drunk Love (2002)",
+        "genres": "Comedy|Drama|Romance",
+        "grade": 0,
+        "breaks_exclusion": true,
+        "total": 1.0881566051935319,
+        "parts": {
+          "behaviour": 0.1997487240080641,
+          "relevance": 0.8242256606531492,
+          "popularity": 0.0641822205323186
+        }
+      },
+      {
+        "index": 4,
+        "rank": 5,
+        "title": "Life of David Gale, The (2003)",
+        "genres": "Crime|Drama|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false,
+        "total": 1.051010658133116,
+        "parts": {
+          "behaviour": 0.1265295957062744,
+          "relevance": 0.9327575772652094,
+          "popularity": -0.00827651483836756
+        }
+      },
+      {
+        "index": 13,
+        "rank": 6,
+        "title": "In Time (2011)",
+        "genres": "Crime|Sci-Fi|Thriller",
+        "grade": 0,
+        "breaks_exclusion": false,
+        "total": 0.7438360535502729,
+        "parts": {
+          "behaviour": 0.18607966789308628,
+          "relevance": 0.5737562416903217,
+          "popularity": -0.01599985603313504
+        }
+      }
+    ]
+  },
+  "A": "Requiem for a Dream (2000)",
+  "B": "Out of Sight (1998)"
+}

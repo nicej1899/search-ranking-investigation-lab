@@ -1,0 +1,184 @@
+{
+  "case_id": "C07-m232-t1448815881",
+  "member": 232,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Something to Talk About (1995)",
+  "A_id": 3555,
+  "B_id": 775,
+  "member_id": 232,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77543,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 255",
+        "from_id": 3555,
+        "to_id": 255,
+        "rating": 4.0,
+        "date": "2015-11-03",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 79030,
+        "from": "user 232",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 232,
+        "to_id": 887,
+        "rating": 5.0,
+        "date": "2015-11-29",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 2.998144764157281,
+      "nodes": [
+        {
+          "id": 365,
+          "name": "user 365"
+        },
+        {
+          "id": 255,
+          "name": "user 255"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77182,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 365",
+          "from_id": 3555,
+          "to_id": 365,
+          "rating": 4.0,
+          "date": "2015-10-22"
+        },
+        {
+          "eid": 77543,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 255",
+          "from_id": 3555,
+          "to_id": 255,
+          "rating": 4.0,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 361
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 79031,
+        "from": "user 232",
+        "to": "Green Mile, The (1999)",
+        "from_id": 232,
+        "to_id": 2982,
+        "rating": 4.0,
+        "date": "2015-11-29",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79033,
+        "from": "user 232",
+        "to": "Million Dollar Baby (2004)",
+        "from_id": 232,
+        "to_id": 6342,
+        "rating": 3.5,
+        "date": "2015-11-29",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79034,
+        "from": "user 232",
+        "to": "Schindler's List (1993)",
+        "from_id": 232,
+        "to_id": 1071,
+        "rating": 4.0,
+        "date": "2015-11-29",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 1.3689038500327584,
+      "nodes": [
+        {
+          "id": 118,
+          "name": "user 118"
+        },
+        {
+          "id": 2982,
+          "name": "Green Mile, The (1999)"
+        },
+        {
+          "id": 232,
+          "name": "user 232"
+        }
+      ],
+      "links": [
+        {
+          "eid": 75444,
+          "from": "Green Mile, The (1999)",
+          "to": "user 118",
+          "from_id": 2982,
+          "to_id": 118,
+          "rating": 5.0,
+          "date": "2015-07-03"
+        },
+        {
+          "eid": 79031,
+          "from": "user 232",
+          "to": "Green Mile, The (1999)",
+          "from_id": 232,
+          "to_id": 2982,
+          "rating": 4.0,
+          "date": "2015-11-29"
+        }
+      ]
+    },
+    "n_model_runs": 327
+  },
+  "test": {
+    "p0": 0.9918987533927919,
+    "del_A": {
+      "p": 0.978611047467784,
+      "p_random": 0.9919015650049232,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9946525276464856,
+      "p_random": 0.9909893375285419,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 1.0,
+    "shared_links": []
+  }
+}

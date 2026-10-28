@@ -1,0 +1,83 @@
+{
+  "created": "2026-10-21T21:44:47-0400",
+  "hardware": {
+    "platform": "Linux-6.18.44-fc-v140-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "cpu_count": 2,
+    "torch": "2.12.1+cu130",
+    "torch_threads": 2,
+    "device": "cpu"
+  },
+  "workload": {
+    "case": "E01-m470-t1496669535",
+    "candidates": 30,
+    "history_events_in_window": 5,
+    "final_cases_for_throughput": 1140
+  },
+  "process_load_s": 1.83,
+  "cold_first_call_ms": {
+    "inference": 1811.8041830002767,
+    "explanation": 83.41813200013348,
+    "motif": 7.458007999957772,
+    "note": "first call in a fresh process; includes spaCy query encoding and torch warm-up"
+  },
+  "warm": {
+    "model_inference_30_candidates": {
+      "n": 200,
+      "p50_ms": 0.8960640000168496,
+      "p95_ms": 1.1647078998521463,
+      "mean_ms": 0.9298352299765611,
+      "max_ms": 2.8410019999682845
+    },
+    "replay_with_intervention": {
+      "n": 200,
+      "p50_ms": 1.420933499957755,
+      "p95_ms": 1.6011380000009012,
+      "mean_ms": 1.367330310001762,
+      "max_ms": 2.710567000121955
+    },
+    "explanation_temgx_adapted_budget2": {
+      "n": 30,
+      "p50_ms": 75.77195549993121,
+      "p95_ms": 80.63315355009308,
+      "mean_ms": 75.65749736665263,
+      "max_ms": 89.13815899995825
+    },
+    "motif_catgx_adapted_single_case": {
+      "n": 30,
+      "p50_ms": 6.651638999983334,
+      "p95_ms": 7.47392375014897,
+      "mean_ms": 6.749285866681021,
+      "max_ms": 7.587409999814554
+    }
+  },
+  "throughput": {
+    "mean_ms_per_case_all_final_cases": 1.1684424991228712
+  },
+  "agent_orchestration_case_tools": {
+    "runs": [
+      {
+        "total_ms": 327.70558599986543,
+        "sum_tool_ms": 327.63
+      },
+      {
+        "total_ms": 330.84766499996476,
+        "sum_tool_ms": 330.79
+      },
+      {
+        "total_ms": 287.34204900001714,
+        "sum_tool_ms": 287.3
+      },
+      {
+        "total_ms": 280.7373360001293,
+        "sum_tool_ms": 280.68
+      },
+      {
+        "total_ms": 274.8266900002818,
+        "sum_tool_ms": 274.77000000000004
+      }
+    ],
+    "note": "4 case-level tools; envelope/provenance overhead = total - sum_tool_ms"
+  },
+  "cache_status": "no result caches used in these timings; query vectors are memoised after first use (warm)"
+}

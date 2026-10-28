@@ -1,0 +1,2314 @@
+{
+  "created": "2026-10-22T21:54:43-0400",
+  "backbone": "tgat2",
+  "title": "Requiem for a Dream (2000)",
+  "qid": "C07",
+  "query": "a drama, but please nothing depressing",
+  "alarm": {
+    "by_group": {
+      "original": {
+        "searches": 848,
+        "failed": 150,
+        "fail_rate": 0.17688679245283018,
+        "causes": {
+          "history_over_intent": 7,
+          "popularity_over_intent": 89,
+          "query_misread": 54
+        }
+      },
+      "coldstart": {
+        "searches": 728,
+        "failed": 144,
+        "fail_rate": 0.1978021978021978,
+        "causes": {
+          "history_over_intent": 16,
+          "popularity_over_intent": 82,
+          "query_misread": 46
+        }
+      },
+      "conversational": {
+        "searches": 636,
+        "failed": 334,
+        "fail_rate": 0.5251572327044025,
+        "causes": {
+          "history_over_intent": 7,
+          "popularity_over_intent": 128,
+          "query_misread": 199
+        }
+      }
+    },
+    "leaderboard": [
+      [
+        "Requiem for a Dream (2000)",
+        33
+      ],
+      [
+        "Fight Club (1999)",
+        16
+      ],
+      [
+        "Nightmare Before Christmas, The (1993)",
+        7
+      ],
+      [
+        "Sword in the Stone, The (1963)",
+        4
+      ],
+      [
+        "Snow White and the Seven Dwarfs (1937)",
+        4
+      ],
+      [
+        "I Know What You Did Last Summer (1997)",
+        4
+      ]
+    ],
+    "template_searches": 106,
+    "template_failed": 55,
+    "template_title_first": 32,
+    "title_first_all_groups": 36
+  },
+  "across": {
+    "n": 32,
+    "causes": {
+      "popularity_over_intent": 19,
+      "query_misread": 13
+    },
+    "mean_parts": {
+      "behaviour": 0.10343045672393264,
+      "relevance": -0.0882910019505301,
+      "popularity": 0.3536269060182775
+    },
+    "fix_resolves": {
+      "history": 4,
+      "popularity": 10,
+      "query": 16
+    },
+    "drivers": [
+      [
+        "user 365",
+        9
+      ],
+      [
+        "user 325",
+        7
+      ],
+      [
+        "Matrix, The (1999)",
+        7
+      ],
+      [
+        "Shawshank Redemption, The (1994)",
+        6
+      ],
+      [
+        "user 316",
+        5
+      ],
+      [
+        "user 102",
+        5
+      ],
+      [
+        "user 62",
+        4
+      ],
+      [
+        "user 281",
+        3
+      ]
+    ],
+    "driver_kinds": {
+      "recent rater of this title": 51,
+      "the member's own rating": 38,
+      "other person": 2
+    },
+    "top_motif": {
+      "POP": 25,
+      "BRIDGE": 3,
+      "CO": 2,
+      "SEQ": 2
+    },
+    "title_first": {
+      "F0": 32,
+      "F3": 0,
+      "F4": 15
+    },
+    "title_top3": {
+      "F0": 32,
+      "F3": 1,
+      "F4": 32
+    },
+    "mean_p_full": 0.8465640013291027,
+    "mean_p_without": 0.7923876756094048,
+    "temgx_beats_random": 32,
+    "rows": [
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 12,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          325,
+          887,
+          365
+        ],
+        "case_id": "C07-m1-t1445714882",
+        "member": 1,
+        "parts": {
+          "behaviour": 0.051016383532050694,
+          "relevance": -0.1549078802300865,
+          "popularity": 0.5867233156032575
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 3,
+        "B_title": "Next Three Days, The (2010)",
+        "p_full": 0.6951030032375504,
+        "p_without": 0.5698884752985155,
+        "drop": 0.3551498055458069,
+        "random": 0.05010807514190674,
+        "flipped": false,
+        "drivers": [
+          "user 325",
+          "Shawshank Redemption, The (1994)",
+          "user 365"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 13,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          281,
+          1551,
+          1255
+        ],
+        "case_id": "C07-m59-t1393541892",
+        "member": 59,
+        "parts": {
+          "behaviour": -0.00582490641161075,
+          "relevance": -0.21825220953561675,
+          "popularity": 0.5167582312598301
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": true,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Quiet Man, The (1952)",
+        "p_full": 0.9939055801363232,
+        "p_without": 0.9817802429413159,
+        "drop": 0.7247152328491211,
+        "random": 0.06328500509262085,
+        "flipped": false,
+        "drivers": [
+          "user 281",
+          "Glory (1989)",
+          "Ransom (1996)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 6,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          325,
+          316,
+          102
+        ],
+        "case_id": "C07-m62-t1443199688",
+        "member": 62,
+        "parts": {
+          "behaviour": 0.0851711503798854,
+          "relevance": 0.15346832663637766,
+          "popularity": 0.13644443767510633
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 3,
+        "B_title": "Thin Red Line, The (1998)",
+        "p_full": 0.9901556746292941,
+        "p_without": 0.9219425301592723,
+        "drop": 1.401732087135315,
+        "random": 0.0011857509613037109,
+        "flipped": false,
+        "drivers": [
+          "user 325",
+          "user 316",
+          "user 102"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 10,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          494,
+          338,
+          1877
+        ],
+        "case_id": "C07-m72-t1464196245",
+        "member": 72,
+        "parts": {
+          "behaviour": 0.002004496078852086,
+          "relevance": 0.35043301330557264,
+          "popularity": -0.011306127177276193
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Rain Man (1988)",
+        "p_full": 0.5628619342043526,
+        "p_without": 0.5381895339010061,
+        "drop": 0.06526517868041992,
+        "random": -0.001158541440963745,
+        "flipped": false,
+        "drivers": [
+          "user 494",
+          "user 338",
+          "Truman Show, The (1998)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 11,
+          "F4": 2
+        },
+        "top_motif": "BRIDGE",
+        "explanatory": [
+          304,
+          40,
+          121
+        ],
+        "case_id": "C07-m105-t1467360422",
+        "member": 105,
+        "parts": {
+          "behaviour": -0.008665452687599967,
+          "relevance": 0.30256636712137075,
+          "popularity": 0.10053253684614522
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 3,
+        "B_title": "Last Samurai, The (2003)",
+        "p_full": 0.4774699685554434,
+        "p_without": 0.42575237362078994,
+        "drop": 0.1367889642715454,
+        "random": -0.07155369520187378,
+        "flipped": false,
+        "drivers": [
+          "user 304",
+          "user 40",
+          "user 121"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 9,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          316,
+          102,
+          2549
+        ],
+        "case_id": "C07-m118-t1435943180",
+        "member": 118,
+        "parts": {
+          "behaviour": 0.011774261010863374,
+          "relevance": 0.7385575108767781,
+          "popularity": 0.07606810450999141
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 3,
+        "B_title": "Rob Roy (1995)",
+        "p_full": 0.9870330168816663,
+        "p_without": 0.9551953819168715,
+        "drop": 0.8328816890716553,
+        "random": 0.024458801746368407,
+        "flipped": false,
+        "drivers": [
+          "user 316",
+          "user 102",
+          "Matrix, The (1999)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 10,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          887,
+          40,
+          304
+        ],
+        "case_id": "C07-m121-t1461561151",
+        "member": 121,
+        "parts": {
+          "behaviour": 0.2971821449183929,
+          "relevance": -0.2934539928731916,
+          "popularity": 0.7336584227249838
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 3,
+        "B_title": "My Life (1993)",
+        "p_full": 0.9998107772403243,
+        "p_without": 0.9997002649821239,
+        "drop": 0.30109071731567383,
+        "random": 0.015712904930114745,
+        "flipped": false,
+        "drivers": [
+          "Shawshank Redemption, The (1994)",
+          "user 40",
+          "user 304"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 7,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          365,
+          2549,
+          580
+        ],
+        "case_id": "C07-m122-t1447269105",
+        "member": 122,
+        "parts": {
+          "behaviour": 0.027879050701539287,
+          "relevance": 0.027812175430460773,
+          "popularity": 0.12093298518644696
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Great Escape, The (1963)",
+        "p_full": 0.6510797040437438,
+        "p_without": 0.5876257710996564,
+        "drop": 0.17645227909088135,
+        "random": -0.03156638741493225,
+        "flipped": false,
+        "drivers": [
+          "user 365",
+          "Matrix, The (1999)",
+          "user 580"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 13,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          325,
+          2641,
+          62
+        ],
+        "case_id": "C07-m142-t1444768677",
+        "member": 142,
+        "parts": {
+          "behaviour": 0.048816362420849774,
+          "relevance": -0.5582420061155158,
+          "popularity": 0.7870228390881271
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": true,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "I Love You, I Love You Not (1996)",
+        "p_full": 0.9918282076570131,
+        "p_without": 0.978676058880488,
+        "drop": 0.6364226341247559,
+        "random": 0.07568244934082032,
+        "flipped": false,
+        "drivers": [
+          "user 325",
+          "American Pie (1999)",
+          "user 62"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 11,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          316,
+          102,
+          887
+        ],
+        "case_id": "C07-m176-t1435523542",
+        "member": 176,
+        "parts": {
+          "behaviour": 0.07969677038074867,
+          "relevance": -0.0615299953796653,
+          "popularity": 0.37488462019670565
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Last Man Standing (1996)",
+        "p_full": 0.9988942526148539,
+        "p_without": 0.994688295466929,
+        "drop": 1.0298101902008057,
+        "random": 0.07476592063903809,
+        "flipped": false,
+        "drivers": [
+          "user 316",
+          "user 102",
+          "Shawshank Redemption, The (1994)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 10,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          325,
+          316,
+          2549
+        ],
+        "case_id": "C07-m188-t1439465085",
+        "member": 188,
+        "parts": {
+          "behaviour": 0.15107674965124285,
+          "relevance": -0.5346353127698493,
+          "popularity": 0.4434827840404884
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": true,
+          "popularity": true,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "No Way Out (1987)",
+        "p_full": 0.999293299502591,
+        "p_without": 0.9954709898495421,
+        "drop": 1.2182016372680664,
+        "random": 0.06207239627838135,
+        "flipped": false,
+        "drivers": [
+          "user 325",
+          "user 316",
+          "Matrix, The (1999)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 11,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          2549,
+          365,
+          62
+        ],
+        "case_id": "C07-m226-t1447189556",
+        "member": 226,
+        "parts": {
+          "behaviour": 0.19293464223021273,
+          "relevance": -0.2795886097768179,
+          "popularity": 0.4903697411244012
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "P.S. I Love You (2007)",
+        "p_full": 0.9681030956629746,
+        "p_without": 0.9426822970491716,
+        "drop": 0.4009726047515869,
+        "random": -0.051723945140838626,
+        "flipped": false,
+        "drivers": [
+          "Matrix, The (1999)",
+          "user 365",
+          "user 62"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 11,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          887,
+          365,
+          255
+        ],
+        "case_id": "C07-m232-t1448815881",
+        "member": 232,
+        "parts": {
+          "behaviour": 0.2751425199148622,
+          "relevance": -0.5983613719766079,
+          "popularity": 0.4431292649272823
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": true,
+          "popularity": true,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Something to Talk About (1995)",
+        "p_full": 0.9918987475377556,
+        "p_without": 0.978611047467784,
+        "drop": 0.6441783905029297,
+        "random": 0.03634601831436157,
+        "flipped": false,
+        "drivers": [
+          "Shawshank Redemption, The (1994)",
+          "user 365",
+          "user 255"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 14,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          102,
+          1071,
+          1120
+        ],
+        "case_id": "C07-m250-t1470676715",
+        "member": 250,
+        "parts": {
+          "behaviour": -0.040707785070618285,
+          "relevance": 0.35043301330557264,
+          "popularity": -0.011030257189624026
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Rain Man (1988)",
+        "p_full": 0.44459653526036674,
+        "p_without": 0.4047066464934883,
+        "drop": 0.10690963268280029,
+        "random": -0.049915862083435056,
+        "flipped": false,
+        "drivers": [
+          "user 102",
+          "Schindler's List (1993)",
+          "Silence of the Lambs, The (1991)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 11,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          2549,
+          62,
+          365
+        ],
+        "case_id": "C07-m255-t1446579739",
+        "member": 255,
+        "parts": {
+          "behaviour": 0.24046151040366087,
+          "relevance": -0.7609013682423078,
+          "popularity": 0.5900726424456303
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": true,
+          "popularity": true,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Let Me In (2010)",
+        "p_full": 0.9981125489076171,
+        "p_without": 0.9947633449897808,
+        "drop": 0.6700112819671631,
+        "random": 0.014680862426757812,
+        "flipped": false,
+        "drivers": [
+          "Matrix, The (1999)",
+          "user 62",
+          "user 365"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 13,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          281,
+          15,
+          2301
+        ],
+        "case_id": "C07-m260-t1404880899",
+        "member": 260,
+        "parts": {
+          "behaviour": 0.006101705767494248,
+          "relevance": 0.37260114585311166,
+          "popularity": 0.1685014611222665
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 3,
+        "B_title": "For a Few Dollars More (Per qualche dollaro in pi\u00f9) (1965)",
+        "p_full": 0.5778559452150468,
+        "p_without": 0.38938361181827946,
+        "drop": 0.4999033808708191,
+        "random": 0.014590761065483094,
+        "flipped": true,
+        "drivers": [
+          "user 281",
+          "user 15",
+          "Rush Hour (1998)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 13,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          15,
+          1606
+        ],
+        "case_id": "C07-m281-t1378488934",
+        "member": 281,
+        "parts": {
+          "behaviour": -0.001994349766251957,
+          "relevance": 0.19497264233417622,
+          "popularity": -0.011401176759011922
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Sense and Sensibility (1995)",
+        "p_full": 0.5064976498022256,
+        "p_without": 0.4510049430605114,
+        "drop": 0.1456770896911621,
+        "random": 0.0074793040752410885,
+        "flipped": true,
+        "drivers": [
+          "user 15",
+          "Pink Floyd: The Wall (1982)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 9,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          867,
+          365,
+          1556
+        ],
+        "case_id": "C07-m284-t1449626093",
+        "member": 284,
+        "parts": {
+          "behaviour": 0.015353973486974842,
+          "relevance": -0.118352650507902,
+          "popularity": 0.38381515185331855
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": true,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Ordinary People (1980)",
+        "p_full": 0.9670421484957997,
+        "p_without": 0.9288664922412883,
+        "drop": 0.5298264026641846,
+        "random": 0.006814205646514892,
+        "flipped": false,
+        "drivers": [
+          "Pulp Fiction (1994)",
+          "user 365",
+          "Graduate, The (1967)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 8,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          8303,
+          7353,
+          365
+        ],
+        "case_id": "C07-m290-t1453051417",
+        "member": 290,
+        "parts": {
+          "behaviour": 0.2376357953790298,
+          "relevance": 0.05824235281030843,
+          "popularity": 0.18734704965756616
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Out of Sight (1998)",
+        "p_full": 0.8722951545880324,
+        "p_without": 0.7786233018831664,
+        "drop": 0.4343709945678711,
+        "random": 0.03560363054275513,
+        "flipped": false,
+        "drivers": [
+          "Avengers, The (2012)",
+          "Iron Man (2008)",
+          "user 365"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 8,
+          "F4": 2
+        },
+        "top_motif": "CO",
+        "explanatory": [
+          281,
+          15,
+          8379
+        ],
+        "case_id": "C07-m291-t1385677294",
+        "member": 291,
+        "parts": {
+          "behaviour": 0.19431601115192376,
+          "relevance": -0.36333439189195205,
+          "popularity": 0.5579766550320115
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": true,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "All That Heaven Allows (1955)",
+        "p_full": 0.8070920132828874,
+        "p_without": 0.6239767514040367,
+        "drop": 0.6051874756813049,
+        "random": 0.09262654036283494,
+        "flipped": false,
+        "drivers": [
+          "user 281",
+          "user 15",
+          "Bourne Legacy, The (2012)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 11,
+          "F4": 2
+        },
+        "top_motif": "BRIDGE",
+        "explanatory": [
+          343,
+          834,
+          1510
+        ],
+        "case_id": "C07-m307-t1421373693",
+        "member": 307,
+        "parts": {
+          "behaviour": 0.22130893233853674,
+          "relevance": -0.5498777033382747,
+          "popularity": 0.3327415512630646
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": true,
+          "popularity": true,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Can't Hardly Wait (1998)",
+        "p_full": 0.9488570601100368,
+        "p_without": 0.9290997906780464,
+        "drop": 0.2275376319885254,
+        "random": 0.0011844754219055176,
+        "flipped": false,
+        "drivers": [
+          "user 343",
+          "Star Wars: Episode IV - A New Hope (1977)",
+          "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 11,
+          "F4": 1
+        },
+        "top_motif": "SEQ",
+        "explanatory": [
+          260
+        ],
+        "case_id": "C07-m317-t1413054514",
+        "member": 317,
+        "parts": {
+          "behaviour": 0.05791871508063175,
+          "relevance": -0.07837624721059888,
+          "popularity": 0.23733898488976227
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Keeping the Faith (2000)",
+        "p_full": 0.7840316196184767,
+        "p_without": 0.7646312979408443,
+        "drop": 0.07269144058227539,
+        "random": 0.010903716087341309,
+        "flipped": false,
+        "drivers": [
+          "user 260"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 8,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          2549,
+          297,
+          9
+        ],
+        "case_id": "C07-m318-t1461351651",
+        "member": 318,
+        "parts": {
+          "behaviour": 0.24933275266496863,
+          "relevance": -0.3227235922178351,
+          "popularity": 0.4202513333252301
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Help, The (2011)",
+        "p_full": 0.8810372981790067,
+        "p_without": 0.789828898059095,
+        "drop": 0.44395899772644043,
+        "random": -0.0037845611572265626,
+        "flipped": false,
+        "drivers": [
+          "Matrix, The (1999)",
+          "user 297",
+          "user 9"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 10,
+          "F4": 1
+        },
+        "top_motif": "SEQ",
+        "explanatory": [
+          260
+        ],
+        "case_id": "C07-m325-t1419880402",
+        "member": 325,
+        "parts": {
+          "behaviour": 0.07610186898644566,
+          "relevance": -0.22237727517827954,
+          "popularity": 0.6772614524068353
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Perks of Being a Wallflower, The (2012)",
+        "p_full": 0.7277731209785787,
+        "p_without": 0.7198980260909816,
+        "drop": 0.02578282356262207,
+        "random": 0.0038674235343933105,
+        "flipped": false,
+        "drivers": [
+          "user 260"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 10,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          325,
+          610,
+          1028
+        ],
+        "case_id": "C07-m340-t1439751021",
+        "member": 340,
+        "parts": {
+          "behaviour": 0.14726035114813216,
+          "relevance": -0.49219975481625844,
+          "popularity": 0.500298800682188
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": true,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "What a Girl Wants (2003)",
+        "p_full": 0.9695310776958344,
+        "p_without": 0.913539981116779,
+        "drop": 0.7214775085449219,
+        "random": 0.024585413932800292,
+        "flipped": false,
+        "drivers": [
+          "user 325",
+          "Toy Story (1995)",
+          "Jurassic Park (1993)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 8,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          7320,
+          325,
+          62
+        ],
+        "case_id": "C07-m365-t1445546446",
+        "member": 365,
+        "parts": {
+          "behaviour": 0.025461546794975976,
+          "relevance": -0.12084804220292833,
+          "popularity": 0.4504394999077875
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Perfume: The Story of a Murderer (2006)",
+        "p_full": 0.968023022773991,
+        "p_without": 0.9183081710883049,
+        "drop": 0.648313045501709,
+        "random": -0.0011765778064727784,
+        "flipped": false,
+        "drivers": [
+          "Dark Knight, The (2008)",
+          "user 325",
+          "user 62"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 10,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          325,
+          316,
+          102
+        ],
+        "case_id": "C07-m438-t1436943790",
+        "member": 438,
+        "parts": {
+          "behaviour": -0.007219962050813017,
+          "relevance": 0.17803604610529256,
+          "popularity": -0.023465904434979812
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Face/Off (1997)",
+        "p_full": 0.9358982276421013,
+        "p_without": 0.7191667097857207,
+        "drop": 1.1391593217849731,
+        "random": 0.0554505467414856,
+        "flipped": false,
+        "drivers": [
+          "user 325",
+          "user 316",
+          "user 102"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 3,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          365,
+          834,
+          255
+        ],
+        "case_id": "C07-m440-t1449070467",
+        "member": 440,
+        "parts": {
+          "behaviour": 0.3641717956015688,
+          "relevance": -0.37611167103059806,
+          "popularity": 0.8069836279343641
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Once Upon a Time in the Midlands (2002)",
+        "p_full": 0.9999131153850032,
+        "p_without": 0.999746277332374,
+        "drop": 0.7014307975769043,
+        "random": 0.012448740005493165,
+        "flipped": false,
+        "drivers": [
+          "user 365",
+          "Star Wars: Episode IV - A New Hope (1977)",
+          "user 255"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 15,
+          "F4": 1
+        },
+        "top_motif": "BRIDGE",
+        "explanatory": [
+          8093,
+          8305,
+          2900
+        ],
+        "case_id": "C07-m461-t1378158322",
+        "member": 461,
+        "parts": {
+          "behaviour": 0.0977015200700651,
+          "relevance": 0.17404848265071826,
+          "popularity": 0.3213403745040526
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Dawn of the Dead (2004)",
+        "p_full": 0.8753501149731872,
+        "p_without": 0.7610963316963675,
+        "drop": 0.517267644405365,
+        "random": 0.12323691844940185,
+        "flipped": false,
+        "drivers": [
+          "True Grit (2010)",
+          "Separation, A (Jodaeiye Nader az Simin) (2011)",
+          "Little Big Man (1970)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 14,
+          "F4": 1
+        },
+        "top_motif": "CO",
+        "explanatory": [
+          343,
+          260,
+          9076
+        ],
+        "case_id": "C07-m505-t1424486905",
+        "member": 505,
+        "parts": {
+          "behaviour": 0.003370529041562348,
+          "relevance": 0.6471806055216127,
+          "popularity": 0.027556292541978666
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": true,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Patriot, The (2000)",
+        "p_full": 0.525094230249565,
+        "p_without": 0.4214344692826541,
+        "drop": 0.27312350273132324,
+        "random": 0.007506951689720154,
+        "flipped": true,
+        "drivers": [
+          "user 343",
+          "user 260",
+          "Whiplash (2014)"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 12,
+          "F4": 1
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          2549,
+          887,
+          365
+        ],
+        "case_id": "C07-m580-t1447007091",
+        "member": 580,
+        "parts": {
+          "behaviour": 0.04951275315797639,
+          "relevance": 0.15346832663637766,
+          "popularity": 0.15345060473887412
+        },
+        "cause": "query_misread",
+        "fix": {
+          "history": false,
+          "popularity": false,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Thin Red Line, The (1998)",
+        "p_full": 0.9949969615148471,
+        "p_without": 0.9837624315029914,
+        "drop": 0.7778739929199219,
+        "random": 0.008700311183929443,
+        "flipped": false,
+        "drivers": [
+          "Matrix, The (1999)",
+          "Shawshank Redemption, The (1994)",
+          "user 365"
+        ]
+      },
+      {
+        "rank_A": {
+          "F0": 1,
+          "F3": 12,
+          "F4": 2
+        },
+        "top_motif": "POP",
+        "explanatory": [
+          887,
+          2836,
+          3310
+        ],
+        "case_id": "C07-m609-t1479542004",
+        "member": 609,
+        "parts": {
+          "behaviour": 0.16548277885929083,
+          "relevance": -0.4230579957104079,
+          "popularity": 0.7478816926580754
+        },
+        "cause": "popularity_over_intent",
+        "fix": {
+          "history": false,
+          "popularity": true,
+          "query": false,
+          "temgx_removal": null
+        },
+        "rank_B": 2,
+        "B_title": "Vitelloni, I (a.k.a. The Young and the Passionate) (1953)",
+        "p_full": 0.9986129359547966,
+        "p_without": 0.9943648804027772,
+        "drop": 0.9201817512512207,
+        "random": 0.022682833671569824,
+        "flipped": false,
+        "drivers": [
+          "Shawshank Redemption, The (1994)",
+          "Fight Club (1999)",
+          "Mission: Impossible II (2000)"
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "case_id": "C07-m291-t1385677294",
+    "member": 291,
+    "t": 1385677294,
+    "n_history": 364,
+    "A": "Requiem for a Dream (2000)",
+    "B": "All That Heaven Allows (1955)",
+    "A_genres": "Drama",
+    "B_genres": "Drama|Romance",
+    "parts": {
+      "behaviour": 0.19431601115192376,
+      "relevance": -0.36333439189195205,
+      "popularity": 0.5579766550320115
+    },
+    "cause": "popularity_over_intent",
+    "before": [
+      {
+        "rank": 1,
+        "index": 26,
+        "title": "Requiem for a Dream (2000)",
+        "genres": "Drama",
+        "grade": 0,
+        "breaks_exclusion": true
+      },
+      {
+        "rank": 2,
+        "index": 9,
+        "title": "All That Heaven Allows (1955)",
+        "genres": "Drama|Romance",
+        "grade": 2,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 3,
+        "index": 5,
+        "title": "Karate Kid, Part II, The (1986)",
+        "genres": "Action|Adventure|Drama",
+        "grade": 2,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 4,
+        "index": 14,
+        "title": "Cell, The (2000)",
+        "genres": "Drama|Horror|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 5,
+        "index": 18,
+        "title": "Wrong Turn (2003)",
+        "genres": "Horror|Thriller",
+        "grade": 0,
+        "breaks_exclusion": false
+      }
+    ],
+    "after_F4": [
+      {
+        "rank": 1,
+        "index": 9,
+        "title": "All That Heaven Allows (1955)",
+        "genres": "Drama|Romance",
+        "grade": 2,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 2,
+        "index": 26,
+        "title": "Requiem for a Dream (2000)",
+        "genres": "Drama",
+        "grade": 0,
+        "breaks_exclusion": true
+      },
+      {
+        "rank": 3,
+        "index": 23,
+        "title": "All Over the Guy (2001)",
+        "genres": "Comedy",
+        "grade": 0,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 4,
+        "index": 18,
+        "title": "Wrong Turn (2003)",
+        "genres": "Horror|Thriller",
+        "grade": 0,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 5,
+        "index": 5,
+        "title": "Karate Kid, Part II, The (1986)",
+        "genres": "Action|Adventure|Drama",
+        "grade": 2,
+        "breaks_exclusion": false
+      }
+    ],
+    "after_F3": [
+      {
+        "rank": 1,
+        "index": 3,
+        "title": "Mermaids (1990)",
+        "genres": "Comedy|Drama|Romance",
+        "grade": 2,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 2,
+        "index": 21,
+        "title": "21 Grams (2003)",
+        "genres": "Crime|Drama|Mystery|Romance|Thriller",
+        "grade": 0,
+        "breaks_exclusion": true
+      },
+      {
+        "rank": 3,
+        "index": 22,
+        "title": "Notebook, The (2004)",
+        "genres": "Drama|Romance",
+        "grade": 0,
+        "breaks_exclusion": true
+      },
+      {
+        "rank": 4,
+        "index": 14,
+        "title": "Cell, The (2000)",
+        "genres": "Drama|Horror|Thriller",
+        "grade": 2,
+        "breaks_exclusion": false
+      },
+      {
+        "rank": 5,
+        "index": 8,
+        "title": "Blood Simple (1984)",
+        "genres": "Crime|Drama|Film-Noir",
+        "grade": 2,
+        "breaks_exclusion": false
+      }
+    ],
+    "rank_A": {
+      "F0": 1,
+      "F4": 2,
+      "F3": 8
+    },
+    "history": [
+      {
+        "eid": 69802,
+        "title": "My Fair Lady (1964)",
+        "genres": "Comedy|Drama|Musical|Romance",
+        "ts": 1357062188,
+        "rating": 2.0,
+        "in_explanation": false,
+        "signed": 2.980232238769531e-07
+      },
+      {
+        "eid": 69956,
+        "title": "Hope Springs (2012)",
+        "genres": "Comedy|Drama",
+        "ts": 1360446231,
+        "rating": 1.0,
+        "in_explanation": false,
+        "signed": 2.980232238769531e-07
+      },
+      {
+        "eid": 69957,
+        "title": "Bourne Legacy, The (2012)",
+        "genres": "Action|Adventure|Drama|Thriller|IMAX",
+        "ts": 1360446246,
+        "rating": 2.5,
+        "in_explanation": true,
+        "signed": 0.1808377504348755
+      },
+      {
+        "eid": 69958,
+        "title": "Sleeping Beauty (1959)",
+        "genres": "Animation|Children|Musical",
+        "ts": 1360446295,
+        "rating": 3.0,
+        "in_explanation": false,
+        "signed": 0.11192411184310913
+      },
+      {
+        "eid": 69959,
+        "title": "Cinderella (1950)",
+        "genres": "Animation|Children|Fantasy|Musical|Romance",
+        "ts": 1360446298,
+        "rating": 3.0,
+        "in_explanation": false,
+        "signed": 0.1785898208618164
+      },
+      {
+        "eid": 69960,
+        "title": "Snow White and the Seven Dwarfs (1937)",
+        "genres": "Animation|Children|Drama|Fantasy|Musical",
+        "ts": 1360446303,
+        "rating": 3.0,
+        "in_explanation": false,
+        "signed": 0.16168498992919922
+      },
+      {
+        "eid": 69961,
+        "title": "Lady and the Tramp (1955)",
+        "genres": "Animation|Children|Comedy|Romance",
+        "ts": 1360446306,
+        "rating": 3.0,
+        "in_explanation": false,
+        "signed": 0.1841200590133667
+      },
+      {
+        "eid": 69995,
+        "title": "Flight (2012)",
+        "genres": "Drama",
+        "ts": 1362267967,
+        "rating": 2.0,
+        "in_explanation": false,
+        "signed": 0.07386910915374756
+      },
+      {
+        "eid": 69996,
+        "title": "Hope Springs (2003)",
+        "genres": "Comedy|Romance",
+        "ts": 1362267999,
+        "rating": 1.0,
+        "in_explanation": false,
+        "signed": 0.10415869951248169
+      },
+      {
+        "eid": 69997,
+        "title": "Expendables 2, The (2012)",
+        "genres": "Action|Adventure",
+        "ts": 1362268068,
+        "rating": 3.5,
+        "in_explanation": false,
+        "signed": 0.19422346353530884
+      }
+    ],
+    "temgx": {
+      "explanatory": [
+        281,
+        15,
+        8379
+      ],
+      "connection": [],
+      "E_eps": [
+        69957,
+        70940,
+        71044
+      ],
+      "prob_full": 0.8070920132828874,
+      "prob_without": 0.6239767514040367,
+      "prob_only": 0.7659308536175149,
+      "flipped": false,
+      "baselines": {
+        "temgx": 0.6051874756813049,
+        "random_mean": 0.09262654036283494,
+        "most_recent": 0.0,
+        "top_single_edges": 0.5187206864356995,
+        "budget_edges": 3,
+        "n_random": 20,
+        "attention": 0.5445719361305237
+      },
+      "n_model_inferences": 100,
+      "explanatory_hops": {
+        "281": 1,
+        "15": 1,
+        "8379": 1
+      },
+      "targets": {
+        "u": 291,
+        "A": 3555,
+        "B": 3875
+      }
+    },
+    "sweep": {
+      "1": {
+        "p": 0.7252766118431445,
+        "n": 1,
+        "flipped": false
+      },
+      "2": {
+        "p": 0.6636372000912393,
+        "n": 2,
+        "flipped": false
+      },
+      "3": {
+        "p": 0.6239767514040367,
+        "n": 3,
+        "flipped": false
+      },
+      "5": {
+        "p": 0.5886568949097681,
+        "n": 5,
+        "flipped": false
+      }
+    },
+    "catgx": {
+      "cards": [
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "S": 0.035661504416199814,
+          "lift": 2.594172268714514,
+          "est_count": 20.0,
+          "n_scored": 20,
+          "example": {
+            "nodes": [
+              291,
+              8375,
+              561
+            ],
+            "eids": [
+              69997,
+              70432
+            ],
+            "ts": [
+              1362268068,
+              1368896280
+            ],
+            "g": 0.19422346353530884,
+            "involves_u": true
+          }
+        },
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "S": 0.026728838711335468,
+          "lift": 2.309163507337597,
+          "est_count": 6.0,
+          "n_scored": 6,
+          "example": {
+            "nodes": [
+              15,
+              281,
+              3555
+            ],
+            "eids": [
+              70940,
+              71044
+            ],
+            "ts": [
+              1377477886,
+              1378491761
+            ],
+            "g": 0.49191761016845703,
+            "involves_u": false
+          }
+        },
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "S": -0.0037841644072485994,
+          "lift": 0.8803651391448619,
+          "est_count": 265.9999999999999,
+          "n_scored": 40,
+          "example": {
+            "nodes": [
+              291,
+              1390,
+              8375
+            ],
+            "eids": [
+              69959,
+              69997
+            ],
+            "ts": [
+              1360446298,
+              1362268068
+            ],
+            "g": 0.26926153898239136,
+            "involves_u": true
+          }
+        }
+      ],
+      "n_model_inferences": 64,
+      "occurrences_total": 292
+    },
+    "joint": {
+      "p0": 0.8070919423800567,
+      "arms": {
+        "temgx": {
+          "eids": [
+            69957,
+            70940,
+            71044
+          ],
+          "n": 3,
+          "margin": 0.3314414918422699,
+          "p": 0.623976762089008,
+          "drop": 0.6051871478557587,
+          "flipped": false,
+          "placebo_p_mean": 0.788787875259511,
+          "placebo_p_lo": 0.7566572493903196,
+          "placebo_p_hi": 0.8096671993093036,
+          "placebo_drop_mean": 0.07110874354839325,
+          "p_value": 0.024390243902439025
+        },
+        "catgx": {
+          "eids": [
+            69802,
+            69956,
+            69957,
+            69958,
+            69960,
+            69961,
+            69995,
+            69996
+          ],
+          "n": 8,
+          "margin": 1.2025295495986938,
+          "p": 0.8626570579789477,
+          "drop": -0.2659009099006653,
+          "flipped": false,
+          "placebo_p_mean": 0.7563277701571803,
+          "placebo_p_lo": 0.734929123876254,
+          "placebo_p_hi": 0.8096671993093036,
+          "placebo_drop_mean": 0.1934033900499344,
+          "p_value": 1.0
+        },
+        "joint": {
+          "eids": [
+            69957,
+            70940,
+            70952,
+            71044
+          ],
+          "n": 4,
+          "margin": 0.3314414918422699,
+          "p": 0.623976762089008,
+          "drop": 0.6051871478557587,
+          "flipped": false,
+          "placebo_p_mean": 0.7872998659473909,
+          "placebo_p_lo": 0.7594886377802363,
+          "placebo_p_hi": 0.8070919423800567,
+          "placebo_drop_mean": 0.07730109840631486,
+          "p_value": 0.024390243902439025
+        },
+        "catgx_do": {
+          "eids": [
+            69802,
+            69956,
+            69957,
+            69959,
+            69961,
+            69997,
+            70940,
+            70946
+          ],
+          "n": 8,
+          "margin": 0.6424888372421265,
+          "p": 0.7274574786631,
+          "drop": 0.2941398024559021,
+          "flipped": false,
+          "placebo_p_mean": 0.781858210402518,
+          "placebo_p_lo": 0.7405283500657784,
+          "placebo_p_hi": 0.8096671993093036,
+          "placebo_drop_mean": 0.09880649149417878,
+          "p_value": 0.024390243902439025
+        },
+        "attention": {
+          "eids": [
+            71044,
+            70940,
+            69995,
+            69961
+          ],
+          "n": 4,
+          "margin": 0.34969693422317505,
+          "p": 0.6304988730259717,
+          "drop": 0.5869317054748535,
+          "flipped": false,
+          "placebo_p_mean": 0.7807460479757173,
+          "placebo_p_lo": 0.7564566323910719,
+          "placebo_p_hi": 0.807220705226519,
+          "placebo_drop_mean": 0.10281901359558106,
+          "p_value": 0.024390243902439025
+        }
+      },
+      "labels": [
+        {
+          "eid": 69957,
+          "s": 291,
+          "t": 8379,
+          "ts": 1360446246,
+          "motif": "CO",
+          "motif_name": "two people rated the same movie",
+          "S": 0.035661504416199814,
+          "lift": 2.594172268714514,
+          "instance": {
+            "nodes": [
+              291,
+              8379,
+              447
+            ],
+            "eids": [
+              69957,
+              70952
+            ],
+            "ts": [
+              1360446246,
+              1377951757
+            ]
+          }
+        },
+        {
+          "eid": 70940,
+          "s": 3555,
+          "t": 15,
+          "ts": 1377477886,
+          "motif": "CO",
+          "motif_name": "two people rated the same movie",
+          "S": 0.035661504416199814,
+          "lift": 2.594172268714514,
+          "instance": {
+            "nodes": [
+              15,
+              3555,
+              281
+            ],
+            "eids": [
+              70940,
+              71044
+            ],
+            "ts": [
+              1377477886,
+              1378491761
+            ]
+          }
+        },
+        {
+          "eid": 71044,
+          "s": 3555,
+          "t": 281,
+          "ts": 1378491761,
+          "motif": "CO",
+          "motif_name": "two people rated the same movie",
+          "S": 0.035661504416199814,
+          "lift": 2.594172268714514,
+          "instance": {
+            "nodes": [
+              15,
+              3555,
+              281
+            ],
+            "eids": [
+              70940,
+              71044
+            ],
+            "ts": [
+              1377477886,
+              1378491761
+            ]
+          }
+        }
+      ]
+    },
+    "meta": {
+      "15": {
+        "type": "user",
+        "label": "USER",
+        "title": "user 15"
+      },
+      "281": {
+        "type": "user",
+        "label": "USER",
+        "title": "user 281"
+      },
+      "1306": {
+        "type": "movie",
+        "label": "Comedy",
+        "title": "My Fair Lady (1964)",
+        "genres": "Comedy|Drama|Musical|Romance"
+      },
+      "5788": {
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Hope Springs (2003)",
+        "genres": "Comedy|Romance"
+      },
+      "1121": {
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Snow White and the Seven Dwarfs (1937)",
+        "genres": "Animation|Children|Drama|Fantasy|Musical"
+      },
+      "2169": {
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Sleeping Beauty (1959)",
+        "genres": "Animation|Children|Musical"
+      },
+      "291": {
+        "type": "user",
+        "label": "USER",
+        "title": "user 291"
+      },
+      "3555": {
+        "type": "movie",
+        "label": "Drama",
+        "title": "Requiem for a Dream (2000)",
+        "genres": "Drama"
+      },
+      "3875": {
+        "type": "movie",
+        "label": "Romance",
+        "title": "All That Heaven Allows (1955)",
+        "genres": "Drama|Romance"
+      },
+      "2154": {
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Lady and the Tramp (1955)",
+        "genres": "Animation|Children|Comedy|Romance"
+      },
+      "1390": {
+        "type": "movie",
+        "label": "Kids/Animation",
+        "title": "Cinderella (1950)",
+        "genres": "Animation|Children|Fantasy|Musical|Romance"
+      },
+      "561": {
+        "type": "user",
+        "label": "USER",
+        "title": "user 561"
+      },
+      "245": {
+        "type": "user",
+        "label": "USER",
+        "title": "user 245"
+      },
+      "8375": {
+        "type": "movie",
+        "label": "Action/Adventure",
+        "title": "Expendables 2, The (2012)",
+        "genres": "Action|Adventure"
+      },
+      "8569": {
+        "type": "movie",
+        "label": "Comedy",
+        "title": "Hope Springs (2012)",
+        "genres": "Comedy|Drama"
+      },
+      "8634": {
+        "type": "movie",
+        "label": "Drama",
+        "title": "Flight (2012)",
+        "genres": "Drama"
+      },
+      "8379": {
+        "type": "movie",
+        "label": "Crime/Thriller",
+        "title": "Bourne Legacy, The (2012)",
+        "genres": "Action|Adventure|Drama|Thriller|IMAX"
+      }
+    },
+    "graph": {
+      "edges": [
+        {
+          "eid": 69997,
+          "s": 291,
+          "t": 8375,
+          "ts": 1362268068,
+          "rating": 3.5,
+          "x": false,
+          "signed": 0.19422346353530884
+        },
+        {
+          "eid": 69996,
+          "s": 291,
+          "t": 5788,
+          "ts": 1362267999,
+          "rating": 1.0,
+          "x": false,
+          "signed": 0.10415869951248169
+        },
+        {
+          "eid": 69995,
+          "s": 291,
+          "t": 8634,
+          "ts": 1362267967,
+          "rating": 2.0,
+          "x": false,
+          "signed": 0.07386910915374756
+        },
+        {
+          "eid": 69961,
+          "s": 291,
+          "t": 2154,
+          "ts": 1360446306,
+          "rating": 3.0,
+          "x": false,
+          "signed": 0.1841200590133667
+        },
+        {
+          "eid": 69960,
+          "s": 291,
+          "t": 1121,
+          "ts": 1360446303,
+          "rating": 3.0,
+          "x": false,
+          "signed": 0.16168498992919922
+        },
+        {
+          "eid": 69959,
+          "s": 291,
+          "t": 1390,
+          "ts": 1360446298,
+          "rating": 3.0,
+          "x": false,
+          "signed": 0.1785898208618164
+        },
+        {
+          "eid": 69958,
+          "s": 291,
+          "t": 2169,
+          "ts": 1360446295,
+          "rating": 3.0,
+          "x": false,
+          "signed": 0.11192411184310913
+        },
+        {
+          "eid": 69957,
+          "s": 291,
+          "t": 8379,
+          "ts": 1360446246,
+          "rating": 2.5,
+          "x": true,
+          "signed": 0.1808377504348755
+        },
+        {
+          "eid": 69956,
+          "s": 291,
+          "t": 8569,
+          "ts": 1360446231,
+          "rating": 1.0,
+          "x": false,
+          "signed": 2.980232238769531e-07
+        },
+        {
+          "eid": 69802,
+          "s": 291,
+          "t": 1306,
+          "ts": 1357062188,
+          "rating": 2.0,
+          "x": false,
+          "signed": 2.980232238769531e-07
+        },
+        {
+          "eid": 71044,
+          "s": 3555,
+          "t": 281,
+          "ts": 1378491761,
+          "rating": 4.5,
+          "x": true,
+          "signed": 0.3013209104537964
+        },
+        {
+          "eid": 70940,
+          "s": 3555,
+          "t": 15,
+          "ts": 1377477886,
+          "rating": 4.0,
+          "x": true,
+          "signed": 0.14354175329208374
+        },
+        {
+          "eid": 70386,
+          "s": 3555,
+          "t": 561,
+          "ts": 1368894021,
+          "rating": 5.0,
+          "x": false,
+          "signed": -0.010879695415496826
+        },
+        {
+          "eid": 69490,
+          "s": 3555,
+          "t": 245,
+          "ts": 1354146010,
+          "rating": 2.0,
+          "x": false,
+          "signed": -0.03328770399093628
+        }
+      ]
+    }
+  },
+  "trust": {
+    "plant_median": {
+      "TemGX": 0.9695995450019836,
+      "LLM (reads the history as text)": 0.42606663703918457
+    },
+    "plant_n": 21,
+    "causal": {
+      "attention": {
+        "beats": 6,
+        "n": 12
+      },
+      "catgx": {
+        "beats": 3,
+        "n": 12
+      },
+      "catgx_do": {
+        "beats": 12,
+        "n": 12
+      },
+      "joint": {
+        "beats": 11,
+        "n": 12
+      },
+      "temgx": {
+        "beats": 12,
+        "n": 12
+      }
+    }
+  },
+  "fix": {
+    "conversational_heldout": {
+      "F2": {
+        "ndcg10": {
+          "baseline": 0.47708674406212304,
+          "variant": 0.4868627171230199,
+          "delta": 0.009775973060896921,
+          "ci95": [
+            0.0053012864541561846,
+            0.01421589683327756
+          ],
+          "n": 468
+        },
+        "top1_wrong": {
+          "baseline": 0.48504273504273504,
+          "variant": 0.49145299145299143,
+          "delta": 0.00641025641025641,
+          "ci95": [
+            -0.01495726495726496,
+            0.02777777777777779
+          ],
+          "n": 468
+        },
+        "top3_violation": {
+          "baseline": 0.5235042735042735,
+          "variant": 0.4893162393162393,
+          "delta": -0.03418803418803419,
+          "ci95": [
+            -0.057692307692307654,
+            -0.010683760683760757
+          ],
+          "n": 468
+        }
+      },
+      "F3": {
+        "ndcg10": {
+          "baseline": 0.47708674406212304,
+          "variant": 0.4612322901089747,
+          "delta": -0.01585445395314835,
+          "ci95": [
+            -0.0266522873480856,
+            -0.0056781729357409
+          ],
+          "n": 468
+        },
+        "top1_wrong": {
+          "baseline": 0.48504273504273504,
+          "variant": 0.5277777777777778,
+          "delta": 0.042735042735042736,
+          "ci95": [
+            -0.006410256410256443,
+            0.09401709401709396
+          ],
+          "n": 468
+        },
+        "top3_violation": {
+          "baseline": 0.5235042735042735,
+          "variant": 0.3333333333333333,
+          "delta": -0.19017094017094016,
+          "ci95": [
+            -0.22008547008547008,
+            -0.15811965811965817
+          ],
+          "n": 468
+        }
+      },
+      "F4": {
+        "ndcg10": {
+          "baseline": 0.47708674406212304,
+          "variant": 0.514709153263276,
+          "delta": 0.0376224092011531,
+          "ci95": [
+            0.029405235070171547,
+            0.04525862100436213
+          ],
+          "n": 468
+        },
+        "top1_wrong": {
+          "baseline": 0.48504273504273504,
+          "variant": 0.4081196581196581,
+          "delta": -0.07692307692307693,
+          "ci95": [
+            -0.11324786324786323,
+            -0.040598290598290565
+          ],
+          "n": 468
+        },
+        "top3_violation": {
+          "baseline": 0.5235042735042735,
+          "variant": 0.38675213675213677,
+          "delta": -0.13675213675213677,
+          "ci95": [
+            -0.1667200854700855,
+            -0.10470085470085466
+          ],
+          "n": 468
+        }
+      }
+    },
+    "params": {
+      "F2_gate": [
+        -0.9791386127471924,
+        0.37245216965675354
+      ],
+      "F3_beta": 0.5678150653839111,
+      "F4_pgate": [
+        -0.6958728432655334,
+        -1.0711969137191772
+      ]
+    }
+  },
+  "demo_member": "C07-m1-t1445714882"
+}

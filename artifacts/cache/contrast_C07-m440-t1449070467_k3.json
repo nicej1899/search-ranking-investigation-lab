@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m440-t1449070467",
+  "member": 440,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Once Upon a Time in the Midlands (2002)",
+  "A_id": 3555,
+  "B_id": 5131,
+  "member_id": 440,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77543,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 255",
+        "from_id": 3555,
+        "to_id": 255,
+        "rating": 4.0,
+        "date": "2015-11-03",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 79077,
+        "from": "user 440",
+        "to": "Star Wars: Episode IV - A New Hope (1977)",
+        "from_id": 440,
+        "to_id": 834,
+        "rating": 5.0,
+        "date": "2015-12-02",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 3.7277893716792647,
+      "nodes": [
+        {
+          "id": 365,
+          "name": "user 365"
+        },
+        {
+          "id": 255,
+          "name": "user 255"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77182,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 365",
+          "from_id": 3555,
+          "to_id": 365,
+          "rating": 4.0,
+          "date": "2015-10-22"
+        },
+        {
+          "eid": 77543,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 255",
+          "from_id": 3555,
+          "to_id": 255,
+          "rating": 4.0,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 346
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 78899,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 297",
+        "from_id": 3555,
+        "to_id": 297,
+        "rating": 2.5,
+        "date": "2015-11-15",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 79074,
+        "from": "user 440",
+        "to": "GoldenEye (1995)",
+        "from_id": 440,
+        "to_id": 619,
+        "rating": 4.5,
+        "date": "2015-12-02",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79075,
+        "from": "user 440",
+        "to": "Waterworld (1995)",
+        "from_id": 440,
+        "to_id": 786,
+        "rating": 4.0,
+        "date": "2015-12-02",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGEB",
+      "name": "a path of shared taste that ends at B",
+      "lift": 3.221252762574269,
+      "nodes": [
+        {
+          "id": 465,
+          "name": "user 465"
+        },
+        {
+          "id": 1508,
+          "name": "Star Wars: Episode V - The Empire Strikes Back (1980)"
+        },
+        {
+          "id": 297,
+          "name": "user 297"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76299,
+          "from": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+          "to": "user 465",
+          "from_id": 1508,
+          "to_id": 465,
+          "rating": 2.5,
+          "date": "2015-08-18"
+        },
+        {
+          "eid": 78126,
+          "from": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+          "to": "user 297",
+          "from_id": 1508,
+          "to_id": 297,
+          "rating": 4.0,
+          "date": "2015-11-14"
+        },
+        {
+          "eid": 78899,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 297",
+          "from_id": 3555,
+          "to_id": 297,
+          "rating": 2.5,
+          "date": "2015-11-15"
+        }
+      ]
+    },
+    "n_model_runs": 309
+  },
+  "test": {
+    "p0": 0.9999131153850032,
+    "del_A": {
+      "p": 0.9997462771475495,
+      "p_random": 0.9999131947218223,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9999601574673186,
+      "p_random": 0.999905975617807,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

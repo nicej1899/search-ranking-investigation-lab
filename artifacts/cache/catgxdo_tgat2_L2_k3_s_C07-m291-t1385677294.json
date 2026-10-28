@@ -1,0 +1,481 @@
+{
+  "method": "CATGX",
+  "backbone": "tgat2",
+  "L": 2,
+  "k_edges": 8,
+  "K": 3,
+  "N": 40,
+  "alpha": 3,
+  "exact": false,
+  "stage1": {
+    "mode": "HNSW retrieval + stratified sampling",
+    "retrieved_occurrences": 292,
+    "N_per_motif": 40,
+    "alpha": 3
+  },
+  "g": "drop of the A-B logit margin when the occurrence's edges are removed",
+  "n_edges": 60,
+  "n_nodes": 61,
+  "occurrences_total": 292,
+  "occurrences_used": 66,
+  "codebook_TM": {
+    "SEQ": 265.9999999999999,
+    "CO": 20.0,
+    "POP": 6.0
+  },
+  "n_cells": 11,
+  "S": {
+    "SEQ": -0.0037841644072485994,
+    "CO": 0.035661504416199814,
+    "BRIDGE": null,
+    "BRIDGEB": null,
+    "POP": 0.026728838711335468
+  },
+  "terms": {
+    "SEQ": [
+      {
+        "cell": [
+          1,
+          6,
+          2
+        ],
+        "omega": 0.05136986301369863,
+        "mu": 0.12899458408355713,
+        "mu_base": 0.11378314097722371,
+        "n": 2
+      },
+      {
+        "cell": [
+          1,
+          1,
+          2
+        ],
+        "omega": 0.4417808219178082,
+        "mu": 0.01949097479090971,
+        "mu_base": 0.01949097479090971,
+        "n": 17
+      },
+      {
+        "cell": [
+          1,
+          5,
+          2
+        ],
+        "omega": 0.0958904109589041,
+        "mu": 0.09634612798690796,
+        "mu_base": 0.09634612798690796,
+        "n": 5
+      },
+      {
+        "cell": [
+          3,
+          1,
+          2
+        ],
+        "omega": 0.1541095890410959,
+        "mu": 2.980232238769532e-07,
+        "mu_base": 2.980232238769532e-07,
+        "n": 7
+      },
+      {
+        "cell": [
+          3,
+          3,
+          2
+        ],
+        "omega": 0.0410958904109589,
+        "mu": 2.980232238769531e-07,
+        "mu_base": 0.08198651671409607,
+        "n": 2
+      },
+      {
+        "cell": [
+          2,
+          1,
+          2
+        ],
+        "omega": 0.1643835616438356,
+        "mu": 0.02050622020448957,
+        "mu_base": 0.0277835749799297,
+        "n": 7
+      }
+    ],
+    "CO": [
+      {
+        "cell": [
+          1,
+          6,
+          2
+        ],
+        "omega": 0.05136986301369863,
+        "mu": 0.10915917158126831,
+        "mu_base": 0.11378314097722371,
+        "n": 5
+      },
+      {
+        "cell": [
+          3,
+          3,
+          2
+        ],
+        "omega": 0.0410958904109589,
+        "mu": 0.49191761016845703,
+        "mu_base": 0.08198651671409607,
+        "n": 1
+      },
+      {
+        "cell": [
+          2,
+          1,
+          2
+        ],
+        "omega": 0.1643835616438356,
+        "mu": 0.14791736006736755,
+        "mu_base": 0.0277835749799297,
+        "n": 2
+      },
+      {
+        "cell": [
+          3,
+          7,
+          2
+        ],
+        "omega": 0.030821917808219176,
+        "mu": 0.19271249572436014,
+        "mu_base": 0.21527649296654594,
+        "n": 6
+      },
+      {
+        "cell": [
+          1,
+          7,
+          1
+        ],
+        "omega": 0.003424657534246575,
+        "mu": 0.19011002779006958,
+        "mu_base": 0.19011002779006958,
+        "n": 1
+      },
+      {
+        "cell": [
+          2,
+          8,
+          1
+        ],
+        "omega": 0.00684931506849315,
+        "mu": 0.09505516290664673,
+        "mu_base": 0.09505516290664673,
+        "n": 2
+      },
+      {
+        "cell": [
+          3,
+          8,
+          1
+        ],
+        "omega": 0.00684931506849315,
+        "mu": 0.09505516290664673,
+        "mu_base": 0.09505516290664673,
+        "n": 2
+      },
+      {
+        "cell": [
+          3,
+          4,
+          1
+        ],
+        "omega": 0.003424657534246575,
+        "mu": 2.980232238769531e-07,
+        "mu_base": 2.980232238769531e-07,
+        "n": 1
+      }
+    ],
+    "POP": [
+      {
+        "cell": [
+          1,
+          6,
+          2
+        ],
+        "omega": 0.05136986301369863,
+        "mu": 0.0,
+        "mu_base": 0.11378314097722371,
+        "n": 1
+      },
+      {
+        "cell": [
+          3,
+          3,
+          2
+        ],
+        "omega": 0.0410958904109589,
+        "mu": 0.49191761016845703,
+        "mu_base": 0.08198651671409607,
+        "n": 1
+      },
+      {
+        "cell": [
+          2,
+          1,
+          2
+        ],
+        "omega": 0.1643835616438356,
+        "mu": 0.11499696969985962,
+        "mu_base": 0.0277835749799297,
+        "n": 1
+      },
+      {
+        "cell": [
+          3,
+          7,
+          2
+        ],
+        "omega": 0.030821917808219176,
+        "mu": 0.26040448745091754,
+        "mu_base": 0.21527649296654594,
+        "n": 3
+      }
+    ]
+  },
+  "selected_motifs": [
+    "CO",
+    "POP",
+    "SEQ"
+  ],
+  "G_star": [
+    69802,
+    69956,
+    69957,
+    69959,
+    69961,
+    69997,
+    70940,
+    70946
+  ],
+  "G_star_occurrences": [
+    {
+      "motif": "SEQ",
+      "nodes": [
+        291,
+        8379,
+        2154
+      ],
+      "eids": [
+        69957,
+        69961
+      ],
+      "g": 0.23815453052520752,
+      "w": 7.588235294117647,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        291,
+        1390,
+        8375
+      ],
+      "eids": [
+        69959,
+        69997
+      ],
+      "g": 0.26926153898239136,
+      "w": 5.6,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        15,
+        3555,
+        8378
+      ],
+      "eids": [
+        70940,
+        70946
+      ],
+      "g": 0.14354175329208374,
+      "w": 6.428571428571429,
+      "touches_u": false
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        291,
+        1306,
+        2154
+      ],
+      "eids": [
+        69802,
+        69961
+      ],
+      "g": 0.1841200590133667,
+      "w": 4.5,
+      "touches_u": true
+    },
+    {
+      "motif": "SEQ",
+      "nodes": [
+        291,
+        8569,
+        2154
+      ],
+      "eids": [
+        69956,
+        69961
+      ],
+      "g": 0.09318816661834717,
+      "w": 7.588235294117647,
+      "touches_u": true
+    }
+  ],
+  "occurrences_by_motif_exact": {
+    "SEQ": 266,
+    "CO": 20,
+    "BRIDGE": 0,
+    "BRIDGEB": 0,
+    "POP": 6
+  },
+  "margin_full": 0.9366289377212524,
+  "margin_only": 0.6257292032241821,
+  "margin_without": 0.642488956451416,
+  "temperature": 0.6544249560344189,
+  "prob_full": 0.8070920132828874,
+  "fid_plus": -0.08474146456809728,
+  "fid_minus": 0.07963449850441384,
+  "flipped": false,
+  "coverage": 0.0547945205479452,
+  "n_model_inferences": 64,
+  "motif_names": {
+    "SEQ": "a person watched two movies in a row",
+    "CO": "two people rated the same movie",
+    "BRIDGE": "a path of shared taste that ends at A",
+    "BRIDGEB": "a path of shared taste that ends at B",
+    "POP": "several people rated A"
+  },
+  "motif_cards": [
+    {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "S": 0.035661504416199814,
+      "lift": 2.594172268714514,
+      "est_count": 20.0,
+      "n_scored": 20,
+      "example": {
+        "nodes": [
+          291,
+          8375,
+          561
+        ],
+        "eids": [
+          69997,
+          70432
+        ],
+        "ts": [
+          1362268068,
+          1368896280
+        ],
+        "g": 0.19422346353530884,
+        "involves_u": true
+      }
+    },
+    {
+      "motif": "POP",
+      "name": "several people rated A",
+      "S": 0.026728838711335468,
+      "lift": 2.309163507337597,
+      "est_count": 6.0,
+      "n_scored": 6,
+      "example": {
+        "nodes": [
+          15,
+          281,
+          3555
+        ],
+        "eids": [
+          70940,
+          71044
+        ],
+        "ts": [
+          1377477886,
+          1378491761
+        ],
+        "g": 0.49191761016845703,
+        "involves_u": false
+      }
+    },
+    {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "S": -0.0037841644072485994,
+      "lift": 0.8803651391448619,
+      "est_count": 265.9999999999999,
+      "n_scored": 40,
+      "example": {
+        "nodes": [
+          291,
+          1390,
+          8375
+        ],
+        "eids": [
+          69959,
+          69997
+        ],
+        "ts": [
+          1360446298,
+          1362268068
+        ],
+        "g": 0.26926153898239136,
+        "involves_u": true
+      }
+    }
+  ],
+  "latency_ms": {
+    "enumerate_window": 52.3,
+    "stage1": 25.2,
+    "g": 207.5,
+    "total": 298.2
+  },
+  "meta": {
+    "291": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 291"
+    },
+    "3555": {
+      "type": "movie",
+      "label": "Drama",
+      "title": "Requiem for a Dream (2000)",
+      "genres": "Drama"
+    },
+    "1390": {
+      "type": "movie",
+      "label": "Kids/Animation",
+      "title": "Cinderella (1950)",
+      "genres": "Animation|Children|Fantasy|Musical|Romance"
+    },
+    "15": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 15"
+    },
+    "561": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 561"
+    },
+    "8375": {
+      "type": "movie",
+      "label": "Action/Adventure",
+      "title": "Expendables 2, The (2012)",
+      "genres": "Action|Adventure"
+    },
+    "281": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 281"
+    }
+  },
+  "computed_at": "2026-10-22T22:22:02-0400",
+  "code_version": "5fd4f0c572dc"
+}

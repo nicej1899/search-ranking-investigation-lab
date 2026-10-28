@@ -1,0 +1,197 @@
+{
+  "case_id": "C07-m122-t1447269105",
+  "member": 122,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Great Escape, The (1963)",
+  "A_id": 3555,
+  "B_id": 1571,
+  "member_id": 122,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77927,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 580",
+        "from_id": 3555,
+        "to_id": 580,
+        "rating": 4.5,
+        "date": "2015-11-08",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 78064,
+        "from": "user 122",
+        "to": "Matrix, The (1999)",
+        "from_id": 122,
+        "to_id": 2549,
+        "rating": 4.0,
+        "date": "2015-11-11",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 3.4530989228859803,
+      "nodes": [
+        {
+          "id": 365,
+          "name": "user 365"
+        },
+        {
+          "id": 255,
+          "name": "user 255"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77182,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 365",
+          "from_id": 3555,
+          "to_id": 365,
+          "rating": 4.0,
+          "date": "2015-10-22"
+        },
+        {
+          "eid": 77543,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 255",
+          "from_id": 3555,
+          "to_id": 255,
+          "rating": 4.0,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 382
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 74027,
+        "from": "Great Escape, The (1963)",
+        "to": "user 316",
+        "from_id": 1571,
+        "to_id": 316,
+        "rating": 3.0,
+        "date": "2015-05-01",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76565,
+        "from": "Great Escape, The (1963)",
+        "to": "user 600",
+        "from_id": 1571,
+        "to_id": 600,
+        "rating": 4.5,
+        "date": "2015-09-07",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76763,
+        "from": "Great Escape, The (1963)",
+        "to": "user 62",
+        "from_id": 1571,
+        "to_id": 62,
+        "rating": 4.0,
+        "date": "2015-09-25",
+        "kind": "the title's recent raters"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 3
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 3.312397089412453,
+      "nodes": [
+        {
+          "id": 111,
+          "name": "user 111"
+        },
+        {
+          "id": 5410,
+          "name": "Lord of the Rings: The Return of the King, The (2003)"
+        },
+        {
+          "id": 62,
+          "name": "user 62"
+        },
+        {
+          "id": 1571,
+          "name": "Great Escape, The (1963)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76719,
+          "from": "Lord of the Rings: The Return of the King, The (2003)",
+          "to": "user 111",
+          "from_id": 5410,
+          "to_id": 111,
+          "rating": 5.0,
+          "date": "2015-09-18"
+        },
+        {
+          "eid": 76753,
+          "from": "Lord of the Rings: The Return of the King, The (2003)",
+          "to": "user 62",
+          "from_id": 5410,
+          "to_id": 62,
+          "rating": 4.0,
+          "date": "2015-09-25"
+        },
+        {
+          "eid": 76763,
+          "from": "Great Escape, The (1963)",
+          "to": "user 62",
+          "from_id": 1571,
+          "to_id": 62,
+          "rating": 4.0,
+          "date": "2015-09-25"
+        }
+      ]
+    },
+    "n_model_runs": 358
+  },
+  "test": {
+    "p0": 0.6510797868075793,
+    "del_A": {
+      "p": 0.5876257269586119,
+      "p_random": 0.6506581901534016,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9374488951662454,
+      "p_random": 0.6508056002905249,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.0,
+    "shared_links": []
+  }
+}

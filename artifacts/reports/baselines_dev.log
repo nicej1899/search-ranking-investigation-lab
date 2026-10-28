@@ -1,0 +1,13 @@
+srlab/baselines.py:152: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  A = torch.sparse_coo_tensor(torch.as_tensor(np.stack([r, c])), torch.as_tensor(w, dtype=torch.float32), (nu + ni, nu + ni)).coalesce()
+srlab/baselines.py:106: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.enc = nn.TransformerEncoder(layer, 2)
+popularity {'recall10': 0.0567, 'recall50': 0.1867, 'ndcg10': 0.2477}
+srlab/baselines.py:213: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  u = V[torch.as_tensor(h)].mean(0)
+bpr_mf {'recall10': 0.057, 'recall50': 0.1644, 'ndcg10': 0.2472}
+lightgcn {'recall10': 0.0583, 'recall50': 0.1678, 'ndcg10': 0.2419}
+sasrec {'recall10': 0.0425, 'recall50': 0.13, 'ndcg10': 0.2244}
+tgat1 {'recall10': 0.058, 'recall50': 0.2, 'ndcg10': 0.1992}
+tgat2 {'recall10': 0.068, 'recall50': 0.2444, 'ndcg10': 0.2735}
+tgn {'recall10': 0.0704, 'recall50': 0.202, 'ndcg10': 0.2441}

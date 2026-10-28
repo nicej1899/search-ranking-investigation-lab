@@ -1,0 +1,186 @@
+{
+  "case_id": "C07-m260-t1404880899",
+  "member": 260,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "For a Few Dollars More (Per qualche dollaro in pi\u00f9) (1965)",
+  "A_id": 3555,
+  "B_id": 3353,
+  "member_id": 260,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 70940,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 15",
+        "from_id": 3555,
+        "to_id": 15,
+        "rating": 4.0,
+        "date": "2013-08-26",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 71044,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 281",
+        "from_id": 3555,
+        "to_id": 281,
+        "rating": 4.5,
+        "date": "2013-09-06",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 72024,
+        "from": "user 260",
+        "to": "Rush Hour (1998)",
+        "from_id": 260,
+        "to_id": 2301,
+        "rating": 2.5,
+        "date": "2014-07-09",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 1.4965574369238226,
+      "nodes": [
+        {
+          "id": 15,
+          "name": "user 15"
+        },
+        {
+          "id": 281,
+          "name": "user 281"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 70940,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 15",
+          "from_id": 3555,
+          "to_id": 15,
+          "rating": 4.0,
+          "date": "2013-08-26"
+        },
+        {
+          "eid": 71044,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 281",
+          "from_id": 3555,
+          "to_id": 281,
+          "rating": 4.5,
+          "date": "2013-09-06"
+        }
+      ]
+    },
+    "n_model_runs": 117
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 72022,
+        "from": "user 260",
+        "to": "Beverly Hills Cop (1984)",
+        "from_id": 260,
+        "to_id": 3661,
+        "rating": 2.5,
+        "date": "2014-07-09",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 72024,
+        "from": "user 260",
+        "to": "Rush Hour (1998)",
+        "from_id": 260,
+        "to_id": 2301,
+        "rating": 2.5,
+        "date": "2014-07-09",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 72025,
+        "from": "user 260",
+        "to": "Mystery Men (1999)",
+        "from_id": 260,
+        "to_id": 2654,
+        "rating": 2.5,
+        "date": "2014-07-09",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.1269379187885558,
+      "nodes": [
+        {
+          "id": 260,
+          "name": "user 260"
+        },
+        {
+          "id": 2301,
+          "name": "Rush Hour (1998)"
+        },
+        {
+          "id": 2649,
+          "name": "Ghostbusters II (1989)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 72024,
+          "from": "user 260",
+          "to": "Rush Hour (1998)",
+          "from_id": 260,
+          "to_id": 2301,
+          "rating": 2.5,
+          "date": "2014-07-09"
+        },
+        {
+          "eid": 72026,
+          "from": "user 260",
+          "to": "Ghostbusters II (1989)",
+          "from_id": 260,
+          "to_id": 2649,
+          "rating": 3.0,
+          "date": "2014-07-09"
+        }
+      ]
+    },
+    "n_model_runs": 117
+  },
+  "test": {
+    "p0": 0.577856034086134,
+    "del_A": {
+      "p": 0.3893835685074637,
+      "p_random": 0.5767692993781508,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.6031492419925205,
+      "p_random": 0.5721352692373991,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 1.0,
+    "shared_links": [
+      72024
+    ]
+  }
+}

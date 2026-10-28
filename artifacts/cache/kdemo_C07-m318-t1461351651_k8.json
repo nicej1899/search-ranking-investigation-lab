@@ -1,0 +1,1102 @@
+{
+  "case_id": "C07-m318-t1461351651",
+  "k": 8,
+  "member": 318,
+  "joint": {
+    "lines": [
+      "TemGX: 2 of the 8 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
+      "TemGX: 4 are the member's own recent ratings (The Matrix, The Dark Knight, Schindler's List), shared with people who also rated Requiem for a Dream.",
+      "CATGX: \u201cShared taste leads to the better match\u201d stays 6.7\u00d7 after matching on timing and activity, and removing it moves the model (p = 0.02): a structural reason, not just recency.",
+      "CATGX: \u201cA run of ratings in one sitting\u201d looked 2.5\u00d7 but is 1.5\u00d7 after matching: part of its weight was timing and activity.",
+      "Ranker: Requiem for a Dream beats The Help mainly through popularity (+0.42); the history part adds +0.11."
+    ],
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of The Matrix, The Dark Knight. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      78159,
+      80251,
+      80932,
+      82587,
+      82588
+    ]
+  },
+  "score_split": {
+    "relevance": -0.3227235922178351,
+    "popularity": 0.4202513333252301,
+    "behaviour": 0.10648049160242246
+  },
+  "A": "Requiem for a Dream",
+  "B": "The Help",
+  "query": "a drama, but please nothing depressing",
+  "p0": 0.8810373554555138,
+  "evidence": [
+    {
+      "eid": 82588,
+      "n": 1,
+      "kind": "own",
+      "from": "user 318",
+      "to": "The Matrix",
+      "from_id": 318,
+      "to_id": 2549,
+      "rating": 5.0,
+      "date": "Apr 22, 2016",
+      "days_before": 0,
+      "p_without": 0.8300277349940507,
+      "drop": 0.05100962046146307,
+      "score": {
+        "influence": 0.05101315419939212,
+        "connectedness": 0.8001112493858169,
+        "recency": 0.9228764460166075,
+        "phi": 0.03766830824996801
+      },
+      "why": "Member 318 rated The Matrix 5\u2605 on Apr 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 5 of the people who rated The Matrix also rated Requiem for a Dream (e.g. user 17, user 40), so this rating pulls member 318 toward Requiem for a Dream's audience. Removing only this rating: 88% \u2192 83% (\u22125.1 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.484718203456488,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6775446026059317,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 78159,
+      "n": 2,
+      "kind": "other",
+      "from": "user 297",
+      "to": "The Help",
+      "from_id": 297,
+      "to_id": 8275,
+      "rating": 2.5,
+      "date": "Nov 14, 2015",
+      "days_before": 160,
+      "p_without": 0.8297058665117218,
+      "drop": 0.051331488943791914,
+      "score": {
+        "influence": 0.05583032431352075,
+        "connectedness": 0.7377445589410486,
+        "recency": 0.8577011584929697,
+        "phi": 0.03532743959338432
+      },
+      "why": "User 297 rated The Help 2.5\u2605 on Nov 14, 2015. It reaches the decision through the graph: it changes how The Help and its raters are represented, which feeds into member 318 or Requiem for a Dream. Removing only this rating: 88% \u2192 83% (\u22125.1 pts).",
+      "patterns": [
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.292083554846726,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 80251,
+      "n": 3,
+      "kind": "other",
+      "from": "user 9",
+      "to": "The Help",
+      "from_id": 9,
+      "to_id": 8275,
+      "rating": 3.0,
+      "date": "Feb 13, 2016",
+      "days_before": 69,
+      "p_without": 0.8466701218020866,
+      "drop": 0.0343672336534272,
+      "score": {
+        "influence": 0.0343874823225323,
+        "connectedness": 0.7532414601102791,
+        "recency": 0.8281708456197399,
+        "phi": 0.021451345338813408
+      },
+      "why": "User 9 rated The Help 3\u2605 on Feb 13, 2016. It reaches the decision through the graph: it changes how The Help and its raters are represented, which feeds into member 318 or Requiem for a Dream. Removing only this rating: 88% \u2192 85% (\u22123.4 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6775446026059317,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "Shared taste leads to the better match",
+          "adjusted": 6.7142139242233085,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 82586,
+      "n": 4,
+      "kind": "own",
+      "from": "user 318",
+      "to": "The Dark Knight",
+      "from_id": 318,
+      "to_id": 7320,
+      "rating": 5.0,
+      "date": "Apr 22, 2016",
+      "days_before": 0,
+      "p_without": 0.8671943663263317,
+      "drop": 0.013842989129182026,
+      "score": {
+        "influence": 0.01389507297917314,
+        "connectedness": 0.80111184692449,
+        "recency": 0.9247707799425621,
+        "phi": 0.010294092944377487
+      },
+      "why": "Member 318 rated The Dark Knight 5\u2605 on Apr 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 5 of the people who rated The Dark Knight also rated Requiem for a Dream (e.g. user 17, user 304), so this rating pulls member 318 toward Requiem for a Dream's audience. Removing only this rating: 88% \u2192 87% (\u22121.4 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.484718203456488,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6775446026059317,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 82587,
+      "n": 5,
+      "kind": "own",
+      "from": "user 318",
+      "to": "Schindler's List",
+      "from_id": 318,
+      "to_id": 1071,
+      "rating": 5.0,
+      "date": "Apr 22, 2016",
+      "days_before": 0,
+      "p_without": 0.8676606831573681,
+      "drop": 0.013376672298145653,
+      "score": {
+        "influence": 0.013378716625970677,
+        "connectedness": 0.7422145100422782,
+        "recency": 0.833039079830567,
+        "phi": 0.00827197610334862
+      },
+      "why": "Member 318 rated Schindler's List 5\u2605 on Apr 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated Schindler's List also rated Requiem for a Dream (e.g. user 17, user 304), so this rating pulls member 318 toward Requiem for a Dream's audience. Removing only this rating: 88% \u2192 87% (\u22121.3 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.484718203456488,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6775446026059317,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 80932,
+      "n": 6,
+      "kind": "crowd",
+      "from": "user 40",
+      "to": "Requiem for a Dream",
+      "from_id": 40,
+      "to_id": 3555,
+      "rating": 4.0,
+      "date": "Mar 25, 2016",
+      "days_before": 28,
+      "p_without": 0.8696496977729702,
+      "drop": 0.011387657682543573,
+      "score": {
+        "influence": 0.011420464728914115,
+        "connectedness": 0.7329655643626357,
+        "recency": 0.9380632892304668,
+        "phi": 0.00785234709999993
+      },
+      "why": "User 40 rated Requiem for a Dream 4\u2605 on Mar 25, 2016, 28 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current; user 40 also rated 2 titles that member 318 rated (e.g. The Matrix, 50 First Dates), which ties Requiem for a Dream to this member's taste. Removing only this rating: 88% \u2192 87% (\u22121.1 pts).",
+      "patterns": [
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 3.0350626559752696,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 82584,
+      "n": 7,
+      "kind": "own",
+      "from": "user 318",
+      "to": "50 First Dates",
+      "from_id": 318,
+      "to_id": 5477,
+      "rating": 4.0,
+      "date": "Apr 22, 2016",
+      "days_before": 0,
+      "p_without": 0.8872025703698924,
+      "drop": -0.006165214914378603,
+      "score": {
+        "influence": 0.006168588086264304,
+        "connectedness": 0.7985794265940002,
+        "recency": 0.7836488407881566,
+        "phi": 0.003860338460829559
+      },
+      "why": "Member 318 rated 50 First Dates 4\u2605 on Apr 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated 50 First Dates also rated Requiem for a Dream (e.g. user 17, user 40), so this rating pulls member 318 toward Requiem for a Dream's audience. Removing only this rating: 88% \u2192 89% (+0.6 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.484718203456488,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6775446026059317,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 80568,
+      "n": 8,
+      "kind": "crowd",
+      "from": "user 423",
+      "to": "Requiem for a Dream",
+      "from_id": 423,
+      "to_id": 3555,
+      "rating": 3.5,
+      "date": "Mar 13, 2016",
+      "days_before": 41,
+      "p_without": 0.8773876857639287,
+      "drop": 0.003649669691585089,
+      "score": {
+        "influence": 0.0036788365186469774,
+        "connectedness": 0.7027063408304882,
+        "recency": 0.8960580904683954,
+        "phi": 0.002316437178779703
+      },
+      "why": "User 423 rated Requiem for a Dream 3.5\u2605 on Mar 13, 2016, 41 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current; user 423 also rated 2 titles that member 318 rated (e.g. The Matrix, The Dark Knight), which ties Requiem for a Dream to this member's taste. Removing only this rating: 88% \u2192 88% (\u22120.4 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6775446026059317,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.292083554846726,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 3.0350626559752696,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.8300277349940507,
+      "rand_mean": 0.8810627718857621,
+      "rand_lo": 0.8671943663263317,
+      "rand_hi": 0.8872025703698924,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.790962920674918,
+      "rand_mean": 0.8818442375675803,
+      "rand_lo": 0.8427370595206441,
+      "rand_hi": 0.9472784042929621,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.7898289585355349,
+      "rand_mean": 0.8780677477544768,
+      "rand_lo": 0.8410558444785621,
+      "rand_hi": 0.8872025703698924,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.7750270417076486,
+      "rand_mean": 0.8807090285905479,
+      "rand_lo": 0.8405666674836467,
+      "rand_hi": 0.9229151459943247,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.7389521674935265,
+      "rand_mean": 0.8848163363677177,
+      "rand_lo": 0.8780832320668153,
+      "rand_hi": 0.9477597471875258,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.7237324335633469,
+      "rand_mean": 0.8829761946498818,
+      "rand_lo": 0.8417186050358068,
+      "rand_hi": 0.9567658166130996,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 7,
+      "p": 0.6550570496491405,
+      "rand_mean": 0.886073892037696,
+      "rand_lo": 0.8749650066088916,
+      "rand_hi": 0.9565591233254531,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 8,
+      "p": 0.6435569227838311,
+      "rand_mean": 0.885337678167089,
+      "rand_lo": 0.842196744696255,
+      "rand_hi": 0.9572377302516427,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.6435569227838311,
+    "rand_mean": 0.885337678167089,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.8438100845793914,
+      0.8804171850798808,
+      0.9564385260097109,
+      0.8806436090432314,
+      0.8789567753884215,
+      0.8820475514813214,
+      0.8794450799859183,
+      0.8810373554555138,
+      0.8804171850798808,
+      0.8848356029761375,
+      0.8437480149999272,
+      0.9573282328072696,
+      0.9571377011112129,
+      0.8405666674836467,
+      0.8829887410165951,
+      0.8815095510478183,
+      0.8434400836981173,
+      0.9565356129934275,
+      0.8789198706378248,
+      0.8829613919377681,
+      0.8813579776163757,
+      0.8809265572042463,
+      0.8820665966530526,
+      0.8818280652084783,
+      0.8810373554555138,
+      0.8820665966530526,
+      0.8847981204493343,
+      0.9565356129934275,
+      0.8838137094636253,
+      0.885775711096222,
+      0.8830223692051625,
+      0.8809891010916274,
+      0.887709571292498,
+      0.8807971574791611,
+      0.8812883979929625,
+      0.8845855933731309,
+      0.8810453739310717,
+      0.8816024453036334,
+      0.8797211527929865,
+      0.8806760973332575,
+      0.8814157940500872,
+      0.8865686803526354,
+      0.8823583837091654,
+      0.9579243764749205,
+      0.8414774096940244,
+      0.8831989159047112,
+      0.8804171850798808,
+      0.8429917991724046,
+      0.881653506464754,
+      0.8759766157405519,
+      0.8806121664243891,
+      0.8818279323324123,
+      0.8820665966530526,
+      0.8803875132451805,
+      0.8830223692051625,
+      0.8814448073352699,
+      0.8808073509929728,
+      0.8810373554555138,
+      0.8817287327379989,
+      0.8785148135984243
+    ],
+    "flips": false
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 2,
+    "B_after": 2,
+    "top3_after": [
+      "Requiem for a Dream (2000)",
+      "Help, The (2011)",
+      "Year of Living Dangerously, The (1982)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 3555,
+        "name": "Requiem for a Dream",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 5477,
+        "name": "50 First Dates",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 423,
+        "name": "user 423",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 40,
+        "name": "user 40",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 297,
+        "name": "user 297",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 9,
+        "name": "user 9",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 1071,
+        "name": "Schindler's List",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 304,
+        "name": "user 304",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 17,
+        "name": "user 17",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 8275,
+        "name": "The Help",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 2549,
+        "name": "The Matrix",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 7320,
+        "name": "The Dark Knight",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 318,
+        "name": "user 318",
+        "type": "user",
+        "role": "u"
+      }
+    ],
+    "edges": [
+      {
+        "eid": 78159,
+        "s": 8275,
+        "t": 297,
+        "rating": 2.5,
+        "date": "Nov 14, 2015",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 80251,
+        "s": 8275,
+        "t": 9,
+        "rating": 3.0,
+        "date": "Feb 13, 2016",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 80568,
+        "s": 3555,
+        "t": 423,
+        "rating": 3.5,
+        "date": "Mar 13, 2016",
+        "expl": true,
+        "n": 8
+      },
+      {
+        "eid": 80932,
+        "s": 3555,
+        "t": 40,
+        "rating": 4.0,
+        "date": "Mar 25, 2016",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 82584,
+        "s": 318,
+        "t": 5477,
+        "rating": 4.0,
+        "date": "Apr 22, 2016",
+        "expl": true,
+        "n": 7
+      },
+      {
+        "eid": 82586,
+        "s": 318,
+        "t": 7320,
+        "rating": 5.0,
+        "date": "Apr 22, 2016",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 82587,
+        "s": 318,
+        "t": 1071,
+        "rating": 5.0,
+        "date": "Apr 22, 2016",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 82588,
+        "s": 318,
+        "t": 2549,
+        "rating": 5.0,
+        "date": "Apr 22, 2016",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 79948,
+        "s": 7320,
+        "t": 17,
+        "rating": 4.0,
+        "date": "Feb 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 79978,
+        "s": 1071,
+        "t": 17,
+        "rating": 4.5,
+        "date": "Feb 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80018,
+        "s": 5477,
+        "t": 17,
+        "rating": 3.0,
+        "date": "Feb 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80063,
+        "s": 2549,
+        "t": 17,
+        "rating": 4.5,
+        "date": "Feb 11, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80275,
+        "s": 3555,
+        "t": 17,
+        "rating": 4.5,
+        "date": "Feb 15, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80500,
+        "s": 2549,
+        "t": 423,
+        "rating": 2.0,
+        "date": "Mar 13, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80501,
+        "s": 7320,
+        "t": 423,
+        "rating": 3.5,
+        "date": "Mar 13, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81232,
+        "s": 2549,
+        "t": 40,
+        "rating": 2.0,
+        "date": "Mar 30, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81239,
+        "s": 5477,
+        "t": 40,
+        "rating": 5.0,
+        "date": "Mar 30, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81787,
+        "s": 7320,
+        "t": 304,
+        "rating": 5.0,
+        "date": "Apr 8, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81821,
+        "s": 1071,
+        "t": 304,
+        "rating": 5.0,
+        "date": "Apr 8, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81884,
+        "s": 3555,
+        "t": 304,
+        "rating": 5.0,
+        "date": "Apr 8, 2016",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "BRIDGEB",
+      "name": "Shared taste leads to the better match",
+      "raw": 5.506344398467866,
+      "adjusted": 6.7142139242233085,
+      "graph": {
+        "nodes": [
+          {
+            "id": 17,
+            "name": "user 17",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 8275,
+            "name": "The Help",
+            "type": "title",
+            "role": "B"
+          },
+          {
+            "id": 2549,
+            "name": "The Matrix",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 9,
+            "name": "user 9",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 80063,
+            "s": 2549,
+            "t": 17,
+            "rating": 4.5,
+            "date": "Feb 11, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 80178,
+            "s": 2549,
+            "t": 9,
+            "rating": 0.5,
+            "date": "Feb 13, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 80251,
+            "s": 8275,
+            "t": 9,
+            "rating": 3.0,
+            "date": "Feb 13, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        80251
+      ],
+      "S": 0.006861181240382157,
+      "occurrence": {
+        "eids": [
+          80063,
+          80178,
+          80251
+        ],
+        "nodes": [
+          "user 17",
+          "The Matrix",
+          "user 9",
+          "The Help"
+        ],
+        "dates": [
+          "Feb 11, 2016",
+          "Feb 13, 2016",
+          "Feb 13, 2016"
+        ]
+      },
+      "p_without": 0.8466135003409406,
+      "p_random": 0.87964313067915,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the better match: before matching on context it looks 5.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 6.7\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 17, The Matrix, user 9): 88% \u2192 85%; random ratings of the same size: 88% (p = 0.02)."
+    },
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 1.0539805483578732,
+      "adjusted": 3.0350626559752696,
+      "graph": {
+        "nodes": [
+          {
+            "id": 40,
+            "name": "user 40",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 494,
+            "name": "user 494",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 80711,
+            "s": 3555,
+            "t": 494,
+            "rating": 4.0,
+            "date": "Mar 22, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 80932,
+            "s": 3555,
+            "t": 40,
+            "rating": 4.0,
+            "date": "Mar 25, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        80932
+      ],
+      "S": 0.01834811860211952,
+      "occurrence": {
+        "eids": [
+          80711,
+          80932
+        ],
+        "nodes": [
+          "user 494",
+          "user 40",
+          "Requiem for a Dream"
+        ],
+        "dates": [
+          "Mar 22, 2016",
+          "Mar 25, 2016"
+        ]
+      },
+      "p_without": 0.857504714924733,
+      "p_random": 0.8808936463696521,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 1.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 3.0\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 494, user 40, Requiem for a Dream): 88% \u2192 86%; random ratings of the same size: 88% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 2.453428717868932,
+      "adjusted": 1.484718203456488,
+      "graph": {
+        "nodes": [
+          {
+            "id": 2549,
+            "name": "The Matrix",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 318,
+            "name": "user 318",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 1071,
+            "name": "Schindler's List",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 82587,
+            "s": 318,
+            "t": 1071,
+            "rating": 5.0,
+            "date": "Apr 22, 2016",
+            "in_temgx": true
+          },
+          {
+            "eid": 82588,
+            "s": 318,
+            "t": 2549,
+            "rating": 5.0,
+            "date": "Apr 22, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        82587,
+        82588
+      ],
+      "S": 0.0038852726961728736,
+      "occurrence": {
+        "eids": [
+          82587,
+          82588
+        ],
+        "nodes": [
+          "user 318",
+          "Schindler's List",
+          "The Matrix"
+        ],
+        "dates": [
+          "Apr 22, 2016",
+          "Apr 22, 2016"
+        ]
+      },
+      "p_without": 0.8116875856520472,
+      "p_random": 0.8852019157435833,
+      "p_value": 0.01639344262295082,
+      "why": "A run of ratings in one sitting: before matching on context it looks 2.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.5\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 318, Schindler's List, The Matrix): 88% \u2192 81%; random ratings of the same size: 89% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 0.9607454401957032,
+      "adjusted": 1.292083554846726,
+      "graph": {
+        "nodes": [
+          {
+            "id": 104,
+            "name": "user 104",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 297,
+            "name": "user 297",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 8275,
+            "name": "The Help",
+            "type": "title",
+            "role": "B"
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 77361,
+            "s": 8275,
+            "t": 104,
+            "rating": 3.5,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 78159,
+            "s": 8275,
+            "t": 297,
+            "rating": 2.5,
+            "date": "Nov 14, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 78899,
+            "s": 3555,
+            "t": 297,
+            "rating": 2.5,
+            "date": "Nov 15, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [
+        78159
+      ],
+      "S": 0.0028174570460957806,
+      "occurrence": {
+        "eids": [
+          77361,
+          78159,
+          78899
+        ],
+        "nodes": [
+          "user 104",
+          "The Help",
+          "user 297",
+          "Requiem for a Dream"
+        ],
+        "dates": [
+          "Nov 3, 2015",
+          "Nov 14, 2015",
+          "Nov 15, 2015"
+        ]
+      },
+      "p_without": 0.8302815957396323,
+      "p_random": 0.8751232841061881,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the title: before matching on context it looks 1.0\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.3\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 104, The Help, user 297): 88% \u2192 83%; random ratings of the same size: 88% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 0.8295707177664294,
+      "adjusted": 0.6775446026059317,
+      "graph": {
+        "nodes": [
+          {
+            "id": 2549,
+            "name": "The Matrix",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 318,
+            "name": "user 318",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 23,
+            "name": "user 23",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 81048,
+            "s": 2549,
+            "t": 23,
+            "rating": 4.0,
+            "date": "Mar 25, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 82588,
+            "s": 318,
+            "t": 2549,
+            "rating": 5.0,
+            "date": "Apr 22, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        82588
+      ],
+      "S": -0.010127303296444463,
+      "occurrence": {
+        "eids": [
+          81048,
+          82588
+        ],
+        "nodes": [
+          "user 23",
+          "The Matrix",
+          "user 318"
+        ],
+        "dates": [
+          "Mar 25, 2016",
+          "Apr 22, 2016"
+        ]
+      },
+      "p_without": 0.8300277349940507,
+      "p_random": 0.8815283174071056,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 0.8\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.7\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 23, The Matrix, user 318): 88% \u2192 83%; random ratings of the same size: 88% (p = 0.02)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 1209,
+  "computed_at": "2026-10-27T18:44:19-0400",
+  "summary": "With 8 ratings (2 recent ratings of Requiem for a Dream by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for Requiem for a Dream over The Help goes from 88% to 64%. Removing the same number of random ratings from the same weeks gives 89% on average (p = 0.02, 60 draws). The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
+}

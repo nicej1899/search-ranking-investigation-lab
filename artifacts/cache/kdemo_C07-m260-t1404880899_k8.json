@@ -1,0 +1,688 @@
+{
+  "case_id": "C07-m260-t1404880899",
+  "k": 8,
+  "member": 260,
+  "joint": {
+    "lines": [
+      "TemGX: 2 of the 5 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
+      "TemGX: 3 are the member's own recent ratings (Rush Hour, Mystery Men, Beverly Hills Cop), shared with people who also rated Requiem for a Dream.",
+      "CATGX: \u201cRecent fans piled on\u201d looked 11.2\u00d7 but is 1.5\u00d7 after matching: part of its weight was timing and activity.",
+      "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
+      "Ranker: Requiem for a Dream beats For a Few Dollars More mainly through matching the words of the request (+0.37); the history part adds +0.02."
+    ],
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through matching the words of the request, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of Rush Hour, Mystery Men. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      70940,
+      71044
+    ]
+  },
+  "score_split": {
+    "relevance": 0.37260114585311166,
+    "popularity": 0.1685014611222665,
+    "behaviour": 0.016697162009231853
+  },
+  "A": "Requiem for a Dream",
+  "B": "For a Few Dollars More",
+  "query": "a drama, but please nothing depressing",
+  "p0": 0.577856034086134,
+  "evidence": [
+    {
+      "eid": 71044,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 281",
+      "to": "Requiem for a Dream",
+      "from_id": 281,
+      "to_id": 3555,
+      "rating": 4.5,
+      "date": "Sep 6, 2013",
+      "days_before": 305,
+      "p_without": 0.4277815142940317,
+      "drop": 0.15007451979210223,
+      "score": {
+        "influence": 0.15007769189113906,
+        "connectedness": 0.6411803884299546,
+        "recency": 0.4335488960208822,
+        "phi": 0.04171905446193155
+      },
+      "why": "User 281 rated Requiem for a Dream 4.5\u2605 on Sep 6, 2013, 305 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current; user 281 also rated 2 titles that member 260 rated (e.g. Ghostbusters II, Beverly Hills Cop), which ties Requiem for a Dream to this member's taste. Removing only this rating: 58% \u2192 43% (\u221215.0 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.99975658575987,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.7634385672932028,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.4965574369238226,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 70940,
+      "n": 2,
+      "kind": "crowd",
+      "from": "user 15",
+      "to": "Requiem for a Dream",
+      "from_id": 15,
+      "to_id": 3555,
+      "rating": 4.0,
+      "date": "Aug 26, 2013",
+      "days_before": 317,
+      "p_without": 0.5519478658085076,
+      "drop": 0.02590816827762632,
+      "score": {
+        "influence": 0.025909429411948737,
+        "connectedness": 0.6411803884299543,
+        "recency": 0.4193931558469172,
+        "phi": 0.006967218295918337
+      },
+      "why": "User 15 rated Requiem for a Dream 4\u2605 on Aug 26, 2013, 317 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current; user 15 also rated 1 title that member 260 rated (e.g. Mystery Men), which ties Requiem for a Dream to this member's taste. Removing only this rating: 58% \u2192 55% (\u22122.6 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.99975658575987,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.7634385672932028,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.4965574369238226,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72024,
+      "n": 3,
+      "kind": "own",
+      "from": "user 260",
+      "to": "Rush Hour",
+      "from_id": 260,
+      "to_id": 2301,
+      "rating": 2.5,
+      "date": "Jul 9, 2014",
+      "days_before": 0,
+      "p_without": 0.5854563846249798,
+      "drop": -0.00760035053884589,
+      "score": {
+        "influence": 0.007600439409933046,
+        "connectedness": 0.5737534207374326,
+        "recency": 0.9999988901578964,
+        "phi": 0.004360773270781528
+      },
+      "why": "Member 260 rated Rush Hour 2.5\u2605 on Jul 9, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Requiem for a Dream. Removing only this rating: 58% \u2192 59% (+0.8 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.99975658575987,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72025,
+      "n": 4,
+      "kind": "own",
+      "from": "user 260",
+      "to": "Mystery Men",
+      "from_id": 260,
+      "to_id": 2654,
+      "rating": 2.5,
+      "date": "Jul 9, 2014",
+      "days_before": 0,
+      "p_without": 0.5816646461190977,
+      "drop": -0.0038086120329637874,
+      "score": {
+        "influence": 0.0038180924407997807,
+        "connectedness": 0.6411803884299545,
+        "recency": 0.7096881754418034,
+        "phi": 0.0017373776825863828
+      },
+      "why": "Member 260 rated Mystery Men 2.5\u2605 on Jul 9, 2014, the same day as the search. The member's profile is built from their own recent ratings, and 1 of the people who rated Mystery Men also rated Requiem for a Dream (e.g. user 15), so this rating pulls member 260 toward Requiem for a Dream's audience. Removing only this rating: 58% \u2192 58% (+0.4 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.99975658575987,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.7634385672932028,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72022,
+      "n": 5,
+      "kind": "own",
+      "from": "user 260",
+      "to": "Beverly Hills Cop",
+      "from_id": 260,
+      "to_id": 3661,
+      "rating": 2.5,
+      "date": "Jul 9, 2014",
+      "days_before": 0,
+      "p_without": 0.5764005873987998,
+      "drop": 0.0014554466873341054,
+      "score": {
+        "influence": 0.0014553578162469494,
+        "connectedness": 0.6778095780054502,
+        "recency": 0.659868410910439,
+        "phi": 0.0006509308016261722
+      },
+      "why": "Member 260 rated Beverly Hills Cop 2.5\u2605 on Jul 9, 2014, the same day as the search. The member's profile is built from their own recent ratings, and 1 of the people who rated Beverly Hills Cop also rated Requiem for a Dream (e.g. user 281), so this rating pulls member 260 toward Requiem for a Dream's audience. Removing only this rating: 58% \u2192 58% (\u22120.1 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.99975658575987,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.7634385672932028,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.4277815142940317,
+      "rand_mean": 0.5776118882188715,
+      "rand_lo": 0.5769467979039703,
+      "rand_hi": 0.577856034086134,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.3981001550129253,
+      "rand_mean": 0.5776181964554633,
+      "rand_lo": 0.5766730712451053,
+      "rand_hi": 0.577856034086134,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.3893835685074637,
+      "rand_mean": 0.5768734565981904,
+      "rand_lo": 0.5721370630347387,
+      "rand_hi": 0.5816646461190977,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.3794114659798319,
+      "rand_mean": 0.5745959366756714,
+      "rand_lo": 0.5708112034021449,
+      "rand_hi": 0.5780213922234263,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.37053488698242504,
+      "rand_mean": 0.5683372850199836,
+      "rand_lo": 0.561256326212623,
+      "rand_hi": 0.5762770989542104,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.37053488698242504,
+    "rand_mean": 0.5683372850199836,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.562522102786602,
+      0.5627675860702785,
+      0.5721370630347387,
+      0.5739384540778527,
+      0.562394877811773,
+      0.5739337992372769,
+      0.562522102786602,
+      0.562522102786602,
+      0.5728970263020526,
+      0.5733838124520992,
+      0.5741029463880156,
+      0.5741029463880156,
+      0.573727213585704,
+      0.5627675860702785,
+      0.5627675860702785,
+      0.5741029463880156,
+      0.562522102786602,
+      0.5739337992372769,
+      0.5774347508293632,
+      0.5739384540778527,
+      0.562522102786602,
+      0.5721370630347387,
+      0.562522102786602,
+      0.5737649020753115,
+      0.5733838124520992,
+      0.562522102786602,
+      0.5627675860702785,
+      0.562522102786602,
+      0.5627675860702785,
+      0.5739337992372769,
+      0.5737649020753115,
+      0.5728970263020526,
+      0.573727213585704,
+      0.5739337992372769,
+      0.5627675860702785,
+      0.562522102786602,
+      0.5723023121896035,
+      0.5741029463880156,
+      0.561256326212623,
+      0.5613738908409901,
+      0.562150939761076,
+      0.561256326212623,
+      0.5739337992372769,
+      0.5774347508293632,
+      0.5735499637446798,
+      0.562522102786602,
+      0.5741029463880156,
+      0.5737649020753115,
+      0.5613738908409901,
+      0.562394877811773,
+      0.562522102786602,
+      0.5627675860702785,
+      0.5741029463880156,
+      0.5737649020753115,
+      0.5627675860702785,
+      0.561256326212623,
+      0.562522102786602,
+      0.5749975889869362,
+      0.574618854819748,
+      0.5625220803727778
+    ],
+    "flips": true
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 2,
+    "B_after": 2,
+    "top3_after": [
+      "Requiem for a Dream (2000)",
+      "For a Few Dollars More (Per qualche dollaro in pi\u00f9) (1965)",
+      "Punch-Drunk Love (2002)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 3555,
+        "name": "Requiem for a Dream",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 260,
+        "name": "user 260",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 281,
+        "name": "user 281",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 3661,
+        "name": "Beverly Hills Cop",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 15,
+        "name": "user 15",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 2649,
+        "name": "Ghostbusters II",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 3353,
+        "name": "For a Few Dollars More",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 2301,
+        "name": "Rush Hour",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 2654,
+        "name": "Mystery Men",
+        "type": "title",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 70940,
+        "s": 3555,
+        "t": 15,
+        "rating": 4.0,
+        "date": "Aug 26, 2013",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 71044,
+        "s": 3555,
+        "t": 281,
+        "rating": 4.5,
+        "date": "Sep 6, 2013",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 72022,
+        "s": 260,
+        "t": 3661,
+        "rating": 2.5,
+        "date": "Jul 9, 2014",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 72024,
+        "s": 260,
+        "t": 2301,
+        "rating": 2.5,
+        "date": "Jul 9, 2014",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 72025,
+        "s": 260,
+        "t": 2654,
+        "rating": 2.5,
+        "date": "Jul 9, 2014",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 70855,
+        "s": 2654,
+        "t": 15,
+        "rating": 3.5,
+        "date": "Aug 26, 2013",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 70980,
+        "s": 2649,
+        "t": 281,
+        "rating": 4.5,
+        "date": "Sep 6, 2013",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 71064,
+        "s": 3661,
+        "t": 281,
+        "rating": 4.0,
+        "date": "Sep 6, 2013",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 72026,
+        "s": 260,
+        "t": 2649,
+        "rating": 3.0,
+        "date": "Jul 9, 2014",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 11.242481257011534,
+      "adjusted": 1.4965574369238226,
+      "graph": {
+        "nodes": [
+          {
+            "id": 281,
+            "name": "user 281",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 15,
+            "name": "user 15",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 70940,
+            "s": 3555,
+            "t": 15,
+            "rating": 4.0,
+            "date": "Aug 26, 2013",
+            "in_temgx": true
+          },
+          {
+            "eid": 71044,
+            "s": 3555,
+            "t": 281,
+            "rating": 4.5,
+            "date": "Sep 6, 2013",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        70940,
+        71044
+      ],
+      "S": 0.0031378557350461842,
+      "occurrence": {
+        "eids": [
+          70940,
+          71044
+        ],
+        "nodes": [
+          "user 15",
+          "user 281",
+          "Requiem for a Dream"
+        ],
+        "dates": [
+          "Aug 26, 2013",
+          "Sep 6, 2013"
+        ]
+      },
+      "p_without": 0.3981001550129253,
+      "p_random": 0.5776322172947282,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 11.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.5\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 15, user 281, Requiem for a Dream): 58% \u2192 40%; random ratings of the same size: 58% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.8939068992782397,
+      "adjusted": 0.99975658575987,
+      "graph": {
+        "nodes": [
+          {
+            "id": 2800,
+            "name": "Boys Don't Cry",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 281,
+            "name": "user 281",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 71044,
+            "s": 3555,
+            "t": 281,
+            "rating": 4.5,
+            "date": "Sep 6, 2013",
+            "in_temgx": true
+          },
+          {
+            "eid": 71146,
+            "s": 281,
+            "t": 2800,
+            "rating": 4.0,
+            "date": "Sep 6, 2013",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [
+        71044
+      ],
+      "S": -8.73093573462884e-06,
+      "occurrence": {
+        "eids": [
+          71044,
+          71146
+        ],
+        "nodes": [
+          "user 281",
+          "Requiem for a Dream",
+          "Boys Don't Cry"
+        ],
+        "dates": [
+          "Sep 6, 2013",
+          "Sep 6, 2013"
+        ]
+      },
+      "p_without": 0.4277815142940317,
+      "p_random": 0.5776155937539263,
+      "p_value": 0.01639344262295082,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.9\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.0\u00d7. Removing its strongest occurrence (user 281, Requiem for a Dream, Boys Don't Cry): 58% \u2192 43%; random ratings of the same size: 58% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 1.7041188780285987,
+      "adjusted": 0.7634385672932028,
+      "graph": {
+        "nodes": [
+          {
+            "id": 281,
+            "name": "user 281",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 15,
+            "name": "user 15",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 70940,
+            "s": 3555,
+            "t": 15,
+            "rating": 4.0,
+            "date": "Aug 26, 2013",
+            "in_temgx": true
+          },
+          {
+            "eid": 71044,
+            "s": 3555,
+            "t": 281,
+            "rating": 4.5,
+            "date": "Sep 6, 2013",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        70940,
+        71044
+      ],
+      "S": -0.0015471005281865206,
+      "occurrence": {
+        "eids": [
+          70940,
+          71044
+        ],
+        "nodes": [
+          "user 15",
+          "Requiem for a Dream",
+          "user 281"
+        ],
+        "dates": [
+          "Aug 26, 2013",
+          "Sep 6, 2013"
+        ]
+      },
+      "p_without": 0.3981001550129253,
+      "p_random": 0.5776208982021444,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 1.7\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.8\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 15, Requiem for a Dream, user 281): 58% \u2192 40%; random ratings of the same size: 58% (p = 0.02)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 611,
+  "computed_at": "2026-10-27T17:22:20-0400",
+  "summary": "With 5 ratings (2 recent ratings of Requiem for a Dream by other people, 3 of the member's own ratings), the model's preference for Requiem for a Dream over For a Few Dollars More goes from 58% to 37% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 57% on average (p = 0.02, 60 draws). The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
+}

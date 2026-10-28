@@ -1,0 +1,199 @@
+{
+  "case_id": "C07-m255-t1446579739",
+  "member": 255,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Let Me In (2010)",
+  "A_id": 3555,
+  "B_id": 8037,
+  "member_id": 255,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 76776,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 62",
+        "from_id": 3555,
+        "to_id": 62,
+        "rating": 5.0,
+        "date": "2015-09-25",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77506,
+        "from": "user 255",
+        "to": "Matrix, The (1999)",
+        "from_id": 255,
+        "to_id": 2549,
+        "rating": 4.5,
+        "date": "2015-11-03",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 6.627111522281087,
+      "nodes": [
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 104,
+          "name": "user 104"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        },
+        {
+          "eid": 77488,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 104",
+          "from_id": 3555,
+          "to_id": 104,
+          "rating": 4.5,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 341
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 73484,
+        "from": "Let Me In (2010)",
+        "to": "user 532",
+        "from_id": 8037,
+        "to_id": 532,
+        "rating": 5.0,
+        "date": "2015-02-24",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77488,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 104",
+        "from_id": 3555,
+        "to_id": 104,
+        "rating": 4.5,
+        "date": "2015-11-03",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 77508,
+        "from": "user 255",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 255,
+        "to_id": 887,
+        "rating": 5.0,
+        "date": "2015-11-03",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "other people's ratings": 1,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "BRIDGEB",
+      "name": "a path of shared taste that ends at B",
+      "lift": 3.8264288151872607,
+      "nodes": [
+        {
+          "id": 343,
+          "name": "user 343"
+        },
+        {
+          "id": 887,
+          "name": "Shawshank Redemption, The (1994)"
+        },
+        {
+          "id": 104,
+          "name": "user 104"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 72991,
+          "from": "user 343",
+          "to": "Shawshank Redemption, The (1994)",
+          "from_id": 343,
+          "to_id": 887,
+          "rating": 5.0,
+          "date": "2015-01-05"
+        },
+        {
+          "eid": 77234,
+          "from": "Shawshank Redemption, The (1994)",
+          "to": "user 104",
+          "from_id": 887,
+          "to_id": 104,
+          "rating": 5.0,
+          "date": "2015-11-03"
+        },
+        {
+          "eid": 77488,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 104",
+          "from_id": 3555,
+          "to_id": 104,
+          "rating": 4.5,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 311
+  },
+  "test": {
+    "p0": 0.9981125489076171,
+    "del_A": {
+      "p": 0.9947633449897808,
+      "p_random": 0.9981152141426941,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9991151274519854,
+      "p_random": 0.9979598465539269,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.3333333333333333,
+    "shared_links": []
+  }
+}

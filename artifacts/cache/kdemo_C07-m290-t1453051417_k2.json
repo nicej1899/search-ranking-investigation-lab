@@ -1,0 +1,604 @@
+{
+  "case_id": "C07-m290-t1453051417",
+  "k": 2,
+  "member": 290,
+  "joint": {
+    "lines": [
+      "TemGX: 2 are the member's own recent ratings (The Avengers, Iron Man), shared with people who also rated Requiem for a Dream.",
+      "CATGX: \u201cRecent fans piled on\u201d stays 5.5\u00d7 after matching on timing and activity, and removing it moves the model (p = 0.02): a structural reason, not just recency.",
+      "CATGX: \u201cTwo people rated the same movie\u201d looked 2.5\u00d7 but is 1.4\u00d7 after matching: part of its weight was timing and activity.",
+      "Ranker: Requiem for a Dream beats Out of Sight mainly through popularity (+0.19); the history part adds +0.10."
+    ],
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through the member's ratings of The Avengers, Iron Man. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Step 5 picks one using past cases.",
+    "agree": [
+      79605
+    ]
+  },
+  "score_split": {
+    "relevance": 0.05824235281030843,
+    "popularity": 0.18734704965756616,
+    "behaviour": 0.1021791319474982
+  },
+  "A": "Requiem for a Dream",
+  "B": "Out of Sight",
+  "query": "a drama, but please nothing depressing",
+  "p0": 0.8722951951716746,
+  "evidence": [
+    {
+      "eid": 79609,
+      "n": 1,
+      "kind": "own",
+      "from": "user 290",
+      "to": "The Avengers",
+      "from_id": 290,
+      "to_id": 8303,
+      "rating": 5.0,
+      "date": "Jan 17, 2016",
+      "days_before": 0,
+      "p_without": 0.8350517570092282,
+      "drop": 0.03724343816244646,
+      "score": {
+        "influence": 0.03725329906319663,
+        "connectedness": 0.779807141303216,
+        "recency": 0.8021191409487646,
+        "phi": 0.023301872785426617
+      },
+      "why": "Member 290 rated The Avengers 5\u2605 on Jan 17, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated The Avengers also rated Requiem for a Dream (e.g. user 62, user 104), so this rating pulls member 290 toward Requiem for a Dream's audience. Removing only this rating: 87% \u2192 84% (\u22123.7 pts).",
+      "patterns": []
+    },
+    {
+      "eid": 79605,
+      "n": 2,
+      "kind": "own",
+      "from": "user 290",
+      "to": "Iron Man",
+      "from_id": 290,
+      "to_id": 7353,
+      "rating": 4.0,
+      "date": "Jan 17, 2016",
+      "days_before": 0,
+      "p_without": 0.8461504270153143,
+      "drop": 0.026144768156360354,
+      "score": {
+        "influence": 0.026148004516878376,
+        "connectedness": 0.7914783750983386,
+        "recency": 0.7753787397843404,
+        "phi": 0.016046912838043388
+      },
+      "why": "Member 290 rated Iron Man 4\u2605 on Jan 17, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated Iron Man also rated Requiem for a Dream (e.g. user 104, user 297), so this rating pulls member 290 toward Requiem for a Dream's audience. Removing only this rating: 87% \u2192 85% (\u22122.6 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.3775110125963168,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.8350517570092282,
+      "rand_mean": 0.8780838861766649,
+      "rand_lo": 0.8663966782635225,
+      "rand_hi": 0.9377202528728865,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.8039696159624492,
+      "rand_mean": 0.872652383805476,
+      "rand_lo": 0.8663966782635225,
+      "rand_hi": 0.8747997695791082,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.8039696159624492,
+    "rand_mean": 0.872652383805476,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.870855905000605,
+      0.8722951951716746,
+      0.8706721103490542,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8713660228056839,
+      0.871155533152691,
+      0.8626985120343748,
+      0.8722951951716746,
+      0.8697516923304416,
+      0.870855905000605,
+      0.8722951951716746,
+      0.8717865300349372,
+      0.8722951951716746,
+      0.871155533152691,
+      0.8722951951716746,
+      0.8701174957993716,
+      0.8722951951716746,
+      0.8720496455514526,
+      0.8701174957993716,
+      0.8663966782635225,
+      0.8747997695791082,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8701174957993716,
+      0.8663966782635225,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.871155533152691,
+      0.870855905000605,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8742988021052469,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8747997695791082,
+      0.8722951951716746,
+      0.8715188330255852,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8722951951716746,
+      0.8715188330255852,
+      0.8663966782635225,
+      0.8701174957993716,
+      0.9377202528728865,
+      0.8713660228056839,
+      0.8747997695791082,
+      0.8722951951716746,
+      0.870855905000605,
+      0.872295174879855
+    ],
+    "flips": false
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 2,
+    "B_after": 2,
+    "top3_after": [
+      "Requiem for a Dream (2000)",
+      "Out of Sight (1998)",
+      "Punch-Drunk Love (2002)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 290,
+        "name": "user 290",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 3555,
+        "name": "Requiem for a Dream",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 2004,
+        "name": "Out of Sight",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 297,
+        "name": "user 297",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 104,
+        "name": "user 104",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 7353,
+        "name": "Iron Man",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 62,
+        "name": "user 62",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 8303,
+        "name": "The Avengers",
+        "type": "title",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 79605,
+        "s": 290,
+        "t": 7353,
+        "rating": 4.0,
+        "date": "Jan 17, 2016",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 79609,
+        "s": 290,
+        "t": 8303,
+        "rating": 5.0,
+        "date": "Jan 17, 2016",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 76776,
+        "s": 3555,
+        "t": 62,
+        "rating": 5.0,
+        "date": "Sep 25, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 76793,
+        "s": 8303,
+        "t": 62,
+        "rating": 3.5,
+        "date": "Sep 25, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 77268,
+        "s": 7353,
+        "t": 104,
+        "rating": 3.5,
+        "date": "Nov 3, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 77468,
+        "s": 8303,
+        "t": 104,
+        "rating": 3.5,
+        "date": "Nov 3, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 77488,
+        "s": 3555,
+        "t": 104,
+        "rating": 4.5,
+        "date": "Nov 3, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 78278,
+        "s": 7353,
+        "t": 297,
+        "rating": 3.5,
+        "date": "Nov 14, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 78899,
+        "s": 3555,
+        "t": 297,
+        "rating": 2.5,
+        "date": "Nov 15, 2015",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 4.51238423764193,
+      "adjusted": 5.527618248052607,
+      "graph": {
+        "nodes": [
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 365,
+            "name": "user 365",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 255,
+            "name": "user 255",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 77182,
+            "s": 3555,
+            "t": 365,
+            "rating": 4.0,
+            "date": "Oct 22, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 77543,
+            "s": 3555,
+            "t": 255,
+            "rating": 4.0,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": 0.05794258466277744,
+      "occurrence": {
+        "eids": [
+          77182,
+          77543
+        ],
+        "nodes": [
+          "user 365",
+          "user 255",
+          "Requiem for a Dream"
+        ],
+        "dates": [
+          "Oct 22, 2015",
+          "Nov 3, 2015"
+        ]
+      },
+      "p_without": 0.8160818682240748,
+      "p_random": 0.8711978456438355,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 4.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 5.5\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 365, user 255, Requiem for a Dream): 87% \u2192 82%; random ratings of the same size: 87% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 2.5418002119182157,
+      "adjusted": 1.3775110125963168,
+      "graph": {
+        "nodes": [
+          {
+            "id": 7353,
+            "name": "Iron Man",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 290,
+            "name": "user 290",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 508,
+            "name": "user 508",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 75969,
+            "s": 7353,
+            "t": 508,
+            "rating": 3.0,
+            "date": "Jul 8, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 79605,
+            "s": 290,
+            "t": 7353,
+            "rating": 4.0,
+            "date": "Jan 17, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        79605
+      ],
+      "S": 0.006663587017481215,
+      "occurrence": {
+        "eids": [
+          75969,
+          79605
+        ],
+        "nodes": [
+          "user 508",
+          "Iron Man",
+          "user 290"
+        ],
+        "dates": [
+          "Jul 8, 2015",
+          "Jan 17, 2016"
+        ]
+      },
+      "p_without": 0.8461504270153143,
+      "p_random": 0.8709590547905304,
+      "p_value": 0.03278688524590164,
+      "why": "Two people rated the same movie: before matching on context it looks 2.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.4\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 508, Iron Man, user 290): 87% \u2192 85%; random ratings of the same size: 87% (p = 0.03)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.3138392294569739,
+      "adjusted": 0.6355827216124862,
+      "graph": {
+        "nodes": [
+          {
+            "id": 9499,
+            "name": "Spy",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 255,
+            "name": "user 255",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 77543,
+            "s": 3555,
+            "t": 255,
+            "rating": 4.0,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 78310,
+            "s": 255,
+            "t": 9499,
+            "rating": 3.0,
+            "date": "Nov 14, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.005018660087411895,
+      "occurrence": {
+        "eids": [
+          77543,
+          78310
+        ],
+        "nodes": [
+          "user 255",
+          "Requiem for a Dream",
+          "Spy"
+        ],
+        "dates": [
+          "Nov 3, 2015",
+          "Nov 14, 2015"
+        ]
+      },
+      "p_without": 0.8485142676960494,
+      "p_random": 0.8712403353066995,
+      "p_value": 0.08196721311475409,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Removing its strongest occurrence (user 255, Requiem for a Dream, Spy): 87% \u2192 85%; random ratings of the same size: 87% (p = 0.08)."
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 0.8650481895749408,
+      "adjusted": 0.31196363982883435,
+      "graph": {
+        "nodes": [
+          {
+            "id": 104,
+            "name": "user 104",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 62,
+            "name": "user 62",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 8303,
+            "name": "The Avengers",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 76793,
+            "s": 8303,
+            "t": 62,
+            "rating": 3.5,
+            "date": "Sep 25, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 77468,
+            "s": 8303,
+            "t": 104,
+            "rating": 3.5,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 77488,
+            "s": 3555,
+            "t": 104,
+            "rating": 4.5,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.006805777343441465,
+      "occurrence": {
+        "eids": [
+          76793,
+          77468,
+          77488
+        ],
+        "nodes": [
+          "user 62",
+          "The Avengers",
+          "user 104",
+          "Requiem for a Dream"
+        ],
+        "dates": [
+          "Sep 25, 2015",
+          "Nov 3, 2015",
+          "Nov 3, 2015"
+        ]
+      },
+      "p_without": 0.8602812263419232,
+      "p_random": 0.8693108715317474,
+      "p_value": 0.09836065573770492,
+      "why": "Shared taste leads to the title: before matching on context it looks 0.9\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.3\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 62, The Avengers, user 104): 87% \u2192 86%; random ratings of the same size: 87% (p = 0.10)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 705,
+  "computed_at": "2026-10-27T17:22:07-0400",
+  "summary": "With 2 ratings (2 of the member's own ratings), the model's preference for Requiem for a Dream over Out of Sight goes from 87% to 80%. Removing the same number of random ratings from the same weeks gives 87% on average (p = 0.02, 60 draws). The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
+}

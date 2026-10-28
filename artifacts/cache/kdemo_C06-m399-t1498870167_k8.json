@@ -1,0 +1,951 @@
+{
+  "case_id": "C06-m399-t1498870167",
+  "k": 8,
+  "member": 399,
+  "joint": {
+    "lines": [
+      "TemGX: 5 are the member's own recent ratings (Raiders of the Lost Ark, Star Wars: Episode VI - Return of the Jedi, The Matrix), shared with people who also rated Independence Day.",
+      "CATGX: \u201cTwo people rated the same movie\u201d looked 1.1\u00d7 but is 0.8\u00d7 after matching: most of its weight was timing and activity.",
+      "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
+      "Ranker: Independence Day beats Rise of the Planet of the Apes mainly through popularity (+0.48); the history part adds +0.04."
+    ],
+    "verdict": "Diagnosis: Independence Day wins mainly through popularity, and the history model adds to it through the member's ratings of Raiders of the Lost Ark, Star Wars: Episode VI - Return of the Jedi. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Step 5 picks one using past cases.",
+    "agree": [
+      92615
+    ]
+  },
+  "score_split": {
+    "relevance": -0.48687390291732524,
+    "popularity": 0.4770673499669296,
+    "behaviour": 0.03868768739413128
+  },
+  "A": "Independence Day",
+  "B": "Rise of the Planet of the Apes",
+  "query": "a science fiction film with no aliens in it",
+  "p0": 0.6742552553079212,
+  "evidence": [
+    {
+      "eid": 92614,
+      "n": 1,
+      "kind": "own",
+      "from": "user 399",
+      "to": "Raiders of the Lost Ark",
+      "from_id": 399,
+      "to_id": 1510,
+      "rating": 4.5,
+      "date": "Jul 1, 2017",
+      "days_before": 0,
+      "p_without": 0.6623283604015784,
+      "drop": 0.0119268949063428,
+      "score": {
+        "influence": 0.013716631038958593,
+        "connectedness": 0.7950148633721222,
+        "recency": 0.8200791283379752,
+        "phi": 0.008942901840752674
+      },
+      "why": "Member 399 rated Raiders of the Lost Ark 4.5\u2605 on Jul 1, 2017, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated Raiders of the Lost Ark also rated Independence Day (e.g. user 379, user 560), so this rating pulls member 399 toward Independence Day's audience. Removing only this rating: 67% \u2192 66% (\u22121.2 pts).",
+      "patterns": []
+    },
+    {
+      "eid": 86346,
+      "n": 2,
+      "kind": "other",
+      "from": "user 113",
+      "to": "Star Wars: Episode VI - Return of the Jedi",
+      "from_id": 113,
+      "to_id": 1521,
+      "rating": 3.5,
+      "date": "Jan 25, 2017",
+      "days_before": 156,
+      "p_without": 0.6742895416388291,
+      "drop": -3.428633090796218e-05,
+      "score": {
+        "influence": 1.3039409829662674e-07,
+        "connectedness": 0.37088321470604646,
+        "recency": 0.6521340933419146,
+        "phi": 3.153784538116909e-08
+      },
+      "why": "User 113 rated Star Wars: Episode VI - Return of the Jedi 3.5\u2605 on Jan 25, 2017. It reaches the decision through the graph: it changes how Star Wars: Episode VI - Return of the Jedi and its raters are represented, which feeds into member 399 or Independence Day. Removing only this rating: 67% \u2192 67% (+0.0 pts).",
+      "patterns": []
+    },
+    {
+      "eid": 92616,
+      "n": 3,
+      "kind": "own",
+      "from": "user 399",
+      "to": "Star Wars: Episode VI - Return of the Jedi",
+      "from_id": 399,
+      "to_id": 1521,
+      "rating": 5.0,
+      "date": "Jul 1, 2017",
+      "days_before": 0,
+      "p_without": 0.6780628311042621,
+      "drop": -0.003807575796340945,
+      "score": {
+        "influence": 0.003928356883532547,
+        "connectedness": 0.800108159030208,
+        "recency": 0.794686782239623,
+        "phi": 0.0024977882853087557
+      },
+      "why": "Member 399 rated Star Wars: Episode VI - Return of the Jedi 5\u2605 on Jul 1, 2017, the same day as the search. The member's profile is built from their own recent ratings, and 5 of the people who rated Star Wars: Episode VI - Return of the Jedi also rated Independence Day (e.g. user 379, user 516), so this rating pulls member 399 toward Independence Day's audience. Removing only this rating: 67% \u2192 68% (+0.4 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.7554974127282944,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 92615,
+      "n": 4,
+      "kind": "own",
+      "from": "user 399",
+      "to": "The Matrix",
+      "from_id": 399,
+      "to_id": 2549,
+      "rating": 5.0,
+      "date": "Jul 1, 2017",
+      "days_before": 0,
+      "p_without": 0.6708146317398525,
+      "drop": 0.0034406235680687347,
+      "score": {
+        "influence": 0.0035991884446614497,
+        "connectedness": 0.7776387809480828,
+        "recency": 0.8552494127647465,
+        "phi": 0.0023937306534395227
+      },
+      "why": "Member 399 rated The Matrix 5\u2605 on Jul 1, 2017, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated The Matrix also rated Independence Day (e.g. user 211, user 379), so this rating pulls member 399 toward Independence Day's audience. Removing only this rating: 67% \u2192 67% (\u22120.3 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.7554974127282944,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 92612,
+      "n": 5,
+      "kind": "own",
+      "from": "user 399",
+      "to": "Star Wars: Episode IV - A New Hope",
+      "from_id": 399,
+      "to_id": 834,
+      "rating": 5.0,
+      "date": "Jul 1, 2017",
+      "days_before": 0,
+      "p_without": 0.6729867149284046,
+      "drop": 0.001268540379516625,
+      "score": {
+        "influence": 0.0017272829539197732,
+        "connectedness": 0.8069747307126642,
+        "recency": 0.8454008464866225,
+        "phi": 0.0011783820030044458
+      },
+      "why": "Member 399 rated Star Wars: Episode IV - A New Hope 5\u2605 on Jul 1, 2017, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated Star Wars: Episode IV - A New Hope also rated Independence Day (e.g. user 379, user 516), so this rating pulls member 399 toward Independence Day's audience. Removing only this rating: 67% \u2192 67% (\u22120.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.7554974127282944,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 92613,
+      "n": 6,
+      "kind": "own",
+      "from": "user 399",
+      "to": "Star Wars: Episode V - The Empire Strikes Back",
+      "from_id": 399,
+      "to_id": 1508,
+      "rating": 5.0,
+      "date": "Jul 1, 2017",
+      "days_before": 0,
+      "p_without": 0.673694087049959,
+      "drop": 0.0005611682579621524,
+      "score": {
+        "influence": 0.000592739124197883,
+        "connectedness": 0.8052710809898238,
+        "recency": 0.779053775716305,
+        "phi": 0.0003718545790415311
+      },
+      "why": "Member 399 rated Star Wars: Episode V - The Empire Strikes Back 5\u2605 on Jul 1, 2017, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated Star Wars: Episode V - The Empire Strikes Back also rated Independence Day (e.g. user 379, user 560), so this rating pulls member 399 toward Independence Day's audience. Removing only this rating: 67% \u2192 67% (\u22120.1 pts).",
+      "patterns": []
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.6623283604015784,
+      "rand_mean": 0.6779206060633254,
+      "rand_lo": 0.6718463712544147,
+      "rand_hi": 0.6780628311042621,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.662356673934568,
+      "rand_mean": 0.7066992002314171,
+      "rand_lo": 0.6695155186978206,
+      "rand_hi": 0.8834299813852876,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.6674726532001657,
+      "rand_mean": 0.7134791796489777,
+      "rand_lo": 0.670885394997587,
+      "rand_hi": 0.8851326902641065,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.6637497635966307,
+      "rand_mean": 0.7295385084087788,
+      "rand_lo": 0.6683139498769507,
+      "rand_hi": 0.8856072474388602,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.662323634576264,
+      "rand_mean": 0.7098525557844407,
+      "rand_lo": 0.6720139169637086,
+      "rand_hi": 0.8820217856836341,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.5260510145786034,
+      "rand_mean": 0.7429617976174179,
+      "rand_lo": 0.6701857940600341,
+      "rand_hi": 0.889458195792327,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.5260510145786034,
+    "rand_mean": 0.7429617976174179,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.7747750432457878,
+      0.6743730292516998,
+      0.6742039623550303,
+      0.6683401307074107,
+      0.6742552553079212,
+      0.674235410791557,
+      0.6930611880422028,
+      0.880182302537183,
+      0.8789654186914259,
+      0.8803447492979249,
+      0.8929398823566074,
+      0.775287979830082,
+      0.6741181313497897,
+      0.6738583263933998,
+      0.8804089765727416,
+      0.6723662404526766,
+      0.6744033092778222,
+      0.6929371735393292,
+      0.6873827867256463,
+      0.6683401307074107,
+      0.7751092608870598,
+      0.6742552553079212,
+      0.872378753826322,
+      0.6742468934810292,
+      0.6927303173164271,
+      0.6739041632554666,
+      0.6743291866335317,
+      0.6868667976237359,
+      0.6723018723029475,
+      0.7014298950803864,
+      0.8804776981996472,
+      0.6744999796118185,
+      0.6744388274522133,
+      0.6741483836105245,
+      0.6739041632554666,
+      0.6742918619998889,
+      0.880363207139435,
+      0.6745683238136161,
+      0.7753289471664293,
+      0.6742053227524339,
+      0.6871484638819338,
+      0.8805484358288733,
+      0.8721210713032166,
+      0.7750119229978323,
+      0.8803447492979249,
+      0.8800330702210425,
+      0.6743937894265645,
+      0.6743668290667366,
+      0.6744371475837158,
+      0.8789444102763808,
+      0.6722257377655653,
+      0.6739041632554666,
+      0.8804648154948337,
+      0.8802496198003783,
+      0.6739041632554666,
+      0.6743873894456416,
+      0.6740707492324884,
+      0.8870658323165932,
+      0.8916227151275147,
+      0.6739042433169457
+    ],
+    "flips": false
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 2,
+    "B_before": 2,
+    "B_after": 1,
+    "top3_after": [
+      "Rise of the Planet of the Apes (2011)",
+      "Independence Day (a.k.a. ID4) (1996)",
+      "Thing from Another World, The (1951)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 834,
+        "name": "Star Wars: Episode IV - A New Hope",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 1508,
+        "name": "Star Wars: Episode V - The Empire Strikes Back",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 516,
+        "name": "user 516",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 1510,
+        "name": "Raiders of the Lost Ark",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 1225,
+        "name": "Independence Day",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 399,
+        "name": "user 399",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 8272,
+        "name": "Rise of the Planet of the Apes",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 113,
+        "name": "user 113",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 1521,
+        "name": "Star Wars: Episode VI - Return of the Jedi",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 560,
+        "name": "user 560",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 211,
+        "name": "user 211",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 2549,
+        "name": "The Matrix",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 379,
+        "name": "user 379",
+        "type": "user",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 86346,
+        "s": 1521,
+        "t": 113,
+        "rating": 3.5,
+        "date": "Jan 25, 2017",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 92612,
+        "s": 399,
+        "t": 834,
+        "rating": 5.0,
+        "date": "Jul 1, 2017",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 92613,
+        "s": 399,
+        "t": 1508,
+        "rating": 5.0,
+        "date": "Jul 1, 2017",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 92614,
+        "s": 399,
+        "t": 1510,
+        "rating": 4.5,
+        "date": "Jul 1, 2017",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 92615,
+        "s": 399,
+        "t": 2549,
+        "rating": 5.0,
+        "date": "Jul 1, 2017",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 92616,
+        "s": 399,
+        "t": 1521,
+        "rating": 5.0,
+        "date": "Jul 1, 2017",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 86746,
+        "s": 834,
+        "t": 516,
+        "rating": 3.5,
+        "date": "Feb 24, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 86752,
+        "s": 1225,
+        "t": 516,
+        "rating": 3.5,
+        "date": "Feb 24, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87227,
+        "s": 2549,
+        "t": 211,
+        "rating": 3.0,
+        "date": "Mar 21, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87245,
+        "s": 1225,
+        "t": 211,
+        "rating": 2.0,
+        "date": "Mar 21, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87395,
+        "s": 1510,
+        "t": 560,
+        "rating": 5.0,
+        "date": "Apr 1, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87396,
+        "s": 1508,
+        "t": 560,
+        "rating": 5.0,
+        "date": "Apr 1, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87502,
+        "s": 1225,
+        "t": 560,
+        "rating": 4.0,
+        "date": "Apr 2, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87917,
+        "s": 1521,
+        "t": 516,
+        "rating": 2.0,
+        "date": "Apr 16, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87970,
+        "s": 834,
+        "t": 379,
+        "rating": 5.0,
+        "date": "Apr 28, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87971,
+        "s": 1508,
+        "t": 379,
+        "rating": 5.0,
+        "date": "Apr 28, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87972,
+        "s": 1510,
+        "t": 379,
+        "rating": 5.0,
+        "date": "Apr 28, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87973,
+        "s": 2549,
+        "t": 379,
+        "rating": 4.5,
+        "date": "Apr 28, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 87974,
+        "s": 1521,
+        "t": 379,
+        "rating": 5.0,
+        "date": "Apr 28, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 88048,
+        "s": 1225,
+        "t": 379,
+        "rating": 4.0,
+        "date": "Apr 28, 2017",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 1.1555863968897904,
+      "adjusted": 1.4066471503161653,
+      "graph": {
+        "nodes": [
+          {
+            "id": 896,
+            "name": "Tales from the Crypt Presents: Demon Knight",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 609,
+            "name": "user 609",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1510,
+            "name": "Raiders of the Lost Ark",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 85993,
+            "s": 1510,
+            "t": 609,
+            "rating": 5.0,
+            "date": "Nov 19, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 90558,
+            "s": 609,
+            "t": 896,
+            "rating": 3.5,
+            "date": "May 28, 2017",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": 0.0005110592141256228,
+      "occurrence": {
+        "eids": [
+          85993,
+          90558
+        ],
+        "nodes": [
+          "user 609",
+          "Raiders of the Lost Ark",
+          "Tales from the Crypt Presents: Demon Knight"
+        ],
+        "dates": [
+          "Nov 19, 2016",
+          "May 28, 2017"
+        ]
+      },
+      "p_without": 0.6683401307074107,
+      "p_random": 0.7108739392385733,
+      "p_value": 0.06557377049180328,
+      "why": "A run of ratings in one sitting: before matching on context it looks 1.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.4\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 609, Raiders of the Lost Ark, Tales from the Crypt Presents: Demon Knight): 67% \u2192 67%; random ratings of the same size: 71% (p = 0.07)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 1.0954887319147122,
+      "adjusted": 0.7554974127282944,
+      "graph": {
+        "nodes": [
+          {
+            "id": 474,
+            "name": "user 474",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 2549,
+            "name": "The Matrix",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 399,
+            "name": "user 399",
+            "type": "user",
+            "role": "u"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 90742,
+            "s": 2549,
+            "t": 474,
+            "rating": 4.5,
+            "date": "Jun 21, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 92615,
+            "s": 399,
+            "t": 2549,
+            "rating": 5.0,
+            "date": "Jul 1, 2017",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        92615
+      ],
+      "S": -0.00028648572351291137,
+      "occurrence": {
+        "eids": [
+          90742,
+          92615
+        ],
+        "nodes": [
+          "user 474",
+          "The Matrix",
+          "user 399"
+        ],
+        "dates": [
+          "Jun 21, 2017",
+          "Jul 1, 2017"
+        ]
+      },
+      "p_without": 0.6708146317398525,
+      "p_random": 0.6894723490477175,
+      "p_value": 0.04918032786885246,
+      "why": "Two people rated the same movie: before matching on context it looks 1.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.8\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 474, The Matrix, user 399): 67% \u2192 67%; random ratings of the same size: 69% (p = 0.05)."
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 0.0,
+      "adjusted": 0.0,
+      "graph": {
+        "nodes": [
+          {
+            "id": 598,
+            "name": "user 598",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 379,
+            "name": "user 379",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1225,
+            "name": "Independence Day",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 1510,
+            "name": "Raiders of the Lost Ark",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 87972,
+            "s": 1510,
+            "t": 379,
+            "rating": 5.0,
+            "date": "Apr 28, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 91081,
+            "s": 1510,
+            "t": 598,
+            "rating": 3.5,
+            "date": "Jun 26, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 92517,
+            "s": 1225,
+            "t": 598,
+            "rating": 3.5,
+            "date": "Jun 27, 2017",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.0009217907251004125,
+      "occurrence": {
+        "eids": [
+          87972,
+          91081,
+          92517
+        ],
+        "nodes": [
+          "user 379",
+          "Raiders of the Lost Ark",
+          "user 598",
+          "Independence Day"
+        ],
+        "dates": [
+          "Apr 28, 2017",
+          "Jun 26, 2017",
+          "Jun 27, 2017"
+        ]
+      },
+      "p_without": 0.8798522737239912,
+      "p_random": 0.695661959886282,
+      "p_value": 1.0,
+      "why": "Shared taste leads to the title: Removing its strongest occurrence (user 379, Raiders of the Lost Ark, user 598): 67% \u2192 88%; random ratings of the same size: 70% (p = 1.00)."
+    },
+    {
+      "motif": "BRIDGEB",
+      "name": "Shared taste leads to the better match",
+      "raw": 0.0,
+      "adjusted": 0.0,
+      "graph": {
+        "nodes": [
+          {
+            "id": 8272,
+            "name": "Rise of the Planet of the Apes",
+            "type": "title",
+            "role": "B"
+          },
+          {
+            "id": 598,
+            "name": "user 598",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 474,
+            "name": "user 474",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1510,
+            "name": "Raiders of the Lost Ark",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 90737,
+            "s": 1510,
+            "t": 474,
+            "rating": 5.0,
+            "date": "Jun 21, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 91081,
+            "s": 1510,
+            "t": 598,
+            "rating": 3.5,
+            "date": "Jun 26, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 92329,
+            "s": 8272,
+            "t": 598,
+            "rating": 3.0,
+            "date": "Jun 27, 2017",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.0009217907251004125,
+      "occurrence": {
+        "eids": [
+          90737,
+          91081,
+          92329
+        ],
+        "nodes": [
+          "user 474",
+          "Raiders of the Lost Ark",
+          "user 598",
+          "Rise of the Planet of the Apes"
+        ],
+        "dates": [
+          "Jun 21, 2017",
+          "Jun 26, 2017",
+          "Jun 27, 2017"
+        ]
+      },
+      "p_without": 0.7747524104683443,
+      "p_random": 0.6794853504217746,
+      "p_value": 0.9672131147540983,
+      "why": "Shared taste leads to the better match: Removing its strongest occurrence (user 474, Raiders of the Lost Ark, user 598): 67% \u2192 77%; random ratings of the same size: 68% (p = 0.97)."
+    },
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 0.0,
+      "adjusted": 0.0,
+      "graph": {
+        "nodes": [
+          {
+            "id": 1225,
+            "name": "Independence Day",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 609,
+            "name": "user 609",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 559,
+            "name": "user 559",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 84031,
+            "s": 1225,
+            "t": 559,
+            "rating": 3.5,
+            "date": "Jul 27, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 85995,
+            "s": 1225,
+            "t": 609,
+            "rating": 3.5,
+            "date": "Nov 19, 2016",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.0008563336676173218,
+      "occurrence": {
+        "eids": [
+          84031,
+          85995
+        ],
+        "nodes": [
+          "user 559",
+          "user 609",
+          "Independence Day"
+        ],
+        "dates": [
+          "Jul 27, 2016",
+          "Nov 19, 2016"
+        ]
+      },
+      "p_without": 0.8890426148086903,
+      "p_random": 0.7079652797321458,
+      "p_value": 1.0,
+      "why": "Recent fans piled on: Removing its strongest occurrence (user 559, user 609, Independence Day): 67% \u2192 89%; random ratings of the same size: 71% (p = 1.00)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 1050,
+  "computed_at": "2026-10-27T18:47:49-0400",
+  "summary": "With 6 ratings (5 of the member's own ratings, 1 other rating nearby), the model's preference for Independence Day over Rise of the Planet of the Apes goes from 67% to 53%. Removing the same number of random ratings from the same weeks gives 74% on average (p = 0.02, 60 draws). In the full ranking, Independence Day moves from #1 to #2."
+}

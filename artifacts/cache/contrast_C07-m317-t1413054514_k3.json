@@ -1,0 +1,54 @@
+{
+  "case_id": "C07-m317-t1413054514",
+  "member": 317,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Keeping the Faith (2000)",
+  "A_id": 3555,
+  "B_id": 3252,
+  "member_id": 317,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 72054,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 260",
+        "from_id": 3555,
+        "to_id": 260,
+        "rating": 5.0,
+        "date": "2014-07-09",
+        "kind": "the title's recent raters"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1
+    },
+    "structure": null,
+    "n_model_runs": 82
+  },
+  "side_B": {
+    "links": [],
+    "kinds": {},
+    "structure": null,
+    "n_model_runs": 82
+  },
+  "test": {
+    "p0": 0.7840316504627096,
+    "del_A": {
+      "p": 0.7646312979408443,
+      "p_random": 0.7840316504627096,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.7840316504627096,
+      "p_random": 0.7840316504627096,
+      "p_value": 1.0
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 1.0,
+    "B_from_member_history": 0.0,
+    "shared_links": []
+  }
+}

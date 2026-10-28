@@ -1,0 +1,314 @@
+{
+  "method": "TemGX",
+  "backbone": "tgn",
+  "L": 1,
+  "k_nodes": 8,
+  "delta_days": 365,
+  "fan": 10,
+  "cap": 200,
+  "targets": {
+    "u": 470,
+    "A": 3761,
+    "B": 1386
+  },
+  "n_nodes": 9,
+  "n_edges": 6,
+  "hop": {
+    "470": 0,
+    "3761": 0,
+    "1386": 0,
+    "5945": 1,
+    "2340": 1,
+    "7982": 1,
+    "8412": 1,
+    "2836": 1,
+    "379": 1
+  },
+  "edges": [
+    {
+      "eid": 90712,
+      "a": 470,
+      "b": 5945,
+      "ts": 1496668982,
+      "rating": 3.5,
+      "p": 0.0006073623462234945,
+      "signed": -0.049620628356933594
+    },
+    {
+      "eid": 90711,
+      "a": 470,
+      "b": 2340,
+      "ts": 1496668940,
+      "rating": 5.0,
+      "p": 0.000541052151151189,
+      "signed": -0.044036865234375
+    },
+    {
+      "eid": 90710,
+      "a": 470,
+      "b": 7982,
+      "ts": 1496668936,
+      "rating": 4.0,
+      "p": 0.001220950271852761,
+      "signed": 0.09061670303344727
+    },
+    {
+      "eid": 90709,
+      "a": 470,
+      "b": 8412,
+      "ts": 1496668933,
+      "rating": 4.5,
+      "p": 0.00011737339208928166,
+      "signed": -0.009330987930297852
+    },
+    {
+      "eid": 90708,
+      "a": 470,
+      "b": 2836,
+      "ts": 1496668924,
+      "rating": 4.0,
+      "p": 0.0008278454476365882,
+      "signed": 0.06264340877532959
+    },
+    {
+      "eid": 90118,
+      "a": 3761,
+      "b": 379,
+      "ts": 1494613279,
+      "rating": 3.0,
+      "p": 0.0015961093744270016,
+      "signed": 0.1163555383682251
+    }
+  ],
+  "nodes": [
+    {
+      "node": 379,
+      "hop": 1,
+      "phi": 0.0005501114290500206,
+      "inf": 0.0015961093744270016,
+      "g_trd": 0.36787944117144245,
+      "R": 0.9999999999999997,
+      "decay": 0.9368768363704002
+    },
+    {
+      "node": 470,
+      "hop": 0,
+      "phi": null,
+      "inf": null,
+      "g_trd": null,
+      "R": 0.0,
+      "decay": null
+    },
+    {
+      "node": 1386,
+      "hop": 0,
+      "phi": null,
+      "inf": null,
+      "g_trd": null,
+      "R": 0.0,
+      "decay": null
+    },
+    {
+      "node": 2340,
+      "hop": 1,
+      "phi": 0.00019903820765588336,
+      "inf": 0.000541052151151189,
+      "g_trd": 0.36787944117144233,
+      "R": 1.0,
+      "decay": 0.9999811328517565
+    },
+    {
+      "node": 2836,
+      "hop": 1,
+      "phi": 0.0003045414202022641,
+      "inf": 0.0008278454476365882,
+      "g_trd": 0.36787944117144233,
+      "R": 1.0,
+      "decay": 0.9999806255047858
+    },
+    {
+      "node": 3761,
+      "hop": 0,
+      "phi": null,
+      "inf": null,
+      "g_trd": null,
+      "R": 0.0,
+      "decay": null
+    },
+    {
+      "node": 5945,
+      "hop": 1,
+      "phi": 0.00022343220248419174,
+      "inf": 0.0006073623462234945,
+      "g_trd": 0.3678794411714416,
+      "R": 1.000000000000002,
+      "decay": 0.9999824646387792
+    },
+    {
+      "node": 7982,
+      "hop": 1,
+      "phi": 0.0004491539723214527,
+      "inf": 0.001220950271852761,
+      "g_trd": 0.36787944117144317,
+      "R": 0.9999999999999978,
+      "decay": 0.9999810060149897
+    },
+    {
+      "node": 8412,
+      "hop": 1,
+      "phi": 4.3178433636486744e-05,
+      "inf": 0.00011737339208928166,
+      "g_trd": 0.36787944117144217,
+      "R": 1.0000000000000004,
+      "decay": 0.9999809108874252
+    }
+  ],
+  "explanatory": [
+    379,
+    7982,
+    2836,
+    2340,
+    8412
+  ],
+  "connection": [],
+  "E_eps": [
+    90118,
+    90708,
+    90709,
+    90710,
+    90711
+  ],
+  "explanatory_hops": {
+    "379": 1,
+    "7982": 1,
+    "2836": 1,
+    "2340": 1,
+    "8412": 1
+  },
+  "steps": [
+    {
+      "node": 379,
+      "phi": 0.0005501114290500206,
+      "margin_after": 3.2521674633026123,
+      "verified": true,
+      "action": "add"
+    },
+    {
+      "node": 7982,
+      "phi": 0.0004491539723214527,
+      "margin_after": 3.1674269437789917,
+      "verified": true,
+      "action": "add"
+    },
+    {
+      "node": 2836,
+      "phi": 0.0003045414202022641,
+      "margin_after": 3.0138328075408936,
+      "verified": true,
+      "action": "add"
+    },
+    {
+      "node": 5945,
+      "phi": 0.00022343220248419174,
+      "margin_after": 3.0208064317703247,
+      "verified": false,
+      "action": "reject"
+    },
+    {
+      "node": 2340,
+      "phi": 0.00019903820765588336,
+      "margin_after": 3.00379741191864,
+      "verified": true,
+      "action": "add"
+    },
+    {
+      "node": 8412,
+      "phi": 4.3178433636486744e-05,
+      "margin_after": 2.8661025762557983,
+      "verified": true,
+      "action": "add"
+    }
+  ],
+  "margin_full": 3.3685230016708374,
+  "margin_without": 2.8661025762557983,
+  "margin_only": 3.418143630027771,
+  "temperature": 0.7198237026274322,
+  "prob_full": 0.9908031060193063,
+  "prob_without": 0.9816872091649421,
+  "prob_only": 0.9914104683655298,
+  "fid_minus": 0.009115896854364203,
+  "fid_plus": 0.0006073623462234945,
+  "flipped": false,
+  "sparsity": 0.8333333333333334,
+  "baselines": {
+    "temgx": 0.5024204254150391,
+    "random_mean": 0.40508420914411547,
+    "most_recent": 2.258050888776779,
+    "top_single_edges": 0.5024204254150391,
+    "budget_edges": 5,
+    "n_random": 20
+  },
+  "n_model_inferences": 37,
+  "latency_ms": {
+    "edge_influence": 42.1,
+    "icm_trd_phi": 0.5,
+    "select_verify": 32.1,
+    "total": 203.3
+  },
+  "meta": {
+    "379": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 379"
+    },
+    "470": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 470"
+    },
+    "1386": {
+      "type": "movie",
+      "label": "Mystery",
+      "title": "That Darn Cat! (1965)",
+      "genres": "Children|Comedy|Mystery"
+    },
+    "2340": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+      "genres": "Comedy|Drama|Romance|War"
+    },
+    "2836": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Fight Club (1999)",
+      "genres": "Action|Crime|Drama|Thriller"
+    },
+    "3761": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Along Came a Spider (2001)",
+      "genres": "Action|Crime|Mystery|Thriller"
+    },
+    "5945": {
+      "type": "movie",
+      "label": "Horror",
+      "title": "Shaun of the Dead (2004)",
+      "genres": "Comedy|Horror"
+    },
+    "7982": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Inception (2010)",
+      "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX"
+    },
+    "8412": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Intouchables (2011)",
+      "genres": "Comedy|Drama"
+    }
+  },
+  "computed_at": "2026-10-22T16:19:00-0400",
+  "code_version": "1040bccffef1"
+}

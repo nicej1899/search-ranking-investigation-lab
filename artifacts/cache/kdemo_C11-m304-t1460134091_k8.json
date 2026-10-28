@@ -1,0 +1,1134 @@
+{
+  "case_id": "C11-m304-t1460134091",
+  "k": 8,
+  "member": 304,
+  "joint": {
+    "lines": [
+      "TemGX: 3 of the 8 ratings are recent ratings of Aladdin by other people; 3 of them are part of a pattern CATGX finds.",
+      "TemGX: 2 are the member's own recent ratings (The Godfather, The Shawshank Redemption), shared with people who also rated Aladdin.",
+      "CATGX: \u201cShared taste leads to the title\u201d looked 4.1\u00d7 and is still 3.2\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "Ranker: Aladdin beats Harry Potter and the Chamber of Secrets mainly through popularity (+0.18); the history part adds +0.05."
+    ],
+    "verdict": "Diagnosis: Aladdin wins mainly through popularity, and the history model adds to it through recent fans of Aladdin and the member's ratings of The Godfather, The Shawshank Redemption. None of these signals reads \u201cisn't animated\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      79127,
+      79508,
+      81409
+    ]
+  },
+  "score_split": {
+    "relevance": 0.10974660200647612,
+    "popularity": 0.18298702999048821,
+    "behaviour": 0.05155966577441354
+  },
+  "A": "Aladdin",
+  "B": "Harry Potter and the Chamber of Secrets",
+  "query": "a fantasy movie that isn't animated",
+  "p0": 0.7250284280609507,
+  "evidence": [
+    {
+      "eid": 81409,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 533",
+      "to": "Aladdin",
+      "from_id": 533,
+      "to_id": 1116,
+      "rating": 4.5,
+      "date": "Apr 4, 2016",
+      "days_before": 4,
+      "p_without": 0.6644040399675225,
+      "drop": 0.06062438809342818,
+      "score": {
+        "influence": 0.06334237333037784,
+        "connectedness": 0.827386066419866,
+        "recency": 0.9892804449185736,
+        "phi": 0.051846800264085606
+      },
+      "why": "User 533 rated Aladdin 4.5\u2605 on Apr 4, 2016, 4 days before the search. The graph model builds Aladdin's profile from its recent raters, weighting recent ones more, so this rating makes Aladdin look current; user 533 also rated 2 titles that member 304 rated (e.g. Star Wars: Episode IV - A New Hope, The Dark Knight), which ties Aladdin to this member's taste. Removing only this rating: 73% \u2192 66% (\u22126.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.159249520110704,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.9019141975177405,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 79127,
+      "n": 2,
+      "kind": "other",
+      "from": "user 297",
+      "to": "Harry Potter and the Chamber of Secrets",
+      "from_id": 297,
+      "to_id": 4686,
+      "rating": 3.0,
+      "date": "Dec 8, 2015",
+      "days_before": 122,
+      "p_without": 0.7130422774226687,
+      "drop": 0.011986150638282012,
+      "score": {
+        "influence": 0.011988737713981679,
+        "connectedness": 0.7610144271459075,
+        "recency": 0.8032495098673085,
+        "phi": 0.007328529126792588
+      },
+      "why": "User 297 rated Harry Potter and the Chamber of Secrets 3\u2605 on Dec 8, 2015. It reaches the decision through the graph: it changes how Harry Potter and the Chamber of Secrets and its raters are represented, which feeds into member 304 or Aladdin. Removing only this rating: 73% \u2192 71% (\u22121.2 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.7416326427388159,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.159249520110704,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "Shared taste leads to the better match",
+          "adjusted": 0.40386932333791026,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 79508,
+      "n": 3,
+      "kind": "crowd",
+      "from": "user 425",
+      "to": "Aladdin",
+      "from_id": 425,
+      "to_id": 1116,
+      "rating": 4.5,
+      "date": "Dec 27, 2015",
+      "days_before": 104,
+      "p_without": 0.7192262687568411,
+      "drop": 0.005802159304109544,
+      "score": {
+        "influence": 0.010028106666471803,
+        "connectedness": 0.7639643516413572,
+        "recency": 0.7515260871000397,
+        "phi": 0.005757528536042297
+      },
+      "why": "User 425 rated Aladdin 4.5\u2605 on Dec 27, 2015, 104 days before the search. The graph model builds Aladdin's profile from its recent raters, weighting recent ones more, so this rating makes Aladdin look current; user 425 also rated 1 title that member 304 rated (e.g. The Shawshank Redemption), which ties Aladdin to this member's taste. Removing only this rating: 73% \u2192 72% (\u22120.6 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.159249520110704,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "Shared taste leads to the better match",
+          "adjusted": 0.40386932333791026,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.9019141975177405,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 77946,
+      "n": 4,
+      "kind": "other",
+      "from": "user 580",
+      "to": "Harry Potter and the Chamber of Secrets",
+      "from_id": 580,
+      "to_id": 4686,
+      "rating": 5.0,
+      "date": "Nov 8, 2015",
+      "days_before": 152,
+      "p_without": 0.7380699605554881,
+      "drop": -0.013041532494537433,
+      "score": {
+        "influence": 0.013041241969929618,
+        "connectedness": 0.4699120604540894,
+        "recency": 0.6595202228859977,
+        "phi": 0.0040416961562735896
+      },
+      "why": "User 580 rated Harry Potter and the Chamber of Secrets 5\u2605 on Nov 8, 2015. It reaches the decision through the graph: it changes how Harry Potter and the Chamber of Secrets and its raters are represented, which feeds into member 304 or Aladdin. Removing only this rating: 73% \u2192 74% (+1.3 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.159249520110704,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76441,
+      "n": 5,
+      "kind": "crowd",
+      "from": "user 562",
+      "to": "Aladdin",
+      "from_id": 562,
+      "to_id": 1116,
+      "rating": 4.0,
+      "date": "Aug 18, 2015",
+      "days_before": 234,
+      "p_without": 0.7152479712310533,
+      "drop": 0.009780456829897366,
+      "score": {
+        "influence": 0.009780747354505182,
+        "connectedness": 0.5960363533527783,
+        "recency": 0.690879881467321,
+        "phi": 0.00402760930876862
+      },
+      "why": "User 562 rated Aladdin 4\u2605 on Aug 18, 2015, 234 days before the search. The graph model builds Aladdin's profile from its recent raters, weighting recent ones more, so this rating makes Aladdin look current. Removing only this rating: 73% \u2192 72% (\u22121.0 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "Shared taste leads to the better match",
+          "adjusted": 0.40386932333791026,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.9019141975177405,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 81785,
+      "n": 6,
+      "kind": "own",
+      "from": "user 304",
+      "to": "The Godfather",
+      "from_id": 304,
+      "to_id": 1269,
+      "rating": 5.0,
+      "date": "Apr 8, 2016",
+      "days_before": 0,
+      "p_without": 0.7304549465825895,
+      "drop": -0.005426518521638779,
+      "score": {
+        "influence": 0.005494375277811936,
+        "connectedness": 0.7986513874762795,
+        "recency": 0.7977735166052716,
+        "phi": 0.003500702340655031
+      },
+      "why": "Member 304 rated The Godfather 5\u2605 on Apr 8, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 2 of the people who rated The Godfather also rated Aladdin (e.g. user 17, user 494), so this rating pulls member 304 toward Aladdin's audience. Removing only this rating: 73% \u2192 73% (+0.5 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.7416326427388159,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 81000,
+      "n": 7,
+      "kind": "other",
+      "from": "user 40",
+      "to": "Harry Potter and the Chamber of Secrets",
+      "from_id": 40,
+      "to_id": 4686,
+      "rating": 1.0,
+      "date": "Mar 25, 2016",
+      "days_before": 14,
+      "p_without": 0.7228038879255696,
+      "drop": 0.0022245401353810923,
+      "score": {
+        "influence": 0.0022256790789307868,
+        "connectedness": 0.6809656712334556,
+        "recency": 0.9749201543420732,
+        "phi": 0.00147759975677472
+      },
+      "why": "User 40 rated Harry Potter and the Chamber of Secrets 1\u2605 on Mar 25, 2016. It reaches the decision through the graph: it changes how Harry Potter and the Chamber of Secrets and its raters are represented, which feeds into member 304 or Aladdin. Removing only this rating: 73% \u2192 72% (\u22120.2 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.159249520110704,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 81784,
+      "n": 8,
+      "kind": "own",
+      "from": "user 304",
+      "to": "The Shawshank Redemption",
+      "from_id": 304,
+      "to_id": 887,
+      "rating": 5.0,
+      "date": "Apr 8, 2016",
+      "days_before": 0,
+      "p_without": 0.7239841082489306,
+      "drop": 0.0010443198120201336,
+      "score": {
+        "influence": 0.0010521483125330855,
+        "connectedness": 0.8034408867331339,
+        "recency": 0.8404589797180527,
+        "phi": 0.0007104727309285129
+      },
+      "why": "Member 304 rated The Shawshank Redemption 5\u2605 on Apr 8, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated The Shawshank Redemption also rated Aladdin (e.g. user 17, user 425), so this rating pulls member 304 toward Aladdin's audience. Removing only this rating: 73% \u2192 72% (\u22120.1 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.7416326427388159,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.45240312501206226,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.6644040399675225,
+      "rand_mean": 0.7251431772902651,
+      "rand_lo": 0.7172129483294256,
+      "rand_hi": 0.7336418817095245,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.6510471357673738,
+      "rand_mean": 0.7249683319413548,
+      "rand_lo": 0.7215919567831112,
+      "rand_hi": 0.7304549465825895,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.4613531399977299,
+      "rand_mean": 0.7255976998293957,
+      "rand_lo": 0.7189065560022968,
+      "rand_hi": 0.7498528484276423,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.44295913078814475,
+      "rand_mean": 0.7244192216638683,
+      "rand_lo": 0.7172129483294256,
+      "rand_hi": 0.7291074828979738,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.4375485692691521,
+      "rand_mean": 0.7250371972199293,
+      "rand_lo": 0.7205208149569443,
+      "rand_hi": 0.7404767203577879,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.434311108966752,
+      "rand_mean": 0.7251425846917366,
+      "rand_lo": 0.7215662470074405,
+      "rand_hi": 0.7334539115125314,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 7,
+      "p": 0.41092055042420805,
+      "rand_mean": 0.726231827893127,
+      "rand_lo": 0.7146464212714502,
+      "rand_hi": 0.7503545212928466,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 8,
+      "p": 0.4102988318052621,
+      "rand_mean": 0.7264121734248639,
+      "rand_lo": 0.7165363468903854,
+      "rand_hi": 0.7502867547667734,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.4102988318052621,
+    "rand_mean": 0.7264121734248639,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.7259025873615136,
+      0.7247577216504202,
+      0.7250284280609507,
+      0.7211948234945476,
+      0.7237333441006676,
+      0.7250284280609507,
+      0.7230691797107558,
+      0.7246603257487054,
+      0.7250284280609507,
+      0.7247078634329734,
+      0.7248403097092108,
+      0.7230901526397784,
+      0.7198749949291322,
+      0.729900826816919,
+      0.7250284280609507,
+      0.7496779282533182,
+      0.7247436223726454,
+      0.7249916751614973,
+      0.7239679095078366,
+      0.7279140264714604,
+      0.7247078634329734,
+      0.7245032843925675,
+      0.7253932493260484,
+      0.7242048257007574,
+      0.7319479466553781,
+      0.7172129483294256,
+      0.7338252317065164,
+      0.7250216369939604,
+      0.7243173076824305,
+      0.7248403097092108,
+      0.7206150854028821,
+      0.7144379433127068,
+      0.7161859281291891,
+      0.7207437558068763,
+      0.7249935274062622,
+      0.7249915298870706,
+      0.7247927862106607,
+      0.7242876620525239,
+      0.7169236518369707,
+      0.7249916751614973,
+      0.7171324747745379,
+      0.7594382570938825,
+      0.7502633185532005,
+      0.724419106288854,
+      0.7258746787639562,
+      0.7288514604018845,
+      0.7250003189041526,
+      0.7172129483294256,
+      0.7214246742502487,
+      0.7503079589600061,
+      0.7249924741699926,
+      0.73334227035191,
+      0.724476523664976,
+      0.7218643872677827,
+      0.7272547881891505,
+      0.7279590488641047,
+      0.7502633185532005,
+      0.727033422580231,
+      0.7243268375146236,
+      0.7172129852746127
+    ],
+    "flips": true
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 2,
+    "B_after": 2,
+    "top3_after": [
+      "Aladdin (1992)",
+      "Harry Potter and the Chamber of Secrets (2002)",
+      "Live and Let Die (1973)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 834,
+        "name": "Star Wars: Episode IV - A New Hope",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 580,
+        "name": "user 580",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 40,
+        "name": "user 40",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 297,
+        "name": "user 297",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 425,
+        "name": "user 425",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 4686,
+        "name": "Harry Potter and the Chamber of Secrets",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 494,
+        "name": "user 494",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 304,
+        "name": "user 304",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 17,
+        "name": "user 17",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 562,
+        "name": "user 562",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 533,
+        "name": "user 533",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 1269,
+        "name": "The Godfather",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 887,
+        "name": "The Shawshank Redemption",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 7320,
+        "name": "The Dark Knight",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 1116,
+        "name": "Aladdin",
+        "type": "title",
+        "role": "A"
+      }
+    ],
+    "edges": [
+      {
+        "eid": 76441,
+        "s": 1116,
+        "t": 562,
+        "rating": 4.0,
+        "date": "Aug 18, 2015",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 77946,
+        "s": 4686,
+        "t": 580,
+        "rating": 5.0,
+        "date": "Nov 8, 2015",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 79127,
+        "s": 4686,
+        "t": 297,
+        "rating": 3.0,
+        "date": "Dec 8, 2015",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 79508,
+        "s": 1116,
+        "t": 425,
+        "rating": 4.5,
+        "date": "Dec 27, 2015",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 81000,
+        "s": 4686,
+        "t": 40,
+        "rating": 1.0,
+        "date": "Mar 25, 2016",
+        "expl": true,
+        "n": 7
+      },
+      {
+        "eid": 81409,
+        "s": 1116,
+        "t": 533,
+        "rating": 4.5,
+        "date": "Apr 4, 2016",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 81784,
+        "s": 304,
+        "t": 887,
+        "rating": 5.0,
+        "date": "Apr 8, 2016",
+        "expl": true,
+        "n": 8
+      },
+      {
+        "eid": 81785,
+        "s": 304,
+        "t": 1269,
+        "rating": 5.0,
+        "date": "Apr 8, 2016",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 79428,
+        "s": 887,
+        "t": 425,
+        "rating": 3.5,
+        "date": "Dec 25, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 79944,
+        "s": 887,
+        "t": 17,
+        "rating": 5.0,
+        "date": "Feb 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 79982,
+        "s": 1269,
+        "t": 17,
+        "rating": 4.0,
+        "date": "Feb 9, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80093,
+        "s": 1116,
+        "t": 17,
+        "rating": 3.5,
+        "date": "Feb 11, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80645,
+        "s": 1269,
+        "t": 494,
+        "rating": 4.5,
+        "date": "Mar 22, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 80725,
+        "s": 1116,
+        "t": 494,
+        "rating": 4.0,
+        "date": "Mar 22, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81525,
+        "s": 834,
+        "t": 533,
+        "rating": 4.5,
+        "date": "Apr 4, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81586,
+        "s": 7320,
+        "t": 533,
+        "rating": 2.0,
+        "date": "Apr 4, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81786,
+        "s": 304,
+        "t": 834,
+        "rating": 5.0,
+        "date": "Apr 8, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 81787,
+        "s": 304,
+        "t": 7320,
+        "rating": 5.0,
+        "date": "Apr 8, 2016",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 4.115992929678662,
+      "adjusted": 3.159249520110704,
+      "graph": {
+        "nodes": [
+          {
+            "id": 297,
+            "name": "user 297",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1116,
+            "name": "Aladdin",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 533,
+            "name": "user 533",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 4686,
+            "name": "Harry Potter and the Chamber of Secrets",
+            "type": "title",
+            "role": "B"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 79127,
+            "s": 4686,
+            "t": 297,
+            "rating": 3.0,
+            "date": "Dec 8, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 81281,
+            "s": 4686,
+            "t": 533,
+            "rating": 4.0,
+            "date": "Apr 4, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 81409,
+            "s": 1116,
+            "t": 533,
+            "rating": 4.5,
+            "date": "Apr 4, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        79127,
+        81409
+      ],
+      "S": 0.03853534843703531,
+      "occurrence": {
+        "eids": [
+          79127,
+          81281,
+          81409
+        ],
+        "nodes": [
+          "user 297",
+          "Harry Potter and the Chamber of Secrets",
+          "user 533",
+          "Aladdin"
+        ],
+        "dates": [
+          "Dec 8, 2015",
+          "Apr 4, 2016",
+          "Apr 4, 2016"
+        ]
+      },
+      "p_without": 0.6197927787266434,
+      "p_random": 0.725831161527083,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the title: before matching on context it looks 4.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 3.2\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 297, Harry Potter and the Chamber of Secrets, user 533): 73% \u2192 62%; random ratings of the same size: 73% (p = 0.02)."
+    },
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 2.10006974080311,
+      "adjusted": 1.9019141975177405,
+      "graph": {
+        "nodes": [
+          {
+            "id": 425,
+            "name": "user 425",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1116,
+            "name": "Aladdin",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 533,
+            "name": "user 533",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 79508,
+            "s": 1116,
+            "t": 425,
+            "rating": 4.5,
+            "date": "Dec 27, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 81409,
+            "s": 1116,
+            "t": 533,
+            "rating": 4.5,
+            "date": "Apr 4, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        79508,
+        81409
+      ],
+      "S": 0.01631158777939839,
+      "occurrence": {
+        "eids": [
+          79508,
+          81409
+        ],
+        "nodes": [
+          "user 425",
+          "user 533",
+          "Aladdin"
+        ],
+        "dates": [
+          "Dec 27, 2015",
+          "Apr 4, 2016"
+        ]
+      },
+      "p_without": 0.47612839531720125,
+      "p_random": 0.724484137980023,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 2.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.9\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 425, user 533, Aladdin): 73% \u2192 48%; random ratings of the same size: 72% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.33890452346160643,
+      "adjusted": 0.7416326427388159,
+      "graph": {
+        "nodes": [
+          {
+            "id": 304,
+            "name": "user 304",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 834,
+            "name": "Star Wars: Episode IV - A New Hope",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 656,
+            "name": "The Usual Suspects",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 81783,
+            "s": 304,
+            "t": 656,
+            "rating": 5.0,
+            "date": "Apr 8, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 81786,
+            "s": 304,
+            "t": 834,
+            "rating": 5.0,
+            "date": "Apr 8, 2016",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.0012990084251734107,
+      "occurrence": {
+        "eids": [
+          81783,
+          81786
+        ],
+        "nodes": [
+          "user 304",
+          "The Usual Suspects",
+          "Star Wars: Episode IV - A New Hope"
+        ],
+        "dates": [
+          "Apr 8, 2016",
+          "Apr 8, 2016"
+        ]
+      },
+      "p_without": 0.7099090489440936,
+      "p_random": 0.7245053130416875,
+      "p_value": 0.03278688524590164,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.7\u00d7. Removing its strongest occurrence (user 304, The Usual Suspects, Star Wars: Episode IV - A New Hope): 73% \u2192 71%; random ratings of the same size: 72% (p = 0.03)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 0.41475074707243165,
+      "adjusted": 0.45240312501206226,
+      "graph": {
+        "nodes": [
+          {
+            "id": 176,
+            "name": "user 176",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1116,
+            "name": "Aladdin",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 533,
+            "name": "user 533",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 74868,
+            "s": 1116,
+            "t": 176,
+            "rating": 4.0,
+            "date": "Jun 28, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 81409,
+            "s": 1116,
+            "t": 533,
+            "rating": 4.5,
+            "date": "Apr 4, 2016",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        81409
+      ],
+      "S": -0.01193881917751227,
+      "occurrence": {
+        "eids": [
+          74868,
+          81409
+        ],
+        "nodes": [
+          "user 176",
+          "Aladdin",
+          "user 533"
+        ],
+        "dates": [
+          "Jun 28, 2015",
+          "Apr 4, 2016"
+        ]
+      },
+      "p_without": 0.6644040399675225,
+      "p_random": 0.7251528526951632,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 0.4\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.5\u00d7. Removing its strongest occurrence (user 176, Aladdin, user 533): 73% \u2192 66%; random ratings of the same size: 73% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGEB",
+      "name": "Shared taste leads to the better match",
+      "raw": 0.13318888790078828,
+      "adjusted": 0.40386932333791026,
+      "graph": {
+        "nodes": [
+          {
+            "id": 656,
+            "name": "The Usual Suspects",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 297,
+            "name": "user 297",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 104,
+            "name": "user 104",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 4686,
+            "name": "Harry Potter and the Chamber of Secrets",
+            "type": "title",
+            "role": "B"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 77259,
+            "s": 656,
+            "t": 104,
+            "rating": 5.0,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 78121,
+            "s": 656,
+            "t": 297,
+            "rating": 3.5,
+            "date": "Nov 14, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 79127,
+            "s": 4686,
+            "t": 297,
+            "rating": 3.0,
+            "date": "Dec 8, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        79127
+      ],
+      "S": -0.0030049967292936964,
+      "occurrence": {
+        "eids": [
+          77259,
+          78121,
+          79127
+        ],
+        "nodes": [
+          "user 104",
+          "The Usual Suspects",
+          "user 297",
+          "Harry Potter and the Chamber of Secrets"
+        ],
+        "dates": [
+          "Nov 3, 2015",
+          "Nov 14, 2015",
+          "Dec 8, 2015"
+        ]
+      },
+      "p_without": 0.7128275050641703,
+      "p_random": 0.7260655838290382,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the better match: before matching on context it looks 0.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.4\u00d7. Removing its strongest occurrence (user 104, The Usual Suspects, user 297): 73% \u2192 71%; random ratings of the same size: 73% (p = 0.02)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 1272,
+  "computed_at": "2026-10-27T18:51:25-0400",
+  "summary": "With 8 ratings (3 recent ratings of Aladdin by other people, 2 of the member's own ratings, 3 other ratings nearby), the model's preference for Aladdin over Harry Potter and the Chamber of Secrets goes from 73% to 41% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 73% on average (p = 0.02, 60 draws). The full ranking still puts Aladdin at #1: text match and popularity also push it up."
+}

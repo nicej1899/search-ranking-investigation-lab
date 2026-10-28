@@ -1,0 +1,164 @@
+{
+  "case_id": "C07-m291-t1385677294",
+  "member": 291,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "All That Heaven Allows (1955)",
+  "A_id": 3555,
+  "B_id": 3875,
+  "member_id": 291,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 69957,
+        "from": "user 291",
+        "to": "Bourne Legacy, The (2012)",
+        "from_id": 291,
+        "to_id": 8379,
+        "rating": 2.5,
+        "date": "2013-02-09",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 70940,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 15",
+        "from_id": 3555,
+        "to_id": 15,
+        "rating": 4.0,
+        "date": "2013-08-26",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 71044,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 281",
+        "from_id": 3555,
+        "to_id": 281,
+        "rating": 4.5,
+        "date": "2013-09-06",
+        "kind": "the title's recent raters"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 1,
+      "the title's recent raters": 2
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 2.594172268714514,
+      "nodes": [
+        {
+          "id": 291,
+          "name": "user 291"
+        },
+        {
+          "id": 8375,
+          "name": "Expendables 2, The (2012)"
+        },
+        {
+          "id": 561,
+          "name": "user 561"
+        }
+      ],
+      "links": [
+        {
+          "eid": 69997,
+          "from": "user 291",
+          "to": "Expendables 2, The (2012)",
+          "from_id": 291,
+          "to_id": 8375,
+          "rating": 3.5,
+          "date": "2013-03-02"
+        },
+        {
+          "eid": 70432,
+          "from": "Expendables 2, The (2012)",
+          "to": "user 561",
+          "from_id": 8375,
+          "to_id": 561,
+          "rating": 4.0,
+          "date": "2013-05-18"
+        }
+      ]
+    },
+    "n_model_runs": 164
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 69490,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 245",
+        "from_id": 3555,
+        "to_id": 245,
+        "rating": 2.0,
+        "date": "2012-11-28",
+        "kind": "other people's ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 2.4999999999999996,
+      "nodes": [
+        {
+          "id": 245,
+          "name": "user 245"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        },
+        {
+          "id": 561,
+          "name": "user 561"
+        }
+      ],
+      "links": [
+        {
+          "eid": 69490,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 245",
+          "from_id": 3555,
+          "to_id": 245,
+          "rating": 2.0,
+          "date": "2012-11-28"
+        },
+        {
+          "eid": 70386,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 561",
+          "from_id": 3555,
+          "to_id": 561,
+          "rating": 5.0,
+          "date": "2013-05-18"
+        }
+      ]
+    },
+    "n_model_runs": 164
+  },
+  "test": {
+    "p0": 0.8070919423800567,
+    "del_A": {
+      "p": 0.623976762089008,
+      "p_random": 0.788787875259511,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.8148880457950424,
+      "p_random": 0.8069759162838253,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.0,
+    "shared_links": []
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m580-t1447007091",
+  "member": 580,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Thin Red Line, The (1998)",
+  "A_id": 3555,
+  "B_id": 2436,
+  "member_id": 580,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77910,
+        "from": "user 580",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 580,
+        "to_id": 887,
+        "rating": 5.0,
+        "date": "2015-11-08",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 77914,
+        "from": "user 580",
+        "to": "Matrix, The (1999)",
+        "from_id": 580,
+        "to_id": 2549,
+        "rating": 3.5,
+        "date": "2015-11-08",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 2.368636557045644,
+      "nodes": [
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 104,
+          "name": "user 104"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        },
+        {
+          "eid": 77488,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 104",
+          "from_id": 3555,
+          "to_id": 104,
+          "rating": 4.5,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 391
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 73420,
+        "from": "Thin Red Line, The (1998)",
+        "to": "user 317",
+        "from_id": 2436,
+        "to_id": 317,
+        "rating": 4.0,
+        "date": "2015-02-21",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 75008,
+        "from": "Thin Red Line, The (1998)",
+        "to": "user 176",
+        "from_id": 2436,
+        "to_id": 176,
+        "rating": 2.0,
+        "date": "2015-06-28",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77912,
+        "from": "user 580",
+        "to": "Intouchables (2011)",
+        "from_id": 580,
+        "to_id": 8412,
+        "rating": 4.5,
+        "date": "2015-11-08",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 11.999999999999998,
+      "nodes": [
+        {
+          "id": 230,
+          "name": "user 230"
+        },
+        {
+          "id": 1071,
+          "name": "Schindler's List (1993)"
+        },
+        {
+          "id": 176,
+          "name": "user 176"
+        },
+        {
+          "id": 2436,
+          "name": "Thin Red Line, The (1998)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 74449,
+          "from": "Schindler's List (1993)",
+          "to": "user 230",
+          "from_id": 1071,
+          "to_id": 230,
+          "rating": 2.0,
+          "date": "2015-05-31"
+        },
+        {
+          "eid": 74501,
+          "from": "Schindler's List (1993)",
+          "to": "user 176",
+          "from_id": 1071,
+          "to_id": 176,
+          "rating": 4.5,
+          "date": "2015-06-28"
+        },
+        {
+          "eid": 75008,
+          "from": "Thin Red Line, The (1998)",
+          "to": "user 176",
+          "from_id": 2436,
+          "to_id": 176,
+          "rating": 2.0,
+          "date": "2015-06-28"
+        }
+      ]
+    },
+    "n_model_runs": 353
+  },
+  "test": {
+    "p0": 0.9949969651419984,
+    "del_A": {
+      "p": 0.9837624315029914,
+      "p_random": 0.9950651757989384,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9992581560048318,
+      "p_random": 0.9947806611751393,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.3333333333333333,
+    "B_from_member_history": 0.3333333333333333,
+    "shared_links": []
+  }
+}

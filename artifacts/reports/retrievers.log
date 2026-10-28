@@ -1,0 +1,38 @@
+C07-m1-t1445714882 {'TemGX links': 0.57, 'CATGX structure': 0.605, '1-hop, newest around the title': 0.586, '1-hop, newest around member + title': 0.839, 'attention top-n': 0.974, 'random, same period': 0.701}
+C07-m59-t1393541892 {'TemGX links': 0.982, 'CATGX structure': 0.985, '1-hop, newest around the title': 0.991, '1-hop, newest around member + title': 0.993, 'attention top-n': 0.982, 'random, same period': 0.994}
+C07-m62-t1443199688 {'TemGX links': 0.922, 'CATGX structure': 0.955, '1-hop, newest around the title': 0.922, '1-hop, newest around member + title': 0.991, 'attention top-n': 0.973, 'random, same period': 0.99}
+C07-m72-t1464196245 {'TemGX links': 0.538, 'CATGX structure': 0.467, '1-hop, newest around the title': 0.514, '1-hop, newest around member + title': 0.57, 'attention top-n': 0.676, 'random, same period': 0.564}
+C07-m105-t1467360422 {'TemGX links': 0.426, 'CATGX structure': 0.455, '1-hop, newest around the title': 0.442, '1-hop, newest around member + title': 0.47, 'attention top-n': 0.614, 'random, same period': 0.492}
+C07-m118-t1435943180 {'TemGX links': 0.955, 'CATGX structure': 0.96, '1-hop, newest around the title': 0.946, '1-hop, newest around member + title': 0.984, 'attention top-n': 0.975, 'random, same period': 0.987}
+C07-m121-t1461561151 {'TemGX links': 1.0, 'CATGX structure': 1.0, '1-hop, newest around the title': 1.0, '1-hop, newest around member + title': 1.0, 'attention top-n': 1.0, 'random, same period': 1.0}
+C07-m122-t1447269105 {'TemGX links': 0.588, 'CATGX structure': 0.542, '1-hop, newest around the title': 0.604, '1-hop, newest around member + title': 0.611, 'attention top-n': 0.772, 'random, same period': 0.651}
+C07-m142-t1444768677 {'TemGX links': 0.979, 'CATGX structure': 0.983, '1-hop, newest around the title': 0.981, '1-hop, newest around member + title': 0.989, 'attention top-n': 0.983, 'random, same period': 0.992}
+C07-m176-t1435523542 {'TemGX links': 0.995, 'CATGX structure': 0.995, '1-hop, newest around the title': 0.993, '1-hop, newest around member + title': 0.999, 'attention top-n': 0.999, 'random, same period': 0.999}
+C07-m188-t1439465085 {'TemGX links': 0.995, 'CATGX structure': 0.996, '1-hop, newest around the title': 0.993, '1-hop, newest around member + title': 0.999, 'attention top-n': 0.998, 'random, same period': 0.999}
+C07-m226-t1447189556 {'TemGX links': 0.943, 'CATGX structure': 0.953, '1-hop, newest around the title': 0.963, '1-hop, newest around member + title': 0.966, 'attention top-n': 0.982, 'random, same period': 0.969}
+C07-m232-t1448815881 {'TemGX links': 0.979, 'CATGX structure': 0.988, '1-hop, newest around the title': 0.991, '1-hop, newest around member + title': 0.993, 'attention top-n': 0.987, 'random, same period': 0.992}
+C07-m250-t1470676715 {'TemGX links': 0.405, 'CATGX structure': 0.32, '1-hop, newest around the title': 0.514, '1-hop, newest around member + title': 0.445, 'attention top-n': 0.677, 'random, same period': 0.468}
+C07-m255-t1446579739 {'TemGX links': 0.995, 'CATGX structure': 0.994, '1-hop, newest around the title': 0.997, '1-hop, newest around member + title': 0.998, 'attention top-n': 0.999, 'random, same period': 0.998}
+C07-m260-t1404880899 {'TemGX links': 0.389, 'CATGX structure': 0.398, '1-hop, newest around the title': 0.398, '1-hop, newest around member + title': 0.596, 'attention top-n': 0.436, 'random, same period': 0.577}
+C07-m281-t1378488934 {'TemGX links': 0.451, 'CATGX structure': 0.452, '1-hop, newest around the title': 0.602, '1-hop, newest around member + title': 0.507, 'attention top-n': 0.503, 'random, same period': 0.506}
+C07-m284-t1449626093 {'TemGX links': 0.929, 'CATGX structure': 0.955, '1-hop, newest around the title': 0.96, '1-hop, newest around member + title': 0.965, 'attention top-n': 0.978, 'random, same period': 0.968}
+C07-m290-t1453051417 {'TemGX links': 0.779, 'CATGX structure': 0.816, '1-hop, newest around the title': 0.845, '1-hop, newest around member + title': 0.914, 'attention top-n': 0.901, 'random, same period': 0.874}
+C07-m291-t1385677294 {'TemGX links': 0.624, 'CATGX structure': 0.757, '1-hop, newest around the title': 0.758, '1-hop, newest around member + title': 0.758, 'attention top-n': 0.645, 'random, same period': 0.789}
+C07-m307-t1421373693 {'TemGX links': 0.929, 'CATGX structure': 0.938, '1-hop, newest around the title': 0.925, '1-hop, newest around member + title': 0.951, 'attention top-n': 0.942, 'random, same period': 0.95}
+C07-m317-t1413054514 {'TemGX links': 0.765, 'CATGX structure': 0.784, '1-hop, newest around the title': 0.765, '1-hop, newest around member + title': 0.765, 'attention top-n': 0.765, 'random, same period': 0.784}
+C07-m318-t1461351651 {'TemGX links': 0.79, 'CATGX structure': 0.858, '1-hop, newest around the title': 0.865, '1-hop, newest around member + title': 0.773, 'attention top-n': 0.948, 'random, same period': 0.879}
+C07-m325-t1419880402 {'TemGX links': 0.72, 'CATGX structure': 0.728, '1-hop, newest around the title': 0.72, '1-hop, newest around member + title': 0.72, 'attention top-n': 0.72, 'random, same period': 0.728}
+C07-m340-t1439751021 {'TemGX links': 0.914, 'CATGX structure': 0.938, '1-hop, newest around the title': 0.91, '1-hop, newest around member + title': 0.99, 'attention top-n': 0.979, 'random, same period': 0.973}
+C07-m365-t1445546446 {'TemGX links': 0.918, 'CATGX structure': 0.946, '1-hop, newest around the title': 0.932, '1-hop, newest around member + title': 0.988, 'attention top-n': 0.975, 'random, same period': 0.97}
+C07-m438-t1436943790 {'TemGX links': 0.719, 'CATGX structure': 0.816, '1-hop, newest around the title': 0.719, '1-hop, newest around member + title': 0.943, 'attention top-n': 0.895, 'random, same period': 0.935}
+C07-m440-t1449070467 {'TemGX links': 1.0, 'CATGX structure': 1.0, '1-hop, newest around the title': 1.0, '1-hop, newest around member + title': 1.0, 'attention top-n': 1.0, 'random, same period': 1.0}
+C07-m461-t1378158322 {'TemGX links': 0.761, 'CATGX structure': 0.765, '1-hop, newest around the title': 0.908, '1-hop, newest around member + title': 0.755, 'attention top-n': 0.927, 'random, same period': 0.857}
+C07-m505-t1424486905 {'TemGX links': 0.421, 'CATGX structure': 0.43, '1-hop, newest around the title': 0.43, '1-hop, newest around member + title': 0.526, 'attention top-n': 0.455, 'random, same period': 0.525}
+C07-m580-t1447007091 {'TemGX links': 0.984, 'CATGX structure': 0.983, '1-hop, newest around the title': 0.99, '1-hop, newest around member + title': 0.996, 'attention top-n': 0.991, 'random, same period': 0.995}
+C07-m609-t1479542004 {'TemGX links': 0.994, 'CATGX structure': 0.998, '1-hop, newest around the title': 0.999, '1-hop, newest around member + title': 1.0, 'attention top-n': 0.997, 'random, same period': 0.999}
+TemGX links                              P after 0.792  drop 0.054  TemGX moves more in 0/32
+CATGX structure                          P after 0.805  drop 0.042  TemGX moves more in 27/32
+1-hop, newest around the title           P after 0.818  drop 0.029  TemGX moves more in 22/32
+1-hop, newest around member + title      P after 0.844  drop 0.003  TemGX moves more in 28/32
+attention top-n                          P after 0.864  drop -0.017  TemGX moves more in 29/32
+random, same period                      P after 0.847  drop -0.000  TemGX moves more in 32/32

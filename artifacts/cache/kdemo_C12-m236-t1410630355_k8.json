@@ -1,0 +1,604 @@
+{
+  "case_id": "C12-m236-t1410630355",
+  "k": 8,
+  "member": 236,
+  "joint": {
+    "lines": [
+      "TemGX: 5 are the member's own recent ratings (Star Trek VI: The Undiscovered Country, Road Trip, Star Trek: The Motion Picture), shared with people who also rated True Lies.",
+      "CATGX: \u201cTwo people rated the same movie\u201d looked 1.3\u00d7 but is 0.0\u00d7 after matching: most of its weight was timing and activity.",
+      "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
+      "Ranker: True Lies beats School of Rock mainly through popularity (+0.31); the history part adds +0.05."
+    ],
+    "verdict": "Diagnosis: True Lies wins mainly through popularity, and the history model adds to it through the member's ratings of Star Trek VI: The Undiscovered Country, Road Trip. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Step 5 picks one using past cases.",
+    "agree": [
+      71946,
+      72202,
+      72203
+    ]
+  },
+  "score_split": {
+    "relevance": -0.06377569898585178,
+    "popularity": 0.3106995668970911,
+    "behaviour": 0.04980308691757501
+  },
+  "A": "True Lies",
+  "B": "School of Rock",
+  "query": "a musical, but not a romance",
+  "p0": 0.7183945436010155,
+  "evidence": [
+    {
+      "eid": 72202,
+      "n": 1,
+      "kind": "own",
+      "from": "user 236",
+      "to": "Star Trek VI: The Undiscovered Country",
+      "from_id": 236,
+      "to_id": 1665,
+      "rating": 2.5,
+      "date": "Sep 13, 2014",
+      "days_before": 0,
+      "p_without": 0.6755506535360488,
+      "drop": 0.042843890064966694,
+      "score": {
+        "influence": 0.04284387163925163,
+        "connectedness": 0.6065306597126335,
+        "recency": 0.9999896943707086,
+        "phi": 0.02598585392666141
+      },
+      "why": "Member 236 rated Star Trek VI: The Undiscovered Country 2.5\u2605 on Sep 13, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with True Lies. Removing only this rating: 72% \u2192 68% (\u22124.3 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.0958674541999849,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 71946,
+      "n": 2,
+      "kind": "other",
+      "from": "user 20",
+      "to": "Road Trip",
+      "from_id": 20,
+      "to_id": 3306,
+      "rating": 2.0,
+      "date": "Jun 22, 2014",
+      "days_before": 83,
+      "p_without": 0.7176196667911526,
+      "drop": 0.0007748768098628789,
+      "score": {
+        "influence": 3.968126178377496e-05,
+        "connectedness": 0.36787944117144133,
+        "recency": 0.7966209320738333,
+        "phi": 1.1629008963348101e-05
+      },
+      "why": "User 20 rated Road Trip 2\u2605 on Jun 22, 2014. It reaches the decision through the graph: it changes how Road Trip and its raters are represented, which feeds into member 236 or True Lies. Removing only this rating: 72% \u2192 72% (\u22120.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.048598757690129,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72205,
+      "n": 3,
+      "kind": "own",
+      "from": "user 236",
+      "to": "Road Trip",
+      "from_id": 236,
+      "to_id": 3306,
+      "rating": 2.5,
+      "date": "Sep 13, 2014",
+      "days_before": 0,
+      "p_without": 0.7696055110736251,
+      "drop": -0.05121096747260956,
+      "score": {
+        "influence": 0.05126060300372015,
+        "connectedness": 0.6065306597126324,
+        "recency": 0.7797607669120151,
+        "phi": 0.024243641312142135
+      },
+      "why": "Member 236 rated Road Trip 2.5\u2605 on Sep 13, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with True Lies. Removing only this rating: 72% \u2192 77% (+5.1 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.0958674541999849,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.048598757690129,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72204,
+      "n": 4,
+      "kind": "own",
+      "from": "user 236",
+      "to": "Star Trek: The Motion Picture",
+      "from_id": 236,
+      "to_id": 1664,
+      "rating": 2.5,
+      "date": "Sep 13, 2014",
+      "days_before": 0,
+      "p_without": 0.7401825319654608,
+      "drop": -0.021787988364445288,
+      "score": {
+        "influence": 0.021788006790160352,
+        "connectedness": 0.6065306597126339,
+        "recency": 0.9999905505266353,
+        "phi": 0.013214969256579289
+      },
+      "why": "Member 236 rated Star Trek: The Motion Picture 2.5\u2605 on Sep 13, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with True Lies. Removing only this rating: 72% \u2192 74% (+2.2 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.0958674541999849,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72203,
+      "n": 5,
+      "kind": "own",
+      "from": "user 236",
+      "to": "Star Trek III: The Search for Spock",
+      "from_id": 236,
+      "to_id": 1668,
+      "rating": 3.5,
+      "date": "Sep 13, 2014",
+      "days_before": 0,
+      "p_without": 0.705156611909797,
+      "drop": 0.013237931691218563,
+      "score": {
+        "influence": 0.013237913265503498,
+        "connectedness": 0.6065306597126335,
+        "recency": 0.9999901065938411,
+        "phi": 0.008029120830005095
+      },
+      "why": "Member 236 rated Star Trek III: The Search for Spock 3.5\u2605 on Sep 13, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with True Lies. Removing only this rating: 72% \u2192 71% (\u22121.3 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.0958674541999849,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 72201,
+      "n": 6,
+      "kind": "own",
+      "from": "user 236",
+      "to": "Crocodile Dundee",
+      "from_id": 236,
+      "to_id": 2468,
+      "rating": 3.5,
+      "date": "Sep 13, 2014",
+      "days_before": 0,
+      "p_without": 0.7149830403326162,
+      "drop": 0.0034115032683993407,
+      "score": {
+        "influence": 0.003411484842684276,
+        "connectedness": 0.606530659712633,
+        "recency": 0.7746226889445886,
+        "phi": 0.0016028261472065652
+      },
+      "why": "Member 236 rated Crocodile Dundee 3.5\u2605 on Sep 13, 2014, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with True Lies. Removing only this rating: 72% \u2192 71% (\u22120.3 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.0958674541999849,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.048598757690129,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.6755506535360488,
+      "rand_mean": 0.7283962519383392,
+      "rand_lo": 0.705156611909797,
+      "rand_hi": 0.7696055110736251,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.6752255918581925,
+      "rand_mean": 0.7291643893689376,
+      "rand_lo": 0.7050885429725161,
+      "rand_hi": 0.7870533548177363,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.6990186793964567,
+      "rand_mean": 0.7242141878489254,
+      "rand_lo": 0.6972520596581081,
+      "rand_hi": 0.7727475658468804,
+      "p_value": 0.08196721311475409
+    },
+    {
+      "n": 4,
+      "p": 0.7259669153780659,
+      "rand_mean": 0.7142328815809198,
+      "rand_lo": 0.6972520596581081,
+      "rand_hi": 0.7493819635340404,
+      "p_value": 0.7868852459016393
+    },
+    {
+      "n": 5,
+      "p": 0.6980088778771805,
+      "rand_mean": 0.7187864792491854,
+      "rand_lo": 0.7149830403326162,
+      "rand_hi": 0.7475839453317791,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.6008342813594179,
+      "rand_mean": 0.7114892135410454,
+      "rand_lo": 0.6008342813594179,
+      "rand_hi": 0.847078129160297,
+      "p_value": 0.06557377049180328
+    }
+  ],
+  "full": {
+    "p": 0.6008342813594179,
+    "rand_mean": 0.7114892135410454,
+    "p_value": 0.06557377049180328,
+    "rand_all": [
+      0.7601065279320603,
+      0.7598634876516406,
+      0.6662923640033251,
+      0.6667440362311068,
+      0.6990186793964567,
+      0.6008342813594179,
+      0.6971028250744401,
+      0.7259669153780659,
+      0.6980088778771805,
+      0.6518114140322571,
+      0.6662923640033251,
+      0.7024240149609989,
+      0.8644078117597515,
+      0.8396573306801236,
+      0.6902452445118777,
+      0.8282790961463281,
+      0.759134389353566,
+      0.6845160380275911,
+      0.6980088778771805,
+      0.714251049121437,
+      0.7024240149609989,
+      0.7691817486770701,
+      0.6760833971326582,
+      0.6722602944169633,
+      0.7808466986923569,
+      0.669956351139245,
+      0.6990186793964567,
+      0.6972520596581081,
+      0.683583579021349,
+      0.6518114140322571,
+      0.683583579021349,
+      0.6623422728801308,
+      0.6743268664099474,
+      0.8282790961463281,
+      0.6277332159085678,
+      0.8537921627391758,
+      0.7672362350049158,
+      0.7254145303501935,
+      0.6277332159085678,
+      0.7259669153780659,
+      0.6667440362311068,
+      0.6008342813594179,
+      0.6760833971326582,
+      0.6008342813594179,
+      0.8120881156101963,
+      0.6980088778771805,
+      0.714251049121437,
+      0.6980088778771805,
+      0.6470997587021313,
+      0.7691817486770701,
+      0.6760833971326582,
+      0.8396573306801236,
+      0.714251049121437,
+      0.6760833971326582,
+      0.714251049121437,
+      0.7601065279320603,
+      0.6518114140322571,
+      0.6845160380275911,
+      0.6980088778771805,
+      0.8396573552046941
+    ],
+    "flips": false
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 3,
+    "B_after": 3,
+    "top3_after": [
+      "True Lies (1994)",
+      "Across the Universe (2007)",
+      "School of Rock (2003)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 1664,
+        "name": "Star Trek: The Motion Picture",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 1665,
+        "name": "Star Trek VI: The Undiscovered Country",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 5218,
+        "name": "School of Rock",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 1668,
+        "name": "Star Trek III: The Search for Spock",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 2468,
+        "name": "Crocodile Dundee",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 3306,
+        "name": "Road Trip",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 236,
+        "name": "user 236",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 947,
+        "name": "True Lies",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 20,
+        "name": "user 20",
+        "type": "user",
+        "role": null
+      }
+    ],
+    "edges": [
+      {
+        "eid": 71946,
+        "s": 3306,
+        "t": 20,
+        "rating": 2.0,
+        "date": "Jun 22, 2014",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 72201,
+        "s": 236,
+        "t": 2468,
+        "rating": 3.5,
+        "date": "Sep 13, 2014",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 72202,
+        "s": 236,
+        "t": 1665,
+        "rating": 2.5,
+        "date": "Sep 13, 2014",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 72203,
+        "s": 236,
+        "t": 1668,
+        "rating": 3.5,
+        "date": "Sep 13, 2014",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 72204,
+        "s": 236,
+        "t": 1664,
+        "rating": 2.5,
+        "date": "Sep 13, 2014",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 72205,
+        "s": 236,
+        "t": 3306,
+        "rating": 2.5,
+        "date": "Sep 13, 2014",
+        "expl": true,
+        "n": 3
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.9897019504936291,
+      "adjusted": 1.0958674541999849,
+      "graph": {
+        "nodes": [
+          {
+            "id": 1665,
+            "name": "Star Trek VI: The Undiscovered Country",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 236,
+            "name": "user 236",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 1668,
+            "name": "Star Trek III: The Search for Spock",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 72202,
+            "s": 236,
+            "t": 1665,
+            "rating": 2.5,
+            "date": "Sep 13, 2014",
+            "in_temgx": true
+          },
+          {
+            "eid": 72203,
+            "s": 236,
+            "t": 1668,
+            "rating": 3.5,
+            "date": "Sep 13, 2014",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        72202,
+        72203
+      ],
+      "S": 0.00043628627763075,
+      "occurrence": {
+        "eids": [
+          72202,
+          72203
+        ],
+        "nodes": [
+          "user 236",
+          "Star Trek VI: The Undiscovered Country",
+          "Star Trek III: The Search for Spock"
+        ],
+        "dates": [
+          "Sep 13, 2014",
+          "Sep 13, 2014"
+        ]
+      },
+      "p_without": 0.6662923640033251,
+      "p_random": 0.7410778289099103,
+      "p_value": 0.01639344262295082,
+      "why": "A run of ratings in one sitting: before matching on context it looks 1.0\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.1\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 236, Star Trek VI: The Undiscovered Country, Star Trek III: The Search for Spock): 72% \u2192 67%; random ratings of the same size: 74% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 1.2698088970669195,
+      "adjusted": 0.048598757690129,
+      "graph": {
+        "nodes": [
+          {
+            "id": 3306,
+            "name": "Road Trip",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 20,
+            "name": "user 20",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 221,
+            "name": "user 221",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 71711,
+            "s": 3306,
+            "t": 221,
+            "rating": 3.5,
+            "date": "Feb 2, 2014",
+            "in_temgx": false
+          },
+          {
+            "eid": 71946,
+            "s": 3306,
+            "t": 20,
+            "rating": 2.0,
+            "date": "Jun 22, 2014",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        71946
+      ],
+      "S": -0.004362862776307499,
+      "occurrence": {
+        "eids": [
+          71711,
+          71946
+        ],
+        "nodes": [
+          "user 221",
+          "Road Trip",
+          "user 20"
+        ],
+        "dates": [
+          "Feb 2, 2014",
+          "Jun 22, 2014"
+        ]
+      },
+      "p_without": 0.7123857666560556,
+      "p_random": 0.7351759806444708,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 1.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.0\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 221, Road Trip, user 20): 72% \u2192 71%; random ratings of the same size: 74% (p = 0.02)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 609,
+  "computed_at": "2026-10-27T18:47:45-0400",
+  "summary": "With 6 ratings (5 of the member's own ratings, 1 other rating nearby), the model's preference for True Lies over School of Rock goes from 72% to 60%. Removing the same number of random ratings from the same weeks gives 71% on average (p = 0.07, 60 draws). The full ranking still puts True Lies at #1: text match and popularity also push it up."
+}

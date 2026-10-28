@@ -1,0 +1,185 @@
+{
+  "case_id": "C07-m121-t1461561151",
+  "member": 121,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "My Life (1993)",
+  "A_id": 3555,
+  "B_id": 3227,
+  "member_id": 121,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 80932,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 40",
+        "from_id": 3555,
+        "to_id": 40,
+        "rating": 4.0,
+        "date": "2016-03-25",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 81884,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 304",
+        "from_id": 3555,
+        "to_id": 304,
+        "rating": 5.0,
+        "date": "2016-04-08",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 82626,
+        "from": "user 121",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 121,
+        "to_id": 887,
+        "rating": 5.0,
+        "date": "2016-04-25",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 4.742366819411584,
+      "nodes": [
+        {
+          "id": 40,
+          "name": "user 40"
+        },
+        {
+          "id": 304,
+          "name": "user 304"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 80932,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 40",
+          "from_id": 3555,
+          "to_id": 40,
+          "rating": 4.0,
+          "date": "2016-03-25"
+        },
+        {
+          "eid": 81884,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 304",
+          "from_id": 3555,
+          "to_id": 304,
+          "rating": 5.0,
+          "date": "2016-04-08"
+        }
+      ]
+    },
+    "n_model_runs": 362
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 78899,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 297",
+        "from_id": 3555,
+        "to_id": 297,
+        "rating": 2.5,
+        "date": "2015-11-15",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 82629,
+        "from": "user 121",
+        "to": "Goodfellas (1990)",
+        "from_id": 121,
+        "to_id": 1524,
+        "rating": 5.0,
+        "date": "2016-04-25",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 82630,
+        "from": "user 121",
+        "to": "Silence of the Lambs, The (1991)",
+        "from_id": 121,
+        "to_id": 1120,
+        "rating": 5.0,
+        "date": "2016-04-25",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.565460590231522,
+      "nodes": [
+        {
+          "id": 121,
+          "name": "user 121"
+        },
+        {
+          "id": 2836,
+          "name": "Fight Club (1999)"
+        },
+        {
+          "id": 1524,
+          "name": "Goodfellas (1990)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 82628,
+          "from": "user 121",
+          "to": "Fight Club (1999)",
+          "from_id": 121,
+          "to_id": 2836,
+          "rating": 5.0,
+          "date": "2016-04-25"
+        },
+        {
+          "eid": 82629,
+          "from": "user 121",
+          "to": "Goodfellas (1990)",
+          "from_id": 121,
+          "to_id": 1524,
+          "rating": 5.0,
+          "date": "2016-04-25"
+        }
+      ]
+    },
+    "n_model_runs": 328
+  },
+  "test": {
+    "p0": 0.9998107772403243,
+    "del_A": {
+      "p": 0.9997002647637918,
+      "p_random": 0.9998143300608152,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9998719456145124,
+      "p_random": 0.9998066170050601,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

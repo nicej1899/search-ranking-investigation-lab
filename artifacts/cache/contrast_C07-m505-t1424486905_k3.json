@@ -1,0 +1,186 @@
+{
+  "case_id": "C07-m505-t1424486905",
+  "member": 505,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Patriot, The (2000)",
+  "A_id": 3555,
+  "B_id": 3418,
+  "member_id": 505,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 72054,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 260",
+        "from_id": 3555,
+        "to_id": 260,
+        "rating": 5.0,
+        "date": "2014-07-09",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 72940,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 343",
+        "from_id": 3555,
+        "to_id": 343,
+        "rating": 0.5,
+        "date": "2015-01-05",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 73381,
+        "from": "user 505",
+        "to": "Whiplash (2014)",
+        "from_id": 505,
+        "to_id": 9076,
+        "rating": 3.5,
+        "date": "2015-02-21",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 1.009740022292151,
+      "nodes": [
+        {
+          "id": 260,
+          "name": "user 260"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        },
+        {
+          "id": 343,
+          "name": "user 343"
+        }
+      ],
+      "links": [
+        {
+          "eid": 72054,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 260",
+          "from_id": 3555,
+          "to_id": 260,
+          "rating": 5.0,
+          "date": "2014-07-09"
+        },
+        {
+          "eid": 72940,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 343",
+          "from_id": 3555,
+          "to_id": 343,
+          "rating": 0.5,
+          "date": "2015-01-05"
+        }
+      ]
+    },
+    "n_model_runs": 137
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 73378,
+        "from": "user 505",
+        "to": "There Will Be Blood (2007)",
+        "from_id": 505,
+        "to_id": 7258,
+        "rating": 4.0,
+        "date": "2015-02-21",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 73380,
+        "from": "user 505",
+        "to": "Kiss Kiss Bang Bang (2005)",
+        "from_id": 505,
+        "to_id": 6626,
+        "rating": 4.5,
+        "date": "2015-02-21",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 73381,
+        "from": "user 505",
+        "to": "Whiplash (2014)",
+        "from_id": 505,
+        "to_id": 9076,
+        "rating": 3.5,
+        "date": "2015-02-21",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.3070673491025044,
+      "nodes": [
+        {
+          "id": 505,
+          "name": "user 505"
+        },
+        {
+          "id": 6626,
+          "name": "Kiss Kiss Bang Bang (2005)"
+        },
+        {
+          "id": 9076,
+          "name": "Whiplash (2014)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73380,
+          "from": "user 505",
+          "to": "Kiss Kiss Bang Bang (2005)",
+          "from_id": 505,
+          "to_id": 6626,
+          "rating": 4.5,
+          "date": "2015-02-21"
+        },
+        {
+          "eid": 73381,
+          "from": "user 505",
+          "to": "Whiplash (2014)",
+          "from_id": 505,
+          "to_id": 9076,
+          "rating": 3.5,
+          "date": "2015-02-21"
+        }
+      ]
+    },
+    "n_model_runs": 137
+  },
+  "test": {
+    "p0": 0.5250942756745652,
+    "del_A": {
+      "p": 0.42143462473630394,
+      "p_random": 0.5252997090277389,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.5317611080648824,
+      "p_random": 0.5247212029862339,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 1.0,
+    "shared_links": [
+      73381
+    ]
+  }
+}

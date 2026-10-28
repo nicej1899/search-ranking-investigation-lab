@@ -1,0 +1,222 @@
+{
+  "created": "2026-10-23T22:29:07-0400",
+  "backbone": "tgat2",
+  "n_searches": 576,
+  "n_tests": 1726,
+  "n_training_pairs": 282,
+  "by_type": {
+    "T1": 576,
+    "T2": 575,
+    "T3": 575
+  },
+  "pass": {
+    "F0": {
+      "T1": {
+        "pass": 267,
+        "n": 576,
+        "rate": 0.4635416666666667
+      },
+      "T2": {
+        "pass": 360,
+        "n": 575,
+        "rate": 0.6260869565217392
+      },
+      "T3": {
+        "pass": 556,
+        "n": 575,
+        "rate": 0.9669565217391304
+      }
+    },
+    "F3": {
+      "T1": {
+        "pass": 376,
+        "n": 576,
+        "rate": 0.6527777777777778
+      },
+      "T2": {
+        "pass": 390,
+        "n": 575,
+        "rate": 0.6782608695652174
+      },
+      "T3": {
+        "pass": 564,
+        "n": 575,
+        "rate": 0.9808695652173913
+      }
+    },
+    "F4": {
+      "T1": {
+        "pass": 340,
+        "n": 576,
+        "rate": 0.5902777777777778
+      },
+      "T2": {
+        "pass": 421,
+        "n": 575,
+        "rate": 0.7321739130434782
+      },
+      "T3": {
+        "pass": 558,
+        "n": 575,
+        "rate": 0.9704347826086956
+      }
+    },
+    "F5": {
+      "T1": {
+        "pass": 272,
+        "n": 576,
+        "rate": 0.4722222222222222
+      },
+      "T2": {
+        "pass": 355,
+        "n": 575,
+        "rate": 0.6173913043478261
+      },
+      "T3": {
+        "pass": 575,
+        "n": 575,
+        "rate": 1.0
+      }
+    },
+    "F4+F5": {
+      "T1": {
+        "pass": 338,
+        "n": 576,
+        "rate": 0.5868055555555556
+      },
+      "T2": {
+        "pass": 420,
+        "n": 575,
+        "rate": 0.7304347826086957
+      },
+      "T3": {
+        "pass": 575,
+        "n": 575,
+        "rate": 1.0
+      }
+    }
+  },
+  "examples": [
+    {
+      "id": "T1:C01-m14-t1510571677",
+      "type": "T1 exclusion",
+      "case_id": "C01-m14-t1510571677",
+      "query": "my kids are six, we want something funny but nothing scary",
+      "member": 14,
+      "t": 1510571677,
+      "expect": "no excluded title in the top 3",
+      "from": "diagnosis: text matcher right but outvoted"
+    },
+    {
+      "id": "T2:C01-m14-t1510571677",
+      "type": "T2 intent over crowd",
+      "case_id": "C01-m14-t1510571677",
+      "query": "my kids are six, we want something funny but nothing scary",
+      "member": 14,
+      "t": 1510571677,
+      "X": "Day the Earth Stood Still, The (1951)",
+      "Y": "Toy Story (1995)",
+      "expect": "Y ranks above X",
+      "from": "contrast: X held up by collective signals, Y by the member's own history"
+    },
+    {
+      "id": "T3:C01-m14-t1510571677",
+      "type": "T3 robust to a few strangers",
+      "case_id": "C01-m14-t1510571677",
+      "query": "my kids are six, we want something funny but nothing scary",
+      "member": 14,
+      "t": 1510571677,
+      "X": "Day the Earth Stood Still, The (1951)",
+      "Y": "Toy Story (1995)",
+      "removed": [
+        82411,
+        69557,
+        67997
+      ],
+      "expect": "order of X and Y unchanged when X's 3 most recent ratings by others are deleted",
+      "from": "TemGX/CATGX: a crowd of recent raters decides the order"
+    },
+    {
+      "id": "T1:C02-m14-t1510571677",
+      "type": "T1 exclusion",
+      "case_id": "C02-m14-t1510571677",
+      "query": "a crime movie but not too violent, more on the funny side",
+      "member": 14,
+      "t": 1510571677,
+      "expect": "no excluded title in the top 3",
+      "from": "diagnosis: text matcher right but outvoted"
+    },
+    {
+      "id": "T2:C02-m14-t1510571677",
+      "type": "T2 intent over crowd",
+      "case_id": "C02-m14-t1510571677",
+      "query": "a crime movie but not too violent, more on the funny side",
+      "member": 14,
+      "t": 1510571677,
+      "X": "Deep Rising (1998)",
+      "Y": "Out of Sight (1998)",
+      "expect": "Y ranks above X",
+      "from": "contrast: X held up by collective signals, Y by the member's own history"
+    },
+    {
+      "id": "T3:C02-m14-t1510571677",
+      "type": "T3 robust to a few strangers",
+      "case_id": "C02-m14-t1510571677",
+      "query": "a crime movie but not too violent, more on the funny side",
+      "member": 14,
+      "t": 1510571677,
+      "X": "Deep Rising (1998)",
+      "Y": "Out of Sight (1998)",
+      "removed": [
+        91353,
+        51991,
+        44238
+      ],
+      "expect": "order of X and Y unchanged when X's 3 most recent ratings by others are deleted",
+      "from": "TemGX/CATGX: a crowd of recent raters decides the order"
+    }
+  ],
+  "pair_examples": [
+    {
+      "member": 1,
+      "t": 1445714882,
+      "query": "a drama, but please nothing depressing",
+      "prefer": "Next Three Days, The (2010)",
+      "over": "Requiem for a Dream (2000)",
+      "reason": "collective popularity outvoted the request",
+      "case_id": "C07-m1-t1445714882"
+    },
+    {
+      "member": 1,
+      "t": 1445714882,
+      "query": "a comedy for grown-ups, not a kids movie",
+      "prefer": "Big Hit, The (1998)",
+      "over": "Ice Age (2002)",
+      "reason": "collective popularity outvoted the request",
+      "case_id": "C08-m1-t1445714882"
+    },
+    {
+      "member": 1,
+      "t": 1445714882,
+      "query": "a war movie without too much gore",
+      "prefer": "Small Soldiers (1998)",
+      "over": "Fight Club (1999)",
+      "reason": "collective popularity outvoted the request",
+      "case_id": "C09-m1-t1445714882"
+    },
+    {
+      "member": 1,
+      "t": 1445714882,
+      "query": "a mystery to watch tonight, nothing too dark",
+      "prefer": "Gentlemen of Fortune (Dzhentlmeny udachi) (1972)",
+      "over": "Spirits of the Dead (1968)",
+      "reason": "text matcher misread the request",
+      "case_id": "C10-m1-t1445714882"
+    }
+  ],
+  "pair_reasons": {
+    "collective popularity outvoted the request": 144,
+    "text matcher misread the request": 120,
+    "history score (crowd / taste links) outvoted the request": 18
+  }
+}

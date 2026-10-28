@@ -1,0 +1,33 @@
+{
+  "model_id": "F3",
+  "kind": "F3",
+  "beta": 0.5678150653839111,
+  "parent": "F0",
+  "weights": [
+    0.14982351660728455,
+    1.0353513956069946,
+    0.2724309265613556
+  ],
+  "norm": {
+    "beh": [
+      -7.569419680156213,
+      8.988431676984119
+    ],
+    "rel": [
+      0.6239212372656334,
+      0.12431915145456685
+    ],
+    "pop": [
+      2.222536935833016,
+      1.2050443977192657
+    ],
+    "fit_on": "DEV candidate sets (1268 cases)"
+  },
+  "created": "2026-10-22T14:44:19-0400",
+  "F0_config_hash": "d3330eed63320c1a",
+  "dev_cases": 636,
+  "dev_loss": 0.4610823094844818,
+  "changed_mechanism": "negation-aware query relevance: cos(q_pos,i) - beta*cos(q_neg,i)",
+  "fit_on": "DEV conversational cases",
+  "config_hash": "c7cc02d624c2b449"
+}

@@ -1,0 +1,9 @@
+['Sliding Doors (1998)', 'Buffy the Vampire Slayer (1992)', 'Coraline (2009)'] {'mean_margin': -0.9563954830169678, 'mean_margin_without_planted': -1.739911683400472, 'mean_margin_without_T1_only': -1.4814008394877116, 'share_where_planted_pair_is_the_best_pair': 0.0}
+TemGX                    {'found_any': 0.4, 'mean_hits_of_2': 0.4666666666666667, 'found_both': 0.06666666666666667, 'fidelity_vs_best_pair': 0.941674816608429}
+CATGX                    {'found_any': 0.0, 'mean_hits_of_2': 0.0, 'found_both': 0.0, 'fidelity_vs_best_pair': -1.0524275829394658}
+Attention top-2          {'found_any': 0.0, 'mean_hits_of_2': 0.0, 'found_both': 0.0, 'fidelity_vs_best_pair': -1.0524275829394658}
+Most recent 2            {'found_any': 0.0, 'mean_hits_of_2': 0.0, 'found_both': 0.0, 'fidelity_vs_best_pair': -0.14181752080718676}
+Random 2                 {'found_any': 0.3333333333333333, 'mean_hits_of_2': 0.3333333333333333, 'found_both': 0.0, 'fidelity_vs_best_pair': 0.03237120807170868}
+Best single removals     {'found_any': 0.4666666666666667, 'mean_hits_of_2': 0.5333333333333333, 'found_both': 0.06666666666666667, 'fidelity_vs_best_pair': 0.9116766770680745}
+Try every pair           {'found_any': 0.4, 'mean_hits_of_2': 0.4, 'found_both': 0.0, 'fidelity_vs_best_pair': 0.9999995907147725}
+{'TemGX': 53.666666666666664, 'CATGX': 4.0, 'Try every pair': 21.0, 'Best single removals': 7.0} 195.0

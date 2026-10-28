@@ -1,0 +1,33 @@
+{
+  "source": "MovieLens ml-latest-small (generated 2018-09-26)",
+  "raw_sha256": {
+    "ratings.csv": "80da8b3393dae325bbba5a31f291a6ba55d8d4f4396de3c456f2c1635b1b70e8",
+    "movies.csv": "c47b783f23eb304413307e1bb05335e427737da20ec8d3c0e96335567dd5f3dc",
+    "tags.csv": "68eec00a0820c2faa8863a6df7032f13d5899a4462bce9a97213905297ff3d34",
+    "links.csv": "028a4a1d17751ca9276e0e0718cfc22356350f224a996e1ec348c23274b9209d"
+  },
+  "n_events": 100836,
+  "n_members": 610,
+  "n_items": 9742,
+  "cutoffs": {
+    "train_end_ts": 1376822969,
+    "val_end_ts": 1479542662,
+    "train_end_utc": "2013-08-18T10:49:29",
+    "val_end_utc": "2016-11-19T08:04:22"
+  },
+  "split_rule": "global chronological: train ts < train_end_ts (70% of events); val < val_end_ts (next 15%); test = rest",
+  "counts": {
+    "train": 70585,
+    "test": 15126,
+    "val": 15125
+  },
+  "members_per_split": {
+    "test": 96,
+    "train": 453,
+    "val": 106
+  },
+  "items_seen_in_train": 7056,
+  "cold_start": "Members are represented only through their history (no member id embedding), so new members are handled inductively. Items unseen before train_end_ts share one learned UNK id embedding plus their genre features.",
+  "events_sha": "378d0db74318ab1e",
+  "items_sha": "50f0b976ad11e24a"
+}

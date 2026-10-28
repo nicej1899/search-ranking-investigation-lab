@@ -1,0 +1,172 @@
+{
+  "created": "2026-10-24T00:45:10-0400",
+  "n_store": 343,
+  "n_new": 280,
+  "chosen_graph": {
+    "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
+    "k": 10,
+    "dev_loo": 0.7084548104956269,
+    "final": 0.35
+  },
+  "current_vector": {
+    "retriever": "vector \u00b7 score split (current)",
+    "k": 10,
+    "dev_loo": 0.7113702623906706,
+    "final": 0.37142857142857144
+  },
+  "graph_minus_vector": {
+    "mean": -0.02142857142857143,
+    "ci95": [
+      -0.05,
+      0.007142857142857143
+    ]
+  },
+  "always_F3": 0.24285714285714285,
+  "oracle_any_fix": 0.42142857142857143,
+  "grid": [
+    {
+      "retriever": "vector \u00b7 score split (current)",
+      "k": 5,
+      "dev_loo": 0.6967930029154519,
+      "final": 0.35
+    },
+    {
+      "retriever": "vector \u00b7 score split (current)",
+      "k": 10,
+      "dev_loo": 0.7113702623906706,
+      "final": 0.37142857142857144
+    },
+    {
+      "retriever": "vector \u00b7 score split (current)",
+      "k": 20,
+      "dev_loo": 0.7113702623906706,
+      "final": 0.39285714285714285
+    },
+    {
+      "retriever": "vector \u00b7 full mechanism key",
+      "k": 5,
+      "dev_loo": 0.673469387755102,
+      "final": 0.30357142857142855
+    },
+    {
+      "retriever": "vector \u00b7 full mechanism key",
+      "k": 10,
+      "dev_loo": 0.6763848396501457,
+      "final": 0.30357142857142855
+    },
+    {
+      "retriever": "vector \u00b7 full mechanism key",
+      "k": 20,
+      "dev_loo": 0.685131195335277,
+      "final": 0.3107142857142857
+    },
+    {
+      "retriever": "graph \u00b7 entities",
+      "k": 5,
+      "dev_loo": 0.6268221574344023,
+      "final": 0.25
+    },
+    {
+      "retriever": "graph \u00b7 entities",
+      "k": 10,
+      "dev_loo": 0.6268221574344023,
+      "final": 0.24642857142857144
+    },
+    {
+      "retriever": "graph \u00b7 entities",
+      "k": 20,
+      "dev_loo": 0.6326530612244898,
+      "final": 0.26071428571428573
+    },
+    {
+      "retriever": "hybrid \u00b7 entities + score split",
+      "k": 5,
+      "dev_loo": 0.6938775510204082,
+      "final": 0.34285714285714286
+    },
+    {
+      "retriever": "hybrid \u00b7 entities + score split",
+      "k": 10,
+      "dev_loo": 0.7026239067055393,
+      "final": 0.34285714285714286
+    },
+    {
+      "retriever": "hybrid \u00b7 entities + score split",
+      "k": 20,
+      "dev_loo": 0.685131195335277,
+      "final": 0.32857142857142857
+    },
+    {
+      "retriever": "graph \u00b7 entities+structure",
+      "k": 5,
+      "dev_loo": 0.6209912536443148,
+      "final": 0.24642857142857144
+    },
+    {
+      "retriever": "graph \u00b7 entities+structure",
+      "k": 10,
+      "dev_loo": 0.6326530612244898,
+      "final": 0.24642857142857144
+    },
+    {
+      "retriever": "graph \u00b7 entities+structure",
+      "k": 20,
+      "dev_loo": 0.6297376093294461,
+      "final": 0.2571428571428571
+    },
+    {
+      "retriever": "hybrid \u00b7 entities+structure + score split",
+      "k": 5,
+      "dev_loo": 0.6909620991253644,
+      "final": 0.3392857142857143
+    },
+    {
+      "retriever": "hybrid \u00b7 entities+structure + score split",
+      "k": 10,
+      "dev_loo": 0.7055393586005831,
+      "final": 0.3392857142857143
+    },
+    {
+      "retriever": "hybrid \u00b7 entities+structure + score split",
+      "k": 20,
+      "dev_loo": 0.6938775510204082,
+      "final": 0.3392857142857143
+    },
+    {
+      "retriever": "graph \u00b7 pushed-up title + crowd",
+      "k": 5,
+      "dev_loo": 0.6239067055393586,
+      "final": 0.2714285714285714
+    },
+    {
+      "retriever": "graph \u00b7 pushed-up title + crowd",
+      "k": 10,
+      "dev_loo": 0.6443148688046647,
+      "final": 0.2714285714285714
+    },
+    {
+      "retriever": "graph \u00b7 pushed-up title + crowd",
+      "k": 20,
+      "dev_loo": 0.6443148688046647,
+      "final": 0.275
+    },
+    {
+      "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
+      "k": 5,
+      "dev_loo": 0.6938775510204082,
+      "final": 0.3535714285714286
+    },
+    {
+      "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
+      "k": 10,
+      "dev_loo": 0.7084548104956269,
+      "final": 0.35
+    },
+    {
+      "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
+      "k": 20,
+      "dev_loo": 0.7026239067055393,
+      "final": 0.32857142857142857
+    }
+  ]
+}

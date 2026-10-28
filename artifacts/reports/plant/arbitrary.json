@@ -1,0 +1,1179 @@
+{
+  "created": "2026-10-22T18:11:14-0400",
+  "pattern": "arbitrary",
+  "P": {
+    "T1": 1265,
+    "T2": 2451,
+    "Z": 6965,
+    "designed_by": "random (no shared genre)",
+    "titles": [
+      "Sliding Doors (1998)",
+      "Buffy the Vampire Slayer (1992)",
+      "Coraline (2009)"
+    ]
+  },
+  "plant": {
+    "cohort_carriers": 1000,
+    "cohort_controls": 1000,
+    "planted_events": 17000
+  },
+  "temperature": 2.7312044575796697,
+  "train_log": [
+    {
+      "epoch": 1,
+      "HR@10": 0.47733333333333333,
+      "NDCG@10": 0.28362172758274445,
+      "n": 3000
+    },
+    {
+      "epoch": 2,
+      "HR@10": 0.48733333333333334,
+      "NDCG@10": 0.2872851249956808,
+      "n": 3000
+    },
+    {
+      "epoch": 3,
+      "HR@10": 0.48333333333333334,
+      "NDCG@10": 0.28648637731626486,
+      "n": 3000
+    },
+    {
+      "epoch": 4,
+      "HR@10": 0.49666666666666665,
+      "NDCG@10": 0.29428127455963915,
+      "n": 3000
+    },
+    {
+      "epoch": 5,
+      "HR@10": 0.4816666666666667,
+      "NDCG@10": 0.28677184650994825,
+      "n": 3000
+    },
+    {
+      "epoch": 6,
+      "HR@10": 0.5046666666666667,
+      "NDCG@10": 0.30377608849919846,
+      "n": 3000
+    },
+    {
+      "epoch": 7,
+      "HR@10": 0.5156666666666667,
+      "NDCG@10": 0.311021585570382,
+      "n": 3000
+    },
+    {
+      "epoch": 8,
+      "HR@10": 0.5353333333333333,
+      "NDCG@10": 0.32353763396331625,
+      "n": 3000
+    },
+    {
+      "epoch": 9,
+      "HR@10": 0.561,
+      "NDCG@10": 0.34661398023780765,
+      "n": 3000
+    },
+    {
+      "epoch": 10,
+      "HR@10": 0.5553333333333333,
+      "NDCG@10": 0.3477216381461071,
+      "n": 3000
+    },
+    {
+      "epoch": 11,
+      "HR@10": 0.5633333333333334,
+      "NDCG@10": 0.35162981671890026,
+      "n": 3000
+    },
+    {
+      "epoch": 12,
+      "HR@10": 0.5596666666666666,
+      "NDCG@10": 0.3488669290987104,
+      "n": 3000
+    },
+    {
+      "epoch": 13,
+      "HR@10": 0.5736666666666667,
+      "NDCG@10": 0.35548165851638214,
+      "n": 3000
+    },
+    {
+      "epoch": 14,
+      "HR@10": 0.5766666666666667,
+      "NDCG@10": 0.35520879320151805,
+      "n": 3000
+    },
+    {
+      "epoch": 15,
+      "HR@10": 0.545,
+      "NDCG@10": 0.33513170448886065,
+      "n": 3000
+    }
+  ],
+  "probes": 15,
+  "summary": {
+    "TemGX": {
+      "found_any": 0.4,
+      "mean_hits_of_2": 0.4666666666666667,
+      "found_both": 0.06666666666666667,
+      "fidelity_vs_best_pair": 0.941674816608429
+    },
+    "CATGX": {
+      "found_any": 0.0,
+      "mean_hits_of_2": 0.0,
+      "found_both": 0.0,
+      "fidelity_vs_best_pair": -1.0524275829394658
+    },
+    "Attention top-2": {
+      "found_any": 0.0,
+      "mean_hits_of_2": 0.0,
+      "found_both": 0.0,
+      "fidelity_vs_best_pair": -1.0524275829394658
+    },
+    "Most recent 2": {
+      "found_any": 0.0,
+      "mean_hits_of_2": 0.0,
+      "found_both": 0.0,
+      "fidelity_vs_best_pair": -0.14181752080718676
+    },
+    "Random 2": {
+      "found_any": 0.3333333333333333,
+      "mean_hits_of_2": 0.3333333333333333,
+      "found_both": 0.0,
+      "fidelity_vs_best_pair": 0.03237120807170868
+    },
+    "Best single removals": {
+      "found_any": 0.4666666666666667,
+      "mean_hits_of_2": 0.5333333333333333,
+      "found_both": 0.06666666666666667,
+      "fidelity_vs_best_pair": 0.9116766770680745
+    },
+    "Try every pair": {
+      "found_any": 0.4,
+      "mean_hits_of_2": 0.4,
+      "found_both": 0.0,
+      "fidelity_vs_best_pair": 0.9999995907147725
+    }
+  },
+  "sanity": {
+    "mean_margin": -0.9563954830169678,
+    "mean_margin_without_planted": -1.739911683400472,
+    "mean_margin_without_T1_only": -1.4814008394877116,
+    "share_where_planted_pair_is_the_best_pair": 0.0
+  },
+  "calls_mean": {
+    "TemGX": 53.666666666666664,
+    "CATGX": 4.0,
+    "Try every pair": 21.0,
+    "Best single removals": 7.0
+  },
+  "rows": [
+    {
+      "member": 158,
+      "t": 1508640168,
+      "B": 510,
+      "planted": [
+        117836,
+        117837
+      ],
+      "n_history_window": 7,
+      "margin": 2.090057849884033,
+      "margin_without_planted": 1.8613457679748535,
+      "margin_without_T1": 1.9414801597595215,
+      "hits": {
+        "TemGX": 1,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 1,
+        "Try every pair": 1
+      },
+      "selected": {
+        "TemGX": [
+          93532,
+          117836
+        ],
+        "CATGX": [
+          93532,
+          93533
+        ],
+        "Attention top-2": [
+          93533,
+          93532
+        ],
+        "Most recent 2": [
+          93535,
+          93536
+        ],
+        "Random 2": [
+          93535,
+          93534
+        ],
+        "Best single removals": [
+          93532,
+          117836
+        ],
+        "Try every pair": [
+          93532,
+          117836
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.9999995231628418,
+        "CATGX": -1.1970750093460083,
+        "Attention top-2": -1.1970750093460083,
+        "Most recent 2": 0.06641478091478348,
+        "Random 2": 0.04154568910598755,
+        "Best single removals": 0.9999995231628418,
+        "Try every pair": 0.9999995231628418
+      },
+      "calls": {
+        "TemGX": 54,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 328,
+      "t": 1523468264,
+      "B": 257,
+      "planted": [
+        117838,
+        117839
+      ],
+      "n_history_window": 7,
+      "margin": -6.490816116333008,
+      "margin_without_planted": -7.213500022888184,
+      "margin_without_T1": -6.782480716705322,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 1,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          97625,
+          97628
+        ],
+        "CATGX": [
+          97625,
+          97627
+        ],
+        "Attention top-2": [
+          97625,
+          97627
+        ],
+        "Most recent 2": [
+          97627,
+          97628
+        ],
+        "Random 2": [
+          117838,
+          97625
+        ],
+        "Best single removals": [
+          97625,
+          97628
+        ],
+        "Try every pair": [
+          97625,
+          97628
+        ]
+      },
+      "fidelity": {
+        "TemGX": 1.0000003576278687,
+        "CATGX": -0.999302864074707,
+        "Attention top-2": -0.999302864074707,
+        "Most recent 2": -0.07699639350175858,
+        "Random 2": 0.3687373101711273,
+        "Best single removals": 1.0000003576278687,
+        "Try every pair": 1.0000003576278687
+      },
+      "calls": {
+        "TemGX": 54,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 97,
+      "t": 1532457441,
+      "B": 257,
+      "planted": [
+        117840,
+        117841
+      ],
+      "n_history_window": 7,
+      "margin": 0.08243513107299805,
+      "margin_without_planted": -0.17917776107788086,
+      "margin_without_T1": -0.11546134948730469,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 1,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          99263,
+          99264
+        ],
+        "CATGX": [
+          99263,
+          99264
+        ],
+        "Attention top-2": [
+          99263,
+          99264
+        ],
+        "Most recent 2": [
+          99266,
+          99267
+        ],
+        "Random 2": [
+          99267,
+          99263
+        ],
+        "Best single removals": [
+          99263,
+          117840
+        ],
+        "Try every pair": [
+          99263,
+          99264
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.9999992251396179,
+        "CATGX": 0.9999992251396179,
+        "Attention top-2": 0.9999992251396179,
+        "Most recent 2": -0.023221299052238464,
+        "Random 2": 0.4099414348602295,
+        "Best single removals": 0.5500271320343018,
+        "Try every pair": 0.9999992251396179
+      },
+      "calls": {
+        "TemGX": 51,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 330,
+      "t": 1537157527,
+      "B": 257,
+      "planted": [
+        117842,
+        117843
+      ],
+      "n_history_window": 7,
+      "margin": 0.4932689666748047,
+      "margin_without_planted": 0.3237953186035156,
+      "margin_without_T1": 0.38505029678344727,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          100649,
+          100652
+        ],
+        "CATGX": [
+          100650,
+          100651
+        ],
+        "Attention top-2": [
+          100650,
+          100651
+        ],
+        "Most recent 2": [
+          100652,
+          100653
+        ],
+        "Random 2": [
+          100651,
+          100653
+        ],
+        "Best single removals": [
+          100649,
+          100652
+        ],
+        "Try every pair": [
+          100649,
+          100652
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.9999992251396179,
+        "CATGX": -2.439138174057007,
+        "Attention top-2": -2.439138174057007,
+        "Most recent 2": 0.339791864156723,
+        "Random 2": -0.15787619352340698,
+        "Best single removals": 0.9999992251396179,
+        "Try every pair": 0.9999992251396179
+      },
+      "calls": {
+        "TemGX": 53,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 550,
+      "t": 1504316474,
+      "B": 257,
+      "planted": [
+        117844,
+        117845
+      ],
+      "n_history_window": 7,
+      "margin": 1.1480402946472168,
+      "margin_without_planted": 1.015406608581543,
+      "margin_without_T1": 1.0437326431274414,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          93069,
+          93070
+        ],
+        "CATGX": [
+          93070,
+          93072
+        ],
+        "Attention top-2": [
+          93070,
+          93072
+        ],
+        "Most recent 2": [
+          93072,
+          93073
+        ],
+        "Random 2": [
+          93070,
+          93071
+        ],
+        "Best single removals": [
+          93070,
+          93069
+        ],
+        "Try every pair": [
+          93069,
+          93070
+        ]
+      },
+      "fidelity": {
+        "TemGX": 1.000000238418579,
+        "CATGX": 0.9048142433166504,
+        "Attention top-2": 0.9048142433166504,
+        "Most recent 2": -0.8984581232070923,
+        "Random 2": 0.9078934788703918,
+        "Best single removals": 1.000000238418579,
+        "Try every pair": 1.000000238418579
+      },
+      "calls": {
+        "TemGX": 55,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 189,
+      "t": 1504309954,
+      "B": 257,
+      "planted": [
+        117846,
+        117847
+      ],
+      "n_history_window": 7,
+      "margin": 1.664534091949463,
+      "margin_without_planted": 1.419675350189209,
+      "margin_without_T1": 1.47188138961792,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 1,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          93003,
+          93005
+        ],
+        "CATGX": [
+          93005,
+          93007
+        ],
+        "Attention top-2": [
+          93005,
+          93007
+        ],
+        "Most recent 2": [
+          93006,
+          93007
+        ],
+        "Random 2": [
+          117847,
+          93007
+        ],
+        "Best single removals": [
+          93005,
+          93003
+        ],
+        "Try every pair": [
+          93003,
+          93005
+        ]
+      },
+      "fidelity": {
+        "TemGX": 1.0,
+        "CATGX": -0.07838325202465057,
+        "Attention top-2": -0.07838325202465057,
+        "Most recent 2": -0.4889455735683441,
+        "Random 2": -0.37385591864585876,
+        "Best single removals": 1.0,
+        "Try every pair": 1.0
+      },
+      "calls": {
+        "TemGX": 55,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 46,
+      "t": 1496205180,
+      "B": 257,
+      "planted": [
+        117848,
+        117849
+      ],
+      "n_history_window": 7,
+      "margin": -4.160513401031494,
+      "margin_without_planted": -8.010446548461914,
+      "margin_without_T1": -6.78031587600708,
+      "hits": {
+        "TemGX": 1,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 1,
+        "Best single removals": 1,
+        "Try every pair": 1
+      },
+      "selected": {
+        "TemGX": [
+          90563,
+          117848
+        ],
+        "CATGX": [
+          90565,
+          90566
+        ],
+        "Attention top-2": [
+          90566,
+          90565
+        ],
+        "Most recent 2": [
+          90565,
+          90566
+        ],
+        "Random 2": [
+          90566,
+          117848
+        ],
+        "Best single removals": [
+          90563,
+          117848
+        ],
+        "Try every pair": [
+          90563,
+          117848
+        ]
+      },
+      "fidelity": {
+        "TemGX": 1.000000238418579,
+        "CATGX": -0.6870773434638977,
+        "Attention top-2": -0.6870773434638977,
+        "Most recent 2": -0.6870773434638977,
+        "Random 2": -0.18261685967445374,
+        "Best single removals": 1.000000238418579,
+        "Try every pair": 1.000000238418579
+      },
+      "calls": {
+        "TemGX": 55,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 400,
+      "t": 1510449308,
+      "B": 257,
+      "planted": [
+        117850,
+        117851
+      ],
+      "n_history_window": 7,
+      "margin": 2.3384029865264893,
+      "margin_without_planted": 2.57631254196167,
+      "margin_without_T1": 2.5226950645446777,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          93653,
+          93654
+        ],
+        "CATGX": [
+          93653,
+          93654
+        ],
+        "Attention top-2": [
+          93653,
+          93654
+        ],
+        "Most recent 2": [
+          93655,
+          93656
+        ],
+        "Random 2": [
+          93656,
+          93654
+        ],
+        "Best single removals": [
+          93653,
+          93654
+        ],
+        "Try every pair": [
+          93653,
+          93655
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.6654077172279358,
+        "CATGX": 0.6654077172279358,
+        "Attention top-2": 0.6654077172279358,
+        "Most recent 2": -0.37310755252838135,
+        "Random 2": -0.35816794633865356,
+        "Best single removals": 0.6654077172279358,
+        "Try every pair": 1.0
+      },
+      "calls": {
+        "TemGX": 54,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 361,
+      "t": 1530637213,
+      "B": 314,
+      "planted": [
+        117852,
+        117853
+      ],
+      "n_history_window": 7,
+      "margin": 1.2644429206848145,
+      "margin_without_planted": 1.0696210861206055,
+      "margin_without_T1": 1.1179828643798828,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 1,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          99113,
+          99116
+        ],
+        "CATGX": [
+          99112,
+          99115
+        ],
+        "Attention top-2": [
+          99112,
+          99115
+        ],
+        "Most recent 2": [
+          99115,
+          99116
+        ],
+        "Random 2": [
+          117853,
+          99116
+        ],
+        "Best single removals": [
+          99113,
+          99116
+        ],
+        "Try every pair": [
+          99113,
+          99116
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.9999994039535522,
+        "CATGX": -2.079709053039551,
+        "Attention top-2": -2.079709053039551,
+        "Most recent 2": -0.32574203610420227,
+        "Random 2": 0.32456955313682556,
+        "Best single removals": 0.9999994039535522,
+        "Try every pair": 0.9999994039535522
+      },
+      "calls": {
+        "TemGX": 51,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 566,
+      "t": 1525282061,
+      "B": 257,
+      "planted": [
+        117854,
+        117855
+      ],
+      "n_history_window": 7,
+      "margin": -1.3392810821533203,
+      "margin_without_planted": -1.5418338775634766,
+      "margin_without_T1": -1.4787883758544922,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          97742,
+          97743
+        ],
+        "CATGX": [
+          97742,
+          97744
+        ],
+        "Attention top-2": [
+          97744,
+          97742
+        ],
+        "Most recent 2": [
+          97745,
+          97746
+        ],
+        "Random 2": [
+          97742,
+          97745
+        ],
+        "Best single removals": [
+          97743,
+          97742
+        ],
+        "Try every pair": [
+          97742,
+          97743
+        ]
+      },
+      "fidelity": {
+        "TemGX": 1.0,
+        "CATGX": -2.949819564819336,
+        "Attention top-2": -2.949819564819336,
+        "Most recent 2": 0.05167559161782265,
+        "Random 2": 0.184860959649086,
+        "Best single removals": 1.0,
+        "Try every pair": 1.0
+      },
+      "calls": {
+        "TemGX": 53,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 560,
+      "t": 1491090713,
+      "B": 257,
+      "planted": [
+        117856,
+        117857
+      ],
+      "n_history_window": 7,
+      "margin": 1.8004155158996582,
+      "margin_without_planted": 1.5192170143127441,
+      "margin_without_T1": 1.5815296173095703,
+      "hits": {
+        "TemGX": 1,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 1,
+        "Try every pair": 1
+      },
+      "selected": {
+        "TemGX": [
+          87399,
+          117856
+        ],
+        "CATGX": [
+          87398,
+          87399
+        ],
+        "Attention top-2": [
+          87398,
+          87399
+        ],
+        "Most recent 2": [
+          87398,
+          87399
+        ],
+        "Random 2": [
+          87396,
+          87398
+        ],
+        "Best single removals": [
+          87399,
+          117856
+        ],
+        "Try every pair": [
+          117856,
+          87398
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.6161532998085022,
+        "CATGX": 0.6588871479034424,
+        "Attention top-2": 0.6588871479034424,
+        "Most recent 2": 0.6588871479034424,
+        "Random 2": 0.07744812965393066,
+        "Best single removals": 0.6161532998085022,
+        "Try every pair": 0.9999989867210388
+      },
+      "calls": {
+        "TemGX": 56,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 305,
+      "t": 1518327186,
+      "B": 257,
+      "planted": [
+        117858,
+        117859
+      ],
+      "n_history_window": 7,
+      "margin": -8.311037063598633,
+      "margin_without_planted": -12.659839630126953,
+      "margin_without_T1": -11.231672286987305,
+      "hits": {
+        "TemGX": 1,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 1,
+        "Try every pair": 1
+      },
+      "selected": {
+        "TemGX": [
+          95460,
+          117858
+        ],
+        "CATGX": [
+          95461,
+          95462
+        ],
+        "Attention top-2": [
+          95462,
+          95461
+        ],
+        "Most recent 2": [
+          95463,
+          95464
+        ],
+        "Random 2": [
+          95463,
+          95460
+        ],
+        "Best single removals": [
+          117858,
+          95460
+        ],
+        "Try every pair": [
+          117858,
+          95461
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.8918225169181824,
+        "CATGX": -1.436039686203003,
+        "Attention top-2": -1.436039686203003,
+        "Most recent 2": -0.781917929649353,
+        "Random 2": 0.4302334189414978,
+        "Best single removals": 0.8918225169181824,
+        "Try every pair": 1.0000001192092896
+      },
+      "calls": {
+        "TemGX": 55,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 416,
+      "t": 1529283632,
+      "B": 257,
+      "planted": [
+        117860,
+        117861
+      ],
+      "n_history_window": 7,
+      "margin": -0.15706539154052734,
+      "margin_without_planted": -0.4945392608642578,
+      "margin_without_T1": -0.39446258544921875,
+      "hits": {
+        "TemGX": 1,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 1,
+        "Best single removals": 1,
+        "Try every pair": 1
+      },
+      "selected": {
+        "TemGX": [
+          98721,
+          117860
+        ],
+        "CATGX": [
+          98723,
+          98725
+        ],
+        "Attention top-2": [
+          98723,
+          98725
+        ],
+        "Most recent 2": [
+          98724,
+          98725
+        ],
+        "Random 2": [
+          117861,
+          98721
+        ],
+        "Best single removals": [
+          117860,
+          98721
+        ],
+        "Try every pair": [
+          98721,
+          117860
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.9999954700469971,
+        "CATGX": -2.4627726078033447,
+        "Attention top-2": -2.4627726078033447,
+        "Most recent 2": -0.6651667356491089,
+        "Random 2": 0.6128373146057129,
+        "Best single removals": 0.9999954700469971,
+        "Try every pair": 0.9999954700469971
+      },
+      "calls": {
+        "TemGX": 52,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 152,
+      "t": 1525548175,
+      "B": 257,
+      "planted": [
+        117862,
+        117863
+      ],
+      "n_history_window": 7,
+      "margin": 0.2419748306274414,
+      "margin_without_planted": -0.14616155624389648,
+      "margin_without_T1": -0.04024934768676758,
+      "hits": {
+        "TemGX": 2,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 2,
+        "Try every pair": 1
+      },
+      "selected": {
+        "TemGX": [
+          117862,
+          117863
+        ],
+        "CATGX": [
+          98134,
+          98135
+        ],
+        "Attention top-2": [
+          98134,
+          98135
+        ],
+        "Most recent 2": [
+          98136,
+          98137
+        ],
+        "Random 2": [
+          98137,
+          98135
+        ],
+        "Best single removals": [
+          117862,
+          117863
+        ],
+        "Try every pair": [
+          98133,
+          117862
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.9517451524734497,
+        "CATGX": -4.240093231201172,
+        "Attention top-2": -4.240093231201172,
+        "Most recent 2": 0.41571420431137085,
+        "Random 2": -1.1463125944137573,
+        "Best single removals": 0.9517451524734497,
+        "Try every pair": 1.0000011920928955
+      },
+      "calls": {
+        "TemGX": 52,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    },
+    {
+      "member": 381,
+      "t": 1515160611,
+      "B": 257,
+      "planted": [
+        117864,
+        117865
+      ],
+      "n_history_window": 7,
+      "margin": -5.010791778564453,
+      "margin_without_planted": -5.638550281524658,
+      "margin_without_T1": -5.4619340896606445,
+      "hits": {
+        "TemGX": 0,
+        "CATGX": 0,
+        "Attention top-2": 0,
+        "Most recent 2": 0,
+        "Random 2": 0,
+        "Best single removals": 0,
+        "Try every pair": 0
+      },
+      "selected": {
+        "TemGX": [
+          94436,
+          94437
+        ],
+        "CATGX": [
+          94434,
+          94437
+        ],
+        "Attention top-2": [
+          94434,
+          94437
+        ],
+        "Most recent 2": [
+          94437,
+          94438
+        ],
+        "Random 2": [
+          94438,
+          94434
+        ],
+        "Best single removals": [
+          94437,
+          94436
+        ],
+        "Try every pair": [
+          94436,
+          94437
+        ]
+      },
+      "fidelity": {
+        "TemGX": 0.9999998807907104,
+        "CATGX": -0.4461112916469574,
+        "Attention top-2": -0.4461112916469574,
+        "Most recent 2": 0.6608865857124329,
+        "Random 2": -0.6536696553230286,
+        "Best single removals": 0.9999998807907104,
+        "Try every pair": 0.9999998807907104
+      },
+      "calls": {
+        "TemGX": 55,
+        "CATGX": 4,
+        "Try every pair": 21,
+        "Best single removals": 7
+      }
+    }
+  ],
+  "wall_s": 195.0,
+  "method": "Planted-cause test: bury a known cause in the data, retrain the model, and check which explainer finds it.\n\nPattern (two versions, each in its own copy of the data and its own retrained model):\n  semantic  designed by an LLM to read like a real taste journey: T1 then T2 -> later Z\n  arbitrary three unrelated titles picked at random (no shared genre), same mechanics\nPlanting (training period only): a cohort of 300 new viewers, each with 8 ordinary ratings, then T1, T2 one hour later\n  and Z two days later (rated 5); plus 2 x 150 control viewers with T1 only or T2 only followed by some other title\n  (so T1 or T2 alone does not lead to Z). Real members' data is untouched. The TGAT 1-layer backbone is retrained from scratch on the planted data (same recipe, same seed).\nProbes (held-out period): real FINAL members with 5-15 ratings, no training-period ratings, who never rated T1/T2/Z;\n  T1 and T2 are inserted back to back at a random point in their history, never as the last two (not at the end, so \"most recent\" is not trivially right).\n  Decision explained: Z ranked above B, where B has the same training popularity as Z.\nGround truth: the two planted ratings. Every explainer returns 2 ratings; score = how many of the 2 it recovers.\nExplainers: TemGX, CATGX (k = 2 edges), attention top-2, most recent 2, random 2, best single-rating removals,\n  try-every-pair (exhaustive; the best possible answer for this model), and an LLM given the same history as text.\n"
+}

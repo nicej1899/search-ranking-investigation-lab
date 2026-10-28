@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m461-t1378158322",
+  "member": 461,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Dawn of the Dead (2004)",
+  "A_id": 3555,
+  "B_id": 5518,
+  "member_id": 461,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 70509,
+        "from": "user 461",
+        "to": "Separation, A (Jodaeiye Nader az Simin) (2011)",
+        "from_id": 461,
+        "to_id": 8305,
+        "rating": 5.0,
+        "date": "2013-06-01",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 70512,
+        "from": "user 461",
+        "to": "Little Big Man (1970)",
+        "from_id": 461,
+        "to_id": 2900,
+        "rating": 5.0,
+        "date": "2013-06-01",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 70514,
+        "from": "user 461",
+        "to": "True Grit (2010)",
+        "from_id": 461,
+        "to_id": 8093,
+        "rating": 3.0,
+        "date": "2013-06-01",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.0201614416752072,
+      "nodes": [
+        {
+          "id": 461,
+          "name": "user 461"
+        },
+        {
+          "id": 2900,
+          "name": "Little Big Man (1970)"
+        },
+        {
+          "id": 8093,
+          "name": "True Grit (2010)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 70512,
+          "from": "user 461",
+          "to": "Little Big Man (1970)",
+          "from_id": 461,
+          "to_id": 2900,
+          "rating": 5.0,
+          "date": "2013-06-01"
+        },
+        {
+          "eid": 70514,
+          "from": "user 461",
+          "to": "True Grit (2010)",
+          "from_id": 461,
+          "to_id": 8093,
+          "rating": 3.0,
+          "date": "2013-06-01"
+        }
+      ]
+    },
+    "n_model_runs": 173
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 69490,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 245",
+        "from_id": 3555,
+        "to_id": 245,
+        "rating": 2.0,
+        "date": "2012-11-28",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 70324,
+        "from": "Dawn of the Dead (2004)",
+        "to": "user 561",
+        "from_id": 5518,
+        "to_id": 561,
+        "rating": 3.5,
+        "date": "2013-05-18",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 70513,
+        "from": "user 461",
+        "to": "Re-Animator (1985)",
+        "from_id": 461,
+        "to_id": 2885,
+        "rating": 4.5,
+        "date": "2013-06-01",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the title's recent raters": 1,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 4.670433919137644,
+      "nodes": [
+        {
+          "id": 130,
+          "name": "user 130"
+        },
+        {
+          "id": 2766,
+          "name": "Deliverance (1972)"
+        },
+        {
+          "id": 561,
+          "name": "user 561"
+        },
+        {
+          "id": 5518,
+          "name": "Dawn of the Dead (2004)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 68743,
+          "from": "Deliverance (1972)",
+          "to": "user 130",
+          "from_id": 2766,
+          "to_id": 130,
+          "rating": 4.0,
+          "date": "2012-10-10"
+        },
+        {
+          "eid": 70272,
+          "from": "Deliverance (1972)",
+          "to": "user 561",
+          "from_id": 2766,
+          "to_id": 561,
+          "rating": 4.0,
+          "date": "2013-05-18"
+        },
+        {
+          "eid": 70324,
+          "from": "Dawn of the Dead (2004)",
+          "to": "user 561",
+          "from_id": 5518,
+          "to_id": 561,
+          "rating": 3.5,
+          "date": "2013-05-18"
+        }
+      ]
+    },
+    "n_model_runs": 173
+  },
+  "test": {
+    "p0": 0.875350134848954,
+    "del_A": {
+      "p": 0.7610963648180716,
+      "p_random": 0.8569737002563016,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.964967111424238,
+      "p_random": 0.8623497406241984,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.0,
+    "B_from_member_history": 0.3333333333333333,
+    "shared_links": []
+  }
+}

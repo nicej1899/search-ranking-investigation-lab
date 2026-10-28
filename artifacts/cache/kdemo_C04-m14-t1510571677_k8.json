@@ -1,0 +1,462 @@
+{
+  "case_id": "C04-m14-t1510571677",
+  "k": 8,
+  "member": 14,
+  "joint": {
+    "lines": [
+      "TemGX: 2 of the 2 ratings are recent ratings of Batman by other people; 2 of them are part of a pattern CATGX finds.",
+      "CATGX: \u201cTwo people rated the same movie\u201d looked 7.5\u00d7 and is still 2.1\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "Ranker: Batman beats The Specialist mainly through popularity (+0.35); the history part adds +0.08."
+    ],
+    "verdict": "Diagnosis: Batman wins mainly through popularity, and the history model adds to it through recent fans of Batman. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      87467,
+      90866
+    ]
+  },
+  "score_split": {
+    "relevance": -0.4257201770631881,
+    "popularity": 0.3543838504799467,
+    "behaviour": 0.07676745922285985
+  },
+  "A": "Batman",
+  "B": "The Specialist",
+  "query": "an action movie that isn't a superhero film",
+  "p0": 0.809005018701825,
+  "evidence": [
+    {
+      "eid": 87467,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 560",
+      "to": "Batman",
+      "from_id": 560,
+      "to_id": 1119,
+      "rating": 4.5,
+      "date": "Apr 1, 2017",
+      "days_before": 225,
+      "p_without": 0.7774715709568775,
+      "drop": 0.031533447744947485,
+      "score": {
+        "influence": 0.03153343367172878,
+        "connectedness": 0.564718122007773,
+        "recency": 0.5392394049535026,
+        "phi": 0.009602506482131429
+      },
+      "why": "User 560 rated Batman 4.5\u2605 on Apr 1, 2017, 225 days before the search. The graph model builds Batman's profile from its recent raters, weighting recent ones more, so this rating makes Batman look current. Removing only this rating: 81% \u2192 78% (\u22123.2 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 2.0608552016566275,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.0608552016566275,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 90866,
+      "n": 2,
+      "kind": "crowd",
+      "from": "user 474",
+      "to": "Batman",
+      "from_id": 474,
+      "to_id": 1119,
+      "rating": 5.0,
+      "date": "Jun 21, 2017",
+      "days_before": 145,
+      "p_without": 0.7878113617279775,
+      "drop": 0.021193656973847452,
+      "score": {
+        "influence": 0.02119364290062875,
+        "connectedness": 0.5647181220077727,
+        "recency": 0.6719060513327034,
+        "phi": 0.008041663375612457
+      },
+      "why": "User 474 rated Batman 5\u2605 on Jun 21, 2017, 145 days before the search. The graph model builds Batman's profile from its recent raters, weighting recent ones more, so this rating makes Batman look current. Removing only this rating: 81% \u2192 79% (\u22122.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 2.0608552016566275,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.0608552016566275,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.7774715709568775,
+      "rand_mean": 0.8092365440147647,
+      "rand_lo": 0.809005018701825,
+      "rand_hi": 0.8127987547392013,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.7489890355801746,
+      "rand_mean": 0.8092059816327871,
+      "rand_lo": 0.8079659532224189,
+      "rand_hi": 0.8127987547392013,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.7489890355801746,
+    "rand_mean": 0.8092059816327871,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.809005018701825,
+      0.809005018701825,
+      0.8079659532224189,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.8127987547392013,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.8127987547392013,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.8127987547392013,
+      0.809005018701825,
+      0.809005018701825,
+      0.8127987547392013,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.8079659532224189,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.809005018701825,
+      0.8079659532224189,
+      0.8090050468482598
+    ],
+    "flips": false
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 2,
+    "B_before": 2,
+    "B_after": 1,
+    "top3_after": [
+      "Specialist, The (1994)",
+      "Batman (1989)",
+      "Incredible Hulk, The (2008)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 560,
+        "name": "user 560",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 884,
+        "name": "The Specialist",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 474,
+        "name": "user 474",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 14,
+        "name": "user 14",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 1119,
+        "name": "Batman",
+        "type": "title",
+        "role": "A"
+      }
+    ],
+    "edges": [
+      {
+        "eid": 87467,
+        "s": 1119,
+        "t": 560,
+        "rating": 4.5,
+        "date": "Apr 1, 2017",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 90866,
+        "s": 1119,
+        "t": 474,
+        "rating": 5.0,
+        "date": "Jun 21, 2017",
+        "expl": true,
+        "n": 2
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 7.544804965165158,
+      "adjusted": 2.0608552016566275,
+      "graph": {
+        "nodes": [
+          {
+            "id": 560,
+            "name": "user 560",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 474,
+            "name": "user 474",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1119,
+            "name": "Batman",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 87467,
+            "s": 1119,
+            "t": 560,
+            "rating": 4.5,
+            "date": "Apr 1, 2017",
+            "in_temgx": true
+          },
+          {
+            "eid": 90866,
+            "s": 1119,
+            "t": 474,
+            "rating": 5.0,
+            "date": "Jun 21, 2017",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        87467,
+        90866
+      ],
+      "S": 0.011734134810596424,
+      "occurrence": {
+        "eids": [
+          87467,
+          90866
+        ],
+        "nodes": [
+          "user 560",
+          "Batman",
+          "user 474"
+        ],
+        "dates": [
+          "Apr 1, 2017",
+          "Jun 21, 2017"
+        ]
+      },
+      "p_without": 0.7489890355801746,
+      "p_random": 0.8094203802571712,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 7.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 2.1\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 560, Batman, user 474): 81% \u2192 75%; random ratings of the same size: 81% (p = 0.02)."
+    },
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 8.083719605534098,
+      "adjusted": 2.0608552016566275,
+      "graph": {
+        "nodes": [
+          {
+            "id": 560,
+            "name": "user 560",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 474,
+            "name": "user 474",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1119,
+            "name": "Batman",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 87467,
+            "s": 1119,
+            "t": 560,
+            "rating": 4.5,
+            "date": "Apr 1, 2017",
+            "in_temgx": true
+          },
+          {
+            "eid": 90866,
+            "s": 1119,
+            "t": 474,
+            "rating": 5.0,
+            "date": "Jun 21, 2017",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        87467,
+        90866
+      ],
+      "S": 0.011734134810596424,
+      "occurrence": {
+        "eids": [
+          87467,
+          90866
+        ],
+        "nodes": [
+          "user 560",
+          "user 474",
+          "Batman"
+        ],
+        "dates": [
+          "Apr 1, 2017",
+          "Jun 21, 2017"
+        ]
+      },
+      "p_without": 0.7489890355801746,
+      "p_random": 0.8092133771046343,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 8.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 2.1\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 560, user 474, Batman): 81% \u2192 75%; random ratings of the same size: 81% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.10298114111384217,
+      "adjusted": 0.15024882938156128,
+      "graph": {
+        "nodes": [
+          {
+            "id": 9697,
+            "name": "Wonder Woman",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 598,
+            "name": "user 598",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1119,
+            "name": "Batman",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 91099,
+            "s": 1119,
+            "t": 598,
+            "rating": 3.5,
+            "date": "Jun 26, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 93425,
+            "s": 598,
+            "t": 9697,
+            "rating": 2.0,
+            "date": "Sep 26, 2017",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.008823320329428676,
+      "occurrence": {
+        "eids": [
+          91099,
+          93425
+        ],
+        "nodes": [
+          "user 598",
+          "Batman",
+          "Wonder Woman"
+        ],
+        "dates": [
+          "Jun 26, 2017",
+          "Sep 26, 2017"
+        ]
+      },
+      "p_without": 0.8003602807970888,
+      "p_random": 0.809005018701825,
+      "p_value": 0.01639344262295082,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.1\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.2\u00d7. Removing its strongest occurrence (user 598, Batman, Wonder Woman): 81% \u2192 80%; random ratings of the same size: 81% (p = 0.02)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 502,
+  "computed_at": "2026-10-27T18:47:44-0400",
+  "summary": "With 2 ratings (2 recent ratings of Batman by other people), the model's preference for Batman over The Specialist goes from 81% to 75%. Removing the same number of random ratings from the same weeks gives 81% on average (p = 0.02, 60 draws). In the full ranking, Batman moves from #1 to #2."
+}

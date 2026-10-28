@@ -1,0 +1,1114 @@
+{
+  "case_id": "C04-m251-t1498283957",
+  "k": 8,
+  "member": 251,
+  "joint": {
+    "lines": [
+      "TemGX: 6 of the 8 ratings are recent ratings of Spider-Man by other people; 6 of them are part of a pattern CATGX finds.",
+      "TemGX: 2 are the member's own recent ratings (Wonder Woman, Inside Out), shared with people who also rated Spider-Man.",
+      "CATGX: \u201cRecent fans piled on\u201d stays 2.3\u00d7 after matching on timing and activity, and removing it moves the model (p = 0.02): a structural reason, not just recency.",
+      "CATGX: \u201cShared taste leads to the title\u201d looked 1.7\u00d7 but is 1.4\u00d7 after matching: part of its weight was timing and activity.",
+      "Ranker: Spider-Man beats The Last Samurai mainly through popularity (+0.16); the history part adds +0.03."
+    ],
+    "verdict": "Diagnosis: Spider-Man wins mainly through popularity, and the history model adds to it through recent fans of Spider-Man (a pattern that survives matching) and the member's ratings of Wonder Woman, Inside Out. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      85706,
+      89835,
+      90031,
+      90896
+    ]
+  },
+  "score_split": {
+    "relevance": -0.15669789066419537,
+    "popularity": 0.16085183405621983,
+    "behaviour": 0.025469347218764538
+  },
+  "A": "Spider-Man",
+  "B": "The Last Samurai",
+  "query": "an action movie that isn't a superhero film",
+  "p0": 0.6174959125625988,
+  "evidence": [
+    {
+      "eid": 85706,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 609",
+      "to": "Spider-Man",
+      "from_id": 609,
+      "to_id": 4429,
+      "rating": 4.5,
+      "date": "Nov 19, 2016",
+      "days_before": 217,
+      "p_without": 0.524252979680056,
+      "drop": 0.09324293288254282,
+      "score": {
+        "influence": 0.10240945811843183,
+        "connectedness": 0.7625782302953387,
+        "recency": 0.8877452098019123,
+        "phi": 0.06932866042623916
+      },
+      "why": "User 609 rated Spider-Man 4.5\u2605 on Nov 19, 2016, 217 days before the search. The graph model builds Spider-Man's profile from its recent raters, weighting recent ones more, so this rating makes Spider-Man look current; user 609 also rated 3 titles that member 251 rated (e.g. Inside Out, Zootopia), which ties Spider-Man to this member's taste. Removing only this rating: 62% \u2192 52% (\u22129.3 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6797540038200869,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "Shared taste leads to the better match",
+          "adjusted": 0.8286194971710102,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.3433389969963625,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 90031,
+      "n": 2,
+      "kind": "crowd",
+      "from": "user 379",
+      "to": "Spider-Man",
+      "from_id": 379,
+      "to_id": 4429,
+      "rating": 4.0,
+      "date": "May 11, 2017",
+      "days_before": 43,
+      "p_without": 0.5863162400931763,
+      "drop": 0.031179672469422548,
+      "score": {
+        "influence": 0.0458284096767857,
+        "connectedness": 0.7438858820871643,
+        "recency": 0.9052812019430319,
+        "phi": 0.03086203828166267
+      },
+      "why": "User 379 rated Spider-Man 4\u2605 on May 11, 2017, 43 days before the search. The graph model builds Spider-Man's profile from its recent raters, weighting recent ones more, so this rating makes Spider-Man look current; user 379 also rated 3 titles that member 251 rated (e.g. Inside Out, Arrival), which ties Spider-Man to this member's taste. Removing only this rating: 62% \u2192 59% (\u22123.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6797540038200869,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.4012672733316291,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.3433389969963625,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 89835,
+      "n": 3,
+      "kind": "crowd",
+      "from": "user 327",
+      "to": "Spider-Man",
+      "from_id": 327,
+      "to_id": 4429,
+      "rating": 4.0,
+      "date": "May 8, 2017",
+      "days_before": 47,
+      "p_without": 0.5809864325007911,
+      "drop": 0.036509480061807764,
+      "score": {
+        "influence": 0.03651294809513694,
+        "connectedness": 0.7714254034291829,
+        "recency": 0.8788579253666469,
+        "phi": 0.024754804994773255
+      },
+      "why": "User 327 rated Spider-Man 4\u2605 on May 8, 2017, 47 days before the search. The graph model builds Spider-Man's profile from its recent raters, weighting recent ones more, so this rating makes Spider-Man look current; user 327 also rated 2 titles that member 251 rated (e.g. Inside Out, Zootopia), which ties Spider-Man to this member's taste. Removing only this rating: 62% \u2192 58% (\u22123.7 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6797540038200869,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.4012672733316291,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.3433389969963625,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 90775,
+      "n": 4,
+      "kind": "crowd",
+      "from": "user 474",
+      "to": "Spider-Man",
+      "from_id": 474,
+      "to_id": 4429,
+      "rating": 5.0,
+      "date": "Jun 21, 2017",
+      "days_before": 3,
+      "p_without": 0.5936161711674472,
+      "drop": 0.023879741395151588,
+      "score": {
+        "influence": 0.02387992582768106,
+        "connectedness": 0.6868489867177048,
+        "recency": 0.9920263026770823,
+        "phi": 0.01627111904872999
+      },
+      "why": "User 474 rated Spider-Man 5\u2605 on Jun 21, 2017, 3 days before the search. The graph model builds Spider-Man's profile from its recent raters, weighting recent ones more, so this rating makes Spider-Man look current; user 474 also rated 1 title that member 251 rated (e.g. Zootopia), which ties Spider-Man to this member's taste. Removing only this rating: 62% \u2192 59% (\u22122.4 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6797540038200869,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.4012672733316291,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.3433389969963625,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 86353,
+      "n": 5,
+      "kind": "crowd",
+      "from": "user 113",
+      "to": "Spider-Man",
+      "from_id": 113,
+      "to_id": 4429,
+      "rating": 4.0,
+      "date": "Jan 26, 2017",
+      "days_before": 149,
+      "p_without": 0.5997582734233453,
+      "drop": 0.017737639139253525,
+      "score": {
+        "influence": 0.017737708383878892,
+        "connectedness": 0.6843991906539291,
+        "recency": 0.6643948508975106,
+        "phi": 0.008065536406839111
+      },
+      "why": "User 113 rated Spider-Man 4\u2605 on Jan 26, 2017, 149 days before the search. The graph model builds Spider-Man's profile from its recent raters, weighting recent ones more, so this rating makes Spider-Man look current; user 113 also rated 1 title that member 251 rated (e.g. Zootopia), which ties Spider-Man to this member's taste. Removing only this rating: 62% \u2192 60% (\u22121.8 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6797540038200869,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 1.4012672733316291,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.3433389969963625,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 86846,
+      "n": 6,
+      "kind": "crowd",
+      "from": "user 364",
+      "to": "Spider-Man",
+      "from_id": 364,
+      "to_id": 4429,
+      "rating": 3.0,
+      "date": "Mar 1, 2017",
+      "days_before": 115,
+      "p_without": 0.6035260945800817,
+      "drop": 0.013969817982517174,
+      "score": {
+        "influence": 0.01396986100747033,
+        "connectedness": 0.5637570437766215,
+        "recency": 0.7899291323293234,
+        "phi": 0.006221171833436223
+      },
+      "why": "User 364 rated Spider-Man 3\u2605 on Mar 1, 2017, 115 days before the search. The graph model builds Spider-Man's profile from its recent raters, weighting recent ones more, so this rating makes Spider-Man look current. Removing only this rating: 62% \u2192 60% (\u22121.4 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6797540038200869,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 2.3433389969963625,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 90899,
+      "n": 7,
+      "kind": "own",
+      "from": "user 251",
+      "to": "Wonder Woman",
+      "from_id": 251,
+      "to_id": 9697,
+      "rating": 4.0,
+      "date": "Jun 24, 2017",
+      "days_before": 0,
+      "p_without": 0.6274086439308406,
+      "drop": -0.009912731368241778,
+      "score": {
+        "influence": 0.009912688343288623,
+        "connectedness": 0.5292563188931323,
+        "recency": 0.9999952435425145,
+        "phi": 0.0052463279888490715
+      },
+      "why": "Member 251 rated Wonder Woman 4\u2605 on Jun 24, 2017, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with Spider-Man. Removing only this rating: 62% \u2192 63% (+1.0 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.5570926414577283,
+          "significant": false
+        }
+      ]
+    },
+    {
+      "eid": 90896,
+      "n": 8,
+      "kind": "own",
+      "from": "user 251",
+      "to": "Inside Out",
+      "from_id": 251,
+      "to_id": 9510,
+      "rating": 5.0,
+      "date": "Jun 24, 2017",
+      "days_before": 0,
+      "p_without": 0.6207927802159454,
+      "drop": -0.00329686765334658,
+      "score": {
+        "influence": 0.0033591467572874345,
+        "connectedness": 0.787285594008559,
+        "recency": 0.7461655637293049,
+        "phi": 0.001973315307367254
+      },
+      "why": "Member 251 rated Inside Out 5\u2605 on Jun 24, 2017, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated Inside Out also rated Spider-Man (e.g. user 327, user 379), so this rating pulls member 251 toward Spider-Man's audience. Removing only this rating: 62% \u2192 62% (+0.3 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.5570926414577283,
+          "significant": false
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.6797540038200869,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.524252979680056,
+      "rand_mean": 0.6169228990075398,
+      "rand_lo": 0.6123361754028066,
+      "rand_hi": 0.6175558353904705,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.49887758466532917,
+      "rand_mean": 0.6162484340747272,
+      "rand_lo": 0.5996696714908419,
+      "rand_hi": 0.6200711623427752,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.45849194607759297,
+      "rand_mean": 0.6174728453648278,
+      "rand_lo": 0.5912812916407223,
+      "rand_hi": 0.6326121417666185,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.4173868610741905,
+      "rand_mean": 0.6190530385449831,
+      "rand_lo": 0.6026448889588332,
+      "rand_hi": 0.6465410827788007,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.38160617175790434,
+      "rand_mean": 0.6171817321534412,
+      "rand_lo": 0.6006135635935607,
+      "rand_hi": 0.632857733222789,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.357354837023092,
+      "rand_mean": 0.6181467890311582,
+      "rand_lo": 0.6092057441962015,
+      "rand_hi": 0.6359967113073506,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 7,
+      "p": 0.3423883538738203,
+      "rand_mean": 0.6155796159054885,
+      "rand_lo": 0.5970443053716155,
+      "rand_hi": 0.6306957416222938,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 8,
+      "p": 0.33246892703668707,
+      "rand_mean": 0.6148240634951166,
+      "rand_lo": 0.5981622637007263,
+      "rand_hi": 0.6275984601032619,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.33246892703668707,
+    "rand_mean": 0.6148240634951166,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.6174959125625988,
+      0.6163935704092732,
+      0.6176177948643429,
+      0.6174356758223688,
+      0.6175456481787062,
+      0.6192458826623667,
+      0.6168106361985736,
+      0.5995966041561379,
+      0.6169048774566127,
+      0.6063697738062048,
+      0.6174623095118739,
+      0.6120093528948382,
+      0.6133284772223717,
+      0.6176549632264354,
+      0.6159762902125867,
+      0.6274120931256407,
+      0.6141423967417307,
+      0.6175107130378042,
+      0.6067269376179024,
+      0.6174098589719295,
+      0.6130972443244755,
+      0.6176025227426081,
+      0.616702951909905,
+      0.6006701575721118,
+      0.6132641501760429,
+      0.6179028031268565,
+      0.6060193245594271,
+      0.6196396938672155,
+      0.6175011615932822,
+      0.6174959125625988,
+      0.606360382374594,
+      0.6178525260895863,
+      0.6143011076588332,
+      0.6288724866151996,
+      0.6154937021737293,
+      0.6174959125625988,
+      0.6178492573496596,
+      0.6159762902125867,
+      0.6175456481787062,
+      0.6189057501812282,
+      0.6007280065258448,
+      0.6192458826623667,
+      0.6175104118675161,
+      0.5968645270982111,
+      0.6174520691783804,
+      0.613474094894139,
+      0.6157724561335843,
+      0.6184921762048872,
+      0.6136752307461882,
+      0.5926049049174296,
+      0.6102863957794833,
+      0.6176126324829866,
+      0.6168755168005641,
+      0.6277670778449191,
+      0.6125637281105547,
+      0.6144973369127856,
+      0.6192735846934816,
+      0.6141423967417307,
+      0.6174959125625988,
+      0.6175107130378042
+    ],
+    "flips": true
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 2,
+    "B_before": 2,
+    "B_after": 1,
+    "top3_after": [
+      "Last Samurai, The (2003)",
+      "Spider-Man (2002)",
+      "Amazing Spider-Man, The (2012)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 609,
+        "name": "user 609",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 9697,
+        "name": "Wonder Woman",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 9510,
+        "name": "Inside Out",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 327,
+        "name": "user 327",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 9833,
+        "name": "Zootopia",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 364,
+        "name": "user 364",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 4429,
+        "name": "Spider-Man",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 113,
+        "name": "user 113",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 10002,
+        "name": "Arrival",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 379,
+        "name": "user 379",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 474,
+        "name": "user 474",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 251,
+        "name": "user 251",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 5405,
+        "name": "The Last Samurai",
+        "type": "title",
+        "role": "B"
+      }
+    ],
+    "edges": [
+      {
+        "eid": 85706,
+        "s": 4429,
+        "t": 609,
+        "rating": 4.5,
+        "date": "Nov 19, 2016",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 86353,
+        "s": 4429,
+        "t": 113,
+        "rating": 4.0,
+        "date": "Jan 26, 2017",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 86846,
+        "s": 4429,
+        "t": 364,
+        "rating": 3.0,
+        "date": "Mar 1, 2017",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 89835,
+        "s": 4429,
+        "t": 327,
+        "rating": 4.0,
+        "date": "May 8, 2017",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 90031,
+        "s": 4429,
+        "t": 379,
+        "rating": 4.0,
+        "date": "May 11, 2017",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 90775,
+        "s": 4429,
+        "t": 474,
+        "rating": 5.0,
+        "date": "Jun 21, 2017",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 90896,
+        "s": 251,
+        "t": 9510,
+        "rating": 5.0,
+        "date": "Jun 24, 2017",
+        "expl": true,
+        "n": 8
+      },
+      {
+        "eid": 90899,
+        "s": 251,
+        "t": 9697,
+        "rating": 4.0,
+        "date": "Jun 24, 2017",
+        "expl": true,
+        "n": 7
+      },
+      {
+        "eid": 86325,
+        "s": 9833,
+        "t": 113,
+        "rating": 3.5,
+        "date": "Jan 25, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 88037,
+        "s": 9510,
+        "t": 379,
+        "rating": 5.0,
+        "date": "Apr 28, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 88672,
+        "s": 9510,
+        "t": 609,
+        "rating": 3.5,
+        "date": "May 3, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 88902,
+        "s": 9833,
+        "t": 609,
+        "rating": 4.0,
+        "date": "May 3, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 89693,
+        "s": 9833,
+        "t": 327,
+        "rating": 2.0,
+        "date": "May 8, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 89754,
+        "s": 9510,
+        "t": 327,
+        "rating": 3.0,
+        "date": "May 8, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 89998,
+        "s": 10002,
+        "t": 379,
+        "rating": 4.0,
+        "date": "May 8, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 90755,
+        "s": 9833,
+        "t": 474,
+        "rating": 4.5,
+        "date": "Jun 21, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 90897,
+        "s": 251,
+        "t": 10002,
+        "rating": 5.0,
+        "date": "Jun 24, 2017",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 90900,
+        "s": 251,
+        "t": 9833,
+        "rating": 4.0,
+        "date": "Jun 24, 2017",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 2.5159381833139336,
+      "adjusted": 2.3433389969963625,
+      "graph": {
+        "nodes": [
+          {
+            "id": 609,
+            "name": "user 609",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 4429,
+            "name": "Spider-Man",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 327,
+            "name": "user 327",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 85706,
+            "s": 4429,
+            "t": 609,
+            "rating": 4.5,
+            "date": "Nov 19, 2016",
+            "in_temgx": true
+          },
+          {
+            "eid": 89835,
+            "s": 4429,
+            "t": 327,
+            "rating": 4.0,
+            "date": "May 8, 2017",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        85706,
+        89835
+      ],
+      "S": 0.05660847274846927,
+      "occurrence": {
+        "eids": [
+          85706,
+          89835
+        ],
+        "nodes": [
+          "user 609",
+          "user 327",
+          "Spider-Man"
+        ],
+        "dates": [
+          "Nov 19, 2016",
+          "May 8, 2017"
+        ]
+      },
+      "p_without": 0.49356395511762724,
+      "p_random": 0.6186958888009317,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 2.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 2.3\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 609, user 327, Spider-Man): 62% \u2192 49%; random ratings of the same size: 62% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 1.7470607950094579,
+      "adjusted": 1.4012672733316291,
+      "graph": {
+        "nodes": [
+          {
+            "id": 609,
+            "name": "user 609",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 4429,
+            "name": "Spider-Man",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 9510,
+            "name": "Inside Out",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 327,
+            "name": "user 327",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 88672,
+            "s": 9510,
+            "t": 609,
+            "rating": 3.5,
+            "date": "May 3, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 89754,
+            "s": 9510,
+            "t": 327,
+            "rating": 3.0,
+            "date": "May 8, 2017",
+            "in_temgx": false
+          },
+          {
+            "eid": 89835,
+            "s": 4429,
+            "t": 327,
+            "rating": 4.0,
+            "date": "May 8, 2017",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        89835
+      ],
+      "S": 0.015210979204878586,
+      "occurrence": {
+        "eids": [
+          88672,
+          89754,
+          89835
+        ],
+        "nodes": [
+          "user 609",
+          "Inside Out",
+          "user 327",
+          "Spider-Man"
+        ],
+        "dates": [
+          "May 3, 2017",
+          "May 8, 2017",
+          "May 8, 2017"
+        ]
+      },
+      "p_without": 0.5792840482030233,
+      "p_random": 0.6199341714314197,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the title: before matching on context it looks 1.7\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.4\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 609, Inside Out, user 327): 62% \u2192 58%; random ratings of the same size: 62% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGEB",
+      "name": "Shared taste leads to the better match",
+      "raw": 1.2768242595874029,
+      "adjusted": 0.8286194971710102,
+      "graph": {
+        "nodes": [
+          {
+            "id": 105,
+            "name": "user 105",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 5405,
+            "name": "The Last Samurai",
+            "type": "title",
+            "role": "B"
+          },
+          {
+            "id": 4429,
+            "name": "Spider-Man",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 609,
+            "name": "user 609",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 83447,
+            "s": 4429,
+            "t": 105,
+            "rating": 3.5,
+            "date": "Jul 1, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 85706,
+            "s": 4429,
+            "t": 609,
+            "rating": 4.5,
+            "date": "Nov 19, 2016",
+            "in_temgx": true
+          },
+          {
+            "eid": 88642,
+            "s": 5405,
+            "t": 609,
+            "rating": 3.5,
+            "date": "May 3, 2017",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [
+        85706
+      ],
+      "S": -0.0026912425794909066,
+      "occurrence": {
+        "eids": [
+          83447,
+          85706,
+          88642
+        ],
+        "nodes": [
+          "user 105",
+          "Spider-Man",
+          "user 609",
+          "The Last Samurai"
+        ],
+        "dates": [
+          "Jul 1, 2016",
+          "Nov 19, 2016",
+          "May 3, 2017"
+        ]
+      },
+      "p_without": 0.5349661013569625,
+      "p_random": 0.6164250470484589,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the better match: before matching on context it looks 1.3\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.8\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 105, Spider-Man, user 609): 62% \u2192 53%; random ratings of the same size: 62% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 0.5061746827913168,
+      "adjusted": 0.6797540038200869,
+      "graph": {
+        "nodes": [
+          {
+            "id": 609,
+            "name": "user 609",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 379,
+            "name": "user 379",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 4429,
+            "name": "Spider-Man",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 85706,
+            "s": 4429,
+            "t": 609,
+            "rating": 4.5,
+            "date": "Nov 19, 2016",
+            "in_temgx": true
+          },
+          {
+            "eid": 90031,
+            "s": 4429,
+            "t": 379,
+            "rating": 4.0,
+            "date": "May 11, 2017",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        85706,
+        90031
+      ],
+      "S": -0.014371854424951704,
+      "occurrence": {
+        "eids": [
+          85706,
+          90031
+        ],
+        "nodes": [
+          "user 609",
+          "Spider-Man",
+          "user 379"
+        ],
+        "dates": [
+          "Nov 19, 2016",
+          "May 11, 2017"
+        ]
+      },
+      "p_without": 0.49887758466532917,
+      "p_random": 0.6164082205286868,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 0.5\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.7\u00d7. Removing its strongest occurrence (user 609, Spider-Man, user 379): 62% \u2192 50%; random ratings of the same size: 62% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.18892833455286512,
+      "adjusted": 0.5570926414577283,
+      "graph": {
+        "nodes": [
+          {
+            "id": 10002,
+            "name": "Arrival",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 251,
+            "name": "user 251",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 9510,
+            "name": "Inside Out",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 90896,
+            "s": 251,
+            "t": 9510,
+            "rating": 5.0,
+            "date": "Jun 24, 2017",
+            "in_temgx": true
+          },
+          {
+            "eid": 90897,
+            "s": 251,
+            "t": 10002,
+            "rating": 5.0,
+            "date": "Jun 24, 2017",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [
+        90896
+      ],
+      "S": -0.00037352692696356006,
+      "occurrence": {
+        "eids": [
+          90896,
+          90897
+        ],
+        "nodes": [
+          "user 251",
+          "Inside Out",
+          "Arrival"
+        ],
+        "dates": [
+          "Jun 24, 2017",
+          "Jun 24, 2017"
+        ]
+      },
+      "p_without": 0.6005860880736864,
+      "p_random": 0.6152031145657275,
+      "p_value": 0.11475409836065574,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.6\u00d7. Removing its strongest occurrence (user 251, Inside Out, Arrival): 62% \u2192 60%; random ratings of the same size: 62% (p = 0.11)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 1158,
+  "computed_at": "2026-10-27T18:47:40-0400",
+  "summary": "With 8 ratings (6 recent ratings of Spider-Man by other people, 2 of the member's own ratings), the model's preference for Spider-Man over The Last Samurai goes from 62% to 33% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 61% on average (p = 0.02, 60 draws). In the full ranking, Spider-Man moves from #1 to #2."
+}

@@ -1,0 +1,3 @@
+{"model": "Claude Sonnet (one fresh call per probe, prompt = history as text only)",
+ "answers": [[6, 3], [4, 2], [3, 7], [6, 4], [3, 4], [5, 3], [5, 7], [4, 7], [3, 5], [7, 3], [4, 7], [4, 1], [3, 6], [5, 7], [1, 3]],
+ "notes": {}}

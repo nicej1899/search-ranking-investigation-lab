@@ -1,0 +1,197 @@
+{
+  "case_id": "C07-m284-t1449626093",
+  "member": 284,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Ordinary People (1980)",
+  "A_id": 3555,
+  "B_id": 2043,
+  "member_id": 284,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 79195,
+        "from": "user 284",
+        "to": "Graduate, The (1967)",
+        "from_id": 284,
+        "to_id": 1556,
+        "rating": 5.0,
+        "date": "2015-12-09",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79197,
+        "from": "user 284",
+        "to": "Pulp Fiction (1994)",
+        "from_id": 284,
+        "to_id": 867,
+        "rating": 4.0,
+        "date": "2015-12-09",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 1.9107718127917916,
+      "nodes": [
+        {
+          "id": 365,
+          "name": "user 365"
+        },
+        {
+          "id": 255,
+          "name": "user 255"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77182,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 365",
+          "from_id": 3555,
+          "to_id": 365,
+          "rating": 4.0,
+          "date": "2015-10-22"
+        },
+        {
+          "eid": 77543,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 255",
+          "from_id": 3555,
+          "to_id": 255,
+          "rating": 4.0,
+          "date": "2015-11-03"
+        }
+      ]
+    },
+    "n_model_runs": 303
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 79196,
+        "from": "user 284",
+        "to": "All the President's Men (1976)",
+        "from_id": 284,
+        "to_id": 5178,
+        "rating": 4.0,
+        "date": "2015-12-09",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79198,
+        "from": "user 284",
+        "to": "Dazed and Confused (1993)",
+        "from_id": 284,
+        "to_id": 994,
+        "rating": 5.0,
+        "date": "2015-12-09",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 79199,
+        "from": "user 284",
+        "to": "Rebel Without a Cause (1955)",
+        "from_id": 284,
+        "to_id": 1450,
+        "rating": 3.0,
+        "date": "2015-12-09",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "BRIDGEB",
+      "name": "a path of shared taste that ends at B",
+      "lift": 3.356150694618586,
+      "nodes": [
+        {
+          "id": 104,
+          "name": "user 104"
+        },
+        {
+          "id": 867,
+          "name": "Pulp Fiction (1994)"
+        },
+        {
+          "id": 297,
+          "name": "user 297"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77275,
+          "from": "Pulp Fiction (1994)",
+          "to": "user 104",
+          "from_id": 867,
+          "to_id": 104,
+          "rating": 5.0,
+          "date": "2015-11-03"
+        },
+        {
+          "eid": 78530,
+          "from": "Pulp Fiction (1994)",
+          "to": "user 297",
+          "from_id": 867,
+          "to_id": 297,
+          "rating": 4.5,
+          "date": "2015-11-15"
+        },
+        {
+          "eid": 78899,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 297",
+          "from_id": 3555,
+          "to_id": 297,
+          "rating": 2.5,
+          "date": "2015-11-15"
+        }
+      ]
+    },
+    "n_model_runs": 275
+  },
+  "test": {
+    "p0": 0.9670421717185894,
+    "del_A": {
+      "p": 0.92886651631304,
+      "p_random": 0.9682524804863398,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9916981187086903,
+      "p_random": 0.963630865318452,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.3333333333333333,
+    "B_from_member_history": 1.0,
+    "shared_links": []
+  }
+}

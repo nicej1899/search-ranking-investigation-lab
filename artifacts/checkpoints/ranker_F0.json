@@ -1,0 +1,33 @@
+{
+  "model_id": "F0",
+  "kind": "F0",
+  "weights": [
+    0.14982351660728455,
+    1.0353513956069946,
+    0.2724309265613556
+  ],
+  "backbone_sha256": "1d01889bb959b06c",
+  "norm": {
+    "beh": [
+      -7.569419680156213,
+      8.988431676984119
+    ],
+    "rel": [
+      0.6239212372656334,
+      0.12431915145456685
+    ],
+    "pop": [
+      2.222536935833016,
+      1.2050443977192657
+    ],
+    "fit_on": "DEV candidate sets (1268 cases)"
+  },
+  "dev_cases_hash": "c5a36e90840ea79b",
+  "fit": "pairwise logistic (LBFGS), mean over pairs within a case then over cases, L2=1e-3, DEV cases only",
+  "created": "2026-10-21T21:33:52-0400",
+  "seed": 20261022,
+  "dev_loss": 0.5337330102920532,
+  "dev_pairs": 238869,
+  "description": "Baseline: fixed linear combination of behaviour, relevance, popularity",
+  "config_hash": "d3330eed63320c1a"
+}

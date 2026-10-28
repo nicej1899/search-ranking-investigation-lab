@@ -1,0 +1,4 @@
+MovieLens ml-latest-small (GroupLens, University of Minnesota). Redistributed unchanged under its original terms:
+research use only; no endorsement by UMN/GroupLens; cite Harper & Konstan, ACM TiiS 5(4):19, 2015;
+no commercial or revenue-bearing use without GroupLens permission; redistribution only under these same conditions.
+Official source: https://grouplens.org/datasets/movielens/

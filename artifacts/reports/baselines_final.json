@@ -1,0 +1,190 @@
+{
+  "created": "2026-10-22T17:06:33-0400",
+  "split": "final",
+  "protocol": "Standard recommendation baselines and a full-catalog next-item evaluation.\n\nProtocol (same for every model):\n  * one prediction per member per period: t = the member's first time in the period with >= 5 earlier ratings\n    (identical to the query cases), DEV = validation period, FINAL = test period;\n  * targets = titles the member rated >= 4.0 within 90 days after t and had not rated before t;\n  * candidates = the FULL catalog of titles with >= 1 training interaction, minus titles rated before t\n    (no sampled negatives);\n  * metrics: Recall@10, Recall@50, NDCG@10 (binary gains); 95% intervals by resampling members.\nAll models are trained on the training period only and use only ratings before t at prediction time.\nID-based models (BPR-MF, LightGCN) cannot embed members who appear after training (most FINAL members are new), so\nthey are used item-based: the member vector = mean of the learned vectors of the member's last 50 titles before t.\nSASRec and the temporal graph models are inductive by construction.\n",
+  "n_points": 96,
+  "catalog_size": 7056,
+  "results": {
+    "popularity": {
+      "n": 93,
+      "recall10": {
+        "mean": 0.0599446660337676,
+        "ci95": [
+          0.0411397909678756,
+          0.08342671255809525
+        ]
+      },
+      "recall50": {
+        "mean": 0.1534744191539561,
+        "ci95": [
+          0.1189903446393654,
+          0.1914356846353847
+        ]
+      },
+      "ndcg10": {
+        "mean": 0.20105005951643712,
+        "ci95": [
+          0.1502276892088784,
+          0.25391918338629127
+        ]
+      },
+      "score_s": 1.8
+    },
+    "bpr_mf": {
+      "n": 93,
+      "recall10": {
+        "mean": 0.048007534475570164,
+        "ci95": [
+          0.03384560563741145,
+          0.06594144740056426
+        ]
+      },
+      "recall50": {
+        "mean": 0.1571762606228521,
+        "ci95": [
+          0.12453840303120739,
+          0.19097683988311223
+        ]
+      },
+      "ndcg10": {
+        "mean": 0.18008032565873353,
+        "ci95": [
+          0.13001076128090666,
+          0.22972053315682975
+        ]
+      },
+      "score_s": 0.1
+    },
+    "lightgcn": {
+      "n": 93,
+      "recall10": {
+        "mean": 0.046592698695818544,
+        "ci95": [
+          0.029714651436076465,
+          0.06709916796013567
+        ]
+      },
+      "recall50": {
+        "mean": 0.1337365123196768,
+        "ci95": [
+          0.10372493436223931,
+          0.16784175701395182
+        ]
+      },
+      "ndcg10": {
+        "mean": 0.1769882794330604,
+        "ci95": [
+          0.13125830233391517,
+          0.22667236170183394
+        ]
+      },
+      "score_s": 0.1
+    },
+    "sasrec": {
+      "n": 93,
+      "recall10": {
+        "mean": 0.0413295049847581,
+        "ci95": [
+          0.02916724947271541,
+          0.05618848872262304
+        ]
+      },
+      "recall50": {
+        "mean": 0.13264543082116242,
+        "ci95": [
+          0.10029452124959085,
+          0.1699027747372389
+        ]
+      },
+      "ndcg10": {
+        "mean": 0.1420040408706604,
+        "ci95": [
+          0.1016033584178221,
+          0.18182361297920868
+        ]
+      },
+      "score_s": 0.2
+    },
+    "tgat1": {
+      "n": 93,
+      "recall10": {
+        "mean": 0.034273543788716505,
+        "ci95": [
+          0.02588930176660102,
+          0.04321100716631823
+        ]
+      },
+      "recall50": {
+        "mean": 0.14526988043345582,
+        "ci95": [
+          0.12032440715407479,
+          0.1714889031037766
+        ]
+      },
+      "ndcg10": {
+        "mean": 0.14079262867243844,
+        "ci95": [
+          0.10092555657803141,
+          0.18416301620219183
+        ]
+      },
+      "score_s": 0.5
+    },
+    "tgat2": {
+      "n": 93,
+      "recall10": {
+        "mean": 0.048478395397483956,
+        "ci95": [
+          0.03463271105379055,
+          0.06487638271341788
+        ]
+      },
+      "recall50": {
+        "mean": 0.18285182219629378,
+        "ci95": [
+          0.14900459717494466,
+          0.21983025811595433
+        ]
+      },
+      "ndcg10": {
+        "mean": 0.18200820642015775,
+        "ci95": [
+          0.1341225111990422,
+          0.225873413161033
+        ]
+      },
+      "score_s": 198.9
+    },
+    "tgn": {
+      "n": 93,
+      "recall10": {
+        "mean": 0.06920980366896239,
+        "ci95": [
+          0.05103309653231536,
+          0.09117358495187225
+        ]
+      },
+      "recall50": {
+        "mean": 0.20134756962197228,
+        "ci95": [
+          0.16158219726654588,
+          0.24380381266895418
+        ]
+      },
+      "ndcg10": {
+        "mean": 0.20022212562454264,
+        "ci95": [
+          0.15639292323343162,
+          0.24691879474388886
+        ]
+      },
+      "score_s": 27.2
+    }
+  },
+  "train_log": {
+    "bpr_mf_train_s": 7.3,
+    "lightgcn_train_s": 25.0,
+    "sasrec_train_s": 172.1
+  },
+  "wall_s": 434.2
+}

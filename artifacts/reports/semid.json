@@ -1,0 +1,1554 @@
+{
+  "created": "2026-10-22T14:49:11-0400",
+  "method": "Semantic IDs for titles and a CATGX pattern analysis over them.\n\nSemantic IDs (stand-in for an RQ-VAE codebook): residual k-means, 3 levels x 8 codes, over a content vector per\ntitle = [title+genre text vector (spaCy, as used by the ranker), genre multi-hot / sqrt(#genres)]. A title's ID is\n(c1, c2, c3); c1 is the coarse region. Level-1 codes are named automatically by their most over-represented genres.\nThis is NOT Netflix's semantic-ID model; it reproduces the idea (hierarchical discrete codes from content) on public data.\n\nAnalyses (DEV failure triage rows, model F0):\n  where_failures   for each level-1 code: how often a title from that code is the WRONG top result, vs how often\n                   titles from that code appear as candidates (lift = over-representation among wrong top results)\n  catgx_semid      CATGX with semantic-ID labels: motif library = every ordered pair (code a -> code b) of a member's\n                   consecutive-in-time ratings at most 7 days apart. g(r) = drop of the behavioural A-vs-B margin when\n                   the pair's two ratings are removed (exact replay). Cells: recency x duration (doubling bins) x title\n                   activity tertile; S(m) = sum_b omega(b) (mu(m,b) - mu_base(b)). Exact enumeration (pi = 1).\n                   Aggregated over failed searches where the behaviour part favours the wrong title; member bootstrap.\n",
+  "codebook": [
+    {
+      "code": 0,
+      "name": "Drama / Romance",
+      "n_titles": 2225,
+      "top_genre_shares": {
+        "Drama": 1.0,
+        "Romance": 0.23,
+        "War": 0.09,
+        "Crime": 0.09
+      },
+      "examples": [
+        "Shawshank Redemption, The (1994)",
+        "Braveheart (1995)",
+        "Apollo 13 (1995)",
+        "Schindler's List (1993)"
+      ],
+      "children": [
+        {
+          "code": "0-0",
+          "n_titles": 528,
+          "example": "Apollo 13 (1995)"
+        },
+        {
+          "code": "0-1",
+          "n_titles": 686,
+          "example": "Dances with Wolves (1990)"
+        },
+        {
+          "code": "0-2",
+          "n_titles": 437,
+          "example": "American Beauty (1999)"
+        },
+        {
+          "code": "0-3",
+          "n_titles": 35,
+          "example": "Babe (1995)"
+        },
+        {
+          "code": "0-4",
+          "n_titles": 204,
+          "example": "Braveheart (1995)"
+        },
+        {
+          "code": "0-5",
+          "n_titles": 78,
+          "example": "Crouching Tiger, Hidden Dragon (Wo hu cang long) (2000)"
+        },
+        {
+          "code": "0-6",
+          "n_titles": 181,
+          "example": "Shawshank Redemption, The (1994)"
+        },
+        {
+          "code": "0-7",
+          "n_titles": 76,
+          "example": "Citizen Kane (1941)"
+        }
+      ]
+    },
+    {
+      "code": 1,
+      "name": "Thriller / Crime",
+      "n_titles": 1281,
+      "top_genre_shares": {
+        "Thriller": 0.9,
+        "Drama": 0.58,
+        "Crime": 0.52,
+        "Action": 0.39
+      },
+      "examples": [
+        "Pulp Fiction (1994)",
+        "Batman (1989)",
+        "Fugitive, The (1993)",
+        "Seven (a.k.a. Se7en) (1995)"
+      ],
+      "children": [
+        {
+          "code": "1-0",
+          "n_titles": 282,
+          "example": "Pulp Fiction (1994)"
+        },
+        {
+          "code": "1-1",
+          "n_titles": 183,
+          "example": "Fugitive, The (1993)"
+        },
+        {
+          "code": "1-2",
+          "n_titles": 84,
+          "example": "Speed (1994)"
+        },
+        {
+          "code": "1-3",
+          "n_titles": 2,
+          "example": "Something Wicked This Way Comes (1983)"
+        },
+        {
+          "code": "1-4",
+          "n_titles": 32,
+          "example": "Crimson Tide (1995)"
+        },
+        {
+          "code": "1-5",
+          "n_titles": 332,
+          "example": "Batman (1989)"
+        },
+        {
+          "code": "1-6",
+          "n_titles": 160,
+          "example": "Ocean's Eleven (2001)"
+        },
+        {
+          "code": "1-7",
+          "n_titles": 206,
+          "example": "Seven (a.k.a. Se7en) (1995)"
+        }
+      ]
+    },
+    {
+      "code": 2,
+      "name": "Animation / Children",
+      "n_titles": 1148,
+      "top_genre_shares": {
+        "Adventure": 0.64,
+        "Action": 0.45,
+        "Children": 0.36,
+        "Animation": 0.33
+      },
+      "examples": [
+        "Toy Story (1995)",
+        "True Lies (1994)",
+        "Aladdin (1992)",
+        "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)"
+      ],
+      "children": [
+        {
+          "code": "2-0",
+          "n_titles": 142,
+          "example": "Monty Python and the Holy Grail (1975)"
+        },
+        {
+          "code": "2-1",
+          "n_titles": 133,
+          "example": "Lord of the Rings: The Fellowship of the Ring, The (2001)"
+        },
+        {
+          "code": "2-2",
+          "n_titles": 106,
+          "example": "True Lies (1994)"
+        },
+        {
+          "code": "2-3",
+          "n_titles": 330,
+          "example": "Toy Story (1995)"
+        },
+        {
+          "code": "2-4",
+          "n_titles": 57,
+          "example": "300 (2007)"
+        },
+        {
+          "code": "2-5",
+          "n_titles": 320,
+          "example": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)"
+        },
+        {
+          "code": "2-6",
+          "n_titles": 31,
+          "example": "Mask, The (1994)"
+        },
+        {
+          "code": "2-7",
+          "n_titles": 29,
+          "example": "Who Framed Roger Rabbit? (1988)"
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "name": "Sci-Fi / Action",
+      "n_titles": 831,
+      "top_genre_shares": {
+        "Sci-Fi": 1.0,
+        "Action": 0.51,
+        "Adventure": 0.32,
+        "Thriller": 0.27
+      },
+      "examples": [
+        "Jurassic Park (1993)",
+        "Terminator 2: Judgment Day (1991)",
+        "Independence Day (a.k.a. ID4) (1996)",
+        "Star Wars: Episode IV - A New Hope (1977)"
+      ],
+      "children": [
+        {
+          "code": "3-0",
+          "n_titles": 176,
+          "example": "Alien (1979)"
+        },
+        {
+          "code": "3-1",
+          "n_titles": 195,
+          "example": "Back to the Future (1985)"
+        },
+        {
+          "code": "3-2",
+          "n_titles": 29,
+          "example": "Armageddon (1998)"
+        },
+        {
+          "code": "3-3",
+          "n_titles": 21,
+          "example": "E.T. the Extra-Terrestrial (1982)"
+        },
+        {
+          "code": "3-4",
+          "n_titles": 11,
+          "example": "X-Men: First Class (2011)"
+        },
+        {
+          "code": "3-5",
+          "n_titles": 335,
+          "example": "Jurassic Park (1993)"
+        },
+        {
+          "code": "3-6",
+          "n_titles": 17,
+          "example": "Judge Dredd (1995)"
+        },
+        {
+          "code": "3-7",
+          "n_titles": 47,
+          "example": "Twelve Monkeys (a.k.a. 12 Monkeys) (1995)"
+        }
+      ]
+    },
+    {
+      "code": 4,
+      "name": "Comedy / Drama",
+      "n_titles": 961,
+      "top_genre_shares": {
+        "Drama": 1.0,
+        "Comedy": 1.0,
+        "Romance": 0.35,
+        "Crime": 0.07
+      },
+      "examples": [
+        "Forrest Gump (1994)",
+        "Mrs. Doubtfire (1993)",
+        "Ghost (1990)",
+        "Sleepless in Seattle (1993)"
+      ],
+      "children": [
+        {
+          "code": "4-0",
+          "n_titles": 205,
+          "example": "Mrs. Doubtfire (1993)"
+        },
+        {
+          "code": "4-1",
+          "n_titles": 308,
+          "example": "Breakfast Club, The (1985)"
+        },
+        {
+          "code": "4-2",
+          "n_titles": 313,
+          "example": "Ghost (1990)"
+        },
+        {
+          "code": "4-3",
+          "n_titles": 22,
+          "example": "Sandlot, The (1993)"
+        },
+        {
+          "code": "4-4",
+          "n_titles": 26,
+          "example": "Forrest Gump (1994)"
+        },
+        {
+          "code": "4-5",
+          "n_titles": 15,
+          "example": "Lords of Dogtown (2005)"
+        },
+        {
+          "code": "4-6",
+          "n_titles": 57,
+          "example": "Trainspotting (1996)"
+        },
+        {
+          "code": "4-7",
+          "n_titles": 15,
+          "example": "Gosford Park (2001)"
+        }
+      ]
+    },
+    {
+      "code": 5,
+      "name": "Comedy / Romance",
+      "n_titles": 2210,
+      "top_genre_shares": {
+        "Comedy": 1.0,
+        "Romance": 0.23,
+        "Crime": 0.08,
+        "Action": 0.08
+      },
+      "examples": [
+        "Ace Ventura: Pet Detective (1994)",
+        "Pretty Woman (1990)",
+        "Dumb & Dumber (Dumb and Dumber) (1994)",
+        "Willy Wonka & the Chocolate Factory (1971)"
+      ],
+      "children": [
+        {
+          "code": "5-0",
+          "n_titles": 514,
+          "example": "Ace Ventura: Pet Detective (1994)"
+        },
+        {
+          "code": "5-1",
+          "n_titles": 729,
+          "example": "Dumb & Dumber (Dumb and Dumber) (1994)"
+        },
+        {
+          "code": "5-2",
+          "n_titles": 450,
+          "example": "Pretty Woman (1990)"
+        },
+        {
+          "code": "5-3",
+          "n_titles": 171,
+          "example": "Willy Wonka & the Chocolate Factory (1971)"
+        },
+        {
+          "code": "5-4",
+          "n_titles": 26,
+          "example": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)"
+        },
+        {
+          "code": "5-5",
+          "n_titles": 125,
+          "example": "Blues Brothers, The (1980)"
+        },
+        {
+          "code": "5-6",
+          "n_titles": 169,
+          "example": "Office Space (1999)"
+        },
+        {
+          "code": "5-7",
+          "n_titles": 26,
+          "example": "Arsenic and Old Lace (1944)"
+        }
+      ]
+    },
+    {
+      "code": 6,
+      "name": "Documentary",
+      "n_titles": 398,
+      "top_genre_shares": {
+        "Documentary": 1.0,
+        "Musical": 0.03,
+        "Drama": 0.03,
+        "War": 0.03
+      },
+      "examples": [
+        "Bowling for Columbine (2002)",
+        "Fahrenheit 9/11 (2004)",
+        "Roger & Me (1989)",
+        "Hoop Dreams (1994)"
+      ],
+      "children": [
+        {
+          "code": "6-0",
+          "n_titles": 148,
+          "example": "Bowling for Columbine (2002)"
+        },
+        {
+          "code": "6-1",
+          "n_titles": 234,
+          "example": "March of the Penguins (Marche de l'empereur, La) (2005)"
+        },
+        {
+          "code": "6-2",
+          "n_titles": 0,
+          "example": null
+        },
+        {
+          "code": "6-3",
+          "n_titles": 1,
+          "example": "Mad Hot Ballroom (2005)"
+        },
+        {
+          "code": "6-4",
+          "n_titles": 9,
+          "example": "Fog of War: Eleven Lessons from the Life of Robert S. McNamara, The (2003)"
+        },
+        {
+          "code": "6-5",
+          "n_titles": 0,
+          "example": null
+        },
+        {
+          "code": "6-6",
+          "n_titles": 5,
+          "example": "Bus 174 (\u00d4nibus 174) (2002)"
+        },
+        {
+          "code": "6-7",
+          "n_titles": 1,
+          "example": "Catfish (2010)"
+        }
+      ]
+    },
+    {
+      "code": 7,
+      "name": "Horror / Thriller",
+      "n_titles": 688,
+      "top_genre_shares": {
+        "Horror": 1.0,
+        "Thriller": 0.6,
+        "Drama": 0.18,
+        "Mystery": 0.18
+      },
+      "examples": [
+        "Silence of the Lambs, The (1991)",
+        "Sixth Sense, The (1999)",
+        "Interview with the Vampire: The Vampire Chronicles (1994)",
+        "Shining, The (1980)"
+      ],
+      "children": [
+        {
+          "code": "7-0",
+          "n_titles": 227,
+          "example": "Blair Witch Project, The (1999)"
+        },
+        {
+          "code": "7-1",
+          "n_titles": 250,
+          "example": "Interview with the Vampire: The Vampire Chronicles (1994)"
+        },
+        {
+          "code": "7-2",
+          "n_titles": 12,
+          "example": "Sleepy Hollow (1999)"
+        },
+        {
+          "code": "7-3",
+          "n_titles": 1,
+          "example": "Watcher in the Woods, The (1980)"
+        },
+        {
+          "code": "7-4",
+          "n_titles": 2,
+          "example": "Devil's Backbone, The (Espinazo del diablo, El) (2001)"
+        },
+        {
+          "code": "7-5",
+          "n_titles": 51,
+          "example": "Jaws (1975)"
+        },
+        {
+          "code": "7-6",
+          "n_titles": 29,
+          "example": "Silence of the Lambs, The (1991)"
+        },
+        {
+          "code": "7-7",
+          "n_titles": 116,
+          "example": "Sixth Sense, The (1999)"
+        }
+      ]
+    }
+  ],
+  "levels": 3,
+  "codes_per_level": 8,
+  "residual_sq_error_by_level": [
+    6616.221886020614,
+    4834.360139020459,
+    3862.3289847828237
+  ],
+  "codes_hash": "6f409b162bbdf9d8",
+  "where_failures": [
+    {
+      "code": 2,
+      "name": "Animation / Children",
+      "share_of_wrong_top": 0.22929936305732485,
+      "share_of_candidates": 0.13503184713375796,
+      "lift": 1.6981132075471699,
+      "n_wrong_top": 144
+    },
+    {
+      "code": 3,
+      "name": "Sci-Fi / Action",
+      "share_of_wrong_top": 0.1449044585987261,
+      "share_of_candidates": 0.08566878980891719,
+      "lift": 1.691449814126394,
+      "n_wrong_top": 91
+    },
+    {
+      "code": 4,
+      "name": "Comedy / Drama",
+      "share_of_wrong_top": 0.1178343949044586,
+      "share_of_candidates": 0.09118895966029723,
+      "lift": 1.2922002328288709,
+      "n_wrong_top": 74
+    },
+    {
+      "code": 5,
+      "name": "Comedy / Romance",
+      "share_of_wrong_top": 0.1910828025477707,
+      "share_of_candidates": 0.19532908704883228,
+      "lift": 0.9782608695652174,
+      "n_wrong_top": 120
+    },
+    {
+      "code": 0,
+      "name": "Drama / Romance",
+      "share_of_wrong_top": 0.1449044585987261,
+      "share_of_candidates": 0.20201698513800426,
+      "lift": 0.7172884918549658,
+      "n_wrong_top": 91
+    },
+    {
+      "code": 1,
+      "name": "Thriller / Crime",
+      "share_of_wrong_top": 0.12579617834394904,
+      "share_of_candidates": 0.198619957537155,
+      "lift": 0.6333511491181186,
+      "n_wrong_top": 79
+    },
+    {
+      "code": 7,
+      "name": "Horror / Thriller",
+      "share_of_wrong_top": 0.04617834394904458,
+      "share_of_candidates": 0.07860934182590233,
+      "lift": 0.587440918298447,
+      "n_wrong_top": 29
+    },
+    {
+      "code": 6,
+      "name": "Documentary",
+      "share_of_wrong_top": 0.0,
+      "share_of_candidates": 0.013535031847133758,
+      "lift": 0.0,
+      "n_wrong_top": 0
+    }
+  ],
+  "catgx": {
+    "searches_analysed": 486,
+    "occurrences": 14658,
+    "patterns": [
+      {
+        "pattern": [
+          7,
+          2
+        ],
+        "name": "Horror / Thriller  ->  Animation / Children",
+        "searches": 25,
+        "members": 10,
+        "mean_S": 1.4762813653097586,
+        "ci95": [
+          0.11419558342764535,
+          2.8255496755715943
+        ],
+        "frac_positive": 0.64,
+        "occurrences": 82
+      },
+      {
+        "pattern": [
+          2,
+          7
+        ],
+        "name": "Animation / Children  ->  Horror / Thriller",
+        "searches": 15,
+        "members": 7,
+        "mean_S": 0.7529848458220605,
+        "ci95": [
+          -0.08098853179754299,
+          1.650745778766775
+        ],
+        "frac_positive": 0.6,
+        "occurrences": 36
+      },
+      {
+        "pattern": [
+          2,
+          4
+        ],
+        "name": "Animation / Children  ->  Comedy / Drama",
+        "searches": 41,
+        "members": 15,
+        "mean_S": 0.4901911989128523,
+        "ci95": [
+          -0.04539094639830727,
+          1.1283686805033684
+        ],
+        "frac_positive": 0.4146341463414634,
+        "occurrences": 104
+      },
+      {
+        "pattern": [
+          0,
+          1
+        ],
+        "name": "Drama / Romance  ->  Thriller / Crime",
+        "searches": 138,
+        "members": 41,
+        "mean_S": 0.38342825901853883,
+        "ci95": [
+          0.13324688653125938,
+          0.6376694340649914
+        ],
+        "frac_positive": 0.5507246376811594,
+        "occurrences": 646
+      },
+      {
+        "pattern": [
+          1,
+          1
+        ],
+        "name": "Thriller / Crime  ->  Thriller / Crime",
+        "searches": 116,
+        "members": 35,
+        "mean_S": 0.3647212246993678,
+        "ci95": [
+          0.024695449154376277,
+          0.760713373668941
+        ],
+        "frac_positive": 0.49137931034482757,
+        "occurrences": 476
+      },
+      {
+        "pattern": [
+          0,
+          0
+        ],
+        "name": "Drama / Romance  ->  Drama / Romance",
+        "searches": 150,
+        "members": 44,
+        "mean_S": 0.3493619190046833,
+        "ci95": [
+          0.09155001454185506,
+          0.6341503536836611
+        ],
+        "frac_positive": 0.4533333333333333,
+        "occurrences": 1332
+      },
+      {
+        "pattern": [
+          0,
+          2
+        ],
+        "name": "Drama / Romance  ->  Animation / Children",
+        "searches": 106,
+        "members": 33,
+        "mean_S": 0.30044609559221225,
+        "ci95": [
+          0.0105042970120298,
+          0.6570641723593401
+        ],
+        "frac_positive": 0.4339622641509434,
+        "occurrences": 420
+      },
+      {
+        "pattern": [
+          1,
+          0
+        ],
+        "name": "Thriller / Crime  ->  Drama / Romance",
+        "searches": 103,
+        "members": 33,
+        "mean_S": 0.26407664022094407,
+        "ci95": [
+          0.04635413908948984,
+          0.5238158133377274
+        ],
+        "frac_positive": 0.5145631067961165,
+        "occurrences": 931
+      },
+      {
+        "pattern": [
+          1,
+          2
+        ],
+        "name": "Thriller / Crime  ->  Animation / Children",
+        "searches": 93,
+        "members": 27,
+        "mean_S": 0.20238496442973195,
+        "ci95": [
+          -0.07923055623888245,
+          0.5463139601370322
+        ],
+        "frac_positive": 0.4946236559139785,
+        "occurrences": 459
+      },
+      {
+        "pattern": [
+          2,
+          1
+        ],
+        "name": "Animation / Children  ->  Thriller / Crime",
+        "searches": 58,
+        "members": 22,
+        "mean_S": 0.19028688566077742,
+        "ci95": [
+          -0.04742919249505089,
+          0.4895204380039704
+        ],
+        "frac_positive": 0.41379310344827586,
+        "occurrences": 387
+      },
+      {
+        "pattern": [
+          4,
+          2
+        ],
+        "name": "Comedy / Drama  ->  Animation / Children",
+        "searches": 50,
+        "members": 16,
+        "mean_S": 0.1879307480814601,
+        "ci95": [
+          -0.34054357911102345,
+          0.7534851603082026
+        ],
+        "frac_positive": 0.42,
+        "occurrences": 148
+      },
+      {
+        "pattern": [
+          5,
+          3
+        ],
+        "name": "Comedy / Romance  ->  Sci-Fi / Action",
+        "searches": 38,
+        "members": 17,
+        "mean_S": 0.14920229688824516,
+        "ci95": [
+          -0.050130158733693767,
+          0.42672668951393505
+        ],
+        "frac_positive": 0.47368421052631576,
+        "occurrences": 219
+      },
+      {
+        "pattern": [
+          1,
+          5
+        ],
+        "name": "Thriller / Crime  ->  Comedy / Romance",
+        "searches": 46,
+        "members": 18,
+        "mean_S": 0.12265720785708743,
+        "ci95": [
+          -0.05424775083437212,
+          0.32097744640424236
+        ],
+        "frac_positive": 0.43478260869565216,
+        "occurrences": 265
+      },
+      {
+        "pattern": [
+          5,
+          2
+        ],
+        "name": "Comedy / Romance  ->  Animation / Children",
+        "searches": 54,
+        "members": 22,
+        "mean_S": 0.08687814707909537,
+        "ci95": [
+          -0.0673161309102711,
+          0.2942232401514647
+        ],
+        "frac_positive": 0.3333333333333333,
+        "occurrences": 298
+      },
+      {
+        "pattern": [
+          6,
+          1
+        ],
+        "name": "Documentary  ->  Thriller / Crime",
+        "searches": 10,
+        "members": 5,
+        "mean_S": 0.0678822936731721,
+        "ci95": [
+          0.0009676373048291687,
+          0.1767515688659732
+        ],
+        "frac_positive": 0.5,
+        "occurrences": 44
+      },
+      {
+        "pattern": [
+          5,
+          7
+        ],
+        "name": "Comedy / Romance  ->  Horror / Thriller",
+        "searches": 9,
+        "members": 5,
+        "mean_S": 0.05461729277064645,
+        "ci95": [
+          -0.005440633240951919,
+          0.2154569339564128
+        ],
+        "frac_positive": 0.3333333333333333,
+        "occurrences": 49
+      },
+      {
+        "pattern": [
+          7,
+          5
+        ],
+        "name": "Horror / Thriller  ->  Comedy / Romance",
+        "searches": 10,
+        "members": 6,
+        "mean_S": 0.04322046992777511,
+        "ci95": [
+          -0.016044947530634998,
+          0.17030742815565852
+        ],
+        "frac_positive": 0.3,
+        "occurrences": 104
+      },
+      {
+        "pattern": [
+          5,
+          4
+        ],
+        "name": "Comedy / Romance  ->  Comedy / Drama",
+        "searches": 31,
+        "members": 14,
+        "mean_S": 0.03325391100514345,
+        "ci95": [
+          -0.0858510646876851,
+          0.1426734671711137
+        ],
+        "frac_positive": 0.3548387096774194,
+        "occurrences": 133
+      },
+      {
+        "pattern": [
+          1,
+          7
+        ],
+        "name": "Thriller / Crime  ->  Horror / Thriller",
+        "searches": 26,
+        "members": 8,
+        "mean_S": 0.02080550391876099,
+        "ci95": [
+          -0.25239577688414794,
+          0.3331718818671806
+        ],
+        "frac_positive": 0.46153846153846156,
+        "occurrences": 35
+      },
+      {
+        "pattern": [
+          1,
+          4
+        ],
+        "name": "Thriller / Crime  ->  Comedy / Drama",
+        "searches": 47,
+        "members": 16,
+        "mean_S": 0.01889367661780344,
+        "ci95": [
+          -0.17222794081433881,
+          0.2168401540696031
+        ],
+        "frac_positive": 0.2553191489361702,
+        "occurrences": 150
+      },
+      {
+        "pattern": [
+          1,
+          6
+        ],
+        "name": "Thriller / Crime  ->  Documentary",
+        "searches": 20,
+        "members": 8,
+        "mean_S": 0.009012416213832156,
+        "ci95": [
+          -0.04680435732157609,
+          0.05025926565889344
+        ],
+        "frac_positive": 0.5,
+        "occurrences": 63
+      },
+      {
+        "pattern": [
+          0,
+          3
+        ],
+        "name": "Drama / Romance  ->  Sci-Fi / Action",
+        "searches": 131,
+        "members": 39,
+        "mean_S": 0.004501679420872087,
+        "ci95": [
+          -0.21877823092657317,
+          0.2605077907596724
+        ],
+        "frac_positive": 0.3816793893129771,
+        "occurrences": 378
+      },
+      {
+        "pattern": [
+          6,
+          3
+        ],
+        "name": "Documentary  ->  Sci-Fi / Action",
+        "searches": 9,
+        "members": 4,
+        "mean_S": 0.003178175181071411,
+        "ci95": [
+          -0.03215458551548592,
+          0.05264416711831862
+        ],
+        "frac_positive": 0.3333333333333333,
+        "occurrences": 16
+      },
+      {
+        "pattern": [
+          6,
+          2
+        ],
+        "name": "Documentary  ->  Animation / Children",
+        "searches": 8,
+        "members": 5,
+        "mean_S": -0.0017345363942752046,
+        "ci95": [
+          -0.0045507951314149074,
+          -6.653473120634295e-05
+        ],
+        "frac_positive": 0.25,
+        "occurrences": 14
+      },
+      {
+        "pattern": [
+          2,
+          6
+        ],
+        "name": "Animation / Children  ->  Documentary",
+        "searches": 12,
+        "members": 5,
+        "mean_S": -0.005907580471996787,
+        "ci95": [
+          -0.025833713358271195,
+          0.009699057510613255
+        ],
+        "frac_positive": 0.4166666666666667,
+        "occurrences": 48
+      },
+      {
+        "pattern": [
+          2,
+          0
+        ],
+        "name": "Animation / Children  ->  Drama / Romance",
+        "searches": 72,
+        "members": 22,
+        "mean_S": -0.006203486875606481,
+        "ci95": [
+          -0.21106586007005734,
+          0.22735405521194565
+        ],
+        "frac_positive": 0.3472222222222222,
+        "occurrences": 550
+      },
+      {
+        "pattern": [
+          6,
+          0
+        ],
+        "name": "Documentary  ->  Drama / Romance",
+        "searches": 13,
+        "members": 6,
+        "mean_S": -0.007142147742580308,
+        "ci95": [
+          -0.012774398470583077,
+          -0.0010560550740110718
+        ],
+        "frac_positive": 0.07692307692307693,
+        "occurrences": 109
+      },
+      {
+        "pattern": [
+          0,
+          7
+        ],
+        "name": "Drama / Romance  ->  Horror / Thriller",
+        "searches": 22,
+        "members": 8,
+        "mean_S": -0.016227807524101818,
+        "ci95": [
+          -0.2625222590344525,
+          0.24993294350829143
+        ],
+        "frac_positive": 0.4090909090909091,
+        "occurrences": 43
+      },
+      {
+        "pattern": [
+          3,
+          5
+        ],
+        "name": "Sci-Fi / Action  ->  Comedy / Romance",
+        "searches": 29,
+        "members": 15,
+        "mean_S": -0.01882050467088308,
+        "ci95": [
+          -0.05831113392425597,
+          0.015501826809152061
+        ],
+        "frac_positive": 0.27586206896551724,
+        "occurrences": 342
+      },
+      {
+        "pattern": [
+          1,
+          3
+        ],
+        "name": "Thriller / Crime  ->  Sci-Fi / Action",
+        "searches": 108,
+        "members": 32,
+        "mean_S": -0.027309541857500112,
+        "ci95": [
+          -0.1746782727296971,
+          0.1266400358204911
+        ],
+        "frac_positive": 0.39814814814814814,
+        "occurrences": 347
+      },
+      {
+        "pattern": [
+          5,
+          5
+        ],
+        "name": "Comedy / Romance  ->  Comedy / Romance",
+        "searches": 49,
+        "members": 20,
+        "mean_S": -0.027353246143527223,
+        "ci95": [
+          -0.09094256863034075,
+          0.04765902090439608
+        ],
+        "frac_positive": 0.24489795918367346,
+        "occurrences": 397
+      },
+      {
+        "pattern": [
+          5,
+          1
+        ],
+        "name": "Comedy / Romance  ->  Thriller / Crime",
+        "searches": 38,
+        "members": 17,
+        "mean_S": -0.043794719517695646,
+        "ci95": [
+          -0.13357473258867344,
+          0.03219558355918593
+        ],
+        "frac_positive": 0.3684210526315789,
+        "occurrences": 239
+      },
+      {
+        "pattern": [
+          3,
+          1
+        ],
+        "name": "Sci-Fi / Action  ->  Thriller / Crime",
+        "searches": 92,
+        "members": 29,
+        "mean_S": -0.058618615879765516,
+        "ci95": [
+          -0.3072936296087378,
+          0.2070266129533189
+        ],
+        "frac_positive": 0.32608695652173914,
+        "occurrences": 323
+      },
+      {
+        "pattern": [
+          4,
+          4
+        ],
+        "name": "Comedy / Drama  ->  Comedy / Drama",
+        "searches": 45,
+        "members": 16,
+        "mean_S": -0.07336200461899235,
+        "ci95": [
+          -0.2806663228955469,
+          0.12741243500470356
+        ],
+        "frac_positive": 0.3333333333333333,
+        "occurrences": 102
+      },
+      {
+        "pattern": [
+          7,
+          1
+        ],
+        "name": "Horror / Thriller  ->  Thriller / Crime",
+        "searches": 22,
+        "members": 9,
+        "mean_S": -0.07906116992943903,
+        "ci95": [
+          -0.26325771466484377,
+          0.17938930897443384
+        ],
+        "frac_positive": 0.36363636363636365,
+        "occurrences": 52
+      },
+      {
+        "pattern": [
+          4,
+          0
+        ],
+        "name": "Comedy / Drama  ->  Drama / Romance",
+        "searches": 79,
+        "members": 25,
+        "mean_S": -0.09207386875983178,
+        "ci95": [
+          -0.3450352814267899,
+          0.11766488779130177
+        ],
+        "frac_positive": 0.3670886075949367,
+        "occurrences": 311
+      },
+      {
+        "pattern": [
+          2,
+          5
+        ],
+        "name": "Animation / Children  ->  Comedy / Romance",
+        "searches": 47,
+        "members": 17,
+        "mean_S": -0.09496128661925857,
+        "ci95": [
+          -0.19025773388668327,
+          -0.01788959371294915
+        ],
+        "frac_positive": 0.2978723404255319,
+        "occurrences": 372
+      },
+      {
+        "pattern": [
+          4,
+          5
+        ],
+        "name": "Comedy / Drama  ->  Comedy / Romance",
+        "searches": 54,
+        "members": 18,
+        "mean_S": -0.10259246515090689,
+        "ci95": [
+          -0.36352451694021476,
+          0.0709328375218823
+        ],
+        "frac_positive": 0.3333333333333333,
+        "occurrences": 166
+      },
+      {
+        "pattern": [
+          7,
+          0
+        ],
+        "name": "Horror / Thriller  ->  Drama / Romance",
+        "searches": 20,
+        "members": 8,
+        "mean_S": -0.1155968406833802,
+        "ci95": [
+          -0.3263585958099103,
+          0.13344018984093461
+        ],
+        "frac_positive": 0.3,
+        "occurrences": 30
+      },
+      {
+        "pattern": [
+          5,
+          0
+        ],
+        "name": "Comedy / Romance  ->  Drama / Romance",
+        "searches": 55,
+        "members": 19,
+        "mean_S": -0.11817049487360878,
+        "ci95": [
+          -0.40127893191574915,
+          0.09677188767017138
+        ],
+        "frac_positive": 0.21818181818181817,
+        "occurrences": 220
+      },
+      {
+        "pattern": [
+          0,
+          5
+        ],
+        "name": "Drama / Romance  ->  Comedy / Romance",
+        "searches": 55,
+        "members": 20,
+        "mean_S": -0.12261470801288125,
+        "ci95": [
+          -0.19519113304249344,
+          -0.05369298516238756
+        ],
+        "frac_positive": 0.14545454545454545,
+        "occurrences": 272
+      },
+      {
+        "pattern": [
+          0,
+          6
+        ],
+        "name": "Drama / Romance  ->  Documentary",
+        "searches": 19,
+        "members": 8,
+        "mean_S": -0.1427276714749917,
+        "ci95": [
+          -0.4221340815819577,
+          0.006744705581015177
+        ],
+        "frac_positive": 0.21052631578947367,
+        "occurrences": 124
+      },
+      {
+        "pattern": [
+          0,
+          4
+        ],
+        "name": "Drama / Romance  ->  Comedy / Drama",
+        "searches": 61,
+        "members": 19,
+        "mean_S": -0.15011796043233444,
+        "ci95": [
+          -0.2951139117636408,
+          -0.0007042494521740928
+        ],
+        "frac_positive": 0.32786885245901637,
+        "occurrences": 224
+      },
+      {
+        "pattern": [
+          3,
+          0
+        ],
+        "name": "Sci-Fi / Action  ->  Drama / Romance",
+        "searches": 66,
+        "members": 20,
+        "mean_S": -0.2136701543321352,
+        "ci95": [
+          -0.5600373206451964,
+          0.14039376970918238
+        ],
+        "frac_positive": 0.3181818181818182,
+        "occurrences": 209
+      },
+      {
+        "pattern": [
+          4,
+          1
+        ],
+        "name": "Comedy / Drama  ->  Thriller / Crime",
+        "searches": 55,
+        "members": 18,
+        "mean_S": -0.21583765610327113,
+        "ci95": [
+          -0.5005677591925499,
+          0.001887998186323394
+        ],
+        "frac_positive": 0.45454545454545453,
+        "occurrences": 196
+      },
+      {
+        "pattern": [
+          3,
+          7
+        ],
+        "name": "Sci-Fi / Action  ->  Horror / Thriller",
+        "searches": 16,
+        "members": 7,
+        "mean_S": -0.22625715964710424,
+        "ci95": [
+          -0.5402039473554019,
+          0.09792902849687665
+        ],
+        "frac_positive": 0.3125,
+        "occurrences": 60
+      },
+      {
+        "pattern": [
+          2,
+          2
+        ],
+        "name": "Animation / Children  ->  Animation / Children",
+        "searches": 89,
+        "members": 28,
+        "mean_S": -0.2731711426935191,
+        "ci95": [
+          -0.5040890224739155,
+          -0.04083122213119854
+        ],
+        "frac_positive": 0.2696629213483146,
+        "occurrences": 837
+      },
+      {
+        "pattern": [
+          2,
+          3
+        ],
+        "name": "Animation / Children  ->  Sci-Fi / Action",
+        "searches": 97,
+        "members": 34,
+        "mean_S": -0.2805594614795136,
+        "ci95": [
+          -0.5907274611184502,
+          0.02133644832869182
+        ],
+        "frac_positive": 0.38144329896907214,
+        "occurrences": 527
+      },
+      {
+        "pattern": [
+          4,
+          7
+        ],
+        "name": "Comedy / Drama  ->  Horror / Thriller",
+        "searches": 13,
+        "members": 4,
+        "mean_S": -0.28652936657462946,
+        "ci95": [
+          -0.506056260381157,
+          0.09286332864300614
+        ],
+        "frac_positive": 0.23076923076923078,
+        "occurrences": 21
+      },
+      {
+        "pattern": [
+          7,
+          3
+        ],
+        "name": "Horror / Thriller  ->  Sci-Fi / Action",
+        "searches": 27,
+        "members": 9,
+        "mean_S": -0.36754265722967283,
+        "ci95": [
+          -0.6658400095788216,
+          -0.059134311268986856
+        ],
+        "frac_positive": 0.25925925925925924,
+        "occurrences": 80
+      },
+      {
+        "pattern": [
+          3,
+          2
+        ],
+        "name": "Sci-Fi / Action  ->  Animation / Children",
+        "searches": 113,
+        "members": 34,
+        "mean_S": -0.37153904777804003,
+        "ci95": [
+          -0.7138127126699019,
+          -0.08815728327015762
+        ],
+        "frac_positive": 0.35398230088495575,
+        "occurrences": 572
+      },
+      {
+        "pattern": [
+          4,
+          3
+        ],
+        "name": "Comedy / Drama  ->  Sci-Fi / Action",
+        "searches": 73,
+        "members": 22,
+        "mean_S": -0.47455597707916397,
+        "ci95": [
+          -0.7297578739283175,
+          -0.23680622377685734
+        ],
+        "frac_positive": 0.2191780821917808,
+        "occurrences": 170
+      },
+      {
+        "pattern": [
+          3,
+          4
+        ],
+        "name": "Sci-Fi / Action  ->  Comedy / Drama",
+        "searches": 50,
+        "members": 18,
+        "mean_S": -0.49573172529215787,
+        "ci95": [
+          -0.7155307358410524,
+          -0.24433792608512342
+        ],
+        "frac_positive": 0.24,
+        "occurrences": 107
+      },
+      {
+        "pattern": [
+          3,
+          3
+        ],
+        "name": "Sci-Fi / Action  ->  Sci-Fi / Action",
+        "searches": 124,
+        "members": 39,
+        "mean_S": -0.5716102491781483,
+        "ci95": [
+          -0.8516293772313277,
+          -0.3233531315264008
+        ],
+        "frac_positive": 0.27419354838709675,
+        "occurrences": 670
+      },
+      {
+        "pattern": [
+          7,
+          4
+        ],
+        "name": "Horror / Thriller  ->  Comedy / Drama",
+        "searches": 12,
+        "members": 5,
+        "mean_S": -0.5883048017752156,
+        "ci95": [
+          -1.02903980811289,
+          0.10573907645306144
+        ],
+        "frac_positive": 0.16666666666666666,
+        "occurrences": 24
+      }
+    ],
+    "significant_positive": [
+      {
+        "pattern": [
+          7,
+          2
+        ],
+        "name": "Horror / Thriller  ->  Animation / Children",
+        "searches": 25,
+        "members": 10,
+        "mean_S": 1.4762813653097586,
+        "ci95": [
+          0.11419558342764535,
+          2.8255496755715943
+        ],
+        "frac_positive": 0.64,
+        "occurrences": 82
+      },
+      {
+        "pattern": [
+          0,
+          1
+        ],
+        "name": "Drama / Romance  ->  Thriller / Crime",
+        "searches": 138,
+        "members": 41,
+        "mean_S": 0.38342825901853883,
+        "ci95": [
+          0.13324688653125938,
+          0.6376694340649914
+        ],
+        "frac_positive": 0.5507246376811594,
+        "occurrences": 646
+      },
+      {
+        "pattern": [
+          1,
+          1
+        ],
+        "name": "Thriller / Crime  ->  Thriller / Crime",
+        "searches": 116,
+        "members": 35,
+        "mean_S": 0.3647212246993678,
+        "ci95": [
+          0.024695449154376277,
+          0.760713373668941
+        ],
+        "frac_positive": 0.49137931034482757,
+        "occurrences": 476
+      },
+      {
+        "pattern": [
+          0,
+          0
+        ],
+        "name": "Drama / Romance  ->  Drama / Romance",
+        "searches": 150,
+        "members": 44,
+        "mean_S": 0.3493619190046833,
+        "ci95": [
+          0.09155001454185506,
+          0.6341503536836611
+        ],
+        "frac_positive": 0.4533333333333333,
+        "occurrences": 1332
+      },
+      {
+        "pattern": [
+          0,
+          2
+        ],
+        "name": "Drama / Romance  ->  Animation / Children",
+        "searches": 106,
+        "members": 33,
+        "mean_S": 0.30044609559221225,
+        "ci95": [
+          0.0105042970120298,
+          0.6570641723593401
+        ],
+        "frac_positive": 0.4339622641509434,
+        "occurrences": 420
+      },
+      {
+        "pattern": [
+          1,
+          0
+        ],
+        "name": "Thriller / Crime  ->  Drama / Romance",
+        "searches": 103,
+        "members": 33,
+        "mean_S": 0.26407664022094407,
+        "ci95": [
+          0.04635413908948984,
+          0.5238158133377274
+        ],
+        "frac_positive": 0.5145631067961165,
+        "occurrences": 931
+      },
+      {
+        "pattern": [
+          6,
+          1
+        ],
+        "name": "Documentary  ->  Thriller / Crime",
+        "searches": 10,
+        "members": 5,
+        "mean_S": 0.0678822936731721,
+        "ci95": [
+          0.0009676373048291687,
+          0.1767515688659732
+        ],
+        "frac_positive": 0.5,
+        "occurrences": 44
+      }
+    ],
+    "note": "S(m) > 0: the model's support for the wrong title from this semantic-ID pattern is above what other patterns in the same timing/activity context get."
+  },
+  "wall_s": 8.1
+}

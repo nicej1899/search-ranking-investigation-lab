@@ -1,0 +1,184 @@
+{
+  "case_id": "C07-m59-t1393541892",
+  "member": 59,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Quiet Man, The (1952)",
+  "A_id": 3555,
+  "B_id": 1537,
+  "member_id": 59,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 71044,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 281",
+        "from_id": 3555,
+        "to_id": 281,
+        "rating": 4.5,
+        "date": "2013-09-06",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 71855,
+        "from": "user 59",
+        "to": "Ransom (1996)",
+        "from_id": 59,
+        "to_id": 1255,
+        "rating": 3.0,
+        "date": "2014-02-27",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 71858,
+        "from": "user 59",
+        "to": "Glory (1989)",
+        "from_id": 59,
+        "to_id": 1551,
+        "rating": 4.0,
+        "date": "2014-02-27",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 1.2062667792709905,
+      "nodes": [
+        {
+          "id": 15,
+          "name": "user 15"
+        },
+        {
+          "id": 281,
+          "name": "user 281"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 70940,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 15",
+          "from_id": 3555,
+          "to_id": 15,
+          "rating": 4.0,
+          "date": "2013-08-26"
+        },
+        {
+          "eid": 71044,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 281",
+          "from_id": 3555,
+          "to_id": 281,
+          "rating": 4.5,
+          "date": "2013-09-06"
+        }
+      ]
+    },
+    "n_model_runs": 129
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 71856,
+        "from": "user 59",
+        "to": "Pocahontas (1995)",
+        "from_id": 59,
+        "to_id": 654,
+        "rating": 3.0,
+        "date": "2014-02-27",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 71857,
+        "from": "user 59",
+        "to": "Time to Kill, A (1996)",
+        "from_id": 59,
+        "to_id": 1243,
+        "rating": 4.0,
+        "date": "2014-02-27",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 71859,
+        "from": "user 59",
+        "to": "Hunchback of Notre Dame, The (1996)",
+        "from_id": 59,
+        "to_id": 1228,
+        "rating": 4.0,
+        "date": "2014-02-27",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.0527074894483206,
+      "nodes": [
+        {
+          "id": 59,
+          "name": "user 59"
+        },
+        {
+          "id": 654,
+          "name": "Pocahontas (1995)"
+        },
+        {
+          "id": 1228,
+          "name": "Hunchback of Notre Dame, The (1996)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 71856,
+          "from": "user 59",
+          "to": "Pocahontas (1995)",
+          "from_id": 59,
+          "to_id": 654,
+          "rating": 3.0,
+          "date": "2014-02-27"
+        },
+        {
+          "eid": 71859,
+          "from": "user 59",
+          "to": "Hunchback of Notre Dame, The (1996)",
+          "from_id": 59,
+          "to_id": 1228,
+          "rating": 4.0,
+          "date": "2014-02-27"
+        }
+      ]
+    },
+    "n_model_runs": 129
+  },
+  "test": {
+    "p0": 0.9939055757227748,
+    "del_A": {
+      "p": 0.9817802494581558,
+      "p_random": 0.9937840014506609,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9967076718584549,
+      "p_random": 0.9919356760570441,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.3333333333333333,
+    "B_from_member_history": 1.0,
+    "shared_links": []
+  }
+}

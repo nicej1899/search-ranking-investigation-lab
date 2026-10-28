@@ -1,0 +1,36 @@
+{
+  "model_id": "F2",
+  "kind": "F2",
+  "gate": [
+    -0.9791386127471924,
+    0.37245216965675354
+  ],
+  "parent": "F0",
+  "weights": [
+    0.14982351660728455,
+    1.0353513956069946,
+    0.2724309265613556
+  ],
+  "norm": {
+    "beh": [
+      -7.569419680156213,
+      8.988431676984119
+    ],
+    "rel": [
+      0.6239212372656334,
+      0.12431915145456685
+    ],
+    "pop": [
+      2.222536935833016,
+      1.2050443977192657
+    ],
+    "fit_on": "DEV candidate sets (1268 cases)"
+  },
+  "created": "2026-10-22T14:44:19-0400",
+  "F0_config_hash": "d3330eed63320c1a",
+  "dev_cases": 1996,
+  "dev_loss": 0.5113738775253296,
+  "changed_mechanism": "history-length gate on behaviour: exp(a0 + a1*(log(1+n_history) - log 6))",
+  "fit_on": "DEV original + DEV coldstart cases",
+  "config_hash": "981dc96e337775d2"
+}

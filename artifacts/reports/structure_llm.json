@@ -1,0 +1,718 @@
+{
+  "created": "2026-10-22T22:37:07-0400",
+  "llm": "written by Claude Sonnet from the evidence above (pre-generated for the 32 searches)",
+  "answers": {
+    "C07-m1-t1445714882": [
+      {
+        "headline": "Several people (users 325 and 365) rated Requiem for a Dream, which lifts it over Next Three Days, The.",
+        "mechanism": "The model builds Requiem for a Dream's representation from the people who rated it recently, such as user 325 (4.5\u2605, 2015-07-14) and user 365 (4.0\u2605, 2015-10-22). Those recent, well-rated links add up to a strong history score for that title. The model relies on this structure 3.0x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence that Requiem for a Dream beats Next Three Days, The from 70% to 60% (random deletions: 69%, p = 0.02), and the score gap from 0.54 to 0.28 (random: 0.53).",
+        "verdict": "cause",
+        "action": "Cap or normalise how much a title's history score can grow from a few recent raters, so popularity does not outweigh the text match."
+      },
+      {
+        "headline": "A path of shared taste links Inception to Requiem for a Dream through users 75 and 365.",
+        "mechanism": "User 365 rated both Inception and Requiem for a Dream (4.0\u2605 each on 2015-10-22), and user 75 also rated Inception. Member 1 rated Inception 4.0\u2605, so the model passes some of that taste through user 365 to Requiem for a Dream. This is the second layer of the two-layer graph model at work.",
+        "evidence": "Deleting it moves confidence from 70% to 65% (random deletions: 70%, p = 0.10), and the score gap from 0.54 to 0.40 (random: 0.55).",
+        "verdict": "not shown to be a cause",
+        "action": "Monitor taste-path boosts like this one, but there is no case yet for changing the ranker because of it."
+      },
+      {
+        "headline": "Users 377 and 1 both rated Shawshank Redemption, The, which links Member 1 to Requiem for a Dream's audience.",
+        "mechanism": "Member 1 (user 1) rated Shawshank Redemption 3.0\u2605 on 2015-10-24, the same title user 377 rated 4.5\u2605 on 2015-10-20. The shared title ties the two people together in the graph, so user 377's other ratings feed into Member 1's representation. The model relies on it only 0.6x as much as on comparable structures, yet removing it still moved the result.",
+        "evidence": "Deleting it moves confidence from 70% to 64% (random deletions: 69%, p = 0.02), and the score gap from 0.54 to 0.37 (random: 0.54).",
+        "verdict": "cause",
+        "action": "Check whether co-rating links to very popular titles like Shawshank Redemption should carry less weight in the history score."
+      }
+    ],
+    "C07-m59-t1393541892": [
+      {
+        "headline": "Several people (users 15 and 281) rated Requiem for a Dream, which props up its lead over Quiet Man, The.",
+        "mechanism": "Requiem for a Dream's representation is built from recent raters such as user 15 (4.0\u2605, 2013-08-26) and user 281 (4.5\u2605, 2013-09-06). Those links raise its history score. The model relies on this structure 1.2x as much as on comparable structures.",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.02), but the score gap falls from 3.33 to 2.75 (random: 3.33).",
+        "verdict": "cause",
+        "action": "Test a cap on how far recent popularity can lift a title's history score, since the lead is large and mostly comes from this kind of signal."
+      },
+      {
+        "headline": "Users 15 and 281 both rated Requiem for a Dream, creating a co-rating link around that title.",
+        "mechanism": "Two people rating the same movie tie their representations together in the graph. Member 59's representation draws on such neighbours, so Requiem for a Dream's score is shared across them. The model relies on this structure 0.8x as much as on comparable structures.",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.02), but the score gap falls from 3.33 to 2.75 (random: 3.33).",
+        "verdict": "cause",
+        "action": "Look at whether co-rating edges on the same title are double counted alongside the popularity signal."
+      },
+      {
+        "headline": "User 281 rated Requiem for a Dream and then Pirates of the Caribbean: The Curse of the Black Pearl on the same day.",
+        "mechanism": "Both ratings are dated 2013-09-06, so the model links the two titles through user 281 with a strong recency weight. That sequence carries Requiem for a Dream's signal into the wider graph. The model relies on it 1.0x as much as on comparable structures.",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.02), but the score gap falls from 3.33 to 2.91 (random: 3.33).",
+        "verdict": "cause",
+        "action": "Consider down-weighting same-day rating sequences, which may reflect one rating session and not a real link between titles."
+      }
+    ],
+    "C07-m62-t1443199688": [
+      {
+        "headline": "Several people (users 316 and 325) rated Requiem for a Dream, which boosts it over Thin Red Line, The.",
+        "mechanism": "Requiem for a Dream's representation is built from recent raters such as user 316 (4.0\u2605, 2015-04-30) and user 325 (4.5\u2605, 2015-07-14). These links raise its history score. The model relies on this structure 8.1x as much as on comparable structures, the strongest reliance in this case.",
+        "evidence": "Deleting it moves confidence from 99% to 96% (random deletions: 99%, p = 0.02), and the score gap from 3.02 to 2.00 (random: 3.01).",
+        "verdict": "cause",
+        "action": "Add a cap or smoothing on popularity-driven history scores so a handful of recent raters cannot dominate the ranking."
+      },
+      {
+        "headline": "Users 316 and 102 both rated Requiem for a Dream, linking them through that title.",
+        "mechanism": "The shared title ties the two people together, so their other ratings feed into the representation of the title and of Member 62. The model relies on this only 0.2x as much as on comparable structures. Its effect is small but measurable.",
+        "evidence": "Deleting it moves confidence from 99% to 98% (random deletions: 99%, p = 0.05), and the score gap from 3.02 to 2.45 (random: 3.04).",
+        "verdict": "cause",
+        "action": "Treat this as a minor contributor; no ranker change is needed on its own."
+      },
+      {
+        "headline": "A shared-taste path runs from Jurassic Park through users 20 and 102 to Requiem for a Dream.",
+        "mechanism": "Users 20 and 102 both rated Jurassic Park 4.0\u2605, and user 102 rated Requiem for a Dream 5.0\u2605 on 2015-05-18. Member 62 rated Jurassic Park 2.5\u2605 (2015-09-25), so taste is passed along that path to Requiem for a Dream.",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.12), and the score gap moves from 3.02 to 2.76 (random: 3.04).",
+        "verdict": "not shown to be a cause",
+        "action": "No change is justified by this structure alone."
+      }
+    ],
+    "C07-m72-t1464196245": [
+      {
+        "headline": "Several people (users 580 and 17) rated Requiem for a Dream, putting it ahead of Rain Man.",
+        "mechanism": "Requiem for a Dream's representation is built from recent raters, here user 580 (4.5\u2605, 2015-11-08) and user 17 (4.5\u2605, 2016-02-15). Those links raise its history score. The model relies on this structure 2.7x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence from 56% to 47% (random deletions: 57%, p = 0.02), and the score gap from 0.17 to -0.09 (random: 0.19), which flips the order.",
+        "verdict": "cause",
+        "action": "This looks like the main driver: test limiting popularity-based lift in the history score, since removing it reverses the ranking."
+      },
+      {
+        "headline": "A shared-taste path through user 40 links Requiem for a Dream to Rain Man, the better match.",
+        "mechanism": "User 40 rated Requiem for a Dream 4.0\u2605 (2016-03-25) and Rain Man 4.0\u2605 (2016-03-30), and user 494 also rated Requiem for a Dream. This path ends at Rain Man, so it works partly in Rain Man's favour. The model relies on it only 0.2x as much as on comparable structures.",
+        "evidence": "Confidence moves from 56% to 55% (random deletions: 56%, p = 0.05), and the score gap from 0.17 to 0.12 (random: 0.17).",
+        "verdict": "cause",
+        "action": "The effect is small; no ranker change is needed for it alone."
+      },
+      {
+        "headline": "A shared-taste path runs from The Truman Show through users 423 and 494 to Requiem for a Dream.",
+        "mechanism": "User 494 rated Truman Show, The 4.5\u2605 and Requiem for a Dream 4.0\u2605, both on 2016-03-22. Member 72 rated Truman Show 5.0\u2605 (2016-05-25), so that taste is passed to Requiem for a Dream. The model relies on it 0.6x as much as on comparable structures.",
+        "evidence": "Confidence moves from 56% to 55% (random deletions: 56%, p = 0.02), and the score gap from 0.17 to 0.13 (random: 0.17).",
+        "verdict": "cause",
+        "action": "Keep taste-path signals, but watch that they do not stack on top of the popularity signal."
+      }
+    ],
+    "C07-m105-t1467360422": [
+      {
+        "headline": "A shared-taste path runs from The Two Towers via users 40 and 304 to Requiem for a Dream.",
+        "mechanism": "User 304 rated both Lord of the Rings: The Two Towers and Requiem for a Dream 5.0\u2605 on 2016-04-08. Member 105 rated The Two Towers 5.0\u2605 (2016-07-01), so the model carries that taste along the path to Requiem for a Dream. The model relies on it 3.2x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence from 48% to 46% (random deletions: 50%, p = 0.02), and the score gap from -0.06 to -0.12 (random: -0.00).",
+        "verdict": "cause",
+        "action": "Review whether taste paths from very popular franchises should be allowed to lift an unrelated drama in the history score."
+      },
+      {
+        "headline": "Several people (users 40 and 304) rated Requiem for a Dream, adding to its history score.",
+        "mechanism": "Requiem for a Dream's representation is built from recent raters such as user 40 (4.0\u2605, 2016-03-25) and user 304 (5.0\u2605, 2016-04-08). These links raise its history score against Last Samurai, The. The model relies on this structure 2.3x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence from 48% to 44% (random deletions: 49%, p = 0.02), and the score gap from -0.06 to -0.16 (random: -0.01).",
+        "verdict": "cause",
+        "action": "Test a cap on how much a small number of recent raters can add to a title's history score."
+      },
+      {
+        "headline": "A shared-taste path runs from The Fellowship of the Ring via users 304 and 338 to Last Samurai, The.",
+        "mechanism": "User 338 rated Last Samurai 4.5\u2605 (2016-04-13) and The Fellowship of the Ring 3.5\u2605, and user 304 also rated the Fellowship. This path ends at the better match, so it works in its favour. The model does not rely on it (0.0x).",
+        "evidence": "Deleting it moves confidence from 48% to 62% (random deletions: 49%, p = 0.93), and the score gap from -0.06 to 0.33 (random: -0.03).",
+        "verdict": "not shown to be a cause",
+        "action": "This path pushes toward the better match, so keep it; it is not what put Requiem for a Dream first."
+      }
+    ],
+    "C07-m118-t1435943180": [
+      {
+        "headline": "Several people (users 316 and 102) rated Requiem for a Dream, lifting it over Rob Roy.",
+        "mechanism": "Requiem for a Dream's representation is built from recent raters such as user 316 (4.0\u2605, 2015-04-30) and user 102 (5.0\u2605, 2015-05-18). These links raise its history score. The model relies on this structure 3.5x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence from 99% to 96% (random deletions: 99%, p = 0.02), and the score gap from 2.84 to 2.08 (random: 2.83).",
+        "verdict": "cause",
+        "action": "Test a cap or smoothing on popularity-driven history scores, as they are the largest contributor here."
+      },
+      {
+        "headline": "A shared-taste path runs from American History X via users 299 and 316 to Requiem for a Dream.",
+        "mechanism": "User 316 rated American History X 5.0\u2605 and Requiem for a Dream 4.0\u2605, both on 2015-04-30. Member 118 rated American History X 4.0\u2605 (2015-07-03), so that taste is passed to Requiem for a Dream. The model relies on it 2.1x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence from 99% to 98% (random deletions: 99%, p = 0.02), and the score gap from 2.84 to 2.50 (random: 2.84).",
+        "verdict": "cause",
+        "action": "Consider limiting how far taste paths through one shared person can lift a title."
+      },
+      {
+        "headline": "Users 496 and 118 both rated The Matrix, linking Member 118 to other viewers of that title.",
+        "mechanism": "Member 118 rated Matrix, The 4.0\u2605 (2015-07-03) and user 496 rated it 2.5\u2605 (2015-04-15), so the two are tied in the graph. User 496's other ratings then feed into Member 118's representation. The model relies on it 0.5x as much as on comparable structures.",
+        "evidence": "Confidence moves from 99% to 98% (random deletions: 99%, p = 0.17), and the score gap from 2.84 to 2.68 (random: 2.81).",
+        "verdict": "not shown to be a cause",
+        "action": "No change is justified by this structure alone."
+      }
+    ],
+    "C07-m121-t1461561151": [
+      {
+        "headline": "Several people (users 40 and 304) rated Requiem for a Dream, lifting it over My Life.",
+        "mechanism": "Requiem for a Dream's representation is built from recent raters such as user 40 (4.0\u2605, 2016-03-25) and user 304 (5.0\u2605, 2016-04-08). These links raise its history score. The model relies on this structure 4.7x as much as on comparable structures.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), but the score gap falls from 5.61 to 5.42 (random: 5.61).",
+        "verdict": "cause",
+        "action": "The lead is very large, so this is a modest effect; consider a cap on popularity-driven history scores if over-ranking recurs."
+      },
+      {
+        "headline": "A shared-taste path runs from Fight Club via users 17 and 40 to Requiem for a Dream.",
+        "mechanism": "User 40 rated Fight Club 4.0\u2605 and Requiem for a Dream 4.0\u2605, both on 2016-03-25. Member 121 rated Fight Club 5.0\u2605 (2016-04-25), so that taste is passed to Requiem for a Dream. The model relies on it 1.6x as much as on comparable structures.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), but the score gap falls from 5.61 to 5.52 (random: 5.61).",
+        "verdict": "cause",
+        "action": "The effect is small; no ranker change is needed for it alone."
+      },
+      {
+        "headline": "User 40 rated Requiem for a Dream and Silence of the Lambs, The on the same day.",
+        "mechanism": "Both ratings are 4.0\u2605 on 2016-03-25, so the model links the two titles through user 40. Member 121 rated Silence of the Lambs 5.0\u2605 (2016-04-25), which carries some signal to Requiem for a Dream. The model relies on it 0.5x as much as on comparable structures.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), but the score gap falls from 5.61 to 5.53 (random: 5.61).",
+        "verdict": "cause",
+        "action": "The effect is small; consider down-weighting same-day rating sequences only if similar cases keep appearing."
+      }
+    ],
+    "C07-m122-t1447269105": [
+      {
+        "headline": "Several people (users 365 and 255) rated Requiem for a Dream, lifting it over Great Escape, The.",
+        "mechanism": "Requiem for a Dream's representation is built from recent raters such as user 365 (4.0\u2605, 2015-10-22) and user 255 (4.0\u2605, 2015-11-03). These links raise its history score. The model relies on this structure 3.5x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence from 65% to 54% (random deletions: 65%, p = 0.02), and the score gap from 0.41 to 0.11 (random: 0.41).",
+        "verdict": "cause",
+        "action": "Test a cap or smoothing on popularity-driven history scores, as they are the main driver of this ordering."
+      },
+      {
+        "headline": "Users 226 and 122 both rated The Matrix, linking Member 122 to other viewers of that title.",
+        "mechanism": "Member 122 rated Matrix, The 4.0\u2605 (2015-11-11) and user 226 rated it 4.5\u2605 (2015-11-10), one day earlier. The recent shared title ties the two together, so user 226's other ratings feed into Member 122's representation. The model relies on it 1.5x as much as on comparable structures.",
+        "evidence": "Deleting it moves confidence from 65% to 63% (random deletions: 65%, p = 0.02), and the score gap from 0.41 to 0.34 (random: 0.41).",
+        "verdict": "cause",
+        "action": "The effect is small; no ranker change is needed for it alone."
+      },
+      {
+        "headline": "A shared-taste path runs from The Matrix via users 111 and 62 to Great Escape, The.",
+        "mechanism": "User 62 rated Matrix, The 3.5\u2605 and Great Escape, The 4.0\u2605, both on 2015-09-25, and user 111 also rated The Matrix. This path ends at the better match, so it works in its favour. The model does not rely on it (0.0x).",
+        "evidence": "Deleting it moves confidence from 65% to 86% (random deletions: 66%, p = 1.00), and the score gap from 0.41 to 1.20 (random: 0.43).",
+        "verdict": "not shown to be a cause",
+        "action": "This path pushes toward the better match, so keep it; it is not what put Requiem for a Dream first."
+      }
+    ],
+    "C07-m142-t1444768677": [
+      {
+        "headline": "Several people's recent ratings of Requiem for a Dream (2000) drive the model's preference for it over I Love You, I Love You Not (1996).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 325 and user 62 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it moves confidence from 99% to 98% (random deletions: 99%, p = 0.02), and the score gap goes from 3.14 to 2.65 (random deletions: 3.13).",
+        "verdict": "cause",
+        "action": "Cap or discount the history score for titles whose boost comes mainly from a cluster of other people's recent ratings."
+      },
+      {
+        "headline": "Two people who both rated American Pie (1999), user 482 and user 142, link this member to Requiem for a Dream (2000).",
+        "mechanism": "The graph model builds each person from the titles they rated, so user 482 and user 142 share a representation path through American Pie (1999). That path has only a small effect on how Requiem for a Dream (2000) is scored for this member.",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.02), and the score gap goes from 3.14 to 2.96 (random deletions: 3.12).",
+        "verdict": "cause",
+        "action": "Little to change here; the effect is small, so this link is a low priority for any ranking adjustment."
+      },
+      {
+        "headline": "Member 142 rated American Pie (1999) and then Frozen (2013) on the same day, 2015-10-13.",
+        "mechanism": "The model uses recent rating links with recency weighting, so these two same-day ratings shape member 142's representation. That representation is then compared with the candidate titles, but the sequence gives only a modest push towards Requiem for a Dream (2000).",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.02), and the score gap goes from 3.14 to 2.88 (random deletions: 3.14).",
+        "verdict": "cause",
+        "action": "Consider whether same-day batches of ratings should be down-weighted so they do not dominate a member's profile."
+      }
+    ],
+    "C07-m176-t1435523542": [
+      {
+        "headline": "Recent ratings of Requiem for a Dream (2000) by several people drive the model's preference for it over Last Man Standing (1996).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 316 and user 102 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it leaves confidence at 100% (random deletions: 100%, p = 0.02), but the score gap goes from 4.45 to 3.48 (random deletions: 4.45).",
+        "verdict": "cause",
+        "action": "Reduce the weight of the history score for titles lifted mainly by other people's recent ratings, and check that the text match still decides relevance."
+      },
+      {
+        "headline": "A chain of shared taste via The Shawshank Redemption (1994) connects member 176 to Requiem for a Dream (2000).",
+        "mechanism": "Users 536 and 316 both rated Shawshank Redemption, The (1994), and user 316 also rated Requiem for a Dream (2000). The two-layer model passes information along this path, so member 176's liking for Shawshank lifts Requiem for a Dream (2000) even though nothing in the query points to it.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), and the score gap goes from 4.45 to 4.03 (random deletions: 4.44).",
+        "verdict": "cause",
+        "action": "Limit how far collaborative paths can carry a boost to a title in a different genre mood from the query."
+      },
+      {
+        "headline": "Users 536 and 176 both rated The Shawshank Redemption (1994), but this link is not shown to explain the ranking.",
+        "mechanism": "Sharing a rated title gives the model a small connection between the two people. For this case the effect on Requiem for a Dream (2000) is minor.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.10), and the score gap goes from 4.45 to 4.37 (random deletions: 4.42).",
+        "verdict": "not shown to be a cause",
+        "action": "No ranking change is justified by this structure."
+      }
+    ],
+    "C07-m188-t1439465085": [
+      {
+        "headline": "Recent ratings of Requiem for a Dream (2000) by several people drive the model's preference for it over No Way Out (1987).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 316 and user 325 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it leaves confidence at 100% (random deletions: 100%, p = 0.02), but the score gap goes from 4.75 to 3.63 (random deletions: 4.74).",
+        "verdict": "cause",
+        "action": "Add a cap on the popularity-driven part of the history score so a handful of recent ratings cannot outweigh the text match."
+      },
+      {
+        "headline": "Users 230 and 188 both rated The Matrix (1999), a link with very little effect on the ranking.",
+        "mechanism": "The shared title connects member 188 to user 230 in the graph. The model relies on this link far less than on comparable structures, and it adds only a little to the score for Requiem for a Dream (2000).",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.05), and the score gap goes from 4.75 to 4.58 (random deletions: 4.73).",
+        "verdict": "cause",
+        "action": "Treat it as minor; no ranking change is needed for this link alone."
+      },
+      {
+        "headline": "A chain of shared taste via The Shawshank Redemption (1994) connects member 188 to Requiem for a Dream (2000).",
+        "mechanism": "User 343 and user 316 both rated Shawshank Redemption, The (1994), and user 316 also rated Requiem for a Dream (2000). The model carries this path to member 188, who also rated Shawshank, and it lifts Requiem for a Dream (2000).",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), and the score gap goes from 4.75 to 4.45 (random deletions: 4.74).",
+        "verdict": "cause",
+        "action": "Limit how much multi-step collaborative paths can lift a title that the text match does not support."
+      }
+    ],
+    "C07-m226-t1447189556": [
+      {
+        "headline": "Recent ratings of Requiem for a Dream (2000) by several people drive the model's preference for it over P.S. I Love You (2007).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 365 and user 255 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it moves confidence from 97% to 95% (random deletions: 97%, p = 0.02), and the score gap goes from 2.23 to 1.96 (random deletions: 2.24).",
+        "verdict": "cause",
+        "action": "Down-weight history-score boosts that come mainly from a few other people's recent ratings of a single title."
+      },
+      {
+        "headline": "Users 581 and 226 both rated The Matrix (1999), a small link towards Requiem for a Dream (2000).",
+        "mechanism": "The shared title connects member 226 to user 581 in the graph, and the model passes that neighbour's taste into the scores. The effect on Requiem for a Dream (2000) is small.",
+        "evidence": "Confidence moves from 97% to 96% (random deletions: 97%, p = 0.02), and the score gap goes from 2.23 to 2.07 (random deletions: 2.24).",
+        "verdict": "cause",
+        "action": "Low priority; no specific ranking change is needed."
+      },
+      {
+        "headline": "A chain via The Dark Knight (2008) connects member 226 to Requiem for a Dream (2000) through user 365.",
+        "mechanism": "User 111 and user 365 both rated Dark Knight, The (2008), and user 365 also rated Requiem for a Dream (2000). Member 226 rated The Dark Knight too, so the model carries a small lift along this path.",
+        "evidence": "Confidence moves from 97% to 96% (random deletions: 97%, p = 0.02), and the score gap goes from 2.23 to 2.12 (random deletions: 2.23).",
+        "verdict": "cause",
+        "action": "Consider limiting the path length that collaborative boosts can travel when the query names a mood."
+      }
+    ],
+    "C07-m232-t1448815881": [
+      {
+        "headline": "Recent ratings of Requiem for a Dream (2000) by several people drive the model's preference for it over Something to Talk About (1995).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 365 and user 255 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it leaves confidence at 99% (random deletions: 99%, p = 0.02), but the score gap goes from 3.15 to 2.87 (random deletions: 3.14).",
+        "verdict": "cause",
+        "action": "Reduce the weight of the history score for titles boosted mostly by a few recent raters."
+      },
+      {
+        "headline": "Users 1 and 232 both rated The Shawshank Redemption (1994), which pulls member 232 towards Requiem for a Dream (2000).",
+        "mechanism": "The shared title links member 232 to user 1 in the graph, and the model blends that neighbour's other ratings into the score. This gives a noticeable lift to Requiem for a Dream (2000).",
+        "evidence": "Confidence moves from 99% to 98% (random deletions: 99%, p = 0.02), and the score gap goes from 3.15 to 2.72 (random deletions: 3.15).",
+        "verdict": "cause",
+        "action": "Check whether a single very popular shared title like Shawshank should be allowed to link members so strongly."
+      },
+      {
+        "headline": "A chain via The Shawshank Redemption (1994) connects member 232 to Requiem for a Dream (2000) through user 255.",
+        "mechanism": "User 104 and user 255 both rated Shawshank Redemption, The (1994), and user 255 also rated Requiem for a Dream (2000). The model carries this path to member 232, adding only a small lift.",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.02), and the score gap goes from 3.15 to 3.06 (random deletions: 3.14).",
+        "verdict": "cause",
+        "action": "Low priority; the effect is small."
+      }
+    ],
+    "C07-m250-t1470676715": [
+      {
+        "headline": "Recent ratings of Requiem for a Dream (2000) by several people push it ahead of Rain Man (1988).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 17 and user 246 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it moves confidence from 44% to 32% (random deletions: 46%, p = 0.02), and the score gap goes from -0.15 to -0.49 (random deletions: -0.11).",
+        "verdict": "cause",
+        "action": "Cap the popularity-style boost in the history score, since without this structure Rain Man (1988) would rank clearly higher."
+      },
+      {
+        "headline": "A chain via Rain Man (1988) and user 17 connects to Requiem for a Dream (2000), with only a small effect on the ranking.",
+        "mechanism": "User 102 and user 17 both rated Rain Man (1988), and user 17 also rated Requiem for a Dream (2000). The model uses this path but relies on it less than on comparable structures.",
+        "evidence": "Confidence moves from 44% to 43% (random deletions: 46%, p = 0.02), and the score gap goes from -0.15 to -0.19 (random deletions: -0.10).",
+        "verdict": "cause",
+        "action": "Minor effect; no ranking change is needed for this path alone."
+      },
+      {
+        "headline": "Users 17 and 121 both rated Requiem for a Dream (2000), which adds to its score for member 250.",
+        "mechanism": "Two people rating the same title give the model a shared connection through that title. This raises the score of Requiem for a Dream (2000) slightly.",
+        "evidence": "Confidence moves from 44% to 41% (random deletions: 46%, p = 0.02), and the score gap goes from -0.15 to -0.22 (random deletions: -0.10).",
+        "verdict": "cause",
+        "action": "Consider discounting repeated co-rating links on the same title so they do not stack with the popularity boost."
+      }
+    ],
+    "C07-m255-t1446579739": [
+      {
+        "headline": "Recent ratings of Requiem for a Dream (2000) by several people drive the model's preference for it over Let Me In (2010).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 325 and user 104 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it moves confidence from 100% to 99% (random deletions: 100%, p = 0.02), and the score gap goes from 4.10 to 3.33 (random deletions: 4.10).",
+        "verdict": "cause",
+        "action": "Reduce the popularity-driven part of the history score so the text match carries more weight for mood-based queries."
+      },
+      {
+        "headline": "Users 104 and 255 both rated The Matrix (1999), which lifts Requiem for a Dream (2000) for member 255.",
+        "mechanism": "The shared title links member 255 to user 104, who also rated Requiem for a Dream (2000). The model blends that neighbour's ratings into member 255's profile, giving a moderate lift.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), and the score gap goes from 4.10 to 3.84 (random deletions: 4.10).",
+        "verdict": "cause",
+        "action": "Check whether links through very common titles like The Matrix should count for less."
+      },
+      {
+        "headline": "A chain via Raiders of the Lost Ark (1981) connects member 255 to Requiem for a Dream (2000) through user 62.",
+        "mechanism": "User 508 and user 62 both rated Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981), and user 62 also rated Requiem for a Dream (2000). Member 255 rated Raiders too, so the model carries a small lift along this path.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), and the score gap goes from 4.10 to 3.93 (random deletions: 4.10).",
+        "verdict": "cause",
+        "action": "Low priority; the effect is small."
+      }
+    ],
+    "C07-m260-t1404880899": [
+      {
+        "headline": "Recent ratings of Requiem for a Dream (2000) by users 15 and 281 push it ahead of For a Few Dollars More (1965).",
+        "mechanism": "The graph model builds a title's representation from the people who rated it recently, weighted by attention and recency. Recent ratings of Requiem for a Dream (2000) from user 15 and user 281 feed straight into that title's representation, so the title scores higher against this member. This is a popularity-style effect rather than a taste match.",
+        "evidence": "Deleting it moves confidence from 58% to 40% (random deletions: 58%, p = 0.02), and the score gap goes from 0.21 to -0.27 (random deletions: 0.20).",
+        "verdict": "cause",
+        "action": "Cap the popularity-style boost; without it the better match would rank first."
+      },
+      {
+        "headline": "Users 15 and 281 both rated Requiem for a Dream (2000), the same pair of ratings as the popularity structure.",
+        "mechanism": "The model sees the same two recent rating links on Requiem for a Dream (2000), so deleting this instance removes the same evidence. The effect is therefore identical to the popularity structure rather than a separate cause.",
+        "evidence": "Confidence moves from 58% to 40% (random deletions: 58%, p = 0.02), and the score gap goes from 0.21 to -0.27 (random deletions: 0.20).",
+        "verdict": "cause",
+        "action": "Treat it together with the popularity structure; one change to the weighting of these links covers both."
+      },
+      {
+        "headline": "User 281 rated Requiem for a Dream (2000) and then Boys Don't Cry (1999) on the same day, 2013-09-06.",
+        "mechanism": "Both ratings are recent links from user 281, who is connected to Requiem for a Dream (2000) in the graph. The model uses them to build that title's representation, which lifts its score for this member.",
+        "evidence": "Confidence moves from 58% to 43% (random deletions: 58%, p = 0.02), and the score gap goes from 0.21 to -0.19 (random deletions: 0.20).",
+        "verdict": "cause",
+        "action": "Consider down-weighting same-day batches of ratings from one person when building a title's representation."
+      }
+    ],
+    "C07-m281-t1378488934": [
+      {
+        "headline": "Several people (users 130 and 245) rated Requiem for a Dream low, and that popularity pattern feeds its graph score.",
+        "mechanism": "The model builds the title's representation from the people who recently rated it, here users 130 and 245. Those recent links feed Requiem for a Dream's history score, which the ranker adds to its text-match and popularity scores. Removing them moved the result, but towards Requiem, not away from it.",
+        "evidence": "Deleting it moved confidence from 51% to 66% (random deletions: 51%, p = 1.00), and the score gap went from 0.02 to 0.44 (random deletions: 0.03).",
+        "verdict": "not shown to be a cause",
+        "action": "Do not change the ranker for this structure; its removal makes Requiem for a Dream look better, so it is not what put the title first."
+      },
+      {
+        "headline": "A shared-taste path links Sense and Sensibility (users 356 and 245, both 5.0\u2605) to Requiem for a Dream through user 245.",
+        "mechanism": "User 245 rated both titles on 2012-11-28, so the model can pass information from Sense and Sensibility's raters to Requiem for a Dream's representation through that person. This path was found, but deleting it did not lower the preference for Requiem for a Dream.",
+        "evidence": "Deleting it moved confidence from 51% to 59% (random deletions: 50%, p = 1.00), and the score gap went from 0.02 to 0.23 (random deletions: 0.01).",
+        "verdict": "not shown to be a cause",
+        "action": "No ranking change is justified by this path; keep it out of any list of explanations for the ordering."
+      },
+      {
+        "headline": "User 281 and user 130 both rated Dangerous Minds, linking member 281 to Requiem for a Dream's raters.",
+        "mechanism": "Both users rated Dangerous Minds, so the model connects member 281's representation to user 130, who also rated Requiem for a Dream. That link carries a small amount of influence into the history score for the first title.",
+        "evidence": "Deleting it moved confidence from 51% to 50% (random deletions: 51%, p = 0.12), and the score gap went from 0.02 to 0.01 (random deletions: 0.01).",
+        "verdict": "not shown to be a cause",
+        "action": "Leave the ranking unchanged for this structure; the effect is no larger than random deletions."
+      }
+    ],
+    "C07-m284-t1449626093": [
+      {
+        "headline": "Users 365 and 255 both rated Requiem for a Dream 4.0\u2605 in late 2015, a popularity signal that supports its first place.",
+        "mechanism": "The model builds Requiem for a Dream's representation from its recent raters, here users 365 and 255. These recent, well-rated links raise its history score, which the ranker adds to the text-match and popularity scores.",
+        "evidence": "Deleting it moved confidence from 97% to 96% (random deletions: 97%, p = 0.02), and the score gap went from 2.21 to 2.01 (random deletions: 2.20).",
+        "verdict": "cause",
+        "action": "Cap or discount the weight of a few recent ratings in the history score for broad queries like this one, or add a check that flags titles whose lead depends on them."
+      },
+      {
+        "headline": "A shared-taste path runs from The Graduate (users 496 and 102) to Requiem for a Dream through user 102.",
+        "mechanism": "User 102 rated both The Graduate and Requiem for a Dream on 2015-05-18, so information can flow from The Graduate's raters to Requiem for a Dream. The model barely uses this path, and removing it left the score gap unchanged.",
+        "evidence": "Deleting it left the score gap at 2.21 to 2.21 (random deletions: 2.21), with confidence 97% to 97% (random deletions: 97%, p = 0.17).",
+        "verdict": "not shown to be a cause",
+        "action": "No ranking change is needed for this path."
+      },
+      {
+        "headline": "User 104 and member 284 both rated Pulp Fiction, linking member 284 to Requiem for a Dream's raters.",
+        "mechanism": "Both people rated Pulp Fiction, so member 284's representation is pulled towards user 104's, and user 104 is connected to the other titles in the graph. This shared-movie link adds to the history score of the first title.",
+        "evidence": "Deleting it moved confidence from 97% to 95% (random deletions: 97%, p = 0.02), and the score gap went from 2.21 to 1.97 (random deletions: 2.21).",
+        "verdict": "cause",
+        "action": "Reduce how much a single shared-movie link can shift a member's history score, and test whether the ordering still holds."
+      }
+    ],
+    "C07-m290-t1453051417": [
+      {
+        "headline": "Users 365 and 255 both rated Requiem for a Dream 4.0\u2605 in late 2015, a popularity signal behind its first place.",
+        "mechanism": "The model builds the title's representation from its recent raters, here users 365 and 255. Their recent links raise Requiem for a Dream's history score, which is added to the text-match and popularity scores. The model leans on this structure 5.5x as much as on comparable ones.",
+        "evidence": "Deleting it moved confidence from 87% to 82% (random deletions: 87%, p = 0.02), and the score gap went from 1.26 to 0.98 (random deletions: 1.25).",
+        "verdict": "cause",
+        "action": "Limit how much a handful of recent ratings can lift a title's history score, and re-check this query to see whether Out of Sight moves up."
+      },
+      {
+        "headline": "A shared-taste path runs from The Avengers (users 62 and 104) to Requiem for a Dream through user 104.",
+        "mechanism": "User 104 rated both The Avengers and Requiem for a Dream on 2015-11-03, so the model can pass information from The Avengers' raters to the first title. The effect on the score is small.",
+        "evidence": "Deleting it moved confidence from 87% to 86% (random deletions: 87%, p = 0.15), and the score gap went from 1.26 to 1.19 (random deletions: 1.23).",
+        "verdict": "not shown to be a cause",
+        "action": "No ranking change is needed for this path."
+      },
+      {
+        "headline": "User 508 and member 290 both rated Iron Man, linking member 290 to Requiem for a Dream's raters.",
+        "mechanism": "Both people rated Iron Man, so member 290's representation is pulled towards user 508's, whose other ratings feed the graph score. This shared-movie link lifts the first title's history score a little.",
+        "evidence": "Deleting it moved confidence from 87% to 85% (random deletions: 87%, p = 0.05), and the score gap went from 1.26 to 1.12 (random deletions: 1.26).",
+        "verdict": "cause",
+        "action": "Consider damping single shared-movie links between members with otherwise unrelated tastes, and watch whether the effect holds up on other queries."
+      }
+    ],
+    "C07-m291-t1385677294": [
+      {
+        "headline": "User 291 and user 561 both rated The Expendables 2, linking member 291 to other raters of that film.",
+        "mechanism": "Both users rated The Expendables 2, so member 291's representation is pulled towards user 561's, and onwards to the titles user 561 rated. The model leans on this 2.6x as much as on comparable structures, but the drop is not clearly beyond random deletions.",
+        "evidence": "Deleting it moved confidence from 81% to 76% (random deletions: 78%, p = 0.12), and the score gap went from 0.94 to 0.74 (random deletions: 0.82).",
+        "verdict": "not shown to be a cause",
+        "action": "Do not act on this structure alone; keep monitoring it, as it may matter more on other queries."
+      },
+      {
+        "headline": "Users 15 and 281 rated Requiem for a Dream 4.0\u2605 and 4.5\u2605 in 2013, a popularity signal that supports its first place.",
+        "mechanism": "The model builds Requiem for a Dream's representation from its recent raters, here users 15 and 281. Those recent links raise its history score, which is added to the text-match and popularity scores, widening its lead over All That Heaven Allows.",
+        "evidence": "Deleting it moved confidence from 81% to 66% (random deletions: 81%, p = 0.02), and the score gap went from 0.94 to 0.44 (random deletions: 0.94).",
+        "verdict": "cause",
+        "action": "Cap the influence of a few recent ratings on a title's history score, and check that All That Heaven Allows ranks higher afterwards."
+      },
+      {
+        "headline": "User 291 rated Cinderella and then The Expendables 2, a two-film sequence that feeds the graph score.",
+        "mechanism": "The model builds member 291's representation from these recent ratings in order, so the sequence shapes which titles the model treats as close to this member's history. That shift carries into the first title's history score.",
+        "evidence": "Deleting it moved confidence from 81% to 73% (random deletions: 78%, p = 0.02), and the score gap went from 0.94 to 0.67 (random deletions: 0.83).",
+        "verdict": "cause",
+        "action": "Reduce the weight of back-to-back rating sequences for this member, especially across very different films, and re-test the ordering."
+      }
+    ],
+    "C07-m307-t1421373693": [
+      {
+        "headline": "A shared-taste path runs from Star Wars: Episode IV (users 20 and 343) to Requiem for a Dream through user 343.",
+        "mechanism": "User 343 rated both Star Wars: Episode IV and Requiem for a Dream on 2015-01-05, so the model passes information from Star Wars raters to the first title, including a 0.5\u2605 rating. Member 307 also rated Star Wars: Episode IV, so this path reaches the search. The model leans on it 2.9x as much as on comparable structures.",
+        "evidence": "Deleting it moved confidence from 95% to 94% (random deletions: 95%, p = 0.02), and the score gap went from 1.91 to 1.78 (random deletions: 1.91).",
+        "verdict": "cause",
+        "action": "Limit how far a single shared-taste path can carry a title's history score, and check that a 0.5\u2605 rating is not boosting a title."
+      },
+      {
+        "headline": "Users 260 and 343 rated Requiem for a Dream (5.0\u2605 and 0.5\u2605), a popularity signal behind its first place.",
+        "mechanism": "The model builds the title's representation from its recent raters, here users 260 and 343. Even with one very low rating among them, the recent links raise its history score, which the ranker adds to the text-match and popularity scores.",
+        "evidence": "Deleting it moved confidence from 95% to 93% (random deletions: 95%, p = 0.02), and the score gap went from 1.91 to 1.64 (random deletions: 1.91).",
+        "verdict": "cause",
+        "action": "Check whether the history score treats a 0.5\u2605 rating as positive attention, and consider using rating value more directly."
+      },
+      {
+        "headline": "Users 260 and 343 rated the same movie, Requiem for a Dream (5.0\u2605 and 0.5\u2605), linking two raters of the first title.",
+        "mechanism": "This is the same pair of ratings as the popularity structure, seen as a shared-movie link between the two users. The model connects their representations through the title, which adds to its history score.",
+        "evidence": "Deleting it moved confidence from 95% to 93% (random deletions: 95%, p = 0.02), and the score gap went from 1.91 to 1.64 (random deletions: 1.91).",
+        "verdict": "cause",
+        "action": "Treat this as one finding with the popularity structure, not a separate cause, and fix the two together."
+      }
+    ],
+    "C07-m317-t1413054514": [
+      {
+        "headline": "User 260 rated Requiem for a Dream 5.0\u2605 and then Battlestar Galactica, a two-film sequence that supports Requiem's first place.",
+        "mechanism": "The model builds user 260's representation from these recent ratings, and Requiem for a Dream's representation from the people who rated it, including user 260. The sequence ties the title to that user's history and lifts its history score, which the ranker adds to the text-match and popularity scores.",
+        "evidence": "Deleting it moved confidence from 78% to 76% (random deletions: 78%, p = 0.02), and the score gap went from 0.84 to 0.77 (random deletions: 0.84).",
+        "verdict": "cause",
+        "action": "Reduce the weight of back-to-back rating sequences from one user in the history score, and check the effect on Keeping the Faith."
+      }
+    ],
+    "C07-m318-t1461351651": [
+      {
+        "headline": "Users 494 and 40 both rated Requiem for a Dream 4.0\u2605 in March 2016, a popularity signal behind its first place.",
+        "mechanism": "The model builds the title's representation from its recent raters, here users 494 and 40. Those recent links raise its history score, which the ranker adds to the text-match and popularity scores. The model leans on this 3.0x as much as on comparable structures.",
+        "evidence": "Deleting it moved confidence from 88% to 86% (random deletions: 88%, p = 0.02), and the score gap went from 1.31 to 1.17 (random deletions: 1.31).",
+        "verdict": "cause",
+        "action": "Cap the influence of a few recent ratings on a title's history score, and check whether The Help moves up."
+      },
+      {
+        "headline": "User 23 and member 318 both rated The Matrix, linking member 318 to Requiem for a Dream's raters.",
+        "mechanism": "Both people rated The Matrix, so member 318's representation is pulled towards user 23's, and onwards to the other titles that user rated. That link lifts the first title's history score.",
+        "evidence": "Deleting it moved confidence from 88% to 83% (random deletions: 88%, p = 0.02), and the score gap went from 1.31 to 1.04 (random deletions: 1.31).",
+        "verdict": "cause",
+        "action": "Damp single shared-movie links for very popular films like The Matrix, which say little about taste."
+      },
+      {
+        "headline": "A shared-taste path runs from The Matrix (users 17 and 9) to The Help through user 9, and still favours Requiem.",
+        "mechanism": "User 9 rated both The Matrix (0.5\u2605) and The Help (3.0\u2605), so the model passes information from The Matrix's raters towards The Help. The model leans on this 6.7x as much as on comparable structures, and removing it narrowed the gap.",
+        "evidence": "Deleting it moved confidence from 88% to 85% (random deletions: 88%, p = 0.02), and the score gap went from 1.31 to 1.12 (random deletions: 1.30).",
+        "verdict": "cause",
+        "action": "Check how paths ending at the competing title are weighted, since this one affects the comparison."
+      }
+    ],
+    "C07-m325-t1419880402": [
+      {
+        "headline": "User 260 rated Requiem for a Dream 5.0\u2605 and then Battlestar Galactica, a two-film sequence that supports Requiem's first place.",
+        "mechanism": "The model builds user 260's representation from these recent ratings, and Requiem for a Dream's representation from the people who rated it, including user 260. The sequence ties the title to that user's history and lifts its history score, which the ranker adds to the text-match and popularity scores.",
+        "evidence": "Deleting it moved confidence from 73% to 72% (random deletions: 73%, p = 0.02), and the score gap went from 0.64 to 0.62 (random deletions: 0.64).",
+        "verdict": "cause",
+        "action": "Reduce the weight of back-to-back rating sequences from one user in the history score, noting the effect here is small."
+      }
+    ],
+    "C07-m340-t1439751021": [
+      {
+        "headline": "Several people, such as users 316 and 325, rated Requiem for a Dream (2000) recently, and the model leans on that crowd.",
+        "mechanism": "The model builds a title's representation from the people who rated it recently. Users 316 and 325 rated Requiem for a Dream (2000) 4.0\u2605 and 4.5\u2605, so the title gets a strong representation that scores above What a Girl Wants (2003).",
+        "evidence": "Deleting it moves confidence from 97% to 94% (random deletions: 97%, p = 0.02), and the score gap from 2.26 to 1.78 (random deletions: 2.29).",
+        "verdict": "cause",
+        "action": "Cap how much a title's popularity among a few recent raters can lift its history score in search ranking."
+      },
+      {
+        "headline": "A shared-taste path through Toy Story (1995) and users 118 and 508 ends at What a Girl Wants (2003).",
+        "mechanism": "Users 118 and 508 both rated Toy Story (1995), and user 508 also rated What a Girl Wants (2003) 2.0\u2605. This path feeds What a Girl Wants (2003) a weak signal, so it adds nothing for the preferred title.",
+        "evidence": "Deleting it leaves confidence at 97% (random deletions: 97%, p = 1.00), and the score gap moves from 2.26 to 2.38 (random deletions: 2.26).",
+        "verdict": "not shown to be a cause",
+        "action": "No ranking change is needed for this path, since removing it does not reduce the lead of Requiem for a Dream (2000)."
+      },
+      {
+        "headline": "Users 532 and 340 both rated Toy Story (1995) 5.0\u2605, linking member 340 to another fan of that film.",
+        "mechanism": "Member 340's representation is built from titles they rated, so the shared Toy Story (1995) link pulls it toward user 532's tastes. That shifts the history score only slightly between the two titles.",
+        "evidence": "Deleting it moves confidence from 97% to 96% (random deletions: 97%, p = 0.10), and the score gap from 2.26 to 2.07 (random deletions: 2.30).",
+        "verdict": "not shown to be a cause",
+        "action": "Do not act on this link alone; the effect is not distinguishable from random deletions."
+      }
+    ],
+    "C07-m365-t1445546446": [
+      {
+        "headline": "Several people, such as users 325 and 62, rated Requiem for a Dream (2000) recently, and the model leans on that crowd.",
+        "mechanism": "A title's representation comes from its recent raters. Users 325 and 62 rated Requiem for a Dream (2000) 4.5\u2605 and 5.0\u2605, which strengthens its representation against Perfume: The Story of a Murderer (2006).",
+        "evidence": "Deleting it moves confidence from 97% to 95% (random deletions: 97%, p = 0.02), and the score gap from 2.23 to 1.87 (random deletions: 2.26).",
+        "verdict": "cause",
+        "action": "Cap how much a title's popularity among a few recent raters can lift its history score in search ranking."
+      },
+      {
+        "headline": "A shared-taste path through The Return of the King (2003) connects users 465 and 62 to Requiem for a Dream (2000).",
+        "mechanism": "Users 465 and 62 both rated Lord of the Rings: The Return of the King, The (2003) 4.0\u2605, and user 62 rated Requiem for a Dream (2000) 5.0\u2605. The model passes that taste signal along the path, raising Requiem for a Dream (2000).",
+        "evidence": "Deleting it moves confidence from 97% to 96% (random deletions: 97%, p = 0.02), and the score gap from 2.23 to 2.08 (random deletions: 2.23).",
+        "verdict": "cause",
+        "action": "Check whether history scores should pass through such indirect paths when the genre overlap with the query is weak."
+      },
+      {
+        "headline": "User 62 and member 365 both rated The Dark Knight (2008), tying member 365 to user 62's taste.",
+        "mechanism": "Member 365's representation is built from titles they rated, so the shared Dark Knight, The (2008) link pulls it toward user 62. User 62 also rated Requiem for a Dream (2000) 5.0\u2605, which lifts that title.",
+        "evidence": "Deleting it moves confidence from 97% to 95% (random deletions: 97%, p = 0.02), and the score gap from 2.23 to 1.91 (random deletions: 2.25).",
+        "verdict": "cause",
+        "action": "Review whether a single shared film should be enough to import another person's taste into a drama search."
+      }
+    ],
+    "C07-m438-t1436943790": [
+      {
+        "headline": "Several people, such as users 316 and 325, rated Requiem for a Dream (2000) recently, and the model leans heavily on that crowd.",
+        "mechanism": "A title's representation is built from its recent raters. Users 316 and 325 rated Requiem for a Dream (2000) 4.0\u2605 and 4.5\u2605, giving it a strong lead over Face/Off (1997).",
+        "evidence": "Deleting it moves confidence from 94% to 82% (random deletions: 93%, p = 0.02), and the score gap from 1.75 to 0.98 (random deletions: 1.74).",
+        "verdict": "cause",
+        "action": "Cap how much a title's popularity among a few recent raters can lift its history score in search ranking."
+      },
+      {
+        "headline": "A shared-taste path through The Shawshank Redemption (1994) connects users 299 and 316 to Requiem for a Dream (2000).",
+        "mechanism": "Users 299 and 316 both rated Shawshank Redemption, The (1994) 4.0\u2605, and user 316 rated Requiem for a Dream (2000) 4.0\u2605. The model carries that taste link across to Requiem for a Dream (2000).",
+        "evidence": "Deleting it moves confidence from 94% to 89% (random deletions: 93%, p = 0.02), and the score gap from 1.75 to 1.40 (random deletions: 1.74).",
+        "verdict": "cause",
+        "action": "Test limiting history-score paths that join titles only through one widely rated film."
+      },
+      {
+        "headline": "User 192 and member 438 both rated The Shawshank Redemption (1994).",
+        "mechanism": "Member 438's representation draws on titles they rated, so the shared Shawshank Redemption, The (1994) link ties them to user 192. The effect on the two titles is tiny.",
+        "evidence": "Deleting it moves confidence from 94% to 93% (random deletions: 93%, p = 0.12), and the score gap from 1.75 to 1.73 (random deletions: 1.75).",
+        "verdict": "not shown to be a cause",
+        "action": "No change is needed for this link."
+      }
+    ],
+    "C07-m440-t1449070467": [
+      {
+        "headline": "Several people, such as users 365 and 255, rated Requiem for a Dream (2000) recently, and the model leans on that crowd.",
+        "mechanism": "A title's representation is built from its recent raters. Users 365 and 255 both rated Requiem for a Dream (2000) 4.0\u2605, which keeps it well ahead of Once Upon a Time in the Midlands (2002).",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), but the score gap falls from 6.12 to 5.60 (random deletions: 6.11).",
+        "verdict": "cause",
+        "action": "Cap how much a title's popularity among a few recent raters can lift its history score in search ranking."
+      },
+      {
+        "headline": "A shared-taste path through Reservoir Dogs (1992) connects users 62 and 365 to Requiem for a Dream (2000).",
+        "mechanism": "Users 62 and 365 both rated Reservoir Dogs (1992), and user 365 rated Requiem for a Dream (2000) 4.0\u2605. The model carries that taste link to Requiem for a Dream (2000), raising its score.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), but the score gap falls from 6.12 to 5.85 (random deletions: 6.08).",
+        "verdict": "cause",
+        "action": "Check whether history scores should flow along paths that start from an unrelated action film."
+      },
+      {
+        "headline": "User 297 and member 440 both rated Star Wars: Episode IV - A New Hope (1977).",
+        "mechanism": "Member 440's representation is built from titles they rated, so the shared Star Wars: Episode IV - A New Hope (1977) link pulls it toward user 297. This shifts the history score a little toward Requiem for a Dream (2000).",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), but the score gap falls from 6.12 to 5.91 (random deletions: 6.15).",
+        "verdict": "cause",
+        "action": "Consider down-weighting co-rating links when the shared film has little in common with the query genre."
+      }
+    ],
+    "C07-m461-t1378158322": [
+      {
+        "headline": "A shared-taste path through Deliverance (1972) connects users 130 and 561 to Requiem for a Dream (2000).",
+        "mechanism": "Users 130 and 561 both rated Deliverance (1972) 4.0\u2605, and user 561 rated Requiem for a Dream (2000) 5.0\u2605. The model carries that taste link to Requiem for a Dream (2000), but only weakly.",
+        "evidence": "Deleting it moves confidence from 88% to 86% (random deletions: 87%, p = 0.17), and the score gap from 1.28 to 1.20 (random deletions: 1.28).",
+        "verdict": "not shown to be a cause",
+        "action": "No change is needed for this path."
+      },
+      {
+        "headline": "Users 130 and 245 rated Requiem for a Dream (2000) low, at 2.5\u2605 and 2.0\u2605.",
+        "mechanism": "These low ratings from recent raters feed Requiem for a Dream (2000)'s representation and, if anything, work against it. Removing them makes the title look better, not worse.",
+        "evidence": "Deleting it moves confidence from 88% to 92% (random deletions: 87%, p = 1.00), and the score gap from 1.28 to 1.63 (random deletions: 1.27).",
+        "verdict": "not shown to be a cause",
+        "action": "No action; this structure works against the first-ranked title."
+      },
+      {
+        "headline": "User 331 and member 461 both rated Little Big Man (1970).",
+        "mechanism": "Member 461's representation draws on titles they rated, so the shared Little Big Man (1970) link ties them to user 331. Removing it narrows the gap, but not clearly beyond random deletions.",
+        "evidence": "Deleting it moves confidence from 88% to 82% (random deletions: 87%, p = 0.07), and the score gap from 1.28 to 1.01 (random deletions: 1.23).",
+        "verdict": "not shown to be a cause",
+        "action": "Watch this link in further cases before changing anything."
+      }
+    ],
+    "C07-m505-t1424486905": [
+      {
+        "headline": "Users 260 and 343 both rated Requiem for a Dream (2000), one at 5.0\u2605 and one at 0.5\u2605.",
+        "mechanism": "Two people rating the same title ties their representations together and feeds into Requiem for a Dream (2000)'s own representation. Together with the other recent links, this holds its score above The Patriot (2000).",
+        "evidence": "Deleting it moves confidence from 53% to 43% (random deletions: 53%, p = 0.02), and the score gap from 0.07 to -0.19 (random deletions: 0.07).",
+        "verdict": "cause",
+        "action": "Flag this case for review, since the starting lead is small and one link flips the order."
+      },
+      {
+        "headline": "User 343 rated Requiem for a Dream (2000) 0.5\u2605 and then Cruel Intentions (1999) 2.0\u2605 on 2015-01-05.",
+        "mechanism": "The model uses the order of a person's recent ratings, so this back-to-back pair links the two titles in user 343's history. That link feeds into Requiem for a Dream (2000)'s representation.",
+        "evidence": "Deleting it moves confidence from 53% to 46% (random deletions: 53%, p = 0.02), and the score gap from 0.07 to -0.12 (random deletions: 0.07).",
+        "verdict": "cause",
+        "action": "Consider whether a very low rating should still pass a sequence link into the history score."
+      },
+      {
+        "headline": "Users 260 and 343 rated Requiem for a Dream (2000) recently, one at 5.0\u2605 and one at 0.5\u2605.",
+        "mechanism": "Requiem for a Dream (2000)'s representation is built from its recent raters. These two raters hold its score above The Patriot (2000), despite one very low rating.",
+        "evidence": "Deleting it moves confidence from 53% to 43% (random deletions: 53%, p = 0.02), and the score gap from 0.07 to -0.19 (random deletions: 0.07).",
+        "verdict": "cause",
+        "action": "Cap how much a title's popularity among a few recent raters can lift its history score in search ranking."
+      }
+    ],
+    "C07-m580-t1447007091": [
+      {
+        "headline": "Several people, such as users 325 and 104, rated Requiem for a Dream (2000) 4.5\u2605 recently.",
+        "mechanism": "A title's representation is built from its recent raters. Users 325 and 104 both gave Requiem for a Dream (2000) 4.5\u2605, which widens its lead over The Thin Red Line (1998).",
+        "evidence": "Deleting it moves confidence from 99% to 98% (random deletions: 99%, p = 0.02), and the score gap from 3.46 to 2.64 (random deletions: 3.44).",
+        "verdict": "cause",
+        "action": "Cap how much a title's popularity among a few recent raters can lift its history score in search ranking."
+      },
+      {
+        "headline": "User 62 and member 580 both rated The Matrix (1999) 3.5\u2605.",
+        "mechanism": "Member 580's representation draws on titles they rated, so the shared Matrix, The (1999) link ties them to user 62. That adds a modest lift to Requiem for a Dream (2000).",
+        "evidence": "Confidence stays at 99% (random deletions: 100%, p = 0.02), but the score gap falls from 3.46 to 3.22 (random deletions: 3.47).",
+        "verdict": "cause",
+        "action": "Consider down-weighting co-rating links through a single shared film."
+      },
+      {
+        "headline": "A shared-taste path through Life Is Beautiful (1997) connects users 562 and 104 to Requiem for a Dream (2000).",
+        "mechanism": "Users 562 and 104 rated Life Is Beautiful (La Vita \u00e8 bella) (1997), and user 104 rated Requiem for a Dream (2000) 4.5\u2605. The model carries that taste link across, but the effect is not clearly beyond chance.",
+        "evidence": "Confidence stays at 99% (random deletions: 99%, p = 0.15), and the score gap moves from 3.46 to 3.23 (random deletions: 3.40).",
+        "verdict": "not shown to be a cause",
+        "action": "No change is needed for this path."
+      }
+    ],
+    "C07-m609-t1479542004": [
+      {
+        "headline": "Several people, such as users 559 and 524, rated Requiem for a Dream (2000) 4.0\u2605 recently.",
+        "mechanism": "A title's representation is built from its recent raters. Users 559 and 524 both gave Requiem for a Dream (2000) 4.0\u2605, which helps it beat Vitelloni, I (1953).",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.05), but the score gap falls from 4.31 to 4.06 (random deletions: 4.33).",
+        "verdict": "cause",
+        "action": "Cap how much a title's popularity among a few recent raters can lift its history score in search ranking."
+      },
+      {
+        "headline": "User 51 and member 609 both rated The Shawshank Redemption (1994).",
+        "mechanism": "Member 609's representation draws on titles they rated, so the shared Shawshank Redemption, The (1994) link ties them to user 51. That shifts the history score toward Requiem for a Dream (2000).",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.02), but the score gap falls from 4.31 to 3.90 (random deletions: 4.29).",
+        "verdict": "cause",
+        "action": "Consider down-weighting co-rating links through a single widely rated film."
+      },
+      {
+        "headline": "A shared-taste path through The Shawshank Redemption (1994) connects users 124 and 524 to Requiem for a Dream (2000).",
+        "mechanism": "Users 124 and 524 rated Shawshank Redemption, The (1994), and user 524 rated Requiem for a Dream (2000) 4.0\u2605. The model carries that taste link across, but only slightly.",
+        "evidence": "Confidence stays at 100% (random deletions: 100%, p = 0.07), and the score gap moves from 4.31 to 4.16 (random deletions: 4.31).",
+        "verdict": "not shown to be a cause",
+        "action": "No change is needed for this path."
+      }
+    ]
+  },
+  "number_check": {
+    "cases": 32,
+    "with_unsupported_numbers": {}
+  }
+}

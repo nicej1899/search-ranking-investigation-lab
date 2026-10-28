@@ -1,0 +1,177 @@
+{
+  "case_id": "C07-m281-t1378488934",
+  "member": 281,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Sense and Sensibility (1995)",
+  "A_id": 3555,
+  "B_id": 626,
+  "member_id": 281,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 70940,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 15",
+        "from_id": 3555,
+        "to_id": 15,
+        "rating": 4.0,
+        "date": "2013-08-26",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 70964,
+        "from": "user 281",
+        "to": "Pink Floyd: The Wall (1982)",
+        "from_id": 281,
+        "to_id": 1606,
+        "rating": 5.0,
+        "date": "2013-09-06",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "SEQ",
+      "name": "a person watched two movies in a row",
+      "lift": 1.000403834615654,
+      "nodes": [
+        {
+          "id": 15,
+          "name": "user 15"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        },
+        {
+          "id": 3409,
+          "name": "Badlands (1973)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 70940,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 15",
+          "from_id": 3555,
+          "to_id": 15,
+          "rating": 4.0,
+          "date": "2013-08-26"
+        },
+        {
+          "eid": 70942,
+          "from": "user 15",
+          "to": "Badlands (1973)",
+          "from_id": 15,
+          "to_id": 3409,
+          "rating": 4.0,
+          "date": "2013-08-26"
+        }
+      ]
+    },
+    "n_model_runs": 161
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 68572,
+        "from": "Sense and Sensibility (1995)",
+        "to": "user 356",
+        "from_id": 626,
+        "to_id": 356,
+        "rating": 5.0,
+        "date": "2012-09-25",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 69394,
+        "from": "Sense and Sensibility (1995)",
+        "to": "user 245",
+        "from_id": 626,
+        "to_id": 245,
+        "rating": 5.0,
+        "date": "2012-11-28",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 70964,
+        "from": "user 281",
+        "to": "Pink Floyd: The Wall (1982)",
+        "from_id": 281,
+        "to_id": 1606,
+        "rating": 5.0,
+        "date": "2013-09-06",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 9.023272607687236,
+      "nodes": [
+        {
+          "id": 130,
+          "name": "user 130"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        },
+        {
+          "id": 245,
+          "name": "user 245"
+        }
+      ],
+      "links": [
+        {
+          "eid": 68796,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 130",
+          "from_id": 3555,
+          "to_id": 130,
+          "rating": 2.5,
+          "date": "2012-10-10"
+        },
+        {
+          "eid": 69490,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 245",
+          "from_id": 3555,
+          "to_id": 245,
+          "rating": 2.0,
+          "date": "2012-11-28"
+        }
+      ]
+    },
+    "n_model_runs": 161
+  },
+  "test": {
+    "p0": 0.5064975587381877,
+    "del_A": {
+      "p": 0.4510049430605114,
+      "p_random": 0.5058639173127208,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.5904693789727049,
+      "p_random": 0.5019814548757593,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.5,
+    "B_from_member_history": 0.3333333333333333,
+    "shared_links": [
+      70964
+    ]
+  }
+}

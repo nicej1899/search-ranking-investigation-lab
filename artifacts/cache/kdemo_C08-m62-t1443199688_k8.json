@@ -1,0 +1,1132 @@
+{
+  "case_id": "C08-m62-t1443199688",
+  "k": 8,
+  "member": 62,
+  "joint": {
+    "lines": [
+      "TemGX: 3 of the 9 ratings are recent ratings of It's a Wonderful Life by other people; 3 of them are part of a pattern CATGX finds.",
+      "TemGX: 4 are the member's own recent ratings (Back to the Future, Jurassic Park, Forrest Gump), shared with people who also rated It's a Wonderful Life.",
+      "CATGX: \u201cRecent fans piled on\u201d looked 14.2\u00d7 and is still 3.5\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "Ranker: It's a Wonderful Life beats True Lies mainly through matching the words of the request (+1.08); the history part adds +0.04."
+    ],
+    "verdict": "Diagnosis: It's a Wonderful Life wins mainly through matching the words of the request, and the history model adds to it through recent fans of It's a Wonderful Life (a pattern that survives matching) and the member's ratings of Back to the Future, Jurassic Park. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      74096,
+      75153,
+      76188
+    ]
+  },
+  "score_split": {
+    "relevance": 1.0794050828394117,
+    "popularity": -0.2739900729820497,
+    "behaviour": 0.035971098843083193
+  },
+  "A": "It's a Wonderful Life",
+  "B": "True Lies",
+  "query": "a comedy for grown-ups, not a kids movie",
+  "p0": 0.6629372313265262,
+  "evidence": [
+    {
+      "eid": 75153,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 176",
+      "to": "It's a Wonderful Life",
+      "from_id": 176,
+      "to_id": 1343,
+      "rating": 4.5,
+      "date": "Jun 29, 2015",
+      "days_before": 89,
+      "p_without": 0.11442029404740117,
+      "drop": 0.548516937279125,
+      "score": {
+        "influence": 0.6424944738424747,
+        "connectedness": 0.7667697222046695,
+        "recency": 0.7910121936971447,
+        "phi": 0.3896884467656481
+      },
+      "why": "User 176 rated It's a Wonderful Life 4.5\u2605 on Jun 29, 2015, 89 days before the search. The graph model builds It's a Wonderful Life's profile from its recent raters, weighting recent ones more, so this rating makes It's a Wonderful Life look current; user 176 also rated 4 titles that member 62 rated (e.g. Toy Story, Jurassic Park), which ties It's a Wonderful Life to this member's taste. Removing only this rating: 66% \u2192 11% (\u221254.9 pts).",
+      "patterns": [
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.0755740790382844,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 3.537484754045641,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 74096,
+      "n": 2,
+      "kind": "crowd",
+      "from": "user 102",
+      "to": "It's a Wonderful Life",
+      "from_id": 102,
+      "to_id": 1343,
+      "rating": 4.0,
+      "date": "May 18, 2015",
+      "days_before": 130,
+      "p_without": 0.267191856398976,
+      "drop": 0.39574537492755013,
+      "score": {
+        "influence": 0.39574567335708133,
+        "connectedness": 0.6732097429797295,
+        "recency": 0.8743178005785327,
+        "phi": 0.2329356112025097
+      },
+      "why": "User 102 rated It's a Wonderful Life 4\u2605 on May 18, 2015, 130 days before the search. The graph model builds It's a Wonderful Life's profile from its recent raters, weighting recent ones more, so this rating makes It's a Wonderful Life look current; user 102 also rated 2 titles that member 62 rated (e.g. Toy Story, Jurassic Park), which ties It's a Wonderful Life to this member's taste. Removing only this rating: 66% \u2192 27% (\u221239.6 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.075551381853764,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.1409092568809038,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.0755740790382844,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 3.537484754045641,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76188,
+      "n": 3,
+      "kind": "crowd",
+      "from": "user 75",
+      "to": "It's a Wonderful Life",
+      "from_id": 75,
+      "to_id": 1343,
+      "rating": 2.0,
+      "date": "Aug 10, 2015",
+      "days_before": 47,
+      "p_without": 0.36781111130494254,
+      "drop": 0.2951261200215836,
+      "score": {
+        "influence": 0.2951265922747973,
+        "connectedness": 0.7362721146735476,
+        "recency": 0.8799941167599056,
+        "phi": 0.19121698417798041
+      },
+      "why": "User 75 rated It's a Wonderful Life 2\u2605 on Aug 10, 2015, 47 days before the search. The graph model builds It's a Wonderful Life's profile from its recent raters, weighting recent ones more, so this rating makes It's a Wonderful Life look current; user 75 also rated 4 titles that member 62 rated (e.g. Toy Story, Forrest Gump), which ties It's a Wonderful Life to this member's taste. Removing only this rating: 66% \u2192 37% (\u221229.5 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.075551381853764,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.1409092568809038,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.0755740790382844,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 3.537484754045641,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76734,
+      "n": 4,
+      "kind": "own",
+      "from": "user 62",
+      "to": "Back to the Future",
+      "from_id": 62,
+      "to_id": 1579,
+      "rating": 5.0,
+      "date": "Sep 25, 2015",
+      "days_before": 0,
+      "p_without": 0.6667979265709024,
+      "drop": -0.0038606952443762665,
+      "score": {
+        "influence": 0.004337301488629319,
+        "connectedness": 0.810695132608578,
+        "recency": 0.8178427115912018,
+        "phi": 0.002875722427992261
+      },
+      "why": "Member 62 rated Back to the Future 5\u2605 on Sep 25, 2015, the same day as the search. The member's profile is built from their own recent ratings, and 1 of the people who rated Back to the Future also rated It's a Wonderful Life (e.g. user 176), so this rating pulls member 62 toward It's a Wonderful Life's audience. Removing only this rating: 66% \u2192 67% (+0.4 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.1409092568809038,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 73211,
+      "n": 5,
+      "kind": "other",
+      "from": "user 322",
+      "to": "Jurassic Park",
+      "from_id": 322,
+      "to_id": 1028,
+      "rating": 3.5,
+      "date": "Jan 30, 2015",
+      "days_before": 238,
+      "p_without": 0.6622507468377626,
+      "drop": 0.0006864844887635169,
+      "score": {
+        "influence": 1.0593198207509147e-08,
+        "connectedness": 0.3778106514221789,
+        "recency": 0.5210380845035626,
+        "phi": 2.085310665816031e-09
+      },
+      "why": "User 322 rated Jurassic Park 3.5\u2605 on Jan 30, 2015. It reaches the decision through the graph: it changes how Jurassic Park and its raters are represented, which feeds into member 62 or It's a Wonderful Life. Removing only this rating: 66% \u2192 66% (\u22120.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.1409092568809038,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.0755740790382844,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "Shared taste leads to the better match",
+          "adjusted": 0.0,
+          "significant": false
+        }
+      ]
+    },
+    {
+      "eid": 76737,
+      "n": 6,
+      "kind": "own",
+      "from": "user 62",
+      "to": "Jurassic Park",
+      "from_id": 62,
+      "to_id": 1028,
+      "rating": 2.5,
+      "date": "Sep 25, 2015",
+      "days_before": 0,
+      "p_without": 0.6629528613530736,
+      "drop": -1.563002654747514e-05,
+      "score": {
+        "influence": 0.003923307722201952,
+        "connectedness": 0.7925882651192603,
+        "recency": 0.7781990923189155,
+        "phi": 0.0024198627313481813
+      },
+      "why": "Member 62 rated Jurassic Park 2.5\u2605 on Sep 25, 2015, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated Jurassic Park also rated It's a Wonderful Life (e.g. user 75, user 102), so this rating pulls member 62 toward It's a Wonderful Life's audience. Removing only this rating: 66% \u2192 66% (+0.0 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.075551381853764,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.1409092568809038,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76738,
+      "n": 7,
+      "kind": "own",
+      "from": "user 62",
+      "to": "Forrest Gump",
+      "from_id": 62,
+      "to_id": 924,
+      "rating": 3.5,
+      "date": "Sep 25, 2015",
+      "days_before": 0,
+      "p_without": 0.6652609456478895,
+      "drop": -0.002323714321363357,
+      "score": {
+        "influence": 0.0023471554398996064,
+        "connectedness": 0.7985305910308831,
+        "recency": 0.8852409810950738,
+        "phi": 0.0016591854122313225
+      },
+      "why": "Member 62 rated Forrest Gump 3.5\u2605 on Sep 25, 2015, the same day as the search. The member's profile is built from their own recent ratings, and 1 of the people who rated Forrest Gump also rated It's a Wonderful Life (e.g. user 75), so this rating pulls member 62 toward It's a Wonderful Life's audience. Removing only this rating: 66% \u2192 67% (+0.2 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.075551381853764,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.1409092568809038,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 75494,
+      "n": 8,
+      "kind": "other",
+      "from": "user 508",
+      "to": "Toy Story",
+      "from_id": 508,
+      "to_id": 610,
+      "rating": 4.0,
+      "date": "Jul 4, 2015",
+      "days_before": 83,
+      "p_without": 0.6615092912050263,
+      "drop": 0.0014279401214998266,
+      "score": {
+        "influence": 3.913877696382073e-07,
+        "connectedness": 0.5686814489997695,
+        "recency": 0.7957001191518775,
+        "phi": 1.7710292534211765e-07
+      },
+      "why": "User 508 rated Toy Story 4\u2605 on Jul 4, 2015. It reaches the decision through the graph: it changes how Toy Story and its raters are represented, which feeds into member 62 or It's a Wonderful Life. Removing only this rating: 66% \u2192 66% (\u22120.1 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.1409092568809038,
+          "significant": true
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "Shared taste leads to the title",
+          "adjusted": 3.0755740790382844,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76736,
+      "n": 9,
+      "kind": "own",
+      "from": "user 62",
+      "to": "Toy Story",
+      "from_id": 62,
+      "to_id": 610,
+      "rating": 5.0,
+      "date": "Sep 25, 2015",
+      "days_before": 0,
+      "p_without": 0.6631871876018688,
+      "drop": -0.0002499562753426332,
+      "score": {
+        "influence": 0.0012593662823670027,
+        "connectedness": 0.8011939168094595,
+        "recency": 0.8179311038893792,
+        "phi": 0.0008252897065126448
+      },
+      "why": "Member 62 rated Toy Story 5\u2605 on Sep 25, 2015, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated Toy Story also rated It's a Wonderful Life (e.g. user 75, user 102), so this rating pulls member 62 toward It's a Wonderful Life's audience. Removing only this rating: 66% \u2192 66% (+0.0 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.075551381853764,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.11442029404740117,
+      "rand_mean": 0.6627812129343091,
+      "rand_lo": 0.6617560891963129,
+      "rand_hi": 0.6630249013999592,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.062040963783508936,
+      "rand_mean": 0.6787285478829543,
+      "rand_lo": 0.6609975729240647,
+      "rand_hi": 0.7898123149312715,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.02772965493708462,
+      "rand_mean": 0.6663074212170031,
+      "rand_lo": 0.6606025365950569,
+      "rand_hi": 0.6666064851317931,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.02663217843803878,
+      "rand_mean": 0.6756014298067776,
+      "rand_lo": 0.6606569784166277,
+      "rand_hi": 0.832320949988687,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.026871342084740995,
+      "rand_mean": 0.6827000002625591,
+      "rand_lo": 0.6528579103855986,
+      "rand_hi": 0.8701840301840357,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.026344538556166322,
+      "rand_mean": 0.6949687225057506,
+      "rand_lo": 0.6549752465031998,
+      "rand_hi": 0.8707035173794662,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 7,
+      "p": 0.02382152604356219,
+      "rand_mean": 0.69482684893649,
+      "rand_lo": 0.6541109040415973,
+      "rand_hi": 0.8937331791427234,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 8,
+      "p": 0.024731795293542136,
+      "rand_mean": 0.6898024918680506,
+      "rand_lo": 0.6526187175039679,
+      "rand_hi": 0.870274385368323,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 9,
+      "p": 0.02167028964883097,
+      "rand_mean": 0.7006682145089483,
+      "rand_lo": 0.6527222222515292,
+      "rand_hi": 0.8708511965788106,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.02167028964883097,
+    "rand_mean": 0.7006682145089483,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.6536454807373792,
+      0.6536629248384551,
+      0.6545783856629014,
+      0.6625458354892676,
+      0.6660280333431375,
+      0.6624438071297627,
+      0.6629372313265262,
+      0.7892430543493545,
+      0.8699328896627685,
+      0.6610694974821621,
+      0.6619993900608846,
+      0.6627562389890728,
+      0.6607578953025722,
+      0.8706135182546558,
+      0.7904133043284383,
+      0.6622769041964911,
+      0.6538812504336043,
+      0.8629405521965223,
+      0.7892072981031234,
+      0.6610166822996749,
+      0.6603727826231185,
+      0.6615471822681962,
+      0.6624243772604067,
+      0.6610482331188746,
+      0.6629949466842704,
+      0.6539032649431186,
+      0.8627780674278569,
+      0.6622485873852844,
+      0.8630510604684792,
+      0.6593355731968007,
+      0.6629372313265262,
+      0.6613504035478458,
+      0.6545516135454028,
+      0.8693583686777233,
+      0.6634188304519772,
+      0.6606791664534659,
+      0.6592899923097815,
+      0.6649118768871553,
+      0.662127565748042,
+      0.6614597727433501,
+      0.8625682448671211,
+      0.6632298281452429,
+      0.7894678985683856,
+      0.9196700301703007,
+      0.6616743000079538,
+      0.6655872098797454,
+      0.6622658628156787,
+      0.6526777395733036,
+      0.6630468375147114,
+      0.6583664076844887,
+      0.6630682438809365,
+      0.6613832038782114,
+      0.6545783856629014,
+      0.6608577227853251,
+      0.8710662388720936,
+      0.6616460808241935,
+      0.6527713873169364,
+      0.6621831894409671,
+      0.6626073303037444,
+      0.6496376570902289
+    ],
+    "flips": true
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 5,
+    "B_after": 5,
+    "top3_after": [
+      "It's a Wonderful Life (1946)",
+      "Babe: Pig in the City (1998)",
+      "Hunt for Red October, The (1990)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 322,
+        "name": "user 322",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 610,
+        "name": "Toy Story",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 1028,
+        "name": "Jurassic Park",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 102,
+        "name": "user 102",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 924,
+        "name": "Forrest Gump",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 75,
+        "name": "user 75",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 1579,
+        "name": "Back to the Future",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 176,
+        "name": "user 176",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 947,
+        "name": "True Lies",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 508,
+        "name": "user 508",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 62,
+        "name": "user 62",
+        "type": "user",
+        "role": "u"
+      },
+      {
+        "id": 1343,
+        "name": "It's a Wonderful Life",
+        "type": "title",
+        "role": "A"
+      }
+    ],
+    "edges": [
+      {
+        "eid": 73211,
+        "s": 1028,
+        "t": 322,
+        "rating": 3.5,
+        "date": "Jan 30, 2015",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 74096,
+        "s": 1343,
+        "t": 102,
+        "rating": 4.0,
+        "date": "May 18, 2015",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 75153,
+        "s": 1343,
+        "t": 176,
+        "rating": 4.5,
+        "date": "Jun 29, 2015",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 75494,
+        "s": 610,
+        "t": 508,
+        "rating": 4.0,
+        "date": "Jul 4, 2015",
+        "expl": true,
+        "n": 8
+      },
+      {
+        "eid": 76188,
+        "s": 1343,
+        "t": 75,
+        "rating": 2.0,
+        "date": "Aug 10, 2015",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 76734,
+        "s": 62,
+        "t": 1579,
+        "rating": 5.0,
+        "date": "Sep 25, 2015",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 76736,
+        "s": 62,
+        "t": 610,
+        "rating": 5.0,
+        "date": "Sep 25, 2015",
+        "expl": true,
+        "n": 9
+      },
+      {
+        "eid": 76737,
+        "s": 62,
+        "t": 1028,
+        "rating": 2.5,
+        "date": "Sep 25, 2015",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 76738,
+        "s": 62,
+        "t": 924,
+        "rating": 3.5,
+        "date": "Sep 25, 2015",
+        "expl": true,
+        "n": 7
+      },
+      {
+        "eid": 74091,
+        "s": 610,
+        "t": 102,
+        "rating": 4.0,
+        "date": "May 18, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 74092,
+        "s": 1028,
+        "t": 102,
+        "rating": 4.0,
+        "date": "May 18, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 74861,
+        "s": 1028,
+        "t": 176,
+        "rating": 3.5,
+        "date": "Jun 28, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 74862,
+        "s": 610,
+        "t": 176,
+        "rating": 5.0,
+        "date": "Jun 28, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 74871,
+        "s": 1579,
+        "t": 176,
+        "rating": 5.0,
+        "date": "Jun 28, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 76133,
+        "s": 924,
+        "t": 75,
+        "rating": 1.0,
+        "date": "Aug 10, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 76135,
+        "s": 610,
+        "t": 75,
+        "rating": 0.5,
+        "date": "Aug 10, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 76211,
+        "s": 1028,
+        "t": 75,
+        "rating": 2.0,
+        "date": "Aug 10, 2015",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 14.210764583926066,
+      "adjusted": 3.537484754045641,
+      "graph": {
+        "nodes": [
+          {
+            "id": 176,
+            "name": "user 176",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 102,
+            "name": "user 102",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1343,
+            "name": "It's a Wonderful Life",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 74096,
+            "s": 1343,
+            "t": 102,
+            "rating": 4.0,
+            "date": "May 18, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 75153,
+            "s": 1343,
+            "t": 176,
+            "rating": 4.5,
+            "date": "Jun 29, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        74096,
+        75153
+      ],
+      "S": 0.10131619094892312,
+      "occurrence": {
+        "eids": [
+          74096,
+          75153
+        ],
+        "nodes": [
+          "user 102",
+          "user 176",
+          "It's a Wonderful Life"
+        ],
+        "dates": [
+          "May 18, 2015",
+          "Jun 29, 2015"
+        ]
+      },
+      "p_without": 0.062040963783508936,
+      "p_random": 0.694698668280003,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 14.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 3.5\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 102, user 176, It's a Wonderful Life): 66% \u2192 6%; random ratings of the same size: 69% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 8.686266850063992,
+      "adjusted": 3.0755740790382844,
+      "graph": {
+        "nodes": [
+          {
+            "id": 176,
+            "name": "user 176",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1579,
+            "name": "Back to the Future",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 1343,
+            "name": "It's a Wonderful Life",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 343,
+            "name": "user 343",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 72952,
+            "s": 1579,
+            "t": 343,
+            "rating": 5.0,
+            "date": "Jan 5, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 74871,
+            "s": 1579,
+            "t": 176,
+            "rating": 5.0,
+            "date": "Jun 28, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 75153,
+            "s": 1343,
+            "t": 176,
+            "rating": 4.5,
+            "date": "Jun 29, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        75153
+      ],
+      "S": 0.11857539814033635,
+      "occurrence": {
+        "eids": [
+          72952,
+          74871,
+          75153
+        ],
+        "nodes": [
+          "user 343",
+          "Back to the Future",
+          "user 176",
+          "It's a Wonderful Life"
+        ],
+        "dates": [
+          "Jan 5, 2015",
+          "Jun 28, 2015",
+          "Jun 29, 2015"
+        ]
+      },
+      "p_without": 0.11387029768319715,
+      "p_random": 0.6806778880821024,
+      "p_value": 0.01639344262295082,
+      "why": "Shared taste leads to the title: before matching on context it looks 8.7\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 3.1\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 343, Back to the Future, user 176): 66% \u2192 11%; random ratings of the same size: 68% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.87024746112999,
+      "adjusted": 1.075551381853764,
+      "graph": {
+        "nodes": [
+          {
+            "id": 9604,
+            "name": "Southpaw",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 102,
+            "name": "user 102",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1343,
+            "name": "It's a Wonderful Life",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 74096,
+            "s": 1343,
+            "t": 102,
+            "rating": 4.0,
+            "date": "May 18, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 76500,
+            "s": 102,
+            "t": 9604,
+            "rating": 3.5,
+            "date": "Aug 28, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [
+        74096
+      ],
+      "S": 0.005296538452692383,
+      "occurrence": {
+        "eids": [
+          74096,
+          76500
+        ],
+        "nodes": [
+          "user 102",
+          "It's a Wonderful Life",
+          "Southpaw"
+        ],
+        "dates": [
+          "May 18, 2015",
+          "Aug 28, 2015"
+        ]
+      },
+      "p_without": 0.267191856398976,
+      "p_random": 0.6740124583305079,
+      "p_value": 0.01639344262295082,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.9\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.1\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 102, It's a Wonderful Life, Southpaw): 66% \u2192 27%; random ratings of the same size: 67% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 0.2149542552660195,
+      "adjusted": 0.1409092568809038,
+      "graph": {
+        "nodes": [
+          {
+            "id": 75,
+            "name": "user 75",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 102,
+            "name": "user 102",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 1343,
+            "name": "It's a Wonderful Life",
+            "type": "title",
+            "role": "A"
+          }
+        ],
+        "edges": [
+          {
+            "eid": 74096,
+            "s": 1343,
+            "t": 102,
+            "rating": 4.0,
+            "date": "May 18, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 76188,
+            "s": 1343,
+            "t": 75,
+            "rating": 2.0,
+            "date": "Aug 10, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        74096,
+        76188
+      ],
+      "S": -0.10537444284115834,
+      "occurrence": {
+        "eids": [
+          74096,
+          76188
+        ],
+        "nodes": [
+          "user 102",
+          "It's a Wonderful Life",
+          "user 75"
+        ],
+        "dates": [
+          "May 18, 2015",
+          "Aug 10, 2015"
+        ]
+      },
+      "p_without": 0.21434397804603195,
+      "p_random": 0.6821058648442716,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 0.2\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.1\u00d7. Most of its apparent importance came from timing and activity. Removing its strongest occurrence (user 102, It's a Wonderful Life, user 75): 66% \u2192 21%; random ratings of the same size: 68% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGEB",
+      "name": "Shared taste leads to the better match",
+      "raw": 0.0,
+      "adjusted": 0.0,
+      "graph": {
+        "nodes": [
+          {
+            "id": 176,
+            "name": "user 176",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 947,
+            "name": "True Lies",
+            "type": "title",
+            "role": "B"
+          },
+          {
+            "id": 1028,
+            "name": "Jurassic Park",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 102,
+            "name": "user 102",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 74092,
+            "s": 1028,
+            "t": 102,
+            "rating": 4.0,
+            "date": "May 18, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 74861,
+            "s": 1028,
+            "t": 176,
+            "rating": 3.5,
+            "date": "Jun 28, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 74867,
+            "s": 947,
+            "t": 176,
+            "rating": 3.0,
+            "date": "Jun 28, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.05193983885168119,
+      "occurrence": {
+        "eids": [
+          74092,
+          74861,
+          74867
+        ],
+        "nodes": [
+          "user 102",
+          "Jurassic Park",
+          "user 176",
+          "True Lies"
+        ],
+        "dates": [
+          "May 18, 2015",
+          "Jun 28, 2015",
+          "Jun 28, 2015"
+        ]
+      },
+      "p_without": 0.8673177367735033,
+      "p_random": 0.5895803465059689,
+      "p_value": 1.0,
+      "why": "Shared taste leads to the better match: Removing its strongest occurrence (user 102, Jurassic Park, user 176): 66% \u2192 87%; random ratings of the same size: 59% (p = 1.00)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 1117,
+  "computed_at": "2026-10-27T18:47:47-0400",
+  "summary": "With 9 ratings (3 recent ratings of It's a Wonderful Life by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for It's a Wonderful Life over True Lies goes from 66% to 2% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 70% on average (p = 0.02, 60 draws). The full ranking still puts It's a Wonderful Life at #1: text match and popularity also push it up."
+}

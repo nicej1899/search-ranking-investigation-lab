@@ -1,0 +1,198 @@
+{
+  "case_id": "C07-m1-t1445714882",
+  "member": 1,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Next Three Days, The (2010)",
+  "A_id": 3555,
+  "B_id": 8071,
+  "member_id": 1,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 76020,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 325",
+        "from_id": 3555,
+        "to_id": 325,
+        "rating": 4.5,
+        "date": "2015-07-14",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77182,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 365",
+        "from_id": 3555,
+        "to_id": 365,
+        "rating": 4.0,
+        "date": "2015-10-22",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77199,
+        "from": "user 1",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 1,
+        "to_id": 887,
+        "rating": 3.0,
+        "date": "2015-10-24",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 3.0267996055148667,
+      "nodes": [
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 365,
+          "name": "user 365"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        },
+        {
+          "eid": 77182,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 365",
+          "from_id": 3555,
+          "to_id": 365,
+          "rating": 4.0,
+          "date": "2015-10-22"
+        }
+      ]
+    },
+    "n_model_runs": 307
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 73997,
+        "from": "Next Three Days, The (2010)",
+        "to": "user 316",
+        "from_id": 8071,
+        "to_id": 316,
+        "rating": 3.0,
+        "date": "2015-05-01",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 77201,
+        "from": "user 1",
+        "to": "The Jinx: The Life and Deaths of Robert Durst (2015)",
+        "from_id": 1,
+        "to_id": 9438,
+        "rating": 5.0,
+        "date": "2015-10-24",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 77202,
+        "from": "user 1",
+        "to": "Ex Machina (2015)",
+        "from_id": 1,
+        "to_id": 9160,
+        "rating": 3.5,
+        "date": "2015-10-24",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 10.999999999999998,
+      "nodes": [
+        {
+          "id": 343,
+          "name": "user 343"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        },
+        {
+          "id": 316,
+          "name": "user 316"
+        },
+        {
+          "id": 8071,
+          "name": "Next Three Days, The (2010)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 72940,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 343",
+          "from_id": 3555,
+          "to_id": 343,
+          "rating": 0.5,
+          "date": "2015-01-05"
+        },
+        {
+          "eid": 73735,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 316",
+          "from_id": 3555,
+          "to_id": 316,
+          "rating": 4.0,
+          "date": "2015-04-30"
+        },
+        {
+          "eid": 73997,
+          "from": "Next Three Days, The (2010)",
+          "to": "user 316",
+          "from_id": 8071,
+          "to_id": 316,
+          "rating": 3.0,
+          "date": "2015-05-01"
+        }
+      ]
+    },
+    "n_model_runs": 288
+  },
+  "test": {
+    "p0": 0.6951029646317488,
+    "del_A": {
+      "p": 0.5698883859985672,
+      "p_random": 0.7007780569863058,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9903649717934628,
+      "p_random": 0.677977776049205,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

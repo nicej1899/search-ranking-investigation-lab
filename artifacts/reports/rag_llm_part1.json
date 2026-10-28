@@ -1,0 +1,92 @@
+{
+ "C07-m105-t1467360422": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Last Samurai, The (2003) was the better match. All 3 of 3 reasons came from ratings by recent fans of the film, such as user 40 with rating 4.0, and none looked at the \"nothing depressing\" part.",
+  "precedent": "Cases [1], [2] and [3] were also searches with a \"not\" in the request, and each was fixed by understand “not” in the request.",
+  "recommendation": "Try understand “not” in the request; it worked for 9 of 10 most similar past failures, though on held-out failures this kind of advice picked a working fix 37% of the time, vs 24% for always using it.",
+  "caveat": "This does not show that the model misread the request, only which ratings it leaned on; how sure the model is dropped from 48% to 43% when those ratings were deleted."
+ },
+ "C07-m121-t1461561151": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but My Life (1993) was the better match. The reasons came from ratings by recent fans of the film, such as user 40 with rating 4.0, and from the member's own 5.0 rating of Shawshank Redemption, The (1994).",
+  "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film too, but their fixes differed: [1] was fixed by rely less on popularity for specific searches, and [2] and [3] were fixed by none of the three.",
+  "recommendation": "The store suggests understand “not” in the request, but it worked for only 2 of 10 most similar past failures, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "How sure the model is stayed at 100% after every deletion, so these ratings do not explain the choice."
+ },
+ "C07-m142-t1444768677": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but E.T. the Extra-Terrestrial (1982) was the better match. All 3 of 3 reasons came from ratings by recent fans of the film, such as user 316 with rating 4.0.",
+  "precedent": "Cases [1], [2] and [3] also relied on 3 of 3 ratings from recent fans of the film; [1] and [3] were fixed by understand “not” in the request, but [2] was fixed by none of the three.",
+  "recommendation": "Try understand “not” in the request; it worked for 10 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "The past cases are only similar, not the same, and [2] shows that no fix works every time."
+ },
+ "C07-m188-t1439465085": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but No Way Out (1987) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 4.0 rating of Matrix, The (1999).",
+  "precedent": "Cases [1] and [3] were the same kind of search and also put Requiem for a Dream (2000) first, and both were fixed by rely less on popularity for specific searches.",
+  "recommendation": "Try rely less on popularity for specific searches; it worked for only 5 of 10 most similar past failures, so treat it as a fair bet and not a sure one. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "How sure the model is stayed at 100% after every deletion, so the evidence does not show which ratings drove the pick."
+ },
+ "C07-m232-t1448815881": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Something to Talk About (1995) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 5.0 rating of Shawshank Redemption, The (1994).",
+  "precedent": "Cases [1] and [3] were the same kind of search with Requiem for a Dream (2000) ranked first, and both were fixed by rely less on popularity for specific searches.",
+  "recommendation": "Try rely less on popularity for specific searches; it worked for 8 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "How sure the model is only moved from 99% to 98% when those ratings were deleted, so they were not the whole story."
+ },
+ "C07-m255-t1446579739": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Let Me In (2010) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 4.5 rating of Matrix, The (1999).",
+  "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film, and none of them were fixed by any of the three fixes.",
+  "recommendation": "The store suggests rely less on popularity for specific searches and it worked for 7 of 10 most similar past failures, but the closest cases show it did not help, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "How sure the model is only moved from 100% to 99% when those ratings were deleted, so the evidence does not show what drove the pick."
+ },
+ "C07-m281-t1378488934": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Sense and Sensibility (1995) was the better match. The pick rested on a rating from user 15 and on the member's own 5.0 rating of Pink Floyd: The Wall (1982), which has little to do with \"nothing depressing\".",
+  "precedent": "Cases [1], [2] and [3] all leaned on a run of the member's own ratings, and each was fixed by understand “not” in the request.",
+  "recommendation": "Try understand “not” in the request; it worked for 10 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "Only a few ratings backed the pick, and how sure the model is was just 51%, so the picture is thin."
+ },
+ "C07-m290-t1453051417": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Out of Sight (1998) was the better match. The pick leaned on the member's own ratings of Iron Man (2008) and Avengers, The (2012), which say little about drama that is not depressing.",
+  "precedent": "Cases [1], [2] and [3] all leaned on the member's own ratings too; [1] was fixed by understand “not” in the request, but [2] and [3] were fixed by none of the three.",
+  "recommendation": "Try understand “not” in the request; it worked for 8 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "The evidence does not show whether the model understood \"nothing depressing\"; it only shows which ratings it used, and how sure the model is fell from 87% to 78% without them."
+ },
+ "C07-m317-t1413054514": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Keeping the Faith (2000) was the better match. The pick rested on a single rating from user 260 (rating 5.0), and the better title had no backing at all.",
+  "precedent": "Cases [1], [2] and [3] also had no clear structure, and each was fixed by understand “not” in the request.",
+  "recommendation": "Try understand “not” in the request; it worked for 9 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "The better title had no supporting ratings, so this does not show why the model ranked it lower."
+ },
+ "C07-m325-t1419880402": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Perks of Being a Wallflower, The (2012) was the better match. The pick rested on a single rating from user 260 (rating 5.0), and the better title had no backing at all.",
+  "precedent": "Cases [1], [2] and [3] also had no clear structure; [1] and [2] were fixed by rely less on popularity for specific searches and by understand “not” in the request, and [3] was fixed by understand “not” in the request.",
+  "recommendation": "Try rely less on popularity for specific searches; it worked for 8 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "The better title had no supporting ratings, so this does not show why the model ranked it lower."
+ },
+ "C07-m365-t1445546446": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Perfume: The Story of a Murderer (2006) was the better match. The pick was backed by ratings from recent fans of the film, such as user 325 with rating 4.5.",
+  "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film too, and each was fixed by understand “not” in the request.",
+  "recommendation": "The store suggests understand “not” in the request, but it worked for only 3 of 10 most similar past failures, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "The evidence does not show that this fix will work here; how sure the model is only fell from 97% to 92% when those ratings were deleted."
+ },
+ "C07-m440-t1449070467": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Once Upon a Time in the Midlands (2002) was the better match. The pick was backed by ratings from recent fans of the film and by the member's own 5.0 rating of Star Wars: Episode IV - A New Hope (1977).",
+  "precedent": "Cases [1] and [2] were fixed by none of the three fixes, while [3] was the same kind of search and was fixed by rely less on popularity for specific searches.",
+  "recommendation": "The store suggests understand “not” in the request, but it worked for only 2 of 10 most similar past failures, so trust it only a little; rely less on popularity for specific searches is worth a look too. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "How sure the model is stayed at 100% after every deletion, so the evidence does not show what drove the pick."
+ },
+ "C07-m505-t1424486905": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Patriot, The (2000) was the better match. The pick rested on ratings by recent fans of the film, including a low 0.5 from user 343, and on the member's own 3.5 rating of Whiplash (2014).",
+  "precedent": "Cases [1], [2] and [3] all leaned on a shared movie, and each was fixed by understand “not” in the request.",
+  "recommendation": "Try understand “not” in the request; it worked for 7 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "The evidence shows which ratings the model used, with how sure the model is falling from 53% to 42% without them, but not whether it understood the request."
+ },
+ "C07-m59-t1393541892": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but Quiet Man, The (1952) was the better match. The pick leaned on the member's own ratings of Ransom (1996) and Glory (1989), which are not quiet dramas.",
+  "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film; [1] was fixed by understand “not” in the request, but [2] and [3] were fixed by none of the three.",
+  "recommendation": "The store suggests understand “not” in the request, but it worked for only 2 of 10 most similar past failures, so trust it only a little. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "How sure the model is stayed at 99% or higher after the deletions, so the evidence does not show what drove the pick."
+ },
+ "C07-m62-t1443199688": {
+  "diagnosis": "The ranker put Requiem for a Dream (2000) first, but We Don't Live Here Anymore (2004) was the better match. All 3 of 3 reasons came from ratings by recent fans of the film, such as user 316 with rating 4.0.",
+  "precedent": "Cases [1], [2] and [3] all leaned on recent fans of the film, and each was fixed by rely less on popularity for specific searches.",
+  "recommendation": "Try rely less on popularity for specific searches; it worked for 7 of 10 most similar past failures. On past failures like this, that kind of advice picked a working fix 37% of the time, vs 24% for always using understand “not” in the request.",
+  "caveat": "How sure the model is stayed at 100% after every deletion, so the evidence does not show which ratings drove the pick."
+ }
+}

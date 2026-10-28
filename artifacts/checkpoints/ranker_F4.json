@@ -1,0 +1,36 @@
+{
+  "model_id": "F4",
+  "kind": "F4",
+  "pgate": [
+    -0.6958728432655334,
+    -1.0711969137191772
+  ],
+  "parent": "F0",
+  "weights": [
+    0.14982351660728455,
+    1.0353513956069946,
+    0.2724309265613556
+  ],
+  "norm": {
+    "beh": [
+      -7.569419680156213,
+      8.988431676984119
+    ],
+    "rel": [
+      0.6239212372656334,
+      0.12431915145456685
+    ],
+    "pop": [
+      2.222536935833016,
+      1.2050443977192657
+    ],
+    "fit_on": "DEV candidate sets (1268 cases)"
+  },
+  "created": "2026-10-22T14:46:18-0400",
+  "F0_config_hash": "d3330eed63320c1a",
+  "dev_cases": 2632,
+  "dev_loss": 0.5545603632926941,
+  "changed_mechanism": "query-conditioned popularity gate: exp(c0 + c1*spec(q)) multiplies the popularity part",
+  "fit_on": "all DEV cases (original + coldstart + conversational)",
+  "config_hash": "2f89b4b6c54f9913"
+}

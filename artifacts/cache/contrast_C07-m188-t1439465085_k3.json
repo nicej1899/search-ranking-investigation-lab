@@ -1,0 +1,184 @@
+{
+  "case_id": "C07-m188-t1439465085",
+  "member": 188,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "No Way Out (1987)",
+  "A_id": 3555,
+  "B_id": 3230,
+  "member_id": 188,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 73735,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 316",
+        "from_id": 3555,
+        "to_id": 316,
+        "rating": 4.0,
+        "date": "2015-04-30",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76020,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 325",
+        "from_id": 3555,
+        "to_id": 325,
+        "rating": 4.5,
+        "date": "2015-07-14",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76253,
+        "from": "user 188",
+        "to": "Matrix, The (1999)",
+        "from_id": 188,
+        "to_id": 2549,
+        "rating": 4.0,
+        "date": "2015-08-13",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 14.682555471882635,
+      "nodes": [
+        {
+          "id": 316,
+          "name": "user 316"
+        },
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73735,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 316",
+          "from_id": 3555,
+          "to_id": 316,
+          "rating": 4.0,
+          "date": "2015-04-30"
+        },
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        }
+      ]
+    },
+    "n_model_runs": 249
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 76252,
+        "from": "user 188",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 188,
+        "to_id": 887,
+        "rating": 4.0,
+        "date": "2015-08-13",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 76255,
+        "from": "user 188",
+        "to": "Dark Knight, The (2008)",
+        "from_id": 188,
+        "to_id": 7320,
+        "rating": 5.0,
+        "date": "2015-08-13",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 76256,
+        "from": "user 188",
+        "to": "Forrest Gump (1994)",
+        "from_id": 188,
+        "to_id": 924,
+        "rating": 4.0,
+        "date": "2015-08-13",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 1.0056931095577388,
+      "nodes": [
+        {
+          "id": 230,
+          "name": "user 230"
+        },
+        {
+          "id": 7320,
+          "name": "Dark Knight, The (2008)"
+        },
+        {
+          "id": 188,
+          "name": "user 188"
+        }
+      ],
+      "links": [
+        {
+          "eid": 74466,
+          "from": "Dark Knight, The (2008)",
+          "to": "user 230",
+          "from_id": 7320,
+          "to_id": 230,
+          "rating": 5.0,
+          "date": "2015-05-31"
+        },
+        {
+          "eid": 76255,
+          "from": "user 188",
+          "to": "Dark Knight, The (2008)",
+          "from_id": 188,
+          "to_id": 7320,
+          "rating": 5.0,
+          "date": "2015-08-13"
+        }
+      ]
+    },
+    "n_model_runs": 243
+  },
+  "test": {
+    "p0": 0.999293300017154,
+    "del_A": {
+      "p": 0.9954709849219626,
+      "p_random": 0.9992959151564194,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9994719807797956,
+      "p_random": 0.9992568771826192,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 1.0,
+    "shared_links": []
+  }
+}

@@ -1,0 +1,1032 @@
+{
+  "case_id": "C11-m284-t1449626093",
+  "k": 8,
+  "member": 284,
+  "joint": {
+    "lines": [
+      "TemGX: 5 of the 8 ratings are recent ratings of The Incredibles by other people; 5 of them are part of a pattern CATGX finds.",
+      "TemGX: 3 are the member's own recent ratings (All the President's Men, Rebel Without a Cause, Dazed and Confused), shared with people who also rated The Incredibles.",
+      "CATGX: \u201cRecent fans piled on\u201d looked 2.0\u00d7 and is still 1.5\u00d7 after matching on timing and activity; removing it moves the model (p = 0.02). Timing explains part of it, but a structural effect remains.",
+      "Ranker: The Incredibles beats Indiana Jones and the Temple of Doom mainly through matching the words of the request (+0.29); the history part adds +0.01."
+    ],
+    "verdict": "Diagnosis: The Incredibles wins mainly through matching the words of the request, and the history model adds to it through recent fans of The Incredibles (a pattern that survives matching) and the member's ratings of All the President's Men, Rebel Without a Cause. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "agree": [
+      76582,
+      77183
+    ]
+  },
+  "score_split": {
+    "relevance": 0.2948528418480443,
+    "popularity": -0.02056648358718316,
+    "behaviour": 0.014109348748994943
+  },
+  "A": "The Incredibles",
+  "B": "Indiana Jones and the Temple of Doom",
+  "query": "a fantasy movie that isn't animated",
+  "p0": 0.5659427167051005,
+  "evidence": [
+    {
+      "eid": 76582,
+      "n": 1,
+      "kind": "crowd",
+      "from": "user 600",
+      "to": "The Incredibles",
+      "from_id": 600,
+      "to_id": 5984,
+      "rating": 5.0,
+      "date": "Sep 7, 2015",
+      "days_before": 92,
+      "p_without": 0.5276466189257244,
+      "drop": 0.03829609777937615,
+      "score": {
+        "influence": 0.038296232022178356,
+        "connectedness": 0.607019941995164,
+        "recency": 0.776279706704311,
+        "phi": 0.018045845618921894
+      },
+      "why": "User 600 rated The Incredibles 5\u2605 on Sep 7, 2015, 92 days before the search. The graph model builds The Incredibles's profile from its recent raters, weighting recent ones more, so this rating makes The Incredibles look current. Removing only this rating: 57% \u2192 53% (\u22123.8 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.850845529716903,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.5422250574648522,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76225,
+      "n": 2,
+      "kind": "crowd",
+      "from": "user 75",
+      "to": "The Incredibles",
+      "from_id": 75,
+      "to_id": 5984,
+      "rating": 0.5,
+      "date": "Aug 10, 2015",
+      "days_before": 121,
+      "p_without": 0.5837311099125042,
+      "drop": -0.017788393207403663,
+      "score": {
+        "influence": 0.017788476344967386,
+        "connectedness": 0.8308378954231699,
+        "recency": 0.7177712376729064,
+        "phi": 0.010608185342684233
+      },
+      "why": "User 75 rated The Incredibles 0.5\u2605 on Aug 10, 2015, 121 days before the search. The graph model builds The Incredibles's profile from its recent raters, weighting recent ones more, so this rating makes The Incredibles look current; user 75 also rated 2 titles that member 284 rated (e.g. Pulp Fiction, The Graduate), which ties The Incredibles to this member's taste. Removing only this rating: 57% \u2192 58% (+1.8 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.850845529716903,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.5422250574648522,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 77183,
+      "n": 3,
+      "kind": "crowd",
+      "from": "user 365",
+      "to": "The Incredibles",
+      "from_id": 365,
+      "to_id": 5984,
+      "rating": 4.0,
+      "date": "Oct 22, 2015",
+      "days_before": 47,
+      "p_without": 0.549491134849742,
+      "drop": 0.016451581855358555,
+      "score": {
+        "influence": 0.016451716098160762,
+        "connectedness": 0.607672932403393,
+        "recency": 0.8786572731272143,
+        "phi": 0.0087841674636054
+      },
+      "why": "User 365 rated The Incredibles 4\u2605 on Oct 22, 2015, 47 days before the search. The graph model builds The Incredibles's profile from its recent raters, weighting recent ones more, so this rating makes The Incredibles look current. Removing only this rating: 57% \u2192 55% (\u22121.6 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.850845529716903,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.5422250574648522,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 79196,
+      "n": 4,
+      "kind": "own",
+      "from": "user 284",
+      "to": "All the President's Men",
+      "from_id": 284,
+      "to_id": 5178,
+      "rating": 4.0,
+      "date": "Dec 9, 2015",
+      "days_before": 0,
+      "p_without": 0.5699870373427994,
+      "drop": -0.004044320637698884,
+      "score": {
+        "influence": 0.004045318894807304,
+        "connectedness": 0.6876003202720323,
+        "recency": 0.8198448345929764,
+        "phi": 0.0022804497032030704
+      },
+      "why": "Member 284 rated All the President's Men 4\u2605 on Dec 9, 2015, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with The Incredibles. Removing only this rating: 57% \u2192 57% (+0.4 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.140688089748715,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.850845529716903,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 77157,
+      "n": 5,
+      "kind": "crowd",
+      "from": "user 377",
+      "to": "The Incredibles",
+      "from_id": 377,
+      "to_id": 5984,
+      "rating": 4.0,
+      "date": "Oct 20, 2015",
+      "days_before": 50,
+      "p_without": 0.5629784176205227,
+      "drop": 0.0029642990845778483,
+      "score": {
+        "influence": 0.002964433327380056,
+        "connectedness": 0.6646792375618101,
+        "recency": 0.8731378424876022,
+        "phi": 0.0017204284332605494
+      },
+      "why": "User 377 rated The Incredibles 4\u2605 on Oct 20, 2015, 50 days before the search. The graph model builds The Incredibles's profile from its recent raters, weighting recent ones more, so this rating makes The Incredibles look current. Removing only this rating: 57% \u2192 56% (\u22120.3 pts).",
+      "patterns": [
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 0.850845529716903,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.5422250574648522,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 79199,
+      "n": 6,
+      "kind": "own",
+      "from": "user 284",
+      "to": "Rebel Without a Cause",
+      "from_id": 284,
+      "to_id": 1450,
+      "rating": 3.0,
+      "date": "Dec 9, 2015",
+      "days_before": 0,
+      "p_without": 0.5685084975864586,
+      "drop": -0.0025657808813580596,
+      "score": {
+        "influence": 0.002565646638555852,
+        "connectedness": 0.5600536980517038,
+        "recency": 0.9999991121262186,
+        "phi": 0.001436898612031391
+      },
+      "why": "Member 284 rated Rebel Without a Cause 3\u2605 on Dec 9, 2015, the same day as the search. The member's profile is built from their own recent ratings; this rating shapes the member's taste profile that is compared with The Incredibles. Removing only this rating: 57% \u2192 57% (+0.3 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.140688089748715,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 76328,
+      "n": 7,
+      "kind": "crowd",
+      "from": "user 465",
+      "to": "The Incredibles",
+      "from_id": 465,
+      "to_id": 5984,
+      "rating": 3.5,
+      "date": "Aug 18, 2015",
+      "days_before": 112,
+      "p_without": 0.5688033926953965,
+      "drop": -0.0028606759902959356,
+      "score": {
+        "influence": 0.002860541747493728,
+        "connectedness": 0.6011314251749482,
+        "recency": 0.7349825044436066,
+        "phi": 0.0012638476453350057
+      },
+      "why": "User 465 rated The Incredibles 3.5\u2605 on Aug 18, 2015, 112 days before the search. The graph model builds The Incredibles's profile from its recent raters, weighting recent ones more, so this rating makes The Incredibles look current. Removing only this rating: 57% \u2192 57% (+0.3 pts).",
+      "patterns": [
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 1.5422250574648522,
+          "significant": true
+        }
+      ]
+    },
+    {
+      "eid": 79198,
+      "n": 8,
+      "kind": "own",
+      "from": "user 284",
+      "to": "Dazed and Confused",
+      "from_id": 284,
+      "to_id": 994,
+      "rating": 5.0,
+      "date": "Dec 9, 2015",
+      "days_before": 0,
+      "p_without": 0.5668558798144073,
+      "drop": -0.0009131631093067805,
+      "score": {
+        "influence": 0.0009130288665045727,
+        "connectedness": 0.6478171062376927,
+        "recency": 0.9686564791584504,
+        "phi": 0.0005729367867094724
+      },
+      "why": "Member 284 rated Dazed and Confused 5\u2605 on Dec 9, 2015, the same day as the search. The member's profile is built from their own recent ratings, and 1 of the people who rated Dazed and Confused also rated The Incredibles (e.g. user 297), so this rating pulls member 284 toward The Incredibles's audience. Removing only this rating: 57% \u2192 57% (+0.1 pts).",
+      "patterns": [
+        {
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 1.140688089748715,
+          "significant": true
+        }
+      ]
+    }
+  ],
+  "curve": [
+    {
+      "n": 1,
+      "p": 0.5276466189257244,
+      "rand_mean": 0.5697906877555275,
+      "rand_lo": 0.5642717243673813,
+      "rand_hi": 0.615958716683634,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 2,
+      "p": 0.5077317986029949,
+      "rand_mean": 0.5677101457815039,
+      "rand_lo": 0.5643970813824821,
+      "rand_hi": 0.583914434062514,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 3,
+      "p": 0.4795105963355818,
+      "rand_mean": 0.5714733846457184,
+      "rand_lo": 0.5629784176205227,
+      "rand_hi": 0.6513122830483239,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 4,
+      "p": 0.4784748969771867,
+      "rand_mean": 0.5682254518723743,
+      "rand_lo": 0.5598829642985655,
+      "rand_hi": 0.5829035821662242,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 5,
+      "p": 0.46129098812805897,
+      "rand_mean": 0.5700589383012213,
+      "rand_lo": 0.563099964996512,
+      "rand_hi": 0.6220280682341732,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 6,
+      "p": 0.45932652415204656,
+      "rand_mean": 0.5705694457569561,
+      "rand_lo": 0.5615007715807561,
+      "rand_hi": 0.6223921425994159,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 7,
+      "p": 0.44081039597919,
+      "rand_mean": 0.5693472976412558,
+      "rand_lo": 0.5597379154504447,
+      "rand_hi": 0.5908090644629316,
+      "p_value": 0.01639344262295082
+    },
+    {
+      "n": 8,
+      "p": 0.42113407313255,
+      "rand_mean": 0.5781414096936056,
+      "rand_lo": 0.5600881293006011,
+      "rand_hi": 0.6509496497686095,
+      "p_value": 0.01639344262295082
+    }
+  ],
+  "full": {
+    "p": 0.42113407313255,
+    "rand_mean": 0.5781414096936056,
+    "p_value": 0.01639344262295082,
+    "rand_all": [
+      0.5908567318770774,
+      0.560032593503118,
+      0.5659427167051005,
+      0.6507981301611857,
+      0.5665118637316279,
+      0.5646738719537295,
+      0.5610006745625188,
+      0.5659427167051005,
+      0.5668561928929685,
+      0.5659427167051005,
+      0.6516032510402501,
+      0.5660061229780773,
+      0.5773020695795522,
+      0.5657201735998697,
+      0.5652402711327922,
+      0.5646381837185097,
+      0.5661625486874905,
+      0.5894500111533968,
+      0.565837154121446,
+      0.650189384295052,
+      0.56627149301901,
+      0.5762428884074227,
+      0.5601495109715036,
+      0.5667203117850887,
+      0.5823750703650079,
+      0.5659029804104191,
+      0.5665609361347778,
+      0.5601495109715036,
+      0.5906124417889531,
+      0.5659427167051005,
+      0.5656495968819384,
+      0.565764746996267,
+      0.6510867389372309,
+      0.5656495968819384,
+      0.5664394829113838,
+      0.5660002612325784,
+      0.5645178597283019,
+      0.5751738371103882,
+      0.5643211246126374,
+      0.5626673165910528,
+      0.5587774570665263,
+      0.5658058735139232,
+      0.5647264403542267,
+      0.5663623123511474,
+      0.5653799308416056,
+      0.5615611008632098,
+      0.6502103479793613,
+      0.5625038802632647,
+      0.5898211763680969,
+      0.565225140708837,
+      0.5659872400372037,
+      0.6500660762581298,
+      0.6503405501136678,
+      0.5760132174604855,
+      0.5899225337374019,
+      0.5645618346177901,
+      0.5659961445758477,
+      0.5659427167051005,
+      0.5638522913514067,
+      0.5765225149026366
+    ],
+    "flips": true
+  },
+  "ranking": {
+    "A_before": 1,
+    "A_after": 1,
+    "B_before": 2,
+    "B_after": 2,
+    "top3_after": [
+      "Incredibles, The (2004)",
+      "Indiana Jones and the Temple of Doom (1984)",
+      "Corpse Bride (2005)"
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": 5984,
+        "name": "The Incredibles",
+        "type": "title",
+        "role": "A"
+      },
+      {
+        "id": 994,
+        "name": "Dazed and Confused",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 867,
+        "name": "Pulp Fiction",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 297,
+        "name": "user 297",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 2186,
+        "name": "Indiana Jones and the Temple of Doom",
+        "type": "title",
+        "role": "B"
+      },
+      {
+        "id": 1450,
+        "name": "Rebel Without a Cause",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 75,
+        "name": "user 75",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 365,
+        "name": "user 365",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 465,
+        "name": "user 465",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 1556,
+        "name": "The Graduate",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 600,
+        "name": "user 600",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 377,
+        "name": "user 377",
+        "type": "user",
+        "role": null
+      },
+      {
+        "id": 5178,
+        "name": "All the President's Men",
+        "type": "title",
+        "role": null
+      },
+      {
+        "id": 284,
+        "name": "user 284",
+        "type": "user",
+        "role": "u"
+      }
+    ],
+    "edges": [
+      {
+        "eid": 76225,
+        "s": 5984,
+        "t": 75,
+        "rating": 0.5,
+        "date": "Aug 10, 2015",
+        "expl": true,
+        "n": 2
+      },
+      {
+        "eid": 76328,
+        "s": 5984,
+        "t": 465,
+        "rating": 3.5,
+        "date": "Aug 18, 2015",
+        "expl": true,
+        "n": 7
+      },
+      {
+        "eid": 76582,
+        "s": 5984,
+        "t": 600,
+        "rating": 5.0,
+        "date": "Sep 7, 2015",
+        "expl": true,
+        "n": 1
+      },
+      {
+        "eid": 77157,
+        "s": 5984,
+        "t": 377,
+        "rating": 4.0,
+        "date": "Oct 20, 2015",
+        "expl": true,
+        "n": 5
+      },
+      {
+        "eid": 77183,
+        "s": 5984,
+        "t": 365,
+        "rating": 4.0,
+        "date": "Oct 22, 2015",
+        "expl": true,
+        "n": 3
+      },
+      {
+        "eid": 79196,
+        "s": 284,
+        "t": 5178,
+        "rating": 4.0,
+        "date": "Dec 9, 2015",
+        "expl": true,
+        "n": 4
+      },
+      {
+        "eid": 79198,
+        "s": 284,
+        "t": 994,
+        "rating": 5.0,
+        "date": "Dec 9, 2015",
+        "expl": true,
+        "n": 8
+      },
+      {
+        "eid": 79199,
+        "s": 284,
+        "t": 1450,
+        "rating": 3.0,
+        "date": "Dec 9, 2015",
+        "expl": true,
+        "n": 6
+      },
+      {
+        "eid": 76141,
+        "s": 867,
+        "t": 75,
+        "rating": 4.5,
+        "date": "Aug 10, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 76230,
+        "s": 1556,
+        "t": 75,
+        "rating": 2.0,
+        "date": "Aug 10, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 78286,
+        "s": 5984,
+        "t": 297,
+        "rating": 2.0,
+        "date": "Nov 14, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 78571,
+        "s": 994,
+        "t": 297,
+        "rating": 3.5,
+        "date": "Nov 15, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 79195,
+        "s": 284,
+        "t": 1556,
+        "rating": 5.0,
+        "date": "Dec 9, 2015",
+        "expl": false,
+        "n": null
+      },
+      {
+        "eid": 79197,
+        "s": 284,
+        "t": 867,
+        "rating": 4.0,
+        "date": "Dec 9, 2015",
+        "expl": false,
+        "n": null
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "motif": "POP",
+      "name": "Recent fans piled on",
+      "raw": 1.9658387179421848,
+      "adjusted": 1.5422250574648522,
+      "graph": {
+        "nodes": [
+          {
+            "id": 5984,
+            "name": "The Incredibles",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 600,
+            "name": "user 600",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 365,
+            "name": "user 365",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 76582,
+            "s": 5984,
+            "t": 600,
+            "rating": 5.0,
+            "date": "Sep 7, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 77183,
+            "s": 5984,
+            "t": 365,
+            "rating": 4.0,
+            "date": "Oct 22, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        76582,
+        77183
+      ],
+      "S": 0.00960740213361223,
+      "occurrence": {
+        "eids": [
+          76582,
+          77183
+        ],
+        "nodes": [
+          "user 600",
+          "user 365",
+          "The Incredibles"
+        ],
+        "dates": [
+          "Sep 7, 2015",
+          "Oct 22, 2015"
+        ]
+      },
+      "p_without": 0.49853553820957797,
+      "p_random": 0.56699838697624,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: before matching on context it looks 2.0\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.5\u00d7. Timing and activity explain part of it, but a real structural effect remains. Removing its strongest occurrence (user 600, user 365, The Incredibles): 57% \u2192 50%; random ratings of the same size: 57% (p = 0.02)."
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.38238663606254464,
+      "adjusted": 1.140688089748715,
+      "graph": {
+        "nodes": [
+          {
+            "id": 867,
+            "name": "Pulp Fiction",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 284,
+            "name": "user 284",
+            "type": "user",
+            "role": "u"
+          },
+          {
+            "id": 1556,
+            "name": "The Graduate",
+            "type": "title",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 79195,
+            "s": 284,
+            "t": 1556,
+            "rating": 5.0,
+            "date": "Dec 9, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 79197,
+            "s": 284,
+            "t": 867,
+            "rating": 4.0,
+            "date": "Dec 9, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": 5.3935806280061275e-05,
+      "occurrence": {
+        "eids": [
+          79195,
+          79197
+        ],
+        "nodes": [
+          "user 284",
+          "The Graduate",
+          "Pulp Fiction"
+        ],
+        "dates": [
+          "Dec 9, 2015",
+          "Dec 9, 2015"
+        ]
+      },
+      "p_without": 0.555479255702122,
+      "p_random": 0.5663115283869161,
+      "p_value": 0.01639344262295082,
+      "why": "A run of ratings in one sitting: before matching on context it looks 0.4\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 1.1\u00d7. Timing and activity do not explain it away. Removing its strongest occurrence (user 284, The Graduate, Pulp Fiction): 57% \u2192 56%; random ratings of the same size: 57% (p = 0.02)."
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 0.7629802373634563,
+      "adjusted": 0.850845529716903,
+      "graph": {
+        "nodes": [
+          {
+            "id": 5984,
+            "name": "The Incredibles",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 600,
+            "name": "user 600",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 20,
+            "name": "user 20",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 76538,
+            "s": 5984,
+            "t": 20,
+            "rating": 3.5,
+            "date": "Sep 4, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 76582,
+            "s": 5984,
+            "t": 600,
+            "rating": 5.0,
+            "date": "Sep 7, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        76582
+      ],
+      "S": -0.0028806180636911606,
+      "occurrence": {
+        "eids": [
+          76538,
+          76582
+        ],
+        "nodes": [
+          "user 20",
+          "The Incredibles",
+          "user 600"
+        ],
+        "dates": [
+          "Sep 4, 2015",
+          "Sep 7, 2015"
+        ]
+      },
+      "p_without": 0.5288058597825783,
+      "p_random": 0.5744534279770852,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: before matching on context it looks 0.8\u00d7 as important as an average pattern; compared only with patterns that are equally recent, last as long and involve equally active people, it is 0.9\u00d7. Removing its strongest occurrence (user 20, The Incredibles, user 600): 57% \u2192 53%; random ratings of the same size: 57% (p = 0.02)."
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 0.0,
+      "adjusted": 0.0,
+      "graph": {
+        "nodes": [
+          {
+            "id": 104,
+            "name": "user 104",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 867,
+            "name": "Pulp Fiction",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 5984,
+            "name": "The Incredibles",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 62,
+            "name": "user 62",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 76935,
+            "s": 867,
+            "t": 62,
+            "rating": 5.0,
+            "date": "Sep 25, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 77275,
+            "s": 867,
+            "t": 104,
+            "rating": 5.0,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 77433,
+            "s": 5984,
+            "t": 104,
+            "rating": 3.5,
+            "date": "Nov 3, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.0034244258169065485,
+      "occurrence": {
+        "eids": [
+          76935,
+          77275,
+          77433
+        ],
+        "nodes": [
+          "user 62",
+          "Pulp Fiction",
+          "user 104",
+          "The Incredibles"
+        ],
+        "dates": [
+          "Sep 25, 2015",
+          "Nov 3, 2015",
+          "Nov 3, 2015"
+        ]
+      },
+      "p_without": 0.5660685427101042,
+      "p_random": 0.5677546627622067,
+      "p_value": 0.6885245901639344,
+      "why": "Shared taste leads to the title: Removing its strongest occurrence (user 62, Pulp Fiction, user 104): 57% \u2192 57%; random ratings of the same size: 57% (p = 0.69)."
+    },
+    {
+      "motif": "BRIDGEB",
+      "name": "Shared taste leads to the better match",
+      "raw": 0.0,
+      "adjusted": 0.0,
+      "graph": {
+        "nodes": [
+          {
+            "id": 176,
+            "name": "user 176",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 2186,
+            "name": "Indiana Jones and the Temple of Doom",
+            "type": "title",
+            "role": "B"
+          },
+          {
+            "id": 1556,
+            "name": "The Graduate",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 102,
+            "name": "user 102",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 74230,
+            "s": 1556,
+            "t": 102,
+            "rating": 4.5,
+            "date": "May 18, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 74931,
+            "s": 1556,
+            "t": 176,
+            "rating": 5.0,
+            "date": "Jun 28, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 75471,
+            "s": 2186,
+            "t": 176,
+            "rating": 3.0,
+            "date": "Jul 4, 2015",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": -0.0005586073188584086,
+      "occurrence": {
+        "eids": [
+          74230,
+          74931,
+          75471
+        ],
+        "nodes": [
+          "user 102",
+          "The Graduate",
+          "user 176",
+          "Indiana Jones and the Temple of Doom"
+        ],
+        "dates": [
+          "May 18, 2015",
+          "Jun 28, 2015",
+          "Jul 4, 2015"
+        ]
+      },
+      "p_without": 0.5838432227761469,
+      "p_random": 0.5683185559187296,
+      "p_value": 0.9836065573770492,
+      "why": "Shared taste leads to the better match: Removing its strongest occurrence (user 102, The Graduate, user 176): 57% \u2192 58%; random ratings of the same size: 57% (p = 0.98)."
+    }
+  ],
+  "n_draw": 60,
+  "n_model_runs": 1104,
+  "computed_at": "2026-10-27T18:47:36-0400",
+  "summary": "With 8 ratings (5 recent ratings of The Incredibles by other people, 3 of the member's own ratings), the model's preference for The Incredibles over Indiana Jones and the Temple of Doom goes from 57% to 42% and flips to the right answer. Removing the same number of random ratings from the same weeks gives 58% on average (p = 0.02, 60 draws). The full ranking still puts The Incredibles at #1: text match and popularity also push it up."
+}

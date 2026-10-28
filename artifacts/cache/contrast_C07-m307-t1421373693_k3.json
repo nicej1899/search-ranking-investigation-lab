@@ -1,0 +1,197 @@
+{
+  "case_id": "C07-m307-t1421373693",
+  "member": 307,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Can't Hardly Wait (1998)",
+  "A_id": 3555,
+  "B_id": 1994,
+  "member_id": 307,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 72940,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 343",
+        "from_id": 3555,
+        "to_id": 343,
+        "rating": 0.5,
+        "date": "2015-01-05",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 73004,
+        "from": "user 307",
+        "to": "Star Wars: Episode IV - A New Hope (1977)",
+        "from_id": 307,
+        "to_id": 834,
+        "rating": 2.5,
+        "date": "2015-01-16",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 73006,
+        "from": "user 307",
+        "to": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+        "from_id": 307,
+        "to_id": 1510,
+        "rating": 1.0,
+        "date": "2015-01-16",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 2.8657023156710335,
+      "nodes": [
+        {
+          "id": 20,
+          "name": "user 20"
+        },
+        {
+          "id": 834,
+          "name": "Star Wars: Episode IV - A New Hope (1977)"
+        },
+        {
+          "id": 343,
+          "name": "user 343"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 72704,
+          "from": "Star Wars: Episode IV - A New Hope (1977)",
+          "to": "user 20",
+          "from_id": 834,
+          "to_id": 20,
+          "rating": 4.5,
+          "date": "2014-11-30"
+        },
+        {
+          "eid": 72930,
+          "from": "Star Wars: Episode IV - A New Hope (1977)",
+          "to": "user 343",
+          "from_id": 834,
+          "to_id": 343,
+          "rating": 5.0,
+          "date": "2015-01-05"
+        },
+        {
+          "eid": 72940,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 343",
+          "from_id": 3555,
+          "to_id": 343,
+          "rating": 0.5,
+          "date": "2015-01-05"
+        }
+      ]
+    },
+    "n_model_runs": 153
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 73005,
+        "from": "user 307",
+        "to": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+        "from_id": 307,
+        "to_id": 1508,
+        "rating": 2.5,
+        "date": "2015-01-16",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 73007,
+        "from": "user 307",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 307,
+        "to_id": 887,
+        "rating": 1.0,
+        "date": "2015-01-16",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 73008,
+        "from": "user 307",
+        "to": "Schindler's List (1993)",
+        "from_id": 307,
+        "to_id": 1071,
+        "rating": 1.0,
+        "date": "2015-01-16",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 1.0150710025567748,
+      "nodes": [
+        {
+          "id": 59,
+          "name": "user 59"
+        },
+        {
+          "id": 1071,
+          "name": "Schindler's List (1993)"
+        },
+        {
+          "id": 307,
+          "name": "user 307"
+        }
+      ],
+      "links": [
+        {
+          "eid": 71873,
+          "from": "Schindler's List (1993)",
+          "to": "user 59",
+          "from_id": 1071,
+          "to_id": 59,
+          "rating": 5.0,
+          "date": "2014-02-27"
+        },
+        {
+          "eid": 73008,
+          "from": "user 307",
+          "to": "Schindler's List (1993)",
+          "from_id": 307,
+          "to_id": 1071,
+          "rating": 1.0,
+          "date": "2015-01-16"
+        }
+      ]
+    },
+    "n_model_runs": 153
+  },
+  "test": {
+    "p0": 0.9488570777894015,
+    "del_A": {
+      "p": 0.9290998266762873,
+      "p_random": 0.9500152475097664,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9590845667986618,
+      "p_random": 0.9458410019545174,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.3333333333333333,
+    "B_from_member_history": 1.0,
+    "shared_links": []
+  }
+}

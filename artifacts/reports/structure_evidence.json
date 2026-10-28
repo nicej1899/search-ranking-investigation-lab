@@ -1,0 +1,6281 @@
+{
+  "created": "2026-10-22T22:34:47-0400",
+  "backbone": "tgat2",
+  "L": 2,
+  "model_note": "The graph model (TGAT, 2 layers) represents each person and each title from their recent rating links, weighted by attention and by how recent each link is; a title's representation is built from the people who rated it recently, and those people's representations from the other titles they rated. The search ranker adds this graph model's history score to a text-match score and a popularity score.",
+  "cases": {
+    "C07-m1-t1445714882": {
+      "case_id": "C07-m1-t1445714882",
+      "member": 1,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Next Three Days, The (2010)",
+      "A_genres": "Drama",
+      "B_genres": "Crime|Drama|Romance|Thriller",
+      "A_id": 3555,
+      "B_id": 8071,
+      "member_id": 1,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 3.0,
+          "date": "2015-10-24"
+        },
+        {
+          "title": "Inception (2010)",
+          "rating": 4.0,
+          "date": "2015-10-24"
+        },
+        {
+          "title": "The Jinx: The Life and Deaths of Robert Durst (2015)",
+          "rating": 5.0,
+          "date": "2015-10-24"
+        },
+        {
+          "title": "Ex Machina (2015)",
+          "rating": 3.5,
+          "date": "2015-10-24"
+        },
+        {
+          "title": "Django Unchained (2012)",
+          "rating": 3.5,
+          "date": "2015-10-24"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 3.0267996055148667,
+          "S": 0.031293054060502486,
+          "est_count": 21.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            },
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            }
+          ],
+          "p_before": 0.6951029646317488,
+          "p_after": 0.6045553430611578,
+          "p_random": 0.6927334422997767,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2615104913711548,
+          "gap_before": 0.5393023490905762,
+          "gap_after": 0.2777918577194214,
+          "gap_random": 0.5322052285075187
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 2.5201856596379764,
+          "S": 0.02953791488355404,
+          "est_count": 41.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 75,
+              "name": "user 75"
+            },
+            {
+              "id": 7982,
+              "name": "Inception (2010)"
+            },
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76180,
+              "from": "Inception (2010)",
+              "to": "user 75",
+              "rating": 4.0,
+              "date": "2015-08-10",
+              "from_id": 7982,
+              "to_id": 75
+            },
+            {
+              "eid": 77171,
+              "from": "Inception (2010)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 7982,
+              "to_id": 365
+            },
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            }
+          ],
+          "p_before": 0.6951029646317488,
+          "p_after": 0.647523257218222,
+          "p_random": 0.6963757103938267,
+          "p_value": 0.0975609756097561,
+          "drop_logit": 0.14130067825317383,
+          "gap_before": 0.5393023490905762,
+          "gap_after": 0.39800167083740234,
+          "gap_random": 0.5484248712658882
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.56809981224087,
+          "S": -0.010593248835497325,
+          "est_count": 179.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 377,
+              "name": "user 377"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 1,
+              "name": "user 1"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77113,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 377",
+              "rating": 4.5,
+              "date": "2015-10-20",
+              "from_id": 887,
+              "to_id": 377
+            },
+            {
+              "eid": 77199,
+              "from": "user 1",
+              "to": "Shawshank Redemption, The (1994)",
+              "rating": 3.0,
+              "date": "2015-10-24",
+              "from_id": 1,
+              "to_id": 887
+            }
+          ],
+          "p_before": 0.6951029646317488,
+          "p_after": 0.6377412625178277,
+          "p_random": 0.6943574571398526,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.1691766381263733,
+          "gap_before": 0.5393023490905762,
+          "gap_after": 0.3701257109642029,
+          "gap_random": 0.5382612228393555
+        }
+      ],
+      "n_model_runs": 267
+    },
+    "C07-m59-t1393541892": {
+      "case_id": "C07-m59-t1393541892",
+      "member": 59,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Quiet Man, The (1952)",
+      "A_genres": "Drama",
+      "B_genres": "Drama|Romance",
+      "A_id": 3555,
+      "B_id": 1537,
+      "member_id": 59,
+      "recent_ratings": [
+        {
+          "title": "Ransom (1996)",
+          "rating": 3.0,
+          "date": "2014-02-27"
+        },
+        {
+          "title": "Pocahontas (1995)",
+          "rating": 3.0,
+          "date": "2014-02-27"
+        },
+        {
+          "title": "Time to Kill, A (1996)",
+          "rating": 4.0,
+          "date": "2014-02-27"
+        },
+        {
+          "title": "Glory (1989)",
+          "rating": 4.0,
+          "date": "2014-02-27"
+        },
+        {
+          "title": "Hunchback of Notre Dame, The (1996)",
+          "rating": 4.0,
+          "date": "2014-02-27"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 1.2062667792709905,
+          "S": 0.00288507342338562,
+          "est_count": 3.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 15,
+              "name": "user 15"
+            },
+            {
+              "id": 281,
+              "name": "user 281"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 70940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 15",
+              "rating": 4.0,
+              "date": "2013-08-26",
+              "from_id": 3555,
+              "to_id": 15
+            },
+            {
+              "eid": 71044,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 281",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 3555,
+              "to_id": 281
+            }
+          ],
+          "p_before": 0.9939055757227748,
+          "p_after": 0.9852817872653746,
+          "p_random": 0.9939112839763584,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.5827169418334961,
+          "gap_before": 3.3338160514831543,
+          "gap_after": 2.751099109649658,
+          "gap_random": 3.334435075521469
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.8472328506347018,
+          "S": -0.0024533502080223775,
+          "est_count": 8.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 15,
+              "name": "user 15"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 281,
+              "name": "user 281"
+            }
+          ],
+          "links": [
+            {
+              "eid": 70940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 15",
+              "rating": 4.0,
+              "date": "2013-08-26",
+              "from_id": 3555,
+              "to_id": 15
+            },
+            {
+              "eid": 71044,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 281",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 3555,
+              "to_id": 281
+            }
+          ],
+          "p_before": 0.9939055757227748,
+          "p_after": 0.9852817872653746,
+          "p_random": 0.9939112839763584,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.5827169418334961,
+          "gap_before": 3.3338160514831543,
+          "gap_after": 2.751099109649658,
+          "gap_random": 3.334435075521469
+        },
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 1.0031893808451382,
+          "S": 0.00020216269926591354,
+          "est_count": 165.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 281,
+              "name": "user 281"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 5037,
+              "name": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 71044,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 281",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 3555,
+              "to_id": 281
+            },
+            {
+              "eid": 71142,
+              "from": "user 281",
+              "to": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+              "rating": 4.0,
+              "date": "2013-09-06",
+              "from_id": 281,
+              "to_id": 5037
+            }
+          ],
+          "p_before": 0.9939055757227748,
+          "p_after": 0.988456120359544,
+          "p_random": 0.9939055757227748,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.4216322898864746,
+          "gap_before": 3.3338160514831543,
+          "gap_after": 2.9121837615966797,
+          "gap_random": 3.3338160514831543
+        }
+      ],
+      "n_model_runs": 176
+    },
+    "C07-m62-t1443199688": {
+      "case_id": "C07-m62-t1443199688",
+      "member": 62,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Thin Red Line, The (1998)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Drama|War",
+      "A_id": 3555,
+      "B_id": 2436,
+      "member_id": 62,
+      "recent_ratings": [
+        {
+          "title": "Back to the Future (1985)",
+          "rating": 5.0,
+          "date": "2015-09-25"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 3.5,
+          "date": "2015-09-25"
+        },
+        {
+          "title": "Toy Story (1995)",
+          "rating": 5.0,
+          "date": "2015-09-25"
+        },
+        {
+          "title": "Jurassic Park (1993)",
+          "rating": 2.5,
+          "date": "2015-09-25"
+        },
+        {
+          "title": "Forrest Gump (1994)",
+          "rating": 3.5,
+          "date": "2015-09-25"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 8.088282220331868,
+          "S": 0.06486548639887528,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            },
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            }
+          ],
+          "p_before": 0.9901556746292941,
+          "p_after": 0.9553335086965971,
+          "p_random": 0.9898799872472688,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 1.0131349563598633,
+          "gap_before": 3.0175318717956543,
+          "gap_after": 2.004396915435791,
+          "gap_random": 3.0074323058128356
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.2328408641161267,
+          "S": -0.0320115176577507,
+          "est_count": 216.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 102,
+              "name": "user 102"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            },
+            {
+              "eid": 74247,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 102",
+              "rating": 5.0,
+              "date": "2015-05-18",
+              "from_id": 3555,
+              "to_id": 102
+            }
+          ],
+          "p_before": 0.9901556746292941,
+          "p_after": 0.9767529779098407,
+          "p_random": 0.9901119628453156,
+          "p_value": 0.04878048780487805,
+          "drop_logit": 0.5712542533874512,
+          "gap_before": 3.0175318717956543,
+          "gap_after": 2.446277618408203,
+          "gap_random": 3.038500267267227
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 2.2164741238612264,
+          "S": 0.007165939344776618,
+          "est_count": 3.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 20,
+              "name": "user 20"
+            },
+            {
+              "id": 1028,
+              "name": "Jurassic Park (1993)"
+            },
+            {
+              "id": 102,
+              "name": "user 102"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72741,
+              "from": "Jurassic Park (1993)",
+              "to": "user 20",
+              "rating": 4.0,
+              "date": "2014-12-08",
+              "from_id": 1028,
+              "to_id": 20
+            },
+            {
+              "eid": 74092,
+              "from": "Jurassic Park (1993)",
+              "to": "user 102",
+              "rating": 4.0,
+              "date": "2015-05-18",
+              "from_id": 1028,
+              "to_id": 102
+            },
+            {
+              "eid": 74247,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 102",
+              "rating": 5.0,
+              "date": "2015-05-18",
+              "from_id": 3555,
+              "to_id": 102
+            }
+          ],
+          "p_before": 0.9901556746292941,
+          "p_after": 0.985537430984763,
+          "p_random": 0.9896610472282802,
+          "p_value": 0.12195121951219512,
+          "drop_logit": 0.25479626655578613,
+          "gap_before": 3.0175318717956543,
+          "gap_after": 2.762735605239868,
+          "gap_random": 3.035003435611725
+        }
+      ],
+      "n_model_runs": 215
+    },
+    "C07-m72-t1464196245": {
+      "case_id": "C07-m72-t1464196245",
+      "member": 72,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Rain Man (1988)",
+      "A_genres": "Drama",
+      "B_genres": "Drama",
+      "A_id": 3555,
+      "B_id": 2048,
+      "member_id": 72,
+      "recent_ratings": [
+        {
+          "title": "Truman Show, The (1998)",
+          "rating": 5.0,
+          "date": "2016-05-25"
+        },
+        {
+          "title": "Toy Story 3 (2010)",
+          "rating": 5.0,
+          "date": "2016-05-25"
+        },
+        {
+          "title": "Great Gatsby, The (2013)",
+          "rating": 3.5,
+          "date": "2016-05-25"
+        },
+        {
+          "title": "Step Brothers (2008)",
+          "rating": 4.5,
+          "date": "2016-05-25"
+        },
+        {
+          "title": "Other Guys, The (2010)",
+          "rating": 4.5,
+          "date": "2016-05-25"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 2.6871009815460307,
+          "S": 0.018194560260209353,
+          "est_count": 45.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 580,
+              "name": "user 580"
+            },
+            {
+              "id": 17,
+              "name": "user 17"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77927,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 580",
+              "rating": 4.5,
+              "date": "2015-11-08",
+              "from_id": 3555,
+              "to_id": 580
+            },
+            {
+              "eid": 80275,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 17",
+              "rating": 4.5,
+              "date": "2016-02-15",
+              "from_id": 3555,
+              "to_id": 17
+            }
+          ],
+          "p_before": 0.5628618445645776,
+          "p_after": 0.46699633836402565,
+          "p_random": 0.571804915777075,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2519482374191284,
+          "gap_before": 0.1654287576675415,
+          "gap_after": -0.08651947975158691,
+          "gap_random": 0.19031967520713805
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "a path of shared taste that ends at B",
+          "lift": 0.24638934005000138,
+          "S": -0.004617351927095228,
+          "est_count": 35.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 494,
+              "name": "user 494"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 40,
+              "name": "user 40"
+            },
+            {
+              "id": 2048,
+              "name": "Rain Man (1988)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80711,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 494",
+              "rating": 4.0,
+              "date": "2016-03-22",
+              "from_id": 3555,
+              "to_id": 494
+            },
+            {
+              "eid": 80932,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 3555,
+              "to_id": 40
+            },
+            {
+              "eid": 81222,
+              "from": "Rain Man (1988)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-30",
+              "from_id": 2048,
+              "to_id": 40
+            }
+          ],
+          "p_before": 0.5628618445645776,
+          "p_after": 0.5463924131600058,
+          "p_random": 0.5643977306619782,
+          "p_value": 0.04878048780487805,
+          "drop_logit": 0.04363703727722168,
+          "gap_before": 0.1654287576675415,
+          "gap_after": 0.12179172039031982,
+          "gap_random": 0.1695710837841034
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 0.5943805806505948,
+          "S": -0.003620547584340543,
+          "est_count": 14.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 423,
+              "name": "user 423"
+            },
+            {
+              "id": 1877,
+              "name": "Truman Show, The (1998)"
+            },
+            {
+              "id": 494,
+              "name": "user 494"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80536,
+              "from": "Truman Show, The (1998)",
+              "to": "user 423",
+              "rating": 3.5,
+              "date": "2016-03-13",
+              "from_id": 1877,
+              "to_id": 423
+            },
+            {
+              "eid": 80683,
+              "from": "Truman Show, The (1998)",
+              "to": "user 494",
+              "rating": 4.5,
+              "date": "2016-03-22",
+              "from_id": 1877,
+              "to_id": 494
+            },
+            {
+              "eid": 80711,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 494",
+              "rating": 4.0,
+              "date": "2016-03-22",
+              "from_id": 3555,
+              "to_id": 494
+            }
+          ],
+          "p_before": 0.5628618445645776,
+          "p_after": 0.5502356980707989,
+          "p_random": 0.5648559402014792,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.033481597900390625,
+          "gap_before": 0.1654287576675415,
+          "gap_after": 0.13194715976715088,
+          "gap_random": 0.17076265215873718
+        }
+      ],
+      "n_model_runs": 271
+    },
+    "C07-m105-t1467360422": {
+      "case_id": "C07-m105-t1467360422",
+      "member": 105,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Last Samurai, The (2003)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Adventure|Drama|War",
+      "A_id": 3555,
+      "B_id": 5405,
+      "member_id": 105,
+      "recent_ratings": [
+        {
+          "title": "Lord of the Rings: The Return of the King, The (2003)",
+          "rating": 5.0,
+          "date": "2016-07-01"
+        },
+        {
+          "title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+          "rating": 5.0,
+          "date": "2016-07-01"
+        },
+        {
+          "title": "Lord of the Rings: The Two Towers, The (2002)",
+          "rating": 5.0,
+          "date": "2016-07-01"
+        },
+        {
+          "title": "Harry Potter and the Deathly Hallows: Part 1 (2010)",
+          "rating": 5.0,
+          "date": "2016-07-01"
+        },
+        {
+          "title": "Harry Potter and the Half-Blood Prince (2009)",
+          "rating": 5.0,
+          "date": "2016-07-01"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 3.1928536102749594,
+          "S": 0.014014013608296714,
+          "est_count": 30.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 40,
+              "name": "user 40"
+            },
+            {
+              "id": 4747,
+              "name": "Lord of the Rings: The Two Towers, The (2002)"
+            },
+            {
+              "id": 304,
+              "name": "user 304"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 81219,
+              "from": "Lord of the Rings: The Two Towers, The (2002)",
+              "to": "user 40",
+              "rating": 2.0,
+              "date": "2016-03-30",
+              "from_id": 4747,
+              "to_id": 40
+            },
+            {
+              "eid": 81838,
+              "from": "Lord of the Rings: The Two Towers, The (2002)",
+              "to": "user 304",
+              "rating": 5.0,
+              "date": "2016-04-08",
+              "from_id": 4747,
+              "to_id": 304
+            },
+            {
+              "eid": 81884,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 304",
+              "rating": 5.0,
+              "date": "2016-04-08",
+              "from_id": 3555,
+              "to_id": 304
+            }
+          ],
+          "p_before": 0.4774697867664653,
+          "p_after": 0.4554149993385353,
+          "p_random": 0.4984706327955296,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.05800366401672363,
+          "gap_before": -0.059017300605773926,
+          "gap_after": -0.11702096462249756,
+          "gap_random": -0.0019481658935546875
+        },
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 2.2714180652923046,
+          "S": 0.008913955712288656,
+          "est_count": 44.99999999999999,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 40,
+              "name": "user 40"
+            },
+            {
+              "id": 304,
+              "name": "user 304"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80932,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 3555,
+              "to_id": 40
+            },
+            {
+              "eid": 81884,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 304",
+              "rating": 5.0,
+              "date": "2016-04-08",
+              "from_id": 3555,
+              "to_id": 304
+            }
+          ],
+          "p_before": 0.4774697867664653,
+          "p_after": 0.44091465994652057,
+          "p_random": 0.49396770877809726,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.09637641906738281,
+          "gap_before": -0.059017300605773926,
+          "gap_after": -0.15539371967315674,
+          "gap_random": -0.012880313396453857
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "a path of shared taste that ends at B",
+          "lift": 0.0,
+          "S": -0.0064744945411825,
+          "est_count": 48.000000000000014,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 304,
+              "name": "user 304"
+            },
+            {
+              "id": 4248,
+              "name": "Lord of the Rings: The Fellowship of the Ring, The (2001)"
+            },
+            {
+              "id": 338,
+              "name": "user 338"
+            },
+            {
+              "id": 5405,
+              "name": "Last Samurai, The (2003)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 81834,
+              "from": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+              "to": "user 304",
+              "rating": 5.0,
+              "date": "2016-04-08",
+              "from_id": 4248,
+              "to_id": 304
+            },
+            {
+              "eid": 82030,
+              "from": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+              "to": "user 338",
+              "rating": 3.5,
+              "date": "2016-04-09",
+              "from_id": 4248,
+              "to_id": 338
+            },
+            {
+              "eid": 82456,
+              "from": "Last Samurai, The (2003)",
+              "to": "user 338",
+              "rating": 4.5,
+              "date": "2016-04-13",
+              "from_id": 5405,
+              "to_id": 338
+            }
+          ],
+          "p_before": 0.4774697867664653,
+          "p_after": 0.6234508835843139,
+          "p_random": 0.48717040466775713,
+          "p_value": 0.926829268292683,
+          "drop_logit": -0.38899242877960205,
+          "gap_before": -0.059017300605773926,
+          "gap_after": 0.3299751281738281,
+          "gap_random": -0.032836931943893435
+        }
+      ],
+      "n_model_runs": 306
+    },
+    "C07-m118-t1435943180": {
+      "case_id": "C07-m118-t1435943180",
+      "member": 118,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Rob Roy (1995)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Drama|Romance|War",
+      "A_id": 3555,
+      "B_id": 734,
+      "member_id": 118,
+      "recent_ratings": [
+        {
+          "title": "Back to the Future (1985)",
+          "rating": 4.0,
+          "date": "2015-07-03"
+        },
+        {
+          "title": "Toy Story (1995)",
+          "rating": 3.5,
+          "date": "2015-07-03"
+        },
+        {
+          "title": "Forrest Gump (1994)",
+          "rating": 4.0,
+          "date": "2015-07-03"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 4.0,
+          "date": "2015-07-03"
+        },
+        {
+          "title": "American History X (1998)",
+          "rating": 4.0,
+          "date": "2015-07-03"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 3.532542202287557,
+          "S": 0.04582230877458003,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 102,
+              "name": "user 102"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            },
+            {
+              "eid": 74247,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 102",
+              "rating": 5.0,
+              "date": "2015-05-18",
+              "from_id": 3555,
+              "to_id": 102
+            }
+          ],
+          "p_before": 0.9870330122188218,
+          "p_after": 0.960240614088717,
+          "p_random": 0.986877251490353,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.7512528896331787,
+          "gap_before": 2.835163116455078,
+          "gap_after": 2.0839102268218994,
+          "gap_random": 2.8274119079113005
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 2.0929148020058195,
+          "S": 0.021728337856761197,
+          "est_count": 24.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 299,
+              "name": "user 299"
+            },
+            {
+              "id": 2344,
+              "name": "American History X (1998)"
+            },
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73510,
+              "from": "American History X (1998)",
+              "to": "user 299",
+              "rating": 4.0,
+              "date": "2015-03-03",
+              "from_id": 2344,
+              "to_id": 299
+            },
+            {
+              "eid": 73731,
+              "from": "American History X (1998)",
+              "to": "user 316",
+              "rating": 5.0,
+              "date": "2015-04-30",
+              "from_id": 2344,
+              "to_id": 316
+            },
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            }
+          ],
+          "p_before": 0.9870330122188218,
+          "p_after": 0.9786117566466417,
+          "p_random": 0.987059175887067,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.33310437202453613,
+          "gap_before": 2.835163116455078,
+          "gap_after": 2.502058744430542,
+          "gap_random": 2.84391930103302
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.4640668158285567,
+          "S": -0.018535698856364073,
+          "est_count": 161.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 496,
+              "name": "user 496"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 118,
+              "name": "user 118"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73661,
+              "from": "Matrix, The (1999)",
+              "to": "user 496",
+              "rating": 2.5,
+              "date": "2015-04-15",
+              "from_id": 2549,
+              "to_id": 496
+            },
+            {
+              "eid": 75421,
+              "from": "user 118",
+              "to": "Matrix, The (1999)",
+              "rating": 4.0,
+              "date": "2015-07-03",
+              "from_id": 118,
+              "to_id": 2549
+            }
+          ],
+          "p_before": 0.9870330122188218,
+          "p_after": 0.9835093976395854,
+          "p_random": 0.9862980770127905,
+          "p_value": 0.17073170731707318,
+          "drop_logit": 0.1596536636352539,
+          "gap_before": 2.835163116455078,
+          "gap_after": 2.675509452819824,
+          "gap_random": 2.805500626564026
+        }
+      ],
+      "n_model_runs": 235
+    },
+    "C07-m121-t1461561151": {
+      "case_id": "C07-m121-t1461561151",
+      "member": 121,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "My Life (1993)",
+      "A_genres": "Drama",
+      "B_genres": "Drama",
+      "A_id": 3555,
+      "B_id": 3227,
+      "member_id": 121,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 5.0,
+          "date": "2016-04-25"
+        },
+        {
+          "title": "Godfather, The (1972)",
+          "rating": 5.0,
+          "date": "2016-04-25"
+        },
+        {
+          "title": "Fight Club (1999)",
+          "rating": 5.0,
+          "date": "2016-04-25"
+        },
+        {
+          "title": "Goodfellas (1990)",
+          "rating": 5.0,
+          "date": "2016-04-25"
+        },
+        {
+          "title": "Silence of the Lambs, The (1991)",
+          "rating": 5.0,
+          "date": "2016-04-25"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 4.742366819411584,
+          "S": 0.04572014297559115,
+          "est_count": 45.00000000000001,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 40,
+              "name": "user 40"
+            },
+            {
+              "id": 304,
+              "name": "user 304"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80932,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 3555,
+              "to_id": 40
+            },
+            {
+              "eid": 81884,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 304",
+              "rating": 5.0,
+              "date": "2016-04-08",
+              "from_id": 3555,
+              "to_id": 304
+            }
+          ],
+          "p_before": 0.9998107772403243,
+          "p_after": 0.9997459612708307,
+          "p_random": 0.9998108741929478,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.1928110122680664,
+          "gap_before": 5.609990119934082,
+          "gap_after": 5.417179107666016,
+          "gap_random": 5.610400974750519
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 1.6255478060689161,
+          "S": 0.008240621392114986,
+          "est_count": 88.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 17,
+              "name": "user 17"
+            },
+            {
+              "id": 2836,
+              "name": "Fight Club (1999)"
+            },
+            {
+              "id": 40,
+              "name": "user 40"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 79946,
+              "from": "Fight Club (1999)",
+              "to": "user 17",
+              "rating": 4.5,
+              "date": "2016-02-09",
+              "from_id": 2836,
+              "to_id": 17
+            },
+            {
+              "eid": 80924,
+              "from": "Fight Club (1999)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 2836,
+              "to_id": 40
+            },
+            {
+              "eid": 80932,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 3555,
+              "to_id": 40
+            }
+          ],
+          "p_before": 0.9998107772403243,
+          "p_after": 0.9997831052528515,
+          "p_random": 0.9998102216067938,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.08933877944946289,
+          "gap_before": 5.609990119934082,
+          "gap_after": 5.520651340484619,
+          "gap_random": 5.6081565618515015
+        },
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 0.49566984599893016,
+          "S": -0.0022749190849087396,
+          "est_count": 453.9999999999999,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 40,
+              "name": "user 40"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 1120,
+              "name": "Silence of the Lambs, The (1991)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80932,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 3555,
+              "to_id": 40
+            },
+            {
+              "eid": 80934,
+              "from": "Silence of the Lambs, The (1991)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 1120,
+              "to_id": 40
+            }
+          ],
+          "p_before": 0.9998107772403243,
+          "p_after": 0.9997868854876564,
+          "p_random": 0.9998114452130249,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.07782983779907227,
+          "gap_before": 5.609990119934082,
+          "gap_after": 5.53216028213501,
+          "gap_random": 5.6123298645019535
+        }
+      ],
+      "n_model_runs": 278
+    },
+    "C07-m122-t1447269105": {
+      "case_id": "C07-m122-t1447269105",
+      "member": 122,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Great Escape, The (1963)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Adventure|Drama|War",
+      "A_id": 3555,
+      "B_id": 1571,
+      "member_id": 122,
+      "recent_ratings": [
+        {
+          "title": "Fight Club (1999)",
+          "rating": 4.5,
+          "date": "2015-11-11"
+        },
+        {
+          "title": "Lord of the Rings: The Return of the King, The (2003)",
+          "rating": 3.5,
+          "date": "2015-11-11"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 4.0,
+          "date": "2015-11-11"
+        },
+        {
+          "title": "Inception (2010)",
+          "rating": 4.0,
+          "date": "2015-11-11"
+        },
+        {
+          "title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+          "rating": 3.5,
+          "date": "2015-11-11"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 3.4530989228859803,
+          "S": 0.029733185947982133,
+          "est_count": 45.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            },
+            {
+              "eid": 77543,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 255",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 255
+            }
+          ],
+          "p_before": 0.6510797868075793,
+          "p_after": 0.5421832446663446,
+          "p_random": 0.65209353028389,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.29753684997558594,
+          "gap_before": 0.408223032951355,
+          "gap_after": 0.11068618297576904,
+          "gap_random": 0.4111485630273819
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 1.4966225431629125,
+          "S": 0.007099975175303551,
+          "est_count": 298.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 226,
+              "name": "user 226"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 122,
+              "name": "user 122"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77971,
+              "from": "Matrix, The (1999)",
+              "to": "user 226",
+              "rating": 4.5,
+              "date": "2015-11-10",
+              "from_id": 2549,
+              "to_id": 226
+            },
+            {
+              "eid": 78064,
+              "from": "user 122",
+              "to": "Matrix, The (1999)",
+              "rating": 4.0,
+              "date": "2015-11-11",
+              "from_id": 122,
+              "to_id": 2549
+            }
+          ],
+          "p_before": 0.6510797868075793,
+          "p_after": 0.6256552949365166,
+          "p_random": 0.6528953243376987,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.07209563255310059,
+          "gap_before": 0.408223032951355,
+          "gap_after": 0.3361274003982544,
+          "gap_random": 0.41352602243423464
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "a path of shared taste that ends at B",
+          "lift": 0.0,
+          "S": -0.0035167970807276927,
+          "est_count": 11.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 111,
+              "name": "user 111"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 1571,
+              "name": "Great Escape, The (1963)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76712,
+              "from": "Matrix, The (1999)",
+              "to": "user 111",
+              "rating": 5.0,
+              "date": "2015-09-18",
+              "from_id": 2549,
+              "to_id": 111
+            },
+            {
+              "eid": 76735,
+              "from": "Matrix, The (1999)",
+              "to": "user 62",
+              "rating": 3.5,
+              "date": "2015-09-25",
+              "from_id": 2549,
+              "to_id": 62
+            },
+            {
+              "eid": 76763,
+              "from": "Great Escape, The (1963)",
+              "to": "user 62",
+              "rating": 4.0,
+              "date": "2015-09-25",
+              "from_id": 1571,
+              "to_id": 62
+            }
+          ],
+          "p_before": 0.6510797868075793,
+          "p_after": 0.8613598383731095,
+          "p_random": 0.6567055960938106,
+          "p_value": 1.0,
+          "drop_logit": -0.7871695756912231,
+          "gap_before": 0.408223032951355,
+          "gap_after": 1.1953926086425781,
+          "gap_random": 0.4257944405078888
+        }
+      ],
+      "n_model_runs": 287
+    },
+    "C07-m142-t1444768677": {
+      "case_id": "C07-m142-t1444768677",
+      "member": 142,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "I Love You, I Love You Not (1996)",
+      "A_genres": "Drama",
+      "B_genres": "Drama|Romance",
+      "A_id": 3555,
+      "B_id": 1880,
+      "member_id": 142,
+      "recent_ratings": [
+        {
+          "title": "Walk to Remember, A (2002)",
+          "rating": 5.0,
+          "date": "2015-10-13"
+        },
+        {
+          "title": "Notebook, The (2004)",
+          "rating": 4.0,
+          "date": "2015-10-13"
+        },
+        {
+          "title": "American Pie (1999)",
+          "rating": 4.5,
+          "date": "2015-10-13"
+        },
+        {
+          "title": "Frozen (2013)",
+          "rating": 4.0,
+          "date": "2015-10-13"
+        },
+        {
+          "title": "Up (2009)",
+          "rating": 5.0,
+          "date": "2015-10-13"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 5.816402501735748,
+          "S": 0.05882026172894779,
+          "est_count": 10.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            },
+            {
+              "eid": 76776,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 62",
+              "rating": 5.0,
+              "date": "2015-09-25",
+              "from_id": 3555,
+              "to_id": 62
+            }
+          ],
+          "p_before": 0.9918282135626109,
+          "p_after": 0.9829109395700347,
+          "p_random": 0.9917016940952574,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.48871302604675293,
+          "gap_before": 3.1404953002929688,
+          "gap_after": 2.651782274246216,
+          "gap_random": 3.1311199069023132
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.7609479719623911,
+          "S": -0.0044285492227780525,
+          "est_count": 100.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 482,
+              "name": "user 482"
+            },
+            {
+              "id": 2641,
+              "name": "American Pie (1999)"
+            },
+            {
+              "id": 142,
+              "name": "user 142"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72649,
+              "from": "American Pie (1999)",
+              "to": "user 482",
+              "rating": 3.5,
+              "date": "2014-11-10",
+              "from_id": 2641,
+              "to_id": 482
+            },
+            {
+              "eid": 77037,
+              "from": "user 142",
+              "to": "American Pie (1999)",
+              "rating": 4.5,
+              "date": "2015-10-13",
+              "from_id": 142,
+              "to_id": 2641
+            }
+          ],
+          "p_before": 0.9918282135626109,
+          "p_after": 0.9891848809550139,
+          "p_random": 0.9915764307391178,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.18515396118164062,
+          "gap_before": 3.1404953002929688,
+          "gap_after": 2.955341339111328,
+          "gap_random": 3.1217083632946014
+        },
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 0.9522340817471269,
+          "S": -0.0008672653883147364,
+          "est_count": 341.00000000000017,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 142,
+              "name": "user 142"
+            },
+            {
+              "id": 2641,
+              "name": "American Pie (1999)"
+            },
+            {
+              "id": 8913,
+              "name": "Frozen (2013)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77037,
+              "from": "user 142",
+              "to": "American Pie (1999)",
+              "rating": 4.5,
+              "date": "2015-10-13",
+              "from_id": 142,
+              "to_id": 2641
+            },
+            {
+              "eid": 77038,
+              "from": "user 142",
+              "to": "Frozen (2013)",
+              "rating": 4.0,
+              "date": "2015-10-13",
+              "from_id": 142,
+              "to_id": 8913
+            }
+          ],
+          "p_before": 0.9918282135626109,
+          "p_after": 0.9879567797225751,
+          "p_random": 0.9918494223592212,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.25635480880737305,
+          "gap_before": 3.1404953002929688,
+          "gap_after": 2.8841404914855957,
+          "gap_random": 3.1424327313899996
+        }
+      ],
+      "n_model_runs": 215
+    },
+    "C07-m176-t1435523542": {
+      "case_id": "C07-m176-t1435523542",
+      "member": 176,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Last Man Standing (1996)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Crime|Drama|Thriller",
+      "A_id": 3555,
+      "B_id": 1368,
+      "member_id": 176,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 5.0,
+          "date": "2015-06-28"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 4.5,
+          "date": "2015-06-28"
+        },
+        {
+          "title": "Usual Suspects, The (1995)",
+          "rating": 4.0,
+          "date": "2015-06-28"
+        },
+        {
+          "title": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+          "rating": 3.0,
+          "date": "2015-06-28"
+        },
+        {
+          "title": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+          "rating": 3.5,
+          "date": "2015-06-28"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 5.185731701503658,
+          "S": 0.07477733169948653,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 102,
+              "name": "user 102"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            },
+            {
+              "eid": 74247,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 102",
+              "rating": 5.0,
+              "date": "2015-05-18",
+              "from_id": 3555,
+              "to_id": 102
+            }
+          ],
+          "p_before": 0.9988942526148539,
+          "p_after": 0.9951528813664552,
+          "p_random": 0.9988861562863786,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.9696061611175537,
+          "gap_before": 4.454099655151367,
+          "gap_after": 3.4844934940338135,
+          "gap_random": 4.449735224246979
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 3.114099617191323,
+          "S": 0.06971877281873307,
+          "est_count": 40.00000000000001,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 536,
+              "name": "user 536"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73305,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 536",
+              "rating": 4.0,
+              "date": "2015-02-17",
+              "from_id": 887,
+              "to_id": 536
+            },
+            {
+              "eid": 73719,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 887,
+              "to_id": 316
+            },
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            }
+          ],
+          "p_before": 0.9988942526148539,
+          "p_after": 0.9978773326170349,
+          "p_random": 0.9988778914883941,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.42745113372802734,
+          "gap_before": 4.454099655151367,
+          "gap_after": 4.02664852142334,
+          "gap_random": 4.444545423984527
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.17732479456999084,
+          "S": -0.034017184145839215,
+          "est_count": 159.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 536,
+              "name": "user 536"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 176,
+              "name": "user 176"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73305,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 536",
+              "rating": 4.0,
+              "date": "2015-02-17",
+              "from_id": 887,
+              "to_id": 536
+            },
+            {
+              "eid": 74500,
+              "from": "user 176",
+              "to": "Shawshank Redemption, The (1994)",
+              "rating": 5.0,
+              "date": "2015-06-28",
+              "from_id": 176,
+              "to_id": 887
+            }
+          ],
+          "p_before": 0.9988942526148539,
+          "p_after": 0.9987444170880443,
+          "p_random": 0.9988352884672272,
+          "p_value": 0.0975609756097561,
+          "drop_logit": 0.08326148986816406,
+          "gap_before": 4.454099655151367,
+          "gap_after": 4.370838165283203,
+          "gap_random": 4.423806154727936
+        }
+      ],
+      "n_model_runs": 251
+    },
+    "C07-m188-t1439465085": {
+      "case_id": "C07-m188-t1439465085",
+      "member": 188,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "No Way Out (1987)",
+      "A_genres": "Drama",
+      "B_genres": "Drama|Mystery|Thriller",
+      "A_id": 3555,
+      "B_id": 3230,
+      "member_id": 188,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 4.0,
+          "date": "2015-08-13"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 4.0,
+          "date": "2015-08-13"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 4.5,
+          "date": "2015-08-13"
+        },
+        {
+          "title": "Dark Knight, The (2008)",
+          "rating": 5.0,
+          "date": "2015-08-13"
+        },
+        {
+          "title": "Forrest Gump (1994)",
+          "rating": 4.0,
+          "date": "2015-08-13"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 14.682555471882635,
+          "S": 0.1346940147201281,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            },
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            }
+          ],
+          "p_before": 0.999293300017154,
+          "p_after": 0.9961010787184462,
+          "p_random": 0.999283792163315,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 1.1197528839111328,
+          "gap_before": 4.74732780456543,
+          "gap_after": 3.627574920654297,
+          "gap_random": 4.738900685310364
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.16891677631136093,
+          "S": -0.04648146301074646,
+          "est_count": 244.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 230,
+              "name": "user 230"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 188,
+              "name": "user 188"
+            }
+          ],
+          "links": [
+            {
+              "eid": 74448,
+              "from": "Matrix, The (1999)",
+              "to": "user 230",
+              "rating": 5.0,
+              "date": "2015-05-31",
+              "from_id": 2549,
+              "to_id": 230
+            },
+            {
+              "eid": 76253,
+              "from": "user 188",
+              "to": "Matrix, The (1999)",
+              "rating": 4.0,
+              "date": "2015-08-13",
+              "from_id": 188,
+              "to_id": 2549
+            }
+          ],
+          "p_before": 0.999293300017154,
+          "p_after": 0.9990927759913406,
+          "p_random": 0.9992582585038832,
+          "p_value": 0.04878048780487805,
+          "drop_logit": 0.16359567642211914,
+          "gap_before": 4.74732780456543,
+          "gap_after": 4.5837321281433105,
+          "gap_random": 4.732820773124695
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 3.3550527921880597,
+          "S": 0.021776282273557303,
+          "est_count": 21.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 343,
+              "name": "user 343"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72991,
+              "from": "user 343",
+              "to": "Shawshank Redemption, The (1994)",
+              "rating": 5.0,
+              "date": "2015-01-05",
+              "from_id": 343,
+              "to_id": 887
+            },
+            {
+              "eid": 73719,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 887,
+              "to_id": 316
+            },
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            }
+          ],
+          "p_before": 0.999293300017154,
+          "p_after": 0.9988788080687399,
+          "p_random": 0.999283306448661,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.30231571197509766,
+          "gap_before": 4.74732780456543,
+          "gap_after": 4.445012092590332,
+          "gap_random": 4.738400161266327
+        }
+      ],
+      "n_model_runs": 231
+    },
+    "C07-m226-t1447189556": {
+      "case_id": "C07-m226-t1447189556",
+      "member": 226,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "P.S. I Love You (2007)",
+      "A_genres": "Drama",
+      "B_genres": "Comedy|Drama|Romance",
+      "A_id": 3555,
+      "B_id": 7267,
+      "member_id": 226,
+      "recent_ratings": [
+        {
+          "title": "Godfather, The (1972)",
+          "rating": 4.5,
+          "date": "2015-11-10"
+        },
+        {
+          "title": "Fight Club (1999)",
+          "rating": 5.0,
+          "date": "2015-11-10"
+        },
+        {
+          "title": "Dark Knight, The (2008)",
+          "rating": 4.5,
+          "date": "2015-11-10"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 4.5,
+          "date": "2015-11-10"
+        },
+        {
+          "title": "Truman Show, The (1998)",
+          "rating": 4.0,
+          "date": "2015-11-10"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 4.049492785607302,
+          "S": 0.05780813119508936,
+          "est_count": 45.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            },
+            {
+              "eid": 77543,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 255",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 255
+            }
+          ],
+          "p_before": 0.9681030844130278,
+          "p_after": 0.952517005135415,
+          "p_random": 0.9682267974037588,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2709927558898926,
+          "gap_before": 2.233440637588501,
+          "gap_after": 1.9624478816986084,
+          "gap_random": 2.236104226112366
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.6637225185845295,
+          "S": -0.007436979196561579,
+          "est_count": 265.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 581,
+              "name": "user 581"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 226,
+              "name": "user 226"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77788,
+              "from": "Matrix, The (1999)",
+              "to": "user 581",
+              "rating": 5.0,
+              "date": "2015-11-06",
+              "from_id": 2549,
+              "to_id": 581
+            },
+            {
+              "eid": 77971,
+              "from": "user 226",
+              "to": "Matrix, The (1999)",
+              "rating": 4.5,
+              "date": "2015-11-10",
+              "from_id": 226,
+              "to_id": 2549
+            }
+          ],
+          "p_before": 0.9681030844130278,
+          "p_after": 0.9591880324911362,
+          "p_random": 0.9683601853797151,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.16734790802001953,
+          "gap_before": 2.233440637588501,
+          "gap_after": 2.0660927295684814,
+          "gap_random": 2.239224851131439
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 1.248392858533429,
+          "S": 0.004889125016125493,
+          "est_count": 87.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 111,
+              "name": "user 111"
+            },
+            {
+              "id": 7320,
+              "name": "Dark Knight, The (2008)"
+            },
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76718,
+              "from": "Dark Knight, The (2008)",
+              "to": "user 111",
+              "rating": 5.0,
+              "date": "2015-09-18",
+              "from_id": 7320,
+              "to_id": 111
+            },
+            {
+              "eid": 77161,
+              "from": "Dark Knight, The (2008)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 7320,
+              "to_id": 365
+            },
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            }
+          ],
+          "p_before": 0.9681030844130278,
+          "p_after": 0.9625678221738014,
+          "p_random": 0.9680576747964211,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.1084744930267334,
+          "gap_before": 2.233440637588501,
+          "gap_after": 2.1249661445617676,
+          "gap_random": 2.232569569349289
+        }
+      ],
+      "n_model_runs": 283
+    },
+    "C07-m232-t1448815881": {
+      "case_id": "C07-m232-t1448815881",
+      "member": 232,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Something to Talk About (1995)",
+      "A_genres": "Drama",
+      "B_genres": "Comedy|Drama|Romance",
+      "A_id": 3555,
+      "B_id": 775,
+      "member_id": 232,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 5.0,
+          "date": "2015-11-29"
+        },
+        {
+          "title": "Green Mile, The (1999)",
+          "rating": 4.0,
+          "date": "2015-11-29"
+        },
+        {
+          "title": "Slumdog Millionaire (2008)",
+          "rating": 3.5,
+          "date": "2015-11-29"
+        },
+        {
+          "title": "Million Dollar Baby (2004)",
+          "rating": 3.5,
+          "date": "2015-11-29"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 4.0,
+          "date": "2015-11-29"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 2.998144764157281,
+          "S": 0.024862265834502174,
+          "est_count": 45.00000000000001,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            },
+            {
+              "eid": 77543,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 255",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 255
+            }
+          ],
+          "p_before": 0.9918987533927919,
+          "p_after": 0.9876818572390262,
+          "p_random": 0.9918314848289631,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.27702832221984863,
+          "gap_before": 3.1462154388427734,
+          "gap_after": 2.869187116622925,
+          "gap_random": 3.1408770442008973
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 1.7200815007576737,
+          "S": 0.00987116410360432,
+          "est_count": 273.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 1,
+              "name": "user 1"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 232,
+              "name": "user 232"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77199,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 1",
+              "rating": 3.0,
+              "date": "2015-10-24",
+              "from_id": 887,
+              "to_id": 1
+            },
+            {
+              "eid": 79030,
+              "from": "user 232",
+              "to": "Shawshank Redemption, The (1994)",
+              "rating": 5.0,
+              "date": "2015-11-29",
+              "from_id": 232,
+              "to_id": 887
+            }
+          ],
+          "p_before": 0.9918987533927919,
+          "p_after": 0.9846387264323424,
+          "p_random": 0.991911609552937,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.42352938652038574,
+          "gap_before": 3.1462154388427734,
+          "gap_after": 2.7226860523223877,
+          "gap_random": 3.1481623113155366
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 1.6584917602075886,
+          "S": 0.007650239384650554,
+          "est_count": 75.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 104,
+              "name": "user 104"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77234,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 104",
+              "rating": 5.0,
+              "date": "2015-11-03",
+              "from_id": 887,
+              "to_id": 104
+            },
+            {
+              "eid": 77508,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 255",
+              "rating": 5.0,
+              "date": "2015-11-03",
+              "from_id": 887,
+              "to_id": 255
+            },
+            {
+              "eid": 77543,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 255",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 255
+            }
+          ],
+          "p_before": 0.9918987533927919,
+          "p_after": 0.9907538327702566,
+          "p_random": 0.9918642585416263,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.0872650146484375,
+          "gap_before": 3.1462154388427734,
+          "gap_after": 3.058950424194336,
+          "gap_random": 3.143475663661957
+        }
+      ],
+      "n_model_runs": 277
+    },
+    "C07-m250-t1470676715": {
+      "case_id": "C07-m250-t1470676715",
+      "member": 250,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Rain Man (1988)",
+      "A_genres": "Drama",
+      "B_genres": "Drama",
+      "A_id": 3555,
+      "B_id": 2048,
+      "member_id": 250,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 5.0,
+          "date": "2016-08-08"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 5.0,
+          "date": "2016-08-08"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 5.0,
+          "date": "2016-08-08"
+        },
+        {
+          "title": "Fight Club (1999)",
+          "rating": 5.0,
+          "date": "2016-08-08"
+        },
+        {
+          "title": "Silence of the Lambs, The (1991)",
+          "rating": 5.0,
+          "date": "2016-08-08"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 3.108536368107487,
+          "S": 0.007884083652265981,
+          "est_count": 45.000000000000014,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 17,
+              "name": "user 17"
+            },
+            {
+              "id": 246,
+              "name": "user 246"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80275,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 17",
+              "rating": 4.5,
+              "date": "2016-02-15",
+              "from_id": 3555,
+              "to_id": 17
+            },
+            {
+              "eid": 83648,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 246",
+              "rating": 3.0,
+              "date": "2016-07-04",
+              "from_id": 3555,
+              "to_id": 246
+            }
+          ],
+          "p_before": 0.44459662522149845,
+          "p_after": 0.3202576580848191,
+          "p_random": 0.45672464648789957,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.34688496589660645,
+          "gap_before": -0.14562737941741943,
+          "gap_after": -0.4925123453140259,
+          "gap_random": -0.1138029307126999
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 0.3685394381251294,
+          "S": -0.0023129596370429807,
+          "est_count": 80.00000000000003,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 102,
+              "name": "user 102"
+            },
+            {
+              "id": 2048,
+              "name": "Rain Man (1988)"
+            },
+            {
+              "id": 17,
+              "name": "user 17"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76494,
+              "from": "Rain Man (1988)",
+              "to": "user 102",
+              "rating": 5.0,
+              "date": "2015-08-28",
+              "from_id": 2048,
+              "to_id": 102
+            },
+            {
+              "eid": 80003,
+              "from": "Rain Man (1988)",
+              "to": "user 17",
+              "rating": 4.0,
+              "date": "2016-02-09",
+              "from_id": 2048,
+              "to_id": 17
+            },
+            {
+              "eid": 80275,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 17",
+              "rating": 4.5,
+              "date": "2016-02-15",
+              "from_id": 3555,
+              "to_id": 17
+            }
+          ],
+          "p_before": 0.44459662522149845,
+          "p_after": 0.42903603754956116,
+          "p_random": 0.4612264951960114,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.0413975715637207,
+          "gap_before": -0.14562737941741943,
+          "gap_after": -0.18702495098114014,
+          "gap_random": -0.10190783441066742
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.5637377899672019,
+          "S": -0.001720154493209506,
+          "est_count": 301.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 17,
+              "name": "user 17"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 121,
+              "name": "user 121"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80275,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 17",
+              "rating": 4.5,
+              "date": "2016-02-15",
+              "from_id": 3555,
+              "to_id": 17
+            },
+            {
+              "eid": 82675,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 121",
+              "rating": 5.0,
+              "date": "2016-04-25",
+              "from_id": 3555,
+              "to_id": 121
+            }
+          ],
+          "p_before": 0.44459662522149845,
+          "p_after": 0.41492817897484596,
+          "p_random": 0.4633874001589541,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.07925212383270264,
+          "gap_before": -0.14562737941741943,
+          "gap_after": -0.22487950325012207,
+          "gap_random": -0.09624594151973724
+        }
+      ],
+      "n_model_runs": 328
+    },
+    "C07-m255-t1446579739": {
+      "case_id": "C07-m255-t1446579739",
+      "member": 255,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Let Me In (2010)",
+      "A_genres": "Drama",
+      "B_genres": "Drama|Horror|Mystery",
+      "A_id": 3555,
+      "B_id": 8037,
+      "member_id": 255,
+      "recent_ratings": [
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 4.5,
+          "date": "2015-11-03"
+        },
+        {
+          "title": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+          "rating": 5.0,
+          "date": "2015-11-03"
+        },
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 5.0,
+          "date": "2015-11-03"
+        },
+        {
+          "title": "Star Wars: Episode IV - A New Hope (1977)",
+          "rating": 4.0,
+          "date": "2015-11-03"
+        },
+        {
+          "title": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+          "rating": 4.0,
+          "date": "2015-11-03"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 6.627111522281087,
+          "S": 0.09385299426002278,
+          "est_count": 28.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 104,
+              "name": "user 104"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            },
+            {
+              "eid": 77488,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 104",
+              "rating": 4.5,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 104
+            }
+          ],
+          "p_before": 0.9981125489076171,
+          "p_after": 0.9938582885132996,
+          "p_random": 0.9981128465432747,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.7749357223510742,
+          "gap_before": 4.103662490844727,
+          "gap_after": 3.3287267684936523,
+          "gap_random": 4.103906750679016
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 2.2667273798147702,
+          "S": 0.029509466761153177,
+          "est_count": 270.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 104,
+              "name": "user 104"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77237,
+              "from": "Matrix, The (1999)",
+              "to": "user 104",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 2549,
+              "to_id": 104
+            },
+            {
+              "eid": 77506,
+              "from": "user 255",
+              "to": "Matrix, The (1999)",
+              "rating": 4.5,
+              "date": "2015-11-03",
+              "from_id": 255,
+              "to_id": 2549
+            }
+          ],
+          "p_before": 0.9981125489076171,
+          "p_after": 0.9971682003590182,
+          "p_random": 0.9981032659627619,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2661099433898926,
+          "gap_before": 4.103662490844727,
+          "gap_after": 3.837552547454834,
+          "gap_random": 4.101088619232177
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 1.708824488806398,
+          "S": 0.012826836698385968,
+          "est_count": 68.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 508,
+              "name": "user 508"
+            },
+            {
+              "id": 1510,
+              "name": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)"
+            },
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 75483,
+              "from": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+              "to": "user 508",
+              "rating": 4.0,
+              "date": "2015-07-04",
+              "from_id": 1510,
+              "to_id": 508
+            },
+            {
+              "eid": 76744,
+              "from": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+              "to": "user 62",
+              "rating": 5.0,
+              "date": "2015-09-25",
+              "from_id": 1510,
+              "to_id": 62
+            },
+            {
+              "eid": 76776,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 62",
+              "rating": 5.0,
+              "date": "2015-09-25",
+              "from_id": 3555,
+              "to_id": 62
+            }
+          ],
+          "p_before": 0.9981125489076171,
+          "p_after": 0.9975444706327706,
+          "p_random": 0.9981000392127186,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.1725616455078125,
+          "gap_before": 4.103662490844727,
+          "gap_after": 3.931100845336914,
+          "gap_random": 4.0996207118034365
+        }
+      ],
+      "n_model_runs": 267
+    },
+    "C07-m260-t1404880899": {
+      "case_id": "C07-m260-t1404880899",
+      "member": 260,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "For a Few Dollars More (Per qualche dollaro in pi\u00f9) (1965)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Drama|Thriller|Western",
+      "A_id": 3555,
+      "B_id": 3353,
+      "member_id": 260,
+      "recent_ratings": [
+        {
+          "title": "Beverly Hills Cop (1984)",
+          "rating": 2.5,
+          "date": "2014-07-09"
+        },
+        {
+          "title": "Lethal Weapon 3 (1992)",
+          "rating": 3.0,
+          "date": "2014-07-09"
+        },
+        {
+          "title": "Rush Hour (1998)",
+          "rating": 2.5,
+          "date": "2014-07-09"
+        },
+        {
+          "title": "Mystery Men (1999)",
+          "rating": 2.5,
+          "date": "2014-07-09"
+        },
+        {
+          "title": "Ghostbusters II (1989)",
+          "rating": 3.0,
+          "date": "2014-07-09"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 1.4965574369238226,
+          "S": 0.0031378557350461842,
+          "est_count": 1.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 15,
+              "name": "user 15"
+            },
+            {
+              "id": 281,
+              "name": "user 281"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 70940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 15",
+              "rating": 4.0,
+              "date": "2013-08-26",
+              "from_id": 3555,
+              "to_id": 15
+            },
+            {
+              "eid": 71044,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 281",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 3555,
+              "to_id": 281
+            }
+          ],
+          "p_before": 0.577856034086134,
+          "p_after": 0.3981001550129253,
+          "p_random": 0.5775776341784281,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.47600632905960083,
+          "gap_before": 0.20547527074813843,
+          "gap_after": -0.2705310583114624,
+          "gap_random": 0.20472860038280488
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.7634385672932028,
+          "S": -0.0015471005281865206,
+          "est_count": 7.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 15,
+              "name": "user 15"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 281,
+              "name": "user 281"
+            }
+          ],
+          "links": [
+            {
+              "eid": 70940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 15",
+              "rating": 4.0,
+              "date": "2013-08-26",
+              "from_id": 3555,
+              "to_id": 15
+            },
+            {
+              "eid": 71044,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 281",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 3555,
+              "to_id": 281
+            }
+          ],
+          "p_before": 0.577856034086134,
+          "p_after": 0.3981001550129253,
+          "p_random": 0.5776412944525615,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.47600632905960083,
+          "gap_before": 0.20547527074813843,
+          "gap_after": -0.2705310583114624,
+          "gap_random": 0.20489934384822844
+        },
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 0.99975658575987,
+          "S": -8.73093573462884e-06,
+          "est_count": 143.00000000000006,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 281,
+              "name": "user 281"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 2800,
+              "name": "Boys Don't Cry (1999)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 71044,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 281",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 3555,
+              "to_id": 281
+            },
+            {
+              "eid": 71146,
+              "from": "user 281",
+              "to": "Boys Don't Cry (1999)",
+              "rating": 4.0,
+              "date": "2013-09-06",
+              "from_id": 281,
+              "to_id": 2800
+            }
+          ],
+          "p_before": 0.577856034086134,
+          "p_after": 0.4277815142940317,
+          "p_random": 0.5776408489865087,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.3958529233932495,
+          "gap_before": 0.20547527074813843,
+          "gap_after": -0.19037765264511108,
+          "gap_random": 0.20489814281463622
+        }
+      ],
+      "n_model_runs": 175
+    },
+    "C07-m281-t1378488934": {
+      "case_id": "C07-m281-t1378488934",
+      "member": 281,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Sense and Sensibility (1995)",
+      "A_genres": "Drama",
+      "B_genres": "Drama|Romance",
+      "A_id": 3555,
+      "B_id": 626,
+      "member_id": 281,
+      "recent_ratings": [
+        {
+          "title": "Dangerous Minds (1995)",
+          "rating": 4.5,
+          "date": "2013-09-06"
+        },
+        {
+          "title": "Gone in 60 Seconds (2000)",
+          "rating": 3.5,
+          "date": "2013-09-06"
+        },
+        {
+          "title": "School of Rock (2003)",
+          "rating": 4.0,
+          "date": "2013-09-06"
+        },
+        {
+          "title": "From Russia with Love (1963)",
+          "rating": 4.0,
+          "date": "2013-09-06"
+        },
+        {
+          "title": "Pink Floyd: The Wall (1982)",
+          "rating": 5.0,
+          "date": "2013-09-06"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 0.0,
+          "S": -6.893891276735247e-05,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 130,
+              "name": "user 130"
+            },
+            {
+              "id": 245,
+              "name": "user 245"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 68796,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 130",
+              "rating": 2.5,
+              "date": "2012-10-10",
+              "from_id": 3555,
+              "to_id": 130
+            },
+            {
+              "eid": 69490,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 245",
+              "rating": 2.0,
+              "date": "2012-11-28",
+              "from_id": 3555,
+              "to_id": 245
+            }
+          ],
+          "p_before": 0.5064975587381877,
+          "p_after": 0.6630317794039094,
+          "p_random": 0.512604326944498,
+          "p_value": 1.0,
+          "drop_logit": -0.42592763900756836,
+          "gap_before": 0.017009615898132324,
+          "gap_after": 0.4429372549057007,
+          "gap_random": 0.03303373157978058
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 0.0,
+          "S": -5.108388987454501e-05,
+          "est_count": 1.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 356,
+              "name": "user 356"
+            },
+            {
+              "id": 626,
+              "name": "Sense and Sensibility (1995)"
+            },
+            {
+              "id": 245,
+              "name": "user 245"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 68572,
+              "from": "Sense and Sensibility (1995)",
+              "to": "user 356",
+              "rating": 5.0,
+              "date": "2012-09-25",
+              "from_id": 626,
+              "to_id": 356
+            },
+            {
+              "eid": 69394,
+              "from": "Sense and Sensibility (1995)",
+              "to": "user 245",
+              "rating": 5.0,
+              "date": "2012-11-28",
+              "from_id": 626,
+              "to_id": 245
+            },
+            {
+              "eid": 69490,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 245",
+              "rating": 2.0,
+              "date": "2012-11-28",
+              "from_id": 3555,
+              "to_id": 245
+            }
+          ],
+          "p_before": 0.5064975587381877,
+          "p_after": 0.5887053907206399,
+          "p_random": 0.5030901867479972,
+          "p_value": 1.0,
+          "drop_logit": -0.21767771244049072,
+          "gap_before": 0.017009615898132324,
+          "gap_after": 0.23468732833862305,
+          "gap_random": 0.00808677077293396
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.49381831775854934,
+          "S": -4.4388256289742205e-05,
+          "est_count": 14.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 130,
+              "name": "user 130"
+            },
+            {
+              "id": 640,
+              "name": "Dangerous Minds (1995)"
+            },
+            {
+              "id": 281,
+              "name": "user 281"
+            }
+          ],
+          "links": [
+            {
+              "eid": 68739,
+              "from": "Dangerous Minds (1995)",
+              "to": "user 130",
+              "rating": 3.0,
+              "date": "2012-10-10",
+              "from_id": 640,
+              "to_id": 130
+            },
+            {
+              "eid": 70960,
+              "from": "user 281",
+              "to": "Dangerous Minds (1995)",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 281,
+              "to_id": 640
+            }
+          ],
+          "p_before": 0.5064975587381877,
+          "p_after": 0.5042472954623828,
+          "p_random": 0.5056902747342422,
+          "p_value": 0.12195121951219512,
+          "drop_logit": 0.005891203880310059,
+          "gap_before": 0.017009615898132324,
+          "gap_after": 0.011118412017822266,
+          "gap_random": 0.014901110529899597
+        }
+      ],
+      "n_model_runs": 183
+    },
+    "C07-m284-t1449626093": {
+      "case_id": "C07-m284-t1449626093",
+      "member": 284,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Ordinary People (1980)",
+      "A_genres": "Drama",
+      "B_genres": "Drama",
+      "A_id": 3555,
+      "B_id": 2043,
+      "member_id": 284,
+      "recent_ratings": [
+        {
+          "title": "Graduate, The (1967)",
+          "rating": 5.0,
+          "date": "2015-12-09"
+        },
+        {
+          "title": "All the President's Men (1976)",
+          "rating": 4.0,
+          "date": "2015-12-09"
+        },
+        {
+          "title": "Pulp Fiction (1994)",
+          "rating": 4.0,
+          "date": "2015-12-09"
+        },
+        {
+          "title": "Dazed and Confused (1993)",
+          "rating": 5.0,
+          "date": "2015-12-09"
+        },
+        {
+          "title": "Rebel Without a Cause (1955)",
+          "rating": 3.0,
+          "date": "2015-12-09"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 1.9107718127917916,
+          "S": 0.010501966881029536,
+          "est_count": 45.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            },
+            {
+              "eid": 77543,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 255",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 255
+            }
+          ],
+          "p_before": 0.9670421717185894,
+          "p_after": 0.9554221764853733,
+          "p_random": 0.9667064770507305,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2055525779724121,
+          "gap_before": 2.211310625076294,
+          "gap_after": 2.005758047103882,
+          "gap_random": 2.204720216989517
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 0.007990997421667336,
+          "S": -0.008196349086183491,
+          "est_count": 11.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 496,
+              "name": "user 496"
+            },
+            {
+              "id": 1556,
+              "name": "Graduate, The (1967)"
+            },
+            {
+              "id": 102,
+              "name": "user 102"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73717,
+              "from": "Graduate, The (1967)",
+              "to": "user 496",
+              "rating": 5.0,
+              "date": "2015-04-29",
+              "from_id": 1556,
+              "to_id": 496
+            },
+            {
+              "eid": 74230,
+              "from": "Graduate, The (1967)",
+              "to": "user 102",
+              "rating": 4.5,
+              "date": "2015-05-18",
+              "from_id": 1556,
+              "to_id": 102
+            },
+            {
+              "eid": 74247,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 102",
+              "rating": 5.0,
+              "date": "2015-05-18",
+              "from_id": 3555,
+              "to_id": 102
+            }
+          ],
+          "p_before": 0.9670421717185894,
+          "p_after": 0.9669320694351267,
+          "p_random": 0.9669692460369237,
+          "p_value": 0.17073170731707318,
+          "drop_logit": 0.002257108688354492,
+          "gap_before": 2.211310625076294,
+          "gap_after": 2.2090535163879395,
+          "gap_random": 2.2098336040973665
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 1.2897886219619346,
+          "S": 0.005233475123066817,
+          "est_count": 138.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 104,
+              "name": "user 104"
+            },
+            {
+              "id": 867,
+              "name": "Pulp Fiction (1994)"
+            },
+            {
+              "id": 284,
+              "name": "user 284"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77275,
+              "from": "Pulp Fiction (1994)",
+              "to": "user 104",
+              "rating": 5.0,
+              "date": "2015-11-03",
+              "from_id": 867,
+              "to_id": 104
+            },
+            {
+              "eid": 79197,
+              "from": "user 284",
+              "to": "Pulp Fiction (1994)",
+              "rating": 4.0,
+              "date": "2015-12-09",
+              "from_id": 284,
+              "to_id": 867
+            }
+          ],
+          "p_before": 0.9670421717185894,
+          "p_after": 0.9530558658454477,
+          "p_random": 0.9668925861392502,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.24102342128753662,
+          "gap_before": 2.211310625076294,
+          "gap_after": 1.9702872037887573,
+          "gap_random": 2.21023605465889
+        }
+      ],
+      "n_model_runs": 245
+    },
+    "C07-m290-t1453051417": {
+      "case_id": "C07-m290-t1453051417",
+      "member": 290,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Out of Sight (1998)",
+      "A_genres": "Drama",
+      "B_genres": "Comedy|Crime|Drama|Romance|Thriller",
+      "A_id": 3555,
+      "B_id": 2004,
+      "member_id": 290,
+      "recent_ratings": [
+        {
+          "title": "Iron Man (2008)",
+          "rating": 4.0,
+          "date": "2016-01-17"
+        },
+        {
+          "title": "Iron Man 2 (2010)",
+          "rating": 4.0,
+          "date": "2016-01-17"
+        },
+        {
+          "title": "Iron Man 3 (2013)",
+          "rating": 4.0,
+          "date": "2016-01-17"
+        },
+        {
+          "title": "Invincible Iron Man, The (2007)",
+          "rating": 3.0,
+          "date": "2016-01-17"
+        },
+        {
+          "title": "Avengers, The (2012)",
+          "rating": 5.0,
+          "date": "2016-01-17"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 5.527618248052607,
+          "S": 0.05794258466277744,
+          "est_count": 44.999999999999986,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            },
+            {
+              "eid": 77543,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 255",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 255
+            }
+          ],
+          "p_before": 0.8722951951716746,
+          "p_after": 0.8160818682240748,
+          "p_random": 0.8705923529648578,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.282307505607605,
+          "gap_before": 1.2574163675308228,
+          "gap_after": 0.9751088619232178,
+          "gap_random": 1.2476576745510102
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 0.31196363982883435,
+          "S": -0.006805777343441465,
+          "est_count": 33.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 8303,
+              "name": "Avengers, The (2012)"
+            },
+            {
+              "id": 104,
+              "name": "user 104"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76793,
+              "from": "Avengers, The (2012)",
+              "to": "user 62",
+              "rating": 3.5,
+              "date": "2015-09-25",
+              "from_id": 8303,
+              "to_id": 62
+            },
+            {
+              "eid": 77468,
+              "from": "Avengers, The (2012)",
+              "to": "user 104",
+              "rating": 3.5,
+              "date": "2015-11-03",
+              "from_id": 8303,
+              "to_id": 104
+            },
+            {
+              "eid": 77488,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 104",
+              "rating": 4.5,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 104
+            }
+          ],
+          "p_before": 0.8722951951716746,
+          "p_after": 0.8602812263419232,
+          "p_random": 0.8674457323894149,
+          "p_value": 0.14634146341463414,
+          "drop_logit": 0.06791543960571289,
+          "gap_before": 1.2574163675308228,
+          "gap_after": 1.1895009279251099,
+          "gap_random": 1.2305277168750763
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 1.3775110125963168,
+          "S": 0.006663587017481215,
+          "est_count": 203.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 508,
+              "name": "user 508"
+            },
+            {
+              "id": 7353,
+              "name": "Iron Man (2008)"
+            },
+            {
+              "id": 290,
+              "name": "user 290"
+            }
+          ],
+          "links": [
+            {
+              "eid": 75969,
+              "from": "Iron Man (2008)",
+              "to": "user 508",
+              "rating": 3.0,
+              "date": "2015-07-08",
+              "from_id": 7353,
+              "to_id": 508
+            },
+            {
+              "eid": 79605,
+              "from": "user 290",
+              "to": "Iron Man (2008)",
+              "rating": 4.0,
+              "date": "2016-01-17",
+              "from_id": 290,
+              "to_id": 7353
+            }
+          ],
+          "p_before": 0.8722951951716746,
+          "p_after": 0.8461504270153143,
+          "p_random": 0.872158234375906,
+          "p_value": 0.04878048780487805,
+          "drop_logit": 0.14180386066436768,
+          "gap_before": 1.2574163675308228,
+          "gap_after": 1.115612506866455,
+          "gap_random": 1.2606001853942872
+        }
+      ],
+      "n_model_runs": 267
+    },
+    "C07-m291-t1385677294": {
+      "case_id": "C07-m291-t1385677294",
+      "member": 291,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "All That Heaven Allows (1955)",
+      "A_genres": "Drama",
+      "B_genres": "Drama|Romance",
+      "A_id": 3555,
+      "B_id": 3875,
+      "member_id": 291,
+      "recent_ratings": [
+        {
+          "title": "Bourne Legacy, The (2012)",
+          "rating": 2.5,
+          "date": "2013-02-09"
+        },
+        {
+          "title": "Sleeping Beauty (1959)",
+          "rating": 3.0,
+          "date": "2013-02-09"
+        },
+        {
+          "title": "Cinderella (1950)",
+          "rating": 3.0,
+          "date": "2013-02-09"
+        },
+        {
+          "title": "Snow White and the Seven Dwarfs (1937)",
+          "rating": 3.0,
+          "date": "2013-02-09"
+        },
+        {
+          "title": "Lady and the Tramp (1955)",
+          "rating": 3.0,
+          "date": "2013-02-09"
+        },
+        {
+          "title": "Flight (2012)",
+          "rating": 2.0,
+          "date": "2013-03-02"
+        },
+        {
+          "title": "Hope Springs (2003)",
+          "rating": 1.0,
+          "date": "2013-03-02"
+        },
+        {
+          "title": "Expendables 2, The (2012)",
+          "rating": 3.5,
+          "date": "2013-03-02"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 2.594172268714514,
+          "S": 0.035661504416199814,
+          "est_count": 20.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 291,
+              "name": "user 291"
+            },
+            {
+              "id": 8375,
+              "name": "Expendables 2, The (2012)"
+            },
+            {
+              "id": 561,
+              "name": "user 561"
+            }
+          ],
+          "links": [
+            {
+              "eid": 69997,
+              "from": "user 291",
+              "to": "Expendables 2, The (2012)",
+              "rating": 3.5,
+              "date": "2013-03-02",
+              "from_id": 291,
+              "to_id": 8375
+            },
+            {
+              "eid": 70432,
+              "from": "Expendables 2, The (2012)",
+              "to": "user 561",
+              "rating": 4.0,
+              "date": "2013-05-18",
+              "from_id": 8375,
+              "to_id": 561
+            }
+          ],
+          "p_before": 0.8070919423800567,
+          "p_after": 0.7566572493903196,
+          "p_random": 0.7766419022893839,
+          "p_value": 0.12195121951219512,
+          "drop_logit": 0.19422316551208496,
+          "gap_before": 0.9366286396980286,
+          "gap_after": 0.7424054741859436,
+          "gap_random": 0.8181297719478607
+        },
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 2.309163507337597,
+          "S": 0.026728838711335468,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 15,
+              "name": "user 15"
+            },
+            {
+              "id": 281,
+              "name": "user 281"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 70940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 15",
+              "rating": 4.0,
+              "date": "2013-08-26",
+              "from_id": 3555,
+              "to_id": 15
+            },
+            {
+              "eid": 71044,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 281",
+              "rating": 4.5,
+              "date": "2013-09-06",
+              "from_id": 3555,
+              "to_id": 281
+            }
+          ],
+          "p_before": 0.8070919423800567,
+          "p_after": 0.66363717976023,
+          "p_random": 0.8070919423800567,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.49191731214523315,
+          "gap_before": 0.9366286396980286,
+          "gap_after": 0.4447113275527954,
+          "gap_random": 0.9366286396980286
+        },
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 0.8803651391448619,
+          "S": -0.0037841644072485994,
+          "est_count": 265.9999999999999,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 291,
+              "name": "user 291"
+            },
+            {
+              "id": 1390,
+              "name": "Cinderella (1950)"
+            },
+            {
+              "id": 8375,
+              "name": "Expendables 2, The (2012)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 69959,
+              "from": "user 291",
+              "to": "Cinderella (1950)",
+              "rating": 3.0,
+              "date": "2013-02-09",
+              "from_id": 291,
+              "to_id": 1390
+            },
+            {
+              "eid": 69997,
+              "from": "user 291",
+              "to": "Expendables 2, The (2012)",
+              "rating": 3.5,
+              "date": "2013-03-02",
+              "from_id": 291,
+              "to_id": 8375
+            }
+          ],
+          "p_before": 0.8070919423800567,
+          "p_after": 0.734929123876254,
+          "p_random": 0.7795850883122146,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2692612409591675,
+          "gap_before": 0.9366286396980286,
+          "gap_after": 0.6673673987388611,
+          "gap_random": 0.8289636582136154
+        }
+      ],
+      "n_model_runs": 188
+    },
+    "C07-m307-t1421373693": {
+      "case_id": "C07-m307-t1421373693",
+      "member": 307,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Can't Hardly Wait (1998)",
+      "A_genres": "Drama",
+      "B_genres": "Comedy|Drama|Romance",
+      "A_id": 3555,
+      "B_id": 1994,
+      "member_id": 307,
+      "recent_ratings": [
+        {
+          "title": "Star Wars: Episode IV - A New Hope (1977)",
+          "rating": 2.5,
+          "date": "2015-01-16"
+        },
+        {
+          "title": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+          "rating": 1.0,
+          "date": "2015-01-16"
+        },
+        {
+          "title": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+          "rating": 2.5,
+          "date": "2015-01-16"
+        },
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 1.0,
+          "date": "2015-01-16"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 1.0,
+          "date": "2015-01-16"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 2.8657023156710335,
+          "S": 0.003057224882973565,
+          "est_count": 3.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 20,
+              "name": "user 20"
+            },
+            {
+              "id": 834,
+              "name": "Star Wars: Episode IV - A New Hope (1977)"
+            },
+            {
+              "id": 343,
+              "name": "user 343"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72704,
+              "from": "Star Wars: Episode IV - A New Hope (1977)",
+              "to": "user 20",
+              "rating": 4.5,
+              "date": "2014-11-30",
+              "from_id": 834,
+              "to_id": 20
+            },
+            {
+              "eid": 72930,
+              "from": "Star Wars: Episode IV - A New Hope (1977)",
+              "to": "user 343",
+              "rating": 5.0,
+              "date": "2015-01-05",
+              "from_id": 834,
+              "to_id": 343
+            },
+            {
+              "eid": 72940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 343",
+              "rating": 0.5,
+              "date": "2015-01-05",
+              "from_id": 3555,
+              "to_id": 343
+            }
+          ],
+          "p_before": 0.9488570777894015,
+          "p_after": 0.9381501361921039,
+          "p_random": 0.948604296751277,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.13182342052459717,
+          "gap_before": 1.911335825920105,
+          "gap_after": 1.7795124053955078,
+          "gap_random": 1.9079477220773697
+        },
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 1.9337800386564432,
+          "S": 0.002861366669336955,
+          "est_count": 1.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 260,
+              "name": "user 260"
+            },
+            {
+              "id": 343,
+              "name": "user 343"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72054,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 260",
+              "rating": 5.0,
+              "date": "2014-07-09",
+              "from_id": 3555,
+              "to_id": 260
+            },
+            {
+              "eid": 72940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 343",
+              "rating": 0.5,
+              "date": "2015-01-05",
+              "from_id": 3555,
+              "to_id": 343
+            }
+          ],
+          "p_before": 0.9488570777894015,
+          "p_after": 0.9250599618306327,
+          "p_random": 0.9487121444034716,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.26665449142456055,
+          "gap_before": 1.911335825920105,
+          "gap_after": 1.6446813344955444,
+          "gap_random": 1.909426674246788
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.6681243748368326,
+          "S": -0.0020576001869307622,
+          "est_count": 29.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 260,
+              "name": "user 260"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 343,
+              "name": "user 343"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72054,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 260",
+              "rating": 5.0,
+              "date": "2014-07-09",
+              "from_id": 3555,
+              "to_id": 260
+            },
+            {
+              "eid": 72940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 343",
+              "rating": 0.5,
+              "date": "2015-01-05",
+              "from_id": 3555,
+              "to_id": 343
+            }
+          ],
+          "p_before": 0.9488570777894015,
+          "p_after": 0.9250599618306327,
+          "p_random": 0.948839466972033,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.26665449142456055,
+          "gap_before": 1.911335825920105,
+          "gap_after": 1.6446813344955444,
+          "gap_random": 1.9111333310604095
+        }
+      ],
+      "n_model_runs": 199
+    },
+    "C07-m317-t1413054514": {
+      "case_id": "C07-m317-t1413054514",
+      "member": 317,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Keeping the Faith (2000)",
+      "A_genres": "Drama",
+      "B_genres": "Comedy|Drama|Romance",
+      "A_id": 3555,
+      "B_id": 3252,
+      "member_id": 317,
+      "recent_ratings": [],
+      "structures": [
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 1.0,
+          "S": 0.0,
+          "est_count": 55.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 260,
+              "name": "user 260"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 6274,
+              "name": "Battlestar Galactica (2003)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72054,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 260",
+              "rating": 5.0,
+              "date": "2014-07-09",
+              "from_id": 3555,
+              "to_id": 260
+            },
+            {
+              "eid": 72070,
+              "from": "user 260",
+              "to": "Battlestar Galactica (2003)",
+              "rating": 4.5,
+              "date": "2014-07-09",
+              "from_id": 260,
+              "to_id": 6274
+            }
+          ],
+          "p_before": 0.7840316504627096,
+          "p_after": 0.7646312979408443,
+          "p_random": 0.7840316504627096,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.07269155979156494,
+          "gap_before": 0.8437615633010864,
+          "gap_after": 0.7710700035095215,
+          "gap_random": 0.8437615633010864
+        }
+      ],
+      "n_model_runs": 86
+    },
+    "C07-m318-t1461351651": {
+      "case_id": "C07-m318-t1461351651",
+      "member": 318,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Help, The (2011)",
+      "A_genres": "Drama",
+      "B_genres": "Drama",
+      "A_id": 3555,
+      "B_id": 8275,
+      "member_id": 318,
+      "recent_ratings": [
+        {
+          "title": "50 First Dates (2004)",
+          "rating": 4.0,
+          "date": "2016-04-22"
+        },
+        {
+          "title": "Zootopia (2016)",
+          "rating": 4.5,
+          "date": "2016-04-22"
+        },
+        {
+          "title": "Dark Knight, The (2008)",
+          "rating": 5.0,
+          "date": "2016-04-22"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 5.0,
+          "date": "2016-04-22"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 5.0,
+          "date": "2016-04-22"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 3.0350626559752696,
+          "S": 0.01834811860211952,
+          "est_count": 45.00000000000001,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 494,
+              "name": "user 494"
+            },
+            {
+              "id": 40,
+              "name": "user 40"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80711,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 494",
+              "rating": 4.0,
+              "date": "2016-03-22",
+              "from_id": 3555,
+              "to_id": 494
+            },
+            {
+              "eid": 80932,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 40",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 3555,
+              "to_id": 40
+            }
+          ],
+          "p_before": 0.8810373554555138,
+          "p_after": 0.857504714924733,
+          "p_random": 0.8809417300735614,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.1358407735824585,
+          "gap_before": 1.3103488683700562,
+          "gap_after": 1.1745080947875977,
+          "gap_random": 1.3097711890935897
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.6775446026059317,
+          "S": -0.010127303296444463,
+          "est_count": 249.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 23,
+              "name": "user 23"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 318,
+              "name": "user 318"
+            }
+          ],
+          "links": [
+            {
+              "eid": 81048,
+              "from": "Matrix, The (1999)",
+              "to": "user 23",
+              "rating": 4.0,
+              "date": "2016-03-25",
+              "from_id": 2549,
+              "to_id": 23
+            },
+            {
+              "eid": 82588,
+              "from": "user 318",
+              "to": "Matrix, The (1999)",
+              "rating": 5.0,
+              "date": "2016-04-22",
+              "from_id": 318,
+              "to_id": 2549
+            }
+          ],
+          "p_before": 0.8810373554555138,
+          "p_after": 0.8300277349940507,
+          "p_random": 0.8802752786674611,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2725461721420288,
+          "gap_before": 1.3103488683700562,
+          "gap_after": 1.0378026962280273,
+          "gap_random": 1.3057787984609603
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "a path of shared taste that ends at B",
+          "lift": 6.7142139242233085,
+          "S": 0.006861181240382157,
+          "est_count": 2.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 17,
+              "name": "user 17"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 9,
+              "name": "user 9"
+            },
+            {
+              "id": 8275,
+              "name": "Help, The (2011)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 80063,
+              "from": "Matrix, The (1999)",
+              "to": "user 17",
+              "rating": 4.5,
+              "date": "2016-02-11",
+              "from_id": 2549,
+              "to_id": 17
+            },
+            {
+              "eid": 80178,
+              "from": "Matrix, The (1999)",
+              "to": "user 9",
+              "rating": 0.5,
+              "date": "2016-02-13",
+              "from_id": 2549,
+              "to_id": 9
+            },
+            {
+              "eid": 80251,
+              "from": "Help, The (2011)",
+              "to": "user 9",
+              "rating": 3.0,
+              "date": "2016-02-13",
+              "from_id": 8275,
+              "to_id": 9
+            }
+          ],
+          "p_before": 0.8810373554555138,
+          "p_after": 0.8466135003409406,
+          "p_random": 0.8800268094934516,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.1924055814743042,
+          "gap_before": 1.3103488683700562,
+          "gap_after": 1.117943286895752,
+          "gap_random": 1.3041993468999862
+        }
+      ],
+      "n_model_runs": 277
+    },
+    "C07-m325-t1419880402": {
+      "case_id": "C07-m325-t1419880402",
+      "member": 325,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Perks of Being a Wallflower, The (2012)",
+      "A_genres": "Drama",
+      "B_genres": "Drama|Romance",
+      "A_id": 3555,
+      "B_id": 8598,
+      "member_id": 325,
+      "recent_ratings": [],
+      "structures": [
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 1.0,
+          "S": 0.0,
+          "est_count": 55.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 260,
+              "name": "user 260"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 6274,
+              "name": "Battlestar Galactica (2003)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72054,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 260",
+              "rating": 5.0,
+              "date": "2014-07-09",
+              "from_id": 3555,
+              "to_id": 260
+            },
+            {
+              "eid": 72070,
+              "from": "user 260",
+              "to": "Battlestar Galactica (2003)",
+              "rating": 4.5,
+              "date": "2014-07-09",
+              "from_id": 260,
+              "to_id": 6274
+            }
+          ],
+          "p_before": 0.7277731209785787,
+          "p_after": 0.7198980077252847,
+          "p_random": 0.7277731200763486,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.025782883167266846,
+          "gap_before": 0.643531084060669,
+          "gap_after": 0.6177482008934021,
+          "gap_random": 0.6435310810804367
+        }
+      ],
+      "n_model_runs": 86
+    },
+    "C07-m340-t1439751021": {
+      "case_id": "C07-m340-t1439751021",
+      "member": 340,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "What a Girl Wants (2003)",
+      "A_genres": "Drama",
+      "B_genres": "Comedy|Drama|Romance",
+      "A_id": 3555,
+      "B_id": 4898,
+      "member_id": 340,
+      "recent_ratings": [
+        {
+          "title": "Forrest Gump (1994)",
+          "rating": 3.5,
+          "date": "2015-08-16"
+        },
+        {
+          "title": "Jurassic Park (1993)",
+          "rating": 2.0,
+          "date": "2015-08-16"
+        },
+        {
+          "title": "Back to the Future (1985)",
+          "rating": 3.5,
+          "date": "2015-08-16"
+        },
+        {
+          "title": "Toy Story (1995)",
+          "rating": 5.0,
+          "date": "2015-08-16"
+        },
+        {
+          "title": "Safe (2012)",
+          "rating": 4.0,
+          "date": "2015-08-16"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 4.965031343100982,
+          "S": 0.03826121331644704,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            },
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            }
+          ],
+          "p_before": 0.9695310992201286,
+          "p_after": 0.9384639644136009,
+          "p_random": 0.9694829126441821,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.4813194274902344,
+          "gap_before": 2.2643797397613525,
+          "gap_after": 1.7830603122711182,
+          "gap_random": 2.285900902748108
+        },
+        {
+          "motif": "BRIDGEB",
+          "name": "a path of shared taste that ends at B",
+          "lift": 0.0,
+          "S": -0.02308721161903219,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 118,
+              "name": "user 118"
+            },
+            {
+              "id": 610,
+              "name": "Toy Story (1995)"
+            },
+            {
+              "id": 508,
+              "name": "user 508"
+            },
+            {
+              "id": 4898,
+              "name": "What a Girl Wants (2003)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 75419,
+              "from": "Toy Story (1995)",
+              "to": "user 118",
+              "rating": 3.5,
+              "date": "2015-07-03",
+              "from_id": 610,
+              "to_id": 118
+            },
+            {
+              "eid": 75494,
+              "from": "Toy Story (1995)",
+              "to": "user 508",
+              "rating": 4.0,
+              "date": "2015-07-04",
+              "from_id": 610,
+              "to_id": 508
+            },
+            {
+              "eid": 75729,
+              "from": "What a Girl Wants (2003)",
+              "to": "user 508",
+              "rating": 2.0,
+              "date": "2015-07-04",
+              "from_id": 4898,
+              "to_id": 508
+            }
+          ],
+          "p_before": 0.9695310992201286,
+          "p_after": 0.9743811410206109,
+          "p_random": 0.9694641254043612,
+          "p_value": 1.0,
+          "drop_logit": -0.11672830581665039,
+          "gap_before": 2.2643797397613525,
+          "gap_after": 2.381108045578003,
+          "gap_random": 2.262911248207092
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.44924838548766627,
+          "S": -0.02039426391618296,
+          "est_count": 126.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 532,
+              "name": "user 532"
+            },
+            {
+              "id": 610,
+              "name": "Toy Story (1995)"
+            },
+            {
+              "id": 340,
+              "name": "user 340"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73465,
+              "from": "Toy Story (1995)",
+              "to": "user 532",
+              "rating": 5.0,
+              "date": "2015-02-24",
+              "from_id": 610,
+              "to_id": 532
+            },
+            {
+              "eid": 76280,
+              "from": "user 340",
+              "to": "Toy Story (1995)",
+              "rating": 5.0,
+              "date": "2015-08-16",
+              "from_id": 340,
+              "to_id": 610
+            }
+          ],
+          "p_before": 0.9695310992201286,
+          "p_after": 0.9593212563802272,
+          "p_random": 0.9696374561584022,
+          "p_value": 0.0975609756097561,
+          "drop_logit": 0.19605636596679688,
+          "gap_before": 2.2643797397613525,
+          "gap_after": 2.0683233737945557,
+          "gap_random": 2.298171269893646
+        }
+      ],
+      "n_model_runs": 223
+    },
+    "C07-m365-t1445546446": {
+      "case_id": "C07-m365-t1445546446",
+      "member": 365,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Perfume: The Story of a Murderer (2006)",
+      "A_genres": "Drama",
+      "B_genres": "Crime|Drama|Thriller",
+      "A_id": 3555,
+      "B_id": 6948,
+      "member_id": 365,
+      "recent_ratings": [
+        {
+          "title": "Dark Knight, The (2008)",
+          "rating": 4.0,
+          "date": "2015-10-22"
+        },
+        {
+          "title": "Lord of the Rings: The Return of the King, The (2003)",
+          "rating": 4.5,
+          "date": "2015-10-22"
+        },
+        {
+          "title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+          "rating": 4.5,
+          "date": "2015-10-22"
+        },
+        {
+          "title": "Love Actually (2003)",
+          "rating": 3.5,
+          "date": "2015-10-22"
+        },
+        {
+          "title": "Terminator 3: Rise of the Machines (2003)",
+          "rating": 3.5,
+          "date": "2015-10-22"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 3.1973373059066574,
+          "S": 0.037217447770228784,
+          "est_count": 15.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            },
+            {
+              "eid": 76776,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 62",
+              "rating": 5.0,
+              "date": "2015-09-25",
+              "from_id": 3555,
+              "to_id": 62
+            }
+          ],
+          "p_before": 0.968023022773991,
+          "p_after": 0.9458518005607125,
+          "p_random": 0.9688989981326503,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.35985422134399414,
+          "gap_before": 2.231745958328247,
+          "gap_after": 1.871891736984253,
+          "gap_random": 2.2621396720409392
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 1.7784066566998487,
+          "S": 0.008571971698234137,
+          "est_count": 37.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 465,
+              "name": "user 465"
+            },
+            {
+              "id": 5410,
+              "name": "Lord of the Rings: The Return of the King, The (2003)"
+            },
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76302,
+              "from": "Lord of the Rings: The Return of the King, The (2003)",
+              "to": "user 465",
+              "rating": 4.0,
+              "date": "2015-08-18",
+              "from_id": 5410,
+              "to_id": 465
+            },
+            {
+              "eid": 76753,
+              "from": "Lord of the Rings: The Return of the King, The (2003)",
+              "to": "user 62",
+              "rating": 4.0,
+              "date": "2015-09-25",
+              "from_id": 5410,
+              "to_id": 62
+            },
+            {
+              "eid": 76776,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 62",
+              "rating": 5.0,
+              "date": "2015-09-25",
+              "from_id": 3555,
+              "to_id": 62
+            }
+          ],
+          "p_before": 0.968023022773991,
+          "p_after": 0.9602855718328933,
+          "p_random": 0.967862306809795,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.1470646858215332,
+          "gap_before": 2.231745958328247,
+          "gap_after": 2.084681272506714,
+          "gap_random": 2.228368717432022
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.6899120952863967,
+          "S": -0.008465147156785428,
+          "est_count": 172.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 7320,
+              "name": "Dark Knight, The (2008)"
+            },
+            {
+              "id": 365,
+              "name": "user 365"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76749,
+              "from": "Dark Knight, The (2008)",
+              "to": "user 62",
+              "rating": 5.0,
+              "date": "2015-09-25",
+              "from_id": 7320,
+              "to_id": 62
+            },
+            {
+              "eid": 77161,
+              "from": "user 365",
+              "to": "Dark Knight, The (2008)",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 365,
+              "to_id": 7320
+            }
+          ],
+          "p_before": 0.968023022773991,
+          "p_after": 0.9489936724439583,
+          "p_random": 0.9686908199864714,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.3185657262802124,
+          "gap_before": 2.231745958328247,
+          "gap_after": 1.9131802320480347,
+          "gap_random": 2.251567965745926
+        }
+      ],
+      "n_model_runs": 253
+    },
+    "C07-m438-t1436943790": {
+      "case_id": "C07-m438-t1436943790",
+      "member": 438,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Face/Off (1997)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Crime|Drama|Thriller",
+      "A_id": 3555,
+      "B_id": 1791,
+      "member_id": 438,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 5.0,
+          "date": "2015-07-15"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 5.0,
+          "date": "2015-07-15"
+        },
+        {
+          "title": "Lord of the Rings: The Return of the King, The (2003)",
+          "rating": 5.0,
+          "date": "2015-07-15"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 4.5,
+          "date": "2015-07-15"
+        },
+        {
+          "title": "Indiana Jones and the Last Crusade (1989)",
+          "rating": 3.0,
+          "date": "2015-07-15"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 8.702953918483225,
+          "S": 0.07545080287515574,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            },
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            }
+          ],
+          "p_before": 0.9358982276421013,
+          "p_after": 0.8164132238698266,
+          "p_random": 0.9349119092249589,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.7779814004898071,
+          "gap_before": 1.7545360326766968,
+          "gap_after": 0.9765546321868896,
+          "gap_random": 1.7446185648441315
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 2.8397734888347435,
+          "S": 0.016387561816183577,
+          "est_count": 33.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 299,
+              "name": "user 299"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 316,
+              "name": "user 316"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 73495,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 299",
+              "rating": 4.0,
+              "date": "2015-03-03",
+              "from_id": 887,
+              "to_id": 299
+            },
+            {
+              "eid": 73719,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 887,
+              "to_id": 316
+            },
+            {
+              "eid": 73735,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 316",
+              "rating": 4.0,
+              "date": "2015-04-30",
+              "from_id": 3555,
+              "to_id": 316
+            }
+          ],
+          "p_before": 0.9358982276421013,
+          "p_after": 0.8942198361905105,
+          "p_random": 0.9348971491113343,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.35760796070098877,
+          "gap_before": 1.7545360326766968,
+          "gap_after": 1.396928071975708,
+          "gap_random": 1.7441855132579804
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.08790052082371011,
+          "S": -0.01280325698618832,
+          "est_count": 234.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 192,
+              "name": "user 192"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 438,
+              "name": "user 438"
+            }
+          ],
+          "links": [
+            {
+              "eid": 75989,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 192",
+              "rating": 3.5,
+              "date": "2015-07-10",
+              "from_id": 887,
+              "to_id": 192
+            },
+            {
+              "eid": 76034,
+              "from": "user 438",
+              "to": "Shawshank Redemption, The (1994)",
+              "rating": 5.0,
+              "date": "2015-07-15",
+              "from_id": 438,
+              "to_id": 887
+            }
+          ],
+          "p_before": 0.9358982276421013,
+          "p_after": 0.9340696935951632,
+          "p_random": 0.9349467119588575,
+          "p_value": 0.12195121951219512,
+          "drop_logit": 0.019686341285705566,
+          "gap_before": 1.7545360326766968,
+          "gap_after": 1.7348496913909912,
+          "gap_random": 1.7471119463443756
+        }
+      ],
+      "n_model_runs": 278
+    },
+    "C07-m440-t1449070467": {
+      "case_id": "C07-m440-t1449070467",
+      "member": 440,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Once Upon a Time in the Midlands (2002)",
+      "A_genres": "Drama",
+      "B_genres": "Drama",
+      "A_id": 3555,
+      "B_id": 5131,
+      "member_id": 440,
+      "recent_ratings": [
+        {
+          "title": "Reservoir Dogs (1992)",
+          "rating": 4.5,
+          "date": "2015-12-02"
+        },
+        {
+          "title": "GoldenEye (1995)",
+          "rating": 4.5,
+          "date": "2015-12-02"
+        },
+        {
+          "title": "Waterworld (1995)",
+          "rating": 4.0,
+          "date": "2015-12-02"
+        },
+        {
+          "title": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+          "rating": 4.0,
+          "date": "2015-12-02"
+        },
+        {
+          "title": "Star Wars: Episode IV - A New Hope (1977)",
+          "rating": 5.0,
+          "date": "2015-12-02"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 3.7277893716792647,
+          "S": 0.0705131914902978,
+          "est_count": 45.00000000000001,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 255,
+              "name": "user 255"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            },
+            {
+              "eid": 77543,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 255",
+              "rating": 4.0,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 255
+            }
+          ],
+          "p_before": 0.9999131153850032,
+          "p_after": 0.9998078666124509,
+          "p_random": 0.999911879697813,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.5194263458251953,
+          "gap_before": 6.119424819946289,
+          "gap_after": 5.599998474121094,
+          "gap_random": 6.110645389556884
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 3.2505848757107203,
+          "S": 0.04665521072753513,
+          "est_count": 47.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 1438,
+              "name": "Reservoir Dogs (1992)"
+            },
+            {
+              "id": 365,
+              "name": "user 365"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76956,
+              "from": "Reservoir Dogs (1992)",
+              "to": "user 62",
+              "rating": 3.0,
+              "date": "2015-09-25",
+              "from_id": 1438,
+              "to_id": 62
+            },
+            {
+              "eid": 77179,
+              "from": "Reservoir Dogs (1992)",
+              "to": "user 365",
+              "rating": 5.0,
+              "date": "2015-10-22",
+              "from_id": 1438,
+              "to_id": 365
+            },
+            {
+              "eid": 77182,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 365",
+              "rating": 4.0,
+              "date": "2015-10-22",
+              "from_id": 3555,
+              "to_id": 365
+            }
+          ],
+          "p_before": 0.9999131153850032,
+          "p_after": 0.9998695587608457,
+          "p_random": 0.9999076147326612,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2659487724304199,
+          "gap_before": 6.119424819946289,
+          "gap_after": 5.853476047515869,
+          "gap_random": 6.083340787887574
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 2.489569171835357,
+          "S": 0.04367261822524376,
+          "est_count": 198.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 297,
+              "name": "user 297"
+            },
+            {
+              "id": 834,
+              "name": "Star Wars: Episode IV - A New Hope (1977)"
+            },
+            {
+              "id": 440,
+              "name": "user 440"
+            }
+          ],
+          "links": [
+            {
+              "eid": 78125,
+              "from": "Star Wars: Episode IV - A New Hope (1977)",
+              "to": "user 297",
+              "rating": 4.0,
+              "date": "2015-11-14",
+              "from_id": 834,
+              "to_id": 297
+            },
+            {
+              "eid": 79077,
+              "from": "user 440",
+              "to": "Star Wars: Episode IV - A New Hope (1977)",
+              "rating": 5.0,
+              "date": "2015-12-02",
+              "from_id": 440,
+              "to_id": 834
+            }
+          ],
+          "p_before": 0.9999131153850032,
+          "p_after": 0.9998801618407996,
+          "p_random": 0.9999158328926168,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.21045923233032227,
+          "gap_before": 6.119424819946289,
+          "gap_after": 5.908965587615967,
+          "gap_random": 6.148665881156921
+        }
+      ],
+      "n_model_runs": 268
+    },
+    "C07-m461-t1378158322": {
+      "case_id": "C07-m461-t1378158322",
+      "member": 461,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Dawn of the Dead (2004)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Drama|Horror|Thriller",
+      "A_id": 3555,
+      "B_id": 5518,
+      "member_id": 461,
+      "recent_ratings": [
+        {
+          "title": "Separation, A (Jodaeiye Nader az Simin) (2011)",
+          "rating": 5.0,
+          "date": "2013-06-01"
+        },
+        {
+          "title": "Exit Through the Gift Shop (2010)",
+          "rating": 4.0,
+          "date": "2013-06-01"
+        },
+        {
+          "title": "Local Hero (1983)",
+          "rating": 3.5,
+          "date": "2013-06-01"
+        },
+        {
+          "title": "Little Big Man (1970)",
+          "rating": 5.0,
+          "date": "2013-06-01"
+        },
+        {
+          "title": "Re-Animator (1985)",
+          "rating": 4.5,
+          "date": "2013-06-01"
+        },
+        {
+          "title": "True Grit (2010)",
+          "rating": 3.0,
+          "date": "2013-06-01"
+        },
+        {
+          "title": "Tootsie (1982)",
+          "rating": 2.5,
+          "date": "2013-06-01"
+        },
+        {
+          "title": "Deliverance (1972)",
+          "rating": 4.0,
+          "date": "2013-06-01"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 0.12695788158095672,
+          "S": -0.04933429362223699,
+          "est_count": 3.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 130,
+              "name": "user 130"
+            },
+            {
+              "id": 2766,
+              "name": "Deliverance (1972)"
+            },
+            {
+              "id": 561,
+              "name": "user 561"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 68743,
+              "from": "Deliverance (1972)",
+              "to": "user 130",
+              "rating": 4.0,
+              "date": "2012-10-10",
+              "from_id": 2766,
+              "to_id": 130
+            },
+            {
+              "eid": 70272,
+              "from": "Deliverance (1972)",
+              "to": "user 561",
+              "rating": 4.0,
+              "date": "2013-05-18",
+              "from_id": 2766,
+              "to_id": 561
+            },
+            {
+              "eid": 70386,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 561",
+              "rating": 5.0,
+              "date": "2013-05-18",
+              "from_id": 3555,
+              "to_id": 561
+            }
+          ],
+          "p_before": 0.875350134848954,
+          "p_after": 0.8627551409865928,
+          "p_random": 0.8735945362474951,
+          "p_value": 0.17073170731707318,
+          "drop_logit": 0.07247817516326904,
+          "gap_before": 1.2755496501922607,
+          "gap_after": 1.2030714750289917,
+          "gap_random": 1.2763968020677567
+        },
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 0.0,
+          "S": -0.011821635319636417,
+          "est_count": 6.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 130,
+              "name": "user 130"
+            },
+            {
+              "id": 245,
+              "name": "user 245"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 68796,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 130",
+              "rating": 2.5,
+              "date": "2012-10-10",
+              "from_id": 3555,
+              "to_id": 130
+            },
+            {
+              "eid": 69490,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 245",
+              "rating": 2.0,
+              "date": "2012-11-28",
+              "from_id": 3555,
+              "to_id": 245
+            }
+          ],
+          "p_before": 0.875350134848954,
+          "p_after": 0.9234908472262472,
+          "p_random": 0.873965277265912,
+          "p_value": 1.0,
+          "drop_logit": -0.35445964336395264,
+          "gap_before": 1.2755496501922607,
+          "gap_after": 1.6300092935562134,
+          "gap_random": 1.2674433916807175
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.8986400571559043,
+          "S": -0.00575539662811783,
+          "est_count": 21.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 331,
+              "name": "user 331"
+            },
+            {
+              "id": 2900,
+              "name": "Little Big Man (1970)"
+            },
+            {
+              "id": 461,
+              "name": "user 461"
+            }
+          ],
+          "links": [
+            {
+              "eid": 69215,
+              "from": "Little Big Man (1970)",
+              "to": "user 331",
+              "rating": 4.0,
+              "date": "2012-11-11",
+              "from_id": 2900,
+              "to_id": 331
+            },
+            {
+              "eid": 70512,
+              "from": "user 461",
+              "to": "Little Big Man (1970)",
+              "rating": 5.0,
+              "date": "2013-06-01",
+              "from_id": 461,
+              "to_id": 2900
+            }
+          ],
+          "p_before": 0.875350134848954,
+          "p_after": 0.8232265865710435,
+          "p_random": 0.8653474707549631,
+          "p_value": 0.07317073170731707,
+          "drop_logit": 0.26880669593811035,
+          "gap_before": 1.2755496501922607,
+          "gap_after": 1.0067429542541504,
+          "gap_random": 1.2260276824235916
+        }
+      ],
+      "n_model_runs": 193
+    },
+    "C07-m505-t1424486905": {
+      "case_id": "C07-m505-t1424486905",
+      "member": 505,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Patriot, The (2000)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Drama|War",
+      "A_id": 3555,
+      "B_id": 3418,
+      "member_id": 505,
+      "recent_ratings": [
+        {
+          "title": "There Will Be Blood (2007)",
+          "rating": 4.0,
+          "date": "2015-02-21"
+        },
+        {
+          "title": "Knocked Up (2007)",
+          "rating": 3.5,
+          "date": "2015-02-21"
+        },
+        {
+          "title": "Kiss Kiss Bang Bang (2005)",
+          "rating": 4.5,
+          "date": "2015-02-21"
+        },
+        {
+          "title": "Whiplash (2014)",
+          "rating": 3.5,
+          "date": "2015-02-21"
+        },
+        {
+          "title": "Interstellar (2014)",
+          "rating": 5.0,
+          "date": "2015-02-21"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 1.009740022292151,
+          "S": 3.574015917601408e-05,
+          "est_count": 20.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 260,
+              "name": "user 260"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 343,
+              "name": "user 343"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72054,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 260",
+              "rating": 5.0,
+              "date": "2014-07-09",
+              "from_id": 3555,
+              "to_id": 260
+            },
+            {
+              "eid": 72940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 343",
+              "rating": 0.5,
+              "date": "2015-01-05",
+              "from_id": 3555,
+              "to_id": 343
+            }
+          ],
+          "p_before": 0.5250942756745652,
+          "p_after": 0.4297700526874459,
+          "p_random": 0.5251987994510481,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2508089542388916,
+          "gap_before": 0.06574451923370361,
+          "gap_after": -0.185064435005188,
+          "gap_random": 0.06601884663105011
+        },
+        {
+          "motif": "SEQ",
+          "name": "a person watched two movies in a row",
+          "lift": 0.9980106065614046,
+          "S": -2.0494201668986575e-05,
+          "est_count": 123.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 343,
+              "name": "user 343"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            },
+            {
+              "id": 2526,
+              "name": "Cruel Intentions (1999)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 343",
+              "rating": 0.5,
+              "date": "2015-01-05",
+              "from_id": 3555,
+              "to_id": 343
+            },
+            {
+              "eid": 72989,
+              "from": "user 343",
+              "to": "Cruel Intentions (1999)",
+              "rating": 2.0,
+              "date": "2015-01-05",
+              "from_id": 343,
+              "to_id": 2526
+            }
+          ],
+          "p_before": 0.5250942756745652,
+          "p_after": 0.4558474503408526,
+          "p_random": 0.5255070647534182,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.18162447214126587,
+          "gap_before": 0.06574451923370361,
+          "gap_after": -0.11587995290756226,
+          "gap_random": 0.06682791709899902
+        },
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 1.0,
+          "S": 0.0,
+          "est_count": 1.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 260,
+              "name": "user 260"
+            },
+            {
+              "id": 343,
+              "name": "user 343"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 72054,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 260",
+              "rating": 5.0,
+              "date": "2014-07-09",
+              "from_id": 3555,
+              "to_id": 260
+            },
+            {
+              "eid": 72940,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 343",
+              "rating": 0.5,
+              "date": "2015-01-05",
+              "from_id": 3555,
+              "to_id": 343
+            }
+          ],
+          "p_before": 0.5250942756745652,
+          "p_after": 0.4297700526874459,
+          "p_random": 0.5252099903463447,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.2508089542388916,
+          "gap_before": 0.06574451923370361,
+          "gap_after": -0.185064435005188,
+          "gap_random": 0.06604822278022766
+        }
+      ],
+      "n_model_runs": 188
+    },
+    "C07-m580-t1447007091": {
+      "case_id": "C07-m580-t1447007091",
+      "member": 580,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Thin Red Line, The (1998)",
+      "A_genres": "Drama",
+      "B_genres": "Action|Drama|War",
+      "A_id": 3555,
+      "B_id": 2436,
+      "member_id": 580,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 5.0,
+          "date": "2015-11-08"
+        },
+        {
+          "title": "Schindler's List (1993)",
+          "rating": 5.0,
+          "date": "2015-11-08"
+        },
+        {
+          "title": "Intouchables (2011)",
+          "rating": 4.5,
+          "date": "2015-11-08"
+        },
+        {
+          "title": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+          "rating": 4.5,
+          "date": "2015-11-08"
+        },
+        {
+          "title": "Matrix, The (1999)",
+          "rating": 3.5,
+          "date": "2015-11-08"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 2.368636557045644,
+          "S": 0.06140138877060942,
+          "est_count": 36.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 325,
+              "name": "user 325"
+            },
+            {
+              "id": 104,
+              "name": "user 104"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76020,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 325",
+              "rating": 4.5,
+              "date": "2015-07-14",
+              "from_id": 3555,
+              "to_id": 325
+            },
+            {
+              "eid": 77488,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 104",
+              "rating": 4.5,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 104
+            }
+          ],
+          "p_before": 0.9949969651419984,
+          "p_after": 0.9825261962300511,
+          "p_random": 0.9948067536080482,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.8267159461975098,
+          "gap_before": 3.4636716842651367,
+          "gap_after": 2.636955738067627,
+          "gap_random": 3.4444423377513886
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 0.610991849941067,
+          "S": -0.026153886508908847,
+          "est_count": 262.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 62,
+              "name": "user 62"
+            },
+            {
+              "id": 2549,
+              "name": "Matrix, The (1999)"
+            },
+            {
+              "id": 580,
+              "name": "user 580"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76735,
+              "from": "Matrix, The (1999)",
+              "to": "user 62",
+              "rating": 3.5,
+              "date": "2015-09-25",
+              "from_id": 2549,
+              "to_id": 62
+            },
+            {
+              "eid": 77914,
+              "from": "user 580",
+              "to": "Matrix, The (1999)",
+              "rating": 3.5,
+              "date": "2015-11-08",
+              "from_id": 580,
+              "to_id": 2549
+            }
+          ],
+          "p_before": 0.9949969651419984,
+          "p_after": 0.9927884779789241,
+          "p_random": 0.9950238757959309,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.24073505401611328,
+          "gap_before": 3.4636716842651367,
+          "gap_after": 3.2229366302490234,
+          "gap_random": 3.4711650550365447
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 1.337187126070718,
+          "S": 0.014463149852135147,
+          "est_count": 85.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 562,
+              "name": "user 562"
+            },
+            {
+              "id": 2340,
+              "name": "Life Is Beautiful (La Vita \u00e8 bella) (1997)"
+            },
+            {
+              "id": 104,
+              "name": "user 104"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 76413,
+              "from": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+              "to": "user 562",
+              "rating": 4.0,
+              "date": "2015-08-18",
+              "from_id": 2340,
+              "to_id": 562
+            },
+            {
+              "eid": 77235,
+              "from": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+              "to": "user 104",
+              "rating": 3.5,
+              "date": "2015-11-03",
+              "from_id": 2340,
+              "to_id": 104
+            },
+            {
+              "eid": 77488,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 104",
+              "rating": 4.5,
+              "date": "2015-11-03",
+              "from_id": 3555,
+              "to_id": 104
+            }
+          ],
+          "p_before": 0.9949969651419984,
+          "p_after": 0.9928900754445755,
+          "p_random": 0.9943693998216734,
+          "p_value": 0.14634146341463414,
+          "drop_logit": 0.2313828468322754,
+          "gap_before": 3.4636716842651367,
+          "gap_after": 3.2322888374328613,
+          "gap_random": 3.404111111164093
+        }
+      ],
+      "n_model_runs": 291
+    },
+    "C07-m609-t1479542004": {
+      "case_id": "C07-m609-t1479542004",
+      "member": 609,
+      "query": "a drama, but please nothing depressing",
+      "A": "Requiem for a Dream (2000)",
+      "B": "Vitelloni, I (a.k.a. The Young and the Passionate) (1953)",
+      "A_genres": "Drama",
+      "B_genres": "Drama",
+      "A_id": 3555,
+      "B_id": 5936,
+      "member_id": 609,
+      "recent_ratings": [
+        {
+          "title": "Shawshank Redemption, The (1994)",
+          "rating": 3.0,
+          "date": "2016-11-19"
+        },
+        {
+          "title": "Fight Club (1999)",
+          "rating": 5.0,
+          "date": "2016-11-19"
+        },
+        {
+          "title": "Face/Off (1997)",
+          "rating": 3.5,
+          "date": "2016-11-19"
+        },
+        {
+          "title": "Paycheck (2003)",
+          "rating": 1.5,
+          "date": "2016-11-19"
+        },
+        {
+          "title": "Mission: Impossible II (2000)",
+          "rating": 3.0,
+          "date": "2016-11-19"
+        }
+      ],
+      "structures": [
+        {
+          "motif": "POP",
+          "name": "several people rated A",
+          "lift": 1.7937477894645475,
+          "S": 0.018972714126876313,
+          "est_count": 45.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 559,
+              "name": "user 559"
+            },
+            {
+              "id": 524,
+              "name": "user 524"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 84239,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 559",
+              "rating": 4.0,
+              "date": "2016-07-27",
+              "from_id": 3555,
+              "to_id": 559
+            },
+            {
+              "eid": 85124,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 524",
+              "rating": 4.0,
+              "date": "2016-10-14",
+              "from_id": 3555,
+              "to_id": 524
+            }
+          ],
+          "p_before": 0.9986129349455343,
+          "p_after": 0.9979799255308354,
+          "p_random": 0.9986520766081938,
+          "p_value": 0.04878048780487805,
+          "drop_logit": 0.24644231796264648,
+          "gap_before": 4.305577754974365,
+          "gap_after": 4.059135437011719,
+          "gap_random": 4.332555961608887
+        },
+        {
+          "motif": "CO",
+          "name": "two people rated the same movie",
+          "lift": 1.3901153096695622,
+          "S": 0.013540968412048994,
+          "est_count": 144.0,
+          "involves_member": true,
+          "nodes": [
+            {
+              "id": 51,
+              "name": "user 51"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 609,
+              "name": "user 609"
+            }
+          ],
+          "links": [
+            {
+              "eid": 83714,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 51",
+              "rating": 5.0,
+              "date": "2016-07-09",
+              "from_id": 887,
+              "to_id": 51
+            },
+            {
+              "eid": 85603,
+              "from": "user 609",
+              "to": "Shawshank Redemption, The (1994)",
+              "rating": 3.0,
+              "date": "2016-11-19",
+              "from_id": 609,
+              "to_id": 887
+            }
+          ],
+          "p_before": 0.9986129349455343,
+          "p_after": 0.9974394079645593,
+          "p_random": 0.9985797410025373,
+          "p_value": 0.024390243902439025,
+          "drop_logit": 0.4019637107849121,
+          "gap_before": 4.305577754974365,
+          "gap_after": 3.903614044189453,
+          "gap_random": 4.294968366622925
+        },
+        {
+          "motif": "BRIDGE",
+          "name": "a path of shared taste that ends at A",
+          "lift": 1.2262721834114274,
+          "S": 0.004776420083300077,
+          "est_count": 37.0,
+          "involves_member": false,
+          "nodes": [
+            {
+              "id": 124,
+              "name": "user 124"
+            },
+            {
+              "id": 887,
+              "name": "Shawshank Redemption, The (1994)"
+            },
+            {
+              "id": 524,
+              "name": "user 524"
+            },
+            {
+              "id": 3555,
+              "name": "Requiem for a Dream (2000)"
+            }
+          ],
+          "links": [
+            {
+              "eid": 84503,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 124",
+              "rating": 4.0,
+              "date": "2016-09-17",
+              "from_id": 887,
+              "to_id": 124
+            },
+            {
+              "eid": 84843,
+              "from": "Shawshank Redemption, The (1994)",
+              "to": "user 524",
+              "rating": 4.5,
+              "date": "2016-10-14",
+              "from_id": 887,
+              "to_id": 524
+            },
+            {
+              "eid": 85124,
+              "from": "Requiem for a Dream (2000)",
+              "to": "user 524",
+              "rating": 4.0,
+              "date": "2016-10-14",
+              "from_id": 3555,
+              "to_id": 524
+            }
+          ],
+          "p_before": 0.9986129349455343,
+          "p_after": 0.998279445719586,
+          "p_random": 0.9985902230406232,
+          "p_value": 0.07317073170731707,
+          "drop_logit": 0.1412186622619629,
+          "gap_before": 4.305577754974365,
+          "gap_after": 4.164359092712402,
+          "gap_random": 4.306951862573624
+        }
+      ],
+      "n_model_runs": 272
+    }
+  }
+}

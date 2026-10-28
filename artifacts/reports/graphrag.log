@@ -1,0 +1,25 @@
+vector · score split (current) 5 0.697 0.35
+vector · score split (current) 10 0.711 0.371
+vector · score split (current) 20 0.711 0.393
+vector · full mechanism key 5 0.673 0.304
+vector · full mechanism key 10 0.676 0.304
+vector · full mechanism key 20 0.685 0.311
+graph · entities 5 0.627 0.25
+graph · entities 10 0.627 0.246
+graph · entities 20 0.633 0.261
+hybrid · entities + score split 5 0.694 0.343
+hybrid · entities + score split 10 0.703 0.343
+hybrid · entities + score split 20 0.685 0.329
+graph · entities+structure 5 0.621 0.246
+graph · entities+structure 10 0.633 0.246
+graph · entities+structure 20 0.63 0.257
+hybrid · entities+structure + score split 5 0.691 0.339
+hybrid · entities+structure + score split 10 0.706 0.339
+hybrid · entities+structure + score split 20 0.694 0.339
+graph · pushed-up title + crowd 5 0.624 0.271
+graph · pushed-up title + crowd 10 0.644 0.271
+graph · pushed-up title + crowd 20 0.644 0.275
+hybrid · pushed-up title + crowd + score split 5 0.694 0.354
+hybrid · pushed-up title + crowd + score split 10 0.708 0.35
+hybrid · pushed-up title + crowd + score split 20 0.703 0.329
+{'created': '2026-10-24T00:45:10-0400', 'n_store': 343, 'n_new': 280, 'chosen_graph': {'retriever': 'hybrid · pushed-up title + crowd + score split', 'k': 10, 'dev_loo': 0.7084548104956269, 'final': 0.35}, 'current_vector': {'retriever': 'vector · score split (current)', 'k': 10, 'dev_loo': 0.7113702623906706, 'final': 0.37142857142857144}, 'graph_minus_vector': {'mean': -0.02142857142857143, 'ci95': [-0.05, 0.007142857142857143]}, 'always_F3': 0.24285714285714285, 'oracle_any_fix': 0.42142857142857143}

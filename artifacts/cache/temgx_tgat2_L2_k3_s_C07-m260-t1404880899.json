@@ -1,0 +1,897 @@
+{
+  "method": "TemGX",
+  "backbone": "tgat2",
+  "L": 2,
+  "k_nodes": 3,
+  "delta_days": 365,
+  "fan": 10,
+  "cap": 200,
+  "targets": {
+    "u": 260,
+    "A": 3555,
+    "B": 3353
+  },
+  "n_nodes": 31,
+  "n_edges": 31,
+  "hop": {
+    "260": 0,
+    "3555": 0,
+    "3353": 0,
+    "2649": 1,
+    "2654": 1,
+    "2301": 1,
+    "2087": 1,
+    "3661": 1,
+    "281": 1,
+    "15": 1,
+    "527": 2,
+    "488": 2,
+    "3816": 2,
+    "2466": 2,
+    "3049": 2,
+    "2860": 2,
+    "4855": 2,
+    "2800": 2,
+    "7822": 2,
+    "4483": 2,
+    "7043": 2,
+    "5037": 2,
+    "1533": 2,
+    "1894": 2,
+    "924": 2,
+    "8378": 2,
+    "4172": 2,
+    "1511": 2,
+    "3355": 2,
+    "3409": 2,
+    "3606": 2
+  },
+  "edges": [
+    {
+      "eid": 72026,
+      "a": 260,
+      "b": 2649,
+      "ts": 1404880897,
+      "rating": 3.0,
+      "p": 0.0030236047714617964,
+      "signed": 0.00810384750366211
+    },
+    {
+      "eid": 72025,
+      "a": 260,
+      "b": 2654,
+      "ts": 1404880876,
+      "rating": 2.5,
+      "p": 0.0038087009040509434,
+      "signed": -0.010230422019958496
+    },
+    {
+      "eid": 72024,
+      "a": 260,
+      "b": 2301,
+      "ts": 1404880864,
+      "rating": 2.5,
+      "p": 0.007600439409933046,
+      "signed": -0.020441293716430664
+    },
+    {
+      "eid": 72023,
+      "a": 260,
+      "b": 2087,
+      "ts": 1404880861,
+      "rating": 3.0,
+      "p": 0.004091043139735295,
+      "signed": 0.010961174964904785
+    },
+    {
+      "eid": 72022,
+      "a": 260,
+      "b": 3661,
+      "ts": 1404880845,
+      "rating": 2.5,
+      "p": 0.0014553578162469494,
+      "signed": 0.0039025545120239258
+    },
+    {
+      "eid": 71044,
+      "a": 3555,
+      "b": 281,
+      "ts": 1378491761,
+      "rating": 4.5,
+      "p": 0.15007443092101508,
+      "signed": 0.3958526849746704
+    },
+    {
+      "eid": 70940,
+      "a": 3555,
+      "b": 15,
+      "ts": 1377477886,
+      "rating": 4.0,
+      "p": 0.025908079406539164,
+      "signed": 0.06899863481521606
+    },
+    {
+      "eid": 70980,
+      "a": 2649,
+      "b": 281,
+      "ts": 1378489661,
+      "rating": 4.5,
+      "p": 0.0009091473110764969,
+      "signed": 0.0024383068084716797
+    },
+    {
+      "eid": 70855,
+      "a": 2654,
+      "b": 15,
+      "ts": 1377476594,
+      "rating": 3.5,
+      "p": 0.00036388042941537524,
+      "signed": 0.0009760856628417969
+    },
+    {
+      "eid": 71774,
+      "a": 2087,
+      "b": 527,
+      "ts": 1391734409,
+      "rating": 3.5,
+      "p": 0.0005752568071767383,
+      "signed": 0.0015429854393005371
+    },
+    {
+      "eid": 71366,
+      "a": 3661,
+      "b": 488,
+      "ts": 1385823951,
+      "rating": 2.0,
+      "p": 0.00016544700837950455,
+      "signed": -0.000443875789642334
+    },
+    {
+      "eid": 71064,
+      "a": 3661,
+      "b": 281,
+      "ts": 1378495322,
+      "rating": 4.0,
+      "p": 0.0007474946988683673,
+      "signed": 0.002004861831665039
+    },
+    {
+      "eid": 71155,
+      "a": 281,
+      "b": 3816,
+      "ts": 1378833829,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71150,
+      "a": 281,
+      "b": 2466,
+      "ts": 1378517482,
+      "rating": 3.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71149,
+      "a": 281,
+      "b": 3049,
+      "ts": 1378499226,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71148,
+      "a": 281,
+      "b": 2860,
+      "ts": 1378498865,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71147,
+      "a": 281,
+      "b": 4855,
+      "ts": 1378498852,
+      "rating": 3.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71146,
+      "a": 281,
+      "b": 2800,
+      "ts": 1378498828,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71145,
+      "a": 281,
+      "b": 7822,
+      "ts": 1378498809,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71144,
+      "a": 281,
+      "b": 4483,
+      "ts": 1378498797,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71143,
+      "a": 281,
+      "b": 7043,
+      "ts": 1378498783,
+      "rating": 3.5,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 71142,
+      "a": 281,
+      "b": 5037,
+      "ts": 1378498775,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70949,
+      "a": 15,
+      "b": 1533,
+      "ts": 1377477957,
+      "rating": 4.5,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70948,
+      "a": 15,
+      "b": 1894,
+      "ts": 1377477954,
+      "rating": 3.5,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70947,
+      "a": 15,
+      "b": 924,
+      "ts": 1377477951,
+      "rating": 3.5,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70946,
+      "a": 15,
+      "b": 8378,
+      "ts": 1377477940,
+      "rating": 4.5,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70945,
+      "a": 15,
+      "b": 4172,
+      "ts": 1377477936,
+      "rating": 3.5,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70944,
+      "a": 15,
+      "b": 1511,
+      "ts": 1377477911,
+      "rating": 5.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70943,
+      "a": 15,
+      "b": 3355,
+      "ts": 1377477908,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70942,
+      "a": 15,
+      "b": 3409,
+      "ts": 1377477903,
+      "rating": 4.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    },
+    {
+      "eid": 70941,
+      "a": 15,
+      "b": 3606,
+      "ts": 1377477891,
+      "rating": 3.0,
+      "p": 0.0,
+      "signed": -2.384185791015625e-07
+    }
+  ],
+  "nodes": [
+    {
+      "node": 15,
+      "hop": 1,
+      "phi": 0.006967218295918337,
+      "inf": 0.025909429411948737,
+      "g_trd": 0.6411803884299543,
+      "R": 0.8000000000000007,
+      "decay": 0.4193931558469172
+    },
+    {
+      "node": 260,
+      "hop": 0,
+      "phi": null,
+      "inf": null,
+      "g_trd": null,
+      "R": 0.0,
+      "decay": null
+    },
+    {
+      "node": 281,
+      "hop": 1,
+      "phi": 0.04171905446193155,
+      "inf": 0.15007769189113906,
+      "g_trd": 0.6411803884299546,
+      "R": 0.7999999999999997,
+      "decay": 0.4335488960208822
+    },
+    {
+      "node": 488,
+      "hop": 2,
+      "phi": 5.117066626299318e-08,
+      "inf": 2.4078459681664555e-07,
+      "g_trd": 0.38889556398922315,
+      "R": 1.6999999999999988,
+      "decay": 0.5464612624145124
+    },
+    {
+      "node": 527,
+      "hop": 2,
+      "phi": 5.106237266229458e-07,
+      "inf": 2.353400414545348e-06,
+      "g_trd": 0.32919298780790573,
+      "R": 1.9999999999999991,
+      "decay": 0.6591049747123399
+    },
+    {
+      "node": 924,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144183,
+      "R": 1.800000000000002,
+      "decay": 0.41939512647130844
+    },
+    {
+      "node": 1511,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144183,
+      "R": 1.8000000000000023,
+      "decay": 0.419394594514357
+    },
+    {
+      "node": 1533,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714422,
+      "R": 1.8,
+      "decay": 0.41939520626490934
+    },
+    {
+      "node": 1894,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144217,
+      "R": 1.8000000000000007,
+      "decay": 0.419395166368107
+    },
+    {
+      "node": 2087,
+      "hop": 1,
+      "phi": 0.0019471656582843767,
+      "inf": 0.004091043139735295,
+      "g_trd": 0.5737534207374325,
+      "R": 1.0000000000000007,
+      "decay": 0.8295518848704853
+    },
+    {
+      "node": 2301,
+      "hop": 1,
+      "phi": 0.004360773270781528,
+      "inf": 0.007600439409933046,
+      "g_trd": 0.5737534207374326,
+      "R": 1.0000000000000004,
+      "decay": 0.9999988901578964
+    },
+    {
+      "node": 2466,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714424,
+      "R": 1.7999999999999996,
+      "decay": 0.43345015630913947
+    },
+    {
+      "node": 2649,
+      "hop": 1,
+      "phi": 0.0015345497359733134,
+      "inf": 0.0031596319968695274,
+      "g_trd": 0.6778095780054503,
+      "R": 0.7,
+      "decay": 0.7165339362985721
+    },
+    {
+      "node": 2654,
+      "hop": 1,
+      "phi": 0.0017373776825863828,
+      "inf": 0.0038180924407997807,
+      "g_trd": 0.6411803884299545,
+      "R": 0.8,
+      "decay": 0.7096881754418034
+    },
+    {
+      "node": 2800,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144233,
+      "R": 1.7999999999999998,
+      "decay": 0.4331938400889872
+    },
+    {
+      "node": 2860,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714424,
+      "R": 1.7999999999999994,
+      "decay": 0.433194348339288
+    },
+    {
+      "node": 3049,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714424,
+      "R": 1.7999999999999996,
+      "decay": 0.4331993072451363
+    },
+    {
+      "node": 3353,
+      "hop": 0,
+      "phi": null,
+      "inf": null,
+      "g_trd": null,
+      "R": 0.0,
+      "decay": null
+    },
+    {
+      "node": 3355,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144217,
+      "R": 1.8000000000000007,
+      "decay": 0.4193945546176129
+    },
+    {
+      "node": 3409,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144217,
+      "R": 1.8000000000000005,
+      "decay": 0.4193944881230477
+    },
+    {
+      "node": 3555,
+      "hop": 0,
+      "phi": null,
+      "inf": null,
+      "g_trd": null,
+      "R": 0.0,
+      "decay": null
+    },
+    {
+      "node": 3606,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144206,
+      "R": 1.8000000000000012,
+      "decay": 0.41939432853613434
+    },
+    {
+      "node": 3661,
+      "hop": 1,
+      "phi": 0.0006509308016261722,
+      "inf": 0.0014553578162469494,
+      "g_trd": 0.6778095780054502,
+      "R": 0.7000000000000002,
+      "decay": 0.659868410910439
+    },
+    {
+      "node": 3816,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714424,
+      "R": 1.7999999999999996,
+      "decay": 0.4378201052913437
+    },
+    {
+      "node": 4172,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144217,
+      "R": 1.8000000000000005,
+      "decay": 0.4193949269873726
+    },
+    {
+      "node": 4483,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714424,
+      "R": 1.7999999999999996,
+      "decay": 0.43319341425811325
+    },
+    {
+      "node": 4855,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144233,
+      "R": 1.7999999999999998,
+      "decay": 0.4331941697647901
+    },
+    {
+      "node": 5037,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144233,
+      "R": 1.7999999999999998,
+      "decay": 0.4331931120558114
+    },
+    {
+      "node": 7043,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714422,
+      "R": 1.8,
+      "decay": 0.4331932219475331
+    },
+    {
+      "node": 7822,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.3678794411714424,
+      "R": 1.7999999999999996,
+      "decay": 0.43319357909582124
+    },
+    {
+      "node": 8378,
+      "hop": 2,
+      "phi": 0.0,
+      "inf": 0.0,
+      "g_trd": 0.36787944117144206,
+      "R": 1.800000000000001,
+      "decay": 0.4193949801830795
+    }
+  ],
+  "explanatory": [
+    281,
+    15,
+    2301
+  ],
+  "connection": [],
+  "E_eps": [
+    70940,
+    71044,
+    72024
+  ],
+  "explanatory_hops": {
+    "281": 1,
+    "15": 1,
+    "2301": 1
+  },
+  "steps": [
+    {
+      "node": 281,
+      "phi": 0.04171905446193155,
+      "margin_after": -0.19037777185440063,
+      "verified": true,
+      "action": "add"
+    },
+    {
+      "node": 15,
+      "phi": 0.006967218295918337,
+      "margin_after": -0.27053117752075195,
+      "verified": true,
+      "action": "add"
+    },
+    {
+      "node": 2301,
+      "phi": 0.004360773270781528,
+      "margin_after": -0.29442834854125977,
+      "verified": true,
+      "action": "add"
+    },
+    {
+      "node": 2087,
+      "phi": 0.0019471656582843767,
+      "margin_after": -0.2776164412498474,
+      "verified": false,
+      "action": "reject"
+    },
+    {
+      "node": 2649,
+      "phi": 0.0015345497359733134,
+      "margin_after": -0.28445935249328613,
+      "verified": false,
+      "action": "reject"
+    },
+    {
+      "node": 3661,
+      "phi": 0.0006509308016261722,
+      "margin_after": -0.2931011915206909,
+      "verified": false,
+      "action": "reject"
+    },
+    {
+      "node": 527,
+      "phi": 5.106237266229458e-07,
+      "margin_after": -0.2776164412498474,
+      "verified": false,
+      "action": "reject"
+    },
+    {
+      "node": 488,
+      "phi": 5.117066626299318e-08,
+      "margin_after": -0.2931011915206909,
+      "verified": false,
+      "action": "reject"
+    }
+  ],
+  "margin_full": 0.20547503232955933,
+  "margin_without": -0.29442834854125977,
+  "margin_only": 0.15705949068069458,
+  "temperature": 0.6544249560344189,
+  "prob_full": 0.5778559452150468,
+  "prob_without": 0.38938361181827946,
+  "prob_only": 0.5597127083157195,
+  "fid_minus": 0.18847233339676733,
+  "fid_plus": -0.018143236899327286,
+  "flipped": true,
+  "sparsity": 0.0967741935483871,
+  "baselines": {
+    "temgx": 0.4999033808708191,
+    "random_mean": 0.014590761065483094,
+    "most_recent": -0.049444377422332764,
+    "top_single_edges": 0.46218955516815186,
+    "budget_edges": 3,
+    "n_random": 20,
+    "attention": 0.37297323346138
+  },
+  "n_model_inferences": 66,
+  "latency_ms": {
+    "edge_influence": 233.2,
+    "icm_trd_phi": 382.3,
+    "select_verify": 38.4,
+    "total": 765.9
+  },
+  "meta": {
+    "15": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 15"
+    },
+    "260": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 260"
+    },
+    "281": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 281"
+    },
+    "488": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 488"
+    },
+    "527": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 527"
+    },
+    "924": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Forrest Gump (1994)",
+      "genres": "Comedy|Drama|Romance|War"
+    },
+    "1511": {
+      "type": "movie",
+      "label": "SciFi/Fantasy",
+      "title": "Brazil (1985)",
+      "genres": "Fantasy|Sci-Fi"
+    },
+    "1533": {
+      "type": "movie",
+      "label": "Action/Adventure",
+      "title": "Full Metal Jacket (1987)",
+      "genres": "Drama|War"
+    },
+    "1894": {
+      "type": "movie",
+      "label": "Romance",
+      "title": "Good Will Hunting (1997)",
+      "genres": "Drama|Romance"
+    },
+    "2087": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Lethal Weapon 3 (1992)",
+      "genres": "Action|Comedy|Crime|Drama"
+    },
+    "2301": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Rush Hour (1998)",
+      "genres": "Action|Comedy|Crime|Thriller"
+    },
+    "2466": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Jumpin' Jack Flash (1986)",
+      "genres": "Action|Comedy|Romance|Thriller"
+    },
+    "2649": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Ghostbusters II (1989)",
+      "genres": "Comedy|Fantasy|Sci-Fi"
+    },
+    "2654": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Mystery Men (1999)",
+      "genres": "Action|Comedy|Fantasy"
+    },
+    "2800": {
+      "type": "movie",
+      "label": "Drama",
+      "title": "Boys Don't Cry (1999)",
+      "genres": "Drama"
+    },
+    "2860": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Who Framed Roger Rabbit? (1988)",
+      "genres": "Adventure|Animation|Children|Comedy|Crime|Fantasy|Mystery"
+    },
+    "3049": {
+      "type": "movie",
+      "label": "Drama",
+      "title": "Scent of a Woman (1992)",
+      "genres": "Drama"
+    },
+    "3353": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "For a Few Dollars More (Per qualche dollaro in pi\u00f9) (1965)",
+      "genres": "Action|Drama|Thriller|Western"
+    },
+    "3355": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Blood Simple (1984)",
+      "genres": "Crime|Drama|Film-Noir"
+    },
+    "3409": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Badlands (1973)",
+      "genres": "Crime|Drama|Thriller"
+    },
+    "3555": {
+      "type": "movie",
+      "label": "Drama",
+      "title": "Requiem for a Dream (2000)",
+      "genres": "Drama"
+    },
+    "3606": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Snatch (2000)",
+      "genres": "Comedy|Crime|Thriller"
+    },
+    "3661": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Beverly Hills Cop (1984)",
+      "genres": "Action|Comedy|Crime|Drama"
+    },
+    "3816": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Mississippi Burning (1988)",
+      "genres": "Crime|Drama|Thriller"
+    },
+    "4172": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Donnie Darko (2001)",
+      "genres": "Drama|Mystery|Sci-Fi|Thriller"
+    },
+    "4483": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Minority Report (2002)",
+      "genres": "Action|Crime|Mystery|Sci-Fi|Thriller"
+    },
+    "4855": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Old School (2003)",
+      "genres": "Comedy"
+    },
+    "5037": {
+      "type": "movie",
+      "label": "Comedy",
+      "title": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+      "genres": "Action|Adventure|Comedy|Fantasy"
+    },
+    "7043": {
+      "type": "movie",
+      "label": "SciFi/Fantasy",
+      "title": "300 (2007)",
+      "genres": "Action|Fantasy|War|IMAX"
+    },
+    "7822": {
+      "type": "movie",
+      "label": "SciFi/Fantasy",
+      "title": "Avatar (2009)",
+      "genres": "Action|Adventure|Sci-Fi|IMAX"
+    },
+    "8378": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Dark Knight Rises, The (2012)",
+      "genres": "Action|Adventure|Crime|IMAX"
+    }
+  },
+  "computed_at": "2026-10-27T00:50:06-0400",
+  "code_version": "0ada90227e58"
+}

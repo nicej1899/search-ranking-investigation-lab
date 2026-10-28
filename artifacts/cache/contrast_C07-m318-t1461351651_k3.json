@@ -1,0 +1,197 @@
+{
+  "case_id": "C07-m318-t1461351651",
+  "member": 318,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Help, The (2011)",
+  "A_id": 3555,
+  "B_id": 8275,
+  "member_id": 318,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 78159,
+        "from": "Help, The (2011)",
+        "to": "user 297",
+        "from_id": 8275,
+        "to_id": 297,
+        "rating": 2.5,
+        "date": "2015-11-14",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 80251,
+        "from": "Help, The (2011)",
+        "to": "user 9",
+        "from_id": 8275,
+        "to_id": 9,
+        "rating": 3.0,
+        "date": "2016-02-13",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 82588,
+        "from": "user 318",
+        "to": "Matrix, The (1999)",
+        "from_id": 318,
+        "to_id": 2549,
+        "rating": 5.0,
+        "date": "2016-04-22",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 3.0350626559752696,
+      "nodes": [
+        {
+          "id": 494,
+          "name": "user 494"
+        },
+        {
+          "id": 40,
+          "name": "user 40"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 80711,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 494",
+          "from_id": 3555,
+          "to_id": 494,
+          "rating": 4.0,
+          "date": "2016-03-22"
+        },
+        {
+          "eid": 80932,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 40",
+          "from_id": 3555,
+          "to_id": 40,
+          "rating": 4.0,
+          "date": "2016-03-25"
+        }
+      ]
+    },
+    "n_model_runs": 407
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 82585,
+        "from": "user 318",
+        "to": "Zootopia (2016)",
+        "from_id": 318,
+        "to_id": 9833,
+        "rating": 4.5,
+        "date": "2016-04-22",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 82586,
+        "from": "user 318",
+        "to": "Dark Knight, The (2008)",
+        "from_id": 318,
+        "to_id": 7320,
+        "rating": 5.0,
+        "date": "2016-04-22",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 82587,
+        "from": "user 318",
+        "to": "Schindler's List (1993)",
+        "from_id": 318,
+        "to_id": 1071,
+        "rating": 5.0,
+        "date": "2016-04-22",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "BRIDGEB",
+      "name": "a path of shared taste that ends at B",
+      "lift": 1.5924878210294415,
+      "nodes": [
+        {
+          "id": 142,
+          "name": "user 142"
+        },
+        {
+          "id": 5477,
+          "name": "50 First Dates (2004)"
+        },
+        {
+          "id": 297,
+          "name": "user 297"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77078,
+          "from": "50 First Dates (2004)",
+          "to": "user 142",
+          "from_id": 5477,
+          "to_id": 142,
+          "rating": 5.0,
+          "date": "2015-10-15"
+        },
+        {
+          "eid": 78707,
+          "from": "50 First Dates (2004)",
+          "to": "user 297",
+          "from_id": 5477,
+          "to_id": 297,
+          "rating": 2.5,
+          "date": "2015-11-15"
+        },
+        {
+          "eid": 78899,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 297",
+          "from_id": 3555,
+          "to_id": 297,
+          "rating": 2.5,
+          "date": "2015-11-15"
+        }
+      ]
+    },
+    "n_model_runs": 385
+  },
+  "test": {
+    "p0": 0.8810373554555138,
+    "del_A": {
+      "p": 0.7898289585355349,
+      "p_random": 0.8788189888822086,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9631767241643411,
+      "p_random": 0.8781425438519058,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.0,
+    "B_from_member_history": 1.0,
+    "shared_links": []
+  }
+}

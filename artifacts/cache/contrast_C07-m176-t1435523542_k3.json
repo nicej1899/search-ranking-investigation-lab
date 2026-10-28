@@ -1,0 +1,195 @@
+{
+  "case_id": "C07-m176-t1435523542",
+  "member": 176,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Last Man Standing (1996)",
+  "A_id": 3555,
+  "B_id": 1368,
+  "member_id": 176,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 73735,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 316",
+        "from_id": 3555,
+        "to_id": 316,
+        "rating": 4.0,
+        "date": "2015-04-30",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 74247,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 102",
+        "from_id": 3555,
+        "to_id": 102,
+        "rating": 5.0,
+        "date": "2015-05-18",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 74500,
+        "from": "user 176",
+        "to": "Shawshank Redemption, The (1994)",
+        "from_id": 176,
+        "to_id": 887,
+        "rating": 5.0,
+        "date": "2015-06-28",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 2,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 5.185731701503658,
+      "nodes": [
+        {
+          "id": 316,
+          "name": "user 316"
+        },
+        {
+          "id": 102,
+          "name": "user 102"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73735,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 316",
+          "from_id": 3555,
+          "to_id": 316,
+          "rating": 4.0,
+          "date": "2015-04-30"
+        },
+        {
+          "eid": 74247,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 102",
+          "from_id": 3555,
+          "to_id": 102,
+          "rating": 5.0,
+          "date": "2015-05-18"
+        }
+      ]
+    },
+    "n_model_runs": 258
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 72217,
+        "from": "Usual Suspects, The (1995)",
+        "to": "user 236",
+        "from_id": 656,
+        "to_id": 236,
+        "rating": 2.5,
+        "date": "2014-09-13",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 74501,
+        "from": "user 176",
+        "to": "Schindler's List (1993)",
+        "from_id": 176,
+        "to_id": 1071,
+        "rating": 4.5,
+        "date": "2015-06-28",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 74502,
+        "from": "user 176",
+        "to": "Usual Suspects, The (1995)",
+        "from_id": 176,
+        "to_id": 656,
+        "rating": 4.0,
+        "date": "2015-06-28",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 74504,
+        "from": "user 176",
+        "to": "Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)",
+        "from_id": 176,
+        "to_id": 1510,
+        "rating": 3.5,
+        "date": "2015-06-28",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the member's own ratings": 3
+    },
+    "structure": {
+      "motif": "CO",
+      "name": "two people rated the same movie",
+      "lift": 1.0221960242285808,
+      "nodes": [
+        {
+          "id": 322,
+          "name": "user 322"
+        },
+        {
+          "id": 1071,
+          "name": "Schindler's List (1993)"
+        },
+        {
+          "id": 176,
+          "name": "user 176"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73179,
+          "from": "Schindler's List (1993)",
+          "to": "user 322",
+          "from_id": 1071,
+          "to_id": 322,
+          "rating": 4.5,
+          "date": "2015-01-30"
+        },
+        {
+          "eid": 74501,
+          "from": "user 176",
+          "to": "Schindler's List (1993)",
+          "from_id": 176,
+          "to_id": 1071,
+          "rating": 4.5,
+          "date": "2015-06-28"
+        }
+      ]
+    },
+    "n_model_runs": 250
+  },
+  "test": {
+    "p0": 0.9988942526148539,
+    "del_A": {
+      "p": 0.9946882993166654,
+      "p_random": 0.998874236613055,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9991052451314226,
+      "p_random": 0.9986878032258838,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.6666666666666666,
+    "B_from_member_history": 0.75,
+    "shared_links": []
+  }
+}

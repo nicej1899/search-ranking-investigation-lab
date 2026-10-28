@@ -1,0 +1,9 @@
+{
+  "n": 10,
+  "rule": "max mean NDCG gain over chat/regular/new members on full DEV",
+  "gains": {
+    "3": 0.00875371288633721,
+    "5": 0.010979418439812524,
+    "10": 0.013583657401974559
+  }
+}

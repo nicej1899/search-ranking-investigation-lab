@@ -1,0 +1,253 @@
+{
+  "m0": 2.511334180831909,
+  "p0": 0.9789064136090366,
+  "T": 0.6544249560344189,
+  "n_draw": 40,
+  "arms": {
+    "temgx": {
+      "eids": [
+        90118,
+        90708,
+        90710
+      ],
+      "n": 3,
+      "margin": 1.7285456657409668,
+      "p": 0.9334739781352309,
+      "drop": 0.7827885150909424,
+      "flipped": false,
+      "placebo_p_mean": 0.9796787799066834,
+      "placebo_p_lo": 0.9782306607205882,
+      "placebo_p_hi": 0.9836234512502827,
+      "placebo_drop_mean": -0.027077186107635497,
+      "p_value": 0.024390243902439025
+    },
+    "catgx": {
+      "eids": [
+        84919,
+        87236,
+        90118,
+        90527,
+        90708,
+        90709,
+        90711,
+        90712
+      ],
+      "n": 8,
+      "margin": 2.0162434577941895,
+      "p": 0.956099619923296,
+      "drop": 0.4950907230377197,
+      "flipped": false,
+      "placebo_p_mean": 0.9781041087807308,
+      "placebo_p_lo": 0.9770672909078437,
+      "placebo_p_hi": 0.9788395647614214,
+      "placebo_drop_mean": 0.02472146153450012,
+      "p_value": 0.024390243902439025
+    },
+    "joint": {
+      "eids": [
+        87672,
+        88011,
+        90118,
+        90708,
+        90710
+      ],
+      "n": 5,
+      "margin": 1.7227420806884766,
+      "p": 0.9329211372915636,
+      "drop": 0.7885921001434326,
+      "flipped": false,
+      "placebo_p_mean": 0.9796438060911534,
+      "placebo_p_lo": 0.9777787079470472,
+      "placebo_p_hi": 0.9837366914726262,
+      "placebo_drop_mean": -0.02827182412147522,
+      "p_value": 0.024390243902439025
+    },
+    "catgx_do": {
+      "eids": [
+        87236,
+        87672,
+        88011,
+        90118,
+        90299,
+        90527,
+        90531,
+        90708
+      ],
+      "n": 8,
+      "margin": 1.765510082244873,
+      "p": 0.9368969221509811,
+      "drop": 0.7458240985870361,
+      "flipped": false,
+      "placebo_p_mean": 0.9786424902493518,
+      "placebo_p_lo": 0.9769032499841241,
+      "placebo_p_hi": 0.98330329373506,
+      "placebo_drop_mean": 0.005087512731552124,
+      "p_value": 0.024390243902439025
+    },
+    "attention": {
+      "eids": [
+        90709,
+        90118,
+        90711,
+        90708,
+        90712
+      ],
+      "n": 5,
+      "margin": 2.0162434577941895,
+      "p": 0.956099619923296,
+      "drop": 0.4950907230377197,
+      "flipped": false,
+      "placebo_p_mean": 0.9783711007087377,
+      "placebo_p_lo": 0.9776753715294528,
+      "placebo_p_hi": 0.979079115527795,
+      "placebo_drop_mean": 0.016511750221252442,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "coverage": {
+    "temgx": 0.0033333333333333335,
+    "catgx": 0.03,
+    "joint": 0.013333333333333334,
+    "catgx_do": 0.05,
+    "attention": 0.02
+  },
+  "labels": [
+    {
+      "eid": 90118,
+      "s": 3761,
+      "t": 379,
+      "ts": 1494613279,
+      "motif": "BRIDGE",
+      "motif_name": "a path of shared taste that ends at A",
+      "S": 0.09381445010503134,
+      "lift": 4.3804575471581275,
+      "instance": {
+        "nodes": [
+          560,
+          5945,
+          379,
+          3761
+        ],
+        "eids": [
+          87672,
+          88011,
+          90118
+        ],
+        "ts": [
+          1491092279,
+          1493420010,
+          1494613279
+        ]
+      }
+    },
+    {
+      "eid": 90708,
+      "s": 470,
+      "t": 2836,
+      "ts": 1496668924,
+      "motif": "SEQ",
+      "motif_name": "a person watched two movies in a row",
+      "S": 0.005631434970431857,
+      "lift": 1.1781160961820967,
+      "instance": {
+        "nodes": [
+          470,
+          2836,
+          7982
+        ],
+        "eids": [
+          90708,
+          90710
+        ],
+        "ts": [
+          1496668924,
+          1496668936
+        ]
+      }
+    },
+    {
+      "eid": 90710,
+      "s": 470,
+      "t": 7982,
+      "ts": 1496668936,
+      "motif": "SEQ",
+      "motif_name": "a person watched two movies in a row",
+      "S": 0.005631434970431857,
+      "lift": 1.1781160961820967,
+      "instance": {
+        "nodes": [
+          470,
+          2836,
+          7982
+        ],
+        "eids": [
+          90708,
+          90710
+        ],
+        "ts": [
+          1496668924,
+          1496668936
+        ]
+      }
+    }
+  ],
+  "labelled_share": 1.0,
+  "n_model_runs": 206,
+  "n_window_edges": 52,
+  "top": {
+    "attention_g": [
+      "BRIDGE"
+    ],
+    "do_g": [
+      "BRIDGE"
+    ]
+  },
+  "calls": {
+    "temgx": 101,
+    "catgx": 4,
+    "catgx_do": 98
+  },
+  "meta": {
+    "7982": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Inception (2010)",
+      "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX"
+    },
+    "560": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 560"
+    },
+    "3761": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Along Came a Spider (2001)",
+      "genres": "Action|Crime|Mystery|Thriller"
+    },
+    "2836": {
+      "type": "movie",
+      "label": "Crime/Thriller",
+      "title": "Fight Club (1999)",
+      "genres": "Action|Crime|Drama|Thriller"
+    },
+    "470": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 470"
+    },
+    "5945": {
+      "type": "movie",
+      "label": "Horror",
+      "title": "Shaun of the Dead (2004)",
+      "genres": "Comedy|Horror"
+    },
+    "379": {
+      "type": "user",
+      "label": "USER",
+      "title": "user 379"
+    }
+  },
+  "computed_at": "2026-10-22T20:22:10-0400",
+  "code_version": "eec29da5a9b7"
+}

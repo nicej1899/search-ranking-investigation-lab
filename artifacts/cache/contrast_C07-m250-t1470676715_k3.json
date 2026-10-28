@@ -1,0 +1,201 @@
+{
+  "case_id": "C07-m250-t1470676715",
+  "member": 250,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Rain Man (1988)",
+  "A_id": 3555,
+  "B_id": 2048,
+  "member_id": 250,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 76494,
+        "from": "Rain Man (1988)",
+        "to": "user 102",
+        "from_id": 2048,
+        "to_id": 102,
+        "rating": 5.0,
+        "date": "2015-08-28",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 84403,
+        "from": "user 250",
+        "to": "Schindler's List (1993)",
+        "from_id": 250,
+        "to_id": 1071,
+        "rating": 5.0,
+        "date": "2016-08-08",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 84406,
+        "from": "user 250",
+        "to": "Silence of the Lambs, The (1991)",
+        "from_id": 250,
+        "to_id": 1120,
+        "rating": 5.0,
+        "date": "2016-08-08",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "other people's ratings": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 3.108536368107487,
+      "nodes": [
+        {
+          "id": 17,
+          "name": "user 17"
+        },
+        {
+          "id": 246,
+          "name": "user 246"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 80275,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 17",
+          "from_id": 3555,
+          "to_id": 17,
+          "rating": 4.5,
+          "date": "2016-02-15"
+        },
+        {
+          "eid": 83648,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 246",
+          "from_id": 3555,
+          "to_id": 246,
+          "rating": 3.0,
+          "date": "2016-07-04"
+        }
+      ]
+    },
+    "n_model_runs": 439
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 77990,
+        "from": "Rain Man (1988)",
+        "to": "user 226",
+        "from_id": 2048,
+        "to_id": 226,
+        "rating": 4.5,
+        "date": "2015-11-11",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 83648,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 246",
+        "from_id": 3555,
+        "to_id": 246,
+        "rating": 3.0,
+        "date": "2016-07-04",
+        "kind": "other people's ratings"
+      },
+      {
+        "eid": 84403,
+        "from": "user 250",
+        "to": "Schindler's List (1993)",
+        "from_id": 250,
+        "to_id": 1071,
+        "rating": 5.0,
+        "date": "2016-08-08",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "other people's ratings": 1,
+      "the member's own ratings": 1
+    },
+    "structure": {
+      "motif": "BRIDGEB",
+      "name": "a path of shared taste that ends at B",
+      "lift": 2.4517716253450446,
+      "nodes": [
+        {
+          "id": 226,
+          "name": "user 226"
+        },
+        {
+          "id": 2048,
+          "name": "Rain Man (1988)"
+        },
+        {
+          "id": 559,
+          "name": "user 559"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 77990,
+          "from": "Rain Man (1988)",
+          "to": "user 226",
+          "from_id": 2048,
+          "to_id": 226,
+          "rating": 4.5,
+          "date": "2015-11-11"
+        },
+        {
+          "eid": 84015,
+          "from": "Rain Man (1988)",
+          "to": "user 559",
+          "from_id": 2048,
+          "to_id": 559,
+          "rating": 3.5,
+          "date": "2016-07-27"
+        },
+        {
+          "eid": 84239,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 559",
+          "from_id": 3555,
+          "to_id": 559,
+          "rating": 4.0,
+          "date": "2016-07-27"
+        }
+      ]
+    },
+    "n_model_runs": 433
+  },
+  "test": {
+    "p0": 0.44459662522149845,
+    "del_A": {
+      "p": 0.40470686592129385,
+      "p_random": 0.4676514277021949,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.6919431611265147,
+      "p_random": 0.4559174813659034,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 0.0,
+    "B_from_member_history": 0.3333333333333333,
+    "shared_links": [
+      84403
+    ]
+  }
+}

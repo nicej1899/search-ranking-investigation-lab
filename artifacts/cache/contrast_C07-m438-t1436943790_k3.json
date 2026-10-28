@@ -1,0 +1,197 @@
+{
+  "case_id": "C07-m438-t1436943790",
+  "member": 438,
+  "query": "a drama, but please nothing depressing",
+  "A": "Requiem for a Dream (2000)",
+  "B": "Face/Off (1997)",
+  "A_id": 3555,
+  "B_id": 1791,
+  "member_id": 438,
+  "k": 3,
+  "side_A": {
+    "links": [
+      {
+        "eid": 73735,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 316",
+        "from_id": 3555,
+        "to_id": 316,
+        "rating": 4.0,
+        "date": "2015-04-30",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 74247,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 102",
+        "from_id": 3555,
+        "to_id": 102,
+        "rating": 5.0,
+        "date": "2015-05-18",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76020,
+        "from": "Requiem for a Dream (2000)",
+        "to": "user 325",
+        "from_id": 3555,
+        "to_id": 325,
+        "rating": 4.5,
+        "date": "2015-07-14",
+        "kind": "the title's recent raters"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 3
+    },
+    "structure": {
+      "motif": "POP",
+      "name": "several people rated A",
+      "lift": 8.702953918483225,
+      "nodes": [
+        {
+          "id": 316,
+          "name": "user 316"
+        },
+        {
+          "id": 325,
+          "name": "user 325"
+        },
+        {
+          "id": 3555,
+          "name": "Requiem for a Dream (2000)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73735,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 316",
+          "from_id": 3555,
+          "to_id": 316,
+          "rating": 4.0,
+          "date": "2015-04-30"
+        },
+        {
+          "eid": 76020,
+          "from": "Requiem for a Dream (2000)",
+          "to": "user 325",
+          "from_id": 3555,
+          "to_id": 325,
+          "rating": 4.5,
+          "date": "2015-07-14"
+        }
+      ]
+    },
+    "n_model_runs": 308
+  },
+  "side_B": {
+    "links": [
+      {
+        "eid": 75404,
+        "from": "Face/Off (1997)",
+        "to": "user 176",
+        "from_id": 1791,
+        "to_id": 176,
+        "rating": 3.5,
+        "date": "2015-07-03",
+        "kind": "the title's recent raters"
+      },
+      {
+        "eid": 76036,
+        "from": "user 438",
+        "to": "Lord of the Rings: The Return of the King, The (2003)",
+        "from_id": 438,
+        "to_id": 5410,
+        "rating": 5.0,
+        "date": "2015-07-15",
+        "kind": "the member's own ratings"
+      },
+      {
+        "eid": 76037,
+        "from": "user 438",
+        "to": "Schindler's List (1993)",
+        "from_id": 438,
+        "to_id": 1071,
+        "rating": 4.5,
+        "date": "2015-07-15",
+        "kind": "the member's own ratings"
+      }
+    ],
+    "kinds": {
+      "the title's recent raters": 1,
+      "the member's own ratings": 2
+    },
+    "structure": {
+      "motif": "BRIDGE",
+      "name": "a path of shared taste that ends at A",
+      "lift": 3.148889544744559,
+      "nodes": [
+        {
+          "id": 496,
+          "name": "user 496"
+        },
+        {
+          "id": 5410,
+          "name": "Lord of the Rings: The Return of the King, The (2003)"
+        },
+        {
+          "id": 176,
+          "name": "user 176"
+        },
+        {
+          "id": 1791,
+          "name": "Face/Off (1997)"
+        }
+      ],
+      "links": [
+        {
+          "eid": 73677,
+          "from": "Lord of the Rings: The Return of the King, The (2003)",
+          "to": "user 496",
+          "from_id": 5410,
+          "to_id": 496,
+          "rating": 2.0,
+          "date": "2015-04-15"
+        },
+        {
+          "eid": 74506,
+          "from": "Lord of the Rings: The Return of the King, The (2003)",
+          "to": "user 176",
+          "from_id": 5410,
+          "to_id": 176,
+          "rating": 2.0,
+          "date": "2015-06-28"
+        },
+        {
+          "eid": 75404,
+          "from": "Face/Off (1997)",
+          "to": "user 176",
+          "from_id": 1791,
+          "to_id": 176,
+          "rating": 3.5,
+          "date": "2015-07-03"
+        }
+      ]
+    },
+    "n_model_runs": 299
+  },
+  "test": {
+    "p0": 0.9358982276421013,
+    "del_A": {
+      "p": 0.7191668937351009,
+      "p_random": 0.9354743019828822,
+      "p_value": 0.024390243902439025
+    },
+    "del_B": {
+      "p": 0.9536442464446894,
+      "p_random": 0.9332866106715578,
+      "p_value": 0.024390243902439025
+    }
+  },
+  "difference": {
+    "A_from_title_crowd": 1.0,
+    "B_from_member_history": 0.6666666666666666,
+    "shared_links": []
+  }
+}

@@ -1,0 +1,33 @@
+srlab/train.py:108: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  pos = torch.from_numpy(part.item.to_numpy())
+{'epoch': 1, 'train_loss': 1.1449968007163724, 'val': {'HR@10': 0.47733333333333333, 'NDCG@10': 0.28577149737307117, 'n': 3000}, 'epoch_sec': 8.4}
+{'epoch': 2, 'train_loss': 0.9243204153102377, 'val': {'HR@10': 0.483, 'NDCG@10': 0.28489134928051274, 'n': 3000}, 'epoch_sec': 8.3}
+{'epoch': 3, 'train_loss': 0.8875064966471299, 'val': {'HR@10': 0.4766666666666667, 'NDCG@10': 0.2837059987069912, 'n': 3000}, 'epoch_sec': 8.0}
+{'epoch': 4, 'train_loss': 0.8619277395200038, 'val': {'HR@10': 0.47633333333333333, 'NDCG@10': 0.2808944561494238, 'n': 3000}, 'epoch_sec': 8.0}
+{'epoch': 5, 'train_loss': 0.837063240400259, 'val': {'HR@10': 0.4846666666666667, 'NDCG@10': 0.2884000261102338, 'n': 3000}, 'epoch_sec': 7.8}
+{'epoch': 6, 'train_loss': 0.8051776242428932, 'val': {'HR@10': 0.49966666666666665, 'NDCG@10': 0.30750378892443464, 'n': 3000}, 'epoch_sec': 8.2}
+{'epoch': 7, 'train_loss': 0.7716836950917175, 'val': {'HR@10': 0.5146666666666667, 'NDCG@10': 0.31927674110251236, 'n': 3000}, 'epoch_sec': 7.9}
+{'epoch': 8, 'train_loss': 0.7389384940050651, 'val': {'HR@10': 0.5483333333333333, 'NDCG@10': 0.3388656453028004, 'n': 3000}, 'epoch_sec': 7.9}
+{'epoch': 9, 'train_loss': 0.7079250138738881, 'val': {'HR@10': 0.557, 'NDCG@10': 0.3413112125502751, 'n': 3000}, 'epoch_sec': 8.3}
+{'epoch': 10, 'train_loss': 0.6796871829723966, 'val': {'HR@10': 0.5716666666666667, 'NDCG@10': 0.3493880996406112, 'n': 3000}, 'epoch_sec': 8.7}
+{'epoch': 11, 'train_loss': 0.6520400297814521, 'val': {'HR@10': 0.572, 'NDCG@10': 0.34861419367105784, 'n': 3000}, 'epoch_sec': 8.5}
+{'epoch': 12, 'train_loss': 0.6223534518393917, 'val': {'HR@10': 0.5813333333333334, 'NDCG@10': 0.35562784625634525, 'n': 3000}, 'epoch_sec': 12.1}
+{'epoch': 13, 'train_loss': 0.5983287895071334, 'val': {'HR@10': 0.5896666666666667, 'NDCG@10': 0.36351367594797995, 'n': 3000}, 'epoch_sec': 16.1}
+{'epoch': 14, 'train_loss': 0.5769864977269933, 'val': {'HR@10': 0.5816666666666667, 'NDCG@10': 0.35682785812774637, 'n': 3000}, 'epoch_sec': 8.3}
+{'epoch': 15, 'train_loss': 0.5600549570028333, 'val': {'HR@10': 0.5856666666666667, 'NDCG@10': 0.3633651322060455, 'n': 3000}, 'epoch_sec': 9.1}
+{'epoch': 16, 'train_loss': 0.5417991565621417, 'val': {'HR@10': 0.583, 'NDCG@10': 0.36115346059441034, 'n': 3000}, 'epoch_sec': 7.9}
+{'epoch': 17, 'train_loss': 0.5319996443779572, 'val': {'HR@10': 0.5646666666666667, 'NDCG@10': 0.3515620291820485, 'n': 3000}, 'epoch_sec': 8.5}
+{'epoch': 18, 'train_loss': 0.5211081604162852, 'val': {'HR@10': 0.5586666666666666, 'NDCG@10': 0.3381716901912155, 'n': 3000}, 'epoch_sec': 8.8}
+{'epoch': 19, 'train_loss': 0.5112331680197647, 'val': {'HR@10': 0.5753333333333334, 'NDCG@10': 0.3540720666120708, 'n': 3000}, 'epoch_sec': 8.5}
+{'epoch': 20, 'train_loss': 0.5053219084722408, 'val': {'HR@10': 0.5733333333333334, 'NDCG@10': 0.35410700622655994, 'n': 3000}, 'epoch_sec': 8.4}
+{'epoch': 21, 'train_loss': 0.4920435804819715, 'val': {'HR@10': 0.5643333333333334, 'NDCG@10': 0.349011798755267, 'n': 3000}, 'epoch_sec': 8.2}
+{'epoch': 22, 'train_loss': 0.48599589648454083, 'val': {'HR@10': 0.5663333333333334, 'NDCG@10': 0.3508118057967149, 'n': 3000}, 'epoch_sec': 8.0}
+{'epoch': 23, 'train_loss': 0.4776960455853006, 'val': {'HR@10': 0.5663333333333334, 'NDCG@10': 0.35037648324425874, 'n': 3000}, 'epoch_sec': 8.4}
+{'epoch': 24, 'train_loss': 0.46997302079546277, 'val': {'HR@10': 0.576, 'NDCG@10': 0.3560052310590631, 'n': 3000}, 'epoch_sec': 8.5}
+{'epoch': 25, 'train_loss': 0.46311725092970807, 'val': {'HR@10': 0.5513333333333333, 'NDCG@10': 0.33734381759465587, 'n': 3000}, 'epoch_sec': 8.2}
+{'epoch': 26, 'train_loss': 0.4555594873601112, 'val': {'HR@10': 0.5653333333333334, 'NDCG@10': 0.35057610294831026, 'n': 3000}, 'epoch_sec': 8.5}
+{'epoch': 27, 'train_loss': 0.4516830843859825, 'val': {'HR@10': 0.5603333333333333, 'NDCG@10': 0.34532392604553913, 'n': 3000}, 'epoch_sec': 8.0}
+{'epoch': 28, 'train_loss': 0.44296927037446393, 'val': {'HR@10': 0.5656666666666667, 'NDCG@10': 0.34859976487437877, 'n': 3000}, 'epoch_sec': 8.2}
+{'epoch': 29, 'train_loss': 0.4351780392985413, 'val': {'HR@10': 0.5636666666666666, 'NDCG@10': 0.3432109664326381, 'n': 3000}, 'epoch_sec': 8.1}
+{'epoch': 30, 'train_loss': 0.4353448947270711, 'val': {'HR@10': 0.5576666666666666, 'NDCG@10': 0.34140150605697517, 'n': 3000}, 'epoch_sec': 8.5}
+{'selected_epoch': 13, 'val': {'HR@10': 0.5896666666666667, 'NDCG@10': 0.36351367594797995, 'n': 3000}, 'test_temporal_backbone': {'HR@10': 0.5093333333333333, 'NDCG@10': 0.3024434242737843, 'n': 3000}, 'test_popularity_reference': {'HR@10': 0.5296666666666666, 'NDCG@10': 0.3065532776637368, 'n': 3000}}
