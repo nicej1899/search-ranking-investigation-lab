@@ -10,7 +10,7 @@
       "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 2.7 points vs 1.9 for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Spider-Man beats The Last Samurai mainly through popularity (+0.16); the history part adds +0.03."
     ],
-    "verdict": "Diagnosis: Spider-Man wins mainly through popularity, and the history model adds to it through recent fans of Spider-Man (a pattern that survives matching) and the member's ratings of Wonder Woman, Inside Out. None of these signals reads \u201cisn't a superhero film\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Spider-Man wins mainly through popularity, and the history model adds to it through recent fans of Spider-Man (a pattern that survives matching) and the member's ratings of Wonder Woman, Inside Out. None of these signals reads what \u201cisn't a superhero film\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       85706,
       89835,
@@ -1148,6 +1148,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1158,
-  "computed_at": "2026-10-28T16:44:44-0400",
+  "computed_at": "2026-10-28T22:26:44-0400",
   "summary": "With 8 ratings (6 recent ratings of Spider-Man by other people, 2 of the member's own ratings), the model's preference for Spider-Man over The Last Samurai goes from 62% to 33% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 47%. In the full ranking, Spider-Man moves from #1 to #2."
 }

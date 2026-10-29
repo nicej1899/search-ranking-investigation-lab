@@ -282,7 +282,7 @@ def _joint(ev, pats, split, A, B, u, query=""):
         fx.append("rely less on popularity for specific requests")
     if crowd:
         fx.append("rely less on titles' latest ratings from strangers")
-    verdict += "; ".join(fx) + ". Step 5 picks one using past cases."
+    verdict += "; ".join(fx) + ". Similar verified past failures pick one."
     return {"lines": lines, "verdict": verdict, "agree": sorted({e for x in pats for e in x["overlap_temgx"]})}
 
 

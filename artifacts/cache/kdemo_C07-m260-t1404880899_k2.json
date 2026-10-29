@@ -9,7 +9,7 @@
       "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
       "Ranker: Requiem for a Dream beats For a Few Dollars More mainly through matching the words of the request (+0.37); the history part adds +0.02."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through matching the words of the request, and the history model adds to it through recent fans of Requiem for a Dream. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through matching the words of the request, and the history model adds to it through recent fans of Requiem for a Dream. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       70940,
       71044
@@ -565,6 +565,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 425,
-  "computed_at": "2026-10-28T16:45:00-0400",
+  "computed_at": "2026-10-28T22:27:00-0400",
   "summary": "With 2 ratings (2 recent ratings of Requiem for a Dream by other people), the model's preference for Requiem for a Dream over For a Few Dollars More goes from 58% to 40% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 43%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

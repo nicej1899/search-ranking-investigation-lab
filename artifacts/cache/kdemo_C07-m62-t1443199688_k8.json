@@ -10,7 +10,7 @@
       "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 0.5 points vs 0.2 for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats The Thin Red Line mainly through the member's history (+0.25); the history part adds +0.25."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through the member's history, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Forrest Gump. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through the member's history, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Forrest Gump. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       73735,
       74247,
@@ -1067,6 +1067,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1058,
-  "computed_at": "2026-10-28T16:45:22-0400",
+  "computed_at": "2026-10-28T22:27:24-0400",
   "summary": "With 8 ratings (4 recent ratings of Requiem for a Dream by other people, 4 of the member's own ratings), the model's preference for Requiem for a Dream over The Thin Red Line goes from 99% to 91%. Removing the same number of ratings with the highest attention weight gives 100%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

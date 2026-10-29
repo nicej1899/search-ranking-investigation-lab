@@ -9,7 +9,7 @@
       "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 5.0 points vs 4.6 for a comparable pattern: most of its weight was timing and activity.",
       "Ranker: Chicken Run beats Two Weeks Notice mainly through popularity (+0.31); the history part adds +0.02."
     ],
-    "verdict": "Diagnosis: Chicken Run wins mainly through popularity, and the history model adds to it through recent fans of Chicken Run (a pattern that survives matching). None of these signals reads \u201cnot a kids movie\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Chicken Run wins mainly through popularity, and the history model adds to it through recent fans of Chicken Run (a pattern that survives matching). None of these signals reads what \u201cnot a kids movie\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       78669,
       79059,
@@ -1190,6 +1190,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1213,
-  "computed_at": "2026-10-28T16:45:25-0400",
+  "computed_at": "2026-10-28T22:27:28-0400",
   "summary": "With 8 ratings (8 recent ratings of Chicken Run by other people), the model's preference for Chicken Run over Two Weeks Notice goes from 61% to 6% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 59%. The full ranking still puts Chicken Run at #1: text match and popularity also push it up."
 }

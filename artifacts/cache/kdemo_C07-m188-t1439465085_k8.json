@@ -10,7 +10,7 @@
       "CATGX: \u201cA run of ratings in one sitting\u201d: matched on timing and activity, each removal costs 0.0 points vs 0.0 for a comparable pattern: most of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats No Way Out mainly through popularity (+0.44); the history part adds +0.39."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Schindler's List. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Schindler's List. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       73735,
       76020,
@@ -994,6 +994,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 990,
-  "computed_at": "2026-10-28T16:44:55-0400",
+  "computed_at": "2026-10-28T22:26:55-0400",
   "summary": "With 8 ratings (4 recent ratings of Requiem for a Dream by other people, 4 of the member's own ratings), the model's preference for Requiem for a Dream over No Way Out goes from 100% to 99%. Removing the same number of ratings with the highest attention weight gives 83%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

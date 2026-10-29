@@ -9,7 +9,7 @@
       "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 3.8 points vs 1.5 for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats The Next Three Days mainly through popularity (+0.59); the history part adds +0.04."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching). None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching). None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       76020
     ]
@@ -603,6 +603,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 675,
-  "computed_at": "2026-10-28T16:44:47-0400",
+  "computed_at": "2026-10-28T22:26:47-0400",
   "summary": "With 1 rating (1 recent rating of Requiem for a Dream by other people), the model's preference for Requiem for a Dream over The Next Three Days goes from 70% to 64%. Removing the same number of ratings with the highest attention weight gives 64%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

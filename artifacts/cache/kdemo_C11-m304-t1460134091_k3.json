@@ -8,7 +8,7 @@
       "CATGX: \u201cShared taste leads to the title\u201d: removing it moves the model 73% \u2192 62% (top-attention ratings: 74%); matched on timing and activity, each removal still costs 3.0 points vs 0.9 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Aladdin beats Harry Potter and the Chamber of Secrets mainly through popularity (+0.18); the history part adds +0.05."
     ],
-    "verdict": "Diagnosis: Aladdin wins mainly through popularity, and the history model adds to it through recent fans of Aladdin. None of these signals reads what \u201cfor grown-ups\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Aladdin wins mainly through popularity, and the history model adds to it through recent fans of Aladdin. None of these signals reads what \u201cfor grown-ups\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       79127,
       79508,
@@ -824,6 +824,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 953,
-  "computed_at": "2026-10-28T21:52:51-0400",
+  "computed_at": "2026-10-28T22:27:38-0400",
   "summary": "With 3 ratings (2 recent ratings of Aladdin by other people, 1 other rating nearby), the model's preference for Aladdin over Harry Potter and the Chamber of Secrets goes from 73% to 46% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 74%. In the full ranking, Aladdin moves from #1 to #2."
 }

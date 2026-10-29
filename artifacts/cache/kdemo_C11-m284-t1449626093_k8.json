@@ -9,7 +9,7 @@
       "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 57% \u2192 50% (top-attention ratings: 53%); matched on timing and activity, each removal still costs 1.5 points vs 1.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: The Incredibles beats Indiana Jones and the Temple of Doom mainly through matching the words of the request (+0.02); the history part adds +0.01."
     ],
-    "verdict": "Diagnosis: The Incredibles wins mainly through matching the words of the request, and the history model adds to it through recent fans of The Incredibles (a pattern that survives matching) and the member's ratings of All the President's Men, Rebel Without a Cause. None of these signals reads what \u201cfor grown-ups\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: The Incredibles wins mainly through matching the words of the request, and the history model adds to it through recent fans of The Incredibles (a pattern that survives matching) and the member's ratings of All the President's Men, Rebel Without a Cause. None of these signals reads what \u201cfor grown-ups\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       76582,
       77183
@@ -1066,6 +1066,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1104,
-  "computed_at": "2026-10-28T21:52:58-0400",
+  "computed_at": "2026-10-28T22:27:33-0400",
   "summary": "With 8 ratings (5 recent ratings of The Incredibles by other people, 3 of the member's own ratings), the model's preference for The Incredibles over Indiana Jones and the Temple of Doom goes from 57% to 42% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 63%. In the full ranking, The Incredibles moves from #1 to #2."
 }

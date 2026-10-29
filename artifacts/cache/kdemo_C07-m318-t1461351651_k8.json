@@ -10,7 +10,7 @@
       "CATGX: \u201cA run of ratings in one sitting\u201d: matched on timing and activity, each removal costs 1.9 points vs 1.2 for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats The Help mainly through popularity (+0.42); the history part adds +0.11."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of The Matrix, The Dark Knight. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of The Matrix, The Dark Knight. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       78159,
       80251,
@@ -1136,6 +1136,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1209,
-  "computed_at": "2026-10-28T16:45:16-0400",
+  "computed_at": "2026-10-28T22:27:18-0400",
   "summary": "With 8 ratings (2 recent ratings of Requiem for a Dream by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for Requiem for a Dream over The Help goes from 88% to 64%. Removing the same number of ratings with the highest attention weight gives 94%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

@@ -9,7 +9,7 @@
       "CATGX: \u201cTwo people rated the same movie\u201d: removing it moves the model 81% \u2192 66% (top-attention ratings: 66%); matched on timing and activity, each removal still costs 4.9 points vs 1.8 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Requiem for a Dream beats All That Heaven Allows mainly through popularity (+0.56); the history part adds +0.08."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of The Bourne Legacy, The Expendables 2. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of The Bourne Legacy, The Expendables 2. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       69959,
       69997,
@@ -685,6 +685,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 658,
-  "computed_at": "2026-10-28T16:45:13-0400",
+  "computed_at": "2026-10-28T22:27:14-0400",
   "summary": "With 5 ratings (2 recent ratings of Requiem for a Dream by other people, 3 of the member's own ratings), the model's preference for Requiem for a Dream over All That Heaven Allows goes from 81% to 59%. Removing the same number of ratings with the highest attention weight gives 61%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

@@ -4,67 +4,53 @@
   "member": 494,
   "joint": {
     "lines": [
-      "TemGX: 3 of the 9 ratings are recent ratings of Requiem for a Dream by other people; 3 of them are part of a pattern CATGX finds.",
+      "TemGX: 2 of the 8 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
       "TemGX: 5 are the member's own recent ratings (The Matrix, Schindler's List, The Shawshank Redemption), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 94% \u2192 92% (top-attention ratings: 97%); matched on timing and activity, each removal still costs 0.7 points vs 0.2 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
-      "Ranker: Requiem for a Dream beats Snow White and the Seven Dwarfs mainly through matching the words of the request (+0.27); the history part adds +0.14."
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 100% \u2192 100% (top-attention ratings: 100%); matched on timing and activity, each removal still costs 0.0 points vs 0.0 for a comparable pattern: a structural reason, not just recency.",
+      "CATGX: \u201cTwo people rated the same movie\u201d: matched on timing and activity, each removal costs 0.0 points vs 0.0 for a comparable pattern: part of its weight was timing and activity.",
+      "Ranker: Requiem for a Dream beats Something Wicked This Way Comes mainly through popularity (+0.43); the history part adds +0.39."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through matching the words of the request, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Schindler's List. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Schindler's List. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       77182,
-      77543,
-      80275,
-      80640,
-      80643
+      77543
     ]
   },
   "score_split": {
-    "relevance": 0.27166957581804485,
-    "popularity": 0.006280276812609398,
-    "behaviour": 0.14471253656776878
+    "relevance": -0.6725604317764957,
+    "popularity": 0.4278622521595532,
+    "behaviour": 0.39027402878836626
   },
   "A": "Requiem for a Dream",
-  "B": "Snow White and the Seven Dwarfs",
+  "B": "Something Wicked This Way Comes",
   "query": "a drama, but please nothing depressing",
-  "p0": 0.9382670707417514,
+  "p0": 0.9993506101011931,
   "evidence": [
     {
-      "eid": 80275,
+      "eid": 80643,
       "n": 1,
-      "kind": "crowd",
-      "from": "user 17",
-      "to": "Requiem for a Dream",
-      "from_id": 17,
-      "to_id": 3555,
-      "rating": 4.5,
-      "date": "Feb 15, 2016",
-      "days_before": 36,
-      "p_without": 0.9278915021379197,
-      "drop": 0.010375568603831709,
+      "kind": "own",
+      "from": "user 494",
+      "to": "The Matrix",
+      "from_id": 494,
+      "to_id": 2549,
+      "rating": 5.0,
+      "date": "Mar 22, 2016",
+      "days_before": 0,
+      "p_without": 0.9991822488613334,
+      "drop": 0.0001683612398596379,
       "score": {
-        "influence": 0.010377312819546902,
-        "connectedness": 0.7733886452139741,
-        "recency": 0.949351825385462,
-        "phi": 0.007619209054999452
+        "influence": 0.00016836250160057187,
+        "connectedness": 0.8108155173303848,
+        "recency": 0.8463993780913646,
+        "phi": 0.00011554276526803064
       },
-      "why": "User 17 rated Requiem for a Dream 4.5\u2605 on Feb 15, 2016, 36 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current; user 17 also rated 5 titles that member 494 rated (e.g. The Usual Suspects, The Shawshank Redemption), which ties Requiem for a Dream to this member's taste. Removing only this rating: 94% \u2192 93% (\u22121.0 pts).",
+      "why": "Member 494 rated The Matrix 5\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 2 of the people who rated The Matrix also rated Requiem for a Dream (e.g. user 17, user 423), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 100% \u2192 100% (\u22120.0 pts).",
       "patterns": [
         {
-          "motif": "CO",
-          "name": "Two people rated the same movie",
-          "adjusted": 0.2025694659392169,
-          "significant": false
-        },
-        {
-          "motif": "BRIDGE",
-          "name": "Shared taste leads to the title",
-          "adjusted": 1.8229151187725396,
-          "significant": true
-        },
-        {
-          "motif": "POP",
-          "name": "Recent fans piled on",
-          "adjusted": 2.9502940917259806,
+          "motif": "SEQ",
+          "name": "A run of ratings in one sitting",
+          "adjusted": 0.5050653501483536,
           "significant": true
         }
       ]
@@ -80,56 +66,39 @@
       "rating": 4.0,
       "date": "Nov 3, 2015",
       "days_before": 140,
-      "p_without": 0.9175161706088777,
-      "drop": 0.02075090013287373,
+      "p_without": 0.999112911930957,
+      "drop": 0.0002376981702361114,
       "score": {
-        "influence": 0.020750942336858813,
-        "connectedness": 0.5215050683395158,
+        "influence": 0.00023769864309730604,
+        "connectedness": 0.5354506124101438,
         "recency": 0.6918735256774948,
-        "phi": 0.007487262678325203
+        "phi": 8.805881460753269e-05
       },
-      "why": "User 255 rated Requiem for a Dream 4\u2605 on Nov 3, 2015, 140 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current. Removing only this rating: 94% \u2192 92% (\u22122.1 pts).",
-      "patterns": [
-        {
-          "motif": "POP",
-          "name": "Recent fans piled on",
-          "adjusted": 2.9502940917259806,
-          "significant": true
-        }
-      ]
-    },
-    {
-      "eid": 80643,
-      "n": 3,
-      "kind": "own",
-      "from": "user 494",
-      "to": "The Matrix",
-      "from_id": 494,
-      "to_id": 2549,
-      "rating": 5.0,
-      "date": "Mar 22, 2016",
-      "days_before": 0,
-      "p_without": 0.9309379012571609,
-      "drop": 0.007329169484590503,
-      "score": {
-        "influence": 0.007331422378730523,
-        "connectedness": 0.8136336104750236,
-        "recency": 0.8463993780913646,
-        "phi": 0.005048849871217576
-      },
-      "why": "Member 494 rated The Matrix 5\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 2 of the people who rated The Matrix also rated Requiem for a Dream (e.g. user 17, user 423), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 94% \u2192 93% (\u22120.7 pts).",
+      "why": "User 255 rated Requiem for a Dream 4\u2605 on Nov 3, 2015, 140 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current. Removing only this rating: 100% \u2192 100% (\u22120.0 pts).",
       "patterns": [
         {
           "motif": "SEQ",
           "name": "A run of ratings in one sitting",
-          "adjusted": 1.3439890475871221,
+          "adjusted": 0.5050653501483536,
+          "significant": true
+        },
+        {
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.2044084477982469,
+          "significant": true
+        },
+        {
+          "motif": "POP",
+          "name": "Recent fans piled on",
+          "adjusted": 6.322522496470716,
           "significant": true
         }
       ]
     },
     {
       "eid": 77182,
-      "n": 4,
+      "n": 3,
       "kind": "crowd",
       "from": "user 365",
       "to": "Requiem for a Dream",
@@ -138,33 +107,33 @@
       "rating": 4.0,
       "date": "Oct 22, 2015",
       "days_before": 151,
-      "p_without": 0.9285756151207328,
-      "drop": 0.009691455621018585,
+      "p_without": 0.9992409044642182,
+      "drop": 0.00010970563697487723,
       "score": {
-        "influence": 0.00969149782500367,
-        "connectedness": 0.7537169276457409,
+        "influence": 0.00010970610983607187,
+        "connectedness": 0.7614011862370016,
         "recency": 0.6603287767798781,
-        "phi": 0.0048234679348436215
+        "phi": 5.515750187347226e-05
       },
-      "why": "User 365 rated Requiem for a Dream 4\u2605 on Oct 22, 2015, 151 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current. Removing only this rating: 94% \u2192 93% (\u22121.0 pts).",
+      "why": "User 365 rated Requiem for a Dream 4\u2605 on Oct 22, 2015, 151 days before the search. The graph model builds Requiem for a Dream's profile from its recent raters, weighting recent ones more, so this rating makes Requiem for a Dream look current. Removing only this rating: 100% \u2192 100% (\u22120.0 pts).",
       "patterns": [
         {
           "motif": "CO",
           "name": "Two people rated the same movie",
-          "adjusted": 0.2025694659392169,
-          "significant": false
+          "adjusted": 1.2044084477982469,
+          "significant": true
         },
         {
           "motif": "POP",
           "name": "Recent fans piled on",
-          "adjusted": 2.9502940917259806,
+          "adjusted": 6.322522496470716,
           "significant": true
         }
       ]
     },
     {
       "eid": 79336,
-      "n": 5,
+      "n": 4,
       "kind": "other",
       "from": "user 151",
       "to": "Schindler's List",
@@ -173,33 +142,20 @@
       "rating": 4.5,
       "date": "Dec 20, 2015",
       "days_before": 93,
-      "p_without": 0.93834933838507,
-      "drop": -8.226764331853431e-05,
+      "p_without": 0.9993531802070771,
+      "drop": -2.570105884003304e-06,
       "score": {
-        "influence": 6.180918193932072e-07,
-        "connectedness": 0.7286531998711939,
+        "influence": 4.1415648688314377e-10,
+        "connectedness": 0.7244626846196675,
         "recency": 0.7744139886809065,
-        "phi": 3.487763764587853e-07
+        "phi": 2.3235588588799915e-10
       },
-      "why": "User 151 rated Schindler's List 4.5\u2605 on Dec 20, 2015. It reaches the decision through the graph: it changes how Schindler's List and its raters are represented, which feeds into member 494 or Requiem for a Dream. Removing only this rating: 94% \u2192 94% (+0.0 pts).",
-      "patterns": [
-        {
-          "motif": "SEQ",
-          "name": "A run of ratings in one sitting",
-          "adjusted": 1.3439890475871221,
-          "significant": true
-        },
-        {
-          "motif": "CO",
-          "name": "Two people rated the same movie",
-          "adjusted": 0.2025694659392169,
-          "significant": false
-        }
-      ]
+      "why": "User 151 rated Schindler's List 4.5\u2605 on Dec 20, 2015. It reaches the decision through the graph: it changes how Schindler's List and its raters are represented, which feeds into member 494 or Requiem for a Dream. Removing only this rating: 100% \u2192 100% (+0.0 pts).",
+      "patterns": []
     },
     {
       "eid": 80641,
-      "n": 6,
+      "n": 5,
       "kind": "own",
       "from": "user 494",
       "to": "Schindler's List",
@@ -208,33 +164,33 @@
       "rating": 4.0,
       "date": "Mar 22, 2016",
       "days_before": 0,
-      "p_without": 0.9416522955016692,
-      "drop": -0.00338522475991776,
+      "p_without": 0.9994241383318405,
+      "drop": -7.352823064743497e-05,
       "score": {
-        "influence": 0.0033858814356090283,
-        "connectedness": 0.8106199658546688,
+        "influence": 7.352801183713176e-05,
+        "connectedness": 0.8076266095306842,
         "recency": 0.8011092341890033,
-        "phi": 0.0021987749491179293
+        "phi": 4.757241297673753e-05
       },
-      "why": "Member 494 rated Schindler's List 4\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 1 of the people who rated Schindler's List also rated Requiem for a Dream (e.g. user 17), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 94% \u2192 94% (+0.3 pts).",
+      "why": "Member 494 rated Schindler's List 4\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 1 of the people who rated Schindler's List also rated Requiem for a Dream (e.g. user 17), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 100% \u2192 100% (+0.0 pts).",
       "patterns": [
         {
           "motif": "SEQ",
           "name": "A run of ratings in one sitting",
-          "adjusted": 1.3439890475871221,
+          "adjusted": 0.5050653501483536,
           "significant": true
         },
         {
           "motif": "CO",
           "name": "Two people rated the same movie",
-          "adjusted": 0.2025694659392169,
-          "significant": false
+          "adjusted": 1.2044084477982469,
+          "significant": true
         }
       ]
     },
     {
       "eid": 80640,
-      "n": 7,
+      "n": 6,
       "kind": "own",
       "from": "user 494",
       "to": "The Shawshank Redemption",
@@ -243,27 +199,27 @@
       "rating": 5.0,
       "date": "Mar 22, 2016",
       "days_before": 0,
-      "p_without": 0.9397874223454913,
-      "drop": -0.0015203516037398668,
+      "p_without": 0.9993870666438712,
+      "drop": -3.645654267814269e-05,
       "score": {
-        "influence": 0.0015208590870497973,
-        "connectedness": 0.8143200907317081,
+        "influence": 3.645624409731596e-05,
+        "connectedness": 0.8118580985386731,
         "recency": 0.8161609283665715,
-        "phi": 0.0010107876498894287
+        "phi": 2.4156157407033453e-05
       },
-      "why": "Member 494 rated The Shawshank Redemption 5\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated The Shawshank Redemption also rated Requiem for a Dream (e.g. user 17, user 297), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 94% \u2192 94% (+0.2 pts).",
+      "why": "Member 494 rated The Shawshank Redemption 5\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 3 of the people who rated The Shawshank Redemption also rated Requiem for a Dream (e.g. user 17, user 297), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 100% \u2192 100% (+0.0 pts).",
       "patterns": [
         {
-          "motif": "SEQ",
-          "name": "A run of ratings in one sitting",
-          "adjusted": 1.3439890475871221,
+          "motif": "CO",
+          "name": "Two people rated the same movie",
+          "adjusted": 1.2044084477982469,
           "significant": true
         }
       ]
     },
     {
       "eid": 80642,
-      "n": 8,
+      "n": 7,
       "kind": "own",
       "from": "user 494",
       "to": "The Usual Suspects",
@@ -272,33 +228,27 @@
       "rating": 4.0,
       "date": "Mar 22, 2016",
       "days_before": 0,
-      "p_without": 0.936690977966498,
-      "drop": 0.0015760927752533904,
+      "p_without": 0.9993210500658306,
+      "drop": 2.9560035362474757e-05,
       "score": {
-        "influence": 0.0015781061042726696,
-        "connectedness": 0.8108592783982046,
+        "influence": 2.9561178495951523e-05,
+        "connectedness": 0.8050707219565261,
         "recency": 0.7527086407209745,
-        "phi": 0.0009631825189039649
+        "phi": 1.7913591990492874e-05
       },
-      "why": "Member 494 rated The Usual Suspects 4\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 5 of the people who rated The Usual Suspects also rated Requiem for a Dream (e.g. user 17, user 62), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 94% \u2192 94% (\u22120.2 pts).",
+      "why": "Member 494 rated The Usual Suspects 4\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 5 of the people who rated The Usual Suspects also rated Requiem for a Dream (e.g. user 17, user 62), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 100% \u2192 100% (\u22120.0 pts).",
       "patterns": [
-        {
-          "motif": "SEQ",
-          "name": "A run of ratings in one sitting",
-          "adjusted": 1.3439890475871221,
-          "significant": true
-        },
         {
           "motif": "CO",
           "name": "Two people rated the same movie",
-          "adjusted": 0.2025694659392169,
-          "significant": false
+          "adjusted": 1.2044084477982469,
+          "significant": true
         }
       ]
     },
     {
       "eid": 80639,
-      "n": 9,
+      "n": 8,
       "kind": "own",
       "from": "user 494",
       "to": "Forrest Gump",
@@ -307,188 +257,166 @@
       "rating": 4.0,
       "date": "Mar 22, 2016",
       "days_before": 0,
-      "p_without": 0.9395245526885331,
-      "drop": -0.0012574819467816578,
+      "p_without": 0.9993731927209956,
+      "drop": -2.258261980248033e-05,
       "score": {
-        "influence": 0.001258107856017987,
-        "connectedness": 0.8121253902824825,
+        "influence": 2.2582359618272818e-05,
+        "connectedness": 0.8121015603207097,
         "recency": 0.8047091211404858,
-        "phi": 0.0008222045705829503
+        "phi": 1.4757696956083525e-05
       },
-      "why": "Member 494 rated Forrest Gump 4\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated Forrest Gump also rated Requiem for a Dream (e.g. user 17, user 104), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 94% \u2192 94% (+0.1 pts).",
-      "patterns": [
-        {
-          "motif": "SEQ",
-          "name": "A run of ratings in one sitting",
-          "adjusted": 1.3439890475871221,
-          "significant": true
-        },
-        {
-          "motif": "CO",
-          "name": "Two people rated the same movie",
-          "adjusted": 0.2025694659392169,
-          "significant": false
-        }
-      ]
+      "why": "Member 494 rated Forrest Gump 4\u2605 on Mar 22, 2016, the same day as the search. The member's profile is built from their own recent ratings, and 4 of the people who rated Forrest Gump also rated Requiem for a Dream (e.g. user 17, user 104), so this rating pulls member 494 toward Requiem for a Dream's audience. Removing only this rating: 100% \u2192 100% (+0.0 pts).",
+      "patterns": []
     }
   ],
   "curve": [
     {
       "n": 1,
-      "p": 0.9278915021379197,
-      "rand_mean": 0.9376434001383783,
-      "rand_lo": 0.9309379012571609,
-      "rand_hi": 0.9397874223454913,
+      "p": 0.9991822488613334,
+      "rand_mean": 0.9993534950671529,
+      "rand_lo": 0.9993210500658306,
+      "rand_hi": 0.9994241383318405,
       "p_value": 0.01639344262295082,
-      "attn": 0.9309379012571609
+      "attn": 0.9991822494566884
     },
     {
       "n": 2,
-      "p": 0.917792663786171,
-      "rand_mean": 0.9380521482185553,
-      "rand_lo": 0.9305678629169981,
-      "rand_hi": 0.9416033459594566,
+      "p": 0.9989067691246889,
+      "rand_mean": 0.9993529573326914,
+      "rand_lo": 0.9993299117484952,
+      "rand_hi": 0.9994183809242738,
       "p_value": 0.01639344262295082,
-      "attn": 0.971275782129166
+      "attn": 0.9990486007335685
     },
     {
       "n": 3,
-      "p": 0.9099916296452724,
-      "rand_mean": 0.9380019066723364,
-      "rand_lo": 0.9302479712523378,
-      "rand_hi": 0.9416522955016692,
+      "p": 0.9984885404535139,
+      "rand_mean": 0.9993459106100494,
+      "rand_lo": 0.9993048775705716,
+      "rand_hi": 0.9993633159280211,
       "p_value": 0.01639344262295082,
-      "attn": 0.9667330902716338
+      "attn": 0.9988050008781127
     },
     {
       "n": 4,
-      "p": 0.8893416465511211,
-      "rand_mean": 0.9383910070225879,
-      "rand_lo": 0.934821166860519,
-      "rand_hi": 0.9416522955016692,
+      "p": 0.9984951151665117,
+      "rand_mean": 0.9993466876365865,
+      "rand_lo": 0.9992678338462939,
+      "rand_hi": 0.9993870666438712,
       "p_value": 0.01639344262295082,
-      "attn": 0.9600067569101869
+      "attn": 0.9986512265830187
     },
     {
       "n": 5,
-      "p": 0.8894743607153944,
-      "rand_mean": 0.9383569549041672,
-      "rand_lo": 0.9369544215345456,
-      "rand_hi": 0.9397407895012035,
+      "p": 0.9986272177664435,
+      "rand_mean": 0.9993448481896643,
+      "rand_lo": 0.9992335463685901,
+      "rand_hi": 0.9993897313907936,
       "p_value": 0.01639344262295082,
-      "attn": 0.9550848937871956
+      "attn": 0.9986163893863125
     },
     {
       "n": 6,
-      "p": 0.8934522188376423,
-      "rand_mean": 0.9380092830357675,
-      "rand_lo": 0.9344405579308753,
-      "rand_hi": 0.9397874223454913,
+      "p": 0.9984518972957835,
+      "rand_mean": 0.9993497221378809,
+      "rand_lo": 0.9993210500658306,
+      "rand_hi": 0.9993745533219685,
       "p_value": 0.01639344262295082,
-      "attn": 0.954471049687244
+      "attn": 0.998998034304862
     },
     {
       "n": 7,
-      "p": 0.8815550740701771,
-      "rand_mean": 0.9379335898599728,
-      "rand_lo": 0.9343417802959303,
-      "rand_hi": 0.9397039002738246,
+      "p": 0.9982979554094823,
+      "rand_mean": 0.9993457478943323,
+      "rand_lo": 0.9992386520253015,
+      "rand_hi": 0.999386661199322,
       "p_value": 0.01639344262295082,
-      "attn": 0.9621710153000467
+      "attn": 0.894665724095063
     },
     {
       "n": 8,
-      "p": 0.8745349801193835,
-      "rand_mean": 0.9380822178948757,
-      "rand_lo": 0.9348234784593399,
-      "rand_hi": 0.9399312982769912,
+      "p": 0.8856334442009315,
+      "rand_mean": 0.9993426296747112,
+      "rand_lo": 0.9992292220690362,
+      "rand_hi": 0.9993904514614617,
       "p_value": 0.01639344262295082,
-      "attn": 0.9768074307712423
-    },
-    {
-      "n": 9,
-      "p": 0.6350958278277428,
-      "rand_mean": 0.9381020732625472,
-      "rand_lo": 0.9345702881638195,
-      "rand_hi": 0.9392601041888915,
-      "p_value": 0.01639344262295082,
-      "attn": 0.7315960692448169
+      "attn": 0.8879487775302849
     }
   ],
   "full": {
-    "p": 0.6350958278277428,
-    "rand_mean": 0.9381020732625472,
+    "p": 0.8856334442009315,
+    "rand_mean": 0.9993426296747112,
     "p_value": 0.01639344262295082,
-    "attn": 0.7315960692448169,
+    "attn": 0.8879487775302849,
     "rand_all": [
-      0.9382086768276102,
-      0.9383763835349326,
-      0.937353516216107,
-      0.9382639897780448,
-      0.9382917238278704,
-      0.9387651844732744,
-      0.9381992563490636,
-      0.9393706629734752,
-      0.9384793001386125,
-      0.9389299541229658,
-      0.9387401110933696,
-      0.9350270965276606,
-      0.9340214398816923,
-      0.9385413428391983,
-      0.9345532040160738,
-      0.9383471253967683,
-      0.9382670707417514,
-      0.9386715345080273,
-      0.9391172681455294,
-      0.9387935454125655,
-      0.9380965580211355,
-      0.9345891706429068,
-      0.9384064815328795,
-      0.9390192298054976,
-      0.9389147547663443,
-      0.9382843088262888,
-      0.938969570729686,
-      0.9373748099946771,
-      0.9378123165693187,
-      0.9374449749357855,
-      0.9377535316682157,
-      0.9384677513444553,
-      0.9384536860064941,
-      0.9373416418141974,
-      0.9382110845373545,
-      0.9382899940868612,
-      0.9374185741718214,
-      0.9382799839033801,
-      0.9378081519989697,
-      0.9373418664845348,
-      0.9410711027982233,
-      0.9390977056149877,
-      0.9381728359468018,
-      0.9383129832851822,
-      0.9378928264129623,
-      0.9390984661426328,
-      0.9385216178799437,
-      0.9382491632694808,
-      0.9390092050358281,
-      0.9385219436998214,
-      0.9375216608381085,
-      0.9380859895370185,
-      0.9380123866171886,
-      0.9376955037027858,
-      0.9390887348859008,
-      0.937750990345319,
-      0.9385957055897829,
-      0.9391379076375096,
-      0.9372650389344946,
-      0.9384257989334743
+      0.9993485978047425,
+      0.9993554548547754,
+      0.999348461184686,
+      0.9993448722812959,
+      0.999354015205899,
+      0.9993549360302874,
+      0.9993183067152723,
+      0.9993513870201364,
+      0.9993531076704104,
+      0.9993505240347617,
+      0.9992327185341305,
+      0.9993554651800777,
+      0.9993689873096958,
+      0.9993428158976904,
+      0.9993479742429782,
+      0.9993582240745498,
+      0.9993389499965694,
+      0.9993410256664964,
+      0.9993606081135219,
+      0.9993177674474238,
+      0.9993298902341322,
+      0.9993542658715834,
+      0.9993524709774411,
+      0.9993704266211867,
+      0.9993698138466919,
+      0.9993581030271282,
+      0.9993574600186559,
+      0.9993549360302874,
+      0.9993503594364405,
+      0.9993957337190833,
+      0.999384613176722,
+      0.9993511753971197,
+      0.9993506101011931,
+      0.9993463546632664,
+      0.9993450811899851,
+      0.9993661574331522,
+      0.9993704059910211,
+      0.9993674972726033,
+      0.9993604809960132,
+      0.9993095908897044,
+      0.9993549360302874,
+      0.9993265919800274,
+      0.9993122370971799,
+      0.9993580170181867,
+      0.9992297946490502,
+      0.9993527566477061,
+      0.9992296987519953,
+      0.9993495566592656,
+      0.9993398538276556,
+      0.9993769437923987,
+      0.9992273576383353,
+      0.9994001603548688,
+      0.9992287907844541,
+      0.9993370483584336,
+      0.9993626408834615,
+      0.9993479429067953,
+      0.9993617138540077,
+      0.9993600608164328,
+      0.9993432832581602,
+      0.9993687690151565
     ],
     "flips": false
   },
   "ranking": {
     "A_before": 1,
     "A_after": 2,
-    "B_before": 4,
-    "B_after": 4,
+    "B_before": 2,
+    "B_after": 1,
     "top3_after": [
       "Something Wicked This Way Comes (1983)",
       "Requiem for a Dream (2000)",
@@ -497,12 +425,6 @@
   },
   "graph": {
     "nodes": [
-      {
-        "id": 1121,
-        "name": "Snow White and the Seven Dwarfs",
-        "type": "title",
-        "role": "B"
-      },
       {
         "id": 3555,
         "name": "Requiem for a Dream",
@@ -576,6 +498,12 @@
         "role": null
       },
       {
+        "id": 2170,
+        "name": "Something Wicked This Way Comes",
+        "type": "title",
+        "role": "B"
+      },
+      {
         "id": 924,
         "name": "Forrest Gump",
         "type": "title",
@@ -602,7 +530,7 @@
         "rating": 4.0,
         "date": "Oct 22, 2015",
         "expl": true,
-        "n": 4
+        "n": 3
       },
       {
         "eid": 77543,
@@ -620,16 +548,7 @@
         "rating": 4.5,
         "date": "Dec 20, 2015",
         "expl": true,
-        "n": 5
-      },
-      {
-        "eid": 80275,
-        "s": 3555,
-        "t": 17,
-        "rating": 4.5,
-        "date": "Feb 15, 2016",
-        "expl": true,
-        "n": 1
+        "n": 4
       },
       {
         "eid": 80639,
@@ -638,7 +557,7 @@
         "rating": 4.0,
         "date": "Mar 22, 2016",
         "expl": true,
-        "n": 9
+        "n": 8
       },
       {
         "eid": 80640,
@@ -647,7 +566,7 @@
         "rating": 5.0,
         "date": "Mar 22, 2016",
         "expl": true,
-        "n": 7
+        "n": 6
       },
       {
         "eid": 80641,
@@ -656,7 +575,7 @@
         "rating": 4.0,
         "date": "Mar 22, 2016",
         "expl": true,
-        "n": 6
+        "n": 5
       },
       {
         "eid": 80642,
@@ -665,7 +584,7 @@
         "rating": 4.0,
         "date": "Mar 22, 2016",
         "expl": true,
-        "n": 8
+        "n": 7
       },
       {
         "eid": 80643,
@@ -674,7 +593,7 @@
         "rating": 5.0,
         "date": "Mar 22, 2016",
         "expl": true,
-        "n": 3
+        "n": 1
       },
       {
         "eid": 76745,
@@ -776,6 +695,15 @@
         "n": null
       },
       {
+        "eid": 80275,
+        "s": 3555,
+        "t": 17,
+        "rating": 4.5,
+        "date": "Feb 15, 2016",
+        "expl": false,
+        "n": null
+      },
+      {
         "eid": 80500,
         "s": 2549,
         "t": 423,
@@ -799,14 +727,14 @@
     {
       "motif": "POP",
       "name": "Recent fans piled on",
-      "raw": 3.3342851638827185,
-      "adjusted": 2.9502940917259806,
-      "p_full": 0.9382670707417514,
-      "p_attn": 0.9712757719650155,
-      "pts_one": 0.652978665914028,
-      "pts_base": 0.21451221245479823,
-      "pts_one_raw": 0.606269086726019,
-      "pts_any": 0.1763068068023843,
+      "raw": 4.8592129481514235,
+      "adjusted": 6.322522496470716,
+      "p_full": 0.9993506101011931,
+      "p_attn": 0.999048601426132,
+      "pts_one": 0.013018839489953304,
+      "pts_base": 0.0019042109635769577,
+      "pts_one_raw": 0.008339903804766013,
+      "pts_any": 0.0016350055257685625,
       "graph": {
         "nodes": [
           {
@@ -816,10 +744,252 @@
             "role": "A"
           },
           {
-            "id": 580,
-            "name": "user 580",
+            "id": 365,
+            "name": "user 365",
             "type": "user",
             "role": null
+          },
+          {
+            "id": 255,
+            "name": "user 255",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 77182,
+            "s": 3555,
+            "t": 365,
+            "rating": 4.0,
+            "date": "Oct 22, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 77543,
+            "s": 3555,
+            "t": 255,
+            "rating": 4.0,
+            "date": "Nov 3, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        77182,
+        77543
+      ],
+      "S": 0.0688163902316716,
+      "occurrence": {
+        "eids": [
+          77182,
+          77543
+        ],
+        "nodes": [
+          "user 365",
+          "user 255",
+          "Requiem for a Dream"
+        ],
+        "dates": [
+          "Oct 22, 2015",
+          "Nov 3, 2015"
+        ]
+      },
+      "p_without": 0.9987421856492841,
+      "p_random": 0.9993470358173592,
+      "p_value": 0.01639344262295082,
+      "why": "Recent fans piled on: removing its strongest occurrence (user 365, user 255, Requiem for a Dream): 100% \u2192 100%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Timing and activity do not explain it away. "
+    },
+    {
+      "motif": "CO",
+      "name": "Two people rated the same movie",
+      "raw": 1.646762694950108,
+      "adjusted": 1.2044084477982469,
+      "p_full": 0.9993506101011931,
+      "p_attn": 0.999048601426132,
+      "pts_one": 0.0022249038403532317,
+      "pts_base": 0.0018420032846688805,
+      "pts_one_raw": 0.0027143088192405074,
+      "pts_any": 0.0016350055257685625,
+      "graph": {
+        "nodes": [
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 365,
+            "name": "user 365",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 255,
+            "name": "user 255",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 77182,
+            "s": 3555,
+            "t": 365,
+            "rating": 4.0,
+            "date": "Oct 22, 2015",
+            "in_temgx": true
+          },
+          {
+            "eid": 77543,
+            "s": 3555,
+            "t": 255,
+            "rating": 4.0,
+            "date": "Nov 3, 2015",
+            "in_temgx": true
+          }
+        ]
+      },
+      "overlap_temgx": [
+        77182,
+        77543
+      ],
+      "S": 0.0031236732813988725,
+      "occurrence": {
+        "eids": [
+          77182,
+          77543
+        ],
+        "nodes": [
+          "user 365",
+          "Requiem for a Dream",
+          "user 255"
+        ],
+        "dates": [
+          "Oct 22, 2015",
+          "Nov 3, 2015"
+        ]
+      },
+      "p_without": 0.9987421856492841,
+      "p_random": 0.9993463553933338,
+      "p_value": 0.01639344262295082,
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 365, Requiem for a Dream, user 255): 100% \u2192 100%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Most of its apparent importance came from timing and activity. "
+    },
+    {
+      "motif": "BRIDGE",
+      "name": "Shared taste leads to the title",
+      "raw": 3.4724662581040047,
+      "adjusted": 1.1926410812391564,
+      "p_full": 0.9993506101011931,
+      "p_attn": 0.9988050026174675,
+      "pts_one": 0.004031255239533849,
+      "pts_base": 0.003363566819181152,
+      "pts_one_raw": 0.005856279325844316,
+      "pts_any": 0.0016350055257685625,
+      "graph": {
+        "nodes": [
+          {
+            "id": 656,
+            "name": "The Usual Suspects",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 240,
+            "name": "user 240",
+            "type": "user",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
+          },
+          {
+            "id": 17,
+            "name": "user 17",
+            "type": "user",
+            "role": null
+          }
+        ],
+        "edges": [
+          {
+            "eid": 78356,
+            "s": 656,
+            "t": 240,
+            "rating": 4.0,
+            "date": "Nov 14, 2015",
+            "in_temgx": false
+          },
+          {
+            "eid": 79945,
+            "s": 656,
+            "t": 17,
+            "rating": 5.0,
+            "date": "Feb 9, 2016",
+            "in_temgx": false
+          },
+          {
+            "eid": 80275,
+            "s": 3555,
+            "t": 17,
+            "rating": 4.5,
+            "date": "Feb 15, 2016",
+            "in_temgx": false
+          }
+        ]
+      },
+      "overlap_temgx": [],
+      "S": 0.002734671291630837,
+      "occurrence": {
+        "eids": [
+          78356,
+          79945,
+          80275
+        ],
+        "nodes": [
+          "user 240",
+          "The Usual Suspects",
+          "user 17",
+          "Requiem for a Dream"
+        ],
+        "dates": [
+          "Nov 14, 2015",
+          "Feb 9, 2016",
+          "Feb 15, 2016"
+        ]
+      },
+      "p_without": 0.9992160183200897,
+      "p_random": 0.9993308041376895,
+      "p_value": 0.13114754098360656,
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 240, The Usual Suspects, user 17): 100% \u2192 100%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). Most of its apparent importance came from timing and activity. "
+    },
+    {
+      "motif": "SEQ",
+      "name": "A run of ratings in one sitting",
+      "raw": 0.18343522468460186,
+      "adjusted": 0.5050653501483536,
+      "p_full": 0.9993506101011931,
+      "p_attn": 0.999048601426132,
+      "pts_one": 0.0006267384523583885,
+      "pts_base": 0.0012467693986217832,
+      "pts_one_raw": 0.0002968827512717098,
+      "pts_any": 0.0016350055257685625,
+      "graph": {
+        "nodes": [
+          {
+            "id": 9499,
+            "name": "Spy",
+            "type": "title",
+            "role": null
+          },
+          {
+            "id": 3555,
+            "name": "Requiem for a Dream",
+            "type": "title",
+            "role": "A"
           },
           {
             "id": 255,
@@ -838,11 +1008,11 @@
             "in_temgx": true
           },
           {
-            "eid": 77927,
-            "s": 3555,
-            "t": 580,
-            "rating": 4.5,
-            "date": "Nov 8, 2015",
+            "eid": 78310,
+            "s": 255,
+            "t": 9499,
+            "rating": 3.0,
+            "date": "Nov 14, 2015",
             "in_temgx": false
           }
         ]
@@ -850,273 +1020,30 @@
       "overlap_temgx": [
         77543
       ],
-      "S": 0.02982775127199828,
+      "S": -0.0051184505968644226,
       "occurrence": {
         "eids": [
           77543,
-          77927
+          78310
         ],
         "nodes": [
           "user 255",
-          "user 580",
-          "Requiem for a Dream"
+          "Requiem for a Dream",
+          "Spy"
         ],
         "dates": [
           "Nov 3, 2015",
-          "Nov 8, 2015"
+          "Nov 14, 2015"
         ]
       },
-      "p_without": 0.9167962861048617,
-      "p_random": 0.937905986738771,
+      "p_without": 0.999112911930957,
+      "p_random": 0.9993462948270502,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 255, user 580, Requiem for a Dream): 94% \u2192 92%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
-    },
-    {
-      "motif": "BRIDGE",
-      "name": "Shared taste leads to the title",
-      "raw": 2.9790353289469733,
-      "adjusted": 1.8229151187725396,
-      "p_full": 0.9382670707417514,
-      "p_attn": 0.9667331019881695,
-      "pts_one": 0.45580030252495574,
-      "pts_base": 0.2462906681602206,
-      "pts_one_raw": 0.5391343753574751,
-      "pts_any": 0.1763068068023843,
-      "graph": {
-        "nodes": [
-          {
-            "id": 425,
-            "name": "user 425",
-            "type": "user",
-            "role": null
-          },
-          {
-            "id": 3555,
-            "name": "Requiem for a Dream",
-            "type": "title",
-            "role": "A"
-          },
-          {
-            "id": 924,
-            "name": "Forrest Gump",
-            "type": "title",
-            "role": null
-          },
-          {
-            "id": 17,
-            "name": "user 17",
-            "type": "user",
-            "role": null
-          }
-        ],
-        "edges": [
-          {
-            "eid": 79440,
-            "s": 924,
-            "t": 425,
-            "rating": 5.0,
-            "date": "Dec 25, 2015",
-            "in_temgx": false
-          },
-          {
-            "eid": 79992,
-            "s": 924,
-            "t": 17,
-            "rating": 4.5,
-            "date": "Feb 9, 2016",
-            "in_temgx": false
-          },
-          {
-            "eid": 80275,
-            "s": 3555,
-            "t": 17,
-            "rating": 4.5,
-            "date": "Feb 15, 2016",
-            "in_temgx": true
-          }
-        ]
-      },
-      "overlap_temgx": [
-        80275
-      ],
-      "S": 0.013979326488164369,
-      "occurrence": {
-        "eids": [
-          79440,
-          79992,
-          80275
-        ],
-        "nodes": [
-          "user 425",
-          "Forrest Gump",
-          "user 17",
-          "Requiem for a Dream"
-        ],
-        "dates": [
-          "Dec 25, 2015",
-          "Feb 9, 2016",
-          "Feb 15, 2016"
-        ]
-      },
-      "p_without": 0.9276233208360285,
-      "p_random": 0.9376556910744372,
-      "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 425, Forrest Gump, user 17): 94% \u2192 93%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.5 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.2). Timing and activity explain part of it, but a real structural effect remains. "
-    },
-    {
-      "motif": "SEQ",
-      "name": "A run of ratings in one sitting",
-      "raw": 0.599951504838403,
-      "adjusted": 1.3439890475871221,
-      "p_full": 0.9382670707417514,
-      "p_attn": 0.9712757719650155,
-      "pts_one": 0.15304369155753061,
-      "pts_base": 0.11353912130277477,
-      "pts_one_raw": 0.10521913657758342,
-      "pts_any": 0.1763068068023843,
-      "graph": {
-        "nodes": [
-          {
-            "id": 2549,
-            "name": "The Matrix",
-            "type": "title",
-            "role": null
-          },
-          {
-            "id": 494,
-            "name": "user 494",
-            "type": "user",
-            "role": "u"
-          },
-          {
-            "id": 887,
-            "name": "The Shawshank Redemption",
-            "type": "title",
-            "role": null
-          }
-        ],
-        "edges": [
-          {
-            "eid": 80640,
-            "s": 494,
-            "t": 887,
-            "rating": 5.0,
-            "date": "Mar 22, 2016",
-            "in_temgx": true
-          },
-          {
-            "eid": 80643,
-            "s": 494,
-            "t": 2549,
-            "rating": 5.0,
-            "date": "Mar 22, 2016",
-            "in_temgx": true
-          }
-        ]
-      },
-      "overlap_temgx": [
-        80640,
-        80643
-      ],
-      "S": 0.0008851832813686795,
-      "occurrence": {
-        "eids": [
-          80640,
-          80643
-        ],
-        "nodes": [
-          "user 494",
-          "The Shawshank Redemption",
-          "The Matrix"
-        ],
-        "dates": [
-          "Mar 22, 2016",
-          "Mar 22, 2016"
-        ]
-      },
-      "p_without": 0.917578530006856,
-      "p_random": 0.9381644061170756,
-      "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 494, The Shawshank Redemption, The Matrix): 94% \u2192 92%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.1 for a comparable pattern (before matching: vs 0.2). Timing and activity do not explain it away. "
-    },
-    {
-      "motif": "CO",
-      "name": "Two people rated the same movie",
-      "raw": 0.18998430551698464,
-      "adjusted": 0.2025694659392169,
-      "p_full": 0.9382670707417514,
-      "p_attn": 0.9712757719650155,
-      "pts_one": 0.03552525689226593,
-      "pts_base": 0.17723569757752689,
-      "pts_one_raw": 0.03313985647579454,
-      "pts_any": 0.1763068068023843,
-      "graph": {
-        "nodes": [
-          {
-            "id": 377,
-            "name": "user 377",
-            "type": "user",
-            "role": null
-          },
-          {
-            "id": 3555,
-            "name": "Requiem for a Dream",
-            "type": "title",
-            "role": "A"
-          },
-          {
-            "id": 365,
-            "name": "user 365",
-            "type": "user",
-            "role": null
-          }
-        ],
-        "edges": [
-          {
-            "eid": 77144,
-            "s": 3555,
-            "t": 377,
-            "rating": 3.5,
-            "date": "Oct 20, 2015",
-            "in_temgx": false
-          },
-          {
-            "eid": 77182,
-            "s": 3555,
-            "t": 365,
-            "rating": 4.0,
-            "date": "Oct 22, 2015",
-            "in_temgx": true
-          }
-        ]
-      },
-      "overlap_temgx": [
-        77182
-      ],
-      "S": -0.01499223831047226,
-      "occurrence": {
-        "eids": [
-          77144,
-          77182
-        ],
-        "nodes": [
-          "user 377",
-          "Requiem for a Dream",
-          "user 365"
-        ],
-        "dates": [
-          "Oct 20, 2015",
-          "Oct 22, 2015"
-        ]
-      },
-      "p_without": 0.929831459391122,
-      "p_random": 0.9377272461566151,
-      "p_value": 0.09836065573770492,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 377, Requiem for a Dream, user 365): 94% \u2192 93%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.2). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 255, Requiem for a Dream, Spy): 100% \u2192 100%; the same number of top-attention ratings: 100%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). "
     }
   ],
   "n_draw": 60,
-  "n_model_runs": 1192,
-  "computed_at": "2026-10-28T16:45:20-0400",
-  "summary": "With 9 ratings (3 recent ratings of Requiem for a Dream by other people, 5 of the member's own ratings, 1 other rating nearby), the model's preference for Requiem for a Dream over Snow White and the Seven Dwarfs goes from 94% to 64%. Removing the same number of ratings with the highest attention weight gives 73%. In the full ranking, Requiem for a Dream moves from #1 to #2."
+  "n_model_runs": 1101,
+  "computed_at": "2026-10-28T22:27:22-0400",
+  "summary": "With 8 ratings (2 recent ratings of Requiem for a Dream by other people, 5 of the member's own ratings, 1 other rating nearby), the model's preference for Requiem for a Dream over Something Wicked This Way Comes goes from 100% to 89%. Removing the same number of ratings with the highest attention weight gives 89%. In the full ranking, Requiem for a Dream moves from #1 to #2."
 }

@@ -8,7 +8,7 @@
       "CATGX: \u201cTwo people rated the same movie\u201d: removing it moves the model 81% \u2192 75% (top-attention ratings: 75%); matched on timing and activity, each removal still costs 2.1 points vs 1.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Batman beats The Specialist mainly through popularity (+0.35); the history part adds +0.08."
     ],
-    "verdict": "Diagnosis: Batman wins mainly through popularity, and the history model adds to it through recent fans of Batman. None of these signals reads \u201cisn't a superhero film\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Batman wins mainly through popularity, and the history model adds to it through recent fans of Batman. None of these signals reads what \u201cisn't a superhero film\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       87467,
       90866
@@ -478,6 +478,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 502,
-  "computed_at": "2026-10-28T16:44:42-0400",
+  "computed_at": "2026-10-28T22:26:42-0400",
   "summary": "With 2 ratings (2 recent ratings of Batman by other people), the model's preference for Batman over The Specialist goes from 81% to 75%. Removing the same number of ratings with the highest attention weight gives 75%. In the full ranking, Batman moves from #1 to #2."
 }

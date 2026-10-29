@@ -10,7 +10,7 @@
       "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
       "Ranker: Ice Age 2: The Meltdown beats The Cable Guy mainly through matching the words of the request (+0.43); the history part adds +0.11."
     ],
-    "verdict": "Diagnosis: Ice Age 2: The Meltdown wins mainly through matching the words of the request, and the history model adds to it through recent fans of Ice Age 2: The Meltdown and the member's ratings of Star Wars: Episode IV - A New Hope, Schindler's List. None of these signals reads \u201cnot a kids movie\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Ice Age 2: The Meltdown wins mainly through matching the words of the request, and the history model adds to it through recent fans of Ice Age 2: The Meltdown and the member's ratings of Star Wars: Episode IV - A New Hope, Schindler's List. None of these signals reads what \u201cnot a kids movie\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       72451,
       73004
@@ -676,6 +676,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 708,
-  "computed_at": "2026-10-28T16:45:23-0400",
+  "computed_at": "2026-10-28T22:27:25-0400",
   "summary": "With 7 ratings (1 recent rating of Ice Age 2: The Meltdown by other people, 5 of the member's own ratings, 1 other rating nearby), the model's preference for Ice Age 2: The Meltdown over The Cable Guy goes from 88% to 66%. Removing the same number of ratings with the highest attention weight gives 69%. The full ranking still puts Ice Age 2: The Meltdown at #1: text match and popularity also push it up."
 }

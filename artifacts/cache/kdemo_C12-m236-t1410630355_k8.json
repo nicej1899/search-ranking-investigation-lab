@@ -9,7 +9,7 @@
       "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
       "Ranker: True Lies beats School of Rock mainly through popularity (+0.31); the history part adds +0.05."
     ],
-    "verdict": "Diagnosis: True Lies wins mainly through popularity, and the history model adds to it through the member's ratings of Star Trek VI: The Undiscovered Country, Road Trip. None of these signals reads \u201cnot a romance\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: True Lies wins mainly through popularity, and the history model adds to it through the member's ratings of Star Trek VI: The Undiscovered Country, Road Trip. None of these signals reads what \u201cnot a romance\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Similar verified past failures pick one.",
     "agree": [
       71946,
       72202,
@@ -618,6 +618,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 609,
-  "computed_at": "2026-10-28T16:45:40-0400",
+  "computed_at": "2026-10-28T22:27:43-0400",
   "summary": "With 6 ratings (5 of the member's own ratings, 1 other rating nearby), the model's preference for True Lies over School of Rock goes from 72% to 60%. Removing the same number of ratings with the highest attention weight gives 87%. The full ranking still puts True Lies at #1: text match and popularity also push it up."
 }

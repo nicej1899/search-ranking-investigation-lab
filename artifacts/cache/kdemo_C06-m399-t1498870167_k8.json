@@ -9,7 +9,7 @@
       "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
       "Ranker: Independence Day beats Rise of the Planet of the Apes mainly through popularity (+0.48); the history part adds +0.04."
     ],
-    "verdict": "Diagnosis: Independence Day wins mainly through popularity, and the history model adds to it through the member's ratings of Raiders of the Lost Ark, Star Wars: Episode VI - Return of the Jedi. None of these signals reads \u201cno aliens in it\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Independence Day wins mainly through popularity, and the history model adds to it through the member's ratings of Raiders of the Lost Ark, Star Wars: Episode VI - Return of the Jedi. None of these signals reads what \u201cno aliens in it\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Similar verified past failures pick one.",
     "agree": [
       92615
     ]
@@ -983,6 +983,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1050,
-  "computed_at": "2026-10-28T16:44:46-0400",
+  "computed_at": "2026-10-28T22:26:46-0400",
   "summary": "With 6 ratings (5 of the member's own ratings, 1 other rating nearby), the model's preference for Independence Day over Rise of the Planet of the Apes goes from 67% to 53%. Removing the same number of ratings with the highest attention weight gives 91%. In the full ranking, Independence Day moves from #1 to #2."
 }

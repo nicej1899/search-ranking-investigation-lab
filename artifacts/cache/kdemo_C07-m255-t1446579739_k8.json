@@ -9,7 +9,7 @@
       "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 100% \u2192 99% (top-attention ratings: 100%); matched on timing and activity, each removal still costs 0.1 points vs 0.0 for a comparable pattern: a structural reason, not just recency.",
       "Ranker: Requiem for a Dream beats Let Me In mainly through popularity (+0.59); the history part adds +0.33."
     ],
-    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Star Wars: Episode IV - A New Hope. None of these signals reads \u201cnothing depressing\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Matrix, Star Wars: Episode IV - A New Hope. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
     "agree": [
       76020,
       76776,
@@ -1028,6 +1028,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1089,
-  "computed_at": "2026-10-28T16:44:58-0400",
+  "computed_at": "2026-10-28T22:26:58-0400",
   "summary": "With 8 ratings (5 recent ratings of Requiem for a Dream by other people, 3 of the member's own ratings), the model's preference for Requiem for a Dream over Let Me In goes from 100% to 96%. Removing the same number of ratings with the highest attention weight gives 99%. In the full ranking, Requiem for a Dream moves from #1 to #2."
 }
