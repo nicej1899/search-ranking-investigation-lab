@@ -241,7 +241,7 @@ export default function App() {
         </>
       )}
       {drawer && <Sources meta={meta} close={() => setDrawer(false)} />}
-      <footer>Offline prototype on public data · no Netflix data · no production or A/B claims</footer>
+      <footer>Built on public MovieLens data · code on GitHub</footer>
     </div>
   );
 }
