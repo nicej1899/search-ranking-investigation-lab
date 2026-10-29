@@ -1,5 +1,5 @@
 {
-  "created": "2026-10-22T14:49:11-0400",
+  "created": "2026-10-28T23:53:23-0400",
   "method": "Semantic IDs for titles and a CATGX pattern analysis over them.\n\nSemantic IDs (stand-in for an RQ-VAE codebook): residual k-means, 3 levels x 8 codes, over a content vector per\ntitle = [title+genre text vector (spaCy, as used by the ranker), genre multi-hot / sqrt(#genres)]. A title's ID is\n(c1, c2, c3); c1 is the coarse region. Level-1 codes are named automatically by their most over-represented genres.\nThis is NOT Netflix's semantic-ID model; it reproduces the idea (hierarchical discrete codes from content) on public data.\n\nAnalyses (DEV failure triage rows, model F0):\n  where_failures   for each level-1 code: how often a title from that code is the WRONG top result, vs how often\n                   titles from that code appear as candidates (lift = over-representation among wrong top results)\n  catgx_semid      CATGX with semantic-ID labels: motif library = every ordered pair (code a -> code b) of a member's\n                   consecutive-in-time ratings at most 7 days apart. g(r) = drop of the behavioural A-vs-B margin when\n                   the pair's two ratings are removed (exact replay). Cells: recency x duration (doubling bins) x title\n                   activity tertile; S(m) = sum_b omega(b) (mu(m,b) - mu_base(b)). Exact enumeration (pi = 1).\n                   Aggregated over failed searches where the behaviour part favours the wrong title; member bootstrap.\n",
   "codebook": [
     {
@@ -487,71 +487,71 @@
     {
       "code": 2,
       "name": "Animation / Children",
-      "share_of_wrong_top": 0.22929936305732485,
-      "share_of_candidates": 0.13503184713375796,
-      "lift": 1.6981132075471699,
-      "n_wrong_top": 144
+      "share_of_wrong_top": 0.22364217252396165,
+      "share_of_candidates": 0.13338658146964857,
+      "lift": 1.676646706586826,
+      "n_wrong_top": 140
     },
     {
       "code": 3,
       "name": "Sci-Fi / Action",
-      "share_of_wrong_top": 0.1449044585987261,
-      "share_of_candidates": 0.08566878980891719,
-      "lift": 1.691449814126394,
-      "n_wrong_top": 91
+      "share_of_wrong_top": 0.1389776357827476,
+      "share_of_candidates": 0.08626198083067092,
+      "lift": 1.6111111111111112,
+      "n_wrong_top": 87
     },
     {
       "code": 4,
       "name": "Comedy / Drama",
-      "share_of_wrong_top": 0.1178343949044586,
-      "share_of_candidates": 0.09118895966029723,
-      "lift": 1.2922002328288709,
-      "n_wrong_top": 74
+      "share_of_wrong_top": 0.12300319488817892,
+      "share_of_candidates": 0.09110756123535677,
+      "lift": 1.3500876680303915,
+      "n_wrong_top": 77
     },
     {
       "code": 5,
       "name": "Comedy / Romance",
-      "share_of_wrong_top": 0.1910828025477707,
-      "share_of_candidates": 0.19532908704883228,
-      "lift": 0.9782608695652174,
-      "n_wrong_top": 120
+      "share_of_wrong_top": 0.19329073482428116,
+      "share_of_candidates": 0.19568690095846644,
+      "lift": 0.9877551020408164,
+      "n_wrong_top": 121
     },
     {
       "code": 0,
       "name": "Drama / Romance",
-      "share_of_wrong_top": 0.1449044585987261,
-      "share_of_candidates": 0.20201698513800426,
-      "lift": 0.7172884918549658,
+      "share_of_wrong_top": 0.14536741214057508,
+      "share_of_candidates": 0.20218317358892438,
+      "lift": 0.71898867526995,
       "n_wrong_top": 91
     },
     {
       "code": 1,
       "name": "Thriller / Crime",
-      "share_of_wrong_top": 0.12579617834394904,
-      "share_of_candidates": 0.198619957537155,
-      "lift": 0.6333511491181186,
-      "n_wrong_top": 79
+      "share_of_wrong_top": 0.12779552715654952,
+      "share_of_candidates": 0.19920127795527157,
+      "lift": 0.6415396952686447,
+      "n_wrong_top": 80
     },
     {
       "code": 7,
       "name": "Horror / Thriller",
-      "share_of_wrong_top": 0.04617834394904458,
-      "share_of_candidates": 0.07860934182590233,
-      "lift": 0.587440918298447,
+      "share_of_wrong_top": 0.0463258785942492,
+      "share_of_candidates": 0.07838125665601704,
+      "lift": 0.5910326086956521,
       "n_wrong_top": 29
     },
     {
       "code": 6,
       "name": "Documentary",
-      "share_of_wrong_top": 0.0,
-      "share_of_candidates": 0.013535031847133758,
-      "lift": 0.0,
-      "n_wrong_top": 0
+      "share_of_wrong_top": 0.001597444089456869,
+      "share_of_candidates": 0.013791267305644303,
+      "lift": 0.11583011583011582,
+      "n_wrong_top": 1
     }
   ],
   "catgx": {
-    "searches_analysed": 486,
-    "occurrences": 14658,
+    "searches_analysed": 492,
+    "occurrences": 15276,
     "patterns": [
       {
         "pattern": [
@@ -561,13 +561,13 @@
         "name": "Horror / Thriller  ->  Animation / Children",
         "searches": 25,
         "members": 10,
-        "mean_S": 1.4762813653097586,
+        "mean_S": 1.4757535305260427,
         "ci95": [
-          0.11419558342764535,
-          2.8255496755715943
+          0.1083377546843266,
+          2.805092137010589
         ],
-        "frac_positive": 0.64,
-        "occurrences": 82
+        "frac_positive": 0.6,
+        "occurrences": 73
       },
       {
         "pattern": [
@@ -577,13 +577,13 @@
         "name": "Animation / Children  ->  Horror / Thriller",
         "searches": 15,
         "members": 7,
-        "mean_S": 0.7529848458220605,
+        "mean_S": 0.7592430260227354,
         "ci95": [
-          -0.08098853179754299,
-          1.650745778766775
+          -0.07800585080040806,
+          1.6483830825224424
         ],
         "frac_positive": 0.6,
-        "occurrences": 36
+        "occurrences": 47
       },
       {
         "pattern": [
@@ -591,31 +591,15 @@
           4
         ],
         "name": "Animation / Children  ->  Comedy / Drama",
-        "searches": 41,
+        "searches": 43,
         "members": 15,
-        "mean_S": 0.4901911989128523,
+        "mean_S": 0.4656975848271482,
         "ci95": [
-          -0.04539094639830727,
-          1.1283686805033684
+          -0.04459865890817092,
+          1.0726265952149001
         ],
-        "frac_positive": 0.4146341463414634,
-        "occurrences": 104
-      },
-      {
-        "pattern": [
-          0,
-          1
-        ],
-        "name": "Drama / Romance  ->  Thriller / Crime",
-        "searches": 138,
-        "members": 41,
-        "mean_S": 0.38342825901853883,
-        "ci95": [
-          0.13324688653125938,
-          0.6376694340649914
-        ],
-        "frac_positive": 0.5507246376811594,
-        "occurrences": 646
+        "frac_positive": 0.3953488372093023,
+        "occurrences": 117
       },
       {
         "pattern": [
@@ -623,15 +607,15 @@
           1
         ],
         "name": "Thriller / Crime  ->  Thriller / Crime",
-        "searches": 116,
+        "searches": 118,
         "members": 35,
-        "mean_S": 0.3647212246993678,
+        "mean_S": 0.395054971933437,
         "ci95": [
-          0.024695449154376277,
-          0.760713373668941
+          0.04689263856239305,
+          0.7770818513492747
         ],
-        "frac_positive": 0.49137931034482757,
-        "occurrences": 476
+        "frac_positive": 0.5,
+        "occurrences": 508
       },
       {
         "pattern": [
@@ -639,15 +623,31 @@
           0
         ],
         "name": "Drama / Romance  ->  Drama / Romance",
-        "searches": 150,
+        "searches": 158,
         "members": 44,
-        "mean_S": 0.3493619190046833,
+        "mean_S": 0.3881477799881054,
         "ci95": [
-          0.09155001454185506,
-          0.6341503536836611
+          0.14089093407482275,
+          0.6667849120395373
         ],
-        "frac_positive": 0.4533333333333333,
-        "occurrences": 1332
+        "frac_positive": 0.44936708860759494,
+        "occurrences": 1462
+      },
+      {
+        "pattern": [
+          0,
+          1
+        ],
+        "name": "Drama / Romance  ->  Thriller / Crime",
+        "searches": 141,
+        "members": 41,
+        "mean_S": 0.38538768158788084,
+        "ci95": [
+          0.13223195741265914,
+          0.6449353522331056
+        ],
+        "frac_positive": 0.5602836879432624,
+        "occurrences": 689
       },
       {
         "pattern": [
@@ -655,15 +655,15 @@
           2
         ],
         "name": "Drama / Romance  ->  Animation / Children",
-        "searches": 106,
+        "searches": 105,
         "members": 33,
-        "mean_S": 0.30044609559221225,
+        "mean_S": 0.28434812365966927,
         "ci95": [
-          0.0105042970120298,
-          0.6570641723593401
+          -0.006139565583472306,
+          0.6430370310853762
         ],
-        "frac_positive": 0.4339622641509434,
-        "occurrences": 420
+        "frac_positive": 0.4380952380952381,
+        "occurrences": 443
       },
       {
         "pattern": [
@@ -671,31 +671,15 @@
           0
         ],
         "name": "Thriller / Crime  ->  Drama / Romance",
-        "searches": 103,
+        "searches": 106,
         "members": 33,
-        "mean_S": 0.26407664022094407,
+        "mean_S": 0.2590127046207553,
         "ci95": [
-          0.04635413908948984,
-          0.5238158133377274
+          0.047719290631788265,
+          0.5159238044583302
         ],
-        "frac_positive": 0.5145631067961165,
-        "occurrences": 931
-      },
-      {
-        "pattern": [
-          1,
-          2
-        ],
-        "name": "Thriller / Crime  ->  Animation / Children",
-        "searches": 93,
-        "members": 27,
-        "mean_S": 0.20238496442973195,
-        "ci95": [
-          -0.07923055623888245,
-          0.5463139601370322
-        ],
-        "frac_positive": 0.4946236559139785,
-        "occurrences": 459
+        "frac_positive": 0.5188679245283019,
+        "occurrences": 1023
       },
       {
         "pattern": [
@@ -703,15 +687,31 @@
           1
         ],
         "name": "Animation / Children  ->  Thriller / Crime",
-        "searches": 58,
+        "searches": 60,
         "members": 22,
-        "mean_S": 0.19028688566077742,
+        "mean_S": 0.18391077900117167,
         "ci95": [
-          -0.04742919249505089,
-          0.4895204380039704
+          -0.03805558992136336,
+          0.47927890779749577
         ],
-        "frac_positive": 0.41379310344827586,
-        "occurrences": 387
+        "frac_positive": 0.43333333333333335,
+        "occurrences": 410
+      },
+      {
+        "pattern": [
+          1,
+          2
+        ],
+        "name": "Thriller / Crime  ->  Animation / Children",
+        "searches": 92,
+        "members": 27,
+        "mean_S": 0.17862285643589113,
+        "ci95": [
+          -0.11070811251180643,
+          0.5340463736274426
+        ],
+        "frac_positive": 0.5217391304347826,
+        "occurrences": 466
       },
       {
         "pattern": [
@@ -719,15 +719,15 @@
           2
         ],
         "name": "Comedy / Drama  ->  Animation / Children",
-        "searches": 50,
+        "searches": 52,
         "members": 16,
-        "mean_S": 0.1879307480814601,
+        "mean_S": 0.1759207931717814,
         "ci95": [
-          -0.34054357911102345,
-          0.7534851603082026
+          -0.32803357928358845,
+          0.7246711062133697
         ],
-        "frac_positive": 0.42,
-        "occurrences": 148
+        "frac_positive": 0.40384615384615385,
+        "occurrences": 190
       },
       {
         "pattern": [
@@ -737,13 +737,13 @@
         "name": "Comedy / Romance  ->  Sci-Fi / Action",
         "searches": 38,
         "members": 17,
-        "mean_S": 0.14920229688824516,
+        "mean_S": 0.1395055857675371,
         "ci95": [
-          -0.050130158733693767,
-          0.42672668951393505
+          -0.05980779758724842,
+          0.4188564248457196
         ],
-        "frac_positive": 0.47368421052631576,
-        "occurrences": 219
+        "frac_positive": 0.42105263157894735,
+        "occurrences": 205
       },
       {
         "pattern": [
@@ -751,15 +751,15 @@
           5
         ],
         "name": "Thriller / Crime  ->  Comedy / Romance",
-        "searches": 46,
+        "searches": 48,
         "members": 18,
-        "mean_S": 0.12265720785708743,
+        "mean_S": 0.11963345553088874,
         "ci95": [
-          -0.05424775083437212,
-          0.32097744640424236
+          -0.04283564865819798,
+          0.31026981194982733
         ],
-        "frac_positive": 0.43478260869565216,
-        "occurrences": 265
+        "frac_positive": 0.4375,
+        "occurrences": 292
       },
       {
         "pattern": [
@@ -767,15 +767,15 @@
           2
         ],
         "name": "Comedy / Romance  ->  Animation / Children",
-        "searches": 54,
+        "searches": 55,
         "members": 22,
-        "mean_S": 0.08687814707909537,
+        "mean_S": 0.0847537636458364,
         "ci95": [
-          -0.0673161309102711,
-          0.2942232401514647
+          -0.05151495498199674,
+          0.28175028157994686
         ],
-        "frac_positive": 0.3333333333333333,
-        "occurrences": 298
+        "frac_positive": 0.34545454545454546,
+        "occurrences": 325
       },
       {
         "pattern": [
@@ -783,15 +783,31 @@
           1
         ],
         "name": "Documentary  ->  Thriller / Crime",
-        "searches": 10,
+        "searches": 12,
         "members": 5,
-        "mean_S": 0.0678822936731721,
+        "mean_S": 0.06922704781658723,
         "ci95": [
-          0.0009676373048291687,
-          0.1767515688659732
+          0.0006092567155631332,
+          0.17392626810517312
         ],
         "frac_positive": 0.5,
-        "occurrences": 44
+        "occurrences": 55
+      },
+      {
+        "pattern": [
+          1,
+          7
+        ],
+        "name": "Thriller / Crime  ->  Horror / Thriller",
+        "searches": 28,
+        "members": 8,
+        "mean_S": 0.053260800283651995,
+        "ci95": [
+          -0.2630130261981623,
+          0.34517738385058166
+        ],
+        "frac_positive": 0.5,
+        "occurrences": 42
       },
       {
         "pattern": [
@@ -801,13 +817,13 @@
         "name": "Comedy / Romance  ->  Horror / Thriller",
         "searches": 9,
         "members": 5,
-        "mean_S": 0.05461729277064645,
+        "mean_S": 0.05257293465092303,
         "ci95": [
-          -0.005440633240951919,
-          0.2154569339564128
+          -0.014430868912944464,
+          0.2072562831535186
         ],
         "frac_positive": 0.3333333333333333,
-        "occurrences": 49
+        "occurrences": 58
       },
       {
         "pattern": [
@@ -815,79 +831,15 @@
           5
         ],
         "name": "Horror / Thriller  ->  Comedy / Romance",
-        "searches": 10,
+        "searches": 9,
         "members": 6,
-        "mean_S": 0.04322046992777511,
+        "mean_S": 0.04694189442609416,
         "ci95": [
-          -0.016044947530634998,
-          0.17030742815565852
+          -0.017469739085396927,
+          0.1932473965431949
         ],
-        "frac_positive": 0.3,
-        "occurrences": 104
-      },
-      {
-        "pattern": [
-          5,
-          4
-        ],
-        "name": "Comedy / Romance  ->  Comedy / Drama",
-        "searches": 31,
-        "members": 14,
-        "mean_S": 0.03325391100514345,
-        "ci95": [
-          -0.0858510646876851,
-          0.1426734671711137
-        ],
-        "frac_positive": 0.3548387096774194,
-        "occurrences": 133
-      },
-      {
-        "pattern": [
-          1,
-          7
-        ],
-        "name": "Thriller / Crime  ->  Horror / Thriller",
-        "searches": 26,
-        "members": 8,
-        "mean_S": 0.02080550391876099,
-        "ci95": [
-          -0.25239577688414794,
-          0.3331718818671806
-        ],
-        "frac_positive": 0.46153846153846156,
-        "occurrences": 35
-      },
-      {
-        "pattern": [
-          1,
-          4
-        ],
-        "name": "Thriller / Crime  ->  Comedy / Drama",
-        "searches": 47,
-        "members": 16,
-        "mean_S": 0.01889367661780344,
-        "ci95": [
-          -0.17222794081433881,
-          0.2168401540696031
-        ],
-        "frac_positive": 0.2553191489361702,
-        "occurrences": 150
-      },
-      {
-        "pattern": [
-          1,
-          6
-        ],
-        "name": "Thriller / Crime  ->  Documentary",
-        "searches": 20,
-        "members": 8,
-        "mean_S": 0.009012416213832156,
-        "ci95": [
-          -0.04680435732157609,
-          0.05025926565889344
-        ],
-        "frac_positive": 0.5,
-        "occurrences": 63
+        "frac_positive": 0.2222222222222222,
+        "occurrences": 101
       },
       {
         "pattern": [
@@ -895,95 +847,47 @@
           3
         ],
         "name": "Drama / Romance  ->  Sci-Fi / Action",
-        "searches": 131,
+        "searches": 136,
         "members": 39,
-        "mean_S": 0.004501679420872087,
+        "mean_S": 0.03866269713129422,
         "ci95": [
-          -0.21877823092657317,
-          0.2605077907596724
+          -0.1937683659502748,
+          0.306457351484558
         ],
-        "frac_positive": 0.3816793893129771,
-        "occurrences": 378
+        "frac_positive": 0.38235294117647056,
+        "occurrences": 381
       },
       {
         "pattern": [
-          6,
-          3
+          1,
+          4
         ],
-        "name": "Documentary  ->  Sci-Fi / Action",
-        "searches": 9,
-        "members": 4,
-        "mean_S": 0.003178175181071411,
+        "name": "Thriller / Crime  ->  Comedy / Drama",
+        "searches": 51,
+        "members": 16,
+        "mean_S": 0.03194101797765434,
         "ci95": [
-          -0.03215458551548592,
-          0.05264416711831862
+          -0.11783852019288762,
+          0.19404081958595576
         ],
-        "frac_positive": 0.3333333333333333,
-        "occurrences": 16
+        "frac_positive": 0.27450980392156865,
+        "occurrences": 170
       },
       {
         "pattern": [
-          6,
-          2
+          5,
+          4
         ],
-        "name": "Documentary  ->  Animation / Children",
-        "searches": 8,
-        "members": 5,
-        "mean_S": -0.0017345363942752046,
+        "name": "Comedy / Romance  ->  Comedy / Drama",
+        "searches": 33,
+        "members": 14,
+        "mean_S": 0.022463858756357067,
         "ci95": [
-          -0.0045507951314149074,
-          -6.653473120634295e-05
+          -0.08174890146056096,
+          0.12054422670552863
         ],
-        "frac_positive": 0.25,
-        "occurrences": 14
-      },
-      {
-        "pattern": [
-          2,
-          6
-        ],
-        "name": "Animation / Children  ->  Documentary",
-        "searches": 12,
-        "members": 5,
-        "mean_S": -0.005907580471996787,
-        "ci95": [
-          -0.025833713358271195,
-          0.009699057510613255
-        ],
-        "frac_positive": 0.4166666666666667,
-        "occurrences": 48
-      },
-      {
-        "pattern": [
-          2,
-          0
-        ],
-        "name": "Animation / Children  ->  Drama / Romance",
-        "searches": 72,
-        "members": 22,
-        "mean_S": -0.006203486875606481,
-        "ci95": [
-          -0.21106586007005734,
-          0.22735405521194565
-        ],
-        "frac_positive": 0.3472222222222222,
-        "occurrences": 550
-      },
-      {
-        "pattern": [
-          6,
-          0
-        ],
-        "name": "Documentary  ->  Drama / Romance",
-        "searches": 13,
-        "members": 6,
-        "mean_S": -0.007142147742580308,
-        "ci95": [
-          -0.012774398470583077,
-          -0.0010560550740110718
-        ],
-        "frac_positive": 0.07692307692307693,
-        "occurrences": 109
+        "frac_positive": 0.30303030303030304,
+        "occurrences": 148
       },
       {
         "pattern": [
@@ -993,13 +897,77 @@
         "name": "Drama / Romance  ->  Horror / Thriller",
         "searches": 22,
         "members": 8,
-        "mean_S": -0.016227807524101818,
+        "mean_S": 0.015547592298213215,
         "ci95": [
-          -0.2625222590344525,
-          0.24993294350829143
+          -0.2624451959578793,
+          0.3154705882901933
         ],
         "frac_positive": 0.4090909090909091,
-        "occurrences": 43
+        "occurrences": 46
+      },
+      {
+        "pattern": [
+          2,
+          0
+        ],
+        "name": "Animation / Children  ->  Drama / Romance",
+        "searches": 74,
+        "members": 22,
+        "mean_S": 0.011556881529028085,
+        "ci95": [
+          -0.19652815440241037,
+          0.24203638641364594
+        ],
+        "frac_positive": 0.3783783783783784,
+        "occurrences": 580
+      },
+      {
+        "pattern": [
+          1,
+          6
+        ],
+        "name": "Thriller / Crime  ->  Documentary",
+        "searches": 21,
+        "members": 8,
+        "mean_S": 0.0034921595420313012,
+        "ci95": [
+          -0.04660926027603716,
+          0.04501131476852623
+        ],
+        "frac_positive": 0.47619047619047616,
+        "occurrences": 66
+      },
+      {
+        "pattern": [
+          6,
+          0
+        ],
+        "name": "Documentary  ->  Drama / Romance",
+        "searches": 15,
+        "members": 6,
+        "mean_S": -0.0019415044061521568,
+        "ci95": [
+          -0.007227625281411252,
+          0.0023153081398788375
+        ],
+        "frac_positive": 0.13333333333333333,
+        "occurrences": 133
+      },
+      {
+        "pattern": [
+          6,
+          3
+        ],
+        "name": "Documentary  ->  Sci-Fi / Action",
+        "searches": 10,
+        "members": 4,
+        "mean_S": -0.005921336477384309,
+        "ci95": [
+          -0.043237244691087605,
+          0.05232428622719831
+        ],
+        "frac_positive": 0.3,
+        "occurrences": 18
       },
       {
         "pattern": [
@@ -1007,15 +975,127 @@
           5
         ],
         "name": "Sci-Fi / Action  ->  Comedy / Romance",
-        "searches": 29,
+        "searches": 30,
         "members": 15,
-        "mean_S": -0.01882050467088308,
+        "mean_S": -0.0061916607067553095,
         "ci95": [
-          -0.05831113392425597,
-          0.015501826809152061
+          -0.040437120240399124,
+          0.027059076578566616
         ],
-        "frac_positive": 0.27586206896551724,
-        "occurrences": 342
+        "frac_positive": 0.3,
+        "occurrences": 337
+      },
+      {
+        "pattern": [
+          6,
+          2
+        ],
+        "name": "Documentary  ->  Animation / Children",
+        "searches": 10,
+        "members": 5,
+        "mean_S": -0.006280453001060439,
+        "ci95": [
+          -0.01713610888222489,
+          -0.00018276698759580592
+        ],
+        "frac_positive": 0.2,
+        "occurrences": 19
+      },
+      {
+        "pattern": [
+          5,
+          6
+        ],
+        "name": "Comedy / Romance  ->  Documentary",
+        "searches": 8,
+        "members": 5,
+        "mean_S": -0.009061422637896447,
+        "ci95": [
+          -0.030109779704506994,
+          0.007309521747245094
+        ],
+        "frac_positive": 0.25,
+        "occurrences": 21
+      },
+      {
+        "pattern": [
+          2,
+          6
+        ],
+        "name": "Animation / Children  ->  Documentary",
+        "searches": 14,
+        "members": 5,
+        "mean_S": -0.01036906414150435,
+        "ci95": [
+          -0.02656595124741874,
+          0.0051346608869044874
+        ],
+        "frac_positive": 0.2857142857142857,
+        "occurrences": 50
+      },
+      {
+        "pattern": [
+          4,
+          4
+        ],
+        "name": "Comedy / Drama  ->  Comedy / Drama",
+        "searches": 47,
+        "members": 16,
+        "mean_S": -0.028105026849829462,
+        "ci95": [
+          -0.210688388065295,
+          0.14437154009308076
+        ],
+        "frac_positive": 0.3191489361702128,
+        "occurrences": 118
+      },
+      {
+        "pattern": [
+          5,
+          1
+        ],
+        "name": "Comedy / Romance  ->  Thriller / Crime",
+        "searches": 41,
+        "members": 17,
+        "mean_S": -0.037386099363777583,
+        "ci95": [
+          -0.12401289707105591,
+          0.026472275607842252
+        ],
+        "frac_positive": 0.3902439024390244,
+        "occurrences": 275
+      },
+      {
+        "pattern": [
+          3,
+          1
+        ],
+        "name": "Sci-Fi / Action  ->  Thriller / Crime",
+        "searches": 97,
+        "members": 29,
+        "mean_S": -0.04101542815464655,
+        "ci95": [
+          -0.2808174954400457,
+          0.21996022643581783
+        ],
+        "frac_positive": 0.32989690721649484,
+        "occurrences": 339
+      },
+      {
+        "pattern": [
+          5,
+          5
+        ],
+        "name": "Comedy / Romance  ->  Comedy / Romance",
+        "searches": 50,
+        "members": 20,
+        "mean_S": -0.05139969071085817,
+        "ci95": [
+          -0.09548180914303632,
+          -0.007191850390289611
+        ],
+        "frac_positive": 0.2,
+        "occurrences": 414
       },
       {
         "pattern": [
@@ -1025,77 +1105,93 @@
         "name": "Thriller / Crime  ->  Sci-Fi / Action",
         "searches": 108,
         "members": 32,
-        "mean_S": -0.027309541857500112,
+        "mean_S": -0.06136592719736778,
         "ci95": [
-          -0.1746782727296971,
-          0.1266400358204911
+          -0.215040155187364,
+          0.1098336854684277
         ],
-        "frac_positive": 0.39814814814814814,
-        "occurrences": 347
-      },
-      {
-        "pattern": [
-          5,
-          5
-        ],
-        "name": "Comedy / Romance  ->  Comedy / Romance",
-        "searches": 49,
-        "members": 20,
-        "mean_S": -0.027353246143527223,
-        "ci95": [
-          -0.09094256863034075,
-          0.04765902090439608
-        ],
-        "frac_positive": 0.24489795918367346,
-        "occurrences": 397
-      },
-      {
-        "pattern": [
-          5,
-          1
-        ],
-        "name": "Comedy / Romance  ->  Thriller / Crime",
-        "searches": 38,
-        "members": 17,
-        "mean_S": -0.043794719517695646,
-        "ci95": [
-          -0.13357473258867344,
-          0.03219558355918593
-        ],
-        "frac_positive": 0.3684210526315789,
-        "occurrences": 239
-      },
-      {
-        "pattern": [
-          3,
-          1
-        ],
-        "name": "Sci-Fi / Action  ->  Thriller / Crime",
-        "searches": 92,
-        "members": 29,
-        "mean_S": -0.058618615879765516,
-        "ci95": [
-          -0.3072936296087378,
-          0.2070266129533189
-        ],
-        "frac_positive": 0.32608695652173914,
-        "occurrences": 323
+        "frac_positive": 0.4074074074074074,
+        "occurrences": 332
       },
       {
         "pattern": [
           4,
-          4
+          0
         ],
-        "name": "Comedy / Drama  ->  Comedy / Drama",
-        "searches": 45,
-        "members": 16,
-        "mean_S": -0.07336200461899235,
+        "name": "Comedy / Drama  ->  Drama / Romance",
+        "searches": 84,
+        "members": 25,
+        "mean_S": -0.06970613789518157,
         "ci95": [
-          -0.2806663228955469,
-          0.12741243500470356
+          -0.3126992882051944,
+          0.14001490886156745
+        ],
+        "frac_positive": 0.35714285714285715,
+        "occurrences": 378
+      },
+      {
+        "pattern": [
+          4,
+          5
+        ],
+        "name": "Comedy / Drama  ->  Comedy / Romance",
+        "searches": 57,
+        "members": 18,
+        "mean_S": -0.08580578884948106,
+        "ci95": [
+          -0.32872208371889267,
+          0.06301676311351186
+        ],
+        "frac_positive": 0.3157894736842105,
+        "occurrences": 199
+      },
+      {
+        "pattern": [
+          7,
+          0
+        ],
+        "name": "Horror / Thriller  ->  Drama / Romance",
+        "searches": 21,
+        "members": 8,
+        "mean_S": -0.09086381311755545,
+        "ci95": [
+          -0.2350912148425416,
+          0.12603436823253578
         ],
         "frac_positive": 0.3333333333333333,
-        "occurrences": 102
+        "occurrences": 32
+      },
+      {
+        "pattern": [
+          2,
+          5
+        ],
+        "name": "Animation / Children  ->  Comedy / Romance",
+        "searches": 49,
+        "members": 17,
+        "mean_S": -0.10311086981312638,
+        "ci95": [
+          -0.18993009432738553,
+          -0.028167566651879236
+        ],
+        "frac_positive": 0.2653061224489796,
+        "occurrences": 361
+      },
+      {
+        "pattern": [
+          0,
+          5
+        ],
+        "name": "Drama / Romance  ->  Comedy / Romance",
+        "searches": 57,
+        "members": 20,
+        "mean_S": -0.10603547254496387,
+        "ci95": [
+          -0.17343709580047864,
+          -0.04040610212648165
+        ],
+        "frac_positive": 0.14035087719298245,
+        "occurrences": 312
       },
       {
         "pattern": [
@@ -1105,109 +1201,13 @@
         "name": "Horror / Thriller  ->  Thriller / Crime",
         "searches": 22,
         "members": 9,
-        "mean_S": -0.07906116992943903,
+        "mean_S": -0.10757104394415191,
         "ci95": [
-          -0.26325771466484377,
-          0.17938930897443384
+          -0.2819003644754038,
+          0.0878407035247253
         ],
-        "frac_positive": 0.36363636363636365,
-        "occurrences": 52
-      },
-      {
-        "pattern": [
-          4,
-          0
-        ],
-        "name": "Comedy / Drama  ->  Drama / Romance",
-        "searches": 79,
-        "members": 25,
-        "mean_S": -0.09207386875983178,
-        "ci95": [
-          -0.3450352814267899,
-          0.11766488779130177
-        ],
-        "frac_positive": 0.3670886075949367,
-        "occurrences": 311
-      },
-      {
-        "pattern": [
-          2,
-          5
-        ],
-        "name": "Animation / Children  ->  Comedy / Romance",
-        "searches": 47,
-        "members": 17,
-        "mean_S": -0.09496128661925857,
-        "ci95": [
-          -0.19025773388668327,
-          -0.01788959371294915
-        ],
-        "frac_positive": 0.2978723404255319,
-        "occurrences": 372
-      },
-      {
-        "pattern": [
-          4,
-          5
-        ],
-        "name": "Comedy / Drama  ->  Comedy / Romance",
-        "searches": 54,
-        "members": 18,
-        "mean_S": -0.10259246515090689,
-        "ci95": [
-          -0.36352451694021476,
-          0.0709328375218823
-        ],
-        "frac_positive": 0.3333333333333333,
-        "occurrences": 166
-      },
-      {
-        "pattern": [
-          7,
-          0
-        ],
-        "name": "Horror / Thriller  ->  Drama / Romance",
-        "searches": 20,
-        "members": 8,
-        "mean_S": -0.1155968406833802,
-        "ci95": [
-          -0.3263585958099103,
-          0.13344018984093461
-        ],
-        "frac_positive": 0.3,
-        "occurrences": 30
-      },
-      {
-        "pattern": [
-          5,
-          0
-        ],
-        "name": "Comedy / Romance  ->  Drama / Romance",
-        "searches": 55,
-        "members": 19,
-        "mean_S": -0.11817049487360878,
-        "ci95": [
-          -0.40127893191574915,
-          0.09677188767017138
-        ],
-        "frac_positive": 0.21818181818181817,
-        "occurrences": 220
-      },
-      {
-        "pattern": [
-          0,
-          5
-        ],
-        "name": "Drama / Romance  ->  Comedy / Romance",
-        "searches": 55,
-        "members": 20,
-        "mean_S": -0.12261470801288125,
-        "ci95": [
-          -0.19519113304249344,
-          -0.05369298516238756
-        ],
-        "frac_positive": 0.14545454545454545,
-        "occurrences": 272
+        "frac_positive": 0.3181818181818182,
+        "occurrences": 53
       },
       {
         "pattern": [
@@ -1215,15 +1215,15 @@
           6
         ],
         "name": "Drama / Romance  ->  Documentary",
-        "searches": 19,
+        "searches": 21,
         "members": 8,
-        "mean_S": -0.1427276714749917,
+        "mean_S": -0.14027414747155942,
         "ci95": [
-          -0.4221340815819577,
-          0.006744705581015177
+          -0.39898076224911544,
+          -0.009467122657780455
         ],
-        "frac_positive": 0.21052631578947367,
-        "occurrences": 124
+        "frac_positive": 0.14285714285714285,
+        "occurrences": 136
       },
       {
         "pattern": [
@@ -1231,31 +1231,31 @@
           4
         ],
         "name": "Drama / Romance  ->  Comedy / Drama",
-        "searches": 61,
+        "searches": 67,
         "members": 19,
-        "mean_S": -0.15011796043233444,
+        "mean_S": -0.14236398610669546,
         "ci95": [
-          -0.2951139117636408,
-          -0.0007042494521740928
+          -0.2791171973209633,
+          0.0018760942501137216
         ],
-        "frac_positive": 0.32786885245901637,
-        "occurrences": 224
+        "frac_positive": 0.3283582089552239,
+        "occurrences": 249
       },
       {
         "pattern": [
-          3,
+          5,
           0
         ],
-        "name": "Sci-Fi / Action  ->  Drama / Romance",
-        "searches": 66,
-        "members": 20,
-        "mean_S": -0.2136701543321352,
+        "name": "Comedy / Romance  ->  Drama / Romance",
+        "searches": 58,
+        "members": 19,
+        "mean_S": -0.14798879747940255,
         "ci95": [
-          -0.5600373206451964,
-          0.14039376970918238
+          -0.41719242914699567,
+          0.06332513765054365
         ],
-        "frac_positive": 0.3181818181818182,
-        "occurrences": 209
+        "frac_positive": 0.20689655172413793,
+        "occurrences": 265
       },
       {
         "pattern": [
@@ -1263,15 +1263,15 @@
           1
         ],
         "name": "Comedy / Drama  ->  Thriller / Crime",
-        "searches": 55,
+        "searches": 58,
         "members": 18,
-        "mean_S": -0.21583765610327113,
+        "mean_S": -0.20653063018924772,
         "ci95": [
-          -0.5005677591925499,
-          0.001887998186323394
+          -0.46621511904214724,
+          0.002330607035696166
         ],
-        "frac_positive": 0.45454545454545453,
-        "occurrences": 196
+        "frac_positive": 0.4482758620689655,
+        "occurrences": 237
       },
       {
         "pattern": [
@@ -1281,45 +1281,29 @@
         "name": "Sci-Fi / Action  ->  Horror / Thriller",
         "searches": 16,
         "members": 7,
-        "mean_S": -0.22625715964710424,
+        "mean_S": -0.21164918589201262,
         "ci95": [
-          -0.5402039473554019,
-          0.09792902849687665
+          -0.5010557212002726,
+          0.09295904238044189
         ],
-        "frac_positive": 0.3125,
-        "occurrences": 60
+        "frac_positive": 0.25,
+        "occurrences": 66
       },
       {
         "pattern": [
-          2,
-          2
+          3,
+          0
         ],
-        "name": "Animation / Children  ->  Animation / Children",
-        "searches": 89,
-        "members": 28,
-        "mean_S": -0.2731711426935191,
+        "name": "Sci-Fi / Action  ->  Drama / Romance",
+        "searches": 69,
+        "members": 20,
+        "mean_S": -0.22408004436181317,
         "ci95": [
-          -0.5040890224739155,
-          -0.04083122213119854
+          -0.5522108289117359,
+          0.11675945062325359
         ],
-        "frac_positive": 0.2696629213483146,
-        "occurrences": 837
-      },
-      {
-        "pattern": [
-          2,
-          3
-        ],
-        "name": "Animation / Children  ->  Sci-Fi / Action",
-        "searches": 97,
-        "members": 34,
-        "mean_S": -0.2805594614795136,
-        "ci95": [
-          -0.5907274611184502,
-          0.02133644832869182
-        ],
-        "frac_positive": 0.38144329896907214,
-        "occurrences": 527
+        "frac_positive": 0.2898550724637681,
+        "occurrences": 221
       },
       {
         "pattern": [
@@ -1327,31 +1311,47 @@
           7
         ],
         "name": "Comedy / Drama  ->  Horror / Thriller",
-        "searches": 13,
+        "searches": 14,
         "members": 4,
-        "mean_S": -0.28652936657462946,
+        "mean_S": -0.27136229759896263,
         "ci95": [
-          -0.506056260381157,
-          0.09286332864300614
+          -0.49183344391502526,
+          0.03717875212357256
         ],
-        "frac_positive": 0.23076923076923078,
-        "occurrences": 21
+        "frac_positive": 0.21428571428571427,
+        "occurrences": 29
       },
       {
         "pattern": [
-          7,
+          2,
+          2
+        ],
+        "name": "Animation / Children  ->  Animation / Children",
+        "searches": 93,
+        "members": 28,
+        "mean_S": -0.31265507811579013,
+        "ci95": [
+          -0.5598617680510867,
+          -0.06915064580288344
+        ],
+        "frac_positive": 0.27956989247311825,
+        "occurrences": 758
+      },
+      {
+        "pattern": [
+          2,
           3
         ],
-        "name": "Horror / Thriller  ->  Sci-Fi / Action",
-        "searches": 27,
-        "members": 9,
-        "mean_S": -0.36754265722967283,
+        "name": "Animation / Children  ->  Sci-Fi / Action",
+        "searches": 99,
+        "members": 34,
+        "mean_S": -0.3252704087088152,
         "ci95": [
-          -0.6658400095788216,
-          -0.059134311268986856
+          -0.6470048786787387,
+          -0.014742367861732468
         ],
-        "frac_positive": 0.25925925925925924,
-        "occurrences": 80
+        "frac_positive": 0.37373737373737376,
+        "occurrences": 408
       },
       {
         "pattern": [
@@ -1359,15 +1359,31 @@
           2
         ],
         "name": "Sci-Fi / Action  ->  Animation / Children",
-        "searches": 113,
+        "searches": 112,
         "members": 34,
-        "mean_S": -0.37153904777804003,
+        "mean_S": -0.377240214995017,
         "ci95": [
-          -0.7138127126699019,
-          -0.08815728327015762
+          -0.7289918026733108,
+          -0.09119660889563388
         ],
-        "frac_positive": 0.35398230088495575,
-        "occurrences": 572
+        "frac_positive": 0.35714285714285715,
+        "occurrences": 518
+      },
+      {
+        "pattern": [
+          7,
+          3
+        ],
+        "name": "Horror / Thriller  ->  Sci-Fi / Action",
+        "searches": 26,
+        "members": 9,
+        "mean_S": -0.38227585358348226,
+        "ci95": [
+          -0.6993738884548246,
+          -0.061458089198694166
+        ],
+        "frac_positive": 0.23076923076923078,
+        "occurrences": 69
       },
       {
         "pattern": [
@@ -1375,15 +1391,15 @@
           3
         ],
         "name": "Comedy / Drama  ->  Sci-Fi / Action",
-        "searches": 73,
+        "searches": 76,
         "members": 22,
-        "mean_S": -0.47455597707916397,
+        "mean_S": -0.4675954722457882,
         "ci95": [
-          -0.7297578739283175,
-          -0.23680622377685734
+          -0.7100121222968568,
+          -0.24440032324936445
         ],
-        "frac_positive": 0.2191780821917808,
-        "occurrences": 170
+        "frac_positive": 0.2236842105263158,
+        "occurrences": 183
       },
       {
         "pattern": [
@@ -1391,31 +1407,15 @@
           4
         ],
         "name": "Sci-Fi / Action  ->  Comedy / Drama",
-        "searches": 50,
+        "searches": 52,
         "members": 18,
-        "mean_S": -0.49573172529215787,
+        "mean_S": -0.48358455055129834,
         "ci95": [
-          -0.7155307358410524,
-          -0.24433792608512342
+          -0.6930350331961919,
+          -0.24085955669016984
         ],
-        "frac_positive": 0.24,
-        "occurrences": 107
-      },
-      {
-        "pattern": [
-          3,
-          3
-        ],
-        "name": "Sci-Fi / Action  ->  Sci-Fi / Action",
-        "searches": 124,
-        "members": 39,
-        "mean_S": -0.5716102491781483,
-        "ci95": [
-          -0.8516293772313277,
-          -0.3233531315264008
-        ],
-        "frac_positive": 0.27419354838709675,
-        "occurrences": 670
+        "frac_positive": 0.23076923076923078,
+        "occurrences": 114
       },
       {
         "pattern": [
@@ -1427,11 +1427,27 @@
         "members": 5,
         "mean_S": -0.5883048017752156,
         "ci95": [
-          -1.02903980811289,
+          -1.0245408082505068,
           0.10573907645306144
         ],
         "frac_positive": 0.16666666666666666,
         "occurrences": 24
+      },
+      {
+        "pattern": [
+          3,
+          3
+        ],
+        "name": "Sci-Fi / Action  ->  Sci-Fi / Action",
+        "searches": 124,
+        "members": 39,
+        "mean_S": -0.6230501665877838,
+        "ci95": [
+          -0.895699591112827,
+          -0.3671430036181018
+        ],
+        "frac_positive": 0.2661290322580645,
+        "occurrences": 589
       }
     ],
     "significant_positive": [
@@ -1443,29 +1459,13 @@
         "name": "Horror / Thriller  ->  Animation / Children",
         "searches": 25,
         "members": 10,
-        "mean_S": 1.4762813653097586,
+        "mean_S": 1.4757535305260427,
         "ci95": [
-          0.11419558342764535,
-          2.8255496755715943
+          0.1083377546843266,
+          2.805092137010589
         ],
-        "frac_positive": 0.64,
-        "occurrences": 82
-      },
-      {
-        "pattern": [
-          0,
-          1
-        ],
-        "name": "Drama / Romance  ->  Thriller / Crime",
-        "searches": 138,
-        "members": 41,
-        "mean_S": 0.38342825901853883,
-        "ci95": [
-          0.13324688653125938,
-          0.6376694340649914
-        ],
-        "frac_positive": 0.5507246376811594,
-        "occurrences": 646
+        "frac_positive": 0.6,
+        "occurrences": 73
       },
       {
         "pattern": [
@@ -1473,15 +1473,15 @@
           1
         ],
         "name": "Thriller / Crime  ->  Thriller / Crime",
-        "searches": 116,
+        "searches": 118,
         "members": 35,
-        "mean_S": 0.3647212246993678,
+        "mean_S": 0.395054971933437,
         "ci95": [
-          0.024695449154376277,
-          0.760713373668941
+          0.04689263856239305,
+          0.7770818513492747
         ],
-        "frac_positive": 0.49137931034482757,
-        "occurrences": 476
+        "frac_positive": 0.5,
+        "occurrences": 508
       },
       {
         "pattern": [
@@ -1489,31 +1489,31 @@
           0
         ],
         "name": "Drama / Romance  ->  Drama / Romance",
-        "searches": 150,
+        "searches": 158,
         "members": 44,
-        "mean_S": 0.3493619190046833,
+        "mean_S": 0.3881477799881054,
         "ci95": [
-          0.09155001454185506,
-          0.6341503536836611
+          0.14089093407482275,
+          0.6667849120395373
         ],
-        "frac_positive": 0.4533333333333333,
-        "occurrences": 1332
+        "frac_positive": 0.44936708860759494,
+        "occurrences": 1462
       },
       {
         "pattern": [
           0,
-          2
+          1
         ],
-        "name": "Drama / Romance  ->  Animation / Children",
-        "searches": 106,
-        "members": 33,
-        "mean_S": 0.30044609559221225,
+        "name": "Drama / Romance  ->  Thriller / Crime",
+        "searches": 141,
+        "members": 41,
+        "mean_S": 0.38538768158788084,
         "ci95": [
-          0.0105042970120298,
-          0.6570641723593401
+          0.13223195741265914,
+          0.6449353522331056
         ],
-        "frac_positive": 0.4339622641509434,
-        "occurrences": 420
+        "frac_positive": 0.5602836879432624,
+        "occurrences": 689
       },
       {
         "pattern": [
@@ -1521,15 +1521,15 @@
           0
         ],
         "name": "Thriller / Crime  ->  Drama / Romance",
-        "searches": 103,
+        "searches": 106,
         "members": 33,
-        "mean_S": 0.26407664022094407,
+        "mean_S": 0.2590127046207553,
         "ci95": [
-          0.04635413908948984,
-          0.5238158133377274
+          0.047719290631788265,
+          0.5159238044583302
         ],
-        "frac_positive": 0.5145631067961165,
-        "occurrences": 931
+        "frac_positive": 0.5188679245283019,
+        "occurrences": 1023
       },
       {
         "pattern": [
@@ -1537,18 +1537,18 @@
           1
         ],
         "name": "Documentary  ->  Thriller / Crime",
-        "searches": 10,
+        "searches": 12,
         "members": 5,
-        "mean_S": 0.0678822936731721,
+        "mean_S": 0.06922704781658723,
         "ci95": [
-          0.0009676373048291687,
-          0.1767515688659732
+          0.0006092567155631332,
+          0.17392626810517312
         ],
         "frac_positive": 0.5,
-        "occurrences": 44
+        "occurrences": 55
       }
     ],
     "note": "S(m) > 0: the model's support for the wrong title from this semantic-ID pattern is above what other patterns in the same timing/activity context get."
   },
-  "wall_s": 8.1
+  "wall_s": 7.7
 }
