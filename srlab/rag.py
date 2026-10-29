@@ -21,7 +21,7 @@ import sys
 
 from .common import REPORTS, dump_json, load_json, now_iso
 
-FIXNAME = {"F2": "rely less on viewing history for new members", "F3": "understand “not” in the request",
+FIXNAME = {"F2": "rely less on viewing history for new members", "F3": "understand what the request rules out",
            "F4": "rely less on popularity for specific searches"}
 MOTIF = {"POP": "a crowd of the title's recent raters", "CO": "a shared movie", "SEQ": "a run of the member's ratings",
          "BRIDGE": "a taste path from the member to the title", "BRIDGEB": "a taste path to the right title", "none": "no clear structure"}

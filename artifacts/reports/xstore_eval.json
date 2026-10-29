@@ -1,121 +1,121 @@
 {
-  "created": "2026-10-23T16:11:47-0400",
-  "n_store": 343,
+  "created": "2026-10-28T21:51:37-0400",
+  "n_store": 341,
   "n_new": 280,
   "dev_fix_rates": {
-    "F2": 0.08746355685131195,
-    "F3": 0.6268221574344023,
-    "F4": 0.2653061224489796
+    "F2": 0.08211143695014662,
+    "F3": 0.624633431085044,
+    "F4": 0.2697947214076246
   },
   "always": "F3",
   "chosen": {
     "features": "score split only",
-    "k": 10,
-    "dev_loo": 0.7113702623906706
+    "k": 20,
+    "dev_loo": 0.7155425219941349
   },
   "success": {
-    "retrieval": 0.37142857142857144,
+    "retrieval": 0.39285714285714285,
     "always_F3": 0.24285714285714285,
     "oracle_any_fix": 0.42142857142857143,
-    "retrieval_full_key": 0.30357142857142855,
+    "retrieval_full_key": 0.30714285714285716,
     "retrieval_explanation_only": 0.26785714285714285
   },
   "retrieval_minus_always": {
-    "mean": 0.12857142857142856,
+    "mean": 0.15,
     "ci95": [
-      0.08571428571428572,
-      0.17142857142857143
+      0.10357142857142858,
+      0.19642857142857142
     ]
   },
   "grid": [
     {
       "features": "score split only",
       "k": 5,
-      "dev_loo": 0.6967930029154519,
-      "final": 0.35
+      "dev_loo": 0.6979472140762464,
+      "final": 0.3535714285714286
     },
     {
       "features": "score split only",
       "k": 10,
-      "dev_loo": 0.7113702623906706,
-      "final": 0.37142857142857144
+      "dev_loo": 0.7126099706744868,
+      "final": 0.38571428571428573
     },
     {
       "features": "score split only",
       "k": 20,
-      "dev_loo": 0.7113702623906706,
+      "dev_loo": 0.7155425219941349,
       "final": 0.39285714285714285
     },
     {
       "features": "score split + link kinds",
       "k": 5,
-      "dev_loo": 0.6997084548104956,
-      "final": 0.325
+      "dev_loo": 0.6862170087976539,
+      "final": 0.32142857142857145
     },
     {
       "features": "score split + link kinds",
       "k": 10,
-      "dev_loo": 0.7026239067055393,
+      "dev_loo": 0.6891495601173021,
       "final": 0.32142857142857145
     },
     {
       "features": "score split + link kinds",
       "k": 20,
-      "dev_loo": 0.7055393586005831,
+      "dev_loo": 0.7096774193548387,
       "final": 0.3142857142857143
     },
     {
       "features": "score split + kinds + deletion effects",
       "k": 5,
-      "dev_loo": 0.6997084548104956,
+      "dev_loo": 0.6979472140762464,
       "final": 0.325
     },
     {
       "features": "score split + kinds + deletion effects",
       "k": 10,
-      "dev_loo": 0.7026239067055393,
+      "dev_loo": 0.6862170087976539,
+      "final": 0.33214285714285713
+    },
+    {
+      "features": "score split + kinds + deletion effects",
+      "k": 20,
+      "dev_loo": 0.7067448680351907,
       "final": 0.32857142857142857
     },
     {
-      "features": "score split + kinds + deletion effects",
-      "k": 20,
-      "dev_loo": 0.6997084548104956,
-      "final": 0.325
-    },
-    {
       "features": "full key",
       "k": 5,
-      "dev_loo": 0.673469387755102,
-      "final": 0.30357142857142855
-    },
-    {
-      "features": "full key",
-      "k": 10,
-      "dev_loo": 0.6763848396501457,
-      "final": 0.30357142857142855
-    },
-    {
-      "features": "full key",
-      "k": 20,
-      "dev_loo": 0.685131195335277,
+      "dev_loo": 0.656891495601173,
       "final": 0.3107142857142857
     },
     {
+      "features": "full key",
+      "k": 10,
+      "dev_loo": 0.6656891495601173,
+      "final": 0.3
+    },
+    {
+      "features": "full key",
+      "k": 20,
+      "dev_loo": 0.6656891495601173,
+      "final": 0.30714285714285716
+    },
+    {
       "features": "explanation only (no score split)",
       "k": 5,
-      "dev_loo": 0.60932944606414,
+      "dev_loo": 0.5865102639296188,
       "final": 0.26785714285714285
     },
     {
       "features": "explanation only (no score split)",
       "k": 10,
-      "dev_loo": 0.6297376093294461,
-      "final": 0.26785714285714285
+      "dev_loo": 0.6304985337243402,
+      "final": 0.2714285714285714
     },
     {
       "features": "explanation only (no score split)",
       "k": 20,
-      "dev_loo": 0.6064139941690962,
+      "dev_loo": 0.6217008797653959,
       "final": 0.26785714285714285
     }
   ],
@@ -125,12 +125,12 @@
     "F4": 0.25
   },
   "store_motifs_A": {
-    "POP": 128,
-    "CO": 54,
-    "SEQ": 53,
-    "BRIDGE": 53,
+    "POP": 127,
+    "CO": 52,
+    "SEQ": 54,
+    "BRIDGE": 49,
     "BRIDGEB": 5,
-    "none": 50
+    "none": 54
   },
   "note": "DEV and FINAL chat requests use different request templates, so fix rates shift (F3 was fit on DEV)."
 }

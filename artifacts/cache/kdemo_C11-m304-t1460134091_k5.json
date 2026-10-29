@@ -8,7 +8,7 @@
       "CATGX: \u201cShared taste leads to the title\u201d: removing it moves the model 73% \u2192 62% (top-attention ratings: 74%); matched on timing and activity, each removal still costs 3.0 points vs 0.9 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Aladdin beats Harry Potter and the Chamber of Secrets mainly through popularity (+0.18); the history part adds +0.05."
     ],
-    "verdict": "Diagnosis: Aladdin wins mainly through popularity, and the history model adds to it through recent fans of Aladdin. None of these signals reads \u201cisn't animated\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: Aladdin wins mainly through popularity, and the history model adds to it through recent fans of Aladdin. None of these signals reads what \u201cfor grown-ups\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
     "agree": [
       79127,
       79508,
@@ -16,13 +16,13 @@
     ]
   },
   "score_split": {
-    "relevance": 0.10974660200647612,
+    "relevance": -0.1894929071200535,
     "popularity": 0.18298702999048821,
     "behaviour": 0.05155966577441354
   },
   "A": "Aladdin",
   "B": "Harry Potter and the Chamber of Secrets",
-  "query": "a fantasy movie that isn't animated",
+  "query": "a fantasy film for grown-ups",
   "p0": 0.7250284280609507,
   "evidence": [
     {
@@ -355,12 +355,12 @@
   },
   "ranking": {
     "A_before": 1,
-    "A_after": 1,
+    "A_after": 2,
     "B_before": 2,
-    "B_after": 2,
+    "B_after": 1,
     "top3_after": [
-      "Aladdin (1992)",
       "Harry Potter and the Chamber of Secrets (2002)",
+      "Aladdin (1992)",
       "Live and Let Die (1973)"
     ]
   },
@@ -948,6 +948,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1086,
-  "computed_at": "2026-10-28T16:45:37-0400",
-  "summary": "With 5 ratings (3 recent ratings of Aladdin by other people, 2 other ratings nearby), the model's preference for Aladdin over Harry Potter and the Chamber of Secrets goes from 73% to 44% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 71%. The full ranking still puts Aladdin at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T21:52:53-0400",
+  "summary": "With 5 ratings (3 recent ratings of Aladdin by other people, 2 other ratings nearby), the model's preference for Aladdin over Harry Potter and the Chamber of Secrets goes from 73% to 44% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 71%. In the full ranking, Aladdin moves from #1 to #2."
 }

@@ -206,6 +206,10 @@ def auto_ab(case_id: str):
                "beh_margin": rp["components"]["behaviour"][A] - rp["components"]["behaviour"][B]}
         _AUTO[case_id] = res
         return res
+    # not stored: pick A/B on the Demo's own ranking (live, TGAT-2 history model), the ranking the Demo shows
+    from .live import rank as _live_rank
+    lrows = _live_rank(w, case_id, "tgat2", "F0")["rows"]
+    order = [r["index"] for r in lrows]
     A = next((i for i in order if g[i] == 0), None)
     res = None
     if A is not None:
@@ -213,9 +217,10 @@ def auto_ab(case_id: str):
         for want in (2, 1):
             B = next((i for i in below if g[i] == want), None)
             if B is not None:
-                res = {"A_index": int(A), "B_index": int(B), "rank_A": rp["rank"][A], "rank_B": rp["rank"][B],
-                       "margin": rp["components"]["total"][A] - rp["components"]["total"][B],
-                       "beh_margin": rp["components"]["behaviour"][A] - rp["components"]["behaviour"][B]}
+                lr = {r["index"]: r for r in lrows}
+                res = {"A_index": int(A), "B_index": int(B), "rank_A": lr[A]["rank"], "rank_B": lr[B]["rank"],
+                       "margin": lr[A]["total"] - lr[B]["total"],
+                       "beh_margin": lr[A]["parts"]["behaviour"] - lr[B]["parts"]["behaviour"]}
                 break
     _AUTO[case_id] = res
     return res

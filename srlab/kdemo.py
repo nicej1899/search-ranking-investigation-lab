@@ -276,7 +276,7 @@ def _joint(ev, pats, split, A, B, u, query=""):
         hist.append(f"the member's ratings of {', '.join(l['to'] for l in own[:2])}")
     verdict = f"Diagnosis: {A} wins mainly through {drv}"
     verdict += (f", and the history model adds to it through {' and '.join(hist)}. " if hist else ". ")
-    verdict += f"None of these signals reads “{_exclusion(query)}”. Candidate fixes: "
+    verdict += f"None of these signals reads what “{_exclusion(query)}” rules out. Candidate fixes: "
     fx = ["make the ranker read the exclusion in the request"]
     if top == "popularity":
         fx.append("rely less on popularity for specific requests")
@@ -287,10 +287,14 @@ def _joint(ev, pats, split, A, B, u, query=""):
 
 
 def _exclusion(q):
-    """The exclusion part of a request ("a fantasy movie that isn't animated" -> "isn't animated")."""
+    """The exclusion part of a request ("a fantasy movie that isn't animated" -> "isn't animated"; "a fantasy film for grown-ups" -> "for grown-ups")."""
     import re
+    from .extra import IMPLIED
     m = re.search(r"\b(nothing|not|isn't|aren't|without|no)\b.*$", q or "")
-    return m.group(0).strip() if m else "the exclusion in the request"
+    if m:
+        return m.group(0).strip()
+    imp = next((ph for ph in IMPLIED if ph in (q or "").lower()), None)
+    return imp if imp else "the exclusion in the request"
 
 
 def _summary(o):

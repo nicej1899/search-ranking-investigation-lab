@@ -1,23 +1,23 @@
 {
-  "created": "2026-10-22T14:46:39-0400",
+  "created": "2026-10-28T21:50:06-0400",
   "split": "dev",
   "model": "F0",
   "searches": 2212,
-  "failed": 628,
-  "fail_rate": 0.28390596745027125,
+  "failed": 626,
+  "fail_rate": 0.283001808318264,
   "buckets": [
     {
       "cause": "popularity_over_intent",
       "name": "Popularity outweighed the search",
-      "n": 299,
-      "share": 0.47611464968152867,
+      "n": 302,
+      "share": 0.48242811501597443,
       "targeted_fix": "popularity",
-      "fix_rate": 0.6688963210702341,
-      "priority": 0.3184713375796178,
+      "fix_rate": 0.6655629139072847,
+      "priority": 0.3210862619808306,
       "other_fix_rates": {
-        "history": 0.18394648829431437,
-        "popularity": 0.6688963210702341,
-        "query": 0.22742474916387959
+        "history": 0.18211920529801323,
+        "popularity": 0.6655629139072847,
+        "query": 0.24834437086092714
       },
       "temgx_removal_resolves": null,
       "sub_ignored_exclusion": 0,
@@ -25,12 +25,12 @@
       "by_group": {
         "original": 89,
         "coldstart": 82,
-        "conversational": 128
+        "conversational": 131
       },
       "mean_parts": {
-        "behaviour": 0.17467874055438135,
-        "relevance": -0.3824740878470522,
-        "popularity": 0.5061036134645811
+        "behaviour": 0.17565874190832115,
+        "relevance": -0.3828373203200305,
+        "popularity": 0.5071712705336514
       },
       "examples": [
         {
@@ -182,28 +182,28 @@
     {
       "cause": "query_misread",
       "name": "The search text was misread",
-      "n": 299,
-      "share": 0.47611464968152867,
+      "n": 292,
+      "share": 0.46645367412140576,
       "targeted_fix": "query",
-      "fix_rate": 0.4983277591973244,
-      "priority": 0.2372611464968153,
+      "fix_rate": 0.4828767123287671,
+      "priority": 0.22523961661341854,
       "other_fix_rates": {
-        "history": 0.010033444816053512,
-        "popularity": 0.006688963210702341,
-        "query": 0.4983277591973244
+        "history": 0.0136986301369863,
+        "popularity": 0.00684931506849315,
+        "query": 0.4828767123287671
       },
       "temgx_removal_resolves": null,
-      "sub_ignored_exclusion": 116,
+      "sub_ignored_exclusion": 101,
       "little_history": 46,
       "by_group": {
         "original": 54,
         "coldstart": 46,
-        "conversational": 199
+        "conversational": 192
       },
       "mean_parts": {
-        "behaviour": 0.033942863215216834,
-        "relevance": 0.41738033723393847,
-        "popularity": 0.09075810068464239
+        "behaviour": 0.03862928581302886,
+        "relevance": 0.4104737337127986,
+        "popularity": 0.09418234108982852
       },
       "examples": [
         {
@@ -279,6 +279,24 @@
           }
         },
         {
+          "case_id": "C11-m496-t1429127159",
+          "query": "a fantasy film for grown-ups",
+          "A_title": "Space Jam (1996)",
+          "B_title": "Bewitched (2005)",
+          "rank_B": 15,
+          "n_history": 5,
+          "group": "conversational",
+          "A_index": 10,
+          "B_index": 0,
+          "sub": "ignored_exclusion",
+          "fix": {
+            "history": false,
+            "popularity": false,
+            "query": true,
+            "temgx_removal": null
+          }
+        },
+        {
           "case_id": "C12-m304-t1460134091",
           "query": "a musical, but not a romance",
           "A_title": "There's Something About Mary (1998)",
@@ -315,38 +333,20 @@
           }
         },
         {
-          "case_id": "C11-m496-t1429127159",
-          "query": "a fantasy movie that isn't animated",
-          "A_title": "Space Jam (1996)",
-          "B_title": "Beetlejuice (1988)",
-          "rank_B": 8,
-          "n_history": 5,
-          "group": "conversational",
-          "A_index": 10,
-          "B_index": 25,
-          "sub": "ignored_exclusion",
+          "case_id": "CS-D01-m377-t1445345873",
+          "query": "a funny animated movie for the whole family",
+          "A_title": "Lord of the Rings: The Return of the King, The (2003)",
+          "B_title": "Parent Trap, The (1998)",
+          "rank_B": 6,
+          "n_history": 1,
+          "group": "coldstart",
+          "A_index": 8,
+          "B_index": 14,
+          "sub": null,
           "fix": {
             "history": false,
             "popularity": false,
             "query": false,
-            "temgx_removal": null
-          }
-        },
-        {
-          "case_id": "C11-m417-t1461865590",
-          "query": "a fantasy movie that isn't animated",
-          "A_title": "Toy Story 3 (2010)",
-          "B_title": "Sucker Punch (2011)",
-          "rank_B": 6,
-          "n_history": 5,
-          "group": "conversational",
-          "A_index": 23,
-          "B_index": 7,
-          "sub": "ignored_exclusion",
-          "fix": {
-            "history": false,
-            "popularity": false,
-            "query": true,
             "temgx_removal": null
           }
         }
@@ -355,30 +355,48 @@
     {
       "cause": "history_over_intent",
       "name": "Viewing history outweighed the search",
-      "n": 30,
-      "share": 0.04777070063694268,
+      "n": 32,
+      "share": 0.051118210862619806,
       "targeted_fix": "history",
-      "fix_rate": 0.5333333333333333,
-      "priority": 0.025477707006369428,
+      "fix_rate": 0.53125,
+      "priority": 0.027156549520766772,
       "other_fix_rates": {
-        "history": 0.5333333333333333,
-        "popularity": 0.43333333333333335,
-        "query": 0.2
+        "history": 0.53125,
+        "popularity": 0.4375,
+        "query": 0.25
       },
-      "temgx_removal_resolves": 0.5666666666666667,
+      "temgx_removal_resolves": 0.5625,
       "sub_ignored_exclusion": 0,
       "little_history": 16,
       "by_group": {
         "original": 7,
         "coldstart": 16,
-        "conversational": 7
+        "conversational": 9
       },
       "mean_parts": {
-        "behaviour": 0.30050871130801116,
-        "relevance": -0.30558992606595076,
-        "popularity": 0.1772258079476436
+        "behaviour": 0.29996269826476674,
+        "relevance": -0.2939222356019213,
+        "popularity": 0.1755894539082834
       },
       "examples": [
+        {
+          "case_id": "C11-m17-t1455049377",
+          "query": "a fantasy film for grown-ups",
+          "A_title": "Super Size Me (2004)",
+          "B_title": "End of Days (1999)",
+          "rank_B": 4,
+          "n_history": 5,
+          "group": "conversational",
+          "A_index": 0,
+          "B_index": 17,
+          "sub": null,
+          "fix": {
+            "history": false,
+            "popularity": false,
+            "query": true,
+            "temgx_removal": false
+          }
+        },
         {
           "case_id": "C12-m486-t1428574157",
           "query": "a musical, but not a romance",
@@ -488,39 +506,21 @@
           }
         },
         {
-          "case_id": "CS-D03-m387-t1386689475",
-          "query": "a classic film noir detective story",
-          "A_title": "Child's Play 3 (1991)",
-          "B_title": "High Sierra (1941)",
-          "rank_B": 3,
-          "n_history": 1,
-          "group": "coldstart",
-          "A_index": 14,
-          "B_index": 21,
-          "sub": null,
-          "fix": {
-            "history": true,
-            "popularity": false,
-            "query": false,
-            "temgx_removal": true
-          }
-        },
-        {
-          "case_id": "CS-D03-m417-t1461865567",
-          "query": "a classic film noir detective story",
-          "A_title": "Clockwork Orange, A (1971)",
-          "B_title": "Grifters, The (1990)",
+          "case_id": "C11-m176-t1435523542",
+          "query": "a fantasy film for grown-ups",
+          "A_title": "Lord of the Rings, The (1978)",
+          "B_title": "13 Going on 30 (2004)",
           "rank_B": 2,
-          "n_history": 1,
-          "group": "coldstart",
-          "A_index": 3,
-          "B_index": 27,
+          "n_history": 5,
+          "group": "conversational",
+          "A_index": 5,
+          "B_index": 14,
           "sub": null,
           "fix": {
-            "history": true,
-            "popularity": true,
-            "query": false,
-            "temgx_removal": true
+            "history": false,
+            "popularity": false,
+            "query": true,
+            "temgx_removal": false
           }
         }
       ]
@@ -549,12 +549,12 @@
     },
     "conversational": {
       "searches": 636,
-      "failed": 334,
-      "fail_rate": 0.5251572327044025,
+      "failed": 332,
+      "fail_rate": 0.5220125786163522,
       "causes": {
-        "history_over_intent": 7,
-        "popularity_over_intent": 128,
-        "query_misread": 199
+        "history_over_intent": 9,
+        "popularity_over_intent": 131,
+        "query_misread": 192
       }
     }
   },
@@ -564,25 +564,25 @@
       "cause": "popularity_over_intent",
       "name": "Popularity outweighed the search",
       "fix": "popularity",
-      "expected_share_resolved": 0.3184713375796178
+      "expected_share_resolved": 0.3210862619808306
     },
     {
       "rank": 2,
       "cause": "query_misread",
       "name": "The search text was misread",
       "fix": "query",
-      "expected_share_resolved": 0.2372611464968153
+      "expected_share_resolved": 0.22523961661341854
     },
     {
       "rank": 3,
       "cause": "history_over_intent",
       "name": "Viewing history outweighed the search",
       "fix": "history",
-      "expected_share_resolved": 0.025477707006369428
+      "expected_share_resolved": 0.027156549520766772
     }
   ],
-  "explainer_model_calls": 350,
-  "wall_s": 6.4,
+  "explainer_model_calls": 370,
+  "wall_s": 7.1,
   "definitions": "Failure triage for one evaluation run: explain EVERY failed search, group failures by cause, and check how many\neach targeted fix would resolve. Run on DEV (the agent decides on DEV; FINAL is only used to test the chosen fixes).\n\nFailed search: explicit-intent query whose top-ranked title is judged not relevant (grade 0).\nA = that top title; B = the highest-ranked title with the best available grade (2, else 1).\nF0 is additive, so the lead of A over B splits exactly into behaviour + relevance + popularity parts.\n\nCause (one per failure, rule written before looking at the results):\n  query_misread        the query-title matcher itself scores A above B (relevance part of the lead > 0)\n     - ignored_exclusion   ... and the query says \"not/nothing/no/without/isn't\" and A breaks that exclusion\n  history_over_intent  relevance favours B, and the behaviour part is the largest part of A's lead\n  popularity_over_intent  relevance favours B, and the popularity part is the largest part of A's lead\nCross-cutting flag: little_history (1-4 prior ratings).\n\nTargeted fix check (\"resolved\" = B is no longer below A under the variant; all variants fit on DEV, so this is an\nin-sample DEV estimate - the held-out test is fixes.final_eval):\n  history     F2 history-length gate\n  popularity  F4 query-conditioned popularity gate\n  query       F3 negation-aware query relevance\nEvidence for history failures: TemGX-adapted selects 2 history events (select + verify by replay); we report how often\nremoving them alone resolves the failure.\n",
   "rows": [
     {
@@ -9588,29 +9588,29 @@
     {
       "case_id": "C11-m15-t1377476617",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 15,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 13,
-      "B_index": 2,
-      "A_title": "Sword in the Stone, The (1963)",
-      "B_title": "Evil Dead II (Dead by Dawn) (1987)",
+      "A_index": 3,
+      "B_index": 1,
+      "A_title": "Honey, I Blew Up the Kid (1992)",
+      "B_title": "What Dreams May Come (1998)",
       "rank_B": 2,
-      "lead": 0.1464444424745761,
+      "lead": 0.0825773908772991,
       "parts": {
-        "behaviour": -0.005621751650242285,
-        "relevance": 0.2171040414451859,
-        "popularity": -0.06503784732036741
+        "behaviour": 0.0007739771182013744,
+        "relevance": -0.03815859458690185,
+        "popularity": 0.11996200834599964
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
+      "cause": "popularity_over_intent",
+      "sub": null,
+      "A_breaks_exclusion": false,
       "fix": {
         "history": false,
-        "popularity": false,
+        "popularity": true,
         "query": true,
         "temgx_removal": null
       }
@@ -9678,31 +9678,31 @@
     {
       "case_id": "C11-m17-t1455049377",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 17,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 11,
+      "A_index": 0,
       "B_index": 17,
-      "A_title": "Star Wars: Episode II - Attack of the Clones (2002)",
+      "A_title": "Super Size Me (2004)",
       "B_title": "End of Days (1999)",
-      "rank_B": 6,
-      "lead": 0.3930037326098783,
+      "rank_B": 4,
+      "lead": 0.4957321278990585,
       "parts": {
-        "behaviour": 0.2607246837272363,
-        "relevance": -0.26089228337907255,
-        "popularity": 0.39317133226171463
+        "behaviour": 0.27450641342574483,
+        "relevance": -0.027143527606072526,
+        "popularity": 0.24836924207938627
       },
-      "cause": "popularity_over_intent",
+      "cause": "history_over_intent",
       "sub": null,
       "A_breaks_exclusion": false,
       "fix": {
         "history": false,
         "popularity": false,
         "query": true,
-        "temgx_removal": null
+        "temgx_removal": false
       }
     },
     {
@@ -9738,22 +9738,22 @@
     {
       "case_id": "C11-m20-t1376822996",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 20,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 12,
-      "B_index": 23,
+      "B_index": 15,
       "A_title": "Austin Powers: The Spy Who Shagged Me (1999)",
-      "B_title": "In the Name of the King: A Dungeon Siege Tale (2008)",
-      "rank_B": 7,
-      "lead": 0.806680361398221,
+      "B_title": "5,000 Fingers of Dr. T, The (1953)",
+      "rank_B": 6,
+      "lead": 0.6322767501275484,
       "parts": {
-        "behaviour": 0.3121691959491395,
-        "relevance": -0.389901105264959,
-        "popularity": 0.8844122707140404
+        "behaviour": 0.16289511495673978,
+        "relevance": -0.32336493816372225,
+        "popularity": 0.7927465733345309
       },
       "cause": "popularity_over_intent",
       "sub": null,
@@ -9768,24 +9768,24 @@
     {
       "case_id": "C11-m23-t1458941000",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 23,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 21,
-      "B_index": 3,
+      "B_index": 8,
       "A_title": "Star Wars: Episode V - The Empire Strikes Back (1980)",
-      "B_title": "Evil Dead, The (1981)",
-      "rank_B": 4,
-      "lead": 0.4933062870217513,
+      "B_title": "Harry Potter and the Chamber of Secrets (2002)",
+      "rank_B": 2,
+      "lead": 0.3195356942519081,
       "parts": {
-        "behaviour": 0.09320270715810215,
-        "relevance": -0.11537376736450611,
-        "popularity": 0.515477347228155
+        "behaviour": 0.0014503231131136884,
+        "relevance": 0.11601511331039305,
+        "popularity": 0.2020702578284012
       },
-      "cause": "popularity_over_intent",
+      "cause": "query_misread",
       "sub": null,
       "A_breaks_exclusion": false,
       "fix": {
@@ -9888,29 +9888,29 @@
     {
       "case_id": "C11-m28-t1405816122",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 28,
       "n_history": 73,
       "little_history": false,
       "has_negation": true,
-      "A_index": 10,
-      "B_index": 20,
-      "A_title": "Waking Life (2001)",
-      "B_title": "Hancock (2008)",
-      "rank_B": 6,
-      "lead": 0.30613278066441185,
+      "A_index": 6,
+      "B_index": 26,
+      "A_title": "Shrek 2 (2004)",
+      "B_title": "Fast Runner, The (Atanarjuat) (2001)",
+      "rank_B": 4,
+      "lead": 0.005879538841033538,
       "parts": {
-        "behaviour": 0.01661643358612619,
-        "relevance": 0.27391875420876755,
-        "popularity": 0.015597592869518118
+        "behaviour": 0.07321409876622052,
+        "relevance": -0.6832950340054478,
+        "popularity": 0.6159604740802608
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": false,
+        "popularity": true,
         "query": true,
         "temgx_removal": null
       }
@@ -10008,26 +10008,26 @@
     {
       "case_id": "C11-m40-t1458933695",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 40,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 6,
+      "A_index": 0,
       "B_index": 24,
-      "A_title": "Toy Story 3 (2010)",
+      "A_title": "Back to the Future Part III (1990)",
       "B_title": "Santa Clause, The (1994)",
-      "rank_B": 2,
-      "lead": 0.08571708194335415,
+      "rank_B": 5,
+      "lead": 0.425727965955055,
       "parts": {
-        "behaviour": 0.03499740059850373,
-        "relevance": 0.23328859502080435,
-        "popularity": -0.18256891367595363
+        "behaviour": 0.03326197330433889,
+        "relevance": 0.392465992650716,
+        "popularity": 0.0
       },
       "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
+      "sub": null,
+      "A_breaks_exclusion": false,
       "fix": {
         "history": false,
         "popularity": false,
@@ -10178,36 +10178,6 @@
       "cause": "popularity_over_intent",
       "sub": null,
       "A_breaks_exclusion": false,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": true,
-        "temgx_removal": null
-      }
-    },
-    {
-      "case_id": "C11-m59-t1393541892",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 59,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 22,
-      "B_index": 17,
-      "A_title": "How the Grinch Stole Christmas! (1966)",
-      "B_title": "Herbie Rides Again (1974)",
-      "rank_B": 2,
-      "lead": 0.4757226289425571,
-      "parts": {
-        "behaviour": -0.08778444409160618,
-        "relevance": 0.5396876494859775,
-        "popularity": 0.023819423548185954
-      },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
       "fix": {
         "history": false,
         "popularity": false,
@@ -10428,22 +10398,22 @@
     {
       "case_id": "C11-m72-t1464196245",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 72,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 10,
-      "B_index": 19,
+      "B_index": 9,
       "A_title": "Nightmare Before Christmas, The (1993)",
-      "B_title": "Dark Crystal, The (1982)",
+      "B_title": "Freaky Friday (2003)",
       "rank_B": 4,
-      "lead": 0.6440480296110214,
+      "lead": 0.631495381122491,
       "parts": {
-        "behaviour": 0.00841686827727639,
-        "relevance": 0.4147746057730892,
-        "popularity": 0.22085655556065575
+        "behaviour": 0.015023994040560346,
+        "relevance": 0.3109058500090649,
+        "popularity": 0.3055655370728661
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
@@ -10578,7 +10548,7 @@
     {
       "case_id": "C11-m75-t1439165633",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 75,
       "n_history": 5,
@@ -10589,10 +10559,10 @@
       "A_title": "Sword in the Stone, The (1963)",
       "B_title": "End of Days (1999)",
       "rank_B": 2,
-      "lead": 0.21888736530813913,
+      "lead": 0.11322214593872415,
       "parts": {
         "behaviour": 0.09031071646924294,
-        "relevance": -0.010031206559198091,
+        "relevance": -0.11569642592861329,
         "popularity": 0.13860785539809456
       },
       "cause": "popularity_over_intent",
@@ -10726,36 +10696,6 @@
       }
     },
     {
-      "case_id": "C11-m79-t1377307766",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 79,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 16,
-      "B_index": 0,
-      "A_title": "Little Mermaid, The (1989)",
-      "B_title": "Big Fish (2003)",
-      "rank_B": 3,
-      "lead": 0.3204263821889659,
-      "parts": {
-        "behaviour": 0.002691327673096766,
-        "relevance": 0.30456188624092606,
-        "popularity": 0.013173168274943026
-      },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": true,
-        "temgx_removal": null
-      }
-    },
-    {
       "case_id": "C12-m79-t1377307766",
       "qid": "C12",
       "query": "a musical, but not a romance",
@@ -10818,22 +10758,22 @@
     {
       "case_id": "C11-m102-t1431954362",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 102,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 19,
+      "A_index": 27,
       "B_index": 10,
-      "A_title": "Into the Wild (2007)",
+      "A_title": "Once Upon a Time in America (1984)",
       "B_title": "Fast Runner, The (Atanarjuat) (2001)",
-      "rank_B": 5,
-      "lead": 0.1917354611611306,
+      "rank_B": 2,
+      "lead": 0.052546794234786365,
       "parts": {
-        "behaviour": -0.10556933200435867,
-        "relevance": -0.06654956984159233,
-        "popularity": 0.3638543630070817
+        "behaviour": -0.1602674639022151,
+        "relevance": -0.05365067324416728,
+        "popularity": 0.26646493138116867
       },
       "cause": "popularity_over_intent",
       "sub": null,
@@ -10908,7 +10848,7 @@
     {
       "case_id": "C11-m103-t1377129885",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 103,
       "n_history": 261,
@@ -10918,14 +10858,14 @@
       "B_index": 12,
       "A_title": "While You Were Sleeping (1995)",
       "B_title": "Kid in King Arthur's Court, A (1995)",
-      "rank_B": 8,
-      "lead": 0.5760563108515089,
+      "rank_B": 4,
+      "lead": 0.7876016898338136,
       "parts": {
         "behaviour": 0.18642969989419186,
-        "relevance": -0.08556458362111696,
+        "relevance": 0.12598079536118778,
         "popularity": 0.47519119457843406
       },
-      "cause": "popularity_over_intent",
+      "cause": "query_misread",
       "sub": null,
       "A_breaks_exclusion": false,
       "fix": {
@@ -11022,6 +10962,36 @@
         "history": true,
         "popularity": true,
         "query": false,
+        "temgx_removal": null
+      }
+    },
+    {
+      "case_id": "C11-m104-t1446571569",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 104,
+      "n_history": 5,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 29,
+      "B_index": 23,
+      "A_title": "There's Something About Mary (1998)",
+      "B_title": "Princess Bride, The (1987)",
+      "rank_B": 2,
+      "lead": 0.01547237315044625,
+      "parts": {
+        "behaviour": 0.0024251679119877967,
+        "relevance": 0.06300777160327664,
+        "popularity": -0.04996056636481827
+      },
+      "cause": "query_misread",
+      "sub": null,
+      "A_breaks_exclusion": false,
+      "fix": {
+        "history": false,
+        "popularity": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -11208,7 +11178,7 @@
     {
       "case_id": "C11-m111-t1442535641",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 111,
       "n_history": 5,
@@ -11219,10 +11189,10 @@
       "A_title": "Nightmare Before Christmas, The (1993)",
       "B_title": "Indian in the Cupboard, The (1995)",
       "rank_B": 2,
-      "lead": 0.7920544406028351,
+      "lead": 0.4421808676076455,
       "parts": {
         "behaviour": 0.08930939240246981,
-        "relevance": 0.4997425192495033,
+        "relevance": 0.1498689462543139,
         "popularity": 0.20300252895086196
       },
       "cause": "query_misread",
@@ -11231,7 +11201,7 @@
       "fix": {
         "history": false,
         "popularity": false,
-        "query": true,
+        "query": false,
         "temgx_removal": null
       }
     },
@@ -11538,7 +11508,7 @@
     {
       "case_id": "C11-m122-t1447269105",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 122,
       "n_history": 5,
@@ -11549,10 +11519,10 @@
       "A_title": "Toy Story 2 (1999)",
       "B_title": "Princess Bride, The (1987)",
       "rank_B": 2,
-      "lead": 0.23113999775204963,
+      "lead": 0.09659782969062003,
       "parts": {
         "behaviour": -0.0010864527471970975,
-        "relevance": 0.31907159366993243,
+        "relevance": 0.1845294256085026,
         "popularity": -0.08684514317068559
       },
       "cause": "query_misread",
@@ -11688,7 +11658,7 @@
     {
       "case_id": "C11-m124-t1474141548",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 124,
       "n_history": 5,
@@ -11698,11 +11668,11 @@
       "B_index": 17,
       "A_title": "That Thing You Do! (1996)",
       "B_title": "Nutty Professor, The (1996)",
-      "rank_B": 2,
-      "lead": 0.3085865722219332,
+      "rank_B": 3,
+      "lead": 0.2875427806708606,
       "parts": {
         "behaviour": -0.03992578727367799,
-        "relevance": 0.48258949358377246,
+        "relevance": 0.4615457020326995,
         "popularity": -0.13407713408816113
       },
       "cause": "query_misread",
@@ -11711,7 +11681,7 @@
       "fix": {
         "history": false,
         "popularity": false,
-        "query": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -11896,6 +11866,36 @@
       }
     },
     {
+      "case_id": "C11-m151-t1450572437",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 151,
+      "n_history": 5,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 13,
+      "B_index": 21,
+      "A_title": "Third Man, The (1949)",
+      "B_title": "Lost Highway (1997)",
+      "rank_B": 2,
+      "lead": 0.09814022312065407,
+      "parts": {
+        "behaviour": 0.03311959905371104,
+        "relevance": -0.02156451283376315,
+        "popularity": 0.08658513690070593
+      },
+      "cause": "popularity_over_intent",
+      "sub": null,
+      "A_breaks_exclusion": false,
+      "fix": {
+        "history": false,
+        "popularity": false,
+        "query": true,
+        "temgx_removal": null
+      }
+    },
+    {
       "case_id": "C07-m176-t1435523542",
       "qid": "C07",
       "query": "a drama, but please nothing depressing",
@@ -11958,31 +11958,31 @@
     {
       "case_id": "C11-m176-t1435523542",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 176,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 5,
-      "B_index": 0,
+      "B_index": 14,
       "A_title": "Lord of the Rings, The (1978)",
-      "B_title": "Queen of the Damned (2002)",
+      "B_title": "13 Going on 30 (2004)",
       "rank_B": 2,
-      "lead": 0.32946732151992486,
+      "lead": 0.22899421937872777,
       "parts": {
-        "behaviour": 0.08989955062572369,
-        "relevance": 0.09745479990736361,
-        "popularity": 0.14211297098683748
+        "behaviour": 0.29729579554174224,
+        "relevance": -0.08389916903253258,
+        "popularity": 0.015597592869518118
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "history_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
         "popularity": false,
         "query": true,
-        "temgx_removal": null
+        "temgx_removal": false
       }
     },
     {
@@ -12108,29 +12108,29 @@
     {
       "case_id": "C11-m188-t1439465085",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 188,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 3,
-      "B_index": 18,
+      "B_index": 19,
       "A_title": "Lady and the Tramp (1955)",
-      "B_title": "Ghost (1990)",
+      "B_title": "Down to Earth (2001)",
       "rank_B": 3,
-      "lead": 0.27940370651332347,
+      "lead": 0.2512653526224622,
       "parts": {
-        "behaviour": -0.09959339530799244,
-        "relevance": 0.555563940033426,
-        "popularity": -0.1765668382121101
+        "behaviour": 0.1838122264481153,
+        "relevance": -0.2702866115725022,
+        "popularity": 0.337739737746849
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": false,
+        "popularity": true,
         "query": true,
         "temgx_removal": null
       }
@@ -12286,6 +12286,36 @@
       }
     },
     {
+      "case_id": "C11-m195-t1460954058",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 195,
+      "n_history": 5,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 11,
+      "B_index": 29,
+      "A_title": "Bug's Life, A (1998)",
+      "B_title": "Indian in the Cupboard, The (1995)",
+      "rank_B": 2,
+      "lead": 0.06835663284316218,
+      "parts": {
+        "behaviour": 0.12776246165166866,
+        "relevance": -0.2538761970020087,
+        "popularity": 0.1944703681935021
+      },
+      "cause": "popularity_over_intent",
+      "sub": null,
+      "A_breaks_exclusion": true,
+      "fix": {
+        "history": true,
+        "popularity": true,
+        "query": true,
+        "temgx_removal": null
+      }
+    },
+    {
       "case_id": "C12-m195-t1460954058",
       "qid": "C12",
       "query": "a musical, but not a romance",
@@ -12406,6 +12436,36 @@
       }
     },
     {
+      "case_id": "C11-m198-t1401308834",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 198,
+      "n_history": 357,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 6,
+      "B_index": 22,
+      "A_title": "Bringing Up Baby (1938)",
+      "B_title": "Super Mario Bros. (1993)",
+      "rank_B": 2,
+      "lead": 0.36375416885517886,
+      "parts": {
+        "behaviour": 0.1217533468856696,
+        "relevance": 0.2808519421547455,
+        "popularity": -0.03885112018523616
+      },
+      "cause": "query_misread",
+      "sub": null,
+      "A_breaks_exclusion": false,
+      "fix": {
+        "history": false,
+        "popularity": false,
+        "query": true,
+        "temgx_removal": null
+      }
+    },
+    {
       "case_id": "C07-m202-t1390094435",
       "qid": "C07",
       "query": "a drama, but please nothing depressing",
@@ -12468,30 +12528,30 @@
     {
       "case_id": "C11-m202-t1390094435",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 202,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 8,
-      "B_index": 10,
+      "B_index": 6,
       "A_title": "Who Framed Roger Rabbit? (1988)",
-      "B_title": "Mummy, The (1999)",
+      "B_title": "Something Wicked This Way Comes (1983)",
       "rank_B": 2,
-      "lead": 0.07048708921112423,
+      "lead": 0.1701164069392227,
       "parts": {
-        "behaviour": 0.001519491904616449,
-        "relevance": 0.03411791656869778,
-        "popularity": 0.03484968073780986
+        "behaviour": 0.05052004777706978,
+        "relevance": -0.339997242546763,
+        "popularity": 0.45959360170891594
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": false,
-        "query": true,
+        "popularity": true,
+        "query": false,
         "temgx_removal": null
       }
     },
@@ -12558,24 +12618,24 @@
     {
       "case_id": "C11-m209-t1473705521",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 209,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 20,
-      "B_index": 19,
+      "B_index": 24,
       "A_title": "Austin Powers: The Spy Who Shagged Me (1999)",
-      "B_title": "Harry Potter and the Order of the Phoenix (2007)",
+      "B_title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
       "rank_B": 2,
-      "lead": 0.20562929173090838,
+      "lead": 0.008561020601865144,
       "parts": {
-        "behaviour": 0.017253430765010624,
-        "relevance": -0.05609543236451797,
-        "popularity": 0.24447129333041562
+        "behaviour": -0.011724322772769552,
+        "relevance": 0.09914453798770373,
+        "popularity": -0.078859194613069
       },
-      "cause": "popularity_over_intent",
+      "cause": "query_misread",
       "sub": null,
       "A_breaks_exclusion": false,
       "fix": {
@@ -12706,36 +12766,6 @@
       }
     },
     {
-      "case_id": "C11-m221-t1391346556",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 221,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 11,
-      "B_index": 20,
-      "A_title": "Simpsons Movie, The (2007)",
-      "B_title": "Pirates of the Caribbean: Dead Man's Chest (2006)",
-      "rank_B": 2,
-      "lead": 0.13037647393910112,
-      "parts": {
-        "behaviour": -0.019507025897018762,
-        "relevance": 0.2561397709286688,
-        "popularity": -0.1062562710925489
-      },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": true,
-        "temgx_removal": null
-      }
-    },
-    {
       "case_id": "C07-m226-t1447189556",
       "qid": "C07",
       "query": "a drama, but please nothing depressing",
@@ -12828,7 +12858,7 @@
     {
       "case_id": "C11-m226-t1447189556",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 226,
       "n_history": 5,
@@ -12838,21 +12868,21 @@
       "B_index": 5,
       "A_title": "Super Size Me (2004)",
       "B_title": "Evil Dead II (Dead by Dawn) (1987)",
-      "rank_B": 2,
-      "lead": 0.10572093446836517,
+      "rank_B": 5,
+      "lead": 0.6793522648984225,
       "parts": {
         "behaviour": 0.08999412965870113,
-        "relevance": -0.04537919685383063,
+        "relevance": 0.5282521335762266,
         "popularity": 0.06110600166349467
       },
-      "cause": "history_over_intent",
+      "cause": "query_misread",
       "sub": null,
       "A_breaks_exclusion": false,
       "fix": {
         "history": false,
         "popularity": false,
-        "query": true,
-        "temgx_removal": false
+        "query": false,
+        "temgx_removal": null
       }
     },
     {
@@ -12888,7 +12918,7 @@
     {
       "case_id": "C11-m230-t1433089472",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 230,
       "n_history": 5,
@@ -12899,10 +12929,10 @@
       "A_title": "Who Framed Roger Rabbit? (1988)",
       "B_title": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
       "rank_B": 2,
-      "lead": 0.06652529139944008,
+      "lead": 0.08651572683815045,
       "parts": {
         "behaviour": 0.014422191774841525,
-        "relevance": 0.08163311311691834,
+        "relevance": 0.10162354855562894,
         "popularity": -0.029530013492319762
       },
       "cause": "query_misread",
@@ -13008,22 +13038,22 @@
     {
       "case_id": "C11-m232-t1448815881",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 232,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 19,
-      "B_index": 7,
+      "B_index": 29,
       "A_title": "Nightmare Before Christmas, The (1993)",
-      "B_title": "Willy Wonka & the Chocolate Factory (1971)",
-      "rank_B": 4,
-      "lead": 0.7472045367188538,
+      "B_title": "Lemony Snicket's A Series of Unfortunate Events (2004)",
+      "rank_B": 3,
+      "lead": 0.5977077924128191,
       "parts": {
-        "behaviour": -0.00025864875760767125,
-        "relevance": 0.8166493221531719,
-        "popularity": -0.06918613667671031
+        "behaviour": 0.06697659783079493,
+        "relevance": 0.16406840506398623,
+        "popularity": 0.3666627895180379
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
@@ -13058,36 +13088,6 @@
       "cause": "query_misread",
       "sub": null,
       "A_breaks_exclusion": false,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": true,
-        "temgx_removal": null
-      }
-    },
-    {
-      "case_id": "C11-m236-t1410630355",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 236,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 22,
-      "B_index": 18,
-      "A_title": "Incredibles, The (2004)",
-      "B_title": "Craft, The (1996)",
-      "rank_B": 2,
-      "lead": 0.3104620381398926,
-      "parts": {
-        "behaviour": 0.025623389050049322,
-        "relevance": 0.09552381250062991,
-        "popularity": 0.18931483658921344
-      },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
       "fix": {
         "history": false,
         "popularity": false,
@@ -13308,7 +13308,7 @@
     {
       "case_id": "C11-m246-t1467643895",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 246,
       "n_history": 5,
@@ -13318,19 +13318,19 @@
       "B_index": 27,
       "A_title": "Incredibles, The (2004)",
       "B_title": "Lady in the Water (2006)",
-      "rank_B": 4,
-      "lead": 0.8792168331400831,
+      "rank_B": 2,
+      "lead": 0.2559511839923072,
       "parts": {
         "behaviour": 0.32502248613336904,
-        "relevance": 0.0020396985229484965,
+        "relevance": -0.6212259506248273,
         "popularity": 0.5521546484837656
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": false,
+        "popularity": true,
         "query": true,
         "temgx_removal": null
       }
@@ -13422,6 +13422,36 @@
         "history": false,
         "popularity": false,
         "query": false,
+        "temgx_removal": null
+      }
+    },
+    {
+      "case_id": "C11-m248-t1377202547",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 248,
+      "n_history": 651,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 4,
+      "B_index": 13,
+      "A_title": "Four Weddings and a Funeral (1994)",
+      "B_title": "Fall, The (2006)",
+      "rank_B": 3,
+      "lead": 0.06913264913803174,
+      "parts": {
+        "behaviour": -0.12090241774826321,
+        "relevance": -0.42960151139050273,
+        "popularity": 0.619636578276798
+      },
+      "cause": "popularity_over_intent",
+      "sub": null,
+      "A_breaks_exclusion": false,
+      "fix": {
+        "history": true,
+        "popularity": true,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -13548,30 +13578,30 @@
     {
       "case_id": "C11-m250-t1470676715",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 250,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 22,
-      "B_index": 7,
-      "A_title": "War of the Worlds (2005)",
-      "B_title": "Bill & Ted's Bogus Journey (1991)",
-      "rank_B": 5,
-      "lead": 0.5745195694925493,
+      "A_index": 1,
+      "B_index": 2,
+      "A_title": "While You Were Sleeping (1995)",
+      "B_title": "After Life (Wandafuru raifu) (1998)",
+      "rank_B": 4,
+      "lead": 0.8053624568596727,
       "parts": {
-        "behaviour": 0.06693732005137425,
-        "relevance": 0.305511991612774,
-        "popularity": 0.20207025782840132
+        "behaviour": 0.308393025029596,
+        "relevance": -0.27937069114659785,
+        "popularity": 0.7763401229766749
       },
-      "cause": "query_misread",
+      "cause": "popularity_over_intent",
       "sub": null,
       "A_breaks_exclusion": false,
       "fix": {
         "history": false,
         "popularity": false,
-        "query": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -13908,7 +13938,7 @@
     {
       "case_id": "C11-m281-t1378488934",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 281,
       "n_history": 5,
@@ -13919,10 +13949,10 @@
       "A_title": "Spider-Man (2002)",
       "B_title": "Evil Dead II (Dead by Dawn) (1987)",
       "rank_B": 2,
-      "lead": 0.13362373337925493,
+      "lead": 0.2468907885190359,
       "parts": {
         "behaviour": 0.007661678603018113,
-        "relevance": -0.11714938226267746,
+        "relevance": -0.0038823271228963785,
         "popularity": 0.24311143703891425
       },
       "cause": "popularity_over_intent",
@@ -13930,7 +13960,7 @@
       "A_breaks_exclusion": false,
       "fix": {
         "history": false,
-        "popularity": true,
+        "popularity": false,
         "query": false,
         "temgx_removal": null
       }
@@ -14028,7 +14058,7 @@
     {
       "case_id": "C11-m284-t1449626093",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 284,
       "n_history": 5,
@@ -14039,10 +14069,10 @@
       "A_title": "Incredibles, The (2004)",
       "B_title": "Indiana Jones and the Temple of Doom (1984)",
       "rank_B": 2,
-      "lead": 0.29104820179486346,
+      "lead": 0.01785964873656032,
       "parts": {
         "behaviour": 0.016761843534002507,
-        "relevance": 0.2948528418480443,
+        "relevance": 0.021664288789740915,
         "popularity": -0.02056648358718316
       },
       "cause": "query_misread",
@@ -14178,22 +14208,22 @@
     {
       "case_id": "C11-m290-t1453051417",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 290,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 8,
-      "B_index": 7,
+      "B_index": 28,
       "A_title": "Beauty and the Beast (1991)",
-      "B_title": "Phantom of the Paradise (1974)",
-      "rank_B": 4,
-      "lead": 0.858564519942814,
+      "B_title": "Lovely Bones, The (2009)",
+      "rank_B": 5,
+      "lead": 0.8602157054443433,
       "parts": {
-        "behaviour": -0.012796125089063179,
-        "relevance": 0.012448663801047477,
-        "popularity": 0.8589119812308299
+        "behaviour": -0.02149800316308749,
+        "relevance": 0.08783957469696846,
+        "popularity": 0.7938741339104625
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
@@ -14201,7 +14231,7 @@
       "fix": {
         "history": false,
         "popularity": false,
-        "query": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -14328,29 +14358,29 @@
     {
       "case_id": "C11-m297-t1447516841",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 297,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 12,
-      "B_index": 5,
-      "A_title": "Three Musketeers, The (1993)",
-      "B_title": "House II: The Second Story (1987)",
-      "rank_B": 2,
-      "lead": 0.22095426094753612,
+      "A_index": 21,
+      "B_index": 17,
+      "A_title": "It Could Happen to You (1994)",
+      "B_title": "Willy Wonka & the Chocolate Factory (1971)",
+      "rank_B": 3,
+      "lead": 0.036017368509032144,
       "parts": {
-        "behaviour": 0.35438452486510086,
-        "relevance": -0.6952065953967046,
-        "popularity": 0.56177633147914
+        "behaviour": -0.2431755578688301,
+        "relevance": 0.7013361153191597,
+        "popularity": -0.4221431889412974
       },
-      "cause": "popularity_over_intent",
+      "cause": "query_misread",
       "sub": null,
       "A_breaks_exclusion": false,
       "fix": {
-        "history": true,
-        "popularity": true,
+        "history": false,
+        "popularity": false,
         "query": false,
         "temgx_removal": null
       }
@@ -14472,36 +14502,6 @@
         "history": false,
         "popularity": false,
         "query": false,
-        "temgx_removal": null
-      }
-    },
-    {
-      "case_id": "C11-m304-t1460134091",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 304,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 11,
-      "B_index": 17,
-      "A_title": "Aladdin (1992)",
-      "B_title": "Harry Potter and the Chamber of Secrets (2002)",
-      "rank_B": 2,
-      "lead": 0.29211133542169176,
-      "parts": {
-        "behaviour": -0.0006222965752724352,
-        "relevance": 0.10974660200647612,
-        "popularity": 0.18298702999048821
-      },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": true,
         "temgx_removal": null
       }
     },
@@ -14688,29 +14688,29 @@
     {
       "case_id": "C11-m316-t1430361433",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 316,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 4,
-      "B_index": 5,
+      "B_index": 9,
       "A_title": "Lion King, The (1994)",
-      "B_title": "Evil Dead II (Dead by Dawn) (1987)",
-      "rank_B": 2,
-      "lead": 0.3447874590067883,
+      "B_title": "Death Becomes Her (1992)",
+      "rank_B": 4,
+      "lead": 0.3171902763170955,
       "parts": {
-        "behaviour": 0.12138676619997105,
-        "relevance": -0.1292674451349629,
-        "popularity": 0.35266813794178
+        "behaviour": 0.23408225219289508,
+        "relevance": -0.4185993507522373,
+        "popularity": 0.5017073748764378
       },
       "cause": "popularity_over_intent",
       "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": false,
+        "popularity": true,
         "query": true,
         "temgx_removal": null
       }
@@ -14838,7 +14838,7 @@
     {
       "case_id": "C11-m318-t1461351651",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 318,
       "n_history": 5,
@@ -14848,11 +14848,11 @@
       "B_index": 0,
       "A_title": "Sword in the Stone, The (1963)",
       "B_title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
-      "rank_B": 3,
-      "lead": 0.19086815574790905,
+      "rank_B": 2,
+      "lead": 0.008210149811228362,
       "parts": {
         "behaviour": -0.07981473883759223,
-        "relevance": 0.6952959469990725,
+        "relevance": 0.5126379410623919,
         "popularity": -0.4246130524135712
       },
       "cause": "query_misread",
@@ -14958,7 +14958,7 @@
     {
       "case_id": "C11-m322-t1422640071",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 322,
       "n_history": 5,
@@ -14969,18 +14969,18 @@
       "A_title": "Monsters, Inc. (2001)",
       "B_title": "Crow, The (1994)",
       "rank_B": 2,
-      "lead": 0.023895244751000133,
+      "lead": 0.17056391444716135,
       "parts": {
         "behaviour": 0.012717396657918989,
-        "relevance": -0.07282354152120929,
+        "relevance": 0.07384512817495192,
         "popularity": 0.08400138961429043
       },
-      "cause": "popularity_over_intent",
-      "sub": null,
+      "cause": "query_misread",
+      "sub": "ignored_exclusion",
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": true,
+        "popularity": false,
         "query": true,
         "temgx_removal": null
       }
@@ -15076,36 +15076,6 @@
       }
     },
     {
-      "case_id": "C11-m325-t1419880402",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 325,
-      "n_history": 91,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 16,
-      "B_index": 19,
-      "A_title": "Aqua Teen Hunger Force Colon Movie Film for Theaters (2007)",
-      "B_title": "Where the Wild Things Are (2009)",
-      "rank_B": 2,
-      "lead": 0.30890416561897394,
-      "parts": {
-        "behaviour": -0.010483936181593045,
-        "relevance": 0.4760916465004439,
-        "popularity": -0.15670354469987682
-      },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": true,
-        "temgx_removal": null
-      }
-    },
-    {
       "case_id": "C12-m325-t1419880402",
       "qid": "C12",
       "query": "a musical, but not a romance",
@@ -15192,36 +15162,6 @@
         "history": false,
         "popularity": false,
         "query": false,
-        "temgx_removal": null
-      }
-    },
-    {
-      "case_id": "C11-m338-t1460182094",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 338,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 22,
-      "B_index": 3,
-      "A_title": "Robin Hood (1973)",
-      "B_title": "Harry Potter and the Goblet of Fire (2005)",
-      "rank_B": 2,
-      "lead": 0.04654494745860682,
-      "parts": {
-        "behaviour": -0.03189194440828444,
-        "relevance": 0.1819417039243627,
-        "popularity": -0.10350481205747136
-      },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
-      "A_breaks_exclusion": true,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": true,
         "temgx_removal": null
       }
     },
@@ -15348,7 +15288,7 @@
     {
       "case_id": "C11-m343-t1420495320",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 343,
       "n_history": 5,
@@ -15359,10 +15299,10 @@
       "A_title": "Heavy Metal (1981)",
       "B_title": "Fisher King, The (1991)",
       "rank_B": 2,
-      "lead": 0.0983006972406888,
+      "lead": 0.10842572298237352,
       "parts": {
         "behaviour": 0.024347277503330517,
-        "relevance": 0.08725581089482981,
+        "relevance": 0.09738083663651453,
         "popularity": -0.013302391157471394
       },
       "cause": "query_misread",
@@ -15438,22 +15378,22 @@
     {
       "case_id": "C11-m347-t1378849938",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 347,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 11,
-      "B_index": 27,
+      "B_index": 10,
       "A_title": "Lord of the Rings, The (1978)",
-      "B_title": "Harry Potter and the Goblet of Fire (2005)",
-      "rank_B": 3,
-      "lead": 0.38673642262246766,
+      "B_title": "Borrowers, The (1997)",
+      "rank_B": 2,
+      "lead": 0.19809604259784286,
       "parts": {
-        "behaviour": 0.02841350777984626,
-        "relevance": 0.5433227705089887,
-        "popularity": -0.1849998556663671
+        "behaviour": 0.04440658470594663,
+        "relevance": 0.08357105009272559,
+        "popularity": 0.07011840779917092
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
@@ -15558,7 +15498,7 @@
     {
       "case_id": "C11-m365-t1445546446",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 365,
       "n_history": 5,
@@ -15568,11 +15508,11 @@
       "B_index": 3,
       "A_title": "Shrek (2001)",
       "B_title": "Last Action Hero (1993)",
-      "rank_B": 2,
-      "lead": 0.061617704134167006,
+      "rank_B": 3,
+      "lead": 0.19360789115240395,
       "parts": {
         "behaviour": 0.09609935745098531,
-        "relevance": -0.23507910185270386,
+        "relevance": -0.1030889148344667,
         "popularity": 0.2005974485358853
       },
       "cause": "popularity_over_intent",
@@ -15580,7 +15520,7 @@
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": true,
+        "popularity": false,
         "query": true,
         "temgx_removal": null
       }
@@ -15738,7 +15678,7 @@
     {
       "case_id": "C11-m377-t1445345887",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 377,
       "n_history": 5,
@@ -15749,10 +15689,10 @@
       "A_title": "Close Encounters of the Third Kind (1977)",
       "B_title": "Kid, The (2000)",
       "rank_B": 2,
-      "lead": 0.3671653288444001,
+      "lead": 0.6763188946514669,
       "parts": {
         "behaviour": 0.356464777759823,
-        "relevance": -0.3858400749373263,
+        "relevance": -0.07668650913025932,
         "popularity": 0.3965406260219035
       },
       "cause": "popularity_over_intent",
@@ -15888,7 +15828,7 @@
     {
       "case_id": "C11-m406-t1424349179",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 406,
       "n_history": 5,
@@ -15899,10 +15839,10 @@
       "A_title": "Lion King, The (1994)",
       "B_title": "Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005)",
       "rank_B": 2,
-      "lead": 0.26235499463393674,
+      "lead": 0.08848918637028236,
       "parts": {
         "behaviour": -0.002024895010583422,
-        "relevance": -0.027182246633765228,
+        "relevance": -0.2010480548974195,
         "popularity": 0.2915621362782853
       },
       "cause": "popularity_over_intent",
@@ -15910,8 +15850,8 @@
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": false,
-        "query": true,
+        "popularity": true,
+        "query": false,
         "temgx_removal": null
       }
     },
@@ -16128,25 +16068,25 @@
     {
       "case_id": "C11-m417-t1461865590",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 417,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 23,
-      "B_index": 7,
+      "B_index": 2,
       "A_title": "Toy Story 3 (2010)",
-      "B_title": "Sucker Punch (2011)",
+      "B_title": "Red Shoes, The (1948)",
       "rank_B": 6,
-      "lead": 1.2515623415834658,
+      "lead": 0.8278270280758994,
       "parts": {
-        "behaviour": 0.05713065334058695,
-        "relevance": 0.8371306950071166,
-        "popularity": 0.35730099323576203
+        "behaviour": 0.3679442825527285,
+        "relevance": -0.18063717052978756,
+        "popularity": 0.6405199160529582
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
@@ -16216,24 +16156,54 @@
       }
     },
     {
+      "case_id": "C11-m423-t1457842871",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 423,
+      "n_history": 5,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 28,
+      "B_index": 10,
+      "A_title": "Bug's Life, A (1998)",
+      "B_title": "Last Action Hero (1993)",
+      "rank_B": 2,
+      "lead": 0.028814121775580848,
+      "parts": {
+        "behaviour": 0.10173692592341557,
+        "relevance": -0.1721502574981859,
+        "popularity": 0.09922745335035127
+      },
+      "cause": "history_over_intent",
+      "sub": null,
+      "A_breaks_exclusion": true,
+      "fix": {
+        "history": true,
+        "popularity": true,
+        "query": true,
+        "temgx_removal": true
+      }
+    },
+    {
       "case_id": "C11-m425-t1451080368",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 425,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 28,
-      "B_index": 6,
+      "B_index": 19,
       "A_title": "Care Bears Movie, The (1985)",
-      "B_title": "Batman & Robin (1997)",
+      "B_title": "All That Jazz (1979)",
       "rank_B": 3,
-      "lead": 0.21899599532579828,
+      "lead": 0.193744918595808,
       "parts": {
-        "behaviour": -0.13486647407620886,
-        "relevance": 0.9218330356653809,
-        "popularity": -0.5679705662633738
+        "behaviour": 0.12076925043803836,
+        "relevance": 0.2645288935954564,
+        "popularity": -0.19155322543768677
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
@@ -16398,7 +16368,7 @@
     {
       "case_id": "C11-m438-t1436943790",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 438,
       "n_history": 5,
@@ -16408,11 +16378,11 @@
       "B_index": 10,
       "A_title": "Toy Story 2 (1999)",
       "B_title": "League of Extraordinary Gentlemen, The (a.k.a. LXG) (2003)",
-      "rank_B": 3,
-      "lead": 0.881290549860021,
+      "rank_B": 2,
+      "lead": 0.5374089945991978,
       "parts": {
         "behaviour": 0.1535267436155442,
-        "relevance": 0.44162774067146504,
+        "relevance": 0.09774618541064206,
         "popularity": 0.2861360655730115
       },
       "cause": "query_misread",
@@ -16518,22 +16488,22 @@
     {
       "case_id": "C11-m440-t1449070467",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 440,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 14,
-      "B_index": 6,
+      "B_index": 23,
       "A_title": "Good Will Hunting (1997)",
-      "B_title": "Harry Potter and the Goblet of Fire (2005)",
+      "B_title": "What Dreams May Come (1998)",
       "rank_B": 2,
-      "lead": 0.15942767398417645,
+      "lead": 0.49171426692018905,
       "parts": {
-        "behaviour": 0.016343176622171773,
-        "relevance": -0.039687996180770346,
-        "popularity": 0.18277249354277503
+        "behaviour": 0.26330103740970023,
+        "relevance": -0.2531757797190004,
+        "popularity": 0.4815890092294892
       },
       "cause": "popularity_over_intent",
       "sub": null,
@@ -16726,36 +16696,6 @@
       }
     },
     {
-      "case_id": "C11-m447-t1376847471",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 447,
-      "n_history": 1385,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 27,
-      "B_index": 16,
-      "A_title": "Goofy Movie, A (1995)",
-      "B_title": "Spirit, The (2008)",
-      "rank_B": 2,
-      "lead": 0.12950983800728988,
-      "parts": {
-        "behaviour": -0.12936504949687255,
-        "relevance": -0.08938188263340119,
-        "popularity": 0.3482567701375636
-      },
-      "cause": "popularity_over_intent",
-      "sub": null,
-      "A_breaks_exclusion": true,
-      "fix": {
-        "history": true,
-        "popularity": true,
-        "query": true,
-        "temgx_removal": null
-      }
-    },
-    {
       "case_id": "C12-m447-t1376847471",
       "qid": "C12",
       "query": "a musical, but not a romance",
@@ -16872,6 +16812,36 @@
         "history": false,
         "popularity": false,
         "query": false,
+        "temgx_removal": null
+      }
+    },
+    {
+      "case_id": "C11-m461-t1378158322",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 461,
+      "n_history": 365,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 1,
+      "B_index": 15,
+      "A_title": "This Film Is Not Yet Rated (2006)",
+      "B_title": "Last Action Hero (1993)",
+      "rank_B": 2,
+      "lead": 0.22490183324429402,
+      "parts": {
+        "behaviour": 0.3680882831939293,
+        "relevance": 0.29207450341218544,
+        "popularity": -0.4352609533618207
+      },
+      "cause": "query_misread",
+      "sub": null,
+      "A_breaks_exclusion": false,
+      "fix": {
+        "history": false,
+        "popularity": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -17026,36 +16996,6 @@
       }
     },
     {
-      "case_id": "C11-m486-t1428574157",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 486,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 11,
-      "B_index": 20,
-      "A_title": "Aliens (1986)",
-      "B_title": "How to Get Ahead in Advertising (1989)",
-      "rank_B": 7,
-      "lead": 0.34094481918636754,
-      "parts": {
-        "behaviour": 0.22332888757274338,
-        "relevance": -0.5706757779828354,
-        "popularity": 0.6882917095964594
-      },
-      "cause": "popularity_over_intent",
-      "sub": null,
-      "A_breaks_exclusion": false,
-      "fix": {
-        "history": false,
-        "popularity": true,
-        "query": false,
-        "temgx_removal": null
-      }
-    },
-    {
       "case_id": "C12-m486-t1428574157",
       "qid": "C12",
       "query": "a musical, but not a romance",
@@ -17118,30 +17058,30 @@
     {
       "case_id": "C11-m488-t1385823465",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 488,
       "n_history": 608,
       "little_history": false,
       "has_negation": true,
-      "A_index": 17,
-      "B_index": 24,
-      "A_title": "Star Trek II: The Wrath of Khan (1982)",
-      "B_title": "Curious Case of Benjamin Button, The (2008)",
+      "A_index": 9,
+      "B_index": 19,
+      "A_title": "All Dogs Go to Heaven (1989)",
+      "B_title": "How to Get Ahead in Advertising (1989)",
       "rank_B": 2,
-      "lead": 0.04100147945305177,
+      "lead": 0.15947350775594105,
       "parts": {
-        "behaviour": -0.013435847987273764,
-        "relevance": -0.2897459013749133,
-        "popularity": 0.3441832288152388
+        "behaviour": 0.017938501843619805,
+        "relevance": -0.10683423616706511,
+        "popularity": 0.24836924207938632
       },
       "cause": "popularity_over_intent",
       "sub": null,
-      "A_breaks_exclusion": false,
+      "A_breaks_exclusion": true,
       "fix": {
         "history": false,
         "popularity": true,
-        "query": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -17208,7 +17148,7 @@
     {
       "case_id": "C11-m494-t1458634574",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 494,
       "n_history": 5,
@@ -17219,10 +17159,10 @@
       "A_title": "Star Trek: First Contact (1996)",
       "B_title": "Sleepy Hollow (1999)",
       "rank_B": 5,
-      "lead": 0.6178705596445266,
+      "lead": 0.5590270691093968,
       "parts": {
         "behaviour": 0.02140256871026683,
-        "relevance": 0.4923546309270298,
+        "relevance": 0.4335111403919003,
         "popularity": 0.10411336000722976
       },
       "cause": "query_misread",
@@ -17231,7 +17171,7 @@
       "fix": {
         "history": false,
         "popularity": false,
-        "query": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -17268,28 +17208,28 @@
     {
       "case_id": "C11-m495-t1415165826",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 495,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 18,
-      "B_index": 27,
+      "B_index": 23,
       "A_title": "Care Bears Movie, The (1985)",
-      "B_title": "13th Warrior, The (1999)",
+      "B_title": "Pirates of the Caribbean: Dead Man's Chest (2006)",
       "rank_B": 2,
-      "lead": 0.05767318801213617,
+      "lead": 0.05041910873658484,
       "parts": {
-        "behaviour": -0.03112732822592816,
-        "relevance": 0.5589111503376951,
-        "popularity": -0.4701106340996306
+        "behaviour": 0.11171604219468384,
+        "relevance": 0.5242988215692268,
+        "popularity": -0.585595755027326
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
       "A_breaks_exclusion": true,
       "fix": {
-        "history": false,
+        "history": true,
         "popularity": false,
         "query": true,
         "temgx_removal": null
@@ -17418,22 +17358,22 @@
     {
       "case_id": "C11-m496-t1429127159",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 496,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 10,
-      "B_index": 25,
+      "B_index": 0,
       "A_title": "Space Jam (1996)",
-      "B_title": "Beetlejuice (1988)",
-      "rank_B": 8,
-      "lead": 1.2950560971749183,
+      "B_title": "Bewitched (2005)",
+      "rank_B": 15,
+      "lead": 1.723666366930471,
       "parts": {
-        "behaviour": -0.11635103575994304,
-        "relevance": 1.553887407701647,
-        "popularity": -0.14248027476678543
+        "behaviour": 0.2124988868724229,
+        "relevance": 1.1683585741792362,
+        "popularity": 0.3428089058788121
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
@@ -17441,7 +17381,7 @@
       "fix": {
         "history": false,
         "popularity": false,
-        "query": false,
+        "query": true,
         "temgx_removal": null
       }
     },
@@ -17568,7 +17508,7 @@
     {
       "case_id": "C11-m505-t1424486905",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 505,
       "n_history": 5,
@@ -17579,10 +17519,10 @@
       "A_title": "Nightmare Before Christmas, The (1993)",
       "B_title": "Indiana Jones and the Temple of Doom (1984)",
       "rank_B": 2,
-      "lead": 0.34058673132622563,
+      "lead": 0.44997642332102017,
       "parts": {
         "behaviour": -0.013382735456033579,
-        "relevance": 0.39219347026349305,
+        "relevance": 0.5015831622582875,
         "popularity": -0.03822400348123378
       },
       "cause": "query_misread",
@@ -17718,7 +17658,7 @@
     {
       "case_id": "C11-m508-t1435992296",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 508,
       "n_history": 5,
@@ -17729,10 +17669,10 @@
       "A_title": "Space Jam (1996)",
       "B_title": "Pirates of the Caribbean: Dead Man's Chest (2006)",
       "rank_B": 2,
-      "lead": 0.0677575155707606,
+      "lead": 0.1470674870261064,
       "parts": {
         "behaviour": -0.10362751505102111,
-        "relevance": 0.18698262349129946,
+        "relevance": 0.2662925949466455,
         "popularity": -0.015597592869518007
       },
       "cause": "query_misread",
@@ -17808,25 +17748,25 @@
     {
       "case_id": "C11-m521-t1388124637",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 521,
       "n_history": 164,
       "little_history": false,
       "has_negation": true,
-      "A_index": 11,
+      "A_index": 6,
       "B_index": 21,
-      "A_title": "Futurama: Bender's Game (2008)",
+      "A_title": "Ice Age (2002)",
       "B_title": "Clash of the Titans (2010)",
-      "rank_B": 5,
-      "lead": 0.20211363560543982,
+      "rank_B": 4,
+      "lead": 0.4610632989304655,
       "parts": {
-        "behaviour": 0.07059220614771353,
-        "relevance": 0.025265158365177287,
-        "popularity": 0.10625627109254884
+        "behaviour": 0.08893377069403821,
+        "relevance": -0.14386104379063736,
+        "popularity": 0.5159905720270644
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
@@ -17958,26 +17898,26 @@
     {
       "case_id": "C11-m524-t1476475848",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 524,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 9,
+      "A_index": 2,
       "B_index": 28,
-      "A_title": "View to a Kill, A (1985)",
+      "A_title": "Chicken Little (2005)",
       "B_title": "The Scorpion King (2002)",
-      "rank_B": 2,
-      "lead": 0.14522531922290094,
+      "rank_B": 5,
+      "lead": 0.3858300469201533,
       "parts": {
-        "behaviour": 0.05346480127848767,
-        "relevance": 0.11438692855612898,
-        "popularity": -0.022626410611715775
+        "behaviour": 0.16118541583012383,
+        "relevance": 0.5490819776794073,
+        "popularity": -0.3244373465893777
       },
       "cause": "query_misread",
-      "sub": null,
-      "A_breaks_exclusion": false,
+      "sub": "ignored_exclusion",
+      "A_breaks_exclusion": true,
       "fix": {
         "history": false,
         "popularity": false,
@@ -18166,36 +18106,6 @@
       }
     },
     {
-      "case_id": "C11-m533-t1459787996",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 533,
-      "n_history": 37,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 3,
-      "B_index": 4,
-      "A_title": "Star Wars: Episode VI - Return of the Jedi (1983)",
-      "B_title": "Wizard of Oz, The (1939)",
-      "rank_B": 2,
-      "lead": 0.23206013554424598,
-      "parts": {
-        "behaviour": 0.004778517317348824,
-        "relevance": 0.07196080216056577,
-        "popularity": 0.15532081606633158
-      },
-      "cause": "query_misread",
-      "sub": null,
-      "A_breaks_exclusion": false,
-      "fix": {
-        "history": false,
-        "popularity": false,
-        "query": false,
-        "temgx_removal": null
-      }
-    },
-    {
       "case_id": "C07-m536-t1424138156",
       "qid": "C07",
       "query": "a drama, but please nothing depressing",
@@ -18334,6 +18244,36 @@
         "behaviour": 0.01800661452444499,
         "relevance": 1.8582695979422548,
         "popularity": 0.4770673499669297
+      },
+      "cause": "query_misread",
+      "sub": null,
+      "A_breaks_exclusion": false,
+      "fix": {
+        "history": false,
+        "popularity": false,
+        "query": false,
+        "temgx_removal": null
+      }
+    },
+    {
+      "case_id": "C11-m542-t1377022441",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 542,
+      "n_history": 16,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 23,
+      "B_index": 25,
+      "A_title": "Back to the Future (1985)",
+      "B_title": "Pirates of the Caribbean: At World's End (2007)",
+      "rank_B": 2,
+      "lead": 0.30434766199405194,
+      "parts": {
+        "behaviour": -0.04288433181208019,
+        "relevance": 0.013343172620311039,
+        "popularity": 0.3338888211858212
       },
       "cause": "query_misread",
       "sub": null,
@@ -18498,7 +18438,7 @@
     {
       "case_id": "C11-m556-t1452797292",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 556,
       "n_history": 5,
@@ -18508,11 +18448,11 @@
       "B_index": 7,
       "A_title": "Toy Story 2 (1999)",
       "B_title": "Super Mario Bros. (1993)",
-      "rank_B": 6,
-      "lead": 0.8913343318568692,
+      "rank_B": 5,
+      "lead": 0.6718748828937007,
       "parts": {
         "behaviour": 0.1766669571543429,
-        "relevance": 0.4041040388591679,
+        "relevance": 0.1846445898959994,
         "popularity": 0.3105633358433584
       },
       "cause": "query_misread",
@@ -18618,7 +18558,7 @@
     {
       "case_id": "C11-m559-t1469647274",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 559,
       "n_history": 5,
@@ -18628,11 +18568,11 @@
       "B_index": 22,
       "A_title": "Jungle Book, The (1967)",
       "B_title": "13th Warrior, The (1999)",
-      "rank_B": 2,
-      "lead": 0.22919246184104192,
+      "rank_B": 5,
+      "lead": 0.5035718731997965,
       "parts": {
         "behaviour": 0.049098925180345844,
-        "relevance": 0.04720941550900504,
+        "relevance": 0.3215888268677597,
         "popularity": 0.13288412115169088
       },
       "cause": "query_misread",
@@ -18828,7 +18768,7 @@
     {
       "case_id": "C11-m563-t1478451503",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 563,
       "n_history": 5,
@@ -18839,18 +18779,18 @@
       "A_title": "Snow White and the Seven Dwarfs (1937)",
       "B_title": "Golden Child, The (1986)",
       "rank_B": 2,
-      "lead": 0.06340710048025988,
+      "lead": 0.4398975230253406,
       "parts": {
         "behaviour": 0.051325800364481644,
-        "relevance": -0.3279536393431177,
+        "relevance": 0.048536783201963196,
         "popularity": 0.34003493945889574
       },
-      "cause": "popularity_over_intent",
-      "sub": null,
+      "cause": "query_misread",
+      "sub": "ignored_exclusion",
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
-        "popularity": true,
+        "popularity": false,
         "query": true,
         "temgx_removal": null
       }
@@ -18948,25 +18888,25 @@
     {
       "case_id": "C11-m572-t1415675757",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 572,
       "n_history": 295,
       "little_history": false,
       "has_negation": true,
       "A_index": 16,
-      "B_index": 28,
+      "B_index": 22,
       "A_title": "Sword in the Stone, The (1963)",
-      "B_title": "Clash of the Titans (2010)",
-      "rank_B": 4,
-      "lead": 0.27027527612605384,
+      "B_title": "Defending Your Life (1991)",
+      "rank_B": 2,
+      "lead": 0.1338468650748077,
       "parts": {
-        "behaviour": -0.18244317318770079,
-        "relevance": 0.12828110272437687,
-        "popularity": 0.3244373465893777
+        "behaviour": -0.00920653504723611,
+        "relevance": -0.024680401767456894,
+        "popularity": 0.16773380188950077
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
@@ -19038,22 +18978,22 @@
     {
       "case_id": "C11-m580-t1447007091",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 580,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
-      "A_index": 27,
+      "A_index": 26,
       "B_index": 2,
-      "A_title": "Toy Story 3 (2010)",
+      "A_title": "Jungle Book, The (1967)",
       "B_title": "Pirates of the Caribbean: Dead Man's Chest (2006)",
       "rank_B": 3,
-      "lead": 0.27033084953277586,
+      "lead": 0.12936250692419837,
       "parts": {
-        "behaviour": 0.008631339219845907,
-        "relevance": 0.36520432237040135,
-        "popularity": -0.10350481205747136
+        "behaviour": 0.01722746017883023,
+        "relevance": 0.13646769509246348,
+        "popularity": -0.024332648347095365
       },
       "cause": "query_misread",
       "sub": "ignored_exclusion",
@@ -19158,25 +19098,25 @@
     {
       "case_id": "C11-m581-t1446792651",
       "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
+      "query": "a fantasy film for grown-ups",
       "group": "conversational",
       "member": 581,
       "n_history": 5,
       "little_history": false,
       "has_negation": true,
       "A_index": 16,
-      "B_index": 24,
+      "B_index": 18,
       "A_title": "Grand Day Out with Wallace and Gromit, A (1989)",
-      "B_title": "Reign of Fire (2002)",
-      "rank_B": 3,
-      "lead": 0.26844134490316773,
+      "B_title": "Wristcutters: A Love Story (2006)",
+      "rank_B": 4,
+      "lead": 0.29518575534872116,
       "parts": {
-        "behaviour": 0.09333023724162512,
-        "relevance": 0.07847651956436796,
-        "popularity": 0.09663458809717451
+        "behaviour": 0.2911804020632377,
+        "relevance": -0.34099847689107743,
+        "popularity": 0.34500383017656083
       },
-      "cause": "query_misread",
-      "sub": "ignored_exclusion",
+      "cause": "popularity_over_intent",
+      "sub": null,
       "A_breaks_exclusion": true,
       "fix": {
         "history": false,
@@ -19204,6 +19144,36 @@
         "behaviour": 0.3438238572255168,
         "relevance": 0.32929043859410356,
         "popularity": 0.617192495804133
+      },
+      "cause": "query_misread",
+      "sub": null,
+      "A_breaks_exclusion": false,
+      "fix": {
+        "history": false,
+        "popularity": false,
+        "query": true,
+        "temgx_removal": null
+      }
+    },
+    {
+      "case_id": "C11-m597-t1430616819",
+      "qid": "C11",
+      "query": "a fantasy film for grown-ups",
+      "group": "conversational",
+      "member": 597,
+      "n_history": 5,
+      "little_history": false,
+      "has_negation": true,
+      "A_index": 1,
+      "B_index": 4,
+      "A_title": "My Fair Lady (1964)",
+      "B_title": "Clash of the Titans (1981)",
+      "rank_B": 2,
+      "lead": 0.5052654512824701,
+      "parts": {
+        "behaviour": -0.012414830387246334,
+        "relevance": 0.2531559238073634,
+        "popularity": 0.2645243578623531
       },
       "cause": "query_misread",
       "sub": null,
@@ -19362,36 +19332,6 @@
         "history": false,
         "popularity": true,
         "query": false,
-        "temgx_removal": null
-      }
-    },
-    {
-      "case_id": "C11-m609-t1479542004",
-      "qid": "C11",
-      "query": "a fantasy movie that isn't animated",
-      "group": "conversational",
-      "member": 609,
-      "n_history": 5,
-      "little_history": false,
-      "has_negation": true,
-      "A_index": 12,
-      "B_index": 18,
-      "A_title": "Terminator, The (1984)",
-      "B_title": "Nutty Professor, The (1996)",
-      "rank_B": 3,
-      "lead": 0.058825402336086574,
-      "parts": {
-        "behaviour": 0.017624196152659893,
-        "relevance": -0.06206064461817418,
-        "popularity": 0.10326185080160111
-      },
-      "cause": "popularity_over_intent",
-      "sub": null,
-      "A_breaks_exclusion": false,
-      "fix": {
-        "history": false,
-        "popularity": true,
-        "query": true,
         "temgx_removal": null
       }
     },

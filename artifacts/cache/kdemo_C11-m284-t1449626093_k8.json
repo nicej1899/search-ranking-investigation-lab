@@ -7,22 +7,22 @@
       "TemGX: 5 of the 8 ratings are recent ratings of The Incredibles by other people; 5 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (All the President's Men, Rebel Without a Cause, Dazed and Confused), shared with people who also rated The Incredibles.",
       "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 57% \u2192 50% (top-attention ratings: 53%); matched on timing and activity, each removal still costs 1.5 points vs 1.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
-      "Ranker: The Incredibles beats Indiana Jones and the Temple of Doom mainly through matching the words of the request (+0.29); the history part adds +0.01."
+      "Ranker: The Incredibles beats Indiana Jones and the Temple of Doom mainly through matching the words of the request (+0.02); the history part adds +0.01."
     ],
-    "verdict": "Diagnosis: The Incredibles wins mainly through matching the words of the request, and the history model adds to it through recent fans of The Incredibles (a pattern that survives matching) and the member's ratings of All the President's Men, Rebel Without a Cause. None of these signals reads \u201cisn't animated\u201d. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
+    "verdict": "Diagnosis: The Incredibles wins mainly through matching the words of the request, and the history model adds to it through recent fans of The Incredibles (a pattern that survives matching) and the member's ratings of All the President's Men, Rebel Without a Cause. None of these signals reads what \u201cfor grown-ups\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on titles' latest ratings from strangers. Step 5 picks one using past cases.",
     "agree": [
       76582,
       77183
     ]
   },
   "score_split": {
-    "relevance": 0.2948528418480443,
+    "relevance": 0.021664288789740915,
     "popularity": -0.02056648358718316,
     "behaviour": 0.014109348748994943
   },
   "A": "The Incredibles",
   "B": "Indiana Jones and the Temple of Doom",
-  "query": "a fantasy movie that isn't animated",
+  "query": "a fantasy film for grown-ups",
   "p0": 0.5659427167051005,
   "evidence": [
     {
@@ -433,12 +433,12 @@
   },
   "ranking": {
     "A_before": 1,
-    "A_after": 1,
+    "A_after": 2,
     "B_before": 2,
-    "B_after": 2,
+    "B_after": 1,
     "top3_after": [
-      "Incredibles, The (2004)",
       "Indiana Jones and the Temple of Doom (1984)",
+      "Incredibles, The (2004)",
       "Corpse Bride (2005)"
     ]
   },
@@ -1066,6 +1066,6 @@
   ],
   "n_draw": 60,
   "n_model_runs": 1104,
-  "computed_at": "2026-10-28T16:45:30-0400",
-  "summary": "With 8 ratings (5 recent ratings of The Incredibles by other people, 3 of the member's own ratings), the model's preference for The Incredibles over Indiana Jones and the Temple of Doom goes from 57% to 42% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 63%. The full ranking still puts The Incredibles at #1: text match and popularity also push it up."
+  "computed_at": "2026-10-28T21:52:58-0400",
+  "summary": "With 8 ratings (5 recent ratings of The Incredibles by other people, 3 of the member's own ratings), the model's preference for The Incredibles over Indiana Jones and the Temple of Doom goes from 57% to 42% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 63%. In the full ranking, The Incredibles moves from #1 to #2."
 }

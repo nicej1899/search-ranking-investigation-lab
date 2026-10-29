@@ -12,7 +12,7 @@ const post = (u: string, b: any) => fetch(u, { method: "POST", headers: { "Conte
 
 // The clearest cases, each the best on one criterion:
 const CASES: [string, string, string][] = [
-  ["C11-m304-t1460134091", "member 304", "the full loop: 3 ratings flip the model (73% → 46%), two patterns survive matching, and the suggested fix puts the right answer first"],
+  ["C11-m304-t1460134091", "member 304", "the full loop: 3 ratings flip the model (73% → 46%), two patterns survive matching, and the suggested fix puts a title that fits the request first"],
   ["C07-m1-t1445714882", "member 1", "another request: TemGX's 7 ratings flip the model's decision (70% → 47%)"],
   ["C07-m290-t1453051417", "member 290", "the fix puts the right title first and the ruled-out one out of the top 3"],
 ];
@@ -71,12 +71,13 @@ export default function Demo({ onFull }: { onFull: () => void }) {
   const qual = d.fix.conversational_heldout?.[rec]?.ndcg10?.delta;
 
   const head = [
-    <>Asked for “{kd?.query ?? sim?.me?.query ?? d.query}”, member {cid.match(/-m(\d+)-/)?.[1]} gets <b style={{ color: RED }}>{At}</b> first — the kind of film they ruled out.</>,
+    <>Asked for “{kd?.query ?? sim?.me?.query ?? d.query}”, member {cid.match(/-m(\d+)-/)?.[1]} gets <b style={{ color: RED }}>{At}</b> first — a title the request rules out.</>,
     kd?.full.flips ? <>Remove {kd.evidence.length === 1 ? "one rating" : `these ${kd.evidence.length} ratings`} and the history model <b>changes its preference</b> ({pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>). Attention's top {kd.evidence.length}: {pct(kd.full.attn ?? kd.full.rand_mean)}.</>
       : kd ? <>Remove these <b style={{ color: RED }}>{kd.evidence.length} past ratings</b>: {pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>. Attention's top {kd.evidence.length}: {pct(kd.full.attn ?? kd.full.rand_mean)}.</> : <>Finding the evidence…</>,
     top ? <>Remove “{top.name}”: {pct(kd.p0)} → <b style={{ color: PURPLE }}>{pct(top.p_without)}</b> (attention's top {top.occurrence.eids.length}: {pct(top.p_attn ?? top.p_random)}). Matched on timing and activity, each removal still costs <b style={{ color: PURPLE }}>{n(top.pts_one, 1)}</b> vs {n(top.pts_base, 1)} points.</> : <>Looking for patterns…</>,
     <>Together: <b style={{ color: RED }}>which ratings</b>, <b style={{ color: PURPLE }}>which pattern</b>, and <b>which part of the ranker</b> to change.</>,
     !fixA || !fixB ? <>Similar past failures point to one fix. Re-ranking…</>
+      : fixB.rank !== 1 && fix?.rows?.[0]?.grade === 2 && fixA.rank > 3 ? <>Past cases point to “{recName}”. It puts <b style={{ color: BLUE }}>{clean(fix.rows[0].title)}</b>, a title that fits the request, first and drops <b style={{ color: RED }}>{At}</b> to #{fixA.rank}.</>
       : fixB.rank === 1 && fixA.rank > 3 ? <>Similar past failures point to one fix. It puts <b style={{ color: BLUE }}>{Bt}</b> first and drops {At} to #{fixA.rank}.</>
       : fixB.rank === 1 ? <>The suggested fix puts <b style={{ color: BLUE }}>{Bt}</b> first, but {At} stays at #{fixA.rank}: <b>worth testing, not yet enough</b>.</>
       : fixA.rank > 1 ? <>Past cases point to “{recName}”: it takes <b style={{ color: RED }}>{At}</b> off the top (#{fixA.rank}) and improves held-out quality, but alone it is <b>not enough for this member</b>.</>
@@ -128,7 +129,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
         <div className="dm-two" style={{ marginTop: 16 }}>
           <div className="dm-card"><p className="dm-k">③ Counterfactual: remove them one at a time</p>
             <Curve kd={kd} />
-            <p className="dm-say">Same trained history model, same candidates. Red: removing TemGX's ratings in order. Grey: removing the same number of ratings with the highest attention weight. The dashed line is 50%, where the history model has no preference; the full ranking changes only with a fix (step 5).</p></div>
+            <p className="dm-say">Same trained history model, same candidates. Red: removing TemGX's ratings in order. Grey: removing the same number of ratings with the highest attention weight. The dashed line is 50%, where the history model has no preference. {kd?.ranking ? (kd.ranking.B_after < kd.ranking.A_after ? "Here the full ranking flips too: " + clean(kd.B) + " #" + kd.ranking.B_after + ", " + clean(kd.A) + " #" + kd.ranking.A_after + "." : "The full ranking keeps " + clean(kd.A) + " above " + clean(kd.B) + ": text match and popularity hold it there.") : ""}</p></div>
           <div className="dm-card"><p className="dm-k">④ All {kd.evidence.length} removed vs attention</p>
             <Conf l="Nothing removed" v={kd.p0} c={GREY} />
             <Conf l={`Remove TemGX's ${kd.evidence.length}`} v={kd.full.p} c={RED} d={kd.full.p - kd.p0} />
@@ -202,8 +203,8 @@ const ev = (l: any) => {
 
 function Top({ rows, A, B }: any) {
   return <ol className="dm-top">{rows.slice(0, 3).map((x: any) => {
-    const bad = x.title === A || x.breaks_exclusion, good = x.title === B;
-    return <li key={x.index} className={bad ? "bad" : good ? "good" : ""}><b>#{x.rank}</b><span>{clean(x.title)}<small>{x.genres.replace(/\|/g, " · ")}</small></span><em>{bad ? "ruled out" : good ? "right answer" : ""}</em></li>;
+    const bad = x.title === A || x.breaks_exclusion, good = x.title === B, fits = !bad && !good && x.grade === 2;
+    return <li key={x.index} className={bad ? "bad" : good || fits ? "good" : ""}><b>#{x.rank}</b><span>{clean(x.title)}<small>{x.genres.replace(/\|/g, " · ")}</small></span><em>{bad ? "ruled out" : good ? "right answer" : fits ? "fits request" : ""}</em></li>;
   })}</ol>;
 }
 

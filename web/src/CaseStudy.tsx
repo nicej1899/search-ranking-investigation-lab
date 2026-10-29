@@ -193,7 +193,7 @@ export default function CaseStudy() {
             <div className="cs4-loop">
               <div><b>{pct(a.by_group.conversational.fail_rate)}</b><span><em>Where it fails</em>chat-style requests that start with a wrong title (regular search {pct(a.by_group.original.fail_rate)})</span></div>
               <div><b>{ac.temgx_beats_random}/{ac.n}</b><span><em>Why, checked</em>failures where the reason we found really moves the model (removing it beats removing random ratings)</span></div>
-              {tg && <div><b>{pct(tg.pass.F3.T1.rate)}<small> vs {pct(tg.pass.F0.T1.rate)}</small></b><span><em>Does the fix hold on new requests</em>ruled-out title kept out of the top 3, “understand ‘not’” vs today; {tg.n_tests.toLocaleString()} such checks stay as a regression suite</span></div>}
+              {tg && <div><b>{pct(tg.pass.F3.T1.rate)}<small> vs {pct(tg.pass.F0.T1.rate)}</small></b><span><em>Does the fix hold on new requests</em>ruled-out title kept out of the top 3, “understand the exclusion” vs today; {tg.n_tests.toLocaleString()} such checks stay as a regression suite</span></div>}
             </div>
             <p className="cs4-fn">Any model change, by a person or a coding agent, can be scored on these checks before it reaches an A/B test. We have not run an agent on it.</p>
             <details className="cs4-more"><summary>more: every fix on every check, and a fix the graph explanation itself suggested</summary>
@@ -205,7 +205,7 @@ export default function CaseStudy() {
                     return <td key={k} className={`${model === k ? "on" : ""} ${v.rate === best && k !== "F0" && !byc(k) ? "g" : ""}`} title={byc(k) ? "Ignoring strangers' latest ratings already removes these links, so it passes automatically" : undefined}>{pct(v.rate)}{byc(k) ? "*" : ""}</td>; })}</tr>)}
               </tbody></table>
               <p className="cs4-fn">* Ignoring strangers' latest ratings passes T3 automatically (it already removes those ratings), so T3 says nothing about it.</p>
-              <p className="cs4-agg">Ranking quality on held-out chat requests: understanding “not” {f(F3.ndcg10.delta, 3)}, relying less on popularity {f(F4.ndcg10.delta, 3)} · plus {tg.n_training_pairs} labelled pairs (right title over ruled-out title, with the reason), not yet used for training.</p>
+              <p className="cs4-agg">Ranking quality on held-out chat requests: understanding the exclusion {f(F3.ndcg10.delta, 3)}, relying less on popularity {f(F4.ndcg10.delta, 3)} · plus {tg.n_training_pairs} labelled pairs (right title over ruled-out title, with the reason), not yet used for training.</p>
             </>}
             {f5 && <div className="cs4-f5">
               <p className="cs4-k">A fix the explanation itself suggested: ignore each title's {f5.choice.n} most recent ratings by other people (n chosen on development data) · held-out NDCG@10 gain</p>
@@ -215,7 +215,7 @@ export default function CaseStudy() {
                     const sig = d.ci95[0] > 0; return <td key={g} className={sig ? "g" : ""} title={`95% CI ${d.ci95[0].toFixed(3)} to ${d.ci95[1].toFixed(3)}`}>{d.mean >= 0 ? "+" : ""}{d.mean.toFixed(3)}{sig ? "" : " (n.s.)"}</td>; })}</tr>)}
               </tbody></table>
             </div>}
-            <p className="cs4-agg">Understanding “not” passes most exclusion tests; relying less on popularity passes most intent tests and improves quality. Ignoring strangers' latest ratings, which the graph explanation itself suggested, adds a small held-out gain on regular searches and new members, not on chat requests.</p>
+            <p className="cs4-agg">Understanding the exclusion passes most exclusion tests; relying less on popularity passes most intent tests and improves quality. Ignoring strangers' latest ratings, which the graph explanation itself suggested, adds a small held-out gain on regular searches and new members, not on chat requests.</p>
             </details>
           </div>}
         </aside>

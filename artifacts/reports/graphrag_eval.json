@@ -1,24 +1,24 @@
 {
-  "created": "2026-10-24T00:45:10-0400",
-  "n_store": 343,
+  "created": "2026-10-28T22:13:38-0400",
+  "n_store": 341,
   "n_new": 280,
   "chosen_graph": {
-    "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
-    "k": 10,
-    "dev_loo": 0.7084548104956269,
-    "final": 0.35
+    "retriever": "hybrid \u00b7 entities+structure + score split",
+    "k": 5,
+    "dev_loo": 0.7008797653958945,
+    "final": 0.32857142857142857
   },
   "current_vector": {
     "retriever": "vector \u00b7 score split (current)",
     "k": 10,
-    "dev_loo": 0.7113702623906706,
-    "final": 0.37142857142857144
+    "dev_loo": 0.7126099706744868,
+    "final": 0.38571428571428573
   },
   "graph_minus_vector": {
-    "mean": -0.02142857142857143,
+    "mean": -0.05714285714285714,
     "ci95": [
-      -0.05,
-      0.007142857142857143
+      -0.08928571428571429,
+      -0.025
     ]
   },
   "always_F3": 0.24285714285714285,
@@ -27,146 +27,146 @@
     {
       "retriever": "vector \u00b7 score split (current)",
       "k": 5,
-      "dev_loo": 0.6967930029154519,
-      "final": 0.35
+      "dev_loo": 0.6979472140762464,
+      "final": 0.3535714285714286
     },
     {
       "retriever": "vector \u00b7 score split (current)",
       "k": 10,
-      "dev_loo": 0.7113702623906706,
-      "final": 0.37142857142857144
+      "dev_loo": 0.7126099706744868,
+      "final": 0.38571428571428573
     },
     {
       "retriever": "vector \u00b7 score split (current)",
       "k": 20,
-      "dev_loo": 0.7113702623906706,
+      "dev_loo": 0.7155425219941349,
       "final": 0.39285714285714285
     },
     {
       "retriever": "vector \u00b7 full mechanism key",
       "k": 5,
-      "dev_loo": 0.673469387755102,
-      "final": 0.30357142857142855
+      "dev_loo": 0.656891495601173,
+      "final": 0.3107142857142857
     },
     {
       "retriever": "vector \u00b7 full mechanism key",
       "k": 10,
-      "dev_loo": 0.6763848396501457,
-      "final": 0.30357142857142855
+      "dev_loo": 0.6656891495601173,
+      "final": 0.3
     },
     {
       "retriever": "vector \u00b7 full mechanism key",
       "k": 20,
-      "dev_loo": 0.685131195335277,
-      "final": 0.3107142857142857
+      "dev_loo": 0.6656891495601173,
+      "final": 0.30714285714285716
     },
     {
       "retriever": "graph \u00b7 entities",
       "k": 5,
-      "dev_loo": 0.6268221574344023,
-      "final": 0.25
+      "dev_loo": 0.6217008797653959,
+      "final": 0.2571428571428571
     },
     {
       "retriever": "graph \u00b7 entities",
       "k": 10,
-      "dev_loo": 0.6268221574344023,
-      "final": 0.24642857142857144
+      "dev_loo": 0.6334310850439883,
+      "final": 0.24285714285714285
     },
     {
       "retriever": "graph \u00b7 entities",
       "k": 20,
-      "dev_loo": 0.6326530612244898,
+      "dev_loo": 0.6334310850439883,
       "final": 0.26071428571428573
     },
     {
       "retriever": "hybrid \u00b7 entities + score split",
       "k": 5,
-      "dev_loo": 0.6938775510204082,
-      "final": 0.34285714285714286
+      "dev_loo": 0.6950146627565983,
+      "final": 0.325
     },
     {
       "retriever": "hybrid \u00b7 entities + score split",
       "k": 10,
-      "dev_loo": 0.7026239067055393,
-      "final": 0.34285714285714286
+      "dev_loo": 0.6950146627565983,
+      "final": 0.3535714285714286
     },
     {
       "retriever": "hybrid \u00b7 entities + score split",
       "k": 20,
-      "dev_loo": 0.685131195335277,
-      "final": 0.32857142857142857
+      "dev_loo": 0.6774193548387096,
+      "final": 0.3392857142857143
     },
     {
       "retriever": "graph \u00b7 entities+structure",
       "k": 5,
-      "dev_loo": 0.6209912536443148,
-      "final": 0.24642857142857144
+      "dev_loo": 0.6217008797653959,
+      "final": 0.2571428571428571
     },
     {
       "retriever": "graph \u00b7 entities+structure",
       "k": 10,
-      "dev_loo": 0.6326530612244898,
-      "final": 0.24642857142857144
+      "dev_loo": 0.6363636363636364,
+      "final": 0.25
     },
     {
       "retriever": "graph \u00b7 entities+structure",
       "k": 20,
-      "dev_loo": 0.6297376093294461,
+      "dev_loo": 0.6334310850439883,
       "final": 0.2571428571428571
     },
     {
       "retriever": "hybrid \u00b7 entities+structure + score split",
       "k": 5,
-      "dev_loo": 0.6909620991253644,
-      "final": 0.3392857142857143
+      "dev_loo": 0.7008797653958945,
+      "final": 0.32857142857142857
     },
     {
       "retriever": "hybrid \u00b7 entities+structure + score split",
       "k": 10,
-      "dev_loo": 0.7055393586005831,
-      "final": 0.3392857142857143
+      "dev_loo": 0.6920821114369502,
+      "final": 0.3535714285714286
     },
     {
       "retriever": "hybrid \u00b7 entities+structure + score split",
       "k": 20,
-      "dev_loo": 0.6938775510204082,
-      "final": 0.3392857142857143
+      "dev_loo": 0.6803519061583577,
+      "final": 0.33214285714285713
     },
     {
       "retriever": "graph \u00b7 pushed-up title + crowd",
       "k": 5,
-      "dev_loo": 0.6239067055393586,
-      "final": 0.2714285714285714
+      "dev_loo": 0.6217008797653959,
+      "final": 0.275
     },
     {
       "retriever": "graph \u00b7 pushed-up title + crowd",
       "k": 10,
-      "dev_loo": 0.6443148688046647,
-      "final": 0.2714285714285714
+      "dev_loo": 0.6422287390029325,
+      "final": 0.26785714285714285
     },
     {
       "retriever": "graph \u00b7 pushed-up title + crowd",
       "k": 20,
-      "dev_loo": 0.6443148688046647,
+      "dev_loo": 0.6451612903225806,
       "final": 0.275
     },
     {
       "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
       "k": 5,
-      "dev_loo": 0.6938775510204082,
-      "final": 0.3535714285714286
+      "dev_loo": 0.6920821114369502,
+      "final": 0.3392857142857143
     },
     {
       "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
       "k": 10,
-      "dev_loo": 0.7084548104956269,
-      "final": 0.35
+      "dev_loo": 0.6979472140762464,
+      "final": 0.34285714285714286
     },
     {
       "retriever": "hybrid \u00b7 pushed-up title + crowd + score split",
       "k": 20,
-      "dev_loo": 0.7026239067055393,
-      "final": 0.32857142857142857
+      "dev_loo": 0.6979472140762464,
+      "final": 0.3392857142857143
     }
   ]
 }

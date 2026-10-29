@@ -49,8 +49,9 @@ CONV = [
     Template("C10", "a mystery to watch tonight, nothing too dark", "explicit", "dev",
              grade1_any=["Mystery"], require_for_2_any=["Comedy", "Romance", "Children"], exclude_genres=["Horror"],
              exclude_tags=["dark", "disturbing", "violent", "psychological"], notes="Mystery = 1; light genre = 2; dark tags -> 0."),
-    Template("C11", "a fantasy movie that isn't animated", "explicit", "dev",
-             grade2_all=["Fantasy"], exclude_genres=["Animation"], notes="Fantasy = 2; Animation -> 0."),
+    Template("C11", "a fantasy film for grown-ups", "explicit", "dev",
+             grade2_all=["Fantasy"], exclude_genres=["Animation"],
+             notes="Fantasy = 2; Animation -> 0. Implicit exclusion: 'for grown-ups' rules out animated films."),
     Template("C12", "a musical, but not a romance", "explicit", "dev",
              grade2_all=["Musical"], exclude_genres=["Romance"], notes="Musical = 2; Romance -> 0."),
 ]
@@ -58,9 +59,21 @@ CONV_BY_ID = {t.qid: t for t in CONV}
 EXTRA_PATH = CASES / "extra_cases.json"
 
 
+# Implicit exclusions: phrases that rule something out without a negation word. Used only when the query has no
+# explicit negation. A small, fixed lexicon standing in for an LLM query parser (no tuning on results).
+IMPLIED = {"for grown-ups": "animation children", "for grown ups": "animation children", "for adults": "animation children"}
+
+
 def split_negation(text: str) -> tuple[str, str]:
     """Split a query into (positive part, negated part). Negation scope: from a negation word to the end of the clause
-    (comma / 'but' / end). Simple, transparent rule standing in for an LLM query parser."""
+    (comma / 'but' / end). Simple, transparent rule standing in for an LLM query parser. If there is no explicit
+    negation, an implicit exclusion from IMPLIED is used (e.g. "for grown-ups" -> not animation / children)."""
+    low = text.lower()
+    if not any(w in NEG_WORDS or w.endswith("n't") for w in low.replace(",", " ").split()):
+        for ph, neg in IMPLIED.items():
+            if ph in low:
+                pos = [w for w in low.replace(ph, " ").split() if w not in ("a", "an", "the", "please")]
+                return " ".join(pos), neg
     toks = text.lower().replace(",", " , ").split()
     pos, neg, in_neg = [], [], False
     for w in toks:
