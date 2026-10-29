@@ -1,0 +1,70 @@
+{
+  "created": "2026-10-29T01:41:57-0400",
+  "split": "final",
+  "note": "F6: structured request parsing (stand-in for an LLM query parser).\n\nThe request is turned into wanted and excluded genres with a small fixed lexicon (the same rule for every request):\nnegated words (\"not / nothing / no / without / isn't\") and implied phrases (\"for grown-ups\") give excluded genres,\nthe rest give wanted genres. The ranker's score is unchanged; titles with an excluded genre move below all others and\ntitles with a wanted genre move above the rest (order inside each group = the ranker's own order).\nNote for evaluation: the Demo's relevance labels are also genre based, so held-out gains are optimistic.\n",
+  "groups": {
+    "chat": {
+      "F0": {
+        "ndcg10": 0.47863681010144216,
+        "wrong1": 0.4861111111111111,
+        "T1": 0.46260869565217394,
+        "n": 576
+      },
+      "F6": {
+        "ndcg10": 0.7022666537885066,
+        "wrong1": 0.2864583333333333,
+        "T1": 0.5547826086956522,
+        "n": 576
+      },
+      "ndcg_delta": {
+        "mean": 0.22362984368706446,
+        "ci95": [
+          0.20871786851825172,
+          0.23831829004654875
+        ]
+      }
+    },
+    "regular": {
+      "F0": {
+        "ndcg10": 0.6912026420687702,
+        "wrong1": 0.21354166666666666,
+        "T1": 0.7003484320557491,
+        "n": 768
+      },
+      "F6": {
+        "ndcg10": 0.8547183245446188,
+        "wrong1": 0.06380208333333333,
+        "T1": 0.8013937282229965,
+        "n": 768
+      },
+      "ndcg_delta": {
+        "mean": 0.1635156824758486,
+        "ci95": [
+          0.14793598768270816,
+          0.17951367609652602
+        ]
+      }
+    },
+    "new members": {
+      "F0": {
+        "ndcg10": 0.6660150417049557,
+        "wrong1": 0.23863636363636365,
+        "T1": 0.6858638743455497,
+        "n": 528
+      },
+      "F6": {
+        "ndcg10": 0.8498906596125559,
+        "wrong1": 0.058712121212121215,
+        "T1": 0.8272251308900523,
+        "n": 528
+      },
+      "ndcg_delta": {
+        "mean": 0.18387561790760024,
+        "ci95": [
+          0.16078761553902363,
+          0.2038237352316355
+        ]
+      }
+    }
+  }
+}

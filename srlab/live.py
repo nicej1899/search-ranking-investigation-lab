@@ -45,7 +45,8 @@ def rank(W, case_id, key="tgat2", model_id="F0", removed=(), A_index=None, B_ind
     # F5 = explanation-derived graph-level fix (srlab.f5): drop each candidate's most recent ratings by other people
     # before computing the history score; "F4+F5" mixes the scores like F4.
     f5 = model_id in ("F5", "F4+F5")
-    F0, M = load_ranker("F0"), load_ranker("F4" if model_id == "F4+F5" else "F0" if model_id == "F5" else model_id)
+    f6 = model_id == "F6"  # structured parse of the request (srlab.sparse), applied on top of F0
+    F0, M = load_ranker("F0"), load_ranker("F4" if model_id == "F4+F5" else "F0" if model_id in ("F5", "F6") else model_id)
     bb = get_backbone(key)
     ex = frozenset(int(e) for e in removed)
     if f5:
@@ -58,6 +59,9 @@ def rank(W, case_id, key="tgat2", model_id="F0", removed=(), A_index=None, B_ind
     m, s = beh_norm(key)
     z["zb"] = (beh - m) / s
     sc = score(z, F0, M)
+    if f6:
+        from .sparse import apply as sp_apply
+        sc["total"] = sp_apply(sc["total"], [W.items.genres[i] for i in c["candidates"]], c["query"])
     order = np.argsort(-sc["total"], kind="stable")
     rk = np.empty(len(order), int); rk[order] = np.arange(1, len(order) + 1)
     v, g, it = violations(c), np.asarray(c["grades"]), W.items

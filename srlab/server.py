@@ -571,7 +571,13 @@ def testgen_ep():
     p = REPORTS / "testgen.json"
     if not p.exists():
         raise HTTPException(404, "run: python -m srlab.testgen")
-    return load_json(p)
+    out = load_json(p)
+    f6 = REPORTS / "f6_final.json"
+    if f6.exists():  # structured request parse, held-out chat requests (srlab.f6)
+        g = load_json(f6)["groups"]["chat"]
+        out["f6"] = {"T1": g["F6"]["T1"], "T1_F0": g["F0"]["T1"], "wrong1": g["F6"]["wrong1"], "wrong1_F0": g["F0"]["wrong1"],
+                     "ndcg_delta": g["ndcg_delta"]["mean"], "n": g["F6"]["n"]}
+    return out
 
 
 @app.get("/api/f5")

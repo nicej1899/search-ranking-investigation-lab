@@ -12,7 +12,7 @@ const post = (u: string, b: any) => fetch(u, { method: "POST", headers: { "Conte
 
 // The clearest cases, each the best on one criterion:
 const CASES: [string, string, string][] = [
-  ["C11-m304-t1460134091", "member 304", "the full loop: 3 ratings flip the model (73% → 46%), two patterns survive matching, and the suggested fix puts a title that fits the request first"],
+  ["C11-m304-t1460134091", "member 304", "the full loop: 3 ratings flip the model (73% → 46%), two patterns survive matching, and the suggested fix puts the right answer first"],
   ["C07-m1-t1445714882", "member 1", "another request: TemGX's 7 ratings flip the model's decision (70% → 47%)"],
   ["C07-m290-t1453051417", "member 290", "the fix puts the right title first and the ruled-out one out of the top 3"],
 ];
@@ -56,7 +56,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
     fetch(`/api/similar/${cid}`).then((r) => (r.ok ? r.json() : null)).then(setSim).catch(() => {});
   }, [cid]);
   useEffect(() => { if (!cid) return; setKd(null); setPi(0); fetch(`/api/kdemo/${cid}?k=${k}`).then((r) => (r.ok ? r.json() : null)).then(setKd).catch(() => {}); }, [cid, k]);
-  useEffect(() => { if (cid && sim?.recommend) post("/api/live", { case_id: cid, backbone: BK, model_id: sim.recommend, removed: [] }).then((r) => r.rows && setFix(r)); }, [cid, sim]);
+  useEffect(() => { if (cid && sim?.recommend) post("/api/live", { case_id: cid, backbone: BK, model_id: sim.recommend === "F3" ? "F6" : sim.recommend, removed: [] }).then((r) => r.rows && setFix(r)); }, [cid, sim]);
 
   if (!d || !sg || !base || !cid) return <div className="dm"><p className="cs-load">Loading the demo…</p></div>;
   const a = d.alarm;
@@ -78,7 +78,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
     <>Together: <b style={{ color: RED }}>which ratings</b>, <b style={{ color: PURPLE }}>which pattern</b>, and <b>which part of the ranker</b> to change.</>,
     !fixA || !fixB ? <>Similar past failures point to one fix. Re-ranking…</>
       : fixB.rank !== 1 && fix?.rows?.[0]?.grade === 2 && fixA.rank > 3 ? <>Past cases point to “{recName}”. It puts <b style={{ color: BLUE }}>{clean(fix.rows[0].title)}</b>, a title that fits the request, first and drops <b style={{ color: RED }}>{At}</b> to #{fixA.rank}.</>
-      : fixB.rank === 1 && fixA.rank > 3 ? <>Similar past failures point to one fix. It puts <b style={{ color: BLUE }}>{Bt}</b> first and drops {At} to #{fixA.rank}.</>
+      : fixB.rank === 1 && fixA.rank > 3 ? <>Past cases point to “{recName}”. Read as wanted and excluded genres, it puts <b style={{ color: BLUE }}>{Bt}</b> first and drops <b style={{ color: RED }}>{At}</b> to #{fixA.rank}.</>
       : fixB.rank === 1 ? <>The suggested fix puts <b style={{ color: BLUE }}>{Bt}</b> first, but {At} stays at #{fixA.rank}: <b>worth testing, not yet enough</b>.</>
       : fixA.rank > 1 ? <>Past cases point to “{recName}”: it takes <b style={{ color: RED }}>{At}</b> off the top (#{fixA.rank}) and improves held-out quality, but alone it is <b>not enough for this member</b>.</>
       : <>The suggested fix is <b>not enough for this member</b> ({Bt} at #{fixB.rank}). The check catches that before an A/B test.</>,
@@ -180,9 +180,11 @@ export default function Demo({ onFull }: { onFull: () => void }) {
         </div>
         <div className="dm-card">
           <p className="dm-k">Before the A/B test: new requests it never saw</p>
-          {tg && tg.pass[rec] && <><Rate l={`“${recName}”`} v={tg.pass[rec].T1.rate} c={BLUE} /><Rate l="Current ranker" v={tg.pass.F0.T1.rate} c={GREY} />
+          {tg && rec === "F3" && tg.f6 ? <><Rate l={`“${recName}”`} v={1 - tg.f6.wrong1} c={BLUE} /><Rate l="Current ranker" v={1 - tg.f6.wrong1_F0} c={GREY} />
+            <p className="dm-say">#1 result fits the request, on {tg.f6.n} new chat requests. Ranking quality +{n(tg.f6.ndcg_delta, 2)} NDCG@10.</p></>
+          : tg && tg.pass[rec] && <><Rate l={`“${recName}”`} v={tg.pass[rec].T1.rate} c={BLUE} /><Rate l="Current ranker" v={tg.pass.F0.T1.rate} c={GREY} />
             <p className="dm-say">Ruled-out title kept out of the top 3. {qual != null && (qual < 0 ? <>Overall ranking quality dips slightly ({n(qual, 3)} NDCG@10), so the A/B test should watch that.</> : <>Overall ranking quality also improves (+{n(qual, 3)} NDCG@10).</>)}</p></>}
-          <p className="dm-take">The team gets a reason, a checked fix and its cost, before spending an A/B test.</p>
+          <p className="dm-take">The team gets a reason and a checked fix before spending an A/B test.</p>
         </div>
       </div>}
 
