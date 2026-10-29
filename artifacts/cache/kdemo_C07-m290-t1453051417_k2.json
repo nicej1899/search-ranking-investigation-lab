@@ -5,8 +5,8 @@
   "joint": {
     "lines": [
       "TemGX: 2 are the member's own recent ratings (The Avengers, Iron Man), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 87% \u2192 82% (top-attention ratings: 93%); matched on timing and activity, each removal still costs 2.1 points vs 0.4 for a comparable pattern: a structural reason, not just recency.",
-      "CATGX: \u201cTwo people rated the same movie\u201d: matched on timing and activity, each removal costs 0.5 points vs 0.4 for a comparable pattern: part of its weight was timing and activity.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 87% \u2192 82% (top-attention ratings: 93%); matched on timing and activity, 87% \u2192 85% per removal, vs 87% for a comparable pattern: a structural reason, not just recency.",
+      "CATGX: \u201cTwo people rated the same movie\u201d: matched on timing and activity, 87% \u2192 87% per removal, vs 87% for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats Out of Sight mainly through popularity (+0.19); the history part adds +0.10."
     ],
     "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through the member's ratings of The Avengers, Iron Man. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests. Similar verified past failures pick one.",
@@ -383,7 +383,7 @@
       "p_without": 0.8160818682240748,
       "p_random": 0.8711978456438355,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 365, user 255, Requiem for a Dream): 87% \u2192 82%; the same number of top-attention ratings: 93%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.1 points of the model's preference vs 0.4 for a comparable pattern (before matching: vs 0.3). Timing and activity do not explain it away. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 365, user 255, Requiem for a Dream): 87% \u2192 82%; the same number of top-attention ratings: 93%. Compared only with patterns that are equally recent, last as long and involve equally active people: 87% \u2192 85% per removal, vs 87% for a comparable pattern. Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -458,7 +458,7 @@
       "p_without": 0.8461504270153143,
       "p_random": 0.8709590547905304,
       "p_value": 0.03278688524590164,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 508, Iron Man, user 290): 87% \u2192 85%; the same number of top-attention ratings: 93%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.5 points of the model's preference vs 0.4 for a comparable pattern (before matching: vs 0.3). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 508, Iron Man, user 290): 87% \u2192 85%; the same number of top-attention ratings: 93%. Compared only with patterns that are equally recent, last as long and involve equally active people: 87% \u2192 87% per removal, vs 87% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "SEQ",
@@ -531,7 +531,7 @@
       "p_without": 0.8485142676960494,
       "p_random": 0.8712403353066995,
       "p_value": 0.08196721311475409,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 255, Requiem for a Dream, Spy): 87% \u2192 85%; the same number of top-attention ratings: 93%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 0.3). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 255, Requiem for a Dream, Spy): 87% \u2192 85%; the same number of top-attention ratings: 93%. Compared only with patterns that are equally recent, last as long and involve equally active people: 87% \u2192 87% per removal, vs 87% for a comparable pattern. "
     },
     {
       "motif": "BRIDGE",
@@ -621,11 +621,11 @@
       "p_without": 0.8602812263419232,
       "p_random": 0.8693108715317474,
       "p_value": 0.09836065573770492,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 62, The Avengers, user 104): 87% \u2192 86%; the same number of top-attention ratings: 90%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.6 for a comparable pattern (before matching: vs 0.3). Most of its apparent importance came from timing and activity. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 62, The Avengers, user 104): 87% \u2192 86%; the same number of top-attention ratings: 90%. Compared only with patterns that are equally recent, last as long and involve equally active people: 87% \u2192 87% per removal, vs 87% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 705,
-  "computed_at": "2026-10-28T22:27:06-0400",
+  "computed_at": "2026-10-29T01:54:50-0400",
   "summary": "With 2 ratings (2 of the member's own ratings), the model's preference for Requiem for a Dream over Out of Sight goes from 87% to 80%. Removing the same number of ratings with the highest attention weight gives 93%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

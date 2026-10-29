@@ -26,6 +26,11 @@ PLAIN = {"POP": "Recent fans piled on", "CO": "Two people rated the same movie",
          "BRIDGE": "Shared taste leads to the title", "BRIDGEB": "Shared taste leads to the better match"}
 
 
+def _per(x, p0):
+    """One removal of a pattern, in the same unit as everything else: the history model's preference before -> after."""
+    return (f"{100 * p0:.0f}% → {100 * p0 - x['pts_one']:.0f}% per removal, vs {100 * p0 - x['pts_base']:.0f}% for a comparable pattern")
+
+
 def _day(ts):
     return datetime.datetime.fromtimestamp(int(ts), datetime.timezone.utc).strftime("%b %d, %Y").replace(" 0", " ")
 
@@ -206,9 +211,7 @@ def explain_k(case_id, k=3, n_draw=60, seed=0):
         ra, ad = x["raw"], x["adjusted"]
         txt = (f"{x['name']}: removing its strongest occurrence ({', '.join(x['occurrence']['nodes'][:3])}): {100 * p0:.0f}% → {100 * x['p_without']:.0f}%; "
                + (f"the same number of top-attention ratings: {100 * x['p_attn']:.0f}%. " if x.get("p_attn") is not None else f"random ratings of the same size: {100 * x['p_random']:.0f}%. "))
-        txt += (f"Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs "
-                f"{x['pts_one']:.1f} points of the model's preference vs {x['pts_base']:.1f} for a comparable pattern"
-                + (f" (before matching: vs {x['pts_any']:.1f}). " if x.get("pts_any") is not None else ". "))
+        txt += (f"Compared only with patterns that are equally recent, last as long and involve equally active people: {_per(x, p0)}. ")
         if ra and ad:
             txt += ("Timing and activity do not explain it away. " if ad >= ra * 0.9 and ad > 1 else
                     "Timing and activity explain part of it, but a real structural effect remains. " if ad >= 1.5 else
@@ -255,14 +258,14 @@ def _joint(ev, pats, split, A, B, u, query=""):
     def eff(x):
         ctl = (f"top-attention ratings: {100 * x['p_attn']:.0f}%" if x.get("p_attn") is not None else f"random ratings: {100 * x['p_random']:.0f}%")
         return (f"removing it moves the model {100 * x['p_full']:.0f}% → {100 * x['p_without']:.0f}% ({ctl}); "
-                f"matched on timing and activity, each removal still costs {x['pts_one']:.1f} points vs {x['pts_base']:.1f} for a comparable pattern")
+                f"matched on timing and activity, {_per(x, x['p_full'])}")
     for x in strong[:1]:
         if x["raw"] and x["adjusted"] < 0.9 * x["raw"]:
             lines.append(f"CATGX: “{x['name']}”: {eff(x)}. Timing explains part of it, but a structural effect remains.")
         else:
             lines.append(f"CATGX: “{x['name']}”: {eff(x)}: a structural reason, not just recency.")
     for x in faded[:1]:
-        lines.append(f"CATGX: “{x['name']}”: matched on timing and activity, each removal costs {x['pts_one']:.1f} points vs {x['pts_base']:.1f} for a comparable pattern: "
+        lines.append(f"CATGX: “{x['name']}”: matched on timing and activity, {_per(x, x['p_full'])}: "
                      + ("most of its weight was timing and activity." if x["adjusted"] <= 1.2 else "part of its weight was timing and activity."))
     if not strong:
         lines.append("CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.")

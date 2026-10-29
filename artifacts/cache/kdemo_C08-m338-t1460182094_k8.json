@@ -5,8 +5,8 @@
   "joint": {
     "lines": [
       "TemGX: 8 of the 8 ratings are recent ratings of Chicken Run by other people; 8 of them are part of a pattern CATGX finds.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 61% \u2192 36% (top-attention ratings: 64%); matched on timing and activity, each removal still costs 10.8 points vs 5.6 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
-      "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 5.0 points vs 4.6 for a comparable pattern: most of its weight was timing and activity.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 61% \u2192 36% (top-attention ratings: 64%); matched on timing and activity, 61% \u2192 50% per removal, vs 55% for a comparable pattern. Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, 61% \u2192 56% per removal, vs 56% for a comparable pattern: most of its weight was timing and activity.",
       "Ranker: Chicken Run beats Two Weeks Notice mainly through popularity (+0.31); the history part adds +0.02."
     ],
     "verdict": "Diagnosis: Chicken Run wins mainly through popularity, and the history model adds to it through recent fans of Chicken Run (a pattern that survives matching). None of these signals reads what \u201cnot a kids movie\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
@@ -854,7 +854,7 @@
       "p_without": 0.3609672412828434,
       "p_random": 0.6044118294461293,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 232, user 533, Chicken Run): 61% \u2192 36%; the same number of top-attention ratings: 64%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 10.8 points of the model's preference vs 5.6 for a comparable pattern (before matching: vs 2.9). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 232, user 533, Chicken Run): 61% \u2192 36%; the same number of top-attention ratings: 64%. Compared only with patterns that are equally recent, last as long and involve equally active people: 61% \u2192 50% per removal, vs 55% for a comparable pattern. Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
@@ -927,7 +927,7 @@
       "p_without": 0.5549008403847824,
       "p_random": 0.6083135746228356,
       "p_value": 0.04918032786885246,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 338, Interstellar, Forrest Gump): 61% \u2192 55%; the same number of top-attention ratings: 64%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.6 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 2.9). Timing and activity do not explain it away. "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 338, Interstellar, Forrest Gump): 61% \u2192 55%; the same number of top-attention ratings: 64%. Compared only with patterns that are equally recent, last as long and involve equally active people: 61% \u2192 60% per removal, vs 60% for a comparable pattern. Timing and activity do not explain it away. "
     },
     {
       "motif": "BRIDGE",
@@ -1019,7 +1019,7 @@
       "p_without": 0.5361696507705319,
       "p_random": 0.6225729199436325,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 9, Interstellar, user 533): 61% \u2192 54%; the same number of top-attention ratings: 62%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 5.0 points of the model's preference vs 4.6 for a comparable pattern (before matching: vs 2.9). Most of its apparent importance came from timing and activity. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 9, Interstellar, user 533): 61% \u2192 54%; the same number of top-attention ratings: 62%. Compared only with patterns that are equally recent, last as long and involve equally active people: 61% \u2192 56% per removal, vs 56% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "CO",
@@ -1095,7 +1095,7 @@
       "p_without": 0.4014885428848935,
       "p_random": 0.6036729815224734,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 297, Chicken Run, user 232): 61% \u2192 40%; the same number of top-attention ratings: 64%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.3 points of the model's preference vs 2.9 for a comparable pattern (before matching: vs 2.9). "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 297, Chicken Run, user 232): 61% \u2192 40%; the same number of top-attention ratings: 64%. Compared only with patterns that are equally recent, last as long and involve equally active people: 61% \u2192 58% per removal, vs 58% for a comparable pattern. "
     },
     {
       "motif": "BRIDGEB",
@@ -1185,11 +1185,11 @@
       "p_without": 0.729763927086865,
       "p_random": 0.6107660292918218,
       "p_value": 0.9508196721311475,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 423, The Departed, user 494): 61% \u2192 73%; the same number of top-attention ratings: 62%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 2.0 for a comparable pattern (before matching: vs 2.9). "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 423, The Departed, user 494): 61% \u2192 73%; the same number of top-attention ratings: 62%. Compared only with patterns that are equally recent, last as long and involve equally active people: 61% \u2192 61% per removal, vs 59% for a comparable pattern. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1213,
-  "computed_at": "2026-10-28T22:27:28-0400",
+  "computed_at": "2026-10-29T01:55:11-0400",
   "summary": "With 8 ratings (8 recent ratings of Chicken Run by other people), the model's preference for Chicken Run over Two Weeks Notice goes from 61% to 6% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 59%. The full ranking still puts Chicken Run at #1: text match and popularity also push it up."
 }

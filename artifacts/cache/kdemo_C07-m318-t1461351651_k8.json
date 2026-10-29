@@ -6,8 +6,8 @@
     "lines": [
       "TemGX: 2 of the 8 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
       "TemGX: 4 are the member's own recent ratings (The Matrix, The Dark Knight, Schindler's List), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cShared taste leads to the better match\u201d: removing it moves the model 88% \u2192 85% (top-attention ratings: 95%); matched on timing and activity, each removal still costs 3.4 points vs 0.5 for a comparable pattern: a structural reason, not just recency.",
-      "CATGX: \u201cA run of ratings in one sitting\u201d: matched on timing and activity, each removal costs 1.9 points vs 1.2 for a comparable pattern: part of its weight was timing and activity.",
+      "CATGX: \u201cShared taste leads to the better match\u201d: removing it moves the model 88% \u2192 85% (top-attention ratings: 95%); matched on timing and activity, 88% \u2192 85% per removal, vs 88% for a comparable pattern: a structural reason, not just recency.",
+      "CATGX: \u201cA run of ratings in one sitting\u201d: matched on timing and activity, 88% \u2192 86% per removal, vs 87% for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats The Help mainly through popularity (+0.42); the history part adds +0.11."
     ],
     "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream and the member's ratings of The Matrix, The Dark Knight. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
@@ -813,7 +813,7 @@
       "p_without": 0.8466135003409406,
       "p_random": 0.87964313067915,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 17, The Matrix, user 9): 88% \u2192 85%; the same number of top-attention ratings: 95%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 17, The Matrix, user 9): 88% \u2192 85%; the same number of top-attention ratings: 95%. Compared only with patterns that are equally recent, last as long and involve equally active people: 88% \u2192 85% per removal, vs 88% for a comparable pattern. Timing and activity do not explain it away. "
     },
     {
       "motif": "POP",
@@ -888,7 +888,7 @@
       "p_without": 0.857504714924733,
       "p_random": 0.8808936463696521,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 494, user 40, Requiem for a Dream): 88% \u2192 86%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 494, user 40, Requiem for a Dream): 88% \u2192 86%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people: 88% \u2192 87% per removal, vs 88% for a comparable pattern. Timing and activity do not explain it away. "
     },
     {
       "motif": "SEQ",
@@ -964,7 +964,7 @@
       "p_without": 0.8116875856520472,
       "p_random": 0.8852019157435833,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 318, Schindler's List, The Matrix): 88% \u2192 81%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.9 points of the model's preference vs 1.2 for a comparable pattern (before matching: vs 0.6). Most of its apparent importance came from timing and activity. "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 318, Schindler's List, The Matrix): 88% \u2192 81%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people: 88% \u2192 86% per removal, vs 87% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "BRIDGE",
@@ -1056,7 +1056,7 @@
       "p_without": 0.8302815957396323,
       "p_random": 0.8751232841061881,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 104, The Help, user 297): 88% \u2192 83%; the same number of top-attention ratings: 95%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.3 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 0.6). Timing and activity do not explain it away. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 104, The Help, user 297): 88% \u2192 83%; the same number of top-attention ratings: 95%. Compared only with patterns that are equally recent, last as long and involve equally active people: 88% \u2192 88% per removal, vs 88% for a comparable pattern. Timing and activity do not explain it away. "
     },
     {
       "motif": "CO",
@@ -1131,11 +1131,11 @@
       "p_without": 0.8300277349940507,
       "p_random": 0.8815283174071056,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 23, The Matrix, user 318): 88% \u2192 83%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.6). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 23, The Matrix, user 318): 88% \u2192 83%; the same number of top-attention ratings: 94%. Compared only with patterns that are equally recent, last as long and involve equally active people: 88% \u2192 88% per removal, vs 88% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1209,
-  "computed_at": "2026-10-28T22:27:18-0400",
+  "computed_at": "2026-10-29T01:55:01-0400",
   "summary": "With 8 ratings (2 recent ratings of Requiem for a Dream by other people, 4 of the member's own ratings, 2 other ratings nearby), the model's preference for Requiem for a Dream over The Help goes from 88% to 64%. Removing the same number of ratings with the highest attention weight gives 94%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

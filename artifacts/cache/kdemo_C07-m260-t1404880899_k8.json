@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 2 of the 5 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (Rush Hour, Mystery Men, Beverly Hills Cop), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cRecent fans piled on\u201d: matched on timing and activity, each removal costs 18.0 points vs 12.1 for a comparable pattern: part of its weight was timing and activity.",
+      "CATGX: \u201cRecent fans piled on\u201d: matched on timing and activity, 58% \u2192 40% per removal, vs 46% for a comparable pattern: part of its weight was timing and activity.",
       "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
       "Ranker: Requiem for a Dream beats For a Few Dollars More mainly through matching the words of the request (+0.37); the history part adds +0.02."
     ],
@@ -551,7 +551,7 @@
       "p_without": 0.3981001550129253,
       "p_random": 0.5776322172947282,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 15, user 281, Requiem for a Dream): 58% \u2192 40%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 18.0 points of the model's preference vs 12.1 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 15, user 281, Requiem for a Dream): 58% \u2192 40%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people: 58% \u2192 40% per removal, vs 46% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "SEQ",
@@ -626,7 +626,7 @@
       "p_without": 0.4277815142940317,
       "p_random": 0.5776155937539263,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 281, Requiem for a Dream, Boys Don't Cry): 58% \u2192 43%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.4 points of the model's preference vs 1.4 for a comparable pattern (before matching: vs 1.6). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 281, Requiem for a Dream, Boys Don't Cry): 58% \u2192 43%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people: 58% \u2192 56% per removal, vs 56% for a comparable pattern. "
     },
     {
       "motif": "CO",
@@ -702,11 +702,11 @@
       "p_without": 0.3981001550129253,
       "p_random": 0.5776208982021444,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 15, Requiem for a Dream, user 281): 58% \u2192 40%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.7 points of the model's preference vs 3.5 for a comparable pattern (before matching: vs 1.6). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 15, Requiem for a Dream, user 281): 58% \u2192 40%; the same number of top-attention ratings: 43%. Compared only with patterns that are equally recent, last as long and involve equally active people: 58% \u2192 55% per removal, vs 54% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 611,
-  "computed_at": "2026-10-28T22:27:03-0400",
+  "computed_at": "2026-10-29T01:54:48-0400",
   "summary": "With 5 ratings (2 recent ratings of Requiem for a Dream by other people, 3 of the member's own ratings), the model's preference for Requiem for a Dream over For a Few Dollars More goes from 58% to 37% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 43%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

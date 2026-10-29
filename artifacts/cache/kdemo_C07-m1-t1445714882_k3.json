@@ -6,8 +6,8 @@
     "lines": [
       "TemGX: 2 of the 3 ratings are recent ratings of Requiem for a Dream by other people; 2 of them are part of a pattern CATGX finds.",
       "TemGX: 1 is the member's own recent rating (The Shawshank Redemption), shared with people who also rated Requiem for a Dream.",
-      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 70% \u2192 60% (top-attention ratings: 85%); matched on timing and activity, each removal still costs 6.2 points vs 2.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
-      "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, each removal costs 3.8 points vs 1.5 for a comparable pattern: part of its weight was timing and activity.",
+      "CATGX: \u201cRecent fans piled on\u201d: removing it moves the model 70% \u2192 60% (top-attention ratings: 85%); matched on timing and activity, 70% \u2192 63% per removal, vs 68% for a comparable pattern. Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cShared taste leads to the title\u201d: matched on timing and activity, 70% \u2192 66% per removal, vs 68% for a comparable pattern: part of its weight was timing and activity.",
       "Ranker: Requiem for a Dream beats The Next Three Days mainly through popularity (+0.59); the history part adds +0.04."
     ],
     "verdict": "Diagnosis: Requiem for a Dream wins mainly through popularity, and the history model adds to it through recent fans of Requiem for a Dream (a pattern that survives matching) and the member's ratings of The Shawshank Redemption. None of these signals reads what \u201cnothing depressing\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
@@ -469,7 +469,7 @@
       "p_without": 0.6045553430611578,
       "p_random": 0.6937650523420643,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 325, user 365, Requiem for a Dream): 70% \u2192 60%; the same number of top-attention ratings: 85%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 6.2 points of the model's preference vs 2.0 for a comparable pattern (before matching: vs 0.9). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 325, user 365, Requiem for a Dream): 70% \u2192 60%; the same number of top-attention ratings: 85%. Compared only with patterns that are equally recent, last as long and involve equally active people: 70% \u2192 63% per removal, vs 68% for a comparable pattern. Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "BRIDGE",
@@ -561,7 +561,7 @@
       "p_without": 0.647523257218222,
       "p_random": 0.6905572951146633,
       "p_value": 0.13114754098360656,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 75, Inception, user 365): 70% \u2192 65%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.8 points of the model's preference vs 1.5 for a comparable pattern (before matching: vs 0.9). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 75, Inception, user 365): 70% \u2192 65%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people: 70% \u2192 66% per removal, vs 68% for a comparable pattern. Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
@@ -636,7 +636,7 @@
       "p_without": 0.6366518317192194,
       "p_random": 0.6949863122545985,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 325, Requiem for a Dream, The Green Mile): 70% \u2192 64%; the same number of top-attention ratings: 85%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.5 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.9). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 325, Requiem for a Dream, The Green Mile): 70% \u2192 64%; the same number of top-attention ratings: 85%. Compared only with patterns that are equally recent, last as long and involve equally active people: 70% \u2192 69% per removal, vs 69% for a comparable pattern. "
     },
     {
       "motif": "CO",
@@ -711,7 +711,7 @@
       "p_without": 0.6122189858742675,
       "p_random": 0.6913644198997303,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 62, Requiem for a Dream, user 365): 70% \u2192 61%; the same number of top-attention ratings: 85%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.7 points of the model's preference vs 1.2 for a comparable pattern (before matching: vs 0.9). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 62, Requiem for a Dream, user 365): 70% \u2192 61%; the same number of top-attention ratings: 85%. Compared only with patterns that are equally recent, last as long and involve equally active people: 70% \u2192 69% per removal, vs 68% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "BRIDGEB",
@@ -801,11 +801,11 @@
       "p_without": 0.9369857976535801,
       "p_random": 0.692850009644301,
       "p_value": 1.0,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 343, Requiem for a Dream, user 316): 70% \u2192 94%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 1.3 for a comparable pattern (before matching: vs 0.9). "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 343, Requiem for a Dream, user 316): 70% \u2192 94%; the same number of top-attention ratings: 97%. Compared only with patterns that are equally recent, last as long and involve equally active people: 70% \u2192 70% per removal, vs 68% for a comparable pattern. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 799,
-  "computed_at": "2026-10-28T22:26:50-0400",
+  "computed_at": "2026-10-29T01:54:34-0400",
   "summary": "With 3 ratings (2 recent ratings of Requiem for a Dream by other people, 1 of the member's own rating), the model's preference for Requiem for a Dream over The Next Three Days goes from 70% to 57%. Removing the same number of ratings with the highest attention weight gives 97%. The full ranking still puts Requiem for a Dream at #1: text match and popularity also push it up."
 }

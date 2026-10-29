@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 3 of the 6 ratings are recent ratings of Who Framed Roger Rabbit? by other people; 3 of them are part of a pattern CATGX finds.",
       "TemGX: 3 are the member's own recent ratings (Naked Gun 33 1/3: The Final Insult, Ransom, My Cousin Vinny), shared with people who also rated Who Framed Roger Rabbit?.",
-      "CATGX: \u201cTwo people rated the same movie\u201d: matched on timing and activity, each removal costs 0.2 points vs 0.2 for a comparable pattern: most of its weight was timing and activity.",
+      "CATGX: \u201cTwo people rated the same movie\u201d: matched on timing and activity, 99% \u2192 99% per removal, vs 99% for a comparable pattern: most of its weight was timing and activity.",
       "CATGX: no pattern keeps its full weight after matching on timing and activity, so we treat the evidence as these specific ratings rather than a stable structure.",
       "Ranker: Who Framed Roger Rabbit? beats Something Wicked This Way Comes mainly through popularity (+0.46); the history part adds +0.25."
     ],
@@ -574,7 +574,7 @@
       "p_without": 0.9854854686806284,
       "p_random": 0.9906744496637891,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 375, Who Framed Roger Rabbit?, user 281): 99% \u2192 99%; the same number of top-attention ratings: 99%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.2 for a comparable pattern (before matching: vs 0.0). Most of its apparent importance came from timing and activity. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 375, Who Framed Roger Rabbit?, user 281): 99% \u2192 99%; the same number of top-attention ratings: 99%. Compared only with patterns that are equally recent, last as long and involve equally active people: 99% \u2192 99% per removal, vs 99% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "POP",
@@ -650,7 +650,7 @@
       "p_without": 0.9854854686806284,
       "p_random": 0.9906338147101018,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 375, user 281, Who Framed Roger Rabbit?): 99% \u2192 99%; the same number of top-attention ratings: 99%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.4 points of the model's preference vs 0.4 for a comparable pattern (before matching: vs 0.0). Most of its apparent importance came from timing and activity. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 375, user 281, Who Framed Roger Rabbit?): 99% \u2192 99%; the same number of top-attention ratings: 99%. Compared only with patterns that are equally recent, last as long and involve equally active people: 99% \u2192 99% per removal, vs 99% for a comparable pattern. Most of its apparent importance came from timing and activity. "
     },
     {
       "motif": "SEQ",
@@ -725,11 +725,11 @@
       "p_without": 0.9883559145212393,
       "p_random": 0.9906281675327355,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 281, Who Framed Roger Rabbit?, Mississippi Burning): 99% \u2192 99%; the same number of top-attention ratings: 99%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.0 for a comparable pattern (before matching: vs 0.0). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 281, Who Framed Roger Rabbit?, Mississippi Burning): 99% \u2192 99%; the same number of top-attention ratings: 99%. Compared only with patterns that are equally recent, last as long and involve equally active people: 99% \u2192 99% per removal, vs 99% for a comparable pattern. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 693,
-  "computed_at": "2026-10-28T22:27:31-0400",
+  "computed_at": "2026-10-29T01:55:14-0400",
   "summary": "With 6 ratings (3 recent ratings of Who Framed Roger Rabbit? by other people, 3 of the member's own ratings), the model's preference for Who Framed Roger Rabbit? over Something Wicked This Way Comes goes from 99% to 97%. Removing the same number of ratings with the highest attention weight gives 85%. The full ranking still puts Who Framed Roger Rabbit? at #1: text match and popularity also push it up."
 }

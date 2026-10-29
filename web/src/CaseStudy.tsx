@@ -304,5 +304,5 @@ function Tug({ lead }: any) {
 function Bar({ l, v, c, strong, band, on, d }: any) {
   return <div className={`cs4-bar ${on ? "click" : ""}`} onClick={on}><span>{l}</span>
     <i>{band && <u style={{ left: pct(band[0]), width: `${100 * (band[1] - band[0])}%` }} />}<b style={{ width: v != null ? pct(v) : 0, background: c }} /></i>
-    <em className={strong ? "st" : ""}>{v != null ? pct(v) : "…"}{d != null && <small>{d < 0 ? "−" : "+"}{n(Math.abs(100 * d), 0)} pts</small>}</em></div>;
+    <em className={strong ? "st" : ""}>{v != null ? pct(v) : "…"}{d != null && <small>from {pct(v - d)}</small>}</em></div>;
 }

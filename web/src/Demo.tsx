@@ -74,7 +74,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
     <>Asked for “{kd?.query ?? sim?.me?.query ?? d.query}”, member {cid.match(/-m(\d+)-/)?.[1]} gets <b style={{ color: RED }}>{At}</b> first — a title the request rules out.</>,
     kd?.full.flips ? <>Remove {kd.evidence.length === 1 ? "one rating" : `these ${kd.evidence.length} ratings`} and the history model <b>changes its preference</b> ({pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>). Attention's top {kd.evidence.length}: {pct(kd.full.attn ?? kd.full.rand_mean)}.</>
       : kd ? <>Remove these <b style={{ color: RED }}>{kd.evidence.length} past ratings</b>: {pct(kd.p0)} → <b style={{ color: RED }}>{pct(kd.full.p)}</b>. Attention's top {kd.evidence.length}: {pct(kd.full.attn ?? kd.full.rand_mean)}.</> : <>Finding the evidence…</>,
-    top ? <>Remove “{top.name}”: {pct(kd.p0)} → <b style={{ color: PURPLE }}>{pct(top.p_without)}</b> (attention's top {top.occurrence.eids.length}: {pct(top.p_attn ?? top.p_random)}). Matched on timing and activity, each removal still costs <b style={{ color: PURPLE }}>{n(top.pts_one, 1)}</b> vs {n(top.pts_base, 1)} points.</> : <>Looking for patterns…</>,
+    top ? <>Remove “{top.name}”: {pct(kd.p0)} → <b style={{ color: PURPLE }}>{pct(top.p_without)}</b> (attention's top {top.occurrence.eids.length}: {pct(top.p_attn ?? top.p_random)}). Matched on timing and activity, one removal: {pct(kd.p0)} → <b style={{ color: PURPLE }}>{pct(kd.p0 - top.pts_one / 100)}</b>, vs {pct(kd.p0 - top.pts_base / 100)} for a comparable pattern.</> : <>Looking for patterns…</>,
     <>Together: <b style={{ color: RED }}>which ratings</b>, <b style={{ color: PURPLE }}>which pattern</b>, and <b>which part of the ranker</b> to change.</>,
     !fixA || !fixB ? <>Similar past failures point to one fix. Re-ranking…</>
       : fixB.rank !== 1 && fix?.rows?.[0]?.grade === 2 && fixA.rank > 3 ? <>Past cases point to “{recName}”. It puts <b style={{ color: BLUE }}>{clean(fix.rows[0].title)}</b>, a title that fits the request, first and drops <b style={{ color: RED }}>{At}</b> to #{fixA.rank}.</>
@@ -124,7 +124,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
               <span className="dm-badge">{l.n}</span>
               <div><b>{l.kind === "own" ? `Member ${kd.member}` : l.from} rated {l.to} {l.rating}★</b><small> · {l.date}</small>
                 <p>{l.why.split(" Removing only")[0]}</p>
-                <div className="dm-mini"><span>remove only this</span><i><b style={{ width: `${Math.min(100, Math.max(2, 100 * l.drop / maxDrop))}%` }} /></i><em>−{n(100 * l.drop, 1)} pts</em></div></div></li>)}</ol></div>
+                <div className="dm-mini"><span>remove only this</span><i><b style={{ width: `${Math.min(100, Math.max(2, 100 * l.drop / maxDrop))}%` }} /></i><em>{pct(kd.p0)} → {pct(kd.p0 - l.drop)}</em></div></div></li>)}</ol></div>
         </div>
         <div className="dm-two" style={{ marginTop: 16 }}>
           <div className="dm-card"><p className="dm-k">③ Counterfactual: remove them one at a time</p>
@@ -146,8 +146,8 @@ export default function Demo({ onFull }: { onFull: () => void }) {
           {kd.patterns.map((x: any, i: number) => <div key={x.motif} className={`dm-prow2 ${i === pi ? "on" : ""}`} onClick={() => setPi(i)}>
             <span>{x.name}</span>
             <i><b className="raw" style={{ width: `${100 * (x.pts_base ?? 0) / pmax}%` }} /><b className="adj" style={{ width: `${100 * (x.pts_one ?? 0) / pmax}%` }} /></i>
-            <em>−<b>{n(x.pts_one, 1)}</b> vs −{n(x.pts_base, 1)} pts</em></div>)}
-          <p className="dm-legend"><i className="adj" />this pattern <i className="raw" />an equally recent, equally active pattern · points of the model's preference lost per removed occurrence · click a row</p>
+            <em>→ <b>{pct(kd.p0 - x.pts_one / 100)}</b> vs {pct(kd.p0 - x.pts_base / 100)}</em></div>)}
+          <p className="dm-legend"><i className="adj" />this pattern <i className="raw" />an equally recent, equally active pattern · the model's preference after one removal · click a row</p>
           <p className="dm-k" style={{ marginTop: 14 }}>Remove this pattern's ratings</p>
           <Conf l="Nothing removed" v={kd.p0} c={GREY} />
           <Conf l={`Remove the pattern (${kd.patterns[pi].occurrence.eids.length})`} v={kd.patterns[pi].p_without} c={PURPLE} d={kd.patterns[pi].p_without - kd.p0} />
@@ -159,7 +159,7 @@ export default function Demo({ onFull }: { onFull: () => void }) {
         <div className="dm-card"><p className="dm-k">Each rating TemGX found, and the pattern it belongs to</p>
           <table className="dm-jt"><thead><tr><th>#</th><th>rating</th><th>remove only this</th><th>CATGX pattern</th></tr></thead><tbody>
             {kd.evidence.map((l: any) => <tr key={l.eid}><td><span className="dm-badge">{l.n}</span></td><td>{l.kind === "own" ? `member ${kd.member}` : l.from} → {l.to} <small>{l.rating}★ · {l.date}</small></td>
-              <td className="r">−{n(100 * l.drop, 1)} pts</td>
+              <td className="r">{pct(kd.p0)} → {pct(kd.p0 - l.drop)}</td>
               <td>{l.patterns.filter((p: any) => (p.adjusted ?? 0) >= 1).length ? l.patterns.filter((p: any) => (p.adjusted ?? 0) >= 1).map((p: any) => <span key={p.motif} className={`dm-chip ${p.significant ? "s" : ""}`}>{p.name}</span>) : <small>none</small>}</td></tr>)}
           </tbody></table>
           <p className="dm-k" style={{ marginTop: 16 }}>What the ranker added up ({At} minus {Bt})</p>
@@ -216,7 +216,7 @@ function Rate({ l, v, c }: any) {
 
 function Conf({ l, v, c, d, on }: any) {
   return <div className={`dm-rate ${on ? "click" : ""}`} onClick={on}><span>{l}</span><i><b style={{ width: v != null ? pct(v) : 0, background: c }} /></i>
-    <em style={{ color: c === GREY ? INK : c }}>{v != null ? pct(v) : "…"}{d != null && <small>{d < 0 ? "−" : "+"}{n(Math.abs(100 * d), 0)} pts</small>}</em></div>;
+    <em style={{ color: c === GREY ? INK : c }}>{v != null ? pct(v) : "…"}{d != null && <small>from {pct(v - d)}</small>}</em></div>;
 }
 
 function ExplGraph({ g, hi }: any) {

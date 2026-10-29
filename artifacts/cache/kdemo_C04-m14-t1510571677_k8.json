@@ -5,7 +5,7 @@
   "joint": {
     "lines": [
       "TemGX: 2 of the 2 ratings are recent ratings of Batman by other people; 2 of them are part of a pattern CATGX finds.",
-      "CATGX: \u201cTwo people rated the same movie\u201d: removing it moves the model 81% \u2192 75% (top-attention ratings: 75%); matched on timing and activity, each removal still costs 2.1 points vs 1.0 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cTwo people rated the same movie\u201d: removing it moves the model 81% \u2192 75% (top-attention ratings: 75%); matched on timing and activity, 81% \u2192 79% per removal, vs 80% for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Batman beats The Specialist mainly through popularity (+0.35); the history part adds +0.08."
     ],
     "verdict": "Diagnosis: Batman wins mainly through popularity, and the history model adds to it through recent fans of Batman. None of these signals reads what \u201cisn't a superhero film\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
@@ -324,7 +324,7 @@
       "p_without": 0.7489890355801746,
       "p_random": 0.8094203802571712,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 560, Batman, user 474): 81% \u2192 75%; the same number of top-attention ratings: 75%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.1 points of the model's preference vs 1.0 for a comparable pattern (before matching: vs 0.3). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 560, Batman, user 474): 81% \u2192 75%; the same number of top-attention ratings: 75%. Compared only with patterns that are equally recent, last as long and involve equally active people: 81% \u2192 79% per removal, vs 80% for a comparable pattern. Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "POP",
@@ -400,7 +400,7 @@
       "p_without": 0.7489890355801746,
       "p_random": 0.8092133771046343,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 560, user 474, Batman): 81% \u2192 75%; the same number of top-attention ratings: 75%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 2.5 points of the model's preference vs 1.2 for a comparable pattern (before matching: vs 0.3). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 560, user 474, Batman): 81% \u2192 75%; the same number of top-attention ratings: 75%. Compared only with patterns that are equally recent, last as long and involve equally active people: 81% \u2192 78% per removal, vs 80% for a comparable pattern. Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "SEQ",
@@ -473,11 +473,11 @@
       "p_without": 0.8003602807970888,
       "p_random": 0.809005018701825,
       "p_value": 0.01639344262295082,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 598, Batman, Wonder Woman): 81% \u2192 80%; the same number of top-attention ratings: 75%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.0 points of the model's preference vs 0.3 for a comparable pattern (before matching: vs 0.3). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 598, Batman, Wonder Woman): 81% \u2192 80%; the same number of top-attention ratings: 75%. Compared only with patterns that are equally recent, last as long and involve equally active people: 81% \u2192 81% per removal, vs 81% for a comparable pattern. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 502,
-  "computed_at": "2026-10-28T22:26:42-0400",
+  "computed_at": "2026-10-29T01:54:26-0400",
   "summary": "With 2 ratings (2 recent ratings of Batman by other people), the model's preference for Batman over The Specialist goes from 81% to 75%. Removing the same number of ratings with the highest attention weight gives 75%. In the full ranking, Batman moves from #1 to #2."
 }

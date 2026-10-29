@@ -6,7 +6,7 @@
     "lines": [
       "TemGX: 3 of the 8 ratings are recent ratings of Aladdin by other people; 3 of them are part of a pattern CATGX finds.",
       "TemGX: 2 are the member's own recent ratings (The Godfather, The Shawshank Redemption), shared with people who also rated Aladdin.",
-      "CATGX: \u201cShared taste leads to the title\u201d: removing it moves the model 73% \u2192 62% (top-attention ratings: 74%); matched on timing and activity, each removal still costs 3.0 points vs 0.9 for a comparable pattern. Timing explains part of it, but a structural effect remains.",
+      "CATGX: \u201cShared taste leads to the title\u201d: removing it moves the model 73% \u2192 62% (top-attention ratings: 74%); matched on timing and activity, 73% \u2192 70% per removal, vs 72% for a comparable pattern. Timing explains part of it, but a structural effect remains.",
       "Ranker: Aladdin beats Harry Potter and the Chamber of Secrets mainly through popularity (+0.18); the history part adds +0.05."
     ],
     "verdict": "Diagnosis: Aladdin wins mainly through popularity, and the history model adds to it through recent fans of Aladdin and the member's ratings of The Godfather, The Shawshank Redemption. None of these signals reads what \u201cfor grown-ups\u201d rules out. Candidate fixes: make the ranker read the exclusion in the request; rely less on popularity for specific requests; rely less on titles' latest ratings from strangers. Similar verified past failures pick one.",
@@ -847,7 +847,7 @@
       "p_without": 0.6197927787266434,
       "p_random": 0.725831161527083,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the title: removing its strongest occurrence (user 297, Harry Potter and the Chamber of Secrets, user 533): 73% \u2192 62%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 3.0 points of the model's preference vs 0.9 for a comparable pattern (before matching: vs 0.7). Timing and activity explain part of it, but a real structural effect remains. "
+      "why": "Shared taste leads to the title: removing its strongest occurrence (user 297, Harry Potter and the Chamber of Secrets, user 533): 73% \u2192 62%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people: 73% \u2192 70% per removal, vs 72% for a comparable pattern. Timing and activity explain part of it, but a real structural effect remains. "
     },
     {
       "motif": "POP",
@@ -923,7 +923,7 @@
       "p_without": 0.47612839531720125,
       "p_random": 0.724484137980023,
       "p_value": 0.01639344262295082,
-      "why": "Recent fans piled on: removing its strongest occurrence (user 425, user 533, Aladdin): 73% \u2192 48%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 1.9 points of the model's preference vs 1.0 for a comparable pattern (before matching: vs 0.7). Timing and activity do not explain it away. "
+      "why": "Recent fans piled on: removing its strongest occurrence (user 425, user 533, Aladdin): 73% \u2192 48%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people: 73% \u2192 71% per removal, vs 72% for a comparable pattern. Timing and activity do not explain it away. "
     },
     {
       "motif": "SEQ",
@@ -996,7 +996,7 @@
       "p_without": 0.7099090489440936,
       "p_random": 0.7245053130416875,
       "p_value": 0.03278688524590164,
-      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 304, The Usual Suspects, Star Wars: Episode IV - A New Hope): 73% \u2192 71%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.4 points of the model's preference vs 0.5 for a comparable pattern (before matching: vs 0.7). "
+      "why": "A run of ratings in one sitting: removing its strongest occurrence (user 304, The Usual Suspects, Star Wars: Episode IV - A New Hope): 73% \u2192 71%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people: 73% \u2192 72% per removal, vs 72% for a comparable pattern. "
     },
     {
       "motif": "CO",
@@ -1071,7 +1071,7 @@
       "p_without": 0.6644040399675225,
       "p_random": 0.7251528526951632,
       "p_value": 0.01639344262295082,
-      "why": "Two people rated the same movie: removing its strongest occurrence (user 176, Aladdin, user 533): 73% \u2192 66%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.3 points of the model's preference vs 0.7 for a comparable pattern (before matching: vs 0.7). "
+      "why": "Two people rated the same movie: removing its strongest occurrence (user 176, Aladdin, user 533): 73% \u2192 66%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people: 73% \u2192 72% per removal, vs 72% for a comparable pattern. "
     },
     {
       "motif": "BRIDGEB",
@@ -1163,11 +1163,11 @@
       "p_without": 0.7128275050641703,
       "p_random": 0.7260655838290382,
       "p_value": 0.01639344262295082,
-      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 104, The Usual Suspects, user 297): 73% \u2192 71%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people, each removal of this pattern costs 0.2 points of the model's preference vs 0.4 for a comparable pattern (before matching: vs 0.7). "
+      "why": "Shared taste leads to the better match: removing its strongest occurrence (user 104, The Usual Suspects, user 297): 73% \u2192 71%; the same number of top-attention ratings: 74%. Compared only with patterns that are equally recent, last as long and involve equally active people: 73% \u2192 72% per removal, vs 72% for a comparable pattern. "
     }
   ],
   "n_draw": 60,
   "n_model_runs": 1272,
-  "computed_at": "2026-10-28T22:27:42-0400",
+  "computed_at": "2026-10-29T01:55:24-0400",
   "summary": "With 8 ratings (3 recent ratings of Aladdin by other people, 2 of the member's own ratings, 3 other ratings nearby), the model's preference for Aladdin over Harry Potter and the Chamber of Secrets goes from 73% to 41% and flips to the right answer. Removing the same number of ratings with the highest attention weight gives 67%. In the full ranking, Aladdin moves from #1 to #2."
 }
